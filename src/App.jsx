@@ -48,6 +48,47 @@ const CONDITIONS = {
   ],
 };
 
+// ── 3-DAY LOOK AHEAD ──────────────────────────────────────────────────────────
+const FORECAST = [
+  {
+    day: "Sun Jun 28",
+    label: "Today",
+    high: 92,
+    low: 76,
+    wind: "WNW light → SW 5-10",
+    storms: 0,
+    headline: "Sunny · Heat index 103°F",
+    fishingScore: 8.0,
+    aiCall: "Excellent — all-morning window, calm bay, no storms. Heat is the only caution. Be off the water by 11 AM.",
+    emoji: "☀️",
+  },
+  {
+    day: "Mon Jun 29",
+    label: "Tomorrow",
+    high: 93,
+    low: 77,
+    wind: "Calm → WSW 5",
+    storms: 30,
+    headline: "Mostly sunny · PM storms possible after 1 PM",
+    fishingScore: 7.5,
+    aiCall: "Strong morning bite likely — sun and heat similar to Sunday. Storm chance jumps after 1 PM, so plan to be in by noon.",
+    emoji: "⛅",
+  },
+  {
+    day: "Tue Jun 30",
+    label: "Tuesday",
+    high: 92,
+    low: 75,
+    wind: "Variable",
+    storms: 70,
+    headline: "T-storms likely · 70% chance",
+    fishingScore: 5.0,
+    aiCall: "First real weather day — storms likely mainly after 1 PM but can fire earlier. Fish hard from sunrise to 11 AM and watch radar closely.",
+    emoji: "⛈️",
+  },
+];
+
+
 
 // ── BAIT INVENTORY & RECOMMENDATIONS ─────────────────────────────────────────
 const ALL_BAITS = [
@@ -314,6 +355,52 @@ function Collapsible({ title, children, defaultOpen = true }) {
 }
 
 
+
+// ── FORECAST COMPONENT ─────────────────────────────────────────────────────────
+function ForecastStrip() {
+  return (
+    <Collapsible title="📅 3-Day Look Ahead" defaultOpen={true}>
+      <div style={{ marginTop: 12 }}>
+        {FORECAST.map((day, i) => {
+          const sc = day.fishingScore;
+          const color = sc >= 7.5 ? "#4ade80" : sc >= 6 ? "#facc15" : "#f87171";
+          const rating = sc >= 8 ? "Excellent" : sc >= 7 ? "Good" : sc >= 5.5 ? "Fair" : "Poor";
+          const stormColor = day.storms >= 60 ? "#f87171" : day.storms >= 30 ? "#facc15" : "#4ade80";
+          return (
+            <div key={i} style={{ marginBottom: 10, padding: "14px 14px", background: "#0f2a1c", borderRadius: 10, border: `1px solid ${color}33` }}>
+              {/* Top row: day info + big score ring */}
+              <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 10 }}>
+                <ScoreRing score={sc} />
+                <div style={{ flex: 1 }}>
+                  <div style={{ fontSize: 13, color: "#7ab898", textTransform: "uppercase", letterSpacing: "0.1em", fontWeight: 600 }}>{day.label}</div>
+                  <div style={{ fontSize: 17, fontWeight: 700, color: "#d1f0e0", marginBottom: 2 }}>{day.day}</div>
+                  <div style={{ fontSize: 14, fontWeight: 700, color: color }}>{rating} conditions</div>
+                </div>
+                <div style={{ fontSize: 32 }}>{day.emoji}</div>
+              </div>
+
+              {/* Headline */}
+              <div style={{ fontSize: 14, color: "#d1f0e0", marginBottom: 8 }}>{day.headline}</div>
+
+              {/* Metrics row */}
+              <div style={{ display: "flex", gap: 14, fontSize: 13, color: "#7ab898", marginBottom: 10, flexWrap: "wrap" }}>
+                <span>🌡️ {day.high}°/{day.low}°F</span>
+                <span>💨 {day.wind}</span>
+                <span style={{ color: stormColor }}>⛈️ {day.storms}%</span>
+              </div>
+
+              {/* AI call */}
+              <div style={{ fontSize: 14, color: "#86c7a0", lineHeight: 1.6, paddingTop: 10, borderTop: "1px solid #1a3828" }}>
+                💡 {day.aiCall}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </Collapsible>
+  );
+}
+
 // ── BAIT PICKER COMPONENT ─────────────────────────────────────────────────────
 function BaitPicker() {
   const [selected, setSelected] = useState(["live_shrimp"]);
@@ -535,8 +622,11 @@ export default function App() {
           🌞 Sunday: No storm threat — extended fishing window all morning. Heat index up to 103°F · Stay hydrated · Watch for afternoon sea breeze storms after 2 PM.
         </div>
 
+        {/* 3-day look ahead — always visible */}
+        <ForecastStrip />
+
         {/* Main tabs */}
-        <div style={{ display: "flex", gap: 8, marginBottom: 14 }}>
+        <div style={{ display: "flex", gap: 8, marginBottom: 14, marginTop: 14 }}>
           {[["report", "📋 Report"], ["log", "📓 Trip Log"]].map(([key, label]) => (
             <button key={key} onClick={() => setMainTab(key)} style={{
               flex: 1, padding: "9px 0", borderRadius: 8, border: "none", cursor: "pointer",
@@ -704,3 +794,4 @@ export default function App() {
     </div>
   );
 }
+
