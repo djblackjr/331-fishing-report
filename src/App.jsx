@@ -707,12 +707,6 @@ export default function App() {
               </div>
             ))}
           </div>
-
-          {/* Refresh */}
-          <div style={{ background: "#0f2a1c", border: "1px solid #1a3828", borderRadius: 10, padding: "13px 16px", marginBottom: 6 }}>
-            <div style={lbl}>🔄 Refresh This Report</div>
-            <div style={{ fontSize: 14, color: "#d1f0e0", lineHeight: 1.7 }}>Say <span style={{ color: "#4ade80", fontWeight: 700 }}>"refresh my fishing report"</span> in this chat and Claude will re-search live conditions and rebuild it fresh.</div>
-          </div>
         </>}
 
         {/* ── TRIP LOG ── */}
@@ -794,4 +788,5 @@ export default function App() {
     </div>
   );
 }
+
 
