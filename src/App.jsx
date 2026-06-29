@@ -3,13 +3,13 @@ import { useState } from "react";
 // ── SHARED CONDITIONS ─────────────────────────────────────────────────────────
 const CONDITIONS = {
   date: "Monday, June 29, 2026",
-  wind: { speed: 5, dir: "NW", description: "NW light 5 knots · shifting south afternoon · smooth bay" },
-  weather: "Hot and humid · High 95°F · HEAT ADVISORY ACTIVE · Heat index 105–110°F · Slight chance PM storms",
+  wind: { speed: 5, dir: "NW", description: "NW 5 mph · shifting SW afternoon · light winds all day" },
+  weather: "Sunny · High 94°F · HEAT ADVISORY · Heat index up to 109°F · No storm threat today",
   tide: "Incoming ~7:05 AM · Outgoing ~1:30 PM · Sunrise 5:43 AM · Smooth water",
   moonPhase: "Full Moon (99% illuminated)",
   waterClarity: "Slightly stained",
   sky: "Bright sun",
-  lastUpdated: "June 29, 2026 · Sources: NOAA GMZ635 (today + tomorrow) · NWS Tallahassee AFD (day 3) · Heat Advisory ACTIVE",
+  lastUpdated: "June 29, 2026 · Source: WeatherBug Freeport FL · Heat Advisory ACTIVE",
   launch: "Shipyard Marina · 116 Shipyard Rd, Freeport FL 32439 · (850) 866-3865 · Open 7:30 AM–5 PM. Cruise 4 miles down the creek to east Choctawhatchee Bay. Fuel on-site. Copeland's Bait & Tackle: 17290 US-331 S · open 6 AM · (850) 835-4277.",
   windGuidance: [
     { dir: "N", icon: "↓", advice: "Fish protected south shore — calm water, grass flats east of bridge" },
@@ -53,38 +53,38 @@ const FORECAST = [
   {
     day: "Mon Jun 29",
     label: "Today",
-    high: 95,
+    high: 94,
     low: 77,
-    wind: "NW 5 → S afternoon",
-    storms: 20,
-    headline: "Mostly sunny · HEAT ADVISORY · Heat index 110°F",
+    wind: "NW 5 → SW afternoon",
+    storms: 0,
+    headline: "Sunny · HEAT ADVISORY · Heat index 109°F",
     fishingScore: 8.0,
-    aiCall: "Strong morning conditions — smooth water, light NW wind. Heat Advisory in effect with heat index 105–110°F dangerous by midday. Slight chance of afternoon storms. Fish hard sunrise to 10 AM then get off the water.",
+    aiCall: "Sunny, calm conditions all day — but Heat Advisory in effect with heat index reaching 109°F. Fish sunrise to 10 AM then off the water. The heat itself is the only real risk today.",
     emoji: "☀️",
   },
   {
     day: "Tue Jun 30",
     label: "Tomorrow",
-    high: 91,
+    high: 92,
     low: 75,
-    wind: "NW 5 → SW afternoon",
-    storms: 65,
-    headline: "AM chance → PM storms likely · Smooth bay",
-    fishingScore: 5.0,
-    aiCall: "Heat dome breaking. NOAA forecast: chance of storms AM, then storms likely PM. Smooth bay early. Fish sunrise to 10 AM, watch radar closely, have a bayou retreat plan. Source: NOAA GMZ635 issued Sat Jun 27.",
-    emoji: "⛈️",
+    wind: "NW 5 mph",
+    storms: 50,
+    headline: "Mostly sunny AM · 50% PM storms · Heat index 110",
+    fishingScore: 6.0,
+    aiCall: "Mostly sunny morning, storms developing in the afternoon. Heat index still hits 110°F. Fish sunrise to 10 AM hard, stay close to bayous, and watch the western sky as the day heats up.",
+    emoji: "⛅",
   },
   {
     day: "Wed Jul 1",
     label: "Wednesday",
-    high: 90,
-    low: 76,
-    wind: "Variable light",
-    storms: 55,
-    headline: "Storms likely · Resurgence of summer pattern",
-    fishingScore: 5.0,
-    aiCall: "Storm resurgence per NWS Tallahassee forecast discussion. Typical Florida summer pop-up pattern. Early window remains best — fish dawn to 10 AM. Forecast not yet in marine zone window — verify weather.gov morning of.",
-    emoji: "⛈️",
+    high: 94,
+    low: 75,
+    wind: "E 5–10 → SE afternoon",
+    storms: 20,
+    headline: "Sunny · 20% PM storms · Solid fishing day",
+    fishingScore: 7.5,
+    aiCall: "Sunny day with only a slight chance of afternoon storms. East wind shifting SE afternoon. Plan a full morning trip — fish through 10:30 AM comfortably. Still hot but heat index easing slightly vs today.",
+    emoji: "☀️",
   },
 ];
 
@@ -636,7 +636,7 @@ export default function App() {
 
         {/* Storm warning */}
         <div style={{ background: "#2a1a00", border: "1px solid #facc15", borderRadius: 8, padding: "10px 14px", fontSize: 14, color: "#fde68a", margin: "12px 0", lineHeight: 1.5 }}>
-          ⚠️ Monday HEAT ADVISORY: Heat index 105–110°F — dangerous heat. Smooth bay, slight PM storm chance. Fish sunrise to 10 AM only · Hydrate heavily.
+          ⚠️ Monday HEAT ADVISORY: Heat index up to 109°F — dangerous heat. Sunny all day, no storms. Fish sunrise to 10 AM only · Hydrate heavily.
         </div>
 
         {/* 3-day look ahead — always visible */}
