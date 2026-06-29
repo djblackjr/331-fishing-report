@@ -1,15 +1,15 @@
-iimport { useState } from "react";
+import { useState } from "react";
 
 // ── SHARED CONDITIONS ─────────────────────────────────────────────────────────
 const CONDITIONS = {
   date: "Monday, June 29, 2026",
   wind: { speed: 5, dir: "NW", description: "NW light 5 knots · shifting south afternoon · smooth bay" },
-  weather: "Mostly sunny · High 93°F · Heat advisory · Storms suppressed by heat dome",
+  weather: "Mostly sunny · High 93°F · HEAT ADVISORY · Heat index 105–110°F · Slight chance PM storms",
   tide: "Incoming ~7:05 AM · Outgoing ~1:30 PM · Sunrise 5:43 AM · Smooth water",
   moonPhase: "Waxing Crescent (Day 4)",
   waterClarity: "Slightly stained",
   sky: "Bright sun",
-  lastUpdated: "June 29, 2026 · NOAA GMZ635 + NWS Tallahassee · Heat dome suppressing storms",
+  lastUpdated: "June 29, 2026 · NOAA GMZ635 + NWS Tallahassee · Heat Advisory PM · Slight storm chance PM",
   launch: "Shipyard Marina · 116 Shipyard Rd, Freeport FL 32439 · (850) 866-3865 · Open 7:30 AM–5 PM. Cruise 4 miles down the creek to east Choctawhatchee Bay. Fuel on-site. Copeland's Bait & Tackle: 17290 US-331 S · open 6 AM · (850) 835-4277.",
   windGuidance: [
     { dir: "N", icon: "↓", advice: "Fish protected south shore — calm water, grass flats east of bridge" },
@@ -56,10 +56,10 @@ const FORECAST = [
     high: 93,
     low: 77,
     wind: "NW 5 → S afternoon",
-    storms: 0,
-    headline: "Mostly sunny · Heat advisory · Smooth bay",
-    fishingScore: 8.5,
-    aiCall: "Excellent day — smooth water, no storm threat, light shifting wind. Heat is the only caution; plan to be off the water by 11 AM. Best conditions of the next several days.",
+    storms: 20,
+    headline: "Mostly sunny · HEAT ADVISORY · Heat index 110°F",
+    fishingScore: 8.0,
+    aiCall: "Strong morning conditions — smooth water, light NW wind. Heat Advisory in effect with heat index 105–110°F dangerous by midday. Slight chance of afternoon storms. Fish hard sunrise to 10 AM then get off the water.",
     emoji: "☀️",
   },
   {
@@ -169,8 +169,8 @@ const LOCATIONS = [
     id: "bridge",
     label: "331 Bridge",
     emoji: "🌉",
-    overallScore: 8.5,
-    conditions: "Excellent",
+    overallScore: 7.5,
+    conditions: "Good",
     species: [
       { name: "Speckled Trout", confidence: 88, note: "Along pilings on incoming tide, topwater at first light" },
       { name: "Redfish", confidence: 82, note: "East side channel edge, gold spoon or live shrimp" },
@@ -184,7 +184,7 @@ const LOCATIONS = [
       { order: 3, name: "South Shore Grass Flats", tide: "Outgoing", steps: ["Weedless paddle-tail in white or new penny", "Sight fish tailing reds in 1–2 ft", "W wind = protected water on south shore today"] },
     ],
     aiNote: "The 331 Bridge spans the narrow neck of Choctawhatchee Bay, creating a current funnel where bait gets pushed through on both tides. The pilings hold trout, reds, sheepshead, and black drum year-round. The east side of the pilings is the prime ambush zone on incoming tides. Open water here is exposed to weather and chop — it is the first spot to become unfishable when wind picks up.",
-    todaysCall: "Best bay day of the week — smooth water, light NW wind, no storms. Launch 5:30 AM and work the east face of the pilings on the incoming tide. NW wind early then south afternoon means bait stacks against the east side at sunrise. Heat advisory in effect — be off the water by 11 AM.",
+    todaysCall: "Smooth water and light NW wind — strong morning at the bridge. Launch 5:30 AM and work the east face of the pilings on the incoming tide with a bright topwater or white paddle-tail. Heat Advisory makes timing critical: have everything off the water by 10 AM. The open bay offers no shade as heat index climbs to 110°F by midday.",
   },
   {
     id: "alaqua",
@@ -205,7 +205,7 @@ const LOCATIONS = [
       { order: 3, name: "Upper Alaqua Creek", tide: "Any", steps: ["Transitions to bass-fishing style in upper reaches", "Soft plastics and small swimbaits near structure", "Watch for alligators — keep hooks away from the bank"] },
     ],
     aiNote: "Alaqua Bayou is protected water with a strong year-round redfish population, plus trout and flounder at the mouth. The oyster bars at the creek mouth are the prime spot. Tree cover keeps it a few degrees cooler than the open bay and offers shelter from wind and weather. The upper creek transitions toward brackish and holds bass alongside small reds.",
-    todaysCall: "Smooth conditions and NW light wind — fish the oyster bars at the bayou mouth on the incoming tide with a gold spoon at first light. The tree-lined upper bayou will be a few degrees cooler than the open bay if heat becomes punishing later in the morning.",
+    todaysCall: "Smooth conditions and light NW wind — fish the oyster bars at the bayou mouth on incoming tide with a gold spoon at first light. Tree-lined upper bayou stays a few degrees cooler than the open bay, making this a smart Heat Advisory choice. Be off the water by 10 AM regardless.",
   },
   {
     id: "basin",
@@ -226,13 +226,13 @@ const LOCATIONS = [
       { order: 3, name: "Oyster Bar Edges", tide: "Outgoing", steps: ["Switch to paddle-tail on falling tide", "Work parallel to oyster edges, not over them", "Flounder stack in sandy pockets adjacent to bars"] },
     ],
     aiNote: "Basin Bayou sees less pressure than Alaqua and LaGrange, which means less-educated fish. The interior grass flats are classic sight-fishing territory for reds — poling or drifting quietly in under 2 feet. Pompano occasionally show at the mouth on moving tides in late spring and early summer. Less protected than LaGrange when weather builds.",
-    todaysCall: "Smooth water is ideal for sight-fishing the interior grass flats — perfect for spotting tailing reds in skinny water. Start at the mouth with small jigs for pompano on the moving tide, then pole or drift quietly inside as the sun climbs.",
+    todaysCall: "Smooth water is ideal for sight-fishing the interior grass flats — perfect for spotting tailing reds. Start at the mouth with small jigs for pompano on the moving tide, then pole inside as the sun climbs. Heat Advisory means short morning window — be off the water by 10 AM.",
   },
   {
     id: "lagrange",
     label: "LaGrange Bayou",
     emoji: "🦪",
-    overallScore: 8.5,
+    overallScore: 8.0,
     conditions: "Excellent",
     species: [
       { name: "Speckled Trout", confidence: 92, note: "Oyster bars and grass flats — best trout spot in the area" },
@@ -247,7 +247,7 @@ const LOCATIONS = [
       { order: 3, name: "Deep Holes (Interior)", tide: "Outgoing or any falling water", steps: ["Fish deeper holes with shrimp on bottom for black drum", "Sheepshead near any dock pilings or hard structure", "Protected water makes a good late-morning stop as heat builds"] },
     ],
     aiNote: "LaGrange is the top trout producer in this report — its oyster bars at the mouth are legendary, and the interior grass flats hold reds year-round. Deep holes inside hold black drum and sheepshead. The bayou is also the most protected water on this side of the bay, making it the go-to spot when weather builds. Premium spot in both calm and rough conditions.",
-    todaysCall: "Smooth bay and light NW wind — premium trout day. Hit the oyster bars at the mouth at sunrise with a popping cork and live shrimp. As sun gets high, switch to gold spoon on the interior grass flats. The best trout chance of the week.",
+    todaysCall: "Smooth bay and light NW wind — premium trout day. Hit the oyster bars at the mouth at sunrise with popping cork and live shrimp. As sun climbs, switch to gold spoon on the interior flats. Heat Advisory shortens the window: fish hard sunrise to 9:30 AM, then head in.",
   },
   {
     id: "fourmile",
@@ -268,14 +268,14 @@ const LOCATIONS = [
       { order: 3, name: "Creek Mouth (Bay Entry)", tide: "Incoming or outgoing — best on moving water", steps: ["Prime flounder zone where creek meets bay", "Mud minnow on 1/4 oz jig dragged on bottom", "Free-line live shrimp on the current seam for trout and reds"] },
     ],
     aiNote: "Four Mile Creek is the tidal creek that runs between Shipyard Marina and Choctawhatchee Bay. Tidal flow pushes baitfish up the creek on incoming tides, concentrating reds and trout in the bends and grass edges. The upper section near Shipyard transitions toward brackish and holds bass alongside small reds. The creek mouth where it joins the bay is a prime flounder zone. Because it is short and protected, it is your safest fishery when weather threatens — you are minutes from the dock anywhere on it.",
-    todaysCall: "Glass-smooth conditions in the creek — pole or drift the bends quietly for tailing reds and feeding trout. Hit the mid-creek grass flats and the creek mouth before continuing to the bay or bayous. Easy water for sight-fishing today.",
+    todaysCall: "Glass-smooth creek conditions — pole or drift the bends quietly for tailing reds and trout. Hit the mid-creek grass flats and the creek mouth at first light. With Heat Advisory in effect, the creek is your safest fishery — minutes from the dock anywhere on it. Sunrise to 9 AM, then back to Shipyard.",
   },
   {
     id: "hogtown",
     label: "Hogtown Bayou",
     emoji: "🌾",
-    overallScore: 7.5,
-    conditions: "Good",
+    overallScore: 6.5,
+    conditions: "Fair",
     species: [
       { name: "Speckled Trout", confidence: 88, note: "Grass flats and grassy patches — peak summer bite, schools active early morning" },
       { name: "Redfish", confidence: 82, note: "Oyster bars and marsh grass edges, especially incoming tide" },
@@ -289,14 +289,14 @@ const LOCATIONS = [
       { order: 3, name: "Bay Side Drop-off", tide: "Outgoing", steps: ["Troll a Clark spoon for Spanish mackerel on falling tide", "Free-line live shrimp along the depth change", "Deeper channel holds flounder on outgoing current"] },
     ],
     aiNote: "Hogtown Bayou is the signature fishing spot of the Santa Rosa Beach guides and one of the most productive trout flats on Choctawhatchee Bay. It sees regular pressure but produces consistently. Summer mornings are peak — trout stack on the grass in 2-4 feet. Spanish mackerel show at the mouth on moving tides. Notably further from the 331 bridge than the other bayous — factor in run time when planning.",
-    todaysCall: "Smooth water makes the long run from Shipyard worth it — trout stack on the grass flats in 2-4 feet on calm mornings like today. Fish the mouth first on the incoming tide, then work inside as the tide builds. Plan run time so you are off the water before heat advisory peaks midday.",
+    todaysCall: "Smooth water makes the long run from Shipyard tempting for trout numbers — but Heat Advisory makes the timing risky. Only go if you launch by 5:30 AM and commit to being off the water by 9 AM. The long run back across open bay in midday heat is the real danger today.",
   },
   {
     id: "rocky",
     label: "Rocky Bayou",
     emoji: "🪨",
-    overallScore: 7.5,
-    conditions: "Good",
+    overallScore: 6.5,
+    conditions: "Fair",
     species: [
       { name: "Redfish", confidence: 85, note: "Tidal marshes and glass-calm coves — top red drum bayou near Niceville" },
       { name: "Speckled Trout", confidence: 72, note: "Grass flats and tidal creek edges, mornings on incoming tide" },
@@ -310,7 +310,7 @@ const LOCATIONS = [
       { order: 3, name: "Dock and Structure Zone", tide: "Any", steps: ["Mangrove snapper hold near dock pilings — small jig or live shrimp", "Free-line live mullet near structure for big reds", "Cast net for mullet first — abundant here and great live bait"] },
     ],
     aiNote: "Rocky Bayou sits inside Fred Gannon Rocky Bayou State Park near Niceville — protected, scenic, and significantly less pressured than the bayous closer to the 331 bridge. The freshwater influence from Rocky Creek makes flounder fishing here excellent, and the glass-calm coves in the state park are ideal for sight fishing reds on a flat tide. Mangrove snapper hold near dock pilings. The furthest location from Shipyard Marina in this report — factor in run time.",
-    todaysCall: "Glass-smooth conditions in the protected state park coves — ideal sight-fishing day for reds. Target flounder at the tidal creek mouths where freshwater meets bay. Long run from Shipyard, so commit to it early and head in mid-morning before the heat advisory peaks.",
+    todaysCall: "Glass-smooth state park coves are ideal for sight-fishing reds — but the long run from Shipyard combined with Heat Advisory makes this a calculated bet today. Only go if launched by 5:30 AM and back by 9 AM. State park offers shade, but the open-water return in midday heat is the real risk.",
   },
 ];
 
@@ -635,8 +635,8 @@ export default function App() {
         </div>
 
         {/* Storm warning */}
-        <div style={{ background: "#2a1a00", border: "1px solid #4ade8066", borderRadius: 8, padding: "10px 14px", fontSize: 14, color: "#86efac", margin: "12px 0", lineHeight: 1.5 }}>
-          🌞 Monday: Smooth bay, no storm threat — best day this week. Heat advisory in effect · High 93°F · Hydrate heavily · Off the water by 11 AM.
+        <div style={{ background: "#2a1a00", border: "1px solid #facc15", borderRadius: 8, padding: "10px 14px", fontSize: 14, color: "#fde68a", margin: "12px 0", lineHeight: 1.5 }}>
+          ⚠️ Monday HEAT ADVISORY: Heat index 105–110°F — dangerous heat. Smooth bay, slight PM storm chance. Fish sunrise to 10 AM only · Hydrate heavily.
         </div>
 
         {/* 3-day look ahead — always visible */}
@@ -805,3 +805,4 @@ export default function App() {
     </div>
   );
 }
+
