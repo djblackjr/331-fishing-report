@@ -4,12 +4,12 @@ import { useState } from "react";
 const CONDITIONS = {
   date: "Monday, June 29, 2026",
   wind: { speed: 5, dir: "NW", description: "NW light 5 knots · shifting south afternoon · smooth bay" },
-  weather: "Mostly sunny · High 93°F · HEAT ADVISORY · Heat index 105–110°F · Slight chance PM storms",
+  weather: "Hot and humid · High 95°F · HEAT ADVISORY ACTIVE · Heat index 105–110°F · Slight chance PM storms",
   tide: "Incoming ~7:05 AM · Outgoing ~1:30 PM · Sunrise 5:43 AM · Smooth water",
-  moonPhase: "Waxing Crescent (Day 4)",
+  moonPhase: "Full Moon (99% illuminated)",
   waterClarity: "Slightly stained",
   sky: "Bright sun",
-  lastUpdated: "June 29, 2026 · NOAA GMZ635 + NWS Tallahassee · Heat Advisory PM · Slight storm chance PM",
+  lastUpdated: "June 29, 2026 · Sources: NOAA GMZ635 (today + tomorrow) · NWS Tallahassee AFD (day 3) · Heat Advisory ACTIVE",
   launch: "Shipyard Marina · 116 Shipyard Rd, Freeport FL 32439 · (850) 866-3865 · Open 7:30 AM–5 PM. Cruise 4 miles down the creek to east Choctawhatchee Bay. Fuel on-site. Copeland's Bait & Tackle: 17290 US-331 S · open 6 AM · (850) 835-4277.",
   windGuidance: [
     { dir: "N", icon: "↓", advice: "Fish protected south shore — calm water, grass flats east of bridge" },
@@ -53,7 +53,7 @@ const FORECAST = [
   {
     day: "Mon Jun 29",
     label: "Today",
-    high: 93,
+    high: 95,
     low: 77,
     wind: "NW 5 → S afternoon",
     storms: 20,
@@ -65,25 +65,25 @@ const FORECAST = [
   {
     day: "Tue Jun 30",
     label: "Tomorrow",
-    high: 92,
+    high: 91,
     low: 75,
-    wind: "NW 5 → SW 5",
-    storms: 40,
-    headline: "Storms returning · Mainly PM",
-    fishingScore: 6.5,
-    aiCall: "Heat dome breaking down — storms return mainly afternoon. Fish hard sunrise to 11 AM. Have a bayou escape plan ready.",
-    emoji: "⛅",
+    wind: "NW 5 → SW afternoon",
+    storms: 65,
+    headline: "AM chance → PM storms likely · Smooth bay",
+    fishingScore: 5.0,
+    aiCall: "Heat dome breaking. NOAA forecast: chance of storms AM, then storms likely PM. Smooth bay early. Fish sunrise to 10 AM, watch radar closely, have a bayou retreat plan. Source: NOAA GMZ635 issued Sat Jun 27.",
+    emoji: "⛈️",
   },
   {
     day: "Wed Jul 1",
     label: "Wednesday",
     high: 90,
-    low: 74,
+    low: 76,
     wind: "Variable light",
-    storms: 60,
-    headline: "T-storms likely · 60% chance",
-    fishingScore: 5.5,
-    aiCall: "Pattern shifts back to typical summer pop-up storms. Early bite still good — be on the water at dawn and off by 10 AM.",
+    storms: 55,
+    headline: "Storms likely · Resurgence of summer pattern",
+    fishingScore: 5.0,
+    aiCall: "Storm resurgence per NWS Tallahassee forecast discussion. Typical Florida summer pop-up pattern. Early window remains best — fish dawn to 10 AM. Forecast not yet in marine zone window — verify weather.gov morning of.",
     emoji: "⛈️",
   },
 ];
@@ -805,5 +805,3 @@ export default function App() {
     </div>
   );
 }
-
-
