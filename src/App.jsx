@@ -2,14 +2,16 @@ import { useState } from "react";
 
 // ── SHARED CONDITIONS ─────────────────────────────────────────────────────────
 const CONDITIONS = {
-  date: "Wednesday, July 1, 2026",
-  wind: { speed: 7, dir: "E", description: "East 5–10 mph · shifting SE afternoon · light and steady" },
-  weather: "Sunny · High 94°F · 0% rain · No storm threat · Great day",
-  tide: "Incoming ~8:45 AM · Outgoing ~3:10 PM · Sunrise 5:44 AM · Smooth all day",
-  moonPhase: "Waning Gibbous (95% illuminated) — strong tidal push",
+  date: "Thursday, July 2, 2026",
+  wind: { speed: 7, dir: "E", description: "East 5–10 mph · steady all day" },
+  weather: "Sunny · High 95°F · 0% rain · Heat index up to 106°F · No storm threat",
+  tide: "Incoming ~9:35 AM · Outgoing ~4:00 PM · Sunrise 5:46 AM · Smooth all day",
+  moonPhase: "Waning Gibbous (~88% illuminated) — still strong tidal push",
   waterClarity: "Slightly stained",
   sky: "Bright sun",
-  lastUpdated: "July 1, 2026 · Source: WeatherBug Freeport FL 32459 · Live fetch (Wed AM)",
+  lastUpdated: "July 2, 2026 · Source: WeatherBug Freeport FL 32459 (Destin station) · Live fetch (Thu evening)",
+  localBiteReport: "Trout bite has been strong across Choctawhatchee Bay this week, with water temps sitting in the low 80s. Guides report reds and trout schooling up on grass flats and around bridge pilings as the bay settles into its summer pattern — some inshore pressure has eased as anglers shift offshore for red snapper season. A recent standout: a 40+ inch, 26 lb bull redfish landed near Santa Rosa Beach.",
+  localBiteSource: "Sourced from recent charter & guide reports, Choctawhatchee Bay area · Not a live feed — spot-checked manually",
   launch: "Shipyard Marina · 116 Shipyard Rd, Freeport FL 32439 · (850) 866-3865 · Open 7:30 AM–5 PM. Cruise 4 miles down the creek to east Choctawhatchee Bay. Fuel on-site. Copeland's Bait & Tackle: 17290 US-331 S · open 6 AM · (850) 835-4277.",
   windGuidance: [
     { dir: "N", icon: "↓", advice: "Fish protected south shore — calm water, grass flats east of bridge" },
@@ -51,32 +53,20 @@ const CONDITIONS = {
 // ── 3-DAY LOOK AHEAD ──────────────────────────────────────────────────────────
 const FORECAST = [
   {
-    day: "Wed Jul 1",
-    label: "Today",
-    high: 94,
-    low: 75,
-    wind: "E 5–10 → SE afternoon",
-    storms: 0,
-    headline: "Sunny · 0% rain · Excellent fishing day",
-    fishingScore: 8.5,
-    aiCall: "Best fishing day this week. Sunny all day, no storm threat, light east wind shifting SE by afternoon. Storms cleared last night leaving stirred water — reds and trout will be active. Full morning window available.",
-    emoji: "☀️",
-  },
-  {
     day: "Thu Jul 2",
-    label: "Tomorrow",
+    label: "Today",
     high: 95,
     low: 74,
     wind: "E 5–10 mph",
     storms: 0,
     headline: "Sunny · Heat index 106 · No rain",
     fishingScore: 8.0,
-    aiCall: "Second sunny day in a row. Heat index climbing to 106°F — plan an early exit. East wind stays light and steady. Great for open bay if you can be off by 10 AM.",
+    aiCall: "Second sunny day in a row. Heat index climbing to 106°F — plan an early exit. East wind stays light and steady all day. Great for open bay if you can be off the water by 10 AM.",
     emoji: "☀️",
   },
   {
     day: "Fri Jul 3",
-    label: "Friday",
+    label: "Tomorrow",
     high: 93,
     low: 75,
     wind: "NE 5 → S afternoon",
@@ -85,6 +75,18 @@ const FORECAST = [
     fishingScore: 7.5,
     aiCall: "Third sunny day in the streak. NE wind at dawn shifting south afternoon. Heat index 105°F. Similar setup — sunrise to 10 AM is the play. Water should be increasingly clear as storm-stirred sediment settles.",
     emoji: "☀️",
+  },
+  {
+    day: "Sat Jul 4",
+    label: "Saturday",
+    high: 93,
+    low: 75,
+    wind: "Variable, light",
+    storms: 20,
+    headline: "Sunny early · Slight PM storm chance · Heat index 105",
+    fishingScore: 7.0,
+    aiCall: "Holiday morning still looks good — sunny with light wind. A 20% chance of afternoon showers/storms creeps in, so plan to be off the water well before midday. Morning bite should be strong given three days of stable conditions building on the flats.",
+    emoji: "⛅",
   },
 ];
 
@@ -163,6 +165,13 @@ const BAIT_RECS = {
   },
 };
 
+// ── WIND HELPERS (drive dynamic stop text so it can never drift from actual conditions) ──
+const DIR_WORD = { N: "north", S: "south", E: "east", W: "west", NE: "northeast", NW: "northwest", SE: "southeast", SW: "southwest" };
+const OPPOSITE_DIR = { N: "S", S: "N", E: "W", W: "E", NE: "SW", SW: "NE", SE: "NW", NW: "SE" };
+function leeSide(dir) { return DIR_WORD[OPPOSITE_DIR[dir]] || dir; }
+function windWord(dir) { return DIR_WORD[dir] || dir; }
+function capitalize(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
+
 // ── PER-LOCATION REPORTS ──────────────────────────────────────────────────────
 const LOCATIONS = [
   {
@@ -179,12 +188,16 @@ const LOCATIONS = [
       { name: "Flounder", confidence: 40, note: "Deep channel under bridge, mud minnow on jig" },
     ],
     stops: [
-      { order: 1, name: "Bridge Pilings (East Side)", tide: "Incoming tide · sunrise", steps: ["Bone/white Spook Jr. topwater along pilings pre-dawn", "Switch to chartreuse paddle-tail as sun rises", "W wind today — bait stacks on east face of pilings"] },
+      { order: 1, name: (wind) => `Bridge Pilings (${capitalize(leeSide(wind.dir))} Side)`, tide: "Incoming tide · sunrise", steps: [
+        "Bone/white Spook Jr. topwater along pilings pre-dawn",
+        "Switch to chartreuse paddle-tail as sun rises",
+        (wind) => `${capitalize(windWord(wind.dir))} wind today — bait stacks on the ${leeSide(wind.dir)} face of pilings`,
+      ] },
       { order: 2, name: "Channel Edge", tide: "Mid-incoming", steps: ["Gold Johnson spoon slow-retrieved through the channel", "Live shrimp under popping cork in 4–6 ft", "Target the depth change between grass and sand"] },
-      { order: 3, name: "South Shore Grass Flats", tide: "Outgoing", steps: ["Weedless paddle-tail in white or new penny", "Sight fish tailing reds in 1–2 ft", "W wind = protected water on south shore today"] },
+      { order: 3, name: "South Shore Grass Flats", tide: "Outgoing", steps: ["Weedless paddle-tail in white or new penny", "Sight fish tailing reds in 1–2 ft", (wind) => `${wind.description} — check for chop before committing here`] },
     ],
-    aiNote: "The 331 Bridge spans the narrow neck of Choctawhatchee Bay, creating a current funnel where bait gets pushed through on both tides. The pilings hold trout, reds, sheepshead, and black drum year-round. The east side of the pilings is the prime ambush zone on incoming tides. Open water here is exposed to weather and chop — it is the first spot to become unfishable when wind picks up.",
-    todaysCall: "Green-light day for the bridge. Sunny, no storms, light east wind stacks bait against the west pilings on the incoming tide. Launch at 5:30 AM, work the west face with a bright topwater or white paddle-tail. Fish comfortably through 10:30 AM. Heat is the only real caution.",
+    aiNote: "The 331 Bridge spans the narrow neck of Choctawhatchee Bay, creating a current funnel where bait gets pushed through on both tides. The pilings hold trout, reds, sheepshead, and black drum year-round. The lee-side pilings are the prime ambush zone on incoming tides. Open water here is exposed to weather and chop — it is the first spot to become unfishable when wind picks up.",
+    todaysCall: "Green-light day for the bridge. Sunny, no storms, light east wind stacks bait against the west pilings on the incoming tide. Launch at 5:30 AM, work the west face with a bright topwater or white paddle-tail. This matches what guides are seeing bay-wide right now — reds and trout schooling tight to bridge structure as the summer pattern locks in. Fish comfortably through 10:30 AM; heat is the only real caution.",
   },
   {
     id: "alaqua",
@@ -200,12 +213,12 @@ const LOCATIONS = [
       { name: "Largemouth Bass", confidence: 45, note: "Upper creek near freshwater inflow, soft plastics" },
     ],
     stops: [
-      { order: 1, name: "Bayou Mouth Oyster Bars", tide: "Incoming tide", steps: ["Gold spoon along oyster bar edges", "Live shrimp under popping cork", "W wind today concentrates fish at the mouth — prime spot"] },
+      { order: 1, name: "Bayou Mouth Oyster Bars", tide: "Incoming tide", steps: ["Gold spoon along oyster bar edges", "Live shrimp under popping cork", (wind) => `${wind.description} — calm conditions concentrate fish at the mouth, prime spot`] },
       { order: 2, name: "Creek Bends (Mid-Bayou)", tide: "Mid-incoming", steps: ["Slow-roll paddle-tail through bends", "Topwater along overhanging banks at dawn", "Mud minnow on 1/4 oz jig for flounder on bottom"] },
       { order: 3, name: "Upper Alaqua Creek", tide: "Any", steps: ["Transitions to bass-fishing style in upper reaches", "Soft plastics and small swimbaits near structure", "Watch for alligators — keep hooks away from the bank"] },
     ],
     aiNote: "Alaqua Bayou is protected water with a strong year-round redfish population, plus trout and flounder at the mouth. The oyster bars at the creek mouth are the prime spot. Tree cover keeps it a few degrees cooler than the open bay and offers shelter from wind and weather. The upper creek transitions toward brackish and holds bass alongside small reds.",
-    todaysCall: "Calm sunny conditions — fish the oyster bars at the bayou mouth on the incoming tide with a gold spoon at first light. East wind moves bait into the mouth. Work up the bayou as the tide rises. Tree line offers relief when heat builds.",
+    todaysCall: "Calm sunny conditions — fish the oyster bars at the bayou mouth on the incoming tide with a gold spoon at first light. East wind moves bait into the mouth. Water temps sitting in the low 80s bay-wide right now, and the trout bite has been strong the last several days — good sign for the mouth flats. Work up the bayou as the tide rises. Tree line offers relief when heat builds.",
   },
   {
     id: "basin",
@@ -226,7 +239,7 @@ const LOCATIONS = [
       { order: 3, name: "Oyster Bar Edges", tide: "Outgoing", steps: ["Switch to paddle-tail on falling tide", "Work parallel to oyster edges, not over them", "Flounder stack in sandy pockets adjacent to bars"] },
     ],
     aiNote: "Basin Bayou sees less pressure than Alaqua and LaGrange, which means less-educated fish. The interior grass flats are classic sight-fishing territory for reds — poling or drifting quietly in under 2 feet. Pompano occasionally show at the mouth on moving tides in late spring and early summer. Less protected than LaGrange when weather builds.",
-    todaysCall: "Sunny calm day — smooth water is ideal for sight-fishing the interior grass flats. Perfect for spotting tailing reds in skinny water. Start at the mouth with small jigs for pompano on the moving tide, then pole inside as the sun climbs.",
+    todaysCall: "Sunny calm day — smooth water is ideal for sight-fishing the interior grass flats. Perfect for spotting tailing reds in skinny water, and guides have been finding some genuinely big reds on the flats this week — including a 40+ inch bull redfish reported near Santa Rosa Beach. Start at the mouth with small jigs for pompano on the moving tide, then pole inside as the sun climbs.",
   },
   {
     id: "lagrange",
@@ -247,7 +260,7 @@ const LOCATIONS = [
       { order: 3, name: "Deep Holes (Interior)", tide: "Outgoing or any falling water", steps: ["Fish deeper holes with shrimp on bottom for black drum", "Sheepshead near any dock pilings or hard structure", "Protected water makes a good late-morning stop as heat builds"] },
     ],
     aiNote: "LaGrange is the top trout producer in this report — its oyster bars at the mouth are legendary, and the interior grass flats hold reds year-round. Deep holes inside hold black drum and sheepshead. The bayou is also the most protected water on this side of the bay, making it the go-to spot when weather builds. Premium spot in both calm and rough conditions.",
-    todaysCall: "Premium trout day — sunny, calm, no weather pressure. Hit the oyster bars at the mouth at sunrise with popping cork and live shrimp. As the sun climbs, switch to gold spoon on the interior grass flats. This is the best trout chance of the week.",
+    todaysCall: "Premium trout day — sunny, calm, no weather pressure. Hit the oyster bars at the mouth at sunrise with popping cork and live shrimp. Guides across the bay have been calling the trout bite genuinely strong this week with water temps in the low 80s, and LaGrange's oyster bars are exactly the kind of structure that's been producing. As the sun climbs, switch to gold spoon on the interior grass flats. This is the best trout chance of the week.",
   },
   {
     id: "fourmile",
@@ -268,7 +281,7 @@ const LOCATIONS = [
       { order: 3, name: "Creek Mouth (Bay Entry)", tide: "Incoming or outgoing — best on moving water", steps: ["Prime flounder zone where creek meets bay", "Mud minnow on 1/4 oz jig dragged on bottom", "Free-line live shrimp on the current seam for trout and reds"] },
     ],
     aiNote: "Four Mile Creek is the tidal creek that runs between Shipyard Marina and Choctawhatchee Bay. Tidal flow pushes baitfish up the creek on incoming tides, concentrating reds and trout in the bends and grass edges. The upper section near Shipyard transitions toward brackish and holds bass alongside small reds. The creek mouth where it joins the bay is a prime flounder zone. Because it is short and protected, it is your safest fishery when weather threatens — you are minutes from the dock anywhere on it.",
-    todaysCall: "Glass-smooth creek conditions — pole or drift the bends quietly for tailing reds and trout. Hit the mid-creek grass flats and the creek mouth at first light on the incoming tide. No weather pressure means you can work the creek fully or continue out to the bay.",
+    todaysCall: "Glass-smooth creek conditions — pole or drift the bends quietly for tailing reds and trout. Hit the mid-creek grass flats and the creek mouth at first light on the incoming tide. Bay-wide reports have the trout bite running hot with water in the low 80s, so don't overlook this creek just because it's small — that pattern of fish stacking tight to structure applies here too. No weather pressure means you can work the creek fully or continue out to the bay.",
   },
   {
     id: "hogtown",
@@ -289,7 +302,7 @@ const LOCATIONS = [
       { order: 3, name: "Bay Side Drop-off", tide: "Outgoing", steps: ["Troll a Clark spoon for Spanish mackerel on falling tide", "Free-line live shrimp along the depth change", "Deeper channel holds flounder on outgoing current"] },
     ],
     aiNote: "Hogtown Bayou is the signature fishing spot of the Santa Rosa Beach guides and one of the most productive trout flats on Choctawhatchee Bay. It sees regular pressure but produces consistently. Summer mornings are peak — trout stack on the grass in 2-4 feet. Spanish mackerel show at the mouth on moving tides. Notably further from the 331 bridge than the other bayous — factor in run time when planning.",
-    todaysCall: "Green light for Hogtown today — the long run is now safe. Smooth water and no storm threat make this a top pick for trout numbers. Fish the mouth at first light on the incoming tide with popping cork, then work interior grass flats. Plan run time so you are off by 10:30 AM before heat builds.",
+    todaysCall: "Green light for Hogtown today — the long run is now safe. Smooth water and no storm threat make this a top pick for trout numbers, and the timing lines up: this is the Santa Rosa Beach spot where guides landed a 40+ inch, 26 lb bull redfish just this week, and the trout bite has been strong bay-wide. Fish the mouth at first light on the incoming tide with popping cork, then work interior grass flats. Plan run time so you are off by 10:30 AM before heat builds.",
   },
   {
     id: "rocky",
@@ -310,7 +323,7 @@ const LOCATIONS = [
       { order: 3, name: "Dock and Structure Zone", tide: "Any", steps: ["Mangrove snapper hold near dock pilings — small jig or live shrimp", "Free-line live mullet near structure for big reds", "Cast net for mullet first — abundant here and great live bait"] },
     ],
     aiNote: "Rocky Bayou sits inside Fred Gannon Rocky Bayou State Park near Niceville — protected, scenic, and significantly less pressured than the bayous closer to the 331 bridge. The freshwater influence from Rocky Creek makes flounder fishing here excellent, and the glass-calm coves in the state park are ideal for sight fishing reds on a flat tide. Mangrove snapper hold near dock pilings. The furthest location from Shipyard Marina in this report — factor in run time.",
-    todaysCall: "Green light for Rocky today — the long run is safe. Glass-smooth state park coves ideal for sight-fishing reds. Target flounder at the tidal creek mouths. Launch by 5:30 AM to maximize water time and beat the midday heat. Solid full-morning trip today.",
+    todaysCall: "Green light for Rocky today — the long run is safe. Glass-smooth state park coves ideal for sight-fishing reds. Target flounder at the tidal creek mouths. Water temps are running low 80s bay-wide and the bite has been consistent — Rocky's low pressure means these fish are less picky than what you'd find near the bridge. Launch by 5:30 AM to maximize water time and beat the midday heat. Solid full-morning trip today.",
   },
 ];
 
@@ -513,21 +526,24 @@ function LocationReport({ loc }) {
       {/* Strategy */}
       <Collapsible title="🗺️ Fishing Strategy">
         <div style={{ marginTop: 10 }}>
-          {loc.stops.map((stop, i) => (
+          {loc.stops.map((stop, i) => {
+            const stopName = typeof stop.name === "function" ? stop.name(C.wind) : stop.name;
+            return (
             <div key={stop.order}>
               <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 7 }}>
                 <div style={{ width: 24, height: 24, borderRadius: "50%", background: "#4ade80", color: "#0a1f14", fontSize: 14, fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>{stop.order}</div>
                 <div>
-                  <div style={{ fontSize: 14, fontWeight: 700, color: "#f0faf4" }}>{stop.name}</div>
+                  <div style={{ fontSize: 14, fontWeight: 700, color: "#f0faf4" }}>{stopName}</div>
                   <div style={{ fontSize: 14, color: "#7ab898" }}>{stop.tide}</div>
                 </div>
               </div>
               <ul style={{ margin: 0, padding: "0 0 0 34px", fontSize: 14, color: "#86c7a0", lineHeight: 2.0 }}>
-                {stop.steps.map(s => <li key={s}>{s}</li>)}
+                {stop.steps.map((s, idx) => <li key={idx}>{typeof s === "function" ? s(C.wind) : s}</li>)}
               </ul>
               {i < loc.stops.length - 1 && divider}
             </div>
-          ))}
+            );
+          })}
         </div>
       </Collapsible>
 
@@ -636,7 +652,14 @@ export default function App() {
 
         {/* Storm warning */}
         <div style={{ background: "#0d2918", border: "1px solid #4ade8066", borderRadius: 8, padding: "10px 14px", fontSize: 14, color: "#86efac", margin: "12px 0", lineHeight: 1.5 }}>
-          🌞 Wednesday: Best fishing day of the week — sunny, no storms, light east wind. Full morning window. Heat index still climbs midday · Off water by 11 AM comfortable.
+          🌞 Thursday: Another excellent fishing day — sunny, no storms, light steady east wind. Heat index climbs to 106°F midday · Off water by 10 AM comfortable.
+        </div>
+
+        {/* Local bite report — grounded in real recent guide/charter reports */}
+        <div style={{ background: "#0f2a1c", border: "1px solid #1a3828", borderRadius: 10, padding: "13px 16px", marginBottom: 4 }}>
+          <div style={{ fontSize: 14, color: "#7ab898", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 8, fontWeight: 600 }}>🎣 What's Being Caught — Local Reports</div>
+          <p style={{ margin: "0 0 6px 0", fontSize: 14, color: "#d1f0e0", lineHeight: 1.7 }}>{C.localBiteReport}</p>
+          <div style={{ fontSize: 13, color: "#7ab898", fontStyle: "italic" }}>{C.localBiteSource}</div>
         </div>
 
         {/* 3-day look ahead — always visible */}
@@ -805,3 +828,4 @@ export default function App() {
     </div>
   );
 }
+
