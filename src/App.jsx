@@ -1,23 +1,21 @@
 import { useState } from "react";
+import dailyData from "./data/conditions.json";
 
 // ── SHARED CONDITIONS ─────────────────────────────────────────────────────────
-const CONDITIONS = {
-  date: "Thursday, July 2, 2026",
-  wind: { speed: 7, dir: "E", description: "East 5–10 mph · steady all day" },
-  weather: "Sunny · High 95°F · 0% rain · Heat index up to 106°F · No storm threat",
-  tide: "Incoming ~9:35 AM · Outgoing ~4:00 PM · Sunrise 5:46 AM · Smooth all day",
-  moonPhase: "Waning Gibbous (~88% illuminated) — still strong tidal push",
-  waterClarity: "Slightly stained",
-  sky: "Bright sun",
-  lastUpdated: "July 2, 2026 · Source: WeatherBug Freeport FL 32459 (Destin station) · Live fetch (Thu evening)",
-  localBiteReport: "Trout bite has been strong across Choctawhatchee Bay this week, with water temps sitting in the low 80s. Guides report reds and trout schooling up on grass flats and around bridge pilings as the bay settles into its summer pattern — some inshore pressure has eased as anglers shift offshore for red snapper season. A recent standout: a 40+ inch, 26 lb bull redfish landed near Santa Rosa Beach.",
-  localBiteSource: "Sourced from recent charter & guide reports, Choctawhatchee Bay area · Not a live feed — spot-checked manually",
+// Only the truly evergreen config lives here. Everything that changes day-to-day
+// (date, wind, weather, tide, moon phase, forecast, local bite report) comes from
+// src/data/conditions.json, which the daily GitHub Action overwrites automatically.
+const STATIC_CONDITIONS = {
   launch: "Shipyard Marina · 116 Shipyard Rd, Freeport FL 32439 · (850) 866-3865 · Open 7:30 AM–5 PM. Cruise 4 miles down the creek to east Choctawhatchee Bay. Fuel on-site. Copeland's Bait & Tackle: 17290 US-331 S · open 6 AM · (850) 835-4277.",
   windGuidance: [
     { dir: "N", icon: "↓", advice: "Fish protected south shore — calm water, grass flats east of bridge" },
     { dir: "S", icon: "↑", advice: "Fish north shoreline — LaGrange Bayou mouth and creek edges" },
     { dir: "E", icon: "→", advice: "Fish the bridge — east wind pushes bait against west pilings" },
     { dir: "W", icon: "←", advice: "Fish bayou mouths — LaGrange and Alaqua mouths concentrate fish" },
+    { dir: "SW", icon: "↖", advice: "Fish LaGrange/Alaqua mouths and north shoreline — SW wind pushes bait toward both" },
+    { dir: "NW", icon: "↘", advice: "Fish south shore and bayou mouths — NW wind pushes bait that direction" },
+    { dir: "SE", icon: "↖", advice: "Fish the bridge and north shoreline — SE wind behaves like a mix of E and S" },
+    { dir: "NE", icon: "↙", advice: "Fish the bridge and south shore — NE wind behaves like a mix of E and N" },
   ],
   windWarning: "Winds over 15 knots: Stay inside LaGrange Bayou. Avoid crossing open bay water.",
   lureMatrix: {
@@ -50,45 +48,8 @@ const CONDITIONS = {
   ],
 };
 
-// ── 3-DAY LOOK AHEAD ──────────────────────────────────────────────────────────
-const FORECAST = [
-  {
-    day: "Thu Jul 2",
-    label: "Today",
-    high: 95,
-    low: 74,
-    wind: "E 5–10 mph",
-    storms: 0,
-    headline: "Sunny · Heat index 106 · No rain",
-    fishingScore: 8.0,
-    aiCall: "Second sunny day in a row. Heat index climbing to 106°F — plan an early exit. East wind stays light and steady all day. Great for open bay if you can be off the water by 10 AM.",
-    emoji: "☀️",
-  },
-  {
-    day: "Fri Jul 3",
-    label: "Tomorrow",
-    high: 93,
-    low: 75,
-    wind: "NE 5 → S afternoon",
-    storms: 0,
-    headline: "Sunny · Heat index 105 · Third clear day",
-    fishingScore: 7.5,
-    aiCall: "Third sunny day in the streak. NE wind at dawn shifting south afternoon. Heat index 105°F. Similar setup — sunrise to 10 AM is the play. Water should be increasingly clear as storm-stirred sediment settles.",
-    emoji: "☀️",
-  },
-  {
-    day: "Sat Jul 4",
-    label: "Saturday",
-    high: 93,
-    low: 75,
-    wind: "Variable, light",
-    storms: 20,
-    headline: "Sunny early · Slight PM storm chance · Heat index 105",
-    fishingScore: 7.0,
-    aiCall: "Holiday morning still looks good — sunny with light wind. A 20% chance of afternoon showers/storms creeps in, so plan to be off the water well before midday. Morning bite should be strong given three days of stable conditions building on the flats.",
-    emoji: "⛅",
-  },
-];
+const CONDITIONS = { ...dailyData, ...STATIC_CONDITIONS };
+const FORECAST = dailyData.forecast;
 
 
 
@@ -197,7 +158,7 @@ const LOCATIONS = [
       { order: 3, name: "South Shore Grass Flats", tide: "Outgoing", steps: ["Weedless paddle-tail in white or new penny", "Sight fish tailing reds in 1–2 ft", (wind) => `${wind.description} — check for chop before committing here`] },
     ],
     aiNote: "The 331 Bridge spans the narrow neck of Choctawhatchee Bay, creating a current funnel where bait gets pushed through on both tides. The pilings hold trout, reds, sheepshead, and black drum year-round. The lee-side pilings are the prime ambush zone on incoming tides. Open water here is exposed to weather and chop — it is the first spot to become unfishable when wind picks up.",
-    todaysCall: "Green-light day for the bridge. Sunny, no storms, light east wind stacks bait against the west pilings on the incoming tide. Launch at 5:30 AM, work the west face with a bright topwater or white paddle-tail. This matches what guides are seeing bay-wide right now — reds and trout schooling tight to bridge structure as the summer pattern locks in. Fish comfortably through 10:30 AM; heat is the only real caution.",
+    todaysCall: "Green-light day for the bridge. Sunny and hot, no storms, calm morning air turning southwest by afternoon — that shift matters here, since it stacks bait against the northeast pilings instead of the west side. Launch early while it's still calm, work whichever face is in the lee once the SW wind fills in. This matches what guides are seeing bay-wide right now — reds and trout schooling tight to bridge structure as the summer pattern locks in. Heat is the real caution today; plan to be off by mid-morning.",
   },
   {
     id: "alaqua",
@@ -218,7 +179,7 @@ const LOCATIONS = [
       { order: 3, name: "Upper Alaqua Creek", tide: "Any", steps: ["Transitions to bass-fishing style in upper reaches", "Soft plastics and small swimbaits near structure", "Watch for alligators — keep hooks away from the bank"] },
     ],
     aiNote: "Alaqua Bayou is protected water with a strong year-round redfish population, plus trout and flounder at the mouth. The oyster bars at the creek mouth are the prime spot. Tree cover keeps it a few degrees cooler than the open bay and offers shelter from wind and weather. The upper creek transitions toward brackish and holds bass alongside small reds.",
-    todaysCall: "Calm sunny conditions — fish the oyster bars at the bayou mouth on the incoming tide with a gold spoon at first light. East wind moves bait into the mouth. Water temps sitting in the low 80s bay-wide right now, and the trout bite has been strong the last several days — good sign for the mouth flats. Work up the bayou as the tide rises. Tree line offers relief when heat builds.",
+    todaysCall: "Calm sunny conditions — fish the oyster bars at the bayou mouth on the incoming tide with a gold spoon at first light. Wind stays light through the morning before turning southwest in the afternoon, so the mouth should stay workable most of the day. Water temps sitting in the low 80s bay-wide right now, and the trout bite has been strong the last several days — good sign for the mouth flats. Work up the bayou as the tide rises. Tree line offers relief when heat builds.",
   },
   {
     id: "basin",
@@ -652,7 +613,7 @@ export default function App() {
 
         {/* Storm warning */}
         <div style={{ background: "#0d2918", border: "1px solid #4ade8066", borderRadius: 8, padding: "10px 14px", fontSize: 14, color: "#86efac", margin: "12px 0", lineHeight: 1.5 }}>
-          🌞 Thursday: Another excellent fishing day — sunny, no storms, light steady east wind. Heat index climbs to 106°F midday · Off water by 10 AM comfortable.
+          🌞 Friday: Sunny and hot — no storms today, but heat index climbs to 104°F. Wind starts calm and turns southwest ~5 mph by afternoon. Get on the water early.
         </div>
 
         {/* Local bite report — grounded in real recent guide/charter reports */}
@@ -828,4 +789,5 @@ export default function App() {
     </div>
   );
 }
+
 
