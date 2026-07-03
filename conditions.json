@@ -1,0 +1,50 @@
+{
+  "date": "Friday, July 3, 2026",
+  "wind": { "speed": 5, "dir": "SW", "description": "Calm morning, turning SW ~5 mph in the afternoon" },
+  "weather": "Sunny and hot · High 95°F · Heat index up to 104°F · Calm becoming SW in the afternoon · No storm threat",
+  "tide": "Low tide ~1:19 AM · High tide ~1:00 PM · Sunrise ~5:47 AM · Diurnal (one high, one low today)",
+  "moonPhase": "Waning Gibbous (~85% illuminated) — still a solid tidal push",
+  "waterClarity": "Slightly stained",
+  "sky": "Bright sun",
+  "lastUpdated": "July 3, 2026 · Source: National Weather Service (Tallahassee/TAE) + NOAA Tides (station 8729511) · Live fetch",
+  "localBiteReport": "Trout bite has been strong across Choctawhatchee Bay this week, with water temps sitting in the low 80s. Guides report reds and trout schooling up on grass flats and around bridge pilings as the bay settles into its summer pattern — some inshore pressure has eased as anglers shift offshore for red snapper season. A recent standout: a 40+ inch, 26 lb bull redfish landed near Santa Rosa Beach.",
+  "localBiteSource": "Sourced from recent charter & guide reports, Choctawhatchee Bay area · Not auto-updated — refresh manually via Claude periodically",
+  "forecast": [
+    {
+      "day": "Fri Jul 3",
+      "label": "Today",
+      "high": 95,
+      "low": 77,
+      "wind": "Calm → SW 5 mph afternoon",
+      "storms": 0,
+      "headline": "Sunny and hot · Heat index up to 104°F · No rain",
+      "fishingScore": 8.0,
+      "aiCall": "Sunny and hot with calm morning air turning southwest by afternoon. Heat index climbs to 104°F, so get on the water early and plan to be off by mid-morning. No rain in the forecast — should be a clean, fishable day start to finish.",
+      "emoji": "☀️"
+    },
+    {
+      "day": "Sat Jul 4",
+      "label": "Tomorrow (Independence Day)",
+      "high": 93,
+      "low": 77,
+      "wind": "Calm → SW 5 mph afternoon",
+      "storms": 30,
+      "headline": "Mostly sunny · 30% storm chance before 2 PM · Heat index 105°F",
+      "fishingScore": 7.0,
+      "aiCall": "Holiday morning looks fishable but keep an eye on the sky — 30% chance of showers and storms, mainly before 2 PM. Get out early and plan to be off the water well before early afternoon. Heat index climbs to 105°F.",
+      "emoji": "⛅"
+    },
+    {
+      "day": "Sun Jul 5",
+      "label": "Sunday",
+      "high": 91,
+      "low": 77,
+      "wind": "Light/variable → S/SW 5-10 mph afternoon",
+      "storms": 20,
+      "headline": "Sunny · 20% storm chance after 1 PM · Slightly cooler",
+      "fishingScore": 7.5,
+      "aiCall": "Best of the three-day window — sunny, a touch cooler at 91°F, and the storm chance holds off until afternoon. Light and variable morning wind becoming S/SW by afternoon.",
+      "emoji": "☀️"
+    }
+  ]
+}
