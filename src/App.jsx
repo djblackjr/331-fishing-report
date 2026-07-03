@@ -301,8 +301,8 @@ function ScoreRing({ score }) {
       <circle cx="41" cy="41" r={r} fill="none" stroke={color} strokeWidth="7"
         strokeDasharray={`${fill} ${circ}`} strokeLinecap="round"
         transform="rotate(-90 41 41)" style={{ transition: "all 0.8s ease" }} />
-      <text x="41" y="38" textAnchor="middle" fill={color} fontSize="16" fontWeight="700" fontFamily="'Space Grotesk',sans-serif">{score}</text>
-      <text x="41" y="51" textAnchor="middle" fill="#7ab898" fontSize="9" fontFamily="'Space Grotesk',sans-serif">/10</text>
+      <text x="41" y="38" textAnchor="middle" fill={color} fontSize="18" fontWeight="700" fontFamily="'Space Grotesk',sans-serif">{score}</text>
+      <text x="41" y="51" textAnchor="middle" fill="#7ab898" fontSize="10" fontFamily="'Space Grotesk',sans-serif">/10</text>
     </svg>
   );
 }
@@ -318,7 +318,7 @@ function ConfBar({ pct }) {
 
 function Tag({ children, color = "#1e3a2f", text = "#4ade80" }) {
   return (
-    <span style={{ background: color, color: text, borderRadius: 4, padding: "3px 10px", fontSize: 14, fontWeight: 600, fontFamily: "'Space Grotesk',sans-serif", letterSpacing: "0.03em", border: `1px solid ${text}22` }}>{children}</span>
+    <span style={{ background: color, color: text, borderRadius: 4, padding: "3px 10px", fontSize: 16, fontWeight: 600, fontFamily: "'Space Grotesk',sans-serif", letterSpacing: "0.03em", border: `1px solid ${text}22` }}>{children}</span>
   );
 }
 
@@ -327,8 +327,8 @@ function Collapsible({ title, children, defaultOpen = true }) {
   return (
     <div style={{ marginBottom: 10, border: "1px solid #1a3828", borderRadius: 10, overflow: "hidden" }}>
       <button onClick={() => setOpen(!open)} style={{ width: "100%", background: "#0f2a1c", border: "none", padding: "11px 16px", display: "flex", justifyContent: "space-between", alignItems: "center", cursor: "pointer", fontFamily: "'Space Grotesk',sans-serif" }}>
-        <span style={{ fontSize: 14, color: "#7ab898", letterSpacing: "0.12em", textTransform: "uppercase", fontWeight: 600 }}>{title}</span>
-        <span style={{ color: "#7ab898", fontSize: 14, transform: open ? "rotate(180deg)" : "none", transition: "0.2s" }}>▾</span>
+        <span style={{ fontSize: 16, color: "#7ab898", letterSpacing: "0.12em", textTransform: "uppercase", fontWeight: 600 }}>{title}</span>
+        <span style={{ color: "#7ab898", fontSize: 16, transform: open ? "rotate(180deg)" : "none", transition: "0.2s" }}>▾</span>
       </button>
       {open && <div style={{ padding: "0 16px 14px", background: "#0a1f14" }}>{children}</div>}
     </div>
@@ -353,25 +353,25 @@ function ForecastStrip() {
               <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 10 }}>
                 <ScoreRing score={sc} />
                 <div style={{ flex: 1 }}>
-                  <div style={{ fontSize: 13, color: "#7ab898", textTransform: "uppercase", letterSpacing: "0.1em", fontWeight: 600 }}>{day.label}</div>
-                  <div style={{ fontSize: 17, fontWeight: 700, color: "#d1f0e0", marginBottom: 2 }}>{day.day}</div>
-                  <div style={{ fontSize: 14, fontWeight: 700, color: color }}>{rating} conditions</div>
+                  <div style={{ fontSize: 15, color: "#7ab898", textTransform: "uppercase", letterSpacing: "0.1em", fontWeight: 600 }}>{day.label}</div>
+                  <div style={{ fontSize: 20, fontWeight: 700, color: "#d1f0e0", marginBottom: 2 }}>{day.day}</div>
+                  <div style={{ fontSize: 16, fontWeight: 700, color: color }}>{rating} conditions</div>
                 </div>
-                <div style={{ fontSize: 32 }}>{day.emoji}</div>
+                <div style={{ fontSize: 37 }}>{day.emoji}</div>
               </div>
 
               {/* Headline */}
-              <div style={{ fontSize: 14, color: "#d1f0e0", marginBottom: 8 }}>{day.headline}</div>
+              <div style={{ fontSize: 16, color: "#d1f0e0", marginBottom: 8 }}>{day.headline}</div>
 
               {/* Metrics row */}
-              <div style={{ display: "flex", gap: 14, fontSize: 13, color: "#7ab898", marginBottom: 10, flexWrap: "wrap" }}>
+              <div style={{ display: "flex", gap: 14, fontSize: 15, color: "#7ab898", marginBottom: 10, flexWrap: "wrap" }}>
                 <span>🌡️ {day.high}°/{day.low}°F</span>
                 <span>💨 {day.wind}</span>
                 <span style={{ color: stormColor }}>⛈️ {day.storms}%</span>
               </div>
 
               {/* AI call */}
-              <div style={{ fontSize: 14, color: "#86c7a0", lineHeight: 1.6, paddingTop: 10, borderTop: "1px solid #1a3828" }}>
+              <div style={{ fontSize: 16, color: "#86c7a0", lineHeight: 1.6, paddingTop: 10, borderTop: "1px solid #1a3828" }}>
                 💡 {day.aiCall}
               </div>
             </div>
@@ -417,9 +417,9 @@ function BaitPicker() {
                 fontFamily: "'Space Grotesk',sans-serif", textAlign: "left",
                 display: "flex", alignItems: "center", gap: 8, transition: "all 0.15s",
               }}>
-                <span style={{ fontSize: 19 }}>{b.emoji}</span>
-                <span style={{ fontSize: 14, fontWeight: 600, color: on ? "#4ade80" : "#7ab898", lineHeight: 1.3 }}>{b.label}</span>
-                {on && <span style={{ marginLeft: "auto", color: "#4ade80", fontSize: 14 }}>✓</span>}
+                <span style={{ fontSize: 22 }}>{b.emoji}</span>
+                <span style={{ fontSize: 16, fontWeight: 600, color: on ? "#4ade80" : "#7ab898", lineHeight: 1.3 }}>{b.label}</span>
+                {on && <span style={{ marginLeft: "auto", color: "#4ade80", fontSize: 16 }}>✓</span>}
               </button>
             );
           })}
@@ -427,7 +427,7 @@ function BaitPicker() {
 
         {/* Tips */}
         {tips.map((tip, i) => (
-          <div key={i} style={{ background: "#0d2918", border: "1px solid #4ade8033", borderRadius: 8, padding: "10px 14px", marginBottom: 10, fontSize: 14, color: "#d1f0e0", lineHeight: 1.65 }}>
+          <div key={i} style={{ background: "#0d2918", border: "1px solid #4ade8033", borderRadius: 8, padding: "10px 14px", marginBottom: 10, fontSize: 16, color: "#d1f0e0", lineHeight: 1.65 }}>
             💡 {tip}
           </div>
         ))}
@@ -435,11 +435,11 @@ function BaitPicker() {
         {/* Rigs */}
         {recs.length > 0 ? recs.map((r, i) => (
           <div key={i} style={{ marginBottom: 8, padding: "10px 13px", background: "#0f2a1c", borderRadius: 8, border: "1px solid #1a3828" }}>
-            <div style={{ fontSize: 14, fontWeight: 700, color: "#86c7a0" }}>{r.name}</div>
-            <div style={{ fontSize: 14, color: "#7ab898", marginTop: 3, lineHeight: 1.6 }}>{r.detail}</div>
+            <div style={{ fontSize: 16, fontWeight: 700, color: "#86c7a0" }}>{r.name}</div>
+            <div style={{ fontSize: 16, color: "#7ab898", marginTop: 3, lineHeight: 1.6 }}>{r.detail}</div>
           </div>
         )) : (
-          <div style={{ textAlign: "center", color: "#7ab898", fontSize: 14, padding: "16px 0" }}>Select what you have above to see rigging tips.</div>
+          <div style={{ textAlign: "center", color: "#7ab898", fontSize: 16, padding: "16px 0" }}>Select what you have above to see rigging tips.</div>
         )}
       </div>
     </Collapsible>
@@ -452,7 +452,7 @@ function LocationReport({ loc }) {
   const lures = C.lureMatrix[lureKey] || [];
   const cc = loc.conditions === "Excellent" ? "#4ade80" : loc.conditions === "Good" ? "#86efac" : loc.conditions === "Fair" ? "#facc15" : "#f87171";
   const card = { background: "#0f2a1c", borderRadius: 10, padding: "13px 15px", border: "1px solid #1a3828", marginBottom: 10 };
-  const lbl = { fontSize: 14, color: "#7ab898", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 8 };
+  const lbl = { fontSize: 16, color: "#7ab898", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 8 };
   const divider = <div style={{ height: 1, background: "#1a3828", margin: "11px 0" }} />;
 
   return (
@@ -461,10 +461,10 @@ function LocationReport({ loc }) {
       <div style={{ ...card, display: "flex", alignItems: "center", gap: 18, marginBottom: 10 }}>
         <ScoreRing score={loc.overallScore} />
         <div>
-          <div style={{ fontSize: 19, fontWeight: 700, color: cc }}>{loc.conditions}</div>
-          <div style={{ fontSize: 14, color: "#86c7a0", marginTop: 2 }}>{C.weather}</div>
-          <div style={{ fontSize: 14, color: "#7ab898", marginTop: 2 }}>🌊 {C.tide}</div>
-          <div style={{ fontSize: 14, color: "#7ab898", marginTop: 1 }}>💨 {C.wind.description} · 🌙 {C.moonPhase}</div>
+          <div style={{ fontSize: 22, fontWeight: 700, color: cc }}>{loc.conditions}</div>
+          <div style={{ fontSize: 16, color: "#86c7a0", marginTop: 2 }}>{C.weather}</div>
+          <div style={{ fontSize: 16, color: "#7ab898", marginTop: 2 }}>🌊 {C.tide}</div>
+          <div style={{ fontSize: 16, color: "#7ab898", marginTop: 1 }}>💨 {C.wind.description} · 🌙 {C.moonPhase}</div>
         </div>
       </div>
 
@@ -474,11 +474,11 @@ function LocationReport({ loc }) {
           {loc.species.map(s => (
             <div key={s.name} style={{ marginBottom: 11 }}>
               <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 3 }}>
-                <span style={{ fontSize: 14, fontWeight: 600, color: "#d1f0e0", minWidth: 130 }}>{s.name}</span>
+                <span style={{ fontSize: 16, fontWeight: 600, color: "#d1f0e0", minWidth: 130 }}>{s.name}</span>
                 <ConfBar pct={s.confidence} />
-                <span style={{ fontSize: 14, fontWeight: 700, color: s.confidence >= 75 ? "#4ade80" : s.confidence >= 50 ? "#facc15" : "#f87171", minWidth: 36, textAlign: "right" }}>{s.confidence}%</span>
+                <span style={{ fontSize: 16, fontWeight: 700, color: s.confidence >= 75 ? "#4ade80" : s.confidence >= 50 ? "#facc15" : "#f87171", minWidth: 36, textAlign: "right" }}>{s.confidence}%</span>
               </div>
-              <div style={{ fontSize: 14, color: "#7ab898" }}>{s.note}</div>
+              <div style={{ fontSize: 16, color: "#7ab898" }}>{s.note}</div>
             </div>
           ))}
         </div>
@@ -492,13 +492,13 @@ function LocationReport({ loc }) {
             return (
             <div key={stop.order}>
               <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 7 }}>
-                <div style={{ width: 24, height: 24, borderRadius: "50%", background: "#4ade80", color: "#0a1f14", fontSize: 14, fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>{stop.order}</div>
+                <div style={{ width: 24, height: 24, borderRadius: "50%", background: "#4ade80", color: "#0a1f14", fontSize: 16, fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>{stop.order}</div>
                 <div>
-                  <div style={{ fontSize: 14, fontWeight: 700, color: "#f0faf4" }}>{stopName}</div>
-                  <div style={{ fontSize: 14, color: "#7ab898" }}>{stop.tide}</div>
+                  <div style={{ fontSize: 16, fontWeight: 700, color: "#f0faf4" }}>{stopName}</div>
+                  <div style={{ fontSize: 16, color: "#7ab898" }}>{stop.tide}</div>
                 </div>
               </div>
-              <ul style={{ margin: 0, padding: "0 0 0 34px", fontSize: 14, color: "#86c7a0", lineHeight: 2.0 }}>
+              <ul style={{ margin: 0, padding: "0 0 0 34px", fontSize: 16, color: "#86c7a0", lineHeight: 2.0 }}>
                 {stop.steps.map((s, idx) => <li key={idx}>{typeof s === "function" ? s(C.wind) : s}</li>)}
               </ul>
               {i < loc.stops.length - 1 && divider}
@@ -513,8 +513,8 @@ function LocationReport({ loc }) {
         <div style={{ marginTop: 10 }}>
           {lures.map(l => (
             <div key={l.lure} style={{ marginBottom: 9, padding: "10px 12px", background: "#0f2a1c", borderRadius: 8, border: "1px solid #1a3828" }}>
-              <div style={{ fontSize: 14, fontWeight: 700, color: "#86c7a0" }}>{l.lure}</div>
-              <div style={{ fontSize: 14, color: "#7ab898", marginTop: 2 }}>{l.detail}</div>
+              <div style={{ fontSize: 16, fontWeight: 700, color: "#86c7a0" }}>{l.lure}</div>
+              <div style={{ fontSize: 16, color: "#7ab898", marginTop: 2 }}>{l.detail}</div>
             </div>
           ))}
         </div>
@@ -525,17 +525,17 @@ function LocationReport({ loc }) {
 
             {/* AI note — split into static "About this spot" + dynamic "Today's call" */}
       <div style={{ background: "#0d2918", border: "1px solid #4ade8033", borderRadius: 10, padding: "14px 16px", marginBottom: 10 }}>
-        <div style={{ fontSize: 13, color: "#4ade80", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 8, fontWeight: 600 }}>🤖 AI Field Notes</div>
+        <div style={{ fontSize: 15, color: "#4ade80", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 8, fontWeight: 600 }}>🤖 AI Field Notes</div>
 
         {/* Static: about this spot */}
-        <div style={{ fontSize: 13, color: "#7ab898", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 4, fontWeight: 600 }}>About this spot</div>
-        <p style={{ margin: "0 0 12px 0", fontSize: 14, lineHeight: 1.75, color: "#d1f0e0" }}>{loc.aiNote}</p>
+        <div style={{ fontSize: 15, color: "#7ab898", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 4, fontWeight: 600 }}>About this spot</div>
+        <p style={{ margin: "0 0 12px 0", fontSize: 16, lineHeight: 1.75, color: "#d1f0e0" }}>{loc.aiNote}</p>
 
         {/* Dynamic: today's call */}
         {loc.todaysCall && <>
           <div style={{ height: 1, background: "#1a3828", margin: "10px 0 12px 0" }} />
-          <div style={{ fontSize: 13, color: "#4ade80", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 4, fontWeight: 600 }}>📍 Today's Call</div>
-          <p style={{ margin: 0, fontSize: 14, lineHeight: 1.75, color: "#d1f0e0" }}>{loc.todaysCall}</p>
+          <div style={{ fontSize: 15, color: "#4ade80", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 4, fontWeight: 600 }}>📍 Today's Call</div>
+          <p style={{ margin: 0, fontSize: 16, lineHeight: 1.75, color: "#d1f0e0" }}>{loc.todaysCall}</p>
         </>}
       </div>
     </div>
@@ -545,9 +545,9 @@ function LocationReport({ loc }) {
 function Input({ label, value, onChange, placeholder, type = "text" }) {
   return (
     <div style={{ marginBottom: 10 }}>
-      <div style={{ fontSize: 13, color: "#7ab898", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 4 }}>{label}</div>
+      <div style={{ fontSize: 15, color: "#7ab898", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 4 }}>{label}</div>
       <input type={type} value={value} onChange={e => onChange(e.target.value)} placeholder={placeholder}
-        style={{ width: "100%", background: "#0f2a1c", border: "1px solid #1a3828", borderRadius: 6, padding: "8px 12px", color: "#d1f0e0", fontSize: 14, fontFamily: "'Space Grotesk',sans-serif", outline: "none", boxSizing: "border-box" }} />
+        style={{ width: "100%", background: "#0f2a1c", border: "1px solid #1a3828", borderRadius: 6, padding: "8px 12px", color: "#d1f0e0", fontSize: 16, fontFamily: "'Space Grotesk',sans-serif", outline: "none", boxSizing: "border-box" }} />
     </div>
   );
 }
@@ -597,7 +597,7 @@ export default function App() {
 
   const patterns = getPatterns();
   const activeLoc = LOCATIONS.find(l => l.id === locTab);
-  const lbl = { fontSize: 14, color: "#7ab898", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 8 };
+  const lbl = { fontSize: 16, color: "#7ab898", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 8 };
 
   return (
     <div style={{ minHeight: "100vh", background: "#0a1f14", fontFamily: "'Space Grotesk',sans-serif", color: "#d1f0e0", padding: "20px 16px" }}>
@@ -606,21 +606,21 @@ export default function App() {
 
         {/* Header */}
         <div style={{ marginBottom: 4 }}>
-          <div style={{ fontSize: 13, letterSpacing: "0.16em", color: "#4ade80", textTransform: "uppercase", marginBottom: 3 }}>🎣 Daily Fishing Intel</div>
-          <h1 style={{ margin: 0, fontSize: 22, fontWeight: 700, color: "#f0faf4", lineHeight: 1.2 }}>331 Bridge Area</h1>
-          <div style={{ fontSize: 14, color: "#86c7a0", marginTop: 2 }}>Fishing Report · Freeport, FL · {C.date}</div>
+          <div style={{ fontSize: 15, letterSpacing: "0.16em", color: "#4ade80", textTransform: "uppercase", marginBottom: 3 }}>🎣 Daily Fishing Intel</div>
+          <h1 style={{ margin: 0, fontSize: 25, fontWeight: 700, color: "#f0faf4", lineHeight: 1.2 }}>331 Bridge Area</h1>
+          <div style={{ fontSize: 16, color: "#86c7a0", marginTop: 2 }}>Fishing Report · Freeport, FL · {C.date}</div>
         </div>
 
         {/* Storm warning */}
-        <div style={{ background: "#0d2918", border: "1px solid #4ade8066", borderRadius: 8, padding: "10px 14px", fontSize: 14, color: "#86efac", margin: "12px 0", lineHeight: 1.5 }}>
+        <div style={{ background: "#0d2918", border: "1px solid #4ade8066", borderRadius: 8, padding: "10px 14px", fontSize: 16, color: "#86efac", margin: "12px 0", lineHeight: 1.5 }}>
           🌞 Friday: Sunny and hot — no storms today, but heat index climbs to 104°F. Wind starts calm and turns southwest ~5 mph by afternoon. Get on the water early.
         </div>
 
         {/* Local bite report — grounded in real recent guide/charter reports */}
         <div style={{ background: "#0f2a1c", border: "1px solid #1a3828", borderRadius: 10, padding: "13px 16px", marginBottom: 4 }}>
-          <div style={{ fontSize: 14, color: "#7ab898", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 8, fontWeight: 600 }}>🎣 What's Being Caught — Local Reports</div>
-          <p style={{ margin: "0 0 6px 0", fontSize: 14, color: "#d1f0e0", lineHeight: 1.7 }}>{C.localBiteReport}</p>
-          <div style={{ fontSize: 13, color: "#7ab898", fontStyle: "italic" }}>{C.localBiteSource}</div>
+          <div style={{ fontSize: 16, color: "#7ab898", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 8, fontWeight: 600 }}>🎣 What's Being Caught — Local Reports</div>
+          <p style={{ margin: "0 0 6px 0", fontSize: 16, color: "#d1f0e0", lineHeight: 1.7 }}>{C.localBiteReport}</p>
+          <div style={{ fontSize: 15, color: "#7ab898", fontStyle: "italic" }}>{C.localBiteSource}</div>
         </div>
 
         {/* 3-day look ahead — always visible */}
@@ -631,7 +631,7 @@ export default function App() {
           {[["report", "📋 Report"], ["log", "📓 Trip Log"]].map(([key, label]) => (
             <button key={key} onClick={() => setMainTab(key)} style={{
               flex: 1, padding: "9px 0", borderRadius: 8, border: "none", cursor: "pointer",
-              fontFamily: "'Space Grotesk',sans-serif", fontWeight: 600, fontSize: 14,
+              fontFamily: "'Space Grotesk',sans-serif", fontWeight: 600, fontSize: 16,
               background: mainTab === key ? "#4ade80" : "#0f2a1c",
               color: mainTab === key ? "#0a1f14" : "#7ab898", transition: "all 0.15s",
             }}>{label}</button>
@@ -649,21 +649,21 @@ export default function App() {
               return (
                 <button key={loc.id} onClick={() => setLocTab(loc.id)} style={{
                   padding: "10px 10px", borderRadius: 8, border: active ? "1px solid #4ade8066" : "1px solid #1a3828",
-                  cursor: "pointer", fontFamily: "'Space Grotesk',sans-serif", fontWeight: 600, fontSize: 14,
+                  cursor: "pointer", fontFamily: "'Space Grotesk',sans-serif", fontWeight: 600, fontSize: 16,
                   background: active ? "#0d2918" : "#0f2a1c", color: active ? "#f0faf4" : "#7ab898",
                   textAlign: "center", lineHeight: 1.4, transition: "all 0.15s",
                   flexShrink: 0, minWidth: 72,
                 }}>
-                  <div style={{ fontSize: 19, marginBottom: 3 }}>{loc.emoji}</div>
-                  <div style={{ fontSize: 13, whiteSpace: "nowrap" }}>{loc.label}</div>
-                  <div style={{ fontSize: 14, fontWeight: 700, color: dot, marginTop: 3 }}>{loc.overallScore}</div>
+                  <div style={{ fontSize: 22, marginBottom: 3 }}>{loc.emoji}</div>
+                  <div style={{ fontSize: 15, whiteSpace: "nowrap" }}>{loc.label}</div>
+                  <div style={{ fontSize: 16, fontWeight: 700, color: dot, marginTop: 3 }}>{loc.overallScore}</div>
                 </button>
               );
             })}
           </div>
 
           {/* Active location name */}
-          <div style={{ fontSize: 17, fontWeight: 700, color: "#f0faf4", marginBottom: 12 }}>
+          <div style={{ fontSize: 20, fontWeight: 700, color: "#f0faf4", marginBottom: 12 }}>
             {activeLoc.emoji} {activeLoc.label}
           </div>
 
@@ -676,26 +676,26 @@ export default function App() {
           {/* Wind guidance */}
           <div style={{ border: "1px solid #1a3828", borderRadius: 10, overflow: "hidden", marginBottom: 10 }}>
             <div style={{ background: "#0f2a1c", padding: "11px 16px" }}>
-              <span style={{ fontSize: 14, color: "#7ab898", letterSpacing: "0.12em", textTransform: "uppercase", fontWeight: 600 }}>💨 Wind Guidance — All Locations</span>
+              <span style={{ fontSize: 16, color: "#7ab898", letterSpacing: "0.12em", textTransform: "uppercase", fontWeight: 600 }}>💨 Wind Guidance — All Locations</span>
             </div>
             <div style={{ padding: "10px 16px 14px", background: "#0a1f14" }}>
               {C.windGuidance.map(w => {
                 const active = C.wind.dir === w.dir;
                 return (
                   <div key={w.dir} style={{ display: "flex", alignItems: "flex-start", gap: 12, marginBottom: 9, padding: "9px 12px", borderRadius: 8, background: active ? "#0d2918" : "transparent", border: active ? "1px solid #4ade8044" : "1px solid transparent" }}>
-                    <div style={{ fontSize: 17, minWidth: 22, textAlign: "center" }}>{w.icon}</div>
-                    <div><span style={{ fontSize: 14, fontWeight: 700, color: active ? "#4ade80" : "#86c7a0" }}>{w.dir} wind{active ? " ← today" : ""} · </span><span style={{ fontSize: 14, color: "#d1f0e0" }}>{w.advice}</span></div>
+                    <div style={{ fontSize: 20, minWidth: 22, textAlign: "center" }}>{w.icon}</div>
+                    <div><span style={{ fontSize: 16, fontWeight: 700, color: active ? "#4ade80" : "#86c7a0" }}>{w.dir} wind{active ? " ← today" : ""} · </span><span style={{ fontSize: 16, color: "#d1f0e0" }}>{w.advice}</span></div>
                   </div>
                 );
               })}
-              <div style={{ background: "#2a1a00", border: "1px solid #facc1566", borderRadius: 8, padding: "9px 12px", fontSize: 14, color: "#fde68a", marginTop: 4 }}>⚠️ {C.windWarning}</div>
+              <div style={{ background: "#2a1a00", border: "1px solid #facc1566", borderRadius: 8, padding: "9px 12px", fontSize: 16, color: "#fde68a", marginTop: 4 }}>⚠️ {C.windWarning}</div>
             </div>
           </div>
 
           {/* Launch */}
           <div style={{ background: "#0f2a1c", border: "1px solid #1a3828", borderRadius: 10, padding: "13px 16px", marginBottom: 10 }}>
             <div style={lbl}>🚤 Launch & Bait</div>
-            <div style={{ fontSize: 14, color: "#d1f0e0", lineHeight: 1.7 }}>{C.launch}</div>
+            <div style={{ fontSize: 16, color: "#d1f0e0", lineHeight: 1.7 }}>{C.launch}</div>
           </div>
 
           {/* Regs */}
@@ -703,8 +703,8 @@ export default function App() {
             <div style={lbl}>📋 Regulations</div>
             {C.regulations.map(r => (
               <div key={r.species} style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", padding: "6px 0", borderBottom: "1px solid #1a3828" }}>
-                <span style={{ fontSize: 14, fontWeight: 600, color: "#86c7a0" }}>{r.species}</span>
-                <span style={{ fontSize: 14, color: "#d1f0e0", textAlign: "right", maxWidth: "60%" }}>{r.rules}</span>
+                <span style={{ fontSize: 16, fontWeight: 600, color: "#86c7a0" }}>{r.species}</span>
+                <span style={{ fontSize: 16, color: "#d1f0e0", textAlign: "right", maxWidth: "60%" }}>{r.rules}</span>
               </div>
             ))}
           </div>
@@ -714,21 +714,21 @@ export default function App() {
         {mainTab === "log" && <>
           {patterns && (
             <div style={{ background: "#0d2918", border: "1px solid #4ade8033", borderRadius: 10, padding: "14px 16px", marginBottom: 12 }}>
-              <div style={{ fontSize: 13, color: "#4ade80", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 8, fontWeight: 600 }}>📈 Your Patterns ({patterns.totalTrips} trips · {patterns.totalKept} kept)</div>
-              {patterns.bestTide && <div style={{ fontSize: 14, color: "#d1f0e0", marginBottom: 4 }}>🌊 Best tide: <span style={{ color: "#4ade80", fontWeight: 600 }}>{patterns.bestTide[0]}</span> — {patterns.bestTide[1]} fish kept</div>}
-              {patterns.bestWind && <div style={{ fontSize: 14, color: "#d1f0e0" }}>💨 Best wind: <span style={{ color: "#4ade80", fontWeight: 600 }}>{patterns.bestWind[0]}</span> — {patterns.bestWind[1]} fish kept</div>}
+              <div style={{ fontSize: 15, color: "#4ade80", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 8, fontWeight: 600 }}>📈 Your Patterns ({patterns.totalTrips} trips · {patterns.totalKept} kept)</div>
+              {patterns.bestTide && <div style={{ fontSize: 16, color: "#d1f0e0", marginBottom: 4 }}>🌊 Best tide: <span style={{ color: "#4ade80", fontWeight: 600 }}>{patterns.bestTide[0]}</span> — {patterns.bestTide[1]} fish kept</div>}
+              {patterns.bestWind && <div style={{ fontSize: 16, color: "#d1f0e0" }}>💨 Best wind: <span style={{ color: "#4ade80", fontWeight: 600 }}>{patterns.bestWind[0]}</span> — {patterns.bestWind[1]} fish kept</div>}
             </div>
           )}
 
           <div style={{ background: "#0f2a1c", border: "1px solid #1a3828", borderRadius: 10, padding: "14px 16px", marginBottom: 12 }}>
-            <div style={{ fontSize: 14, color: "#7ab898", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 12, fontWeight: 600 }}>➕ Log a Trip</div>
+            <div style={{ fontSize: 16, color: "#7ab898", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 12, fontWeight: 600 }}>➕ Log a Trip</div>
             <Input label="Date" value={form.date} onChange={v => setForm(f => ({ ...f, date: v }))} placeholder="June 28, 2026" />
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
               <Input label="Hours fished" value={form.hours} onChange={v => setForm(f => ({ ...f, hours: v }))} placeholder="4" />
               <div>
-                <div style={{ fontSize: 13, color: "#7ab898", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 4 }}>Location</div>
+                <div style={{ fontSize: 15, color: "#7ab898", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 4 }}>Location</div>
                 <select value={form.start} onChange={e => setForm(f => ({ ...f, start: e.target.value }))}
-                  style={{ width: "100%", background: "#0a1f14", border: "1px solid #1a3828", borderRadius: 6, padding: "8px 10px", color: "#d1f0e0", fontSize: 14, fontFamily: "'Space Grotesk',sans-serif" }}>
+                  style={{ width: "100%", background: "#0a1f14", border: "1px solid #1a3828", borderRadius: 6, padding: "8px 10px", color: "#d1f0e0", fontSize: 16, fontFamily: "'Space Grotesk',sans-serif" }}>
                   <option value="">Select…</option>
                   {["331 Bridge", "Alaqua Bayou", "Basin Bayou", "LaGrange Bayou", "Grass Flats", "Multiple"].map(t => <option key={t} value={t}>{t}</option>)}
                 </select>
@@ -736,17 +736,17 @@ export default function App() {
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
               <div>
-                <div style={{ fontSize: 13, color: "#7ab898", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 4 }}>Tide</div>
+                <div style={{ fontSize: 15, color: "#7ab898", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 4 }}>Tide</div>
                 <select value={form.tide} onChange={e => setForm(f => ({ ...f, tide: e.target.value }))}
-                  style={{ width: "100%", background: "#0a1f14", border: "1px solid #1a3828", borderRadius: 6, padding: "8px 10px", color: "#d1f0e0", fontSize: 14, fontFamily: "'Space Grotesk',sans-serif" }}>
+                  style={{ width: "100%", background: "#0a1f14", border: "1px solid #1a3828", borderRadius: 6, padding: "8px 10px", color: "#d1f0e0", fontSize: 16, fontFamily: "'Space Grotesk',sans-serif" }}>
                   <option value="">Select…</option>
                   {["Incoming", "High slack", "Outgoing", "Low slack"].map(t => <option key={t} value={t}>{t}</option>)}
                 </select>
               </div>
               <div>
-                <div style={{ fontSize: 13, color: "#7ab898", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 4 }}>Wind</div>
+                <div style={{ fontSize: 15, color: "#7ab898", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 4 }}>Wind</div>
                 <select value={form.wind} onChange={e => setForm(f => ({ ...f, wind: e.target.value }))}
-                  style={{ width: "100%", background: "#0a1f14", border: "1px solid #1a3828", borderRadius: 6, padding: "8px 10px", color: "#d1f0e0", fontSize: 14, fontFamily: "'Space Grotesk',sans-serif" }}>
+                  style={{ width: "100%", background: "#0a1f14", border: "1px solid #1a3828", borderRadius: 6, padding: "8px 10px", color: "#d1f0e0", fontSize: 16, fontFamily: "'Space Grotesk',sans-serif" }}>
                   <option value="">Select…</option>
                   {["N under 10", "N over 15", "S under 10", "S over 15", "E under 10", "E over 15", "W under 10", "W over 15", "SW under 10", "SW over 15", "SE under 10", "SE over 15", "Calm"].map(w => <option key={w} value={w}>{w}</option>)}
                 </select>
@@ -758,36 +758,37 @@ export default function App() {
               <Input label="Best lure" value={form.lures} onChange={v => setForm(f => ({ ...f, lures: v }))} placeholder="Gold spoon, shrimp…" />
             </div>
             <Input label="Notes" value={form.notes} onChange={v => setForm(f => ({ ...f, notes: v }))} placeholder="What worked, what didn't…" />
-            <button onClick={saveTrip} disabled={!form.date} style={{ width: "100%", marginTop: 4, padding: "11px 0", borderRadius: 8, border: "none", background: form.date ? "#4ade80" : "#1a3828", color: form.date ? "#0a1f14" : "#7ab898", fontWeight: 700, fontSize: 14, cursor: form.date ? "pointer" : "not-allowed", fontFamily: "'Space Grotesk',sans-serif" }}>
+            <button onClick={saveTrip} disabled={!form.date} style={{ width: "100%", marginTop: 4, padding: "11px 0", borderRadius: 8, border: "none", background: form.date ? "#4ade80" : "#1a3828", color: form.date ? "#0a1f14" : "#7ab898", fontWeight: 700, fontSize: 16, cursor: form.date ? "pointer" : "not-allowed", fontFamily: "'Space Grotesk',sans-serif" }}>
               {saved ? "✓ Saved!" : "Save Trip"}
             </button>
           </div>
 
           {trips.length === 0 ? (
-            <div style={{ textAlign: "center", padding: "40px 0", color: "#7ab898", fontSize: 14 }}>No trips logged yet. Patterns appear after 3 entries.</div>
+            <div style={{ textAlign: "center", padding: "40px 0", color: "#7ab898", fontSize: 16 }}>No trips logged yet. Patterns appear after 3 entries.</div>
           ) : trips.map(t => (
             <div key={t.id} style={{ background: "#0f2a1c", border: "1px solid #1a3828", borderRadius: 10, padding: "13px 16px", marginBottom: 10 }}>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
                 <div>
-                  <div style={{ fontSize: 14, fontWeight: 700, color: "#d1f0e0" }}>{t.date}</div>
-                  <div style={{ fontSize: 14, color: "#7ab898", marginTop: 2 }}>{t.hours && `${t.hours}h`}{t.start && ` · ${t.start}`}{t.tide && ` · ${t.tide}`}{t.wind && ` · ${t.wind}`}</div>
+                  <div style={{ fontSize: 16, fontWeight: 700, color: "#d1f0e0" }}>{t.date}</div>
+                  <div style={{ fontSize: 16, color: "#7ab898", marginTop: 2 }}>{t.hours && `${t.hours}h`}{t.start && ` · ${t.start}`}{t.tide && ` · ${t.tide}`}{t.wind && ` · ${t.wind}`}</div>
                 </div>
-                <button onClick={() => deleteTrip(t.id)} style={{ background: "none", border: "none", color: "#7ab898", cursor: "pointer", fontSize: 17, padding: "0 0 0 10px" }}>✕</button>
+                <button onClick={() => deleteTrip(t.id)} style={{ background: "none", border: "none", color: "#7ab898", cursor: "pointer", fontSize: 20, padding: "0 0 0 10px" }}>✕</button>
               </div>
-              {t.species && <div style={{ fontSize: 14, color: "#86c7a0", marginTop: 6 }}>🐟 {t.species}{t.kept && ` · ${t.kept} kept`}</div>}
-              {t.lures && <div style={{ fontSize: 14, color: "#7ab898", marginTop: 3 }}>🪝 {t.lures}</div>}
-              {t.notes && <div style={{ fontSize: 14, color: "#7ab898", marginTop: 3, fontStyle: "italic" }}>"{t.notes}"</div>}
+              {t.species && <div style={{ fontSize: 16, color: "#86c7a0", marginTop: 6 }}>🐟 {t.species}{t.kept && ` · ${t.kept} kept`}</div>}
+              {t.lures && <div style={{ fontSize: 16, color: "#7ab898", marginTop: 3 }}>🪝 {t.lures}</div>}
+              {t.notes && <div style={{ fontSize: 16, color: "#7ab898", marginTop: 3, fontStyle: "italic" }}>"{t.notes}"</div>}
             </div>
           ))}
         </>}
 
         <div style={{ height: 36 }} />
-        <div style={{ textAlign: "center", fontSize: 14, color: "#7ab898", lineHeight: 1.7 }}>
+        <div style={{ textAlign: "center", fontSize: 16, color: "#7ab898", lineHeight: 1.7 }}>
           Data sourced by Claude · Always verify conditions before heading out<br />{C.lastUpdated}
         </div>
       </div>
     </div>
   );
 }
+
 
 
