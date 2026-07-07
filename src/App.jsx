@@ -1,7 +1,4 @@
-
-
-
-import { useState } from "react";
+import { useState, useRef } from "react";
 import dailyData from "./data/conditions.json";
 
 // ── SHARED CONDITIONS ─────────────────────────────────────────────────────────
@@ -93,6 +90,14 @@ function minutesToTime(mins) {
   h = h % 12 || 12;
   return `${h}:${String(m).padStart(2, "0")} ${ap}`;
 }
+// Both CONDITIONS.date and previousDay.date are plain strings like "July 7,
+// 2026" — JS's Date constructor parses that format natively, no custom
+// parser needed.
+function daysBetween(dateStrEarlier, dateStrLater) {
+  const a = Date.parse(dateStrEarlier), b = Date.parse(dateStrLater);
+  if (isNaN(a) || isNaN(b)) return null;
+  return Math.round((b - a) / 86400000);
+}
 
 // ── BEST BET TODAY ───────────────────────────────────────────────────────────
 // Ranks all 7 locations by today's-adjusted score and returns the top pick.
@@ -120,7 +125,31 @@ function getBestWindow() {
   return { start: sunrise, end, startText: minutesToTime(sunrise), endText: minutesToTime(end), reason };
 }
 
-
+// ── WHAT CHANGED SINCE YESTERDAY ─────────────────────────────────────────────
+// Compares today's conditions against the previousDay snapshot the automation
+// script captures each morning before overwriting. Returns a short plain-
+// English line, or null if there's nothing to compare against yet (e.g. the
+// very first run, before any previousDay data exists).
+function getConditionsDiff() {
+  const prev = CONDITIONS.previousDay;
+  if (!prev) return null;
+  const changes = [];
+  if (prev.wind?.dir && prev.wind.dir !== CONDITIONS.wind.dir) {
+    changes.push(`wind shifted ${prev.wind.dir} → ${CONDITIONS.wind.dir}`);
+  }
+  const todayHigh = FORECAST[0]?.high;
+  if (typeof prev.high === "number" && typeof todayHigh === "number" && prev.high !== todayHigh) {
+    const dir = todayHigh > prev.high ? "up" : "down";
+    changes.push(`high ${dir} ${Math.abs(todayHigh - prev.high)}° (${prev.high}° → ${todayHigh}°)`);
+  }
+  const todayStorms = CONDITIONS.stormChance ?? FORECAST[0]?.storms ?? 0;
+  if (typeof prev.stormChance === "number" && prev.stormChance !== todayStorms) {
+    const dir = todayStorms > prev.stormChance ? "up" : "down";
+    changes.push(`storm chance ${dir} ${Math.abs(todayStorms - prev.stormChance)}% (${prev.stormChance}% → ${todayStorms}%)`);
+  }
+  if (changes.length === 0) return "Conditions steady since yesterday — no meaningful change in wind, temps, or storm risk.";
+  return `Since yesterday: ${changes.join(" · ")}.`;
+}
 
 // ── BAIT INVENTORY & RECOMMENDATIONS ─────────────────────────────────────────
 const ALL_BAITS = [
@@ -408,7 +437,20 @@ function WindCompass({ dir, size = 64 }) {
 // prior version computed the Low time's Y position as 212 while the viewBox
 // only went to 200 — it was silently clipped off the bottom edge. Every text
 // element's Y here is comfortably inside 0..vbH.
-function TideCurve({ events }) {
+//
+// Parses "before 4 PM" / "after 1 PM" style strings into a shaded time range
+// so storm risk shows up directly on the same timeline as the tide, instead
+// of needing to cross-reference the text banner separately.
+function parseStormRange(stormWindow) {
+  if (!stormWindow) return null;
+  const m = stormWindow.match(/(before|after)\s+(\d+)\s*(AM|PM)/i);
+  if (!m) return null;
+  const mins = timeToMinutes(`${m[2]}:00 ${m[3]}`);
+  if (mins == null) return null;
+  return m[1].toLowerCase() === "before" ? [0, mins] : [mins, 1440];
+}
+
+function TideCurve({ events, sunrise, sunset, stormWindow, stormChance }) {
   if (!events || events.length < 2) return null;
   const pts = events.map(e => ({ ...e, mins: timeToMinutes(e.time) })).filter(e => e.mins != null).sort((a, b) => a.mins - b.mins);
   if (pts.length < 2) return null;
@@ -428,10 +470,19 @@ function TideCurve({ events }) {
   const path = [`M ${xFor(0)} ${yFor(first.type === "H" ? "L" : "H")}`, ...pts.map(p => `Q ${xFor(p.mins) - 25} ${yFor(p.type)} ${xFor(p.mins)} ${yFor(p.type)}`), `T ${xFor(1440)} ${yFor(last.type === "H" ? "L" : "H")}`].join(" ");
 
   const hourTicks = [0, 360, 720, 1080, 1440].map((m, i) => ({ mins: m, label: ["12A", "6A", "12P", "6P", "12A"][i] }));
+  const stormRange = (stormChance >= 20) ? parseStormRange(stormWindow) : null;
+  const sunriseMins = sunrise ? timeToMinutes(sunrise) : null;
+  const sunsetMins = sunset ? timeToMinutes(sunset) : null;
 
   return (
     <div style={{ width: "100%", aspectRatio: `${vbW} / ${vbH}`, maxWidth: 460, margin: "0 auto" }}>
       <svg width="100%" height="100%" viewBox={`0 0 ${vbW} ${vbH}`} preserveAspectRatio="xMidYMid meet" style={{ display: "block" }}>
+
+        {/* Storm-risk shading, drawn first so it sits behind the curve and labels */}
+        {stormRange && (
+          <rect x={xFor(stormRange[0])} y="4" width={xFor(stormRange[1]) - xFor(stormRange[0])} height={axisY - 4} fill="#f87171" opacity="0.12" />
+        )}
+
         <path d={path} fill="none" stroke="#4ade80" strokeWidth="4" strokeLinecap="round" />
 
         {pts.map((p, i) => (
@@ -455,6 +506,21 @@ function TideCurve({ events }) {
             <text x={xFor(t.mins)} y={tickLabelY} textAnchor="middle" fontSize="13" fill="#7ab898" fontFamily="'Space Grotesk',sans-serif">{t.label}</text>
           </g>
         ))}
+
+        {/* Sunrise/sunset markers on the axis, so you can see at a glance whether
+            the best tide window overlaps daylight without cross-referencing separately */}
+        {sunriseMins != null && (
+          <g>
+            <line x1={xFor(sunriseMins)} y1={axisY - 4} x2={xFor(sunriseMins)} y2={axisY + 4} stroke="#facc15" strokeWidth="2" />
+            <text x={xFor(sunriseMins)} y={axisY - 10} textAnchor="middle" fontSize="14">🌅</text>
+          </g>
+        )}
+        {sunsetMins != null && (
+          <g>
+            <line x1={xFor(sunsetMins)} y1={axisY - 4} x2={xFor(sunsetMins)} y2={axisY + 4} stroke="#facc15" strokeWidth="2" />
+            <text x={xFor(sunsetMins)} y={axisY - 10} textAnchor="middle" fontSize="14">🌇</text>
+          </g>
+        )}
       </svg>
     </div>
   );
@@ -627,7 +693,7 @@ function LocationReport({ loc }) {
       {/* Tide curve — faster to read at a glance than the text description above */}
       {C.tideEvents && (
         <div style={{ ...card, width: "100%", boxSizing: "border-box" }}>
-          <TideCurve events={C.tideEvents} />
+          <TideCurve events={C.tideEvents} sunrise={C.sunrise} sunset={C.sunset} stormWindow={C.stormWindow} stormChance={C.stormChance} />
         </div>
       )}
 
@@ -723,9 +789,31 @@ export default function App() {
   const [form, setForm] = useState(EMPTY_TRIP);
   const [saved, setSaved] = useState(false);
   const [shared, setShared] = useState(false);
+  const swipeStartX = useRef(null);
+
+  // Swipe left/right between location tabs — natural on a phone instead of
+  // only being able to tap the small tab strip. A 50px threshold avoids
+  // triggering on ordinary vertical scrolling.
+  function handleSwipeStart(e) {
+    swipeStartX.current = e.touches[0].clientX;
+  }
+  function handleSwipeEnd(e) {
+    if (swipeStartX.current == null) return;
+    const deltaX = e.changedTouches[0].clientX - swipeStartX.current;
+    swipeStartX.current = null;
+    if (Math.abs(deltaX) < 50) return; // too small — probably just a scroll/tap
+    const idx = LOCATIONS.findIndex(l => l.id === locTab);
+    if (idx === -1) return;
+    const nextIdx = deltaX < 0
+      ? (idx + 1) % LOCATIONS.length          // swipe left → next location
+      : (idx - 1 + LOCATIONS.length) % LOCATIONS.length; // swipe right → previous
+    selectLocTab(LOCATIONS[nextIdx].id);
+  }
   const C = CONDITIONS;
   const bestBet = getBestBet();
   const bestWindow = getBestWindow();
+  const conditionsDiff = getConditionsDiff();
+  const bitReportAge = C.localBiteUpdated ? daysBetween(C.localBiteUpdated, C.date) : null;
 
   useState(() => {
     (async () => { try { const r = await window.storage.get("trips"); if (r?.value) setTrips(JSON.parse(r.value)); } catch {} })();
@@ -823,6 +911,13 @@ export default function App() {
           </div>
         </div>
 
+        {/* What changed since yesterday — a quick delta instead of re-reading the full report */}
+        {conditionsDiff && (
+          <div style={{ fontSize: 14, color: "#7ab898", padding: "2px 4px 10px", lineHeight: 1.6 }}>
+            🔄 {conditionsDiff}
+          </div>
+        )}
+
         {/* Storm warning */}
         <div style={{ background: "#0d2918", border: "1px solid #4ade8066", borderRadius: 8, padding: "10px 14px", fontSize: 16, color: "#86efac", margin: "12px 0", lineHeight: 1.5 }}>
           ⛈️ Tuesday: 40% chance of showers/thunderstorms, mainly before 4 PM — plan a morning trip and watch the radar. Otherwise mostly sunny, high 91°F, heat index up to 105°F. SW wind 5–10 mph.
@@ -833,6 +928,12 @@ export default function App() {
           <div style={{ fontSize: 16, color: "#7ab898", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 8, fontWeight: 600 }}>🎣 What's Being Caught — Local Reports</div>
           <p style={{ margin: "0 0 6px 0", fontSize: 16, color: "#d1f0e0", lineHeight: 1.7 }}>{C.localBiteReport}</p>
           <div style={{ fontSize: 15, color: "#7ab898", fontStyle: "italic" }}>{C.localBiteSource}</div>
+          {bitReportAge != null && (
+            <div style={{ fontSize: 14, fontWeight: 600, marginTop: 6, color: bitReportAge > 14 ? "#f87171" : bitReportAge > 7 ? "#facc15" : "#7ab898" }}>
+              {bitReportAge === 0 ? "Refreshed today" : `Last refreshed ${bitReportAge} day${bitReportAge === 1 ? "" : "s"} ago`}
+              {bitReportAge > 7 ? " — consider asking Claude to refresh this" : ""}
+            </div>
+          )}
         </div>
 
         {/* 3-day look ahead — always visible */}
@@ -874,13 +975,15 @@ export default function App() {
             })}
           </div>
 
-          {/* Active location name */}
-          <div style={{ fontSize: 20, fontWeight: 700, color: "#f0faf4", marginBottom: 12 }}>
-            {activeLoc.emoji} {activeLoc.label}
-          </div>
+          {/* Active location name + report — swipeable on touch devices */}
+          <div onTouchStart={handleSwipeStart} onTouchEnd={handleSwipeEnd}>
+            <div style={{ fontSize: 20, fontWeight: 700, color: "#f0faf4", marginBottom: 12 }}>
+              {activeLoc.emoji} {activeLoc.label} <span style={{ fontSize: 13, color: "#4a6b58", fontWeight: 400 }}>· swipe for next spot</span>
+            </div>
 
-          {/* Location report */}
-          {activeLoc && <LocationReport loc={activeLoc} />}
+            {/* Location report */}
+            {activeLoc && <LocationReport loc={activeLoc} />}
+          </div>
 
           {/* Shared sections */}
           <div style={{ height: 1, background: "#1a3828", margin: "14px 0" }} />
