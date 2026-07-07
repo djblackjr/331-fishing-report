@@ -158,7 +158,7 @@ const LOCATIONS = [
       { order: 3, name: "South Shore Grass Flats", tide: "Outgoing", steps: ["Weedless paddle-tail in white or new penny", "Sight fish tailing reds in 1–2 ft", (wind) => `${wind.description} — check for chop before committing here`] },
     ],
     aiNote: "The 331 Bridge spans the narrow neck of Choctawhatchee Bay, creating a current funnel where bait gets pushed through on both tides. The pilings hold trout, reds, sheepshead, and black drum year-round. The lee-side pilings are the prime ambush zone on incoming tides. Open water here is exposed to weather and chop — it is the first spot to become unfishable when wind picks up.",
-    todaysCall: "Green-light day for the bridge. Sunny and hot, no storms, calm morning air turning southwest by afternoon — that shift matters here, since it stacks bait against the northeast pilings instead of the west side. Launch early while it's still calm, work whichever face is in the lee once the SW wind fills in. This matches what guides are seeing bay-wide right now — reds and trout schooling tight to bridge structure as the summer pattern locks in. Heat is the real caution today; plan to be off by mid-morning.",
+    todaysCall: "Storm-watch day for the bridge — 40% chance of showers and thunderstorms, mainly before 4 PM, so launch early and keep an eye on the radar. SW wind at 5-10 mph stacks bait against the northeast pilings. This matches what guides are seeing bay-wide right now — reds and trout schooling tight to bridge structure as the summer pattern locks in. Get your fishing in during the morning window and be ready to head in if storms build.",
   },
   {
     id: "alaqua",
@@ -179,7 +179,7 @@ const LOCATIONS = [
       { order: 3, name: "Upper Alaqua Creek", tide: "Any", steps: ["Transitions to bass-fishing style in upper reaches", "Soft plastics and small swimbaits near structure", "Watch for alligators — keep hooks away from the bank"] },
     ],
     aiNote: "Alaqua Bayou is protected water with a strong year-round redfish population, plus trout and flounder at the mouth. The oyster bars at the creek mouth are the prime spot. Tree cover keeps it a few degrees cooler than the open bay and offers shelter from wind and weather. The upper creek transitions toward brackish and holds bass alongside small reds.",
-    todaysCall: "Calm sunny conditions — fish the oyster bars at the bayou mouth on the incoming tide with a gold spoon at first light. Wind stays light through the morning before turning southwest in the afternoon, so the mouth should stay workable most of the day. Water temps sitting in the low 80s bay-wide right now, and the trout bite has been strong the last several days — good sign for the mouth flats. Work up the bayou as the tide rises. Tree line offers relief when heat builds.",
+    todaysCall: "Fish the oyster bars at the bayou mouth early on the incoming tide with a gold spoon — a 40% chance of storms moves in by afternoon, mainly before 4 PM, so this is a morning-window day. SW wind 5-10 mph. Water temps sitting in the low 80s bay-wide right now, and the trout bite has been strong the last several days — good sign for the mouth flats. Tree line offers some storm shelter if you need to duck in.",
   },
   {
     id: "basin",
@@ -613,7 +613,7 @@ export default function App() {
 
         {/* Storm warning */}
         <div style={{ background: "#0d2918", border: "1px solid #4ade8066", borderRadius: 8, padding: "10px 14px", fontSize: 16, color: "#86efac", margin: "12px 0", lineHeight: 1.5 }}>
-          🌞 Friday: Sunny and hot — no storms today, but heat index climbs to 104°F. Wind starts calm and turns southwest ~5 mph by afternoon. Get on the water early.
+          ⛈️ Tuesday: 40% chance of showers/thunderstorms, mainly before 4 PM — plan a morning trip and watch the radar. Otherwise mostly sunny, high 91°F, heat index up to 105°F. SW wind 5–10 mph.
         </div>
 
         {/* Local bite report — grounded in real recent guide/charter reports */}
@@ -789,6 +789,3 @@ export default function App() {
     </div>
   );
 }
-
-
-
