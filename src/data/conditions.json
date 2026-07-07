@@ -3,6 +3,13 @@
   "wind": { "speed": 7, "dir": "SW", "description": "SW 5-10 mph" },
   "weather": "40% chance showers/thunderstorms mainly before 4 PM · Mostly sunny · High 91°F · Heat index up to 105°F",
   "tide": "High tide ~6:44 AM · Low tide ~7:03 PM · Sunrise ~5:51 AM · Neap tide — smaller swing today",
+  "tideEvents": [
+    { "type": "H", "time": "6:44 AM" },
+    { "type": "L", "time": "7:03 PM" }
+  ],
+  "sunrise": "5:51 AM",
+  "stormWindow": "before 4 PM",
+  "stormChance": 40,
   "moonPhase": "Last Quarter (~50% illuminated) — neap tide, weaker tidal push",
   "waterClarity": "Slightly stained",
   "sky": "Bright sun",
