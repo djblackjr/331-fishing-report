@@ -8,6 +8,7 @@
     { "type": "L", "time": "7:03 PM" }
   ],
   "sunrise": "5:51 AM",
+  "sunset": "8:31 PM",
   "stormWindow": "before 4 PM",
   "stormChance": 40,
   "moonPhase": "Last Quarter (~50% illuminated) — neap tide, weaker tidal push",
@@ -16,6 +17,14 @@
   "lastUpdated": "July 7, 2026 · Source: National Weather Service (Tallahassee/TAE) + NOAA Tides (station 8729511) · Live fetch",
   "localBiteReport": "Trout bite has been strong across Choctawhatchee Bay this week, with water temps sitting in the low 80s. Guides report reds and trout schooling up on grass flats and around bridge pilings as the bay settles into its summer pattern — some inshore pressure has eased as anglers shift offshore for red snapper season. A recent standout: a 40+ inch, 26 lb bull redfish landed near Santa Rosa Beach.",
   "localBiteSource": "Sourced from recent charter & guide reports, Choctawhatchee Bay area · Not auto-updated — refresh manually via Claude periodically",
+  "localBiteUpdated": "July 2, 2026",
+  "previousDay": {
+    "date": "Monday, July 6, 2026",
+    "wind": { "dir": "SW", "speed": 6 },
+    "high": 91,
+    "stormChance": 20,
+    "tide": "High tide ~5:52 AM · Low tide ~6:14 PM"
+  },
   "forecast": [
     {
       "day": "Tue Jul 7",
