@@ -1,15 +1,15 @@
 name: Daily Conditions Refresh
 
-on:
+"on":
   schedule:
     # 08:00 UTC = 3:00 AM Central Daylight Time (summer).
-    # During Central Standard Time (winter, roughly Nov–Mar) this runs at 2:00 AM local
+    # During Central Standard Time (winter, roughly Nov-Mar) this runs at 2:00 AM local
     # instead of 3:00 AM, since GitHub Actions cron doesn't follow DST. If you want it
     # locked to exactly 3:00 AM year-round, change this to '0 9 * * *' every November
-    # and back to '0 8 * * *' every March — or just leave it, a 1-hour drift in winter
+    # and back to '0 8 * * *' every March - or just leave it, a 1-hour drift in winter
     # is harmless for a morning fishing report.
     - cron: '0 8 * * *'
-  workflow_dispatch: {} # lets you trigger it manually from the Actions tab too
+  workflow_dispatch: {}
 
 jobs:
   refresh:
@@ -31,3 +31,4 @@ jobs:
         with:
           commit_message: "Auto-refresh fishing conditions"
           file_pattern: src/data/conditions.json
+
