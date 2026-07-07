@@ -1,1 +1,14 @@
-
+{
+  "name": "331 Bridge Fishing Report",
+  "short_name": "331 Fishing",
+  "description": "Daily fishing conditions for the 331 Bridge / Choctawhatchee Bay area",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a1f14",
+  "theme_color": "#0a1f14",
+  "orientation": "portrait",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ]
+}
