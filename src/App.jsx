@@ -72,6 +72,51 @@ function todaysAdjustedScore(baseScore) {
   return Math.max(3, Math.round(score * 10) / 10);
 }
 
+// ── TIME HELPERS ─────────────────────────────────────────────────────────────
+// Parse "6:44 AM" style strings into minutes-since-midnight for math/graphing.
+function timeToMinutes(t) {
+  const m = t.match(/(\d+):(\d+)\s*(AM|PM)/i);
+  if (!m) return null;
+  let [, h, min, ap] = m;
+  h = parseInt(h, 10); min = parseInt(min, 10);
+  if (/PM/i.test(ap) && h !== 12) h += 12;
+  if (/AM/i.test(ap) && h === 12) h = 0;
+  return h * 60 + min;
+}
+function minutesToTime(mins) {
+  mins = ((mins % 1440) + 1440) % 1440;
+  let h = Math.floor(mins / 60), m = Math.round(mins % 60);
+  const ap = h >= 12 ? "PM" : "AM";
+  h = h % 12 || 12;
+  return `${h}:${String(m).padStart(2, "0")} ${ap}`;
+}
+
+// ── BEST BET TODAY ───────────────────────────────────────────────────────────
+// Ranks all 7 locations by today's-adjusted score and returns the top pick.
+function getBestBet() {
+  const ranked = LOCATIONS.map(loc => ({ loc, score: todaysAdjustedScore(loc.overallScore) }))
+    .sort((a, b) => b.score - a.score);
+  return ranked[0];
+}
+
+// ── BEST FISHING WINDOW ──────────────────────────────────────────────────────
+// Combines sunrise, storm timing, and heat index into a single "fish from X to Y" call.
+function getBestWindow() {
+  const sunrise = timeToMinutes(CONDITIONS.sunrise || "6:00 AM");
+  let end = sunrise + 5 * 60; // default: 5-hour morning window
+  let reason = "before the afternoon heat builds";
+  const stormWindow = CONDITIONS.stormWindow || "";
+  const stormMatch = stormWindow.match(/before\s+(\d+)\s*(AM|PM)/i);
+  if (stormMatch) {
+    const stormEnd = timeToMinutes(`${stormMatch[1]}:00 ${stormMatch[2]}`);
+    if (stormEnd && stormEnd < end) {
+      end = stormEnd - 30; // build in a 30-min buffer before storms arrive
+      reason = `before storms build (${stormWindow})`;
+    }
+  }
+  return { start: sunrise, end, startText: minutesToTime(sunrise), endText: minutesToTime(end), reason };
+}
+
 
 
 // ── BAIT INVENTORY & RECOMMENDATIONS ─────────────────────────────────────────
@@ -328,6 +373,59 @@ function ScoreRing({ score }) {
   );
 }
 
+// Compass-style wind indicator — faster to read at a glance than "SW 5-10 mph"
+// text, especially with sun glare on a phone screen.
+const DIR_DEGREES = { N: 0, NE: 45, E: 90, SE: 135, S: 180, SW: 225, W: 270, NW: 315 };
+function WindCompass({ dir, size = 64 }) {
+  const deg = DIR_DEGREES[dir] ?? 0;
+  const c = size / 2;
+  return (
+    <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>
+      <circle cx={c} cy={c} r={c - 3} fill="none" stroke="#1a3828" strokeWidth="2" />
+      {["N", "E", "S", "W"].map((d) => {
+        const a = (DIR_DEGREES[d] - 90) * (Math.PI / 180);
+        const x = c + (c - 12) * Math.cos(a), y = c + (c - 12) * Math.sin(a);
+        return <text key={d} x={x} y={y + 4} textAnchor="middle" fontSize="10" fill="#4a6b58" fontFamily="'Space Grotesk',sans-serif">{d}</text>;
+      })}
+      {/* Arrow points in the direction wind is blowing TOWARD (i.e. where it pushes bait) */}
+      <g transform={`rotate(${deg} ${c} ${c})`}>
+        <line x1={c} y1={c + 14} x2={c} y2={c - 14} stroke="#4ade80" strokeWidth="3" strokeLinecap="round" />
+        <polygon points={`${c - 6},${c - 8} ${c + 6},${c - 8} ${c},${c - 18}`} fill="#4ade80" />
+      </g>
+    </svg>
+  );
+}
+
+// Simple tide curve — a smooth rise/fall between today's high and low, with a
+// marker for the current time. Easier to read at a glance on a moving boat
+// than parsing "High ~6:44 AM · Low ~7:03 PM" as text.
+function TideCurve({ events, width = 300, height = 90 }) {
+  if (!events || events.length < 2) return null;
+  const pts = events.map(e => ({ ...e, mins: timeToMinutes(e.time) })).filter(e => e.mins != null).sort((a, b) => a.mins - b.mins);
+  if (pts.length < 2) return null;
+  const nowMins = (() => { const d = new Date(); return d.getHours() * 60 + d.getMinutes(); })();
+  const pad = 20;
+  const w = width - pad * 2, h = height - pad;
+  const yFor = (type) => type === "H" ? pad * 0.6 : height - pad * 0.6;
+  const xFor = (mins) => pad + (mins / 1440) * w;
+  // Build a smooth path through all points, wrapping so the curve reads naturally
+  const first = pts[0], last = pts[pts.length - 1];
+  const path = [`M ${xFor(0)} ${yFor(first.type === "H" ? "L" : "H")}`, ...pts.map(p => `Q ${xFor(p.mins) - 20} ${yFor(p.type)} ${xFor(p.mins)} ${yFor(p.type)}`), `T ${xFor(1440)} ${yFor(last.type === "H" ? "L" : "H")}`].join(" ");
+  return (
+    <svg width={width} height={height} viewBox={`0 0 ${width} ${height}`}>
+      <path d={path} fill="none" stroke="#4ade80" strokeWidth="2.5" strokeLinecap="round" />
+      {pts.map((p, i) => (
+        <g key={i}>
+          <circle cx={xFor(p.mins)} cy={yFor(p.type)} r="4" fill="#4ade80" />
+          <text x={xFor(p.mins)} y={yFor(p.type) + (p.type === "H" ? -10 : 20)} textAnchor="middle" fontSize="11" fill="#d1f0e0" fontFamily="'Space Grotesk',sans-serif">{p.type === "H" ? "High" : "Low"} {p.time}</text>
+        </g>
+      ))}
+      <line x1={xFor(nowMins)} y1="4" x2={xFor(nowMins)} y2={height - 4} stroke="#facc15" strokeWidth="1.5" strokeDasharray="3,3" />
+      <text x={xFor(nowMins)} y={height - 4} textAnchor="middle" fontSize="10" fill="#facc15" fontFamily="'Space Grotesk',sans-serif">now</text>
+    </svg>
+  );
+}
+
 function ConfBar({ pct }) {
   const c = pct >= 75 ? "#4ade80" : pct >= 50 ? "#facc15" : "#f87171";
   return (
@@ -481,15 +579,23 @@ function LocationReport({ loc }) {
   return (
     <div>
       {/* Score card */}
-      <div style={{ ...card, display: "flex", alignItems: "center", gap: 18, marginBottom: 10 }}>
+      <div style={{ ...card, display: "flex", alignItems: "center", gap: 18, marginBottom: 10, flexWrap: "wrap" }}>
         <ScoreRing score={todaysScore} />
-        <div>
+        <div style={{ flex: 1, minWidth: 160 }}>
           <div style={{ fontSize: 22, fontWeight: 700, color: cc }}>{todaysLabel} today{todaysLabel !== ratingLabel(loc.overallScore) ? ` (usually ${ratingLabel(loc.overallScore)})` : ""}</div>
           <div style={{ fontSize: 16, color: "#86c7a0", marginTop: 2 }}>{C.weather}</div>
           <div style={{ fontSize: 16, color: "#7ab898", marginTop: 2 }}>🌊 {C.tide}</div>
           <div style={{ fontSize: 16, color: "#7ab898", marginTop: 1 }}>💨 {C.wind.description} · 🌙 {C.moonPhase}</div>
         </div>
+        <WindCompass dir={C.wind.dir} />
       </div>
+
+      {/* Tide curve — faster to read at a glance than the text description above */}
+      {C.tideEvents && (
+        <div style={{ ...card, display: "flex", justifyContent: "center" }}>
+          <TideCurve events={C.tideEvents} width={320} height={90} />
+        </div>
+      )}
 
       {/* Species */}
       <Collapsible title="🐟 Species Confidence">
@@ -582,11 +688,41 @@ export default function App() {
   const [trips, setTrips] = useState([]);
   const [form, setForm] = useState(EMPTY_TRIP);
   const [saved, setSaved] = useState(false);
+  const [shared, setShared] = useState(false);
   const C = CONDITIONS;
+  const bestBet = getBestBet();
+  const bestWindow = getBestWindow();
 
   useState(() => {
     (async () => { try { const r = await window.storage.get("trips"); if (r?.value) setTrips(JSON.parse(r.value)); } catch {} })();
+    // Remember whichever location tab you last viewed, so the app opens back
+    // to your usual spot instead of always defaulting to the Bridge.
+    (async () => { try { const r = await window.storage.get("lastLocTab"); if (r?.value) setLocTab(r.value); } catch {} })();
   });
+
+  function selectLocTab(id) {
+    setLocTab(id);
+    window.storage.set("lastLocTab", id).catch(() => {});
+  }
+
+  async function shareReport() {
+    const text = `331 Bridge Area Fishing Report — ${C.date}\n${C.weather}\n${C.tide}\nBest bet today: ${bestBet.loc.label} (${bestBet.score}/10)\nBest window: ${bestWindow.startText}–${bestWindow.endText} (${bestWindow.reason})`;
+    if (navigator.share) {
+      try { await navigator.share({ title: "Fishing Report", text }); return; } catch { /* user cancelled or unsupported, fall through */ }
+    }
+    try {
+      await navigator.clipboard.writeText(text);
+      setShared(true); setTimeout(() => setShared(false), 2000);
+    } catch { /* clipboard unavailable, nothing more we can do silently */ }
+  }
+
+  function goToLogTab() {
+    setMainTab("log");
+    // Pre-fill the location with whichever spot you were just viewing, so you
+    // don't have to pick it again from scratch after fishing there.
+    const active = LOCATIONS.find(l => l.id === locTab);
+    if (active && !form.start) setForm(f => ({ ...f, start: active.label }));
+  }
 
   async function saveTrip() {
     const updated = [{ ...form, id: Date.now() }, ...trips];
@@ -628,10 +764,29 @@ export default function App() {
       <div style={{ maxWidth: 600, margin: "0 auto" }}>
 
         {/* Header */}
-        <div style={{ marginBottom: 4 }}>
-          <div style={{ fontSize: 15, letterSpacing: "0.16em", color: "#4ade80", textTransform: "uppercase", marginBottom: 3 }}>🎣 Daily Fishing Intel</div>
-          <h1 style={{ margin: 0, fontSize: 25, fontWeight: 700, color: "#f0faf4", lineHeight: 1.2 }}>331 Bridge Area</h1>
-          <div style={{ fontSize: 16, color: "#86c7a0", marginTop: 2 }}>Fishing Report · Freeport, FL · {C.date}</div>
+        <div style={{ marginBottom: 4, display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 10 }}>
+          <div>
+            <div style={{ fontSize: 15, letterSpacing: "0.16em", color: "#4ade80", textTransform: "uppercase", marginBottom: 3 }}>🎣 Daily Fishing Intel</div>
+            <h1 style={{ margin: 0, fontSize: 25, fontWeight: 700, color: "#f0faf4", lineHeight: 1.2 }}>331 Bridge Area</h1>
+            <div style={{ fontSize: 16, color: "#86c7a0", marginTop: 2 }}>Fishing Report · Freeport, FL · {C.date}</div>
+          </div>
+          <button onClick={shareReport} style={{ background: "#0f2a1c", border: "1px solid #1a3828", borderRadius: 8, padding: "8px 12px", color: "#7ab898", fontSize: 15, fontWeight: 600, cursor: "pointer", fontFamily: "'Space Grotesk',sans-serif", whiteSpace: "nowrap", flexShrink: 0 }}>
+            {shared ? "✓ Copied" : "📤 Share"}
+          </button>
+        </div>
+
+        {/* Best Bet + Best Window — the two fastest things to check before heading out */}
+        <div style={{ display: "flex", gap: 8, margin: "12px 0", flexWrap: "wrap" }}>
+          <div style={{ flex: "1 1 140px", background: "#0d2918", border: "1px solid #4ade8066", borderRadius: 8, padding: "10px 14px" }}>
+            <div style={{ fontSize: 13, color: "#7ab898", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 3 }}>🏆 Best Bet Today</div>
+            <div style={{ fontSize: 17, fontWeight: 700, color: "#4ade80" }}>{bestBet.loc.emoji} {bestBet.loc.label}</div>
+            <div style={{ fontSize: 14, color: "#86c7a0" }}>{bestBet.score}/10 · {ratingLabel(bestBet.score)}</div>
+          </div>
+          <div style={{ flex: "1 1 140px", background: "#0d2918", border: "1px solid #4ade8066", borderRadius: 8, padding: "10px 14px" }}>
+            <div style={{ fontSize: 13, color: "#7ab898", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 3 }}>⏰ Best Window</div>
+            <div style={{ fontSize: 17, fontWeight: 700, color: "#facc15" }}>{bestWindow.startText} – {bestWindow.endText}</div>
+            <div style={{ fontSize: 14, color: "#86c7a0" }}>{bestWindow.reason}</div>
+          </div>
         </div>
 
         {/* Storm warning */}
@@ -652,7 +807,7 @@ export default function App() {
         {/* Main tabs */}
         <div style={{ display: "flex", gap: 8, marginBottom: 14, marginTop: 14 }}>
           {[["report", "📋 Report"], ["log", "📓 Trip Log"]].map(([key, label]) => (
-            <button key={key} onClick={() => setMainTab(key)} style={{
+            <button key={key} onClick={() => key === "log" ? goToLogTab() : setMainTab(key)} style={{
               flex: 1, padding: "9px 0", borderRadius: 8, border: "none", cursor: "pointer",
               fontFamily: "'Space Grotesk',sans-serif", fontWeight: 600, fontSize: 16,
               background: mainTab === key ? "#4ade80" : "#0f2a1c",
@@ -670,7 +825,7 @@ export default function App() {
               const sc = todaysAdjustedScore(loc.overallScore);
               const dot = ratingColor(sc);
               return (
-                <button key={loc.id} onClick={() => setLocTab(loc.id)} style={{
+                <button key={loc.id} onClick={() => selectLocTab(loc.id)} style={{
                   padding: "10px 10px", borderRadius: 8, border: active ? "1px solid #4ade8066" : "1px solid #1a3828",
                   cursor: "pointer", fontFamily: "'Space Grotesk',sans-serif", fontWeight: 600, fontSize: 16,
                   background: active ? "#0d2918" : "#0f2a1c", color: active ? "#f0faf4" : "#7ab898",
@@ -695,6 +850,18 @@ export default function App() {
 
           {/* Shared sections */}
           <div style={{ height: 1, background: "#1a3828", margin: "14px 0" }} />
+
+          {/* Live radar — makes "watch the radar" actually actionable instead of requiring a second app */}
+          <Collapsible title="🌧️ Live Radar" defaultOpen={CONDITIONS.stormChance >= 30}>
+            <div style={{ marginTop: 10, borderRadius: 8, overflow: "hidden", border: "1px solid #1a3828" }}>
+              <iframe
+                title="Live radar — Freeport, FL"
+                src="https://embed.windy.com/embed2.html?lat=30.48&lon=-86.14&detailLat=30.48&detailLon=-86.14&width=650&height=400&zoom=8&level=surface&overlay=radar&menu=&message=true&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1"
+                width="100%" height="320" frameBorder="0" style={{ display: "block" }}
+              />
+            </div>
+            <div style={{ fontSize: 13, color: "#7ab898", marginTop: 6, textAlign: "center" }}>Live radar via Windy.com</div>
+          </Collapsible>
 
           {/* Wind guidance */}
           <div style={{ border: "1px solid #1a3828", borderRadius: 10, overflow: "hidden", marginBottom: 10 }}>
@@ -812,3 +979,4 @@ export default function App() {
     </div>
   );
 }
+
