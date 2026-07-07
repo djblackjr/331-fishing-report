@@ -399,30 +399,40 @@ function WindCompass({ dir, size = 64 }) {
 // Simple tide curve — a smooth rise/fall between today's high and low, with a
 // marker for the current time. Easier to read at a glance on a moving boat
 // than parsing "High ~6:44 AM · Low ~7:03 PM" as text.
-function TideCurve({ events, width = 300, height = 90 }) {
+//
+// IMPORTANT: previous versions set the <svg> height to "auto", which several
+// mobile browsers don't scale correctly with viewBox — they'd collapse it to
+// a tiny fixed height instead. The fix is the standard responsive-SVG
+// pattern: a wrapper div with a fixed aspect-ratio, and an <svg width="100%"
+// height="100%"> inside it. The viewBox still defines the coordinate system;
+// the wrapper's aspect-ratio is what actually controls the rendered size now.
+function TideCurve({ events }) {
   if (!events || events.length < 2) return null;
   const pts = events.map(e => ({ ...e, mins: timeToMinutes(e.time) })).filter(e => e.mins != null).sort((a, b) => a.mins - b.mins);
   if (pts.length < 2) return null;
   const nowMins = (() => { const d = new Date(); return d.getHours() * 60 + d.getMinutes(); })();
-  const pad = 20;
-  const w = width - pad * 2, h = height - pad;
-  const yFor = (type) => type === "H" ? pad * 0.6 : height - pad * 0.6;
-  const xFor = (mins) => pad + (mins / 1440) * w;
-  // Build a smooth path through all points, wrapping so the curve reads naturally
+  const vbW = 400, vbH = 200;
+  const padX = 30, padTop = 46, padBottom = 40;
+  const w = vbW - padX * 2;
+  const yFor = (type) => type === "H" ? padTop : vbH - padBottom;
+  const xFor = (mins) => padX + (mins / 1440) * w;
   const first = pts[0], last = pts[pts.length - 1];
-  const path = [`M ${xFor(0)} ${yFor(first.type === "H" ? "L" : "H")}`, ...pts.map(p => `Q ${xFor(p.mins) - 20} ${yFor(p.type)} ${xFor(p.mins)} ${yFor(p.type)}`), `T ${xFor(1440)} ${yFor(last.type === "H" ? "L" : "H")}`].join(" ");
+  const path = [`M ${xFor(0)} ${yFor(first.type === "H" ? "L" : "H")}`, ...pts.map(p => `Q ${xFor(p.mins) - 25} ${yFor(p.type)} ${xFor(p.mins)} ${yFor(p.type)}`), `T ${xFor(1440)} ${yFor(last.type === "H" ? "L" : "H")}`].join(" ");
   return (
-    <svg width={width} height={height} viewBox={`0 0 ${width} ${height}`}>
-      <path d={path} fill="none" stroke="#4ade80" strokeWidth="2.5" strokeLinecap="round" />
-      {pts.map((p, i) => (
-        <g key={i}>
-          <circle cx={xFor(p.mins)} cy={yFor(p.type)} r="4" fill="#4ade80" />
-          <text x={xFor(p.mins)} y={yFor(p.type) + (p.type === "H" ? -10 : 20)} textAnchor="middle" fontSize="11" fill="#d1f0e0" fontFamily="'Space Grotesk',sans-serif">{p.type === "H" ? "High" : "Low"} {p.time}</text>
-        </g>
-      ))}
-      <line x1={xFor(nowMins)} y1="4" x2={xFor(nowMins)} y2={height - 4} stroke="#facc15" strokeWidth="1.5" strokeDasharray="3,3" />
-      <text x={xFor(nowMins)} y={height - 4} textAnchor="middle" fontSize="10" fill="#facc15" fontFamily="'Space Grotesk',sans-serif">now</text>
-    </svg>
+    <div style={{ width: "100%", aspectRatio: `${vbW} / ${vbH}`, maxWidth: 460, margin: "0 auto" }}>
+      <svg width="100%" height="100%" viewBox={`0 0 ${vbW} ${vbH}`} preserveAspectRatio="xMidYMid meet" style={{ display: "block" }}>
+        <path d={path} fill="none" stroke="#4ade80" strokeWidth="4" strokeLinecap="round" />
+        {pts.map((p, i) => (
+          <g key={i}>
+            <circle cx={xFor(p.mins)} cy={yFor(p.type)} r="7" fill="#4ade80" />
+            <text x={xFor(p.mins)} y={yFor(p.type) + (p.type === "H" ? -18 : 34)} textAnchor="middle" fontSize="19" fontWeight="700" fill="#d1f0e0" fontFamily="'Space Grotesk',sans-serif">{p.type === "H" ? "High" : "Low"}</text>
+            <text x={xFor(p.mins)} y={yFor(p.type) + (p.type === "H" ? -2 : 52)} textAnchor="middle" fontSize="17" fill="#86c7a0" fontFamily="'Space Grotesk',sans-serif">{p.time}</text>
+          </g>
+        ))}
+        <line x1={xFor(nowMins)} y1="8" x2={xFor(nowMins)} y2={vbH - 8} stroke="#facc15" strokeWidth="2" strokeDasharray="4,4" />
+        <text x={xFor(nowMins)} y={vbH - 8} textAnchor="middle" fontSize="14" fontWeight="700" fill="#facc15" fontFamily="'Space Grotesk',sans-serif">now</text>
+      </svg>
+    </div>
   );
 }
 
@@ -592,8 +602,8 @@ function LocationReport({ loc }) {
 
       {/* Tide curve — faster to read at a glance than the text description above */}
       {C.tideEvents && (
-        <div style={{ ...card, display: "flex", justifyContent: "center" }}>
-          <TideCurve events={C.tideEvents} width={320} height={90} />
+        <div style={{ ...card, width: "100%", boxSizing: "border-box" }}>
+          <TideCurve events={C.tideEvents} />
         </div>
       )}
 
@@ -979,4 +989,5 @@ export default function App() {
     </div>
   );
 }
+
 
