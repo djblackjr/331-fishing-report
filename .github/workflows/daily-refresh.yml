@@ -21,7 +21,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
 
       - name: Fetch live conditions and update conditions.json
         run: node scripts/update-conditions.mjs
@@ -31,4 +31,3 @@ jobs:
         with:
           commit_message: "Auto-refresh fishing conditions"
           file_pattern: src/data/conditions.json
-
