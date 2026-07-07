@@ -51,6 +51,27 @@ const STATIC_CONDITIONS = {
 const CONDITIONS = { ...dailyData, ...STATIC_CONDITIONS };
 const FORECAST = dailyData.forecast;
 
+// ── UNIFIED RATING SYSTEM ──────────────────────────────────────────────────
+// Every score on the page (top forecast AND each location) uses this same
+// scale and the same today's-storms/wind penalty, so "Excellent" never shows
+// next to a 40% storm day while the forecast card says "Fair" for the same day.
+function ratingLabel(score) {
+  if (score >= 8) return "Excellent";
+  if (score >= 7) return "Good";
+  if (score >= 5.5) return "Fair";
+  return "Poor";
+}
+function ratingColor(score) {
+  return score >= 7.5 ? "#4ade80" : score >= 6 ? "#facc15" : "#f87171";
+}
+function todaysAdjustedScore(baseScore) {
+  const today = FORECAST[0] || {};
+  let score = baseScore;
+  score -= (today.storms || 0) / 40; // 40% storm chance ≈ -1.0
+  if ((CONDITIONS.wind?.speed || 0) > 15) score -= 1;
+  return Math.max(3, Math.round(score * 10) / 10);
+}
+
 
 
 // ── BAIT INVENTORY & RECOMMENDATIONS ─────────────────────────────────────────
@@ -344,8 +365,8 @@ function ForecastStrip() {
       <div style={{ marginTop: 12 }}>
         {FORECAST.map((day, i) => {
           const sc = day.fishingScore;
-          const color = sc >= 7.5 ? "#4ade80" : sc >= 6 ? "#facc15" : "#f87171";
-          const rating = sc >= 8 ? "Excellent" : sc >= 7 ? "Good" : sc >= 5.5 ? "Fair" : "Poor";
+          const color = ratingColor(sc);
+          const rating = ratingLabel(sc);
           const stormColor = day.storms >= 60 ? "#f87171" : day.storms >= 30 ? "#facc15" : "#4ade80";
           return (
             <div key={i} style={{ marginBottom: 10, padding: "14px 14px", background: "#0f2a1c", borderRadius: 10, border: `1px solid ${color}33` }}>
@@ -450,7 +471,9 @@ function LocationReport({ loc }) {
   const C = CONDITIONS;
   const lureKey = C.sky === "Cloudy" ? "Cloudy morning" : C.sky === "Bright sun" ? "Bright sun" : C.waterClarity === "Dirty" ? "Dirty water" : "Slightly stained";
   const lures = C.lureMatrix[lureKey] || [];
-  const cc = loc.conditions === "Excellent" ? "#4ade80" : loc.conditions === "Good" ? "#86efac" : loc.conditions === "Fair" ? "#facc15" : "#f87171";
+  const todaysScore = todaysAdjustedScore(loc.overallScore);
+  const todaysLabel = ratingLabel(todaysScore);
+  const cc = ratingColor(todaysScore);
   const card = { background: "#0f2a1c", borderRadius: 10, padding: "13px 15px", border: "1px solid #1a3828", marginBottom: 10 };
   const lbl = { fontSize: 16, color: "#7ab898", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 8 };
   const divider = <div style={{ height: 1, background: "#1a3828", margin: "11px 0" }} />;
@@ -459,9 +482,9 @@ function LocationReport({ loc }) {
     <div>
       {/* Score card */}
       <div style={{ ...card, display: "flex", alignItems: "center", gap: 18, marginBottom: 10 }}>
-        <ScoreRing score={loc.overallScore} />
+        <ScoreRing score={todaysScore} />
         <div>
-          <div style={{ fontSize: 22, fontWeight: 700, color: cc }}>{loc.conditions}</div>
+          <div style={{ fontSize: 22, fontWeight: 700, color: cc }}>{todaysLabel} today{todaysLabel !== ratingLabel(loc.overallScore) ? ` (usually ${ratingLabel(loc.overallScore)})` : ""}</div>
           <div style={{ fontSize: 16, color: "#86c7a0", marginTop: 2 }}>{C.weather}</div>
           <div style={{ fontSize: 16, color: "#7ab898", marginTop: 2 }}>🌊 {C.tide}</div>
           <div style={{ fontSize: 16, color: "#7ab898", marginTop: 1 }}>💨 {C.wind.description} · 🌙 {C.moonPhase}</div>
@@ -644,8 +667,8 @@ export default function App() {
           <div style={{ display: "flex", gap: 6, marginBottom: 14, overflowX: "auto", paddingBottom: 4, WebkitOverflowScrolling: "touch" }}>
             {LOCATIONS.map(loc => {
               const active = locTab === loc.id;
-              const sc = loc.overallScore;
-              const dot = sc >= 7.5 ? "#4ade80" : sc >= 6 ? "#facc15" : "#f87171";
+              const sc = todaysAdjustedScore(loc.overallScore);
+              const dot = ratingColor(sc);
               return (
                 <button key={loc.id} onClick={() => setLocTab(loc.id)} style={{
                   padding: "10px 10px", borderRadius: 8, border: active ? "1px solid #4ade8066" : "1px solid #1a3828",
@@ -656,7 +679,7 @@ export default function App() {
                 }}>
                   <div style={{ fontSize: 22, marginBottom: 3 }}>{loc.emoji}</div>
                   <div style={{ fontSize: 15, whiteSpace: "nowrap" }}>{loc.label}</div>
-                  <div style={{ fontSize: 16, fontWeight: 700, color: dot, marginTop: 3 }}>{loc.overallScore}</div>
+                  <div style={{ fontSize: 16, fontWeight: 700, color: dot, marginTop: 3 }}>{sc}</div>
                 </button>
               );
             })}
