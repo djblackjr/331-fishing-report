@@ -1,3 +1,6 @@
+
+
+
 import { useState } from "react";
 import dailyData from "./data/conditions.json";
 
@@ -400,37 +403,58 @@ function WindCompass({ dir, size = 64 }) {
 // marker for the current time. Easier to read at a glance on a moving boat
 // than parsing "High ~6:44 AM · Low ~7:03 PM" as text.
 //
-// IMPORTANT: previous versions set the <svg> height to "auto", which several
-// mobile browsers don't scale correctly with viewBox — they'd collapse it to
-// a tiny fixed height instead. The fix is the standard responsive-SVG
-// pattern: a wrapper div with a fixed aspect-ratio, and an <svg width="100%"
-// height="100%"> inside it. The viewBox still defines the coordinate system;
-// the wrapper's aspect-ratio is what actually controls the rendered size now.
+// Layout note: all label Y-positions below are deliberately spelled out as
+// explicit numbers (not relative offsets) and checked against vbH, because a
+// prior version computed the Low time's Y position as 212 while the viewBox
+// only went to 200 — it was silently clipped off the bottom edge. Every text
+// element's Y here is comfortably inside 0..vbH.
 function TideCurve({ events }) {
   if (!events || events.length < 2) return null;
   const pts = events.map(e => ({ ...e, mins: timeToMinutes(e.time) })).filter(e => e.mins != null).sort((a, b) => a.mins - b.mins);
   if (pts.length < 2) return null;
   const nowMins = (() => { const d = new Date(); return d.getHours() * 60 + d.getMinutes(); })();
-  const vbW = 400, vbH = 200;
-  const padX = 30, padTop = 46, padBottom = 40;
+
+  const vbW = 400, vbH = 230;
+  const padX = 30;
+  const curveTopY = 54;     // where the High point sits on the curve
+  const curveBottomY = 138; // where the Low point sits on the curve
+  const axisY = 200;        // horizontal hour-axis line
+  const tickLabelY = 222;   // hour numbers below the axis line
+
   const w = vbW - padX * 2;
-  const yFor = (type) => type === "H" ? padTop : vbH - padBottom;
+  const yFor = (type) => type === "H" ? curveTopY : curveBottomY;
   const xFor = (mins) => padX + (mins / 1440) * w;
   const first = pts[0], last = pts[pts.length - 1];
   const path = [`M ${xFor(0)} ${yFor(first.type === "H" ? "L" : "H")}`, ...pts.map(p => `Q ${xFor(p.mins) - 25} ${yFor(p.type)} ${xFor(p.mins)} ${yFor(p.type)}`), `T ${xFor(1440)} ${yFor(last.type === "H" ? "L" : "H")}`].join(" ");
+
+  const hourTicks = [0, 360, 720, 1080, 1440].map((m, i) => ({ mins: m, label: ["12A", "6A", "12P", "6P", "12A"][i] }));
+
   return (
     <div style={{ width: "100%", aspectRatio: `${vbW} / ${vbH}`, maxWidth: 460, margin: "0 auto" }}>
       <svg width="100%" height="100%" viewBox={`0 0 ${vbW} ${vbH}`} preserveAspectRatio="xMidYMid meet" style={{ display: "block" }}>
         <path d={path} fill="none" stroke="#4ade80" strokeWidth="4" strokeLinecap="round" />
+
         {pts.map((p, i) => (
           <g key={i}>
             <circle cx={xFor(p.mins)} cy={yFor(p.type)} r="7" fill="#4ade80" />
-            <text x={xFor(p.mins)} y={yFor(p.type) + (p.type === "H" ? -18 : 34)} textAnchor="middle" fontSize="19" fontWeight="700" fill="#d1f0e0" fontFamily="'Space Grotesk',sans-serif">{p.type === "H" ? "High" : "Low"}</text>
-            <text x={xFor(p.mins)} y={yFor(p.type) + (p.type === "H" ? -2 : 52)} textAnchor="middle" fontSize="17" fill="#86c7a0" fontFamily="'Space Grotesk',sans-serif">{p.time}</text>
+            {/* High labels sit above the curve point; Low labels sit below it — each pair (name + time) is grouped tightly together and fully inside the viewBox */}
+            <text x={xFor(p.mins)} y={p.type === "H" ? curveTopY - 18 : curveBottomY + 30} textAnchor="middle" fontSize="19" fontWeight="700" fill="#d1f0e0" fontFamily="'Space Grotesk',sans-serif">{p.type === "H" ? "High" : "Low"}</text>
+            <text x={xFor(p.mins)} y={p.type === "H" ? curveTopY - 2 : curveBottomY + 48} textAnchor="middle" fontSize="17" fill="#86c7a0" fontFamily="'Space Grotesk',sans-serif">{p.time}</text>
           </g>
         ))}
-        <line x1={xFor(nowMins)} y1="8" x2={xFor(nowMins)} y2={vbH - 8} stroke="#facc15" strokeWidth="2" strokeDasharray="4,4" />
-        <text x={xFor(nowMins)} y={vbH - 8} textAnchor="middle" fontSize="14" fontWeight="700" fill="#facc15" fontFamily="'Space Grotesk',sans-serif">now</text>
+
+        {/* Now marker */}
+        <line x1={xFor(nowMins)} y1="14" x2={xFor(nowMins)} y2={axisY} stroke="#facc15" strokeWidth="2" strokeDasharray="4,4" />
+        <text x={xFor(nowMins)} y="12" textAnchor="middle" fontSize="13" fontWeight="700" fill="#facc15" fontFamily="'Space Grotesk',sans-serif">now</text>
+
+        {/* X-axis: hour markers so the curve has actual time context, not just two labeled dots */}
+        <line x1={padX} y1={axisY} x2={vbW - padX} y2={axisY} stroke="#2a4a38" strokeWidth="1.5" />
+        {hourTicks.map((t, i) => (
+          <g key={i}>
+            <line x1={xFor(t.mins)} y1={axisY - 4} x2={xFor(t.mins)} y2={axisY + 4} stroke="#2a4a38" strokeWidth="1.5" />
+            <text x={xFor(t.mins)} y={tickLabelY} textAnchor="middle" fontSize="13" fill="#7ab898" fontFamily="'Space Grotesk',sans-serif">{t.label}</text>
+          </g>
+        ))}
       </svg>
     </div>
   );
@@ -989,5 +1013,3 @@ export default function App() {
     </div>
   );
 }
-
-
