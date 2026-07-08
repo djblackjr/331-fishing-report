@@ -40,6 +40,17 @@ function heatIndexFrom(text) {
   return m ? m[1] : null;
 }
 
+// NWS gives wind speed as a string, often a range like "0 to 10 mph" or a
+// single value like "10 mph". parseInt() alone grabs only the first number in
+// a range — for "0 to 10 mph" that's 0, which silently produced speed:0 even
+// on a real 10 mph day. This pulls every number in the string and uses the
+// highest one, since the upper bound is what matters for wind-warning
+// thresholds (a "0 to 10 mph" day can still gust to 10).
+function parseWindSpeed(str) {
+  const nums = (str.match(/\d+/g) || []).map(Number);
+  return nums.length ? Math.max(...nums) : 0;
+}
+
 // Simple, transparent fishing-score heuristic. Tune freely — this is not a
 // scientific model, just a reasonable starting point based on wind/rain/storms.
 function scoreFor({ windMph, pop, storms }) {
@@ -55,7 +66,7 @@ function buildForecastEntries(periods) {
   const daytime = periods.filter((p) => p.isDaytime).slice(0, 3);
   const labels = ["Today", "Tomorrow"];
   return daytime.map((p, i) => {
-    const windMph = parseInt(p.windSpeed, 10) || 0;
+    const windMph = parseWindSpeed(p.windSpeed);
     const pop = p.probabilityOfPrecipitation?.value ?? 0;
     const storms = /thunder|storm/i.test(p.shortForecast);
     const heat = heatIndexFrom(p.detailedForecast);
@@ -164,7 +175,7 @@ async function main() {
 
   const periods = await getForecast();
   const today = periods.find((p) => p.isDaytime) || periods[0];
-  const windMph = parseInt(today.windSpeed, 10) || 0;
+  const windMph = parseWindSpeed(today.windSpeed);
   const windDir = (today.windDirection.match(/[NSEW]+/) || ["E"])[0];
 
   const forecast = buildForecastEntries(periods);
