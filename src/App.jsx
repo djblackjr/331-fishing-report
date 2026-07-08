@@ -467,7 +467,36 @@ function TideCurve({ events, sunrise, sunset, stormWindow, stormChance }) {
   const yFor = (type) => type === "H" ? curveTopY : curveBottomY;
   const xFor = (mins) => padX + (mins / 1440) * w;
   const first = pts[0], last = pts[pts.length - 1];
-  const path = [`M ${xFor(0)} ${yFor(first.type === "H" ? "L" : "H")}`, ...pts.map(p => `Q ${xFor(p.mins) - 25} ${yFor(p.type)} ${xFor(p.mins)} ${yFor(p.type)}`), `T ${xFor(1440)} ${yFor(last.type === "H" ? "L" : "H")}`].join(" ");
+
+  // Build the curve with cosine (ease-in/ease-out) interpolation between each
+  // known point, sampled densely, instead of hand-placed bezier control
+  // points. A prior version used "Q x-25,y x,y" control points, which looked
+  // fine for interior points but produced a visibly wrong hook on the left
+  // edge — the very first segment ran from a far-away virtual start point
+  // through a control point placed close to the destination, creating an
+  // unnaturally sharp bend instead of a smooth tidal rise. Cosine
+  // interpolation between many sample points has no control points to place
+  // badly, so this class of bug can't recur here.
+  const anchors = [
+    { mins: 0, type: first.type === "H" ? "L" : "H" }, // virtual start: opposite of the first real event
+    ...pts,
+    { mins: 1440, type: last.type === "H" ? "L" : "H" }, // virtual end: opposite of the last real event
+  ];
+  const SAMPLES_PER_SEGMENT = 24;
+  const pathPoints = [];
+  for (let i = 0; i < anchors.length - 1; i++) {
+    const a = anchors[i], b = anchors[i + 1];
+    const yA = yFor(a.type), yB = yFor(b.type);
+    for (let s = 0; s <= SAMPLES_PER_SEGMENT; s++) {
+      if (i > 0 && s === 0) continue; // avoid duplicating the shared point between segments
+      const f = s / SAMPLES_PER_SEGMENT;
+      const eased = (1 - Math.cos(f * Math.PI)) / 2; // smooth ease, no overshoot
+      const mins = a.mins + (b.mins - a.mins) * f;
+      const y = yA + (yB - yA) * eased;
+      pathPoints.push([xFor(mins), y]);
+    }
+  }
+  const path = pathPoints.map(([x, y], i) => `${i === 0 ? "M" : "L"} ${x.toFixed(1)} ${y.toFixed(1)}`).join(" ");
 
   const hourTicks = [0, 360, 720, 1080, 1440].map((m, i) => ({ mins: m, label: ["12A", "6A", "12P", "6P", "12A"][i] }));
   const stormRange = (stormChance >= 20) ? parseStormRange(stormWindow) : null;
@@ -512,7 +541,13 @@ function TideCurve({ events, sunrise, sunset, stormWindow, stormChance }) {
         {sunriseMins != null && (
           <g>
             <line x1={xFor(sunriseMins)} y1={axisY - 4} x2={xFor(sunriseMins)} y2={axisY + 4} stroke="#facc15" strokeWidth="2" />
-            <text x={xFor(sunriseMins)} y={axisY - 10} textAnchor="middle" fontSize="14">🌅</text>
+            <text x={xFor(sunriseMins)} y={axisY - 16} textAnchor="middle" fontSize="26">🌅</text>
+          </g>
+        )}
+        {sunsetMins != null && (
+          <g>
+            <line x1={xFor(sunsetMins)} y1={axisY - 4} x2={xFor(sunsetMins)} y2={axisY + 4} stroke="#facc15" strokeWidth="2" />
+            <text x={xFor(sunsetMins)} y={axisY - 16} textAnchor="middle" fontSize="26">🌇</text>
           </g>
         )}
         {sunsetMins != null && (
@@ -915,6 +950,27 @@ export default function App() {
         {conditionsDiff && (
           <div style={{ fontSize: 14, color: "#7ab898", padding: "2px 4px 10px", lineHeight: 1.6 }}>
             🔄 {conditionsDiff}
+          </div>
+        )}
+
+        {/* NWS vs Open-Meteo — two independent forecast sources side by side.
+            Worth showing both rather than picking one: NWS is the US
+            government's own forecast; Open-Meteo blends multiple global
+            models. When they roughly agree, that's reassuring. When they
+            don't, that disagreement itself is useful information (e.g. real
+            uncertainty about whether storms will actually develop). */}
+        {C.openMeteo?.[0] && (
+          <div style={{ display: "flex", gap: 8, marginBottom: 12 }}>
+            <div style={{ flex: 1, background: "#0f2a1c", border: "1px solid #1a3828", borderRadius: 8, padding: "10px 12px" }}>
+              <div style={{ fontSize: 13, color: "#7ab898", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 4 }}>NWS (official)</div>
+              <div style={{ fontSize: 15, color: "#d1f0e0" }}>{FORECAST[0].high}°F · {FORECAST[0].storms}% storms</div>
+              <div style={{ fontSize: 14, color: "#7ab898" }}>{FORECAST[0].wind}</div>
+            </div>
+            <div style={{ flex: 1, background: "#0f2a1c", border: "1px solid #1a3828", borderRadius: 8, padding: "10px 12px" }}>
+              <div style={{ fontSize: 13, color: "#7ab898", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 4 }}>Open-Meteo</div>
+              <div style={{ fontSize: 15, color: "#d1f0e0" }}>{C.openMeteo[0].high}°F · {C.openMeteo[0].stormChance}% storms</div>
+              <div style={{ fontSize: 14, color: "#7ab898" }}>{C.openMeteo[0].windDir} {C.openMeteo[0].windSpeed} mph</div>
+            </div>
           </div>
         )}
 
