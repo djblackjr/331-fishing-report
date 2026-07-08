@@ -416,7 +416,7 @@ const LOCATIONS = [
 ];
 
 // ── TRIP LOG ──────────────────────────────────────────────────────────────────
-const EMPTY_TRIP = { date: "", hours: "", start: "", tide: "", wind: "", species: "", kept: "", lures: "", notes: "" };
+const EMPTY_TRIP = { date: "", hours: "", start: "", tide: "", wind: "", species: "", kept: "", lures: "", notes: "", archivedConditions: null };
 
 // ── COMPONENTS ────────────────────────────────────────────────────────────────
 function ScoreRing({ score }) {
@@ -936,6 +936,7 @@ export default function App() {
   const [form, setForm] = useState(EMPTY_TRIP);
   const [saved, setSaved] = useState(false);
   const [shared, setShared] = useState(false);
+  const [archiveStatus, setArchiveStatus] = useState(null); // { found: bool, message: string } — shown under the trip log Date field
   const swipeStartX = useRef(null);
 
   // Swipe left/right between location tabs — natural on a phone instead of
@@ -993,11 +994,51 @@ export default function App() {
     if (active && !form.start) setForm(f => ({ ...f, start: active.label }));
   }
 
+  // Maps a real wind reading to the closest of the Trip Log's existing wind-
+  // bucket dropdown options. Only wind is auto-filled from the archive — tide
+  // (Incoming/Outgoing/slack) genuinely depends on what time of day you were
+  // out fishing, which the form doesn't collect, so guessing that from a
+  // single daily high/low would likely be wrong more often than it's right.
+  // Better to leave it honestly blank than silently guess.
+  function windToBucket(wind) {
+    if (!wind || !wind.dir) return "";
+    if (wind.speed === 0) return "Calm";
+    const oct = nearestOctant(wind.dir);
+    if (!["N", "S", "E", "W", "SW", "SE"].includes(oct)) return ""; // NE/NW aren't in the dropdown's options
+    return `${oct} ${wind.speed > 15 ? "over 15" : "under 10"}`;
+  }
+
+  // When you pick a date in the Trip Log, look up that day's real archived
+  // conditions (written daily by the automation script into public/history/)
+  // instead of relying on memory. Auto-fills wind where it can, and always
+  // stores the full archived snapshot on the trip record for later analysis
+  // — e.g. checking whether the app's predicted fishing score actually
+  // correlated with what you caught that day.
+  async function handleTripDateChange(dateStr) {
+    setForm(f => ({ ...f, date: dateStr, archivedConditions: null }));
+    setArchiveStatus(null);
+    if (!dateStr) return;
+    try {
+      const res = await fetch(`/history/${dateStr}.json`);
+      if (!res.ok) throw new Error("no archive for this date");
+      const archived = await res.json();
+      const windBucket = windToBucket(archived.wind);
+      setForm(f => ({
+        ...f,
+        wind: windBucket || f.wind, // only overwrite if we found a confident match
+        archivedConditions: archived, // full snapshot, kept for later score-accuracy analysis
+      }));
+      setArchiveStatus({ found: true, message: `✓ Found archived conditions for this date — wind auto-filled${windBucket ? "" : " (direction was NE/NW, not in the dropdown — left as-is)"}.` });
+    } catch {
+      setArchiveStatus({ found: false, message: "No archived conditions for this date (either before archiving started, or it's today/future) — fill in manually." });
+    }
+  }
+
   async function saveTrip() {
     const updated = [{ ...form, id: Date.now() }, ...trips];
     setTrips(updated);
     try { await window.storage.set("trips", JSON.stringify(updated)); } catch {}
-    setForm(EMPTY_TRIP); setSaved(true); setTimeout(() => setSaved(false), 2500);
+    setForm(EMPTY_TRIP); setSaved(true); setArchiveStatus(null); setTimeout(() => setSaved(false), 2500);
   }
 
   async function deleteTrip(id) {
@@ -1224,7 +1265,12 @@ export default function App() {
 
           <div style={{ background: "#0f2a1c", border: "1px solid #1a3828", borderRadius: 10, padding: "14px 16px", marginBottom: 12 }}>
             <div style={{ fontSize: 16, color: "#7ab898", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 12, fontWeight: 600 }}>➕ Log a Trip</div>
-            <Input label="Date" value={form.date} onChange={v => setForm(f => ({ ...f, date: v }))} placeholder="June 28, 2026" />
+            <div style={{ marginBottom: 10 }}>
+              <div style={{ fontSize: 15, color: "#7ab898", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 4 }}>Date</div>
+              <input type="date" value={form.date} onChange={e => handleTripDateChange(e.target.value)}
+                style={{ width: "100%", background: "#0f2a1c", border: "1px solid #1a3828", borderRadius: 6, padding: "8px 12px", color: "#d1f0e0", fontSize: 16, fontFamily: "'Space Grotesk',sans-serif", outline: "none", boxSizing: "border-box" }} />
+              {archiveStatus && <div style={{ fontSize: 14, color: archiveStatus.found ? "#4ade80" : "#7ab898", marginTop: 4 }}>{archiveStatus.message}</div>}
+            </div>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
               <Input label="Hours fished" value={form.hours} onChange={v => setForm(f => ({ ...f, hours: v }))} placeholder="4" />
               <div>
