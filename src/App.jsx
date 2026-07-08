@@ -693,7 +693,7 @@ function BaitPicker() {
   const isNone = selected.includes("none");
 
   return (
-    <Collapsible title="🪝 What Bait Do You Have?" defaultOpen={true}>
+    <Collapsible title="🪝 What Bait Do You Have?" defaultOpen={false}>
       <div style={{ marginTop: 12 }}>
 
         {/* Bait toggle grid */}
@@ -813,7 +813,7 @@ function LocationReport({ loc }) {
       </Collapsible>
 
       {/* Lures */}
-      <Collapsible title={`🪝 Lures — ${lureKey}`}>
+      <Collapsible title={`🪝 Lures — ${lureKey}`} defaultOpen={false}>
         <div style={{ marginTop: 10 }}>
           {lures.map(l => (
             <div key={l.lure} style={{ marginBottom: 9, padding: "10px 12px", background: "#0f2a1c", borderRadius: 8, border: "1px solid #1a3828" }}>
