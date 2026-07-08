@@ -6,13 +6,19 @@
 // Run manually:   node scripts/update-conditions.mjs
 // Run on schedule: see .github/workflows/daily-refresh.yml
 
-import { writeFile, readFile } from "fs/promises";
+import { writeFile, readFile, mkdir } from "fs/promises";
 
 const LAT = 30.48;   // approx. 331 Bridge / Shipyard Marina
 const LON = -86.14;
 const TIDE_STATION = "8729511"; // NOAA: Destin, East Pass, FL
 const USER_AGENT = "331-fishing-report (github.com/djblackjr/331-fishing-report)";
 const OUT_PATH = new URL("../src/data/conditions.json", import.meta.url);
+// Files under public/ are deployed as plain static assets (Vite copies them
+// as-is, doesn't bundle them into the JS) — so the app can fetch any day's
+// archive at runtime with a normal fetch('/history/2026-07-08.json') call,
+// no database or backend needed. This is what lets the Trip Log look up real
+// recorded conditions for a past date instead of relying on manual guesses.
+const HISTORY_DIR = new URL("../public/history/", import.meta.url);
 
 async function getJson(url, opts = {}) {
   const res = await fetch(url, { headers: { "User-Agent": USER_AGENT, ...opts.headers } });
@@ -213,6 +219,10 @@ async function main() {
   const updated = {
     ...existing,
     date: new Date().toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric", year: "numeric", timeZone: "America/Chicago" }),
+    // en-CA locale formats as YYYY-MM-DD, which is exactly what we need for a
+    // reliable filename/lookup key — the human-readable `date` string above
+    // isn't safe to parse back programmatically, this is.
+    dateISO: new Intl.DateTimeFormat("en-CA", { timeZone: "America/Chicago" }).format(new Date()),
     wind: { speed: windMph, dir: windDir, description: `${today.windDirection} ${today.windSpeed}` },
     weather: `${today.shortForecast} · High ${today.temperature}°F${heatIndexFrom(today.detailedForecast) ? ` · Heat index up to ${heatIndexFrom(today.detailedForecast)}°F` : ""}`,
     tide: `${tide.text} · Sunrise ${sun.sunrise}`,
@@ -232,6 +242,24 @@ async function main() {
     // this only updates when you ask Claude to refresh it manually. The app
     // shows a "days since refreshed" flag on this box using localBiteUpdated.
   };
+
+  // Archive the COMPLETED previous day before overwriting it. By the time
+  // this script runs (~3 AM), `existing` represents a full day that's now
+  // over, not "today" — so this is the right moment to freeze it. Guarded
+  // with existing.dateISO in case this runs against an older conditions.json
+  // that predates this field.
+  if (existing.dateISO) {
+    try {
+      await mkdir(HISTORY_DIR, { recursive: true });
+      const archivePath = new URL(`${existing.dateISO}.json`, HISTORY_DIR);
+      await writeFile(archivePath, JSON.stringify(existing, null, 2) + "\n");
+      console.log("Archived previous day to public/history/" + existing.dateISO + ".json");
+    } catch (err) {
+      console.warn("Archiving failed (non-fatal, continuing with the main update):", err.message);
+    }
+  } else {
+    console.log("No dateISO on existing conditions.json yet — skipping archive for this run (will start archiving from tomorrow).");
+  }
 
   await writeFile(OUT_PATH, JSON.stringify(updated, null, 2) + "\n");
   console.log("conditions.json updated:", updated.lastUpdated);
