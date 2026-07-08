@@ -40,6 +40,15 @@ function heatIndexFrom(text) {
   return m ? m[1] : null;
 }
 
+// The lure recommendations in App.jsx switch between a "Cloudy morning" and
+// "Bright sun" tackle box based on the `sky` field — but that field was never
+// actually being set by this script, so it stayed stuck at whatever the seed
+// file said ("Bright sun") forever, regardless of real conditions. This maps
+// NWS's shortForecast text to the two buckets the app's LURE_MATRIX expects.
+function deriveSky(shortForecast) {
+  return /cloud|overcast|rain|shower|storm/i.test(shortForecast) ? "Cloudy" : "Bright sun";
+}
+
 // NWS gives wind speed as a string, often a range like "0 to 10 mph" or a
 // single value like "10 mph". parseInt() alone grabs only the first number in
 // a range — for "0 to 10 mph" that's 0, which silently produced speed:0 even
@@ -212,6 +221,7 @@ async function main() {
     sunset: sun.sunset,
     stormWindow,
     stormChance,
+    sky: deriveSky(today.shortForecast),
     moonPhase: moon,
     lastUpdated: `${new Date().toLocaleString("en-US", { timeZone: "America/Chicago" })} CT · Source: National Weather Service + NOAA Tides (station ${TIDE_STATION}) · Auto-refreshed`,
     forecast,
