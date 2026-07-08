@@ -1,4 +1,4 @@
-iimport { useState, useRef } from "react";
+import { useState, useRef } from "react";
 import dailyData from "./data/conditions.json";
 
 // ── SHARED CONDITIONS ─────────────────────────────────────────────────────────
@@ -993,7 +993,14 @@ export default function App() {
 
         {/* Storm warning */}
         <div style={{ background: "#0d2918", border: "1px solid #4ade8066", borderRadius: 8, padding: "10px 14px", fontSize: 16, color: "#86efac", margin: "12px 0", lineHeight: 1.5 }}>
-          ⛈️ Tuesday: 40% chance of showers/thunderstorms, mainly before 4 PM — plan a morning trip and watch the radar. Otherwise mostly sunny, high 91°F, heat index up to 105°F. SW wind 5–10 mph.
+          {(() => {
+            const dayName = C.date.split(",")[0];
+            const emoji = C.stormChance >= 30 ? "⛈️" : C.stormChance >= 10 ? "⛅" : "🌞";
+            const stormNote = C.stormChance >= 10
+              ? `${C.stormChance}% chance of showers/storms${C.stormWindow ? `, ${C.stormWindow}` : ""} — plan a morning trip and watch the radar. `
+              : "No storm threat today. ";
+            return `${emoji} ${dayName}: ${stormNote}${C.weather}`;
+          })()}
         </div>
 
         {/* Local bite report — grounded in real recent guide/charter reports */}
