@@ -153,6 +153,7 @@ function getConditionsDiff() {
 
 // ── BAIT INVENTORY & RECOMMENDATIONS ─────────────────────────────────────────
 const ALL_BAITS = [
+  { id: "none",           label: "None",              emoji: "🚫" },
   { id: "live_shrimp",    label: "Live Shrimp",      emoji: "🦐" },
   { id: "mud_minnow",     label: "Mud Minnows",       emoji: "🐟" },
   { id: "fiddler_crab",   label: "Fiddler Crabs",     emoji: "🦀" },
@@ -160,7 +161,6 @@ const ALL_BAITS = [
   { id: "frozen_shrimp",  label: "Frozen Shrimp",     emoji: "🧊" },
   { id: "squid",          label: "Squid",             emoji: "🦑" },
   { id: "no_bait",        label: "Artificials Only",  emoji: "🪝" },
-  { id: "none",           label: "None",              emoji: "🚫" },
 ];
 
 // Rigging & tips keyed to bait id
@@ -673,7 +673,7 @@ function ForecastStrip() {
 
 // ── BAIT PICKER COMPONENT ─────────────────────────────────────────────────────
 function BaitPicker() {
-  const [selected, setSelected] = useState(["live_shrimp"]);
+  const [selected, setSelected] = useState(["none"]);
 
   function toggle(id) {
     if (id === "no_bait" || id === "none") {
