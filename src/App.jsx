@@ -160,6 +160,7 @@ const ALL_BAITS = [
   { id: "frozen_shrimp",  label: "Frozen Shrimp",     emoji: "🧊" },
   { id: "squid",          label: "Squid",             emoji: "🦑" },
   { id: "no_bait",        label: "Artificials Only",  emoji: "🪝" },
+  { id: "none",           label: "None",              emoji: "🚫" },
 ];
 
 // Rigging & tips keyed to bait id
@@ -675,23 +676,24 @@ function BaitPicker() {
   const [selected, setSelected] = useState(["live_shrimp"]);
 
   function toggle(id) {
-    if (id === "no_bait") {
-      setSelected(["no_bait"]);
+    if (id === "no_bait" || id === "none") {
+      setSelected([id]);
       return;
     }
     setSelected(prev => {
-      const without_none = prev.filter(x => x !== "no_bait");
-      return without_none.includes(id)
-        ? without_none.filter(x => x !== id)
-        : [...without_none, id];
+      const cleared = prev.filter(x => x !== "no_bait" && x !== "none");
+      return cleared.includes(id)
+        ? cleared.filter(x => x !== id)
+        : [...cleared, id];
     });
   }
 
   const recs = selected.flatMap(id => BAIT_RECS[id]?.rigs || []);
   const tips = [...new Set(selected.map(id => BAIT_RECS[id]?.tip).filter(Boolean))];
+  const isNone = selected.includes("none");
 
   return (
-    <Collapsible title="🪝 What Bait Do You Have?" defaultOpen={false}>
+    <Collapsible title="🪝 What Bait Do You Have?" defaultOpen={true}>
       <div style={{ marginTop: 12 }}>
 
         {/* Bait toggle grid */}
@@ -726,7 +728,11 @@ function BaitPicker() {
             <div style={{ fontSize: 16, fontWeight: 700, color: "#86c7a0" }}>{r.name}</div>
             <div style={{ fontSize: 16, color: "#7ab898", marginTop: 3, lineHeight: 1.6 }}>{r.detail}</div>
           </div>
-        )) : (
+        )) : isNone ? (
+          <div style={{ textAlign: "center", color: "#7ab898", fontSize: 16, padding: "16px 0", lineHeight: 1.6 }}>
+            No bait or lures — that's alright. Focus on precise casting near structure, sight-fishing shallow water, and working the tide window instead of relying on bait.
+          </div>
+        ) : (
           <div style={{ textAlign: "center", color: "#7ab898", fontSize: 16, padding: "16px 0" }}>Select what you have above to see rigging tips.</div>
         )}
       </div>
