@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+iimport { useState, useRef } from "react";
 import dailyData from "./data/conditions.json";
 
 // ── SHARED CONDITIONS ─────────────────────────────────────────────────────────
@@ -470,18 +470,34 @@ function TideCurve({ events, sunrise, sunset, stormWindow, stormChance }) {
 
   // Build the curve with cosine (ease-in/ease-out) interpolation between each
   // known point, sampled densely, instead of hand-placed bezier control
-  // points. A prior version used "Q x-25,y x,y" control points, which looked
-  // fine for interior points but produced a visibly wrong hook on the left
-  // edge — the very first segment ran from a far-away virtual start point
-  // through a control point placed close to the destination, creating an
-  // unnaturally sharp bend instead of a smooth tidal rise. Cosine
-  // interpolation between many sample points has no control points to place
-  // badly, so this class of bug can't recur here.
-  const anchors = [
-    { mins: 0, type: first.type === "H" ? "L" : "H" }, // virtual start: opposite of the first real event
-    ...pts,
-    { mins: 1440, type: last.type === "H" ? "L" : "H" }, // virtual end: opposite of the last real event
-  ];
+  // points. A prior version used "Q x-25,y x,y" control points, which
+  // produced a visibly wrong hook on the left edge.
+  //
+  // A second bug showed up after that fix: this location has a diurnal tide
+  // (one high, one low per day), and on days where that single high or low
+  // lands very close to midnight (e.g. 12:51 AM), simply assuming the
+  // "opposite" tide sits exactly at x=0 forces the curve to travel the full
+  // high-to-low distance in the few minutes between midnight and that event
+  // — an unnaturally steep near-vertical whip at the edge, not a real tide
+  // shape. The fix: extrapolate virtual boundary points using the ACTUAL
+  // observed spacing between real events, not a fixed midnight snap. This
+  // keeps the curve's pace consistent regardless of where events fall.
+  const avgInterval = pts.length >= 2
+    ? (pts[pts.length - 1].mins - pts[0].mins) / (pts.length - 1)
+    : 360; // fallback if somehow only one point made it through (shouldn't happen — we already return null above for pts.length < 2)
+
+  const anchors = [...pts];
+  // Extend left until we've covered before x=0, alternating H/L using the real spacing
+  while (anchors[0].mins > -60) {
+    const prevType = anchors[0].type === "H" ? "L" : "H";
+    anchors.unshift({ mins: anchors[0].mins - avgInterval, type: prevType });
+  }
+  // Extend right until we've covered past x=1440
+  while (anchors[anchors.length - 1].mins < 1500) {
+    const nextType = anchors[anchors.length - 1].type === "H" ? "L" : "H";
+    anchors.push({ mins: anchors[anchors.length - 1].mins + avgInterval, type: nextType });
+  }
+
   const SAMPLES_PER_SEGMENT = 24;
   const pathPoints = [];
   for (let i = 0; i < anchors.length - 1; i++) {
@@ -492,6 +508,7 @@ function TideCurve({ events, sunrise, sunset, stormWindow, stormChance }) {
       const f = s / SAMPLES_PER_SEGMENT;
       const eased = (1 - Math.cos(f * Math.PI)) / 2; // smooth ease, no overshoot
       const mins = a.mins + (b.mins - a.mins) * f;
+      if (mins < -20 || mins > 1460) continue; // skip samples well outside the visible day — keeps the path array small
       const y = yA + (yB - yA) * eased;
       pathPoints.push([xFor(mins), y]);
     }
