@@ -74,7 +74,37 @@ function buildForecastEntries(periods) {
   });
 }
 
-// ── Tides: NOAA CO-OPS ────────────────────────────────────────────────────────
+// ── Weather: Open-Meteo (second source, shown side-by-side with NWS) ────────
+// Free, no API key, non-commercial use up to 10,000 requests/day (see
+// open-meteo.com). This is a genuinely different data pipeline than NWS (it
+// blends multiple global models rather than being the US government's own
+// forecast), so showing both gives a real second opinion rather than two
+// views of the same underlying data.
+const WMO_CODES = {
+  0: "Clear", 1: "Mostly clear", 2: "Partly cloudy", 3: "Overcast",
+  45: "Fog", 48: "Fog",
+  51: "Light drizzle", 53: "Drizzle", 55: "Heavy drizzle",
+  61: "Light rain", 63: "Rain", 65: "Heavy rain",
+  80: "Rain showers", 81: "Rain showers", 82: "Violent rain showers",
+  95: "Thunderstorm", 96: "Thunderstorm w/ hail", 99: "Thunderstorm w/ hail",
+};
+function degToCompass(deg) {
+  const dirs = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"];
+  return dirs[Math.round(deg / 45) % 8];
+}
+async function getOpenMeteo() {
+  const url = `https://api.open-meteo.com/v1/forecast?latitude=${LAT}&longitude=${LON}&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,windspeed_10m_max,winddirection_10m_dominant,weathercode&timezone=America%2FChicago&forecast_days=3&temperature_unit=fahrenheit&windspeed_unit=mph`;
+  const data = await getJson(url);
+  const d = data.daily;
+  return d.time.map((_, i) => ({
+    high: Math.round(d.temperature_2m_max[i]),
+    low: Math.round(d.temperature_2m_min[i]),
+    stormChance: d.precipitation_probability_max[i],
+    windSpeed: Math.round(d.windspeed_10m_max[i]),
+    windDir: degToCompass(d.winddirection_10m_dominant[i]),
+    summary: WMO_CODES[d.weathercode[i]] || "Unknown",
+  }));
+}
 async function getTideData() {
   const today = new Date();
   const ymd = today.toISOString().slice(0, 10).replace(/-/g, "");
@@ -140,6 +170,10 @@ async function main() {
   const forecast = buildForecastEntries(periods);
   const tide = await getTideData().catch(() => ({ text: existing.tide, events: existing.tideEvents || [] }));
   const sun = await getSunTimes().catch(() => ({ sunrise: existing.sunrise, sunset: existing.sunset }));
+  const openMeteo = await getOpenMeteo().catch((err) => {
+    console.warn("Open-Meteo fetch failed, keeping previous value:", err.message);
+    return existing.openMeteo || null;
+  });
   const moon = moonPhase();
   const stormChance = forecast[0]?.storms || 0;
   const stormWindow = extractStormWindow(today.detailedForecast) || existing.stormWindow || "";
@@ -170,6 +204,7 @@ async function main() {
     moonPhase: moon,
     lastUpdated: `${new Date().toLocaleString("en-US", { timeZone: "America/Chicago" })} CT · Source: National Weather Service + NOAA Tides (station ${TIDE_STATION}) · Auto-refreshed`,
     forecast,
+    openMeteo, // array of 3 days, same shape as `forecast` but from a different model source — see getOpenMeteo()
     previousDay,
     // localBiteReport / localBiteSource / localBiteUpdated intentionally left
     // untouched — there's no reliable free API for guide/charter reports, so
