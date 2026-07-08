@@ -20,21 +20,23 @@ const STATIC_CONDITIONS = {
   windWarning: "Winds over 15 knots: Stay inside LaGrange Bayou. Avoid crossing open bay water.",
   lureMatrix: {
     "Cloudy morning": [
-      { lure: "Spook Jr.", detail: "Bone color · Walk-the-dog across structure" },
-      { lure: "MirrOlure Top Dog", detail: "Black/silver · Low light topwater" },
+      { lure: "Spook Jr.", detail: "Bone color · Walk-the-dog across structure", category: "topwater" },
+      { lure: "MirrOlure Top Dog", detail: "Black/silver · Low light topwater", category: "topwater" },
+      { lure: "MirrOlure 52M", detail: "Suspending twitch bait · Count down and pause in low light", category: "twitch" },
     ],
     "Bright sun": [
-      { lure: "White paddle-tail", detail: "1/8 oz jig · Slow bottom bounce" },
-      { lure: "Gulp! Shrimp", detail: "New penny · Under popping cork" },
+      { lure: "White paddle-tail", detail: "1/8 oz jig · Slow bottom bounce", category: "paddletail" },
+      { lure: "Gulp! Shrimp", detail: "New penny · Under popping cork", category: "shrimp_plastic" },
+      { lure: "Rat-L-Trap 1/2 oz", detail: "Chrome/blue · Fan cast when fish are scattered in bright light", category: "rattle" },
     ],
     "Dirty water": [
-      { lure: "New Penny soft plastic", detail: "High contrast in stained water" },
-      { lure: "Gold spoon", detail: "Johnson weedless · Flash draws strikes" },
-      { lure: "Live shrimp", detail: "Can't beat the real thing in off-color water" },
+      { lure: "New Penny soft plastic", detail: "High contrast in stained water", category: "paddletail" },
+      { lure: "Gold spoon", detail: "Johnson weedless · Flash draws strikes", category: "spoon" },
     ],
     "Slightly stained": [
-      { lure: "Chartreuse paddle-tail", detail: "1/8 oz jig · Visible in off-color water" },
-      { lure: "White/chartreuse Z-Man", detail: "MinnowZ · Slow retrieve near grass" },
+      { lure: "Chartreuse paddle-tail", detail: "1/8 oz jig · Visible in off-color water", category: "paddletail" },
+      { lure: "White/chartreuse Z-Man", detail: "MinnowZ · Slow retrieve near grass", category: "paddletail" },
+      { lure: "Gold spoon", detail: "Slow retrieve over grass and oyster bars", category: "spoon" },
     ],
   },
   regulations: [
@@ -152,6 +154,17 @@ function getConditionsDiff() {
 }
 
 // ── BAIT INVENTORY & RECOMMENDATIONS ─────────────────────────────────────────
+// ── LURE INVENTORY ────────────────────────────────────────────────────────────
+const ALL_LURES = [
+  { id: "none",           label: "None",                     emoji: "🚫" },
+  { id: "topwater",       label: "Topwater Plugs",           emoji: "🎣" },
+  { id: "paddletail",     label: "Paddle-Tail Soft Plastics", emoji: "🐟" },
+  { id: "shrimp_plastic", label: "Shrimp-Imitation Plastic",  emoji: "🍤" },
+  { id: "spoon",          label: "Gold/Silver Spoons",       emoji: "🥄" },
+  { id: "twitch",         label: "Suspending Twitch Baits",  emoji: "🌊" },
+  { id: "rattle",         label: "Lipless Rattle Baits",     emoji: "💥" },
+];
+
 const ALL_BAITS = [
   { id: "none",           label: "None",              emoji: "🚫" },
   { id: "live_shrimp",    label: "Live Shrimp",      emoji: "🦐" },
@@ -740,6 +753,74 @@ function BaitPicker() {
   );
 }
 
+// ── LURE PICKER COMPONENT ─────────────────────────────────────────────────────
+// Mirrors BaitPicker's pattern: check off what's actually in your tackle box,
+// and it filters today's condition-based recommendations (from lureMatrix)
+// down to just the categories you own, instead of always showing the same
+// fixed list regardless of what you actually have with you.
+function LurePicker({ lureKey, lureList }) {
+  const [selected, setSelected] = useState(["none"]);
+
+  function toggle(id) {
+    if (id === "none") { setSelected(["none"]); return; }
+    setSelected(prev => {
+      const cleared = prev.filter(x => x !== "none");
+      return cleared.includes(id) ? cleared.filter(x => x !== id) : [...cleared, id];
+    });
+  }
+
+  const isNone = selected.includes("none");
+  const matches = isNone ? [] : lureList.filter(l => selected.includes(l.category));
+
+  return (
+    <Collapsible title={`🪝 Lures — ${lureKey}`} defaultOpen={false}>
+      <div style={{ marginTop: 12 }}>
+
+        {/* Lure toggle grid */}
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8, marginBottom: 14 }}>
+          {ALL_LURES.map(l => {
+            const on = selected.includes(l.id);
+            return (
+              <button key={l.id} onClick={() => toggle(l.id)} style={{
+                padding: "10px 10px", borderRadius: 8, border: on ? "1px solid #4ade80" : "1px solid #1a3828",
+                background: on ? "#0d2918" : "#0f2a1c", cursor: "pointer",
+                fontFamily: "'Space Grotesk',sans-serif", textAlign: "left",
+                display: "flex", alignItems: "center", gap: 8, transition: "all 0.15s",
+              }}>
+                <span style={{ fontSize: 22 }}>{l.emoji}</span>
+                <span style={{ fontSize: 16, fontWeight: 600, color: on ? "#4ade80" : "#7ab898", lineHeight: 1.3 }}>{l.label}</span>
+                {on && <span style={{ marginLeft: "auto", color: "#4ade80", fontSize: 16 }}>✓</span>}
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Matches */}
+        {matches.length > 0 ? matches.map((l, i) => (
+          <div key={i} style={{ marginBottom: 9, padding: "10px 12px", background: "#0f2a1c", borderRadius: 8, border: "1px solid #1a3828" }}>
+            <div style={{ fontSize: 16, fontWeight: 700, color: "#86c7a0" }}>{l.lure}</div>
+            <div style={{ fontSize: 16, color: "#7ab898", marginTop: 2 }}>{l.detail}</div>
+          </div>
+        )) : isNone ? (
+          <div style={{ textAlign: "center", color: "#7ab898", fontSize: 16, padding: "16px 0", lineHeight: 1.6 }}>
+            Check off what's in your tackle box above to see which of your lures fit today's {lureKey.toLowerCase()} conditions.
+          </div>
+        ) : (
+          <div style={{ padding: "10px 4px", lineHeight: 1.6 }}>
+            <div style={{ color: "#7ab898", fontSize: 15, marginBottom: 10 }}>None of your selected categories are today's top pick for {lureKey.toLowerCase()} — but here's what's working regardless:</div>
+            {lureList.map((l, i) => (
+              <div key={i} style={{ marginBottom: 9, padding: "10px 12px", background: "#0f2a1c", borderRadius: 8, border: "1px solid #1a3828" }}>
+                <div style={{ fontSize: 16, fontWeight: 700, color: "#86c7a0" }}>{l.lure}</div>
+                <div style={{ fontSize: 16, color: "#7ab898", marginTop: 2 }}>{l.detail}</div>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    </Collapsible>
+  );
+}
+
 function LocationReport({ loc }) {
   const C = CONDITIONS;
   const lureKey = C.sky === "Cloudy" ? "Cloudy morning" : C.sky === "Bright sun" ? "Bright sun" : C.waterClarity === "Dirty" ? "Dirty water" : "Slightly stained";
@@ -813,16 +894,7 @@ function LocationReport({ loc }) {
       </Collapsible>
 
       {/* Lures */}
-      <Collapsible title={`🪝 Lures — ${lureKey}`} defaultOpen={false}>
-        <div style={{ marginTop: 10 }}>
-          {lures.map(l => (
-            <div key={l.lure} style={{ marginBottom: 9, padding: "10px 12px", background: "#0f2a1c", borderRadius: 8, border: "1px solid #1a3828" }}>
-              <div style={{ fontSize: 16, fontWeight: 700, color: "#86c7a0" }}>{l.lure}</div>
-              <div style={{ fontSize: 16, color: "#7ab898", marginTop: 2 }}>{l.detail}</div>
-            </div>
-          ))}
-        </div>
-      </Collapsible>
+      <LurePicker lureKey={lureKey} lureList={lures} />
 
       {/* Bait picker */}
       <BaitPicker />
