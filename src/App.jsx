@@ -227,8 +227,23 @@ const BAIT_RECS = {
 // ── WIND HELPERS (drive dynamic stop text so it can never drift from actual conditions) ──
 const DIR_WORD = { N: "north", S: "south", E: "east", W: "west", NE: "northeast", NW: "northwest", SE: "southeast", SW: "southwest" };
 const OPPOSITE_DIR = { N: "S", S: "N", E: "W", W: "E", NE: "SW", SW: "NE", SE: "NW", NW: "SE" };
-function leeSide(dir) { return DIR_WORD[OPPOSITE_DIR[dir]] || dir; }
-function windWord(dir) { return DIR_WORD[dir] || dir; }
+
+// NWS reports wind in the full 16-point compass (e.g. "WSW", "NNE"), but our
+// advice text and highlighting only cover the 8 primary directions. Without
+// this, a reading like "WSW" matched nothing anywhere — no highlighted row
+// in Wind Guidance, a compass arrow silently defaulting to due north, and
+// garbled text like "Bridge Pilings (WSW Side)". This lookup + snap function
+// fixes all three at the source instead of patching each symptom separately.
+const DIR16_TO_DEG = {
+  N: 0, NNE: 22.5, NE: 45, ENE: 67.5, E: 90, ESE: 112.5, SE: 135, SSE: 157.5,
+  S: 180, SSW: 202.5, SW: 225, WSW: 247.5, W: 270, WNW: 292.5, NW: 315, NNW: 337.5,
+};
+function dirToDegrees(dir) { return DIR16_TO_DEG[dir] ?? 0; }
+const OCTANTS = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"];
+function nearestOctant(dir) { return OCTANTS[Math.round(dirToDegrees(dir) / 45) % 8]; }
+
+function leeSide(dir) { const oct = nearestOctant(dir); return DIR_WORD[OPPOSITE_DIR[oct]] || dir; }
+function windWord(dir) { return DIR_WORD[nearestOctant(dir)] || dir; }
 function capitalize(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
 
 // ── PER-LOCATION REPORTS ──────────────────────────────────────────────────────
@@ -406,16 +421,18 @@ function ScoreRing({ score }) {
 }
 
 // Compass-style wind indicator — faster to read at a glance than "SW 5-10 mph"
-// text, especially with sun glare on a phone screen.
-const DIR_DEGREES = { N: 0, NE: 45, E: 90, SE: 135, S: 180, SW: 225, W: 270, NW: 315 };
+// text, especially with sun glare on a phone screen. Uses dirToDegrees (the
+// full 16-point lookup defined above) so a reading like "WSW" points exactly
+// where it should, instead of the old 8-point-only map silently defaulting
+// unrecognized directions to due north.
 function WindCompass({ dir, size = 64 }) {
-  const deg = DIR_DEGREES[dir] ?? 0;
+  const deg = dirToDegrees(dir);
   const c = size / 2;
   return (
     <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>
       <circle cx={c} cy={c} r={c - 3} fill="none" stroke="#1a3828" strokeWidth="2" />
       {["N", "E", "S", "W"].map((d) => {
-        const a = (DIR_DEGREES[d] - 90) * (Math.PI / 180);
+        const a = (DIR16_TO_DEG[d] - 90) * (Math.PI / 180);
         const x = c + (c - 12) * Math.cos(a), y = c + (c - 12) * Math.sin(a);
         return <text key={d} x={x} y={y + 4} textAnchor="middle" fontSize="10" fill="#4a6b58" fontFamily="'Space Grotesk',sans-serif">{d}</text>;
       })}
@@ -1087,7 +1104,7 @@ export default function App() {
             </div>
             <div style={{ padding: "10px 16px 14px", background: "#0a1f14" }}>
               {C.windGuidance.map(w => {
-                const active = C.wind.dir === w.dir;
+                const active = nearestOctant(C.wind.dir) === w.dir;
                 return (
                   <div key={w.dir} style={{ display: "flex", alignItems: "flex-start", gap: 12, marginBottom: 9, padding: "9px 12px", borderRadius: 8, background: active ? "#0d2918" : "transparent", border: active ? "1px solid #4ade8044" : "1px solid transparent" }}>
                     <div style={{ fontSize: 20, minWidth: 22, textAlign: "center" }}>{w.icon}</div>
