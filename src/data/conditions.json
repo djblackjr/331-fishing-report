@@ -1,30 +1,30 @@
 {
-  "date": "Tuesday, July 7, 2026",
+  "date": "Wednesday, July 8, 2026",
   "wind": {
-    "speed": 10,
-    "dir": "SW",
-    "description": "SW 10 mph"
+    "speed": 0,
+    "dir": "WSW",
+    "description": "WSW 0 to 10 mph"
   },
-  "weather": "Slight Chance Showers And Thunderstorms · High 91°F · Heat index up to 103°F",
-  "tide": "High tide ~12:43 AM · Low tide ~11:07 AM · Sunrise 5:47 AM",
+  "weather": "Slight Chance Showers And Thunderstorms · High 92°F · Heat index up to 105°F",
+  "tide": "High tide ~12:51 AM · Low tide ~11:45 AM · Sunrise 5:47 AM",
   "tideEvents": [
     {
       "type": "H",
-      "time": "12:43 AM"
+      "time": "12:51 AM"
     },
     {
       "type": "L",
-      "time": "11:07 AM"
+      "time": "11:45 AM"
     }
   ],
   "sunrise": "5:47 AM",
   "sunset": "7:51 PM",
-  "stormWindow": "before 5PM",
-  "stormChance": 23,
-  "moonPhase": "Last Quarter (~37% illuminated) — moderate tidal push",
+  "stormWindow": "after 11AM",
+  "stormChance": 22,
+  "moonPhase": "Waning Crescent (~27% illuminated) — moderate tidal push",
   "waterClarity": "Slightly stained",
   "sky": "Bright sun",
-  "lastUpdated": "7/7/2026, 3:44:29 PM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "lastUpdated": "7/8/2026, 7:59:08 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
   "localBiteReport": "Trout bite has been strong across Choctawhatchee Bay this week, with water temps sitting in the low 80s. Guides report reds and trout schooling up on grass flats and around bridge pilings as the bay settles into its summer pattern — some inshore pressure has eased as anglers shift offshore for red snapper season. A recent standout: a 40+ inch, 26 lb bull redfish landed near Santa Rosa Beach.",
   "localBiteSource": "Sourced from recent charter & guide reports, Choctawhatchee Bay area · Not auto-updated — refresh manually via Claude periodically",
   "localBiteUpdated": "July 2, 2026",
@@ -32,47 +32,47 @@
     "date": "Tuesday, July 7, 2026",
     "wind": {
       "dir": "SW",
-      "speed": 7
+      "speed": 10
     },
     "high": 91,
-    "stormChance": 40,
-    "tide": "High tide ~6:44 AM · Low tide ~7:03 PM · Sunrise ~5:51 AM · Neap tide — smaller swing today"
+    "stormChance": 23,
+    "tide": "High tide ~12:43 AM · Low tide ~11:07 AM · Sunrise 5:47 AM"
   },
   "forecast": [
     {
-      "day": "Tue, Jul 7",
-      "label": "Today",
-      "high": 91,
-      "low": null,
-      "wind": "SW 10 mph",
-      "storms": 23,
-      "headline": "Slight Chance Showers And Thunderstorms · Heat index 103",
-      "fishingScore": 7.6,
-      "aiCall": "A slight chance of showers and thunderstorms before 5pm. Mostly sunny, with a high near 91. Heat index values as high as 103. Southwest wind around 10 mph. Chance of precipitation is 20%.",
-      "emoji": "⛈️"
-    },
-    {
       "day": "Wed, Jul 8",
-      "label": "Tomorrow",
+      "label": "Today",
       "high": 92,
       "low": null,
       "wind": "WSW 0 to 10 mph",
-      "storms": 24,
-      "headline": "Slight Chance Showers And Thunderstorms · Heat index 103",
-      "fishingScore": 7.5,
-      "aiCall": "A slight chance of showers and thunderstorms before 5pm. Mostly sunny, with a high near 92. Heat index values as high as 103. West southwest wind 0 to 10 mph. Chance of precipitation is 20%.",
+      "storms": 22,
+      "headline": "Slight Chance Showers And Thunderstorms · Heat index 105",
+      "fishingScore": 7.6,
+      "aiCall": "A slight chance of showers and thunderstorms after 11am. Mostly sunny, with a high near 92. Heat index values as high as 105. West southwest wind 0 to 10 mph. Chance of precipitation is 20%.",
       "emoji": "⛈️"
     },
     {
       "day": "Thu, Jul 9",
-      "label": "Thursday",
+      "label": "Tomorrow",
+      "high": 91,
+      "low": null,
+      "wind": "WSW 0 to 10 mph",
+      "storms": 20,
+      "headline": "Slight Chance Showers And Thunderstorms · Heat index 105",
+      "fishingScore": 7.7,
+      "aiCall": "A slight chance of showers and thunderstorms between 7am and 2pm. Mostly sunny, with a high near 91. Heat index values as high as 105. West southwest wind 0 to 10 mph. Chance of precipitation is 20%. New rainfall amounts less than a tenth of an inch possible.",
+      "emoji": "⛈️"
+    },
+    {
+      "day": "Fri, Jul 10",
+      "label": "Friday",
       "high": 91,
       "low": null,
       "wind": "SW 0 to 10 mph",
-      "storms": 25,
-      "headline": "Chance Showers And Thunderstorms",
-      "fishingScore": 7.5,
-      "aiCall": "A slight chance of showers and thunderstorms before 7am, then a chance of showers and thunderstorms between 7am and 10am, then a chance of showers and thunderstorms. Mostly sunny, with a high near 91. Southwest wind 0 to 10 mph. Chance of precipitation is 30%.",
+      "storms": 22,
+      "headline": "Slight Chance Showers And Thunderstorms",
+      "fishingScore": 7.6,
+      "aiCall": "A slight chance of showers and thunderstorms after 7am. Mostly sunny, with a high near 91. Southwest wind 0 to 10 mph. Chance of precipitation is 20%.",
       "emoji": "⛈️"
     }
   ]
