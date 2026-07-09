@@ -3,7 +3,7 @@
   "wind": {
     "speed": 10,
     "dir": "SW",
-    "description": "SW 0 to 10 mph"
+    "description": "SW 5 to 10 mph"
   },
   "weather": "Chance Showers And Thunderstorms · High 91°F · Heat index up to 102°F",
   "tide": "High tide ~1:22 AM · Low tide ~12:39 PM · Sunrise 5:48 AM",
@@ -24,10 +24,10 @@
   "moonPhase": "Waning Crescent (~18% illuminated) — strong tidal push (spring tide)",
   "waterClarity": "Slightly stained",
   "sky": "Cloudy",
-  "lastUpdated": "7/9/2026, 9:44:32 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
-  "localBiteReport": "Trout bite has been strong across Choctawhatchee Bay this week, with water temps sitting in the low 80s. Guides report reds and trout schooling up on grass flats and around bridge pilings as the bay settles into its summer pattern — some inshore pressure has eased as anglers shift offshore for red snapper season. A recent standout: a 40+ inch, 26 lb bull redfish landed near Santa Rosa Beach.",
-  "localBiteSource": "Sourced from recent charter & guide reports, Choctawhatchee Bay area · Not auto-updated — refresh manually via Claude periodically",
-  "localBiteUpdated": "July 2, 2026",
+  "lastUpdated": "7/9/2026, 10:29:00 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "localBiteReport": "Reports from the past week out of the Santa Rosa Beach and Destin area of Choctawhatchee Bay show speckled trout as the standout inshore species, with guides describing the trout bite as strong and fish scattered across the bay despite some wind-driven limitations on where you can fish. Redfish are also active — one recent report highlighted a large bull red landed near the bay, and guides note reds are cruising the beaches and bay flats. On the inshore front overall, one Gulf Breeze guide noted the bite had been tough but was improving daily as of early July. Flounder, sheepshead, and black drum are not specifically called out in the most current week's reports, though they remain seasonally present in the bay. Note: the most detailed captain reports are 6–7 days old as of July 9, 2026 — current but at the edge of the weekly reporting cycle.",
+  "localBiteSource": "Captain Experiences (captainexperiences.com) Choctawhatchee Bay and Destin July 2026 reports; FishingBooker (fishingbooker.com) Choctawhatchee Bay July 2026 reports · Auto-refreshed via Claude API",
+  "localBiteUpdated": "July 9, 2026",
   "previousDay": {
     "date": "Thursday, July 9, 2026",
     "wind": {
@@ -42,7 +42,7 @@
     {
       "high": 93,
       "low": 81,
-      "stormChance": 9,
+      "stormChance": 11,
       "windSpeed": 13,
       "windDir": "SW",
       "summary": "Overcast"
@@ -58,7 +58,7 @@
     {
       "high": 94,
       "low": 78,
-      "stormChance": 22,
+      "stormChance": 16,
       "windSpeed": 11,
       "windDir": "SW",
       "summary": "Thunderstorm w/ hail"
@@ -70,11 +70,11 @@
       "label": "Today",
       "high": 91,
       "low": null,
-      "wind": "SW 0 to 10 mph",
+      "wind": "SW 5 to 10 mph",
       "storms": 30,
       "headline": "Chance Showers And Thunderstorms · Heat index 102",
       "fishingScore": 7.3,
-      "aiCall": "A chance of showers and thunderstorms between 10am and 4pm. Mostly sunny, with a high near 91. Heat index values as high as 102. Southwest wind 0 to 10 mph. Chance of precipitation is 30%.",
+      "aiCall": "A chance of showers and thunderstorms before 4pm. Mostly sunny, with a high near 91. Heat index values as high as 102. Southwest wind 5 to 10 mph. Chance of precipitation is 30%.",
       "emoji": "⛈️"
     },
     {
