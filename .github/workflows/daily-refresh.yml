@@ -2,12 +2,10 @@ name: Daily Conditions Refresh
 
 "on":
   schedule:
-    # 08:00 UTC = 3:00 AM Central Daylight Time (summer).
-    # During Central Standard Time (winter, roughly Nov-Mar) this runs at 2:00 AM local
-    # instead of 3:00 AM, since GitHub Actions cron doesn't follow DST. If you want it
-    # locked to exactly 3:00 AM year-round, change this to '0 9 * * *' every November
-    # and back to '0 8 * * *' every March - or just leave it, a 1-hour drift in winter
-    # is harmless for a morning fishing report.
+    # 08:13 UTC = ~3:13 AM Central. Kept as a fallback trigger, though the
+    # real reliable schedule is now the external cron-job.org ping hitting
+    # workflow_dispatch directly (GitHub's native schedule proved unreliable
+    # for this repo — see project history).
     - cron: '13 8 * * *'
   workflow_dispatch: {}
 
@@ -27,14 +25,23 @@ jobs:
         run: node scripts/update-conditions.mjs
 
       - name: Commit and push if changed
+        id: commit
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Auto-refresh fishing conditions"
           file_pattern: src/data/conditions.json
 
-
-      - name: Commit and push if changed
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "Auto-refresh fishing conditions"
-          file_pattern: src/data/conditions.json
+      - name: Trigger Pages deploy
+        # A push made using the workflow's default built-in token does NOT
+        # trigger other workflows' `on: push` rules (GitHub blocks this
+        # specifically to prevent infinite trigger loops). That silently
+        # broke the deploy step, since daily-refresh's commit never kicked
+        # off deploy-pages.yml. Using a real Personal Access Token here
+        # (stored as the DEPLOY_TOKEN secret) doesn't have that restriction.
+        if: steps.commit.outputs.changes_detected == 'true'
+        run: |
+          curl -X POST \
+            -H "Authorization: Bearer ${{ secrets.DEPLOY_TOKEN }}" \
+            -H "Accept: application/vnd.github+json" \
+            https://api.github.com/repos/djblackjr/331-fishing-report/actions/workflows/deploy-pages.yml/dispatches \
+            -d '{"ref":"main"}'
