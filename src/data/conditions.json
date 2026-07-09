@@ -24,32 +24,32 @@
   "moonPhase": "Waning Crescent (~18% illuminated) — strong tidal push (spring tide)",
   "waterClarity": "Slightly stained",
   "sky": "Cloudy",
-  "lastUpdated": "7/9/2026, 8:53:13 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "lastUpdated": "7/9/2026, 9:32:08 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
   "localBiteReport": "Trout bite has been strong across Choctawhatchee Bay this week, with water temps sitting in the low 80s. Guides report reds and trout schooling up on grass flats and around bridge pilings as the bay settles into its summer pattern — some inshore pressure has eased as anglers shift offshore for red snapper season. A recent standout: a 40+ inch, 26 lb bull redfish landed near Santa Rosa Beach.",
   "localBiteSource": "Sourced from recent charter & guide reports, Choctawhatchee Bay area · Not auto-updated — refresh manually via Claude periodically",
   "localBiteUpdated": "July 2, 2026",
   "previousDay": {
-    "date": "Wednesday, July 8, 2026",
+    "date": "Thursday, July 9, 2026",
     "wind": {
-      "dir": "WSW",
+      "dir": "SW",
       "speed": 10
     },
-    "high": 92,
-    "stormChance": 22,
-    "tide": "High tide ~12:51 AM · Low tide ~11:45 AM · Sunrise 5:47 AM"
+    "high": 91,
+    "stormChance": 30,
+    "tide": "High tide ~1:22 AM · Low tide ~12:39 PM · Sunrise 5:48 AM"
   },
   "openMeteo": [
     {
       "high": 92,
       "low": 81,
       "stormChance": 9,
-      "windSpeed": 10,
+      "windSpeed": 14,
       "windDir": "SW",
-      "summary": "Overcast"
+      "summary": "Drizzle"
     },
     {
-      "high": 92,
-      "low": 77,
+      "high": 93,
+      "low": 79,
       "stormChance": 8,
       "windSpeed": 11,
       "windDir": "SW",
@@ -74,7 +74,7 @@
       "storms": 30,
       "headline": "Chance Showers And Thunderstorms · Heat index 102",
       "fishingScore": 7.3,
-      "aiCall": "A chance of showers and thunderstorms before 4pm. Mostly sunny, with a high near 91. Heat index values as high as 102. Southwest wind 0 to 10 mph. Chance of precipitation is 30%.",
+      "aiCall": "A chance of showers and thunderstorms between 10am and 4pm. Mostly sunny, with a high near 91. Heat index values as high as 102. Southwest wind 0 to 10 mph. Chance of precipitation is 30%.",
       "emoji": "⛈️"
     },
     {
