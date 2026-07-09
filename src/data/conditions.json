@@ -24,9 +24,9 @@
   "moonPhase": "Waning Crescent (~18% illuminated) — strong tidal push (spring tide)",
   "waterClarity": "Slightly stained",
   "sky": "Cloudy",
-  "lastUpdated": "7/9/2026, 10:29:00 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
-  "localBiteReport": "Reports from the past week out of the Santa Rosa Beach and Destin area of Choctawhatchee Bay show speckled trout as the standout inshore species, with guides describing the trout bite as strong and fish scattered across the bay despite some wind-driven limitations on where you can fish. Redfish are also active — one recent report highlighted a large bull red landed near the bay, and guides note reds are cruising the beaches and bay flats. On the inshore front overall, one Gulf Breeze guide noted the bite had been tough but was improving daily as of early July. Flounder, sheepshead, and black drum are not specifically called out in the most current week's reports, though they remain seasonally present in the bay. Note: the most detailed captain reports are 6–7 days old as of July 9, 2026 — current but at the edge of the weekly reporting cycle.",
-  "localBiteSource": "Captain Experiences (captainexperiences.com) Choctawhatchee Bay and Destin July 2026 reports; FishingBooker (fishingbooker.com) Choctawhatchee Bay July 2026 reports · Auto-refreshed via Claude API",
+  "lastUpdated": "7/9/2026, 12:08:14 PM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "localBiteReport": "Note: The most current on-the-water reports found are approximately 6 days to 2 weeks old (early-to-mid July 2026), not same-week daily updates. That said, here's what local guides are reporting: speckled trout have been the standout inshore species, with a strong bite described as plentiful and active across the bay system, including out of Santa Rosa Beach. Redfish are also showing well — one Santa Rosa Beach guide recently documented a 40-inch, 26-lb bull red caught in the bay. One Gulf Breeze-area guide noted the inshore bite had been tough but was described as improving daily as of about a week ago, with weather and wind being the main limiting factor rather than fish presence. Water temps are sitting in the low 80s, consistent with mid-summer conditions that typically favor early morning trout on grass flats and reds pushing into shallower backwater areas on moving tides.",
+  "localBiteSource": "CaptainExperiences.com (Choctawhatchee Bay and Destin report pages, reports dated ~6 days to 2 weeks ago), CaptainExperiences.com Destin report (Gulf Breeze guide, ~1 week ago) · Auto-refreshed via Claude API",
   "localBiteUpdated": "July 9, 2026",
   "previousDay": {
     "date": "Thursday, July 9, 2026",
@@ -40,9 +40,9 @@
   },
   "openMeteo": [
     {
-      "high": 93,
+      "high": 91,
       "low": 81,
-      "stormChance": 11,
+      "stormChance": 22,
       "windSpeed": 13,
       "windDir": "SW",
       "summary": "Overcast"
@@ -50,7 +50,7 @@
     {
       "high": 93,
       "low": 79,
-      "stormChance": 8,
+      "stormChance": 10,
       "windSpeed": 11,
       "windDir": "SW",
       "summary": "Overcast"
