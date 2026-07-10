@@ -598,12 +598,6 @@ function TideCurve({ events, sunrise, sunset, stormWindow, stormChance }) {
             <text x={xFor(sunsetMins)} y={axisY - 16} textAnchor="middle" fontSize="26">🌇</text>
           </g>
         )}
-        {sunsetMins != null && (
-          <g>
-            <line x1={xFor(sunsetMins)} y1={axisY - 4} x2={xFor(sunsetMins)} y2={axisY + 4} stroke="#facc15" strokeWidth="2" />
-            <text x={xFor(sunsetMins)} y={axisY - 10} textAnchor="middle" fontSize="14">🌇</text>
-          </g>
-        )}
       </svg>
     </div>
   );
@@ -641,11 +635,21 @@ function Collapsible({ title, children, defaultOpen = true }) {
 
 // ── FORECAST COMPONENT ─────────────────────────────────────────────────────────
 function ForecastStrip() {
+  const bestBet = getBestBet(); // used to override Today's score below — see comment inline
   return (
     <Collapsible title="📅 3-Day Look Ahead" defaultOpen={true}>
       <div style={{ marginTop: 12 }}>
         {FORECAST.map((day, i) => {
-          const sc = day.fishingScore;
+          // Today's score (i === 0) previously came from its own independent
+          // formula (scoreFor() in the automation script), while every
+          // location score comes from todaysAdjustedScore(). These were two
+          // unrelated calculations that both displayed as "X/10" — nothing
+          // guaranteed they'd agree, which is exactly the bug that showed up
+          // (top score 8.6, but every individual location capped at 8.3).
+          // Today's score now IS the Best Bet score, so they can't diverge.
+          // Tomorrow/day-after keep their own forecast-based score, since we
+          // don't have location-adjusted data for future days.
+          const sc = i === 0 ? bestBet.score : day.fishingScore;
           const color = ratingColor(sc);
           const rating = ratingLabel(sc);
           const stormColor = day.storms >= 60 ? "#f87171" : day.storms >= 30 ? "#facc15" : "#4ade80";
