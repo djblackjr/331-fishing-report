@@ -3,9 +3,9 @@
   "wind": {
     "speed": 10,
     "dir": "SW",
-    "description": "SW 0 to 10 mph"
+    "description": "SW 5 to 10 mph"
   },
-  "weather": "Mostly Sunny · High 92°F · Heat index up to 105°F",
+  "weather": "Chance Showers And Thunderstorms · High 92°F · Heat index up to 105°F",
   "tide": "High tide ~2:09 AM · Low tide ~1:41 PM · Sunrise 5:48 AM",
   "tideEvents": [
     {
@@ -20,46 +20,46 @@
   "sunrise": "5:48 AM",
   "sunset": "7:51 PM",
   "stormWindow": "before 4PM",
-  "stormChance": 10,
+  "stormChance": 20,
   "moonPhase": "Waning Crescent (~11% illuminated) — strong tidal push (spring tide)",
   "waterClarity": "Slightly stained",
-  "sky": "Bright sun",
-  "lastUpdated": "7/10/2026, 3:12:11 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
-  "localBiteReport": "The most current reports available (within roughly the past week, from Captain Experiences reports out of Santa Rosa Beach and Shalimar) indicate that speckled trout are the standout inshore bite right now on Choctawhatchee Bay — described as plentiful and actively feeding despite some persistent wind pushing anglers to more sheltered areas. Redfish are also showing up well, including at least one report of a bull red over 40 inches landed near Santa Rosa Beach. A Shalimar-area guide noted the inshore bite had been tough but was improving daily as of about a week ago, suggesting conditions are trending in the right direction heading into mid-July. Water temps are sitting in the low 80s, which is typical for this time of year and generally favorable for trout and reds around grass flats and bridge structure. No recent firsthand reports on flounder, sheepshead, or black drum were found, though all three are seasonally present in the bay this time of year.",
-  "localBiteSource": "Captain Experiences (captainexperiences.com) — Destin/Santa Rosa Beach/Shalimar guide reports, approximately 6–14 days old as of July 10, 2026 · Auto-refreshed via Claude API",
+  "sky": "Cloudy",
+  "lastUpdated": "7/10/2026, 11:35:47 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "localBiteReport": "Reports from the past week out of the Santa Rosa Beach/Destin area of Choctawhatchee Bay show speckled trout as the standout inshore species, with multiple guides noting a strong and widespread trout bite across the bay despite some windy and choppy conditions making spot selection tricky. Redfish are also actively showing up, including a notable bull red over 40 inches caught in the area within the last six days. One Gulf Breeze-area guide noted the inshore bite had been tough overall but was improving daily heading into this week. Water temps are sitting in the low 80s, which is typical for July and generally keeps fish active but scattered. Note: the most detailed written reports available are from captainexperiences.com and are 6–14 days old; no fresh charter blog reports dated this specific week (July 7–10) were found.",
+  "localBiteSource": "captainexperiences.com (Choctawhatchee Bay & Destin fishing reports, July 2026), halfhitch.com fishing report index · Auto-refreshed via Claude API",
   "localBiteUpdated": "July 10, 2026",
   "previousDay": {
-    "date": "Thursday, July 9, 2026",
+    "date": "Friday, July 10, 2026",
     "wind": {
       "dir": "SW",
       "speed": 10
     },
-    "high": 91,
-    "stormChance": 30,
-    "tide": "High tide ~1:22 AM · Low tide ~12:39 PM · Sunrise 5:48 AM"
+    "high": 92,
+    "stormChance": 10,
+    "tide": "High tide ~2:09 AM · Low tide ~1:41 PM · Sunrise 5:48 AM"
   },
   "openMeteo": [
     {
-      "high": 91,
-      "low": 80,
-      "stormChance": 12,
+      "high": 94,
+      "low": 78,
+      "stormChance": 9,
       "windSpeed": 11,
       "windDir": "SW",
       "summary": "Overcast"
     },
     {
-      "high": 93,
+      "high": 90,
+      "low": 76,
+      "stormChance": 13,
+      "windSpeed": 11,
+      "windDir": "SW",
+      "summary": "Heavy rain"
+    },
+    {
+      "high": 94,
       "low": 77,
-      "stormChance": 18,
-      "windSpeed": 11,
-      "windDir": "SW",
-      "summary": "Overcast"
-    },
-    {
-      "high": 92,
-      "low": 75,
-      "stormChance": 33,
-      "windSpeed": 18,
+      "stormChance": 44,
+      "windSpeed": 13,
       "windDir": "SW",
       "summary": "Thunderstorm w/ hail"
     }
@@ -70,12 +70,12 @@
       "label": "Today",
       "high": 92,
       "low": null,
-      "wind": "SW 0 to 10 mph",
-      "storms": 10,
-      "headline": "Mostly Sunny · Heat index 105",
-      "fishingScore": 8.6,
-      "aiCall": "Mostly sunny, with a high near 92. Heat index values as high as 105. Southwest wind 0 to 10 mph.",
-      "emoji": "☀️"
+      "wind": "SW 5 to 10 mph",
+      "storms": 20,
+      "headline": "Chance Showers And Thunderstorms · Heat index 105",
+      "fishingScore": 7.8,
+      "aiCall": "A chance of showers and thunderstorms. Mostly sunny, with a high near 92. Heat index values as high as 105. Southwest wind 5 to 10 mph. Chance of precipitation is 20%.",
+      "emoji": "⛈️"
     },
     {
       "day": "Sat, Jul 11",
@@ -98,7 +98,7 @@
       "storms": 47,
       "headline": "Chance Showers And Thunderstorms",
       "fishingScore": 6.6,
-      "aiCall": "A slight chance of showers and thunderstorms before 7am, then a chance of showers and thunderstorms between 7am and 10am, then a chance of showers and thunderstorms. Mostly sunny, with a high near 91. Chance of precipitation is 50%.",
+      "aiCall": "A slight chance of showers and thunderstorms before 7am, then a chance of showers and thunderstorms between 7am and 10am, then a chance of showers and thunderstorms. Mostly sunny, with a high near 91. West southwest wind 0 to 10 mph. Chance of precipitation is 50%.",
       "emoji": "⛈️"
     }
   ],
