@@ -24,44 +24,44 @@
   "moonPhase": "New Moon (~2% illuminated) — strong tidal push (spring tide)",
   "waterClarity": "Slightly stained",
   "sky": "Cloudy",
-  "lastUpdated": "7/12/2026, 3:12:11 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "lastUpdated": "7/12/2026, 6:46:30 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
   "localBiteReport": "Reports from the past week out of the Santa Rosa Beach/Destin area of Choctawhatchee Bay show speckled trout as the standout inshore species, with multiple guides noting a strong and widespread trout bite across the bay despite some windy and choppy conditions making spot selection tricky. Redfish are also actively showing up, including a notable bull red over 40 inches caught in the area within the last six days. One Gulf Breeze-area guide noted the inshore bite had been tough overall but was improving daily heading into this week. Water temps are sitting in the low 80s, which is typical for July and generally keeps fish active but scattered. Note: the most detailed written reports available are from captainexperiences.com and are 6–14 days old; no fresh charter blog reports dated this specific week (July 7–10) were found.",
   "localBiteSource": "captainexperiences.com (Choctawhatchee Bay & Destin fishing reports, July 2026), halfhitch.com fishing report index · Auto-refreshed via Claude API",
   "localBiteUpdated": "July 10, 2026",
   "previousDay": {
-    "date": "Saturday, July 11, 2026",
+    "date": "Sunday, July 12, 2026",
     "wind": {
-      "dir": "SW",
+      "dir": "WSW",
       "speed": 10
     },
-    "high": 92,
-    "stormChance": 21,
-    "tide": "High tide ~3:06 AM · Low tide ~2:47 PM · Sunrise 5:49 AM"
+    "high": 91,
+    "stormChance": 56,
+    "tide": "High tide ~4:07 AM · Low tide ~3:50 PM · Sunrise 5:49 AM"
   },
   "openMeteo": [
     {
-      "high": 91,
-      "low": 80,
-      "stormChance": 34,
-      "windSpeed": 12,
+      "high": 88,
+      "low": 78,
+      "stormChance": 28,
+      "windSpeed": 13,
       "windDir": "SW",
-      "summary": "Heavy drizzle"
+      "summary": "Drizzle"
     },
     {
       "high": 87,
       "low": 74,
-      "stormChance": 61,
+      "stormChance": 56,
       "windSpeed": 24,
       "windDir": "W",
       "summary": "Heavy rain"
     },
     {
-      "high": 87,
-      "low": 74,
-      "stormChance": 60,
-      "windSpeed": 14,
+      "high": 84,
+      "low": 73,
+      "stormChance": 44,
+      "windSpeed": 10,
       "windDir": "W",
-      "summary": "Light drizzle"
+      "summary": "Drizzle"
     }
   ],
   "forecast": [
@@ -86,7 +86,7 @@
       "storms": 76,
       "headline": "Showers And Thunderstorms Likely then Showers And Thunderstorms",
       "fishingScore": 5,
-      "aiCall": "Showers and thunderstorms likely before 7am, then a chance of showers and thunderstorms between 7am and 9am, then showers and thunderstorms likely between 9am and 11am, then showers and thunderstorms between 11am and 4pm, then showers and thunderstorms likely. Partly sunny. High near 86, with temperatures falling to around 83 in the afternoon. West southwest wind 5 to 15 mph. Chance of precipitation is 80%.",
+      "aiCall": "Showers and thunderstorms likely before 7am, then a chance of showers and thunderstorms between 7am and 9am, then showers and thunderstorms likely between 9am and 11am, then showers and thunderstorms between 11am and 4pm, then showers and thunderstorms likely. Partly sunny. High near 86, with temperatures falling to around 83 in the afternoon. West southwest wind 5 to 15 mph. Chance of precipitation is 80%. New rainfall amounts between a quarter and half of an inch possible.",
       "emoji": "⛈️"
     },
     {
@@ -98,7 +98,7 @@
       "storms": 79,
       "headline": "Showers And Thunderstorms",
       "fishingScore": 5.3,
-      "aiCall": "Showers and thunderstorms. Partly sunny, with a high near 88. Chance of precipitation is 80%.",
+      "aiCall": "Showers and thunderstorms. Partly sunny, with a high near 88. West southwest wind 5 to 10 mph, with gusts as high as 20 mph. Chance of precipitation is 80%.",
       "emoji": "⛈️"
     }
   ],
