@@ -24,42 +24,42 @@
   "moonPhase": "New Moon (~1% illuminated) — strong tidal push (spring tide)",
   "waterClarity": "Slightly stained",
   "sky": "Cloudy",
-  "lastUpdated": "7/14/2026, 3:12:14 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "lastUpdated": "7/14/2026, 7:50:45 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
   "localBiteReport": "Reports from the past week out of the Santa Rosa Beach/Destin area of Choctawhatchee Bay show speckled trout as the standout inshore species, with multiple guides noting a strong and widespread trout bite across the bay despite some windy and choppy conditions making spot selection tricky. Redfish are also actively showing up, including a notable bull red over 40 inches caught in the area within the last six days. One Gulf Breeze-area guide noted the inshore bite had been tough overall but was improving daily heading into this week. Water temps are sitting in the low 80s, which is typical for July and generally keeps fish active but scattered. Note: the most detailed written reports available are from captainexperiences.com and are 6–14 days old; no fresh charter blog reports dated this specific week (July 7–10) were found.",
   "localBiteSource": "captainexperiences.com (Choctawhatchee Bay & Destin fishing reports, July 2026), halfhitch.com fishing report index · Auto-refreshed via Claude API",
   "localBiteUpdated": "July 10, 2026",
   "previousDay": {
-    "date": "Monday, July 13, 2026",
+    "date": "Tuesday, July 14, 2026",
     "wind": {
       "dir": "WSW",
       "speed": 10
     },
-    "high": 85,
-    "stormChance": 72,
-    "tide": "High tide ~5:09 AM · Low tide ~4:45 PM · Sunrise 5:50 AM"
+    "high": 88,
+    "stormChance": 38,
+    "tide": "High tide ~6:09 AM · Low tide ~5:31 PM · Sunrise 5:50 AM"
   },
   "openMeteo": [
     {
-      "high": 90,
+      "high": 89,
       "low": 77,
-      "stormChance": 30,
-      "windSpeed": 13,
+      "stormChance": 17,
+      "windSpeed": 19,
       "windDir": "SW",
-      "summary": "Overcast"
+      "summary": "Light drizzle"
     },
     {
       "high": 89,
       "low": 75,
-      "stormChance": 17,
+      "stormChance": 25,
       "windSpeed": 12,
       "windDir": "W",
       "summary": "Overcast"
     },
     {
-      "high": 95,
+      "high": 96,
       "low": 72,
-      "stormChance": 8,
-      "windSpeed": 13,
+      "stormChance": 10,
+      "windSpeed": 9,
       "windDir": "W",
       "summary": "Overcast"
     }
@@ -86,7 +86,7 @@
       "storms": 20,
       "headline": "Slight Chance Showers And Thunderstorms",
       "fishingScore": 7.7,
-      "aiCall": "A slight chance of showers and thunderstorms before 5pm. Mostly sunny, with a high near 90. West wind 0 to 10 mph. Chance of precipitation is 20%.",
+      "aiCall": "A slight chance of showers and thunderstorms before 5pm. Mostly sunny, with a high near 90. West wind 0 to 10 mph. Chance of precipitation is 20%. New rainfall amounts between a tenth and quarter of an inch possible.",
       "emoji": "⛈️"
     },
     {
@@ -98,7 +98,7 @@
       "storms": 8,
       "headline": "Mostly Sunny",
       "fishingScore": 8.7,
-      "aiCall": "Mostly sunny, with a high near 92.",
+      "aiCall": "Mostly sunny, with a high near 92. West wind 5 to 10 mph.",
       "emoji": "☀️"
     }
   ],
