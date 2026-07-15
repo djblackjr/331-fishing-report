@@ -24,7 +24,7 @@
   "moonPhase": "New Moon (~4% illuminated) — strong tidal push (spring tide)",
   "waterClarity": "Slightly stained",
   "sky": "Cloudy",
-  "lastUpdated": "7/15/2026, 7:16:03 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "lastUpdated": "7/15/2026, 7:56:54 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
   "localBiteReport": "Reports from the past week out of the Santa Rosa Beach/Destin area of Choctawhatchee Bay show speckled trout as the standout inshore species, with multiple guides noting a strong and widespread trout bite across the bay despite some windy and choppy conditions making spot selection tricky. Redfish are also actively showing up, including a notable bull red over 40 inches caught in the area within the last six days. One Gulf Breeze-area guide noted the inshore bite had been tough overall but was improving daily heading into this week. Water temps are sitting in the low 80s, which is typical for July and generally keeps fish active but scattered. Note: the most detailed written reports available are from captainexperiences.com and are 6–14 days old; no fresh charter blog reports dated this specific week (July 7–10) were found.",
   "localBiteSource": "captainexperiences.com (Choctawhatchee Bay & Destin fishing reports, July 2026), halfhitch.com fishing report index · Auto-refreshed via Claude API",
   "localBiteUpdated": "July 10, 2026",
@@ -40,19 +40,19 @@
   },
   "openMeteo": [
     {
-      "high": 90,
+      "high": 91,
       "low": 75,
       "stormChance": 21,
       "windSpeed": 13,
-      "windDir": "W",
-      "summary": "Overcast"
+      "windDir": "SW",
+      "summary": "Heavy drizzle"
     },
     {
       "high": 93,
       "low": 75,
       "stormChance": 12,
       "windSpeed": 10,
-      "windDir": "NW",
+      "windDir": "W",
       "summary": "Overcast"
     },
     {
