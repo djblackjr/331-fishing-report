@@ -53,6 +53,15 @@ const STATIC_CONDITIONS = {
 const CONDITIONS = { ...dailyData, ...STATIC_CONDITIONS };
 const FORECAST = dailyData.forecast;
 
+function getLocationNotes(loc) {
+  const notes = CONDITIONS.locationNotes?.[loc.id] || {};
+  return {
+    ...loc,
+    aiNote: notes.aiNote ?? loc.aiNote,
+    todaysCall: notes.todaysCall ?? loc.todaysCall,
+  };
+}
+
 // ── UNIFIED RATING SYSTEM ──────────────────────────────────────────────────
 // Every score on the page (top forecast AND each location) uses this same
 // scale and the same today's-storms/wind penalty, so "Excellent" never shows
@@ -903,18 +912,21 @@ function LocationReport({ loc }) {
       {/* Bait picker */}
       <BaitPicker />
 
-            {/* AI note — split into static "About this spot" + dynamic "Today's call" */}
+            {/* AI note — split into static "Why this spot" + dynamic "Today's advice" */}
       <div style={{ background: "#0d2918", border: "1px solid #4ade8033", borderRadius: 10, padding: "14px 16px", marginBottom: 10 }}>
-        <div style={{ fontSize: 15, color: "#4ade80", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 8, fontWeight: 600 }}>🤖 AI Field Notes</div>
+        <div style={{ fontSize: 15, color: "#4ade80", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 8, fontWeight: 600 }}>📌 Spot Notes</div>
+        <div style={{ fontSize: 14, color: "#7ab898", marginBottom: 12, lineHeight: 1.6 }}>
+          AI-backed context for this location plus the best next move for today.
+        </div>
 
-        {/* Static: about this spot */}
-        <div style={{ fontSize: 15, color: "#7ab898", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 4, fontWeight: 600 }}>About this spot</div>
+        {/* Static: why this spot */}
+        <div style={{ fontSize: 15, color: "#7ab898", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 4, fontWeight: 600 }}>Why this spot</div>
         <p style={{ margin: "0 0 12px 0", fontSize: 16, lineHeight: 1.75, color: "#d1f0e0" }}>{loc.aiNote}</p>
 
-        {/* Dynamic: today's call */}
+        {/* Dynamic: today's advice */}
         {loc.todaysCall && <>
           <div style={{ height: 1, background: "#1a3828", margin: "10px 0 12px 0" }} />
-          <div style={{ fontSize: 15, color: "#4ade80", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 4, fontWeight: 600 }}>📍 Today's Call</div>
+          <div style={{ fontSize: 15, color: "#4ade80", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 4, fontWeight: 600 }}>📍 Today's advice</div>
           <p style={{ margin: 0, fontSize: 16, lineHeight: 1.75, color: "#d1f0e0" }}>{loc.todaysCall}</p>
         </>}
       </div>
@@ -1069,7 +1081,7 @@ export default function App() {
   }
 
   const patterns = getPatterns();
-  const activeLoc = LOCATIONS.find(l => l.id === locTab);
+  const activeLoc = getLocationNotes(LOCATIONS.find(l => l.id === locTab) || LOCATIONS[0]);
   const lbl = { fontSize: 16, color: "#7ab898", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 8 };
 
   return (
@@ -1142,6 +1154,13 @@ export default function App() {
             return `${emoji} ${dayName}: ${stormNote}${C.weather}`;
           })()}
         </div>
+
+        {C.aiSummary && (
+          <div style={{ background: "#0f2a1c", border: "1px solid #1a3828", borderRadius: 10, padding: "13px 16px", marginBottom: 10 }}>
+            <div style={{ fontSize: 15, color: "#4ade80", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 8, fontWeight: 600 }}>💬 AI Summary</div>
+            <p style={{ margin: 0, fontSize: 16, color: "#d1f0e0", lineHeight: 1.75 }}>{C.aiSummary}</p>
+          </div>
+        )}
 
         {/* Local bite report — grounded in real recent guide/charter reports */}
         <div style={{ background: "#0f2a1c", border: "1px solid #1a3828", borderRadius: 10, padding: "13px 16px", marginBottom: 4 }}>
