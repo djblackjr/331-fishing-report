@@ -20,6 +20,8 @@ if (!API_KEY) {
 function buildPrompt(waterTemp) {
   return `Search for current fishing reports (this week if possible) for Choctawhatchee Bay, Freeport/Destin/Santa Rosa Beach, Florida. Focus on inshore species relevant to a bay fishing report app: redfish, speckled trout, flounder, black drum, sheepshead — not offshore species like red snapper/grouper/mahi unless there's genuinely nothing else current.
 
+Check captainexperiences.com's Choctawhatchee Bay/Destin/Freeport/Santa Rosa Beach report pages, and also check halfhitch.com's Destin fishing reports blog (halfhitch.com/blog/destin-fishing-reports) — it's a local Destin tackle shop with its own report posts. Only use halfhitch.com if it actually has a current post (this week or last); if its most recent post is old or you can't find one, skip it rather than citing stale content just because the site exists.
+
 Write a short (3-5 sentence) summary in your own words — paraphrase everything, never quote any source directly, even in quotation marks. If the most recent available reports are more than a week old (charter report blogs often update weekly, not daily), say so plainly rather than presenting stale info as brand new.
 ${waterTemp ? `\nIf you mention water temperature, use ${waterTemp}°F — a same-day measured reading for this exact spot — rather than whatever approximate figure ("low 80s", etc.) turns up in search results, which is often paraphrased from a days-old blog post.` : ""}
 Respond with ONLY a JSON object, no other text, no markdown fences:
