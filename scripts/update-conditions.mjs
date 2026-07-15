@@ -131,6 +131,17 @@ async function getOpenMeteo() {
     summary: WMO_CODES[d.weathercode[i]] || "Unknown",
   }));
 }
+// ── Water temp: Open-Meteo Marine API ────────────────────────────────────────
+// NOAA's tide station here (8729511) has no water-temperature sensor, and
+// relying on whatever guide blog posts happen to mention ("low 80s") is
+// often stale by days. This is a real (model-derived) sea surface temp
+// reading for the exact bay coordinates, free and no key required.
+async function getWaterTemp() {
+  const url = `https://marine-api.open-meteo.com/v1/marine?latitude=${LAT}&longitude=${LON}&current=sea_surface_temperature&temperature_unit=fahrenheit`;
+  const data = await getJson(url);
+  return Math.round(data.current.sea_surface_temperature);
+}
+
 async function getTideData() {
   const today = new Date();
   const ymd = today.toISOString().slice(0, 10).replace(/-/g, "");
@@ -201,6 +212,10 @@ async function main() {
     return existing.openMeteo || null;
   });
   const moon = moonPhase();
+  const waterTemp = await getWaterTemp().catch((err) => {
+    console.warn("Water temp fetch failed, keeping previous value:", err.message);
+    return existing.waterTemp ?? null;
+  });
   const stormChance = forecast[0]?.storms || 0;
   const stormWindow = extractStormWindow(today.detailedForecast) || existing.stormWindow || "";
 
@@ -233,6 +248,7 @@ async function main() {
     stormChance,
     sky: deriveSky(today.shortForecast),
     moonPhase: moon,
+    waterTemp,
     lastUpdated: `${new Date().toLocaleString("en-US", { timeZone: "America/Chicago" })} CT · Source: National Weather Service + NOAA Tides (station ${TIDE_STATION}) · Auto-refreshed`,
     forecast,
     openMeteo, // array of 3 days, same shape as `forecast` but from a different model source — see getOpenMeteo()

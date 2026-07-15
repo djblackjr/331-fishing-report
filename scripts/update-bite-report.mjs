@@ -17,14 +17,16 @@ if (!API_KEY) {
   process.exit(0); // exit 0 on purpose: missing key shouldn't fail the whole daily refresh
 }
 
-const PROMPT = `Search for current fishing reports (this week if possible) for Choctawhatchee Bay, Freeport/Destin/Santa Rosa Beach, Florida. Focus on inshore species relevant to a bay fishing report app: redfish, speckled trout, flounder, black drum, sheepshead — not offshore species like red snapper/grouper/mahi unless there's genuinely nothing else current.
+function buildPrompt(waterTemp) {
+  return `Search for current fishing reports (this week if possible) for Choctawhatchee Bay, Freeport/Destin/Santa Rosa Beach, Florida. Focus on inshore species relevant to a bay fishing report app: redfish, speckled trout, flounder, black drum, sheepshead — not offshore species like red snapper/grouper/mahi unless there's genuinely nothing else current.
 
 Write a short (3-5 sentence) summary in your own words — paraphrase everything, never quote any source directly, even in quotation marks. If the most recent available reports are more than a week old (charter report blogs often update weekly, not daily), say so plainly rather than presenting stale info as brand new.
-
+${waterTemp ? `\nIf you mention water temperature, use ${waterTemp}°F — a same-day measured reading for this exact spot — rather than whatever approximate figure ("low 80s", etc.) turns up in search results, which is often paraphrased from a days-old blog post.` : ""}
 Respond with ONLY a JSON object, no other text, no markdown fences:
 {"localBiteReport": "your summary here", "localBiteSource": "brief attribution, e.g. site names you drew from"}`;
+}
 
-async function callClaude() {
+async function callClaude(prompt) {
   const res = await fetch("https://api.anthropic.com/v1/messages", {
     method: "POST",
     headers: {
@@ -35,7 +37,7 @@ async function callClaude() {
     body: JSON.stringify({
       model: "claude-sonnet-4-6",
       max_tokens: 1000,
-      messages: [{ role: "user", content: PROMPT }],
+      messages: [{ role: "user", content: prompt }],
       tools: [{ type: "web_search_20250305", name: "web_search" }],
     }),
   });
@@ -45,9 +47,12 @@ async function callClaude() {
   // The final text block is what we want; find it rather than assuming position.
   const textBlocks = data.content.filter((b) => b.type === "text").map((b) => b.text);
   const raw = textBlocks.join("\n").trim();
-  // Strip markdown fences if the model added them despite instructions not to
+  // Strip markdown fences and any stray prose before/after the JSON object —
+  // the model doesn't always obey "respond with ONLY JSON" and sometimes
+  // prepends something like "Based on the search results..."
   const cleaned = raw.replace(/^```json\s*|\s*```$/g, "");
-  return JSON.parse(cleaned);
+  const jsonMatch = cleaned.match(/\{[\s\S]*\}/);
+  return JSON.parse(jsonMatch ? jsonMatch[0] : cleaned);
 }
 
 async function main() {
@@ -55,7 +60,7 @@ async function main() {
 
   let result;
   try {
-    result = await callClaude();
+    result = await callClaude(buildPrompt(existing.waterTemp));
   } catch (err) {
     console.error("Bite report update failed, leaving previous value in place:", err.message);
     process.exit(0); // non-fatal — keep yesterday's bite report rather than breaking the whole refresh

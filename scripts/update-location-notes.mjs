@@ -78,6 +78,7 @@ function buildPrompt(c) {
 Date: ${c.date}
 Weather: ${c.weather}
 Wind: ${c.wind?.description ?? "unknown"}
+Water temp: ${c.waterTemp ? `${c.waterTemp}°F (measured today — use this exact figure, not an approximation)` : "unknown"}
 Tide: ${c.tide}
 Storm chance: ${c.stormChance}% (window: ${c.stormWindow || "none expected"})
 Moon phase: ${c.moonPhase}
@@ -118,7 +119,8 @@ async function callClaude(prompt) {
   const textBlocks = data.content.filter((b) => b.type === "text").map((b) => b.text);
   const raw = textBlocks.join("\n").trim();
   const cleaned = raw.replace(/^```json\s*|\s*```$/g, "");
-  return JSON.parse(cleaned);
+  const jsonMatch = cleaned.match(/\{[\s\S]*\}/);
+  return JSON.parse(jsonMatch ? jsonMatch[0] : cleaned);
 }
 
 async function main() {
