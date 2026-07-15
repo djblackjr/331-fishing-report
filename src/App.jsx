@@ -1134,11 +1134,13 @@ export default function App() {
               <div style={{ fontSize: 13, color: "#7ab898", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 4 }}>NWS (official)</div>
               <div style={{ fontSize: 15, color: "#d1f0e0" }}>{FORECAST[0].high}°F · {FORECAST[0].storms}% storms</div>
               <div style={{ fontSize: 14, color: "#7ab898" }}>{FORECAST[0].wind}</div>
+              {C.waterTemp && <div style={{ fontSize: 14, color: "#7ab898" }}>🌊 Bay water {C.waterTemp}°F</div>}
             </div>
             <div style={{ flex: 1, background: "#0f2a1c", border: "1px solid #1a3828", borderRadius: 8, padding: "10px 12px" }}>
               <div style={{ fontSize: 13, color: "#7ab898", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 4 }}>Open-Meteo</div>
               <div style={{ fontSize: 15, color: "#d1f0e0" }}>{C.openMeteo[0].high}°F · {C.openMeteo[0].stormChance}% storms</div>
               <div style={{ fontSize: 14, color: "#7ab898" }}>{C.openMeteo[0].windDir} {C.openMeteo[0].windSpeed} mph</div>
+              {C.waterTemp && <div style={{ fontSize: 14, color: "#7ab898" }}>🌊 Bay water {C.waterTemp}°F</div>}
             </div>
           </div>
         )}
