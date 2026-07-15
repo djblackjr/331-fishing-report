@@ -719,7 +719,7 @@ function BaitPicker() {
   const isNone = selected.includes("none");
 
   return (
-    <Collapsible title="🪝 What Bait Do You Have?" defaultOpen={false}>
+    <Collapsible title="🪝 What Bait Do You Have?" defaultOpen={true}>
       <div style={{ marginTop: 12 }}>
 
         {/* Bait toggle grid */}
@@ -786,7 +786,7 @@ function LurePicker({ lureKey, lureList }) {
   const matches = isNone ? [] : lureList.filter(l => selected.includes(l.category));
 
   return (
-    <Collapsible title={`🪝 Lures — ${lureKey}`} defaultOpen={false}>
+    <Collapsible title={`🪝 Lures — ${lureKey}`} defaultOpen={true}>
       <div style={{ marginTop: 12 }}>
 
         {/* Lure toggle grid */}
