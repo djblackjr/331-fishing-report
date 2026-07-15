@@ -24,15 +24,10 @@ jobs:
       - name: Fetch live conditions and update conditions.json
         run: node scripts/update-conditions.mjs
 
-      - name: Refresh local bite report (Mondays only)
+      - name: Refresh local bite report
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: |
-          if [ "$(TZ=America/Chicago date +%u)" != "1" ]; then
-            echo "Not Monday (Central time) — skipping bite report refresh."
-            exit 0
-          fi
-          node scripts/update-bite-report.mjs
+        run: node scripts/update-bite-report.mjs
 
       - name: Refresh AI summary and per-location notes
         env:
