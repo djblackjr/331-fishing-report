@@ -3,7 +3,7 @@
   "wind": {
     "speed": 10,
     "dir": "W",
-    "description": "W 0 to 10 mph"
+    "description": "W 5 to 10 mph"
   },
   "weather": "Mostly Sunny then Slight Chance Showers And Thunderstorms · High 91°F · Heat index up to 100°F",
   "tide": "High tide ~7:04 AM · Low tide ~6:07 PM · Sunrise 5:51 AM",
@@ -24,28 +24,28 @@
   "moonPhase": "New Moon (~4% illuminated) — strong tidal push (spring tide)",
   "waterClarity": "Slightly stained",
   "sky": "Cloudy",
-  "lastUpdated": "7/15/2026, 3:12:15 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "lastUpdated": "7/15/2026, 7:16:03 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
   "localBiteReport": "Reports from the past week out of the Santa Rosa Beach/Destin area of Choctawhatchee Bay show speckled trout as the standout inshore species, with multiple guides noting a strong and widespread trout bite across the bay despite some windy and choppy conditions making spot selection tricky. Redfish are also actively showing up, including a notable bull red over 40 inches caught in the area within the last six days. One Gulf Breeze-area guide noted the inshore bite had been tough overall but was improving daily heading into this week. Water temps are sitting in the low 80s, which is typical for July and generally keeps fish active but scattered. Note: the most detailed written reports available are from captainexperiences.com and are 6–14 days old; no fresh charter blog reports dated this specific week (July 7–10) were found.",
   "localBiteSource": "captainexperiences.com (Choctawhatchee Bay & Destin fishing reports, July 2026), halfhitch.com fishing report index · Auto-refreshed via Claude API",
   "localBiteUpdated": "July 10, 2026",
   "previousDay": {
-    "date": "Tuesday, July 14, 2026",
+    "date": "Wednesday, July 15, 2026",
     "wind": {
-      "dir": "WSW",
+      "dir": "W",
       "speed": 10
     },
-    "high": 88,
-    "stormChance": 38,
-    "tide": "High tide ~6:09 AM · Low tide ~5:31 PM · Sunrise 5:50 AM"
+    "high": 91,
+    "stormChance": 20,
+    "tide": "High tide ~7:04 AM · Low tide ~6:07 PM · Sunrise 5:51 AM"
   },
   "openMeteo": [
     {
       "high": 90,
-      "low": 74,
-      "stormChance": 15,
-      "windSpeed": 12,
+      "low": 75,
+      "stormChance": 21,
+      "windSpeed": 13,
       "windDir": "W",
-      "summary": "Rain showers"
+      "summary": "Overcast"
     },
     {
       "high": 93,
@@ -56,12 +56,12 @@
       "summary": "Overcast"
     },
     {
-      "high": 98,
+      "high": 96,
       "low": 75,
-      "stormChance": 18,
-      "windSpeed": 13,
+      "stormChance": 31,
+      "windSpeed": 9,
       "windDir": "NW",
-      "summary": "Rain showers"
+      "summary": "Overcast"
     }
   ],
   "forecast": [
@@ -70,11 +70,11 @@
       "label": "Today",
       "high": 91,
       "low": null,
-      "wind": "W 0 to 10 mph",
+      "wind": "W 5 to 10 mph",
       "storms": 20,
       "headline": "Mostly Sunny then Slight Chance Showers And Thunderstorms · Heat index 100",
       "fishingScore": 7.8,
-      "aiCall": "A slight chance of showers and thunderstorms between 1pm and 5pm. Mostly sunny, with a high near 91. Heat index values as high as 100. West wind 0 to 10 mph. Chance of precipitation is 20%. New rainfall amounts less than a tenth of an inch possible.",
+      "aiCall": "A slight chance of showers and thunderstorms between 1pm and 5pm. Mostly sunny, with a high near 91. Heat index values as high as 100. West wind 5 to 10 mph. Chance of precipitation is 20%. New rainfall amounts less than a tenth of an inch possible.",
       "emoji": "⛈️"
     },
     {
@@ -98,7 +98,7 @@
       "storms": 20,
       "headline": "Mostly Sunny then Slight Chance Showers And Thunderstorms",
       "fishingScore": 7.9,
-      "aiCall": "A slight chance of showers and thunderstorms after 1pm. Mostly sunny, with a high near 94. Chance of precipitation is 20%.",
+      "aiCall": "A slight chance of showers and thunderstorms after 1pm. Mostly sunny, with a high near 94. Northwest wind 5 to 10 mph. Chance of precipitation is 20%.",
       "emoji": "⛈️"
     }
   ],
