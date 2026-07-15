@@ -1157,6 +1157,9 @@ export default function App() {
           })()}
         </div>
 
+        {/* 3-day look ahead — always visible */}
+        <ForecastStrip />
+
         {C.aiSummary && (
           <div style={{ background: "#0f2a1c", border: "1px solid #1a3828", borderRadius: 10, padding: "13px 16px", marginBottom: 10 }}>
             <div style={{ fontSize: 15, color: "#4ade80", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 8, fontWeight: 600 }}>💬 AI Summary</div>
@@ -1176,9 +1179,6 @@ export default function App() {
             </div>
           )}
         </div>
-
-        {/* 3-day look ahead — always visible */}
-        <ForecastStrip />
 
         {/* Main tabs */}
         <div style={{ display: "flex", gap: 8, marginBottom: 14, marginTop: 14 }}>
