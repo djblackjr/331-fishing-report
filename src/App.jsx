@@ -1230,7 +1230,7 @@ export default function App() {
           <div style={{ height: 1, background: "#1a3828", margin: "14px 0" }} />
 
           {/* Live radar — makes "watch the radar" actually actionable instead of requiring a second app */}
-          <Collapsible title="🌧️ Live Radar" defaultOpen={CONDITIONS.stormChance >= 30}>
+          <Collapsible title="🌧️ Live Radar" defaultOpen>
             <div style={{ marginTop: 10, borderRadius: 8, overflow: "hidden", border: "1px solid #1a3828" }}>
               <iframe
                 title="Live radar — Freeport, FL"
