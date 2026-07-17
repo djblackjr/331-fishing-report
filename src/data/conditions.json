@@ -1,30 +1,30 @@
 {
-  "date": "Thursday, July 16, 2026",
+  "date": "Friday, July 17, 2026",
   "wind": {
     "speed": 10,
-    "dir": "WNW",
-    "description": "WNW 5 to 10 mph"
+    "dir": "NW",
+    "description": "NW 5 to 10 mph"
   },
-  "weather": "Mostly Sunny · High 93°F · Heat index up to 101°F",
-  "tide": "High tide ~7:55 AM · Low tide ~6:32 PM · Sunrise 5:52 AM",
+  "weather": "Sunny then Slight Chance Showers And Thunderstorms · High 94°F · Heat index up to 103°F",
+  "tide": "High tide ~8:42 AM · Low tide ~6:40 PM · Sunrise 5:52 AM",
   "tideEvents": [
     {
       "type": "H",
-      "time": "7:55 AM"
+      "time": "8:42 AM"
     },
     {
       "type": "L",
-      "time": "6:32 PM"
+      "time": "6:40 PM"
     }
   ],
   "sunrise": "5:52 AM",
-  "sunset": "7:49 PM",
-  "stormWindow": "before 5PM",
-  "stormChance": 7,
-  "moonPhase": "Waxing Crescent (~9% illuminated) — strong tidal push (spring tide)",
+  "sunset": "7:48 PM",
+  "stormWindow": "after 1PM",
+  "stormChance": 23,
+  "moonPhase": "Waxing Crescent (~16% illuminated) — strong tidal push (spring tide)",
   "waterClarity": "Slightly stained",
-  "sky": "Bright sun",
-  "lastUpdated": "7/16/2026, 8:07:42 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "sky": "Cloudy",
+  "lastUpdated": "7/17/2026, 3:12:14 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
   "localBiteReport": "Reports from the past week out of the Choctawhatchee Bay area (Santa Rosa Beach/Destin) show speckled trout as the standout inshore bite, with guides noting good numbers across the bay and some quality fish mixed in. Bull redfish are also active — one guide out of Santa Rosa Beach reported a client landing a 40+ inch, 26-lb bull red just days ago. A flats trip out of the area on June 30 put anglers on reds, trout, and a 43-lb black drum. Water temperature at this location is currently 85°F, and while some wind has pushed fish to more selective areas, guides say the trout remain hungry and the summer tide is finally cooperating. Note: the most detailed inshore-specific guide reports found are from the past 6–9 days; conditions can shift quickly in mid-July heat.",
   "localBiteSource": "captainexperiences.com (Choctawhatchee Bay fishing reports, July 2026) · Auto-refreshed via Claude API",
   "localBiteUpdated": "July 15, 2026",
@@ -40,69 +40,69 @@
   },
   "openMeteo": [
     {
-      "high": 96,
-      "low": 74,
-      "stormChance": 8,
-      "windSpeed": 10,
-      "windDir": "NW",
-      "summary": "Overcast"
-    },
-    {
-      "high": 94,
+      "high": 97,
       "low": 77,
-      "stormChance": 32,
+      "stormChance": 10,
       "windSpeed": 11,
       "windDir": "NW",
-      "summary": "Overcast"
+      "summary": "Mostly clear"
+    },
+    {
+      "high": 96,
+      "low": 76,
+      "stormChance": 67,
+      "windSpeed": 11,
+      "windDir": "NW",
+      "summary": "Drizzle"
     },
     {
       "high": 99,
-      "low": 74,
-      "stormChance": 61,
-      "windSpeed": 15,
-      "windDir": "NW",
+      "low": 73,
+      "stormChance": 59,
+      "windSpeed": 12,
+      "windDir": "E",
       "summary": "Thunderstorm"
     }
   ],
   "forecast": [
     {
-      "day": "Thu, Jul 16",
-      "label": "Today",
-      "high": 93,
-      "low": null,
-      "wind": "WNW 5 to 10 mph",
-      "storms": 7,
-      "headline": "Mostly Sunny · Heat index 101",
-      "fishingScore": 8.7,
-      "aiCall": "Mostly sunny, with a high near 93. Heat index values as high as 101. West northwest wind 5 to 10 mph.",
-      "emoji": "☀️"
-    },
-    {
       "day": "Fri, Jul 17",
-      "label": "Tomorrow",
+      "label": "Today",
       "high": 94,
       "low": null,
       "wind": "NW 5 to 10 mph",
-      "storms": 20,
-      "headline": "Mostly Sunny then Slight Chance Showers And Thunderstorms · Heat index 105",
-      "fishingScore": 7.9,
-      "aiCall": "A slight chance of showers and thunderstorms after 5pm. Mostly sunny, with a high near 94. Heat index values as high as 105. Northwest wind 5 to 10 mph. Chance of precipitation is 20%. New rainfall amounts less than a tenth of an inch possible.",
+      "storms": 23,
+      "headline": "Sunny then Slight Chance Showers And Thunderstorms · Heat index 103",
+      "fishingScore": 7.6,
+      "aiCall": "A slight chance of showers and thunderstorms after 1pm. Sunny, with a high near 94. Heat index values as high as 103. Northwest wind 5 to 10 mph. Chance of precipitation is 20%. New rainfall amounts less than a tenth of an inch possible.",
       "emoji": "⛈️"
     },
     {
       "day": "Sat, Jul 18",
-      "label": "Saturday",
-      "high": 92,
+      "label": "Tomorrow",
+      "high": 93,
       "low": null,
       "wind": "NW 5 mph",
-      "storms": 61,
-      "headline": "Showers And Thunderstorms Likely",
+      "storms": 60,
+      "headline": "Mostly Sunny then Showers And Thunderstorms Likely · Heat index 103",
       "fishingScore": 6.1,
-      "aiCall": "Showers and thunderstorms likely. Mostly sunny, with a high near 92. Northwest wind around 5 mph. Chance of precipitation is 60%.",
+      "aiCall": "Showers and thunderstorms likely after 2pm. Mostly sunny. High near 93, with temperatures falling to around 90 in the afternoon. Heat index values as high as 103. Northwest wind around 5 mph. Chance of precipitation is 60%.",
+      "emoji": "⛈️"
+    },
+    {
+      "day": "Sun, Jul 19",
+      "label": "Sunday",
+      "high": 93,
+      "low": null,
+      "wind": "WNW 5 mph",
+      "storms": 66,
+      "headline": "Showers And Thunderstorms Likely",
+      "fishingScore": 5.9,
+      "aiCall": "Showers and thunderstorms likely. Mostly sunny, with a high near 93. Chance of precipitation is 70%.",
       "emoji": "⛈️"
     }
   ],
-  "dateISO": "2026-07-16",
+  "dateISO": "2026-07-17",
   "aiSummary": "Choctawhatchee Bay is fishing well this week with speckled trout showing up in solid numbers across the system and bull redfish in the mix — recent reports from early July describe scattered but actively feeding fish, including some quality trout and at least one 26-lb bull red out of Santa Rosa Beach. Today brings a WSW 10 mph wind, slightly stained water, and a 20% storm chance concentrated before 5 PM, so plan to be on the water at first light and off or in protected water by early afternoon. The new moon's spring tide push will crank up current through pinch points and oyster bars, making moving-water windows around the 12:04 PM high tide especially productive for anyone who can safely stay out.",
   "locationNotes": {
     "bridge": {
@@ -134,5 +134,5 @@
       "todaysCall": "Rocky Bayou's state park setting and light pressure make it a worthwhile run on a day like today, especially if you want a quiet morning sight-fishing for reds in the protected coves — though the slightly stained water may reduce sight-fishing effectiveness, so lean on poling slowly and using scent-enhanced lures or live bait. The incoming tide building toward the 12:04 PM high will push bait toward the pilings where mangrove snapper and reds concentrate; a live shrimp under a float near dock structure is a reliable all-around presentation. Flounder fishing at the creek influence zone is a strong morning option with the tidal movement the new moon is generating. Given the furthest run time of any location on the dashboard, depart early — sunrise is 5:51 AM — and build in plenty of buffer before the pre-5 PM storm window closes in."
     }
   },
-  "waterTemp": 85
+  "waterTemp": 84
 }
