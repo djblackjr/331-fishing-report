@@ -1110,25 +1110,37 @@ export default function App() {
           </div>
         )}
 
-        {/* NWS vs Open-Meteo — two independent forecast sources side by side.
-            Worth showing both rather than picking one: NWS is the US
-            government's own forecast; Open-Meteo blends multiple global
-            models. When they roughly agree, that's reassuring. When they
-            don't, that disagreement itself is useful information (e.g. real
-            uncertainty about whether storms will actually develop). */}
-        {C.openMeteo?.[0] && (
-          <div style={{ display: "flex", gap: 8, marginBottom: 12 }}>
-            <div style={{ flex: 1, background: "#0f2a1c", border: "1px solid #1a3828", borderRadius: 8, padding: "10px 12px" }}>
-              <div style={{ fontSize: 13, color: "#7ab898", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 4 }}>NWS (official)</div>
-              <div style={{ fontSize: 15, color: "#d1f0e0" }}>{FORECAST[0].high}°F · {FORECAST[0].storms}% storms</div>
-              <div style={{ fontSize: 14, color: "#7ab898" }}>{FORECAST[0].wind}</div>
+        {/* NWS, Open-Meteo, and Yr.no are three independent forecast sources.
+            NWS is the official U.S. government forecast. Open-Meteo is a free
+            global model-based second opinion. Yr.no is a third free alternate
+            forecast from the Norwegian Meteorological Institute. */}
+        {(C.openMeteo?.[0] || C.yrNo) && (
+          <>
+            <div style={{ display: "flex", gap: 8, marginBottom: 8, flexWrap: "wrap" }}>
+              <div style={{ flex: 1, minWidth: 220, background: "#0f2a1c", border: "1px solid #1a3828", borderRadius: 8, padding: "10px 12px" }}>
+                <div style={{ fontSize: 13, color: "#7ab898", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 4 }}>NWS (official)</div>
+                <div style={{ fontSize: 15, color: "#d1f0e0" }}>{FORECAST[0].high}°F · {FORECAST[0].storms}% storms</div>
+                <div style={{ fontSize: 14, color: "#7ab898" }}>{FORECAST[0].wind}</div>
+              </div>
+              {C.openMeteo?.[0] && (
+                <div style={{ flex: 1, minWidth: 220, background: "#0f2a1c", border: "1px solid #1a3828", borderRadius: 8, padding: "10px 12px" }}>
+                  <div style={{ fontSize: 13, color: "#7ab898", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 4 }}>Open-Meteo</div>
+                  <div style={{ fontSize: 15, color: "#d1f0e0" }}>{C.openMeteo[0].high}°F · {C.openMeteo[0].stormChance}% storms</div>
+                  <div style={{ fontSize: 14, color: "#7ab898" }}>{C.openMeteo[0].windDir} {C.openMeteo[0].windSpeed} mph</div>
+                </div>
+              )}
+              {C.yrNo && (
+                <div style={{ flex: 1, minWidth: 220, background: "#0f2a1c", border: "1px solid #1a3828", borderRadius: 8, padding: "10px 12px" }}>
+                  <div style={{ fontSize: 13, color: "#7ab898", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 4 }}>Yr.no</div>
+                  <div style={{ fontSize: 15, color: "#d1f0e0" }}>{C.yrNo.high != null ? `${C.yrNo.high}°F` : "n/a"} · {C.yrNo.stormChance}% storms</div>
+                  <div style={{ fontSize: 14, color: "#7ab898" }}>{C.yrNo.windDir} {C.yrNo.windSpeed} mph</div>
+                </div>
+              )}
             </div>
-            <div style={{ flex: 1, background: "#0f2a1c", border: "1px solid #1a3828", borderRadius: 8, padding: "10px 12px" }}>
-              <div style={{ fontSize: 13, color: "#7ab898", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 4 }}>Open-Meteo</div>
-              <div style={{ fontSize: 15, color: "#d1f0e0" }}>{C.openMeteo[0].high}°F · {C.openMeteo[0].stormChance}% storms</div>
-              <div style={{ fontSize: 14, color: "#7ab898" }}>{C.openMeteo[0].windDir} {C.openMeteo[0].windSpeed} mph</div>
+            <div style={{ fontSize: 13, color: "#a7c9a2", lineHeight: 1.5, marginBottom: 12 }}>
+              Compare the three sources: NWS is the official forecast, Open-Meteo is a free global model, and Yr.no is a separate free forecast from Norway’s meteorological service. Large differences between them indicate true uncertainty in the weather outlook.
             </div>
-          </div>
+          </>
         )}
 
         {/* Storm warning */}
