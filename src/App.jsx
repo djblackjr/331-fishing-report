@@ -1117,10 +1117,13 @@ export default function App() {
 
         {/* Best Bet + Best Window — the two fastest things to check before heading out */}
         <div style={{ display: "flex", gap: 8, margin: "12px 0", flexWrap: "wrap" }}>
-          <div style={{ flex: "1 1 140px", background: "#0d2918", border: "1px solid #4ade8066", borderRadius: 8, padding: "10px 14px" }}>
-            <div style={{ fontSize: 13, color: "#7ab898", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 3 }}>🏆 Best Bet Today</div>
-            <div style={{ fontSize: 17, fontWeight: 700, color: "#4ade80" }}>{bestBet.loc.emoji} {bestBet.loc.label}</div>
-            <div style={{ fontSize: 14, color: "#86c7a0" }}>{bestBet.score}/10 · {ratingLabel(bestBet.score)}</div>
+          <div style={{ flex: "1 1 220px", background: "#0d2918", border: "1px solid #4ade8066", borderRadius: 8, padding: "10px 14px", display: "flex", alignItems: "center", gap: 12 }}>
+            <ScoreRing score={bestBet.score} />
+            <div>
+              <div style={{ fontSize: 13, color: "#7ab898", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 3 }}>🏆 Best Bet Today</div>
+              <div style={{ fontSize: 17, fontWeight: 700, color: "#4ade80" }}>{bestBet.loc.emoji} {bestBet.loc.label}</div>
+              <div style={{ fontSize: 14, color: "#86c7a0" }}>{bestBet.score}/10 · {ratingLabel(bestBet.score)}</div>
+            </div>
           </div>
           <div style={{ flex: "1 1 140px", background: "#0d2918", border: "1px solid #4ade8066", borderRadius: 8, padding: "10px 14px" }}>
             <div style={{ fontSize: 13, color: "#7ab898", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 3 }}>⏰ Best Window</div>
