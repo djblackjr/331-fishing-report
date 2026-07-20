@@ -83,6 +83,19 @@ function todaysAdjustedScore(baseScore) {
   return Math.max(3, Math.round(score * 10) / 10);
 }
 
+// Averages today's high temp and storm chance across whichever of the three
+// forecast sources (NWS, Open-Meteo, Yr.no) actually returned a value —
+// Yr.no's high/low can be null if its API had no matching timeseries entries
+// for today, so that source is simply excluded rather than treated as 0.
+function averageForecast() {
+  const highs = [FORECAST[0]?.high, CONDITIONS.openMeteo?.[0]?.high, CONDITIONS.yrNo?.high]
+    .filter((v) => typeof v === "number");
+  const storms = [FORECAST[0]?.storms, CONDITIONS.openMeteo?.[0]?.stormChance, CONDITIONS.yrNo?.stormChance]
+    .filter((v) => typeof v === "number");
+  const avg = (arr) => (arr.length ? Math.round(arr.reduce((a, b) => a + b, 0) / arr.length) : null);
+  return { high: avg(highs), storms: avg(storms), sourceCount: highs.length };
+}
+
 // ── TIME HELPERS ─────────────────────────────────────────────────────────────
 // Parse "6:44 AM" style strings into minutes-since-midnight for math/graphing.
 function timeToMinutes(t) {
@@ -978,6 +991,7 @@ export default function App() {
   const bestWindow = getBestWindow();
   const conditionsDiff = getConditionsDiff();
   const bitReportAge = C.localBiteUpdated ? daysBetween(C.localBiteUpdated, C.date) : null;
+  const avgForecast = averageForecast();
 
   useState(() => {
     (async () => { try { const r = await window.storage.get("trips"); if (r?.value) setTrips(JSON.parse(r.value)); } catch {} })();
@@ -1151,6 +1165,12 @@ export default function App() {
                   <div style={{ fontSize: 15, color: "#d1f0e0" }}>{C.yrNo.high != null ? `${C.yrNo.high}°F` : "n/a"} · {C.yrNo.stormChance}% storms</div>
                   <div style={{ fontSize: 14, color: "#7ab898" }}>{C.yrNo.windDir} {C.yrNo.windSpeed} mph</div>
                   {C.waterTemp && <div style={{ fontSize: 14, color: "#7ab898" }}>🌊 Bay water {C.waterTemp}°F</div>}
+                </div>
+              )}
+              {avgForecast.high != null && (
+                <div style={{ flex: 1, minWidth: 220, background: "#0d2918", border: "1px solid #4ade8066", borderRadius: 8, padding: "10px 12px" }}>
+                  <div style={{ fontSize: 13, color: "#4ade80", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 4 }}>Average ({avgForecast.sourceCount} sources)</div>
+                  <div style={{ fontSize: 15, color: "#d1f0e0" }}>{avgForecast.high}°F · {avgForecast.storms}% storms</div>
                 </div>
               )}
             </div>
