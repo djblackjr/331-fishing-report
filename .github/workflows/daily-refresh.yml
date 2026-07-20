@@ -24,10 +24,15 @@ jobs:
       - name: Fetch live conditions and update conditions.json
         run: node scripts/update-conditions.mjs
 
-      - name: "Refresh local bite report (TEMP: running daily for testing)"
+      - name: Refresh local bite report
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: node scripts/update-bite-report.mjs
+
+      - name: Refresh AI summary and per-location notes
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node scripts/update-location-notes.mjs
 
       - name: Commit and push if changed
         id: commit
