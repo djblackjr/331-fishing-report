@@ -1,9 +1,9 @@
 {
   "date": "Monday, July 20, 2026",
   "wind": {
-    "speed": 10,
+    "speed": 15,
     "dir": "ENE",
-    "description": "ENE 5 to 10 mph"
+    "description": "ENE 10 to 15 mph"
   },
   "weather": "Showers And Thunderstorms Likely · High 90°F · Heat index up to 100°F",
   "tide": "High tide ~11:43 PM · Low tide ~10:11 AM · Sunrise 5:54 AM",
@@ -24,42 +24,42 @@
   "moonPhase": "First Quarter (~44% illuminated) — moderate tidal push",
   "waterClarity": "Slightly stained",
   "sky": "Cloudy",
-  "lastUpdated": "7/20/2026, 3:12:18 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "lastUpdated": "7/20/2026, 10:31:20 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
   "localBiteReport": "Reports from the past week out of the Choctawhatchee Bay area (Santa Rosa Beach/Destin) show speckled trout as the standout inshore bite, with guides noting good numbers across the bay and some quality fish mixed in. Bull redfish are also active — one guide out of Santa Rosa Beach reported a client landing a 40+ inch, 26-lb bull red just days ago. A flats trip out of the area on June 30 put anglers on reds, trout, and a 43-lb black drum. Water temperature at this location is currently 85°F, and while some wind has pushed fish to more selective areas, guides say the trout remain hungry and the summer tide is finally cooperating. Note: the most detailed inshore-specific guide reports found are from the past 6–9 days; conditions can shift quickly in mid-July heat.",
   "localBiteSource": "captainexperiences.com (Choctawhatchee Bay fishing reports, July 2026) · Auto-refreshed via Claude API",
   "localBiteUpdated": "July 15, 2026",
   "previousDay": {
-    "date": "Sunday, July 19, 2026",
+    "date": "Monday, July 20, 2026",
     "wind": {
-      "dir": "E",
-      "speed": 5
+      "dir": "ENE",
+      "speed": 10
     },
-    "high": 92,
-    "stormChance": 55,
-    "tide": "High tide ~1:01 AM · Low tide ~6:12 AM · Sunrise 5:53 AM"
+    "high": 90,
+    "stormChance": 68,
+    "tide": "High tide ~11:43 PM · Low tide ~10:11 AM · Sunrise 5:54 AM"
   },
   "openMeteo": [
     {
-      "high": 90,
+      "high": 87,
       "low": 74,
-      "stormChance": 35,
-      "windSpeed": 15,
+      "stormChance": 30,
+      "windSpeed": 19,
       "windDir": "NE",
-      "summary": "Overcast"
+      "summary": "Violent rain showers"
     },
     {
-      "high": 85,
-      "low": 77,
-      "stormChance": 86,
-      "windSpeed": 17,
+      "high": 86,
+      "low": 76,
+      "stormChance": 60,
+      "windSpeed": 16,
       "windDir": "E",
       "summary": "Overcast"
     },
     {
-      "high": 88,
+      "high": 85,
       "low": 79,
-      "stormChance": 58,
-      "windSpeed": 15,
+      "stormChance": 67,
+      "windSpeed": 14,
       "windDir": "S",
       "summary": "Thunderstorm"
     }
@@ -70,11 +70,11 @@
       "label": "Today",
       "high": 90,
       "low": null,
-      "wind": "ENE 5 to 10 mph",
+      "wind": "ENE 10 to 15 mph",
       "storms": 68,
       "headline": "Showers And Thunderstorms Likely · Heat index 100",
-      "fishingScore": 5.8,
-      "aiCall": "Showers and thunderstorms likely after 11am. Mostly sunny. High near 90, with temperatures falling to around 87 in the afternoon. Heat index values as high as 100. East northeast wind 5 to 10 mph, with gusts as high as 20 mph. Chance of precipitation is 70%. New rainfall amounts less than a tenth of an inch possible.",
+      "fishingScore": 5.3,
+      "aiCall": "Showers and thunderstorms likely after 11am. Mostly sunny. High near 90, with temperatures falling to around 87 in the afternoon. Heat index values as high as 100. East northeast wind 10 to 15 mph. Chance of precipitation is 70%. New rainfall amounts less than a tenth of an inch possible.",
       "emoji": "⛈️"
     },
     {
@@ -82,11 +82,11 @@
       "label": "Tomorrow",
       "high": 88,
       "low": null,
-      "wind": "ENE 10 to 15 mph",
+      "wind": "E 15 mph",
       "storms": 88,
       "headline": "Showers And Thunderstorms Likely",
       "fishingScore": 4.5,
-      "aiCall": "A chance of showers and thunderstorms before 7am, then a slight chance of showers and thunderstorms between 7am and 9am, then a chance of showers and thunderstorms between 9am and 10am, then a chance of showers and thunderstorms between 10am and 11am, then showers and thunderstorms likely between 11am and 1pm, then showers and thunderstorms between 1pm and 4pm, then showers and thunderstorms between 4pm and 5pm, then a chance of showers and thunderstorms. Mostly sunny, with a high near 88. East northeast wind 10 to 15 mph, with gusts as high as 30 mph. Chance of precipitation is 90%.",
+      "aiCall": "A chance of showers and thunderstorms before 7am, then a slight chance of showers and thunderstorms between 7am and 9am, then a chance of showers and thunderstorms between 9am and 10am, then a chance of showers and thunderstorms between 10am and 11am, then showers and thunderstorms likely between 11am and 1pm, then showers and thunderstorms between 1pm and 4pm, then showers and thunderstorms between 4pm and 5pm, then a chance of showers and thunderstorms. Mostly sunny, with a high near 88. East wind around 15 mph, with gusts as high as 30 mph. Chance of precipitation is 90%. New rainfall amounts between a quarter and half of an inch possible.",
       "emoji": "⛈️"
     },
     {
@@ -94,11 +94,11 @@
       "label": "Wednesday",
       "high": 89,
       "low": null,
-      "wind": "S 15 mph",
+      "wind": "SSE 15 mph",
       "storms": 67,
       "headline": "Showers And Thunderstorms Likely",
       "fishingScore": 5.3,
-      "aiCall": "Showers and thunderstorms likely before 1pm, then a chance of showers and thunderstorms. Partly sunny, with a high near 89. Chance of precipitation is 70%.",
+      "aiCall": "Showers and thunderstorms likely before 1pm, then a chance of showers and thunderstorms. Partly sunny, with a high near 89. South southeast wind around 15 mph, with gusts as high as 30 mph. Chance of precipitation is 70%.",
       "emoji": "⛈️"
     }
   ],
