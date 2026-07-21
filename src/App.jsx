@@ -282,6 +282,22 @@ function leeSide(dir) { const oct = nearestOctant(dir); return DIR_WORD[OPPOSITE
 function windWord(dir) { return DIR_WORD[nearestOctant(dir)] || dir; }
 function capitalize(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
 
+// "Monday, July 20, 2026" → { day: "MON", month: "JUL", date: "20" }, for the
+// compact date stamp on the share card.
+function shortDate(dateStr) {
+  const m = (dateStr || "").match(/^(\w{3})\w*,\s*(\w{3})\w*\s+(\d+)/);
+  return m ? { day: m[1].toUpperCase(), month: m[2].toUpperCase(), date: m[3] } : { day: "", month: "", date: "" };
+}
+
+// Cuts at the last whole word within `max` chars instead of mid-word, so the
+// share-card caption never ends on a fragment.
+function truncateWords(text, max) {
+  if (!text || text.length <= max) return text || "";
+  const cut = text.slice(0, max);
+  const lastSpace = cut.lastIndexOf(" ");
+  return (lastSpace > 0 ? cut.slice(0, lastSpace) : cut) + "…";
+}
+
 // ── PER-LOCATION REPORTS ──────────────────────────────────────────────────────
 const LOCATIONS = [
   {
@@ -441,17 +457,24 @@ const LOCATIONS = [
 const EMPTY_TRIP = { date: "", hours: "", start: "", tide: "", wind: "", species: "", kept: "", lures: "", notes: "", archivedConditions: null };
 
 // ── COMPONENTS ────────────────────────────────────────────────────────────────
-function ScoreRing({ score }) {
-  const r = 34, circ = 2 * Math.PI * r, fill = (score / 10) * circ;
+// size is the only thing callers vary — the compact hero-card ring and the
+// large share-card ring reuse this at different scales. All other numbers
+// (stroke width, font sizes, text offsets) are derived from size so the
+// original 82px proportions are preserved exactly at the default size.
+function ScoreRing({ score, size = 82 }) {
+  const stroke = Math.max(6, size * 0.085);
+  const c = size / 2, r = c - stroke;
+  const circ = 2 * Math.PI * r, fill = (score / 10) * circ;
   const color = score >= 7.5 ? "#4ade80" : score >= 6 ? "#facc15" : "#f87171";
+  const numSize = size * 0.22, subSize = size * 0.12;
   return (
-    <svg width="82" height="82" viewBox="0 0 82 82">
-      <circle cx="41" cy="41" r={r} fill="none" stroke="#1a3828" strokeWidth="7" />
-      <circle cx="41" cy="41" r={r} fill="none" stroke={color} strokeWidth="7"
+    <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>
+      <circle cx={c} cy={c} r={r} fill="none" stroke="#1a3828" strokeWidth={stroke} />
+      <circle cx={c} cy={c} r={r} fill="none" stroke={color} strokeWidth={stroke}
         strokeDasharray={`${fill} ${circ}`} strokeLinecap="round"
-        transform="rotate(-90 41 41)" style={{ transition: "all 0.8s ease" }} />
-      <text x="41" y="38" textAnchor="middle" fill={color} fontSize="18" fontWeight="700" fontFamily="'Space Grotesk',sans-serif">{score}</text>
-      <text x="41" y="51" textAnchor="middle" fill="#7ab898" fontSize="10" fontFamily="'Space Grotesk',sans-serif">/10</text>
+        transform={`rotate(-90 ${c} ${c})`} style={{ transition: "all 0.8s ease" }} />
+      <text x={c} y={c - numSize * 0.18} textAnchor="middle" fill={color} fontSize={numSize} fontWeight="700" fontFamily="'Space Grotesk',sans-serif">{score}</text>
+      <text x={c} y={c + numSize * 0.58} textAnchor="middle" fill="#7ab898" fontSize={subSize} fontFamily="'Space Grotesk',sans-serif">/10</text>
     </svg>
   );
 }
@@ -653,7 +676,44 @@ function Collapsible({ title, children, defaultOpen = true }) {
   );
 }
 
-
+// The visual card shown when you tap Share — designed to be screenshotted
+// and sent as an image (group text, Instagram story), not read as a
+// document. Sized 4:5 to match how those surfaces crop a portrait image.
+function ShareCard({ C, bestBet }) {
+  const { day, month, date } = shortDate(C.date);
+  const caption = truncateWords(C.aiSummary, 130);
+  const statStyle = { fontSize: 11, background: "#0f2a1c", border: "1px solid #1a3828", borderRadius: 6, padding: "5px 8px", color: "#86c7a0" };
+  return (
+    <div style={{
+      position: "relative", aspectRatio: "4 / 5", borderRadius: 20,
+      border: "1px solid #4ade8066",
+      background: "radial-gradient(120% 90% at 50% 0%, #4ade8029, transparent 55%), linear-gradient(180deg, #0d2918 0%, #0a1f14 100%)",
+      padding: "20px 18px 16px", display: "flex", flexDirection: "column",
+      boxShadow: "0 30px 70px -28px #000000bb", overflow: "hidden",
+      fontFamily: "'Space Grotesk',sans-serif",
+    }}>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
+        <div style={{ fontSize: 12, letterSpacing: "0.1em", color: "#7ab898", lineHeight: 1.5 }}>
+          <span style={{ color: "#f0faf4", fontWeight: 700 }}>331 BRIDGE</span><br />FISHING REPORT
+        </div>
+        <div style={{ fontSize: 12, color: "#4a6b58", textAlign: "right", lineHeight: 1.5 }}>{day}<br />{month} {date}</div>
+      </div>
+      <div style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 4, margin: "6px 0" }}>
+        <ScoreRing score={bestBet.score} size={124} />
+        <div style={{ fontSize: 17, fontWeight: 700, color: "#f0faf4", marginTop: 6, textAlign: "center" }}>{bestBet.loc.emoji} {bestBet.loc.label} · {ratingLabel(bestBet.score)}</div>
+        {caption && <div style={{ fontSize: 13, lineHeight: 1.6, color: "#d1f0e0", textAlign: "center", maxWidth: "30ch", margin: "10px auto 0" }}>{caption}</div>}
+        <div style={{ display: "flex", gap: 6, justifyContent: "center", marginTop: 12, flexWrap: "wrap" }}>
+          {C.wind?.description && <div style={statStyle}>💨 <b style={{ color: "#f0faf4" }}>{C.wind.description}</b></div>}
+          {C.waterTemp && <div style={statStyle}>🌊 <b style={{ color: "#f0faf4" }}>{C.waterTemp}°F</b></div>}
+          {C.stormChance != null && <div style={statStyle}>⛈️ <b style={{ color: "#f0faf4" }}>{C.stormChance}%</b></div>}
+        </div>
+      </div>
+      <div style={{ marginTop: 6, paddingTop: 10, borderTop: "1px solid #1a3828", textAlign: "center", fontSize: 11, color: "#4a6b58", letterSpacing: "0.04em" }}>
+        331fishingreport.com
+      </div>
+    </div>
+  );
+}
 
 // ── FORECAST COMPONENT ─────────────────────────────────────────────────────────
 function ForecastStrip() {
@@ -965,6 +1025,7 @@ export default function App() {
   const [form, setForm] = useState(EMPTY_TRIP);
   const [saved, setSaved] = useState(false);
   const [shared, setShared] = useState(false);
+  const [showShareCard, setShowShareCard] = useState(false);
   const [archiveStatus, setArchiveStatus] = useState(null); // { found: bool, message: string } — shown under the trip log Date field
   const swipeStartX = useRef(null);
 
@@ -1110,25 +1171,37 @@ export default function App() {
             <h1 style={{ margin: 0, fontSize: 25, fontWeight: 700, color: "#f0faf4", lineHeight: 1.2 }}>331 Bridge Area</h1>
             <div style={{ fontSize: 16, color: "#86c7a0", marginTop: 2 }}>Fishing Report · Freeport, FL · {C.date}</div>
           </div>
-          <button onClick={shareReport} style={{ background: "#0f2a1c", border: "1px solid #1a3828", borderRadius: 8, padding: "8px 12px", color: "#7ab898", fontSize: 15, fontWeight: 600, cursor: "pointer", fontFamily: "'Space Grotesk',sans-serif", whiteSpace: "nowrap", flexShrink: 0 }}>
-            {shared ? "✓ Copied" : "📤 Share"}
+          <button onClick={() => setShowShareCard(true)} style={{ background: "#0f2a1c", border: "1px solid #1a3828", borderRadius: 8, padding: "8px 12px", color: "#7ab898", fontSize: 15, fontWeight: 600, cursor: "pointer", fontFamily: "'Space Grotesk',sans-serif", whiteSpace: "nowrap", flexShrink: 0 }}>
+            📤 Share
           </button>
         </div>
 
-        {/* Best Bet + Best Window — the two fastest things to check before heading out */}
-        <div style={{ display: "flex", gap: 8, margin: "12px 0", flexWrap: "wrap" }}>
-          <div style={{ flex: "1 1 220px", background: "#0d2918", border: "1px solid #4ade8066", borderRadius: 8, padding: "10px 14px", display: "flex", alignItems: "center", gap: 12 }}>
-            <ScoreRing score={bestBet.score} />
-            <div>
-              <div style={{ fontSize: 13, color: "#7ab898", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 3 }}>🏆 Best Bet Today</div>
-              <div style={{ fontSize: 17, fontWeight: 700, color: "#4ade80" }}>{bestBet.loc.emoji} {bestBet.loc.label}</div>
-              <div style={{ fontSize: 14, color: "#86c7a0" }}>{bestBet.score}/10 · {ratingLabel(bestBet.score)}</div>
-            </div>
+        {/* Best Bet — the single number people open the app to check, sized
+            and centered so it wins the page instead of tying visually with
+            every other card below it. */}
+        <div style={{
+          position: "relative", marginTop: 12, marginBottom: 4, textAlign: "center", overflow: "hidden",
+          background: "radial-gradient(140% 100% at 50% -10%, #4ade8022, transparent 60%), #0d2918",
+          border: "1px solid #4ade8066", borderRadius: 16, padding: "22px 18px 18px",
+        }}>
+          <div style={{ fontSize: 13, color: "#7ab898", letterSpacing: "0.14em", textTransform: "uppercase", marginBottom: 4 }}>🏆 Best Bet Today</div>
+          <div style={{ fontSize: 19, fontWeight: 700, color: "#f0faf4", marginBottom: 10 }}>{bestBet.loc.emoji} {bestBet.loc.label}</div>
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <ScoreRing score={bestBet.score} size={156} />
           </div>
-          <div style={{ flex: "1 1 140px", background: "#0d2918", border: "1px solid #4ade8066", borderRadius: 8, padding: "10px 14px" }}>
-            <div style={{ fontSize: 13, color: "#7ab898", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 3 }}>⏰ Best Window</div>
-            <div style={{ fontSize: 17, fontWeight: 700, color: "#facc15" }}>{bestWindow.startText} – {bestWindow.endText}</div>
-            <div style={{ fontSize: 14, color: "#86c7a0" }}>{bestWindow.reason}</div>
+          <div style={{ fontSize: 15, fontWeight: 700, color: "#4ade80", letterSpacing: "0.03em", marginTop: 2 }}>{ratingLabel(bestBet.score).toUpperCase()}</div>
+          <div style={{ display: "flex", gap: 8, justifyContent: "center", flexWrap: "wrap", marginTop: 16 }}>
+            <div style={{ fontSize: 13, border: "1px solid #1a3828", background: "#0f2a1c", borderRadius: 8, padding: "7px 11px", textAlign: "left" }}>
+              <div style={{ fontSize: 11, color: "#7ab898", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 2 }}>⏰ Best window</div>
+              <div style={{ color: "#f0faf4", fontWeight: 700 }}>{bestWindow.startText} – {bestWindow.endText}</div>
+              <div style={{ fontSize: 11, color: "#86c7a0", marginTop: 1 }}>{bestWindow.reason}</div>
+            </div>
+            {C.stormChance >= 10 && (
+              <div style={{ fontSize: 13, border: "1px solid #1a3828", background: "#0f2a1c", borderRadius: 8, padding: "7px 11px", textAlign: "left" }}>
+                <div style={{ fontSize: 11, color: "#7ab898", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 2 }}>⛈️ Storm risk</div>
+                <div style={{ color: "#facc15", fontWeight: 700 }}>{C.stormChance}%{C.stormWindow ? ` · ${C.stormWindow}` : ""}</div>
+              </div>
+            )}
           </div>
         </div>
 
@@ -1397,6 +1470,25 @@ export default function App() {
           Data sourced by Claude · Always verify conditions before heading out<br />{C.lastUpdated}
         </div>
       </div>
+
+      {/* Share card overlay — screenshot-first, with the old text share/copy
+          kept as a fallback for cases (e.g. desktop) where an image is overkill. */}
+      {showShareCard && (
+        <div onClick={() => setShowShareCard(false)} style={{ position: "fixed", inset: 0, background: "#000000cc", display: "flex", alignItems: "center", justifyContent: "center", padding: 20, zIndex: 50 }}>
+          <div onClick={e => e.stopPropagation()} style={{ width: "100%", maxWidth: 340 }}>
+            <ShareCard C={C} bestBet={bestBet} />
+            <div style={{ display: "flex", gap: 8, marginTop: 14 }}>
+              <button onClick={shareReport} style={{ flex: 1, background: "#0f2a1c", border: "1px solid #1a3828", borderRadius: 8, padding: "10px 0", color: "#7ab898", fontSize: 15, fontWeight: 600, cursor: "pointer", fontFamily: "'Space Grotesk',sans-serif" }}>
+                {shared ? "✓ Copied" : "📋 Copy as text"}
+              </button>
+              <button onClick={() => setShowShareCard(false)} style={{ background: "#0f2a1c", border: "1px solid #1a3828", borderRadius: 8, padding: "10px 16px", color: "#7ab898", fontSize: 15, fontWeight: 600, cursor: "pointer", fontFamily: "'Space Grotesk',sans-serif" }}>
+                ✕
+              </button>
+            </div>
+            <div style={{ textAlign: "center", fontSize: 12, color: "#7ab898", marginTop: 10 }}>Screenshot this to share to your group chat</div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
