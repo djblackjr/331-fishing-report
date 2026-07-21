@@ -1,108 +1,108 @@
 {
-  "date": "Tuesday, July 21, 2026",
+  "date": "Monday, July 20, 2026",
   "wind": {
     "speed": 15,
-    "dir": "ESE",
-    "description": "ESE 15 mph"
+    "dir": "ENE",
+    "description": "ENE 10 to 15 mph"
   },
-  "weather": "Showers And Thunderstorms · High 87°F",
-  "tide": "High tide ~4:59 AM · Low tide ~4:14 PM · Sunrise 5:54 AM",
+  "weather": "Showers And Thunderstorms Likely · High 90°F · Heat index up to 100°F",
+  "tide": "High tide ~11:43 PM · Low tide ~10:11 AM · Sunrise 5:54 AM",
   "tideEvents": [
     {
       "type": "H",
-      "time": "4:59 AM"
+      "time": "11:43 PM"
     },
     {
       "type": "L",
-      "time": "4:14 PM"
+      "time": "10:11 AM"
     }
   ],
   "sunrise": "5:54 AM",
   "sunset": "7:47 PM",
   "stormWindow": "after 11AM",
-  "stormChance": 83,
-  "moonPhase": "First Quarter (~55% illuminated) — moderate tidal push",
+  "stormChance": 68,
+  "moonPhase": "First Quarter (~44% illuminated) — moderate tidal push",
   "waterClarity": "Slightly stained",
   "sky": "Cloudy",
-  "lastUpdated": "7/21/2026, 7:53:44 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "lastUpdated": "7/20/2026, 10:31:20 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
   "localBiteReport": "Reports from the past week out of the Santa Rosa Beach and Destin area of Choctawhatchee Bay show a solid speckled trout bite, with guides describing plenty of trout in the bay including some quality fish. Bull redfish are also showing up — one recent report highlighted a 40-inch, 26-lb bull — and a local Destin guide noted that while inshore conditions have been somewhat challenging due to wind and weather, the fish bite itself has been genuinely good when anglers can get out. Flounder have also been in the mix on bay charters running the flats and structure. With water temps at 85°F, early morning trips are the move right now to beat the summer heat and catch fish most actively feeding before midday.",
   "localBiteSource": "captainexperiences.com (Choctawhatchee Bay and Destin report pages, reports dated 6 days and 1 week ago), fishingbooker.com (Choctawhatchee Bay July 2026 charter reviews) · Auto-refreshed via Claude API",
   "localBiteUpdated": "July 20, 2026",
   "previousDay": {
-    "date": "Tuesday, July 21, 2026",
+    "date": "Monday, July 20, 2026",
     "wind": {
-      "dir": "ESE",
-      "speed": 15
+      "dir": "ENE",
+      "speed": 10
     },
-    "high": 87,
-    "stormChance": 83,
-    "tide": "High tide ~4:59 AM · Low tide ~4:14 PM · Sunrise 5:54 AM"
+    "high": 90,
+    "stormChance": 68,
+    "tide": "High tide ~11:43 PM · Low tide ~10:11 AM · Sunrise 5:54 AM"
   },
   "openMeteo": [
     {
-      "high": 84,
-      "low": 77,
-      "stormChance": 52,
-      "windSpeed": 20,
+      "high": 87,
+      "low": 74,
+      "stormChance": 30,
+      "windSpeed": 19,
+      "windDir": "NE",
+      "summary": "Violent rain showers"
+    },
+    {
+      "high": 86,
+      "low": 76,
+      "stormChance": 60,
+      "windSpeed": 16,
       "windDir": "E",
-      "summary": "Rain showers"
+      "summary": "Overcast"
     },
     {
       "high": 85,
-      "low": 78,
-      "stormChance": 52,
-      "windSpeed": 18,
+      "low": 79,
+      "stormChance": 67,
+      "windSpeed": 14,
       "windDir": "S",
-      "summary": "Rain"
-    },
-    {
-      "high": 91,
-      "low": 77,
-      "stormChance": 40,
-      "windSpeed": 11,
-      "windDir": "S",
-      "summary": "Light drizzle"
+      "summary": "Thunderstorm"
     }
   ],
   "forecast": [
     {
-      "day": "Tue, Jul 21",
+      "day": "Mon, Jul 20",
       "label": "Today",
-      "high": 87,
+      "high": 90,
       "low": null,
-      "wind": "ESE 15 mph",
-      "storms": 83,
-      "headline": "Showers And Thunderstorms",
-      "fishingScore": 4.7,
-      "aiCall": "Showers and thunderstorms. Partly sunny, with a high near 87. East southeast wind around 15 mph, with gusts as high as 30 mph. Chance of precipitation is 80%. New rainfall amounts between a quarter and half of an inch possible.",
+      "wind": "ENE 10 to 15 mph",
+      "storms": 68,
+      "headline": "Showers And Thunderstorms Likely · Heat index 100",
+      "fishingScore": 5.3,
+      "aiCall": "Showers and thunderstorms likely after 11am. Mostly sunny. High near 90, with temperatures falling to around 87 in the afternoon. Heat index values as high as 100. East northeast wind 10 to 15 mph. Chance of precipitation is 70%. New rainfall amounts less than a tenth of an inch possible.",
+      "emoji": "⛈️"
+    },
+    {
+      "day": "Tue, Jul 21",
+      "label": "Tomorrow",
+      "high": 88,
+      "low": null,
+      "wind": "E 15 mph",
+      "storms": 88,
+      "headline": "Showers And Thunderstorms Likely",
+      "fishingScore": 4.5,
+      "aiCall": "A chance of showers and thunderstorms before 7am, then a slight chance of showers and thunderstorms between 7am and 9am, then a chance of showers and thunderstorms between 9am and 10am, then a chance of showers and thunderstorms between 10am and 11am, then showers and thunderstorms likely between 11am and 1pm, then showers and thunderstorms between 1pm and 4pm, then showers and thunderstorms between 4pm and 5pm, then a chance of showers and thunderstorms. Mostly sunny, with a high near 88. East wind around 15 mph, with gusts as high as 30 mph. Chance of precipitation is 90%. New rainfall amounts between a quarter and half of an inch possible.",
       "emoji": "⛈️"
     },
     {
       "day": "Wed, Jul 22",
-      "label": "Tomorrow",
-      "high": 88,
-      "low": null,
-      "wind": "SSE 15 mph",
-      "storms": 52,
-      "headline": "Chance Showers And Thunderstorms · Heat index 102",
-      "fishingScore": 5.9,
-      "aiCall": "A chance of showers and thunderstorms before 10am, then a chance of showers and thunderstorms. Partly sunny, with a high near 88. Heat index values as high as 102. South southeast wind around 15 mph, with gusts as high as 30 mph. Chance of precipitation is 50%. New rainfall amounts between a tenth and quarter of an inch possible.",
-      "emoji": "⛈️"
-    },
-    {
-      "day": "Thu, Jul 23",
-      "label": "Thursday",
+      "label": "Wednesday",
       "high": 89,
       "low": null,
-      "wind": "SSW 10 to 15 mph",
-      "storms": 43,
-      "headline": "Chance Showers And Thunderstorms",
-      "fishingScore": 6.3,
-      "aiCall": "A chance of showers and thunderstorms before 10am, then a chance of showers and thunderstorms. Mostly sunny, with a high near 89. South southwest wind 10 to 15 mph. Chance of precipitation is 40%.",
+      "wind": "SSE 15 mph",
+      "storms": 67,
+      "headline": "Showers And Thunderstorms Likely",
+      "fishingScore": 5.3,
+      "aiCall": "Showers and thunderstorms likely before 1pm, then a chance of showers and thunderstorms. Partly sunny, with a high near 89. South southeast wind around 15 mph, with gusts as high as 30 mph. Chance of precipitation is 70%.",
       "emoji": "⛈️"
     }
   ],
-  "dateISO": "2026-07-21",
+  "dateISO": "2026-07-20",
   "aiSummary": "Speckled trout are the standout inshore bite across Choctawhatchee Bay right now, with guides reporting fish scattered but feeding actively bay-wide, and bull redfish also showing well with a recent 40-inch, 26-lb fish reported out of Santa Rosa Beach. Get on the water early — a 68% storm chance kicks in after 11 AM, making a pre-noon exit plan essential on a day with a high near 90°F and heat index up to 100°F. ENE winds at 10–15 mph will favor protected bayous over open-water spots, so choose your location accordingly.",
   "locationNotes": {
     "bridge": {
@@ -134,5 +134,13 @@
       "todaysCall": "Rocky Bayou's protected coves and low pressure make it an appealing escape on a stormy day, but factor in the run time carefully — being the furthest location from Shipyard Marina, you need to build in extra buffer before the post-11 AM storm window. If you commit to going, fish the shallow coves early for reds during the falling tide toward the 10:11 AM low; the state park setting should offer glass-calm water regardless of the ENE wind. Slightly stained water reduces sight-fishing effectiveness, so focus on reading movement and structure edges rather than spotting tailing fish. The dock pilings are worth a few casts for mangrove snapper, and a slow-dragged bait near structure will also put you in front of flounder throughout the tidal drop."
     }
   },
-  "waterTemp": 84
+  "waterTemp": 85,
+  "yrNo": {
+    "high": null,
+    "low": null,
+    "stormChance": 58,
+    "windSpeed": 5,
+    "windDir": "NE",
+    "summary": "heavyrain"
+  }
 }

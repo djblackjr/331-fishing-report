@@ -83,14 +83,12 @@ function todaysAdjustedScore(baseScore) {
   return Math.max(3, Math.round(score * 10) / 10);
 }
 
-// Averages today's high temp and storm chance across whichever of the three
-// forecast sources (NWS, Open-Meteo, Yr.no) actually returned a value —
-// Yr.no's high/low can be null if its API had no matching timeseries entries
-// for today, so that source is simply excluded rather than treated as 0.
+// Averages today's high temp and storm chance across whichever of the two
+// forecast sources (NWS, Open-Meteo) actually returned a value.
 function averageForecast() {
-  const highs = [FORECAST[0]?.high, CONDITIONS.openMeteo?.[0]?.high, CONDITIONS.yrNo?.high]
+  const highs = [FORECAST[0]?.high, CONDITIONS.openMeteo?.[0]?.high]
     .filter((v) => typeof v === "number");
-  const storms = [FORECAST[0]?.storms, CONDITIONS.openMeteo?.[0]?.stormChance, CONDITIONS.yrNo?.stormChance]
+  const storms = [FORECAST[0]?.storms, CONDITIONS.openMeteo?.[0]?.stormChance]
     .filter((v) => typeof v === "number");
   const avg = (arr) => (arr.length ? Math.round(arr.reduce((a, b) => a + b, 0) / arr.length) : null);
   return { high: avg(highs), storms: avg(storms), sourceCount: highs.length };
@@ -1212,13 +1210,17 @@ export default function App() {
           </div>
         )}
 
-        {/* NWS, Open-Meteo, and Yr.no are three independent forecast sources.
-            NWS is the official U.S. government forecast. Open-Meteo is a free
-            global model-based second opinion. Yr.no is a third free alternate
-            forecast from the Norwegian Meteorological Institute. Bay water
-            temp is a separate real (model-derived) sea surface reading, not
-            tied to any one forecast source, so it's repeated on each card. */}
-        {(C.openMeteo?.[0] || C.yrNo) && (
+        {/* NWS and Open-Meteo are two independent forecast sources. NWS is the
+            official U.S. government forecast. Open-Meteo is a free global
+            model-based second opinion. Bay water temp is a separate real
+            (model-derived) sea surface reading, not tied to either forecast
+            source, so it's repeated on each card.
+            Yr.no was dropped as a third source — its compact API only
+            returns forward-looking timeseries entries, so once most of the
+            day had already elapsed by the time the daily refresh ran, there
+            were no remaining "today" entries to compute a high/low from,
+            and it silently showed "n/a" instead of a real temperature. */}
+        {C.openMeteo?.[0] && (
           <>
             <div style={{ display: "flex", gap: 8, marginBottom: 8, flexWrap: "wrap" }}>
               <div style={{ flex: 1, minWidth: 220, background: "#0f2a1c", border: "1px solid #1a3828", borderRadius: 8, padding: "10px 12px" }}>
@@ -1227,22 +1229,12 @@ export default function App() {
                 <div style={{ fontSize: 14, color: "#7ab898" }}>{FORECAST[0].wind}</div>
                 {C.waterTemp && <div style={{ fontSize: 14, color: "#7ab898" }}>🌊 Bay water {C.waterTemp}°F</div>}
               </div>
-              {C.openMeteo?.[0] && (
-                <div style={{ flex: 1, minWidth: 220, background: "#0f2a1c", border: "1px solid #1a3828", borderRadius: 8, padding: "10px 12px" }}>
-                  <div style={{ fontSize: 13, color: "#7ab898", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 4 }}>Open-Meteo</div>
-                  <div style={{ fontSize: 15, color: "#d1f0e0" }}>{C.openMeteo[0].high}°F · {C.openMeteo[0].stormChance}% storms</div>
-                  <div style={{ fontSize: 14, color: "#7ab898" }}>{C.openMeteo[0].windDir} {C.openMeteo[0].windSpeed} mph</div>
-                  {C.waterTemp && <div style={{ fontSize: 14, color: "#7ab898" }}>🌊 Bay water {C.waterTemp}°F</div>}
-                </div>
-              )}
-              {C.yrNo && (
-                <div style={{ flex: 1, minWidth: 220, background: "#0f2a1c", border: "1px solid #1a3828", borderRadius: 8, padding: "10px 12px" }}>
-                  <div style={{ fontSize: 13, color: "#7ab898", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 4 }}>Yr.no</div>
-                  <div style={{ fontSize: 15, color: "#d1f0e0" }}>{C.yrNo.high != null ? `${C.yrNo.high}°F` : "n/a"} · {C.yrNo.stormChance}% storms</div>
-                  <div style={{ fontSize: 14, color: "#7ab898" }}>{C.yrNo.windDir} {C.yrNo.windSpeed} mph</div>
-                  {C.waterTemp && <div style={{ fontSize: 14, color: "#7ab898" }}>🌊 Bay water {C.waterTemp}°F</div>}
-                </div>
-              )}
+              <div style={{ flex: 1, minWidth: 220, background: "#0f2a1c", border: "1px solid #1a3828", borderRadius: 8, padding: "10px 12px" }}>
+                <div style={{ fontSize: 13, color: "#7ab898", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 4 }}>Open-Meteo</div>
+                <div style={{ fontSize: 15, color: "#d1f0e0" }}>{C.openMeteo[0].high}°F · {C.openMeteo[0].stormChance}% storms</div>
+                <div style={{ fontSize: 14, color: "#7ab898" }}>{C.openMeteo[0].windDir} {C.openMeteo[0].windSpeed} mph</div>
+                {C.waterTemp && <div style={{ fontSize: 14, color: "#7ab898" }}>🌊 Bay water {C.waterTemp}°F</div>}
+              </div>
               {avgForecast.high != null && (
                 <div style={{ flex: 1, minWidth: 220, background: "#0d2918", border: "1px solid #4ade8066", borderRadius: 8, padding: "10px 12px" }}>
                   <div style={{ fontSize: 13, color: "#4ade80", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 4 }}>Average ({avgForecast.sourceCount} sources)</div>
@@ -1251,7 +1243,7 @@ export default function App() {
               )}
             </div>
             <div style={{ fontSize: 13, color: "#a7c9a2", lineHeight: 1.5, marginBottom: 12 }}>
-              Compare the three sources: NWS is the official forecast, Open-Meteo is a free global model, and Yr.no is a separate free forecast from Norway’s meteorological service. Large differences between them indicate true uncertainty in the weather outlook.
+              Compare the two sources: NWS is the official forecast, Open-Meteo is a free global model. Large differences between them indicate true uncertainty in the weather outlook.
             </div>
           </>
         )}

@@ -72,7 +72,8 @@ npm run build
 ## What the app now compares
 - `NWS` — official U.S. forecast
 - `Open-Meteo` — free global model forecast
-- `Yr.no` — free independent forecast from the Norwegian Meteorological Institute
+
+(A third source, Yr.no, was tried and dropped — its API only returns forward-looking timeseries entries, so by the time the daily refresh ran, there was often no remaining "today" data left to compute a high/low from.)
 
 ## How to inspect the change
 - `git diff`
