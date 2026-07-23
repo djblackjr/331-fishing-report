@@ -112,6 +112,14 @@ function minutesToTime(mins) {
   h = h % 12 || 12;
   return `${h}:${String(m).padStart(2, "0")} ${ap}`;
 }
+// Both CONDITIONS.date and previousDay.date are plain strings like "July 7,
+// 2026" — JS's Date constructor parses that format natively, no custom
+// parser needed.
+function daysBetween(dateStrEarlier, dateStrLater) {
+  const a = Date.parse(dateStrEarlier), b = Date.parse(dateStrLater);
+  if (isNaN(a) || isNaN(b)) return null;
+  return Math.round((b - a) / 86400000);
+}
 // ── BEST BET TODAY ───────────────────────────────────────────────────────────
 // Ranks all 7 locations by today's-adjusted score and returns the top pick.
 function getBestBet() {
@@ -1040,6 +1048,7 @@ export default function App() {
   const bestBet = getBestBet();
   const bestWindow = getBestWindow();
   const conditionsDiff = getConditionsDiff();
+  const bitReportAge = C.localBiteUpdated ? daysBetween(C.localBiteUpdated, C.date) : null;
   const avgForecast = averageForecast();
 
   useState(() => {
@@ -1227,7 +1236,7 @@ export default function App() {
               </div>
             </div>
             {avgForecast.high != null && (
-              <div style={{ background: "#0d2918", border: "1px solid #4ade8066", borderRadius: 8, padding: "10px 12px", marginBottom: 12 }}>
+              <div style={{ background: "#0d2918", border: "1px solid #4ade8066", borderRadius: 8, padding: "10px 12px", marginBottom: 12, textAlign: "center" }}>
                 <div style={{ fontSize: 13, color: "#4ade80", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 4 }}>Average ({avgForecast.sourceCount} sources)</div>
                 <div style={{ fontSize: 15, color: "#d1f0e0" }}>{avgForecast.high}°F · {avgForecast.storms}% storms</div>
               </div>
@@ -1261,6 +1270,12 @@ export default function App() {
         <div style={{ background: "#0f2a1c", border: "1px solid #1a3828", borderRadius: 10, padding: "13px 16px", marginBottom: 4 }}>
           <div style={{ fontSize: 16, color: "#7ab898", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 8, fontWeight: 600 }}>🎣 What's Being Caught — Local Reports</div>
           <p style={{ margin: 0, fontSize: 16, color: "#d1f0e0", lineHeight: 1.7 }}>{C.localBiteReport}</p>
+          {bitReportAge != null && (
+            <div style={{ fontSize: 14, fontWeight: 600, marginTop: 6, color: bitReportAge > 14 ? "#f87171" : bitReportAge > 7 ? "#facc15" : "#7ab898" }}>
+              {bitReportAge === 0 ? "Refreshed today" : `Last refreshed ${bitReportAge} day${bitReportAge === 1 ? "" : "s"} ago`}
+              {bitReportAge > 7 ? " — consider asking Claude to refresh this" : ""}
+            </div>
+          )}
         </div>
 
         {/* Main tabs */}
