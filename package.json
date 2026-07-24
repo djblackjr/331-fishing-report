@@ -6,9 +6,12 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "atlas:db": "node scripts/build-atlas-db.mjs",
+    "atlas:export": "node scripts/export-atlas-geojson.mjs"
   },
   "dependencies": {
+    "leaflet": "^1.9.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

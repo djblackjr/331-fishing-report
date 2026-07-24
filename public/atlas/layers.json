@@ -1,0 +1,122 @@
+[
+  {
+    "key": "fishing_locations",
+    "label": "Fishing Locations",
+    "geometryType": "Point",
+    "category": "waypoints",
+    "color": "#4ade80",
+    "defaultVisible": true
+  },
+  {
+    "key": "grass_flats",
+    "label": "Grass Flats",
+    "geometryType": "Polygon",
+    "category": "habitat",
+    "color": "#86c7a0",
+    "defaultVisible": true
+  },
+  {
+    "key": "oyster_areas",
+    "label": "Oyster Areas",
+    "geometryType": "Polygon",
+    "category": "habitat",
+    "color": "#b08968",
+    "defaultVisible": true
+  },
+  {
+    "key": "hard_bottom",
+    "label": "Hard Bottom",
+    "geometryType": "Polygon",
+    "category": "habitat",
+    "color": "#9ca3af",
+    "defaultVisible": false
+  },
+  {
+    "key": "channels",
+    "label": "Channels",
+    "geometryType": "LineString",
+    "category": "habitat",
+    "color": "#38bdf8",
+    "defaultVisible": true
+  },
+  {
+    "key": "drop_offs",
+    "label": "Drop-offs",
+    "geometryType": "LineString",
+    "category": "habitat",
+    "color": "#0ea5e9",
+    "defaultVisible": false
+  },
+  {
+    "key": "creek_mouths",
+    "label": "Creek Mouths",
+    "geometryType": "Polygon",
+    "category": "habitat",
+    "color": "#22d3ee",
+    "defaultVisible": false
+  },
+  {
+    "key": "sand_holes",
+    "label": "Sand Holes",
+    "geometryType": "Polygon",
+    "category": "habitat",
+    "color": "#fde68a",
+    "defaultVisible": false
+  },
+  {
+    "key": "redfish_routes",
+    "label": "Redfish Routes",
+    "geometryType": "LineString",
+    "category": "species",
+    "color": "#f87171",
+    "defaultVisible": false
+  },
+  {
+    "key": "trout_habitat",
+    "label": "Trout Habitat",
+    "geometryType": "Polygon",
+    "category": "species",
+    "color": "#a78bfa",
+    "defaultVisible": false
+  },
+  {
+    "key": "flounder_habitat",
+    "label": "Flounder Habitat",
+    "geometryType": "Polygon",
+    "category": "species",
+    "color": "#fb923c",
+    "defaultVisible": false
+  },
+  {
+    "key": "kayak_launches",
+    "label": "Kayak Launches",
+    "geometryType": "Point",
+    "category": "access",
+    "color": "#facc15",
+    "defaultVisible": true
+  },
+  {
+    "key": "boat_ramps",
+    "label": "Boat Ramps",
+    "geometryType": "Point",
+    "category": "access",
+    "color": "#facc15",
+    "defaultVisible": true
+  },
+  {
+    "key": "hazards",
+    "label": "Hazards",
+    "geometryType": "Point",
+    "category": "hazard",
+    "color": "#ef4444",
+    "defaultVisible": true
+  },
+  {
+    "key": "user_catches",
+    "label": "User Catches",
+    "geometryType": "Point",
+    "category": "user",
+    "color": "#34d399",
+    "defaultVisible": false
+  }
+]
