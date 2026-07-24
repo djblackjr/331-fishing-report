@@ -8,7 +8,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "atlas:db": "node scripts/build-atlas-db.mjs",
-    "atlas:export": "node scripts/export-atlas-geojson.mjs"
+    "atlas:export": "node scripts/export-atlas-geojson.mjs",
+    "atlas:test": "node --test scripts/atlas.test.mjs"
   },
   "dependencies": {
     "leaflet": "^1.9.4",

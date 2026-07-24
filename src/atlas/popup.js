@@ -3,8 +3,11 @@
 // framework) since this is a standalone vanilla-JS page — see docs/atlas.md
 // for why the Atlas isn't part of the React SPA.
 
+// Staged pipeline, earliest to most confirmed — see db/schema.sql.
 const VALIDATION_LABELS = {
   placeholder: "Placeholder — unvalidated",
+  proposed: "Proposed — insufficient evidence to place",
+  visually_reviewed: "Visually reviewed — not field verified",
   user_reported: "User reported",
   field_verified: "Field verified",
   guide_verified: "Guide verified",
@@ -12,6 +15,8 @@ const VALIDATION_LABELS = {
 
 const VALIDATION_COLORS = {
   placeholder: "#7a8578",
+  proposed: "#f87171",
+  visually_reviewed: "#38bdf8",
   user_reported: "#facc15",
   field_verified: "#4ade80",
   guide_verified: "#34d399",
