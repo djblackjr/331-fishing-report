@@ -75,6 +75,9 @@ npm run build
 
 (A third source, Yr.no, was tried and dropped — its API only returns forward-looking timeseries entries, so by the time the daily refresh ran, there was often no remaining "today" data left to compute a high/low from.)
 
+## Fishing Intelligence Atlas
+An interactive map (Leaflet + GeoJSON, SQLite-backed) at `/atlas.html`, separate from this daily-conditions app. Phase 1 pilot covers Jolly Bay with a placeholder location framework — see [docs/atlas.md](docs/atlas.md) for the architecture, database, and how to add/edit locations.
+
 ## How to inspect the change
 - `git diff`
 - `git status`
