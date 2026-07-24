@@ -2,8 +2,8 @@
   "date": "Friday, July 24, 2026",
   "wind": {
     "speed": 10,
-    "dir": "NW",
-    "description": "NW 0 to 10 mph"
+    "dir": "WNW",
+    "description": "WNW 0 to 10 mph"
   },
   "weather": "Mostly Sunny · High 94°F · Heat index up to 101°F",
   "tide": "High tide ~2:06 AM · Low tide ~1:45 PM · Sunrise 5:56 AM",
@@ -24,19 +24,19 @@
   "moonPhase": "Waxing Gibbous (~84% illuminated) — strong tidal push (spring tide)",
   "waterClarity": "Slightly stained",
   "sky": "Bright sun",
-  "lastUpdated": "7/24/2026, 3:12:14 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
-  "localBiteReport": "Note: The most current inshore-specific reports found are from the past 1–2 weeks. A guide out of Santa Rosa Beach reported strong numbers of speckled trout along with a bull redfish over 26 lbs landed on the bay — a solid sign that both species are actively feeding. A separate Destin-area report from about a week ago confirmed redfish and tarpon cruising the beaches and bay edges. Charter trips on Choctawhatchee Bay have been producing redfish, flounder, and quality trout (4–5 lb fish reported), with captains finding fish near bridge structure and grass flats. Water temps at 85°F are pushing fish into early-morning feeding windows, so getting on the water at first light continues to be the best strategy for trout and reds.",
-  "localBiteSource": "captainexperiences.com (Choctawhatchee Bay report feed, reports 6–7 days ago), fishingbooker.com (Choctawhatchee Bay report feed, July 2026) · Auto-refreshed via Claude API",
+  "lastUpdated": "7/24/2026, 8:07:39 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "localBiteReport": "The most current reports (within the past week, as of July 24, 2026) from Choctawhatchee Bay show speckled trout as the standout inshore bite — guides out of Santa Rosa Beach are reporting solid numbers with several quality fish in the mix, and one angler recently boated a 40-plus-inch, 26-lb bull redfish after a lengthy fight. Redfish are actively cruising the bay and beaches, with recent charter trips landing upper-slot fish and limits of reds, including productive sessions up creek mouths and along West Bay. Flounder have also been showing up on bay trips alongside trout and reds, and a 43-lb black drum was reported from a flats trip as recently as June 30. Water temp is 85°F. Reports from late June onward suggest summer tide conditions have improved, and while wind has occasionally required anglers to be selective about where they fish, the trout in particular are described as scattered but actively feeding throughout the bay.",
+  "localBiteSource": "captainexperiences.com (Choctawhatchee Bay reports, July 2026), fishingbooker.com (Choctawhatchee Bay reports, July 2026) · Auto-refreshed via Claude API",
   "localBiteUpdated": "July 24, 2026",
   "previousDay": {
-    "date": "Thursday, July 23, 2026",
+    "date": "Friday, July 24, 2026",
     "wind": {
-      "dir": "S",
+      "dir": "NW",
       "speed": 10
     },
-    "high": 90,
-    "stormChance": 3,
-    "tide": "High tide ~1:15 AM · Low tide ~12:52 PM · Sunrise 5:56 AM"
+    "high": 94,
+    "stormChance": 1,
+    "tide": "High tide ~2:06 AM · Low tide ~1:45 PM · Sunrise 5:56 AM"
   },
   "openMeteo": [
     {
@@ -45,23 +45,23 @@
       "stormChance": 2,
       "windSpeed": 10,
       "windDir": "SW",
-      "summary": "Fog"
+      "summary": "Overcast"
     },
     {
       "high": 93,
       "low": 76,
-      "stormChance": 46,
+      "stormChance": 44,
       "windSpeed": 18,
       "windDir": "W",
       "summary": "Thunderstorm"
     },
     {
       "high": 97,
-      "low": 75,
-      "stormChance": 13,
-      "windSpeed": 11,
-      "windDir": "NW",
-      "summary": "Heavy drizzle"
+      "low": 77,
+      "stormChance": 20,
+      "windSpeed": 10,
+      "windDir": "W",
+      "summary": "Light drizzle"
     }
   ],
   "forecast": [
@@ -70,11 +70,11 @@
       "label": "Today",
       "high": 94,
       "low": null,
-      "wind": "NW 0 to 10 mph",
+      "wind": "WNW 0 to 10 mph",
       "storms": 1,
       "headline": "Mostly Sunny · Heat index 101",
       "fishingScore": 9,
-      "aiCall": "Mostly sunny, with a high near 94. Heat index values as high as 101. Northwest wind 0 to 10 mph.",
+      "aiCall": "Mostly sunny, with a high near 94. Heat index values as high as 101. West northwest wind 0 to 10 mph.",
       "emoji": "☀️"
     },
     {
@@ -86,7 +86,7 @@
       "storms": 38,
       "headline": "Mostly Sunny then Chance Showers And Thunderstorms · Heat index 105",
       "fishingScore": 7,
-      "aiCall": "A chance of showers and thunderstorms after 1pm. Mostly sunny. High near 94, with temperatures falling to around 91 in the afternoon. Heat index values as high as 105. West wind around 5 mph. Chance of precipitation is 40%.",
+      "aiCall": "A chance of showers and thunderstorms after 1pm. Mostly sunny. High near 94, with temperatures falling to around 91 in the afternoon. Heat index values as high as 105. West wind around 5 mph. Chance of precipitation is 40%. New rainfall amounts between a quarter and half of an inch possible.",
       "emoji": "⛈️"
     },
     {
@@ -98,7 +98,7 @@
       "storms": 20,
       "headline": "Mostly Sunny then Slight Chance Showers And Thunderstorms",
       "fishingScore": 7.9,
-      "aiCall": "A slight chance of showers and thunderstorms after 1pm. Mostly sunny, with a high near 96. Chance of precipitation is 20%.",
+      "aiCall": "A slight chance of showers and thunderstorms after 1pm. Mostly sunny, with a high near 96. West wind 5 to 10 mph. Chance of precipitation is 20%.",
       "emoji": "⛈️"
     }
   ],
