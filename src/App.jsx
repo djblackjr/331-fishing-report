@@ -1168,9 +1168,14 @@ export default function App() {
             <h1 style={{ margin: 0, fontSize: 25, fontWeight: 700, color: "#f0faf4", lineHeight: 1.2 }}>331 Bridge Area</h1>
             <div style={{ fontSize: 16, color: "#86c7a0", marginTop: 2 }}>Fishing Report · Freeport, FL · {C.date}</div>
           </div>
-          <button onClick={() => setShowShareCard(true)} style={{ background: "#0f2a1c", border: "1px solid #1a3828", borderRadius: 8, padding: "8px 12px", color: "#7ab898", fontSize: 15, fontWeight: 600, cursor: "pointer", fontFamily: "'Space Grotesk',sans-serif", whiteSpace: "nowrap", flexShrink: 0 }}>
-            📤 Share
-          </button>
+          <div style={{ display: "flex", gap: 8, flexShrink: 0 }}>
+            <a href="atlas.html" style={{ background: "#0f2a1c", border: "1px solid #1a3828", borderRadius: 8, padding: "8px 12px", color: "#7ab898", fontSize: 15, fontWeight: 600, cursor: "pointer", fontFamily: "'Space Grotesk',sans-serif", whiteSpace: "nowrap", textDecoration: "none", display: "inline-block" }}>
+              🗺️ Atlas
+            </a>
+            <button onClick={() => setShowShareCard(true)} style={{ background: "#0f2a1c", border: "1px solid #1a3828", borderRadius: 8, padding: "8px 12px", color: "#7ab898", fontSize: 15, fontWeight: 600, cursor: "pointer", fontFamily: "'Space Grotesk',sans-serif", whiteSpace: "nowrap" }}>
+              📤 Share
+            </button>
+          </div>
         </div>
 
         {/* Best Bet — the single number people open the app to check, sized
