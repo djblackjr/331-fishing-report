@@ -3,7 +3,13 @@
   "features": [
     {
       "type": "Feature",
-      "geometry": null,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.123281,
+          30.421683
+        ]
+      },
       "properties": {
         "id": 7,
         "region": "jolly_bay",
@@ -18,23 +24,29 @@
         "bestLures": [],
         "accessNotes": null,
         "accessType": null,
-        "confidence": 0,
-        "validationStatus": "placeholder",
-        "source": "Atlas Phase 1 pilot framework",
-        "notes": "Placeholder location awaiting field validation — no coordinates or species data yet.",
-        "lastUpdated": "2026-07-24 19:45:12",
+        "confidence": 63,
+        "validationStatus": "visually_reviewed",
+        "source": "Aerial image review — Esri World Imagery export, reviewed 2026-07-24 (db/import/2026-07-24-jolly-bay-review/)",
+        "notes": "Evidence: Visible transition where the confined marsh channel opens toward broader bay water. | Uncertainty: Hydrodynamics and usable depth require tide/field review.",
+        "lastUpdated": "2026-07-24 21:16:00",
         "catchCount": 0
       }
     },
     {
       "type": "Feature",
-      "geometry": null,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.12125,
+          30.424067
+        ]
+      },
       "properties": {
         "id": 4,
         "region": "jolly_bay",
         "name": "Channel Drop",
-        "habitat": "drop_off",
-        "habitatLabel": "Drop-off",
+        "habitat": "channel",
+        "habitatLabel": "Channel",
         "species": [],
         "depthTypical": null,
         "bestTide": null,
@@ -43,17 +55,23 @@
         "bestLures": [],
         "accessNotes": null,
         "accessType": null,
-        "confidence": 0,
-        "validationStatus": "placeholder",
-        "source": "Atlas Phase 1 pilot framework",
-        "notes": "Placeholder location awaiting field validation — no coordinates or species data yet.",
-        "lastUpdated": "2026-07-24 19:45:12",
+        "confidence": 58,
+        "validationStatus": "visually_reviewed",
+        "source": "Aerial image review — Esri World Imagery export, reviewed 2026-07-24 (db/import/2026-07-24-jolly-bay-review/)",
+        "notes": "Evidence: Distinct dark channel boundary against the adjacent marsh shallows. | Uncertainty: Channel edge is visible; an actual drop-off and depth require chart/sonar confirmation.",
+        "lastUpdated": "2026-07-24 21:16:00",
         "catchCount": 0
       }
     },
     {
       "type": "Feature",
-      "geometry": null,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.1125,
+          30.424067
+        ]
+      },
       "properties": {
         "id": 9,
         "region": "jolly_bay",
@@ -68,17 +86,23 @@
         "bestLures": [],
         "accessNotes": null,
         "accessType": null,
-        "confidence": 0,
-        "validationStatus": "placeholder",
-        "source": "Atlas Phase 1 pilot framework",
-        "notes": "Placeholder location awaiting field validation — no coordinates or species data yet.",
-        "lastUpdated": "2026-07-24 19:45:12",
+        "confidence": 55,
+        "validationStatus": "visually_reviewed",
+        "source": "Aerial image review — Esri World Imagery export, reviewed 2026-07-24 (db/import/2026-07-24-jolly-bay-review/)",
+        "notes": "Evidence: Pronounced outside bend is visible in the eastern marsh channel. | Uncertainty: The bend is mapped; greater depth is only a hypothesis until measured.",
+        "lastUpdated": "2026-07-24 21:16:00",
         "catchCount": 0
       }
     },
     {
       "type": "Feature",
-      "geometry": null,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.118906,
+          30.428283
+        ]
+      },
       "properties": {
         "id": 5,
         "region": "jolly_bay",
@@ -93,11 +117,11 @@
         "bestLures": [],
         "accessNotes": null,
         "accessType": null,
-        "confidence": 0,
-        "validationStatus": "placeholder",
-        "source": "Atlas Phase 1 pilot framework",
-        "notes": "Placeholder location awaiting field validation — no coordinates or species data yet.",
-        "lastUpdated": "2026-07-24 19:45:12",
+        "confidence": 70,
+        "validationStatus": "visually_reviewed",
+        "source": "Aerial image review — Esri World Imagery export, reviewed 2026-07-24 (db/import/2026-07-24-jolly-bay-review/)",
+        "notes": "Evidence: Clearly visible narrow marsh drain entering the bay/channel system. | Uncertainty: Flow timing, depth, and navigability remain unverified.",
+        "lastUpdated": "2026-07-24 21:16:00",
         "catchCount": 0
       }
     },
@@ -108,8 +132,8 @@
         "id": 3,
         "region": "jolly_bay",
         "name": "Interior Grass",
-        "habitat": "grass_flat",
-        "habitatLabel": "Grass Flat",
+        "habitat": null,
+        "habitatLabel": null,
         "species": [],
         "depthTypical": null,
         "bestTide": null,
@@ -118,23 +142,29 @@
         "bestLures": [],
         "accessNotes": null,
         "accessType": null,
-        "confidence": 0,
-        "validationStatus": "placeholder",
-        "source": "Atlas Phase 1 pilot framework",
-        "notes": "Placeholder location awaiting field validation — no coordinates or species data yet.",
-        "lastUpdated": "2026-07-24 19:45:12",
+        "confidence": 15,
+        "validationStatus": "proposed",
+        "source": "Aerial image review — Esri World Imagery export, reviewed 2026-07-24 (db/import/2026-07-24-jolly-bay-review/)",
+        "notes": "Evidence: Water clarity and image appearance do not resolve submerged grass or sand pockets. | Uncertainty: Keep unlocated until vegetation is visible in another image date or field evidence exists.",
+        "lastUpdated": "2026-07-24 21:16:00",
         "catchCount": 0
       }
     },
     {
       "type": "Feature",
-      "geometry": null,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.128438,
+          30.428283
+        ]
+      },
       "properties": {
         "id": 1,
         "region": "jolly_bay",
         "name": "North Grass Flat",
-        "habitat": "grass_flat",
-        "habitatLabel": "Grass Flat",
+        "habitat": null,
+        "habitatLabel": null,
         "species": [],
         "depthTypical": null,
         "bestTide": null,
@@ -143,11 +173,11 @@
         "bestLures": [],
         "accessNotes": null,
         "accessType": null,
-        "confidence": 0,
-        "validationStatus": "placeholder",
-        "source": "Atlas Phase 1 pilot framework",
-        "notes": "Placeholder location awaiting field validation — no coordinates or species data yet.",
-        "lastUpdated": "2026-07-24 19:45:12",
+        "confidence": 46,
+        "validationStatus": "visually_reviewed",
+        "source": "Aerial image review — Esri World Imagery export, reviewed 2026-07-24 (db/import/2026-07-24-jolly-bay-review/)",
+        "notes": "Evidence: Aerial tonal transition beside the north shoreline; submerged grass is not resolved. | Uncertainty: Flat edge is visible, but vegetation and depth are unverified.",
+        "lastUpdated": "2026-07-24 21:16:00",
         "catchCount": 0
       }
     },
@@ -158,8 +188,8 @@
         "id": 2,
         "region": "jolly_bay",
         "name": "Oyster Edge",
-        "habitat": "oyster_bar",
-        "habitatLabel": "Oyster Bar",
+        "habitat": null,
+        "habitatLabel": null,
         "species": [],
         "depthTypical": null,
         "bestTide": null,
@@ -168,11 +198,11 @@
         "bestLures": [],
         "accessNotes": null,
         "accessType": null,
-        "confidence": 0,
-        "validationStatus": "placeholder",
-        "source": "Atlas Phase 1 pilot framework",
-        "notes": "Placeholder location awaiting field validation — no coordinates or species data yet.",
-        "lastUpdated": "2026-07-24 19:45:12",
+        "confidence": 15,
+        "validationStatus": "proposed",
+        "source": "Aerial image review — Esri World Imagery export, reviewed 2026-07-24 (db/import/2026-07-24-jolly-bay-review/)",
+        "notes": "Evidence: No defensible oyster or hard-bottom signature in the reviewed aerial. | Uncertainty: Requires clearer imagery, side-scan/sonar, or on-water review before placement.",
+        "lastUpdated": "2026-07-24 21:16:00",
         "catchCount": 0
       }
     },
@@ -183,8 +213,8 @@
         "id": 8,
         "region": "jolly_bay",
         "name": "Oyster Point",
-        "habitat": "oyster_bar",
-        "habitatLabel": "Oyster Bar",
+        "habitat": null,
+        "habitatLabel": null,
         "species": [],
         "depthTypical": null,
         "bestTide": null,
@@ -193,17 +223,23 @@
         "bestLures": [],
         "accessNotes": null,
         "accessType": null,
-        "confidence": 0,
-        "validationStatus": "placeholder",
-        "source": "Atlas Phase 1 pilot framework",
-        "notes": "Placeholder location awaiting field validation — no coordinates or species data yet.",
-        "lastUpdated": "2026-07-24 19:45:12",
+        "confidence": 15,
+        "validationStatus": "proposed",
+        "source": "Aerial image review — Esri World Imagery export, reviewed 2026-07-24 (db/import/2026-07-24-jolly-bay-review/)",
+        "notes": "Evidence: No point can be classified as oyster or hard bottom from this image alone. | Uncertainty: Requires clearer low-water imagery, sonar, or field inspection before placement.",
+        "lastUpdated": "2026-07-24 21:16:00",
         "catchCount": 0
       }
     },
     {
       "type": "Feature",
-      "geometry": null,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.130531,
+          30.422307
+        ]
+      },
       "properties": {
         "id": 6,
         "region": "jolly_bay",
@@ -218,11 +254,11 @@
         "bestLures": [],
         "accessNotes": null,
         "accessType": null,
-        "confidence": 0,
-        "validationStatus": "placeholder",
-        "source": "Atlas Phase 1 pilot framework",
-        "notes": "Placeholder location awaiting field validation — no coordinates or species data yet.",
-        "lastUpdated": "2026-07-24 19:45:12",
+        "confidence": 66,
+        "validationStatus": "visually_reviewed",
+        "source": "Aerial image review — Esri World Imagery export, reviewed 2026-07-24 (db/import/2026-07-24-jolly-bay-review/)",
+        "notes": "Evidence: Clearly visible point at the west end of a marsh island with adjacent color transition. | Uncertainty: Bottom type and water depth are unverified.",
+        "lastUpdated": "2026-07-24 21:16:00",
         "catchCount": 0
       }
     }

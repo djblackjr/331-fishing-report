@@ -65,7 +65,18 @@ CREATE TABLE locations (
   access_notes      TEXT,
   access_type       TEXT CHECK (access_type IN ('boat', 'kayak', 'wade', 'shore') OR access_type IS NULL),
   confidence        INTEGER NOT NULL DEFAULT 0 CHECK (confidence BETWEEN 0 AND 100),
-  validation_status TEXT NOT NULL DEFAULT 'placeholder' CHECK (validation_status IN ('placeholder', 'user_reported', 'field_verified', 'guide_verified')),
+  -- Staged pipeline, earliest to most confirmed: placeholder (no data) ->
+  -- proposed (candidate, insufficient evidence to place — geometry stays
+  -- NULL) -> visually_reviewed (map-reviewed only, provisional coordinates)
+  -- -> user_reported -> field_verified -> guide_verified. Extended
+  -- 2026-07-24 (see db/migrations/2026-07-24-review-pipeline-statuses.sql)
+  -- to accommodate imported map-review packets that fall short of a field
+  -- visit.
+  validation_status TEXT NOT NULL DEFAULT 'placeholder' CHECK (validation_status IN ('placeholder', 'proposed', 'visually_reviewed', 'user_reported', 'field_verified', 'guide_verified')),
+  -- Stable id from an external import source (e.g. 'JB-PROP-001'), so
+  -- re-running that import later can upsert by this id instead of
+  -- duplicating rows. NULL for anything entered directly, not imported.
+  external_id       TEXT,
   source            TEXT,
   notes             TEXT,
   created_at        TEXT NOT NULL DEFAULT (datetime('now')),
@@ -132,12 +143,13 @@ CREATE TABLE habitat_features (
   geometry_json     TEXT,
   properties_json   TEXT,
   confidence        INTEGER CHECK (confidence BETWEEN 0 AND 100),
-  validation_status TEXT NOT NULL DEFAULT 'placeholder' CHECK (validation_status IN ('placeholder', 'user_reported', 'field_verified', 'guide_verified')),
+  validation_status TEXT NOT NULL DEFAULT 'placeholder' CHECK (validation_status IN ('placeholder', 'proposed', 'visually_reviewed', 'user_reported', 'field_verified', 'guide_verified')),
   source            TEXT,
   last_updated      TEXT NOT NULL DEFAULT (datetime('now'))
 );
 
 CREATE INDEX idx_locations_region ON locations(region);
+CREATE UNIQUE INDEX idx_locations_external_id ON locations(external_id) WHERE external_id IS NOT NULL;
 CREATE INDEX idx_habitat_features_layer_region ON habitat_features(layer_key, region);
 CREATE INDEX idx_catches_location ON catches(location_id);
 CREATE INDEX idx_observations_location ON observations(location_id);

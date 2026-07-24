@@ -1,0 +1,227 @@
+{
+  "type": "FeatureCollection",
+  "name": "Jolly Bay map-reviewed fishing locations",
+  "bbox": [
+    -86.155,
+    30.405,
+    -86.105,
+    30.449
+  ],
+  "metadata": {
+    "review_date": "2026-07-24",
+    "crs": "EPSG:4326",
+    "coordinate_precision_note": "Provisional map-review coordinates; not navigation or field-verified waypoints.",
+    "imagery_source": "Esri World Imagery",
+    "imagery_export_url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer",
+    "chart_cross_check": "NOAA ENC Online returned no visible large-scale detail for this local extent."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "JB-PROP-001",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.128438,
+          30.428283
+        ]
+      },
+      "properties": {
+        "location_id": "JB-PROP-001",
+        "location_name": "North shoreline shallow-flat edge",
+        "original_concept": "North grass-flat edge",
+        "feature_type": "shallow_flat_edge",
+        "confidence": 46,
+        "evidence": "Aerial tonal transition beside the north shoreline; submerged grass is not resolved.",
+        "uncertainty": "Flat edge is visible, but vegetation and depth are unverified.",
+        "validation_status": "visually_reviewed",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery export, reviewed 2026-07-24; bbox WGS84 [-86.155,30.405,-86.105,30.449], 1600x1200",
+        "coordinate_basis": "pixel-to-WGS84 from georeferenced ArcGIS export",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "JB-PROP-002",
+      "geometry": null,
+      "properties": {
+        "location_id": "JB-PROP-002",
+        "location_name": "Oyster / hard-bottom edge review target",
+        "original_concept": "Oyster or hard-bottom edge",
+        "feature_type": "hard_bottom_candidate",
+        "confidence": 15,
+        "evidence": "No defensible oyster or hard-bottom signature in the reviewed aerial.",
+        "uncertainty": "Requires clearer imagery, side-scan/sonar, or on-water review before placement.",
+        "validation_status": "proposed",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery export, reviewed 2026-07-24; bbox WGS84 [-86.155,30.405,-86.105,30.449], 1600x1200",
+        "coordinate_basis": "",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "JB-PROP-003",
+      "geometry": null,
+      "properties": {
+        "location_id": "JB-PROP-003",
+        "location_name": "Interior grass / sand-pocket review target",
+        "original_concept": "Interior grass and sand-pocket zone",
+        "feature_type": "grass_sand_candidate",
+        "confidence": 15,
+        "evidence": "Water clarity and image appearance do not resolve submerged grass or sand pockets.",
+        "uncertainty": "Keep unlocated until vegetation is visible in another image date or field evidence exists.",
+        "validation_status": "proposed",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery export, reviewed 2026-07-24; bbox WGS84 [-86.155,30.405,-86.105,30.449], 1600x1200",
+        "coordinate_basis": "",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "JB-PROP-004",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.12125,
+          30.424067
+        ]
+      },
+      "properties": {
+        "location_id": "JB-PROP-004",
+        "location_name": "Main marsh-channel edge",
+        "original_concept": "Main channel drop-off",
+        "feature_type": "channel_edge",
+        "confidence": 58,
+        "evidence": "Distinct dark channel boundary against the adjacent marsh shallows.",
+        "uncertainty": "Channel edge is visible; an actual drop-off and depth require chart/sonar confirmation.",
+        "validation_status": "visually_reviewed",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery export, reviewed 2026-07-24; bbox WGS84 [-86.155,30.405,-86.105,30.449], 1600x1200",
+        "coordinate_basis": "pixel-to-WGS84 from georeferenced ArcGIS export",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "JB-PROP-005",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.118906,
+          30.428283
+        ]
+      },
+      "properties": {
+        "location_id": "JB-PROP-005",
+        "location_name": "North marsh tidal drain",
+        "original_concept": "Tidal drain or creek mouth",
+        "feature_type": "tidal_drain",
+        "confidence": 70,
+        "evidence": "Clearly visible narrow marsh drain entering the bay/channel system.",
+        "uncertainty": "Flow timing, depth, and navigability remain unverified.",
+        "validation_status": "visually_reviewed",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery export, reviewed 2026-07-24; bbox WGS84 [-86.155,30.405,-86.105,30.449], 1600x1200",
+        "coordinate_basis": "pixel-to-WGS84 from georeferenced ArcGIS export",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "JB-PROP-006",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.130531,
+          30.422307
+        ]
+      },
+      "properties": {
+        "location_id": "JB-PROP-006",
+        "location_name": "Southern marsh-island point",
+        "original_concept": "Southern shoreline point",
+        "feature_type": "shoreline_point",
+        "confidence": 66,
+        "evidence": "Clearly visible point at the west end of a marsh island with adjacent color transition.",
+        "uncertainty": "Bottom type and water depth are unverified.",
+        "validation_status": "visually_reviewed",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery export, reviewed 2026-07-24; bbox WGS84 [-86.155,30.405,-86.105,30.449], 1600x1200",
+        "coordinate_basis": "pixel-to-WGS84 from georeferenced ArcGIS export",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "JB-PROP-007",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.123281,
+          30.421683
+        ]
+      },
+      "properties": {
+        "location_id": "JB-PROP-007",
+        "location_name": "Jolly Bay marsh-channel mouth transition",
+        "original_concept": "Bayou-mouth transition",
+        "feature_type": "bay_channel_transition",
+        "confidence": 63,
+        "evidence": "Visible transition where the confined marsh channel opens toward broader bay water.",
+        "uncertainty": "Hydrodynamics and usable depth require tide/field review.",
+        "validation_status": "visually_reviewed",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery export, reviewed 2026-07-24; bbox WGS84 [-86.155,30.405,-86.105,30.449], 1600x1200",
+        "coordinate_basis": "pixel-to-WGS84 from georeferenced ArcGIS export",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "JB-PROP-008",
+      "geometry": null,
+      "properties": {
+        "location_id": "JB-PROP-008",
+        "location_name": "Oyster / hard-bottom point review target",
+        "original_concept": "Oyster point or hard-bottom point",
+        "feature_type": "hard_bottom_point_candidate",
+        "confidence": 15,
+        "evidence": "No point can be classified as oyster or hard bottom from this image alone.",
+        "uncertainty": "Requires clearer low-water imagery, sonar, or field inspection before placement.",
+        "validation_status": "proposed",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery export, reviewed 2026-07-24; bbox WGS84 [-86.155,30.405,-86.105,30.449], 1600x1200",
+        "coordinate_basis": "",
+        "field_verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "JB-PROP-009",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.1125,
+          30.424067
+        ]
+      },
+      "properties": {
+        "location_id": "JB-PROP-009",
+        "location_name": "Eastern channel outside bend",
+        "original_concept": "Deep outside bend",
+        "feature_type": "outside_bend",
+        "confidence": 55,
+        "evidence": "Pronounced outside bend is visible in the eastern marsh channel.",
+        "uncertainty": "The bend is mapped; greater depth is only a hypothesis until measured.",
+        "validation_status": "visually_reviewed",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery export, reviewed 2026-07-24; bbox WGS84 [-86.155,30.405,-86.105,30.449], 1600x1200",
+        "coordinate_basis": "pixel-to-WGS84 from georeferenced ArcGIS export",
+        "field_verified": false
+      }
+    }
+  ]
+}
