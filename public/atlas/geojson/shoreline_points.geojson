@@ -6,23 +6,23 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -86.123375,
-          30.425863
+          -86.124844,
+          30.42315
         ]
       },
       "properties": {
-        "id": 5,
-        "externalId": "JB-CM-002",
+        "id": 8,
+        "externalId": "JB-PT-002",
         "region": "jolly_bay",
-        "name": "Central pocket outlet",
-        "confidence": 69,
+        "name": "Central north-bank point",
+        "confidence": 72,
         "validationStatus": "visually_reviewed",
         "source": "aerial_image_review: Esri World Imagery export reviewed 2026-07-24; WGS84 bbox [-86.155,30.405,-86.105,30.449], 1600x1200",
         "lastUpdated": "2026-07-24",
-        "feature_type": "creek_mouth",
+        "feature_type": "shoreline_point",
         "field_verified": false,
-        "evidence": "Small enclosed marsh pocket visibly connects to the channel system.",
-        "uncertainty": "Outlet may be shallow or intermittent at low water.",
+        "evidence": "Visible point constricts the north side of the main channel.",
+        "uncertainty": "Exact fishable edge changes with water level.",
         "source_type": "aerial_image_review",
         "source_reference": "Esri World Imagery export reviewed 2026-07-24; WGS84 bbox [-86.155,30.405,-86.105,30.449], 1600x1200",
         "review_date": "2026-07-24",
@@ -34,23 +34,23 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -86.118906,
-          30.428283
+          -86.113188,
+          30.4237
         ]
       },
       "properties": {
-        "id": 4,
-        "externalId": "JB-CM-001",
+        "id": 9,
+        "externalId": "JB-PT-003",
         "region": "jolly_bay",
-        "name": "North marsh tidal-drain mouth",
-        "confidence": 82,
+        "name": "Eastern bend point",
+        "confidence": 76,
         "validationStatus": "visually_reviewed",
         "source": "aerial_image_review: Esri World Imagery export reviewed 2026-07-24; WGS84 bbox [-86.155,30.405,-86.105,30.449], 1600x1200",
         "lastUpdated": "2026-07-24",
-        "feature_type": "tidal_drain",
+        "feature_type": "shoreline_point",
         "field_verified": false,
-        "evidence": "Narrow marsh drain visibly opens into broader water.",
-        "uncertainty": "Flow timing and usable depth require on-water review.",
+        "evidence": "Distinct inside point at a pronounced channel bend.",
+        "uncertainty": "Adjacent depth is not known.",
         "source_type": "aerial_image_review",
         "source_reference": "Esri World Imagery export reviewed 2026-07-24; WGS84 bbox [-86.155,30.405,-86.105,30.449], 1600x1200",
         "review_date": "2026-07-24",
@@ -62,23 +62,23 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -86.123281,
-          30.42172
+          -86.130531,
+          30.422307
         ]
       },
       "properties": {
-        "id": 6,
-        "externalId": "JB-CM-003",
+        "id": 7,
+        "externalId": "JB-PT-001",
         "region": "jolly_bay",
-        "name": "Southern feeder-channel mouth",
-        "confidence": 75,
+        "name": "Western marsh-island point",
+        "confidence": 79,
         "validationStatus": "visually_reviewed",
         "source": "aerial_image_review: Esri World Imagery export reviewed 2026-07-24; WGS84 bbox [-86.155,30.405,-86.105,30.449], 1600x1200",
         "lastUpdated": "2026-07-24",
-        "feature_type": "channel_mouth",
+        "feature_type": "shoreline_point",
         "field_verified": false,
-        "evidence": "Confined southern channel visibly meets the main east-west channel.",
-        "uncertainty": "Hydrodynamics and depth are unverified.",
+        "evidence": "Distinct west-facing marsh point beside the main channel.",
+        "uncertainty": "Submerged extension and bottom type are unknown.",
         "source_type": "aerial_image_review",
         "source_reference": "Esri World Imagery export reviewed 2026-07-24; WGS84 bbox [-86.155,30.405,-86.105,30.449], 1600x1200",
         "review_date": "2026-07-24",

@@ -1,4 +1,147 @@
 {
   "type": "FeatureCollection",
-  "features": []
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -86.137031,
+            30.42205
+          ],
+          [
+            -86.133437,
+            30.421867
+          ],
+          [
+            -86.129844,
+            30.42205
+          ],
+          [
+            -86.12625,
+            30.422233
+          ],
+          [
+            -86.123125,
+            30.422747
+          ],
+          [
+            -86.119844,
+            30.424067
+          ],
+          [
+            -86.116094,
+            30.424287
+          ],
+          [
+            -86.112031,
+            30.42348
+          ]
+        ]
+      },
+      "properties": {
+        "id": 1,
+        "externalId": "JB-CH-001",
+        "region": "jolly_bay",
+        "name": "Main east-west marsh channel",
+        "confidence": 78,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery export reviewed 2026-07-24; WGS84 bbox [-86.155,30.405,-86.105,30.449], 1600x1200",
+        "lastUpdated": "2026-07-24",
+        "feature_type": "channel_centerline",
+        "field_verified": false,
+        "evidence": "Continuous dark-water channel is clearly visible between marsh islands.",
+        "uncertainty": "Centerline is approximate; width and depth are not represented.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery export reviewed 2026-07-24; WGS84 bbox [-86.155,30.405,-86.105,30.449], 1600x1200",
+        "review_date": "2026-07-24",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -86.118875,
+            30.428283
+          ],
+          [
+            -86.118313,
+            30.426743
+          ],
+          [
+            -86.118594,
+            30.42546
+          ],
+          [
+            -86.119844,
+            30.424067
+          ]
+        ]
+      },
+      "properties": {
+        "id": 2,
+        "externalId": "JB-CH-002",
+        "region": "jolly_bay",
+        "name": "North marsh feeder channel",
+        "confidence": 73,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery export reviewed 2026-07-24; WGS84 bbox [-86.155,30.405,-86.105,30.449], 1600x1200",
+        "lastUpdated": "2026-07-24",
+        "feature_type": "channel_centerline",
+        "field_verified": false,
+        "evidence": "Confined feeder channel is visible from the north marsh drain to the main channel.",
+        "uncertainty": "Tidal direction, depth, and navigability are unverified.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery export reviewed 2026-07-24; WGS84 bbox [-86.155,30.405,-86.105,30.449], 1600x1200",
+        "review_date": "2026-07-24",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -86.123281,
+            30.42172
+          ],
+          [
+            -86.124781,
+            30.42007
+          ],
+          [
+            -86.126406,
+            30.418457
+          ],
+          [
+            -86.128563,
+            30.416477
+          ]
+        ]
+      },
+      "properties": {
+        "id": 3,
+        "externalId": "JB-CH-003",
+        "region": "jolly_bay",
+        "name": "Southern marsh feeder channel",
+        "confidence": 68,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery export reviewed 2026-07-24; WGS84 bbox [-86.155,30.405,-86.105,30.449], 1600x1200",
+        "lastUpdated": "2026-07-24",
+        "feature_type": "channel_centerline",
+        "field_verified": false,
+        "evidence": "Dark-water channel is visible through the southern marsh.",
+        "uncertainty": "Line ends where imagery becomes ambiguous; depth is unverified.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery export reviewed 2026-07-24; WGS84 bbox [-86.155,30.405,-86.105,30.449], 1600x1200",
+        "review_date": "2026-07-24",
+        "navigation_use": "not_for_navigation"
+      }
+    }
+  ]
 }

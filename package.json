@@ -8,6 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "atlas:db": "node scripts/build-atlas-db.mjs",
+    "atlas:import-structures": "node scripts/import-structure-layers.mjs",
     "atlas:export": "node scripts/export-atlas-geojson.mjs",
     "atlas:test": "node --test scripts/atlas.test.mjs"
   },

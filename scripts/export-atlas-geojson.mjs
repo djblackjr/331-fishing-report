@@ -90,6 +90,7 @@ function exportHabitatLayer(layerKey) {
     geometry: row.geometry_json ? JSON.parse(row.geometry_json) : null,
     properties: {
       id: row.id,
+      externalId: row.external_id,
       region: row.region,
       name: row.name,
       confidence: row.confidence,

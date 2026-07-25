@@ -92,6 +92,33 @@ test("every exported GeoJSON file is a valid FeatureCollection matching its laye
   }
 });
 
+test("Jolly Bay structure packet is exported once with reconciled geometry types", async () => {
+  const expected = {
+    channels: ["LineString", 3],
+    creek_mouths: ["Point", 3],
+    shoreline_points: ["Point", 3],
+    sand_holes: ["Polygon", 3],
+    navigation_cautions: ["Polygon", 2],
+  };
+  const ids = new Set();
+
+  for (const [layerKey, [geometryType, expectedCount]] of Object.entries(expected)) {
+    const collection = JSON.parse(await readFile(join(GEOJSON_DIR, `${layerKey}.geojson`), "utf8"));
+    const packetFeatures = collection.features.filter((feature) => feature.properties.externalId?.startsWith("JB-"));
+    assert.equal(packetFeatures.length, expectedCount, `${layerKey} packet feature count`);
+    for (const feature of packetFeatures) {
+      assert.equal(feature.geometry.type, geometryType, `${feature.properties.externalId} geometry type`);
+      assert.equal(feature.properties.validationStatus, "visually_reviewed");
+      assert.equal(feature.properties.field_verified, false);
+      assert.equal(feature.properties.navigation_use, "not_for_navigation");
+      assert.ok(!ids.has(feature.properties.externalId), `duplicate external id ${feature.properties.externalId}`);
+      ids.add(feature.properties.externalId);
+    }
+  }
+
+  assert.equal(ids.size, 14);
+});
+
 test("Jolly Bay pilot: exactly 6 located + 3 unlocated fishing_locations, none promoted past visually_reviewed", async () => {
   const collection = JSON.parse(await readFile(join(GEOJSON_DIR, "fishing_locations.geojson"), "utf8"));
   const jollyBay = collection.features.filter((f) => f.properties.region === "jolly_bay");

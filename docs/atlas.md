@@ -129,12 +129,25 @@ database.
 
 ## GeoJSON layer system
 
-15 layers, defined in `db/seed/layers.sql` / the `layers` table:
+17 layers, defined in `db/seed/layers.sql` / the `layers` table:
 
 `fishing_locations`, `grass_flats`, `oyster_areas`, `hard_bottom`,
-`channels`, `drop_offs`, `creek_mouths`, `sand_holes`, `redfish_routes`,
+`channels`, `drop_offs`, `creek_mouths`, `sand_holes`, `shoreline_points`, `redfish_routes`,
 `trout_habitat`, `flounder_habitat`, `kayak_launches`, `boat_ramps`,
-`hazards`, `user_catches`.
+`hazards`, `navigation_cautions`, `user_catches`.
+
+Creek mouths are stored as points (the visible outlet location). Navigation
+cautions are polygons and remain separate from point-based charted hazards.
+Structure packets can be validated and idempotently imported with:
+
+```bash
+npm run atlas:import-structures -- /path/to/packet.geojson
+npm run atlas:export
+```
+
+The importer refuses unknown layers, mismatched geometry types, out-of-region
+coordinates, promoted field-verification claims, and unsafe registry type
+changes when incompatible stored geometry already exists.
 
 Each is independently toggleable via Leaflet's layer control (top-right of
 the map). `fishing_locations` is exported from the `locations` table (with

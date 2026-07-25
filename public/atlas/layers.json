@@ -50,7 +50,7 @@
   {
     "key": "creek_mouths",
     "label": "Creek Mouths",
-    "geometryType": "Polygon",
+    "geometryType": "Point",
     "category": "habitat",
     "color": "#22d3ee",
     "defaultVisible": false
@@ -61,6 +61,14 @@
     "geometryType": "Polygon",
     "category": "habitat",
     "color": "#fde68a",
+    "defaultVisible": false
+  },
+  {
+    "key": "shoreline_points",
+    "label": "Shoreline Points",
+    "geometryType": "Point",
+    "category": "habitat",
+    "color": "#2dd4bf",
     "defaultVisible": false
   },
   {
@@ -110,6 +118,14 @@
     "category": "hazard",
     "color": "#ef4444",
     "defaultVisible": true
+  },
+  {
+    "key": "navigation_cautions",
+    "label": "Navigation Cautions",
+    "geometryType": "Polygon",
+    "category": "hazard",
+    "color": "#f97316",
+    "defaultVisible": false
   },
   {
     "key": "user_catches",

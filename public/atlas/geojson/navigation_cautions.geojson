@@ -1,0 +1,113 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -86.125,
+              30.4237
+            ],
+            [
+              -86.121094,
+              30.4248
+            ],
+            [
+              -86.119531,
+              30.423333
+            ],
+            [
+              -86.122188,
+              30.420767
+            ],
+            [
+              -86.124688,
+              30.421133
+            ],
+            [
+              -86.125,
+              30.4237
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 14,
+        "externalId": "JB-HZ-002",
+        "region": "jolly_bay",
+        "name": "Marsh-channel constriction caution",
+        "confidence": 62,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery export reviewed 2026-07-24; WGS84 bbox [-86.155,30.405,-86.105,30.449], 1600x1200",
+        "lastUpdated": "2026-07-24",
+        "feature_type": "channel_constriction",
+        "field_verified": false,
+        "evidence": "Channel narrows and bends around marsh points in this area.",
+        "uncertainty": "Visual caution only; clearance and depth require current chart and field verification.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery export reviewed 2026-07-24; WGS84 bbox [-86.155,30.405,-86.105,30.449], 1600x1200",
+        "review_date": "2026-07-24",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -86.140375,
+              30.424983
+            ],
+            [
+              -86.135156,
+              30.42458
+            ],
+            [
+              -86.133594,
+              30.421133
+            ],
+            [
+              -86.134938,
+              30.417833
+            ],
+            [
+              -86.138594,
+              30.418273
+            ],
+            [
+              -86.140781,
+              30.421573
+            ],
+            [
+              -86.140375,
+              30.424983
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 13,
+        "externalId": "JB-HZ-001",
+        "region": "jolly_bay",
+        "name": "Western shoal complex caution",
+        "confidence": 65,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery export reviewed 2026-07-24; WGS84 bbox [-86.155,30.405,-86.105,30.449], 1600x1200",
+        "lastUpdated": "2026-07-24",
+        "feature_type": "shallow_water_caution",
+        "field_verified": false,
+        "evidence": "Multiple pale shoal signatures and marsh-island margins are visible.",
+        "uncertainty": "Visual caution only; not a charted hazard and not for navigation.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery export reviewed 2026-07-24; WGS84 bbox [-86.155,30.405,-86.105,30.449], 1600x1200",
+        "review_date": "2026-07-24",
+        "navigation_use": "not_for_navigation"
+      }
+    }
+  ]
+}

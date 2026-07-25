@@ -137,6 +137,7 @@ CREATE TABLE observations (
 -- as text, NULL until the feature has been surveyed/digitized.
 CREATE TABLE habitat_features (
   id                INTEGER PRIMARY KEY,
+  external_id       TEXT,
   layer_key         TEXT NOT NULL REFERENCES layers(key),
   region            TEXT NOT NULL,
   name              TEXT,
@@ -151,5 +152,6 @@ CREATE TABLE habitat_features (
 CREATE INDEX idx_locations_region ON locations(region);
 CREATE UNIQUE INDEX idx_locations_external_id ON locations(external_id) WHERE external_id IS NOT NULL;
 CREATE INDEX idx_habitat_features_layer_region ON habitat_features(layer_key, region);
+CREATE UNIQUE INDEX idx_habitat_features_external_id ON habitat_features(external_id) WHERE external_id IS NOT NULL;
 CREATE INDEX idx_catches_location ON catches(location_id);
 CREATE INDEX idx_observations_location ON observations(location_id);

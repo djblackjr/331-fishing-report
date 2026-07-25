@@ -155,11 +155,13 @@ function buildFeatureLayer(layerMeta, featureCollection) {
       fillColor: layerMeta.color,
       fillOpacity: 0.85,
     }),
-    style: () => ({
+    style: (feature) => ({
       color: layerMeta.color,
-      weight: layerMeta.geometryType === "LineString" ? 3 : 2,
+      weight: feature.geometry?.type === "LineString" ? 3 : 2,
       fillColor: layerMeta.color,
-      fillOpacity: layerMeta.geometryType === "Polygon" ? 0.25 : 0,
+      fillOpacity: feature.geometry?.type === "Point"
+        ? 0.85
+        : feature.geometry?.type === "Polygon" ? 0.25 : 0,
     }),
     onEachFeature: (feature, leafletLayer) => {
       const html = layerMeta.key === "fishing_locations"

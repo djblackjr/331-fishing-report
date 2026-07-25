@@ -1,4 +1,173 @@
 {
   "type": "FeatureCollection",
-  "features": []
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -86.133125,
+              30.418127
+            ],
+            [
+              -86.131313,
+              30.417833
+            ],
+            [
+              -86.130313,
+              30.416
+            ],
+            [
+              -86.13125,
+              30.414497
+            ],
+            [
+              -86.132875,
+              30.415083
+            ],
+            [
+              -86.13375,
+              30.416733
+            ],
+            [
+              -86.133125,
+              30.418127
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 12,
+        "externalId": "JB-SH-003",
+        "region": "jolly_bay",
+        "name": "Southern pale shoal",
+        "confidence": 67,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery export reviewed 2026-07-24; WGS84 bbox [-86.155,30.405,-86.105,30.449], 1600x1200",
+        "lastUpdated": "2026-07-24",
+        "feature_type": "visible_shoal",
+        "field_verified": false,
+        "evidence": "Pale submerged feature is visible along the southern marsh margin.",
+        "uncertainty": "Composition and minimum depth are unknown.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery export reviewed 2026-07-24; WGS84 bbox [-86.155,30.405,-86.105,30.449], 1600x1200",
+        "review_date": "2026-07-24",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -86.1375,
+              30.421647
+            ],
+            [
+              -86.135625,
+              30.421133
+            ],
+            [
+              -86.134531,
+              30.419447
+            ],
+            [
+              -86.135625,
+              30.418127
+            ],
+            [
+              -86.137344,
+              30.418933
+            ],
+            [
+              -86.138125,
+              30.420473
+            ],
+            [
+              -86.1375,
+              30.421647
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 11,
+        "externalId": "JB-SH-002",
+        "region": "jolly_bay",
+        "name": "Southwest island-tip shoal",
+        "confidence": 68,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery export reviewed 2026-07-24; WGS84 bbox [-86.155,30.405,-86.105,30.449], 1600x1200",
+        "lastUpdated": "2026-07-24",
+        "feature_type": "visible_shoal",
+        "field_verified": false,
+        "evidence": "Pale water-bottom signature extends from the island tip.",
+        "uncertainty": "Not classified as sand, oyster, or hard bottom without field evidence.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery export reviewed 2026-07-24; WGS84 bbox [-86.155,30.405,-86.105,30.449], 1600x1200",
+        "review_date": "2026-07-24",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -86.139375,
+              30.42403
+            ],
+            [
+              -86.137719,
+              30.42403
+            ],
+            [
+              -86.136562,
+              30.422857
+            ],
+            [
+              -86.137344,
+              30.421317
+            ],
+            [
+              -86.139063,
+              30.4215
+            ],
+            [
+              -86.14,
+              30.422747
+            ],
+            [
+              -86.139375,
+              30.42403
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 10,
+        "externalId": "JB-SH-001",
+        "region": "jolly_bay",
+        "name": "Western pale shoal",
+        "confidence": 71,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery export reviewed 2026-07-24; WGS84 bbox [-86.155,30.405,-86.105,30.449], 1600x1200",
+        "lastUpdated": "2026-07-24",
+        "feature_type": "visible_shoal",
+        "field_verified": false,
+        "evidence": "Pale submerged feature is clearly visible west of the marsh-island complex.",
+        "uncertainty": "Classified only as a visible shoal; sediment composition and depth are unverified.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery export reviewed 2026-07-24; WGS84 bbox [-86.155,30.405,-86.105,30.449], 1600x1200",
+        "review_date": "2026-07-24",
+        "navigation_use": "not_for_navigation"
+      }
+    }
+  ]
 }
