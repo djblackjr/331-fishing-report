@@ -10,5 +10,7 @@ createRoot(document.getElementById('root')).render(
 // Registers the offline service worker so the report still opens with
 // this morning's data even without a signal out on the water.
 if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => navigator.serviceWorker.register('/sw.js'))
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register(`${import.meta.env.BASE_URL}sw.js`)
+  })
 }
