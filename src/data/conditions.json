@@ -1,33 +1,33 @@
 {
-  "date": "Saturday, July 25, 2026",
+  "date": "Sunday, July 26, 2026",
   "wind": {
     "speed": 10,
     "dir": "W",
-    "description": "W 0 to 10 mph"
+    "description": "W 5 to 10 mph"
   },
-  "weather": "Mostly Sunny · High 94°F · Heat index up to 106°F",
-  "tide": "High tide ~2:59 AM · Low tide ~2:39 PM · Sunrise 5:57 AM",
+  "weather": "Mostly Sunny then Slight Chance Showers And Thunderstorms · High 93°F · Heat index up to 105°F",
+  "tide": "High tide ~3:50 AM · Low tide ~3:27 PM · Sunrise 5:58 AM",
   "tideEvents": [
     {
       "type": "H",
-      "time": "2:59 AM"
+      "time": "3:50 AM"
     },
     {
       "type": "L",
-      "time": "2:39 PM"
+      "time": "3:27 PM"
     }
   ],
-  "sunrise": "5:57 AM",
+  "sunrise": "5:58 AM",
   "sunset": "7:44 PM",
   "stormWindow": "before 1PM",
-  "stormChance": 14,
-  "moonPhase": "Waxing Gibbous (~91% illuminated) — strong tidal push (spring tide)",
+  "stormChance": 24,
+  "moonPhase": "Waxing Gibbous (~96% illuminated) — strong tidal push (spring tide)",
   "waterClarity": "Slightly stained",
-  "sky": "Bright sun",
-  "lastUpdated": "7/25/2026, 6:53:58 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
-  "localBiteReport": "Reports from this past week out of the Santa Rosa Beach/Choctawhatchee Bay area show speckled trout as the most consistent inshore target, with good numbers and a mix of quality fish being found across the bay. Redfish are also active — a bull red over 40 inches was landed recently on a Santa Rosa Beach charter, and guides report a few reds around along with flounder showing up on bay trips. One area guide noted the inshore bite had been somewhat tough due to rough conditions over the past couple of weeks, but described it as improving daily as of mid-July. With water temps at 85°F, early morning departures are the move — fish tend to be most active before the heat of the day sets in.",
-  "localBiteSource": "captainexperiences.com (Choctawhatchee Bay/Santa Rosa Beach reports, posted within the past week); fishingbooker.com Choctawhatchee Bay catch feed (July 2026) · Auto-refreshed via Claude API",
-  "localBiteUpdated": "July 25, 2026",
+  "sky": "Cloudy",
+  "lastUpdated": "7/26/2026, 3:12:09 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "localBiteReport": "Reports from the past week out of the Choctawhatchee Bay area show speckled trout as the standout inshore bite, with a Santa Rosa Beach guide noting good numbers of fish and quality in the catch. Bull redfish are also showing up strong — one angler near Santa Rosa Beach recently landed a 40-inch, 26-lb bull red that put up a 30-minute fight. A Destin-area guide posting about a week ago confirmed that while some weather-related conditions made getting out tricky, the fish bite when conditions cooperated was solid. Water temp at 85°F means early morning trips are the way to go before the heat sets in, with trout scattered across grass flats and reds cruising shallow structure. Flounder are a regular bycatch this time of year in the bay's sandy channels and flat edges.",
+  "localBiteSource": "captainexperiences.com (Choctawhatchee Bay and Destin report pages, reports from 6 days ago and 1 week ago), fishingbooker.com (Choctawhatchee Bay report feed, July 2026) · Auto-refreshed via Claude API",
+  "localBiteUpdated": "July 26, 2026",
   "previousDay": {
     "date": "Saturday, July 25, 2026",
     "wind": {
@@ -40,98 +40,98 @@
   },
   "openMeteo": [
     {
-      "high": 95,
-      "low": 76,
-      "stormChance": 5,
-      "windSpeed": 11,
-      "windDir": "W",
-      "summary": "Overcast"
-    },
-    {
-      "high": 94,
+      "high": 96,
       "low": 78,
-      "stormChance": 19,
-      "windSpeed": 12,
+      "stormChance": 28,
+      "windSpeed": 14,
       "windDir": "W",
       "summary": "Overcast"
     },
     {
-      "high": 103,
+      "high": 98,
       "low": 79,
-      "stormChance": 25,
+      "stormChance": 13,
+      "windSpeed": 20,
+      "windDir": "W",
+      "summary": "Overcast"
+    },
+    {
+      "high": 102,
+      "low": 78,
+      "stormChance": 4,
       "windSpeed": 13,
       "windDir": "W",
-      "summary": "Overcast"
+      "summary": "Rain showers"
     }
   ],
   "forecast": [
     {
-      "day": "Sat, Jul 25",
-      "label": "Today",
-      "high": 94,
-      "low": null,
-      "wind": "W 0 to 10 mph",
-      "storms": 14,
-      "headline": "Mostly Sunny · Heat index 106",
-      "fishingScore": 8.4,
-      "aiCall": "Mostly sunny. High near 94, with temperatures falling to around 88 in the afternoon. Heat index values as high as 106. West wind 0 to 10 mph.",
-      "emoji": "☀️"
-    },
-    {
       "day": "Sun, Jul 26",
-      "label": "Tomorrow",
-      "high": 94,
+      "label": "Today",
+      "high": 93,
       "low": null,
       "wind": "W 5 to 10 mph",
-      "storms": 20,
-      "headline": "Mostly Sunny then Slight Chance Showers And Thunderstorms · Heat index 106",
-      "fishingScore": 7.8,
-      "aiCall": "A slight chance of showers and thunderstorms between 4pm and 5pm. Mostly sunny. High near 94, with temperatures falling to around 89 in the afternoon. Heat index values as high as 106. West wind 5 to 10 mph, with gusts as high as 20 mph. Chance of precipitation is 20%.",
+      "storms": 24,
+      "headline": "Mostly Sunny then Slight Chance Showers And Thunderstorms · Heat index 105",
+      "fishingScore": 7.5,
+      "aiCall": "A slight chance of showers and thunderstorms between 2pm and 5pm. Mostly sunny. High near 93, with temperatures falling to around 87 in the afternoon. Heat index values as high as 105. West wind 5 to 10 mph, with gusts as high as 20 mph. Chance of precipitation is 20%. New rainfall amounts less than a tenth of an inch possible.",
       "emoji": "⛈️"
     },
     {
       "day": "Mon, Jul 27",
-      "label": "Monday",
-      "high": 96,
+      "label": "Tomorrow",
+      "high": 98,
       "low": null,
-      "wind": "W 5 to 10 mph",
-      "storms": 23,
-      "headline": "Mostly Sunny then Slight Chance Showers And Thunderstorms",
-      "fishingScore": 7.6,
-      "aiCall": "A slight chance of showers and thunderstorms after 1pm. Mostly sunny, with a high near 96. West wind 5 to 10 mph. Chance of precipitation is 20%.",
+      "wind": "NW 5 to 10 mph",
+      "storms": 30,
+      "headline": "Mostly Sunny then Chance Showers And Thunderstorms · Heat index 113",
+      "fishingScore": 7.3,
+      "aiCall": "A chance of showers and thunderstorms after 1pm. Mostly sunny. High near 98, with temperatures falling to around 94 in the afternoon. Heat index values as high as 113. Northwest wind 5 to 10 mph. Chance of precipitation is 30%.",
       "emoji": "⛈️"
+    },
+    {
+      "day": "Tue, Jul 28",
+      "label": "Tuesday",
+      "high": 99,
+      "low": null,
+      "wind": "W 0 to 10 mph",
+      "storms": 3,
+      "headline": "Sunny",
+      "fishingScore": 8.9,
+      "aiCall": "Sunny, with a high near 99.",
+      "emoji": "☀️"
     }
   ],
-  "dateISO": "2026-07-25",
-  "aiSummary": "Speckled trout are the most consistent target across Choctawhatchee Bay right now, with redfish and flounder also showing up on bay trips — the bite is improving daily after a stretch of rough conditions. Today's heat index will push to 106°F, so an early morning departure is essential; fish your best water before the sun gets high and the heat sets in. A 14% storm chance exists before 1 PM, so keep an eye on the western sky and plan to be off exposed water by midday.",
+  "dateISO": "2026-07-26",
+  "aiSummary": "Choctawhatchee Bay is fishing well this Sunday morning, with speckled trout leading the inshore bite across grass flats and bull redfish showing up strong near structure — both species are responding best to early outings before the heat index climbs toward 105°F. A 24% storm chance with a window before 1 PM means you have a solid morning window, especially on the falling tide that sets up around 3:27 PM; plan to be off exposed water by midday. Water temp is holding at 85°F with slightly stained clarity, so lean toward louder or chartreuse presentations to help fish locate your bait.",
   "locationNotes": {
     "bridge": {
-      "aiNote": "The 331 Bridge spans the narrow neck of Choctawhatchee Bay, creating a current funnel that pushes bait through on both tides and concentrates speckled trout, redfish, sheepshead, and black drum around the pilings year-round. The lee-side pilings are the prime ambush zone on incoming tides, as fish stack up to intercept bait moving through the funnel. Keep in mind this is open, exposed water — it's typically the first spot to become unfishable when wind picks up.",
-      "todaysCall": "Today's west wind at 0–10 mph is light enough to keep the bridge fishable, but get there early — the strong waxing gibbous tidal push means current will be moving well even as the tide drops toward the 2:39 PM low. Work the lee-side pilings during the morning outgoing tide; slightly stained water favors darker or chartreuse soft plastics and suspending plugs worked tight to the structure. The incoming tide ran through the predawn hours, so by sunrise the tide will be falling — position on the downcurrent side of the pilings and let your presentation sweep naturally. With the slim storm window before 1 PM and exposed conditions here, plan to wrap up or relocate well before noon."
+      "aiNote": "The 331 Bridge spans a narrow neck of Choctawhatchee Bay, creating a current funnel that pushes bait through on both tides and concentrates speckled trout, redfish, sheepshead, and black drum around the pilings year-round. The lee-side pilings are the prime ambush zone, particularly on incoming tides when fish stack up to intercept passing bait. Keep in mind this is open, exposed water — it's typically the first spot to become unfishable when wind builds or weather moves through.",
+      "todaysCall": "The near-slack incoming tide early this morning transitions to a long falling tide bottoming out around 3:27 PM, so the moving water through the bridge funnel will be most productive in those mid-morning falling-tide hours. Light westerly winds at 5–10 mph will create a manageable chop on this exposed water, but keep a close eye on conditions as the storm window opens before 1 PM — this is the first spot you'll want to leave if skies build. Work the lee-side pilings hard with soft plastics or live shrimp; the near-full moon's spring-tide push means stronger-than-average current through the funnel, which should stack bait and predators together. Slightly stained water favors darker or chartreuse plastics to help trout and reds zero in on your presentation. Aim to be fishing by first light and wrap up well before noon given the storm risk."
     },
     "alaqua": {
-      "aiNote": "Alaqua Bayou offers protected water with a strong year-round redfish population, along with trout and flounder at the mouth. The oyster bars at the creek mouth are the prime target zone, while tree cover keeps interior water a few degrees cooler than the open bay and provides shelter from wind and weather. The upper creek transitions to brackish water where bass join the mix alongside smaller reds.",
-      "todaysCall": "The tree-lined banks and protected layout make Alaqua a smart choice on a scorching day like today — that shade buffer is meaningful when the heat index is pushing 106°F, so work the shaded, cooler stretches of the upper creek during the midmorning hours. The tide is falling toward a 2:39 PM low, so focus the early morning on the oyster bars at the creek mouth while there's still enough water to hold fish; as the tide drops, reds will push up into the grass edges and creek bends. Slightly stained water calls for louder, more visible presentations — a gold spoon, weedless paddle tail in a dark color, or popping cork over the oyster bars are all good options. Flounder have been showing on bay trips this week, so don't overlook the creek mouth with a slow-dragged jig on or near the bottom."
+      "aiNote": "Alaqua Bayou offers well-protected water with a strong year-round redfish population, plus trout and flounder at the mouth — the oyster bars at the creek entrance are the prime target zone. Tree cover keeps water temperatures a few degrees cooler than the open bay and provides meaningful shelter from wind and weather. The upper creek transitions toward brackish conditions and can produce bass alongside smaller redfish.",
+      "todaysCall": "This is a smart choice today given the heat index pushing toward 105°F — the tree-lined banks offer real shade and the protected nature of the bayou keeps chop manageable even with west winds at 5–10 mph. Fish the oyster bars at the mouth during the falling tide this afternoon, but the better play today is an early morning session before the storm window opens before 1 PM. Bay-wide reports confirm reds are showing up strong, and Alaqua's year-round redfish population should be active in the slightly stained water — try weedless gold spoons or dark soft plastics along the oyster bar edges. The near-full waxing gibbous moon is driving a strong tidal push, so expect more pronounced water movement through the creek mouth than a typical neap tide, which will concentrate bait and fish on the bars. Get in early, work the shade, and plan your exit ahead of the midday storm window."
     },
     "basin": {
-      "aiNote": "Basin Bayou sees less fishing pressure than neighboring spots, which typically means less-educated fish willing to bite. The interior grass flats are classic sight-fishing territory for redfish in under two feet of water, and pompano occasionally show at the mouth on moving tides in late spring and early summer. It offers a quieter experience but is less protected than LaGrange when weather starts to build.",
-      "todaysCall": "Lower pressure here makes Basin worth a look, especially for sight-fishing reds on the interior grass flats during the first couple hours of daylight when the sun angle is low enough to spot fish without spooking them. The falling tide this morning will concentrate reds on the flat edges and drain points — pole or drift quietly and look for wakes or tailing fish in the skinny water. Slightly stained clarity means you may need to get a bit closer than ideal for sight-fishing, so move slow and keep the trolling motor noise minimal. With the storm window closing before 1 PM and Basin offering less weather protection than LaGrange, keep your exit plan in mind and don't push your luck if clouds start building to the west."
+      "aiNote": "Basin Bayou sees notably less fishing pressure than nearby Alaqua and LaGrange, which tends to mean less-educated fish and better reaction strikes. The interior grass flats are classic sight-fishing territory for redfish in under two feet of water, and pompano occasionally show at the mouth on moving tides in late spring and early summer. It is somewhat less protected than LaGrange when weather builds, so factor that in on unsettled days.",
+      "todaysCall": "The lighter pressure here makes Basin Bayou worth the trip on a Sunday when other spots may see more boat traffic, and the interior grass flats are ideal for sight-fishing reds in the early morning light before heat and glare become a factor. With water temp at 85°F, fish will be most active in the first two to three hours after sunrise at 5:58 AM — get shallow and look for tailing or cruising reds on the flat before the sun gets high. The spring-tide push from the near-full moon will move water meaningfully across these shallow flats, helping push baitfish up and triggering feeding activity. Slightly stained water reduces sight-fishing visibility somewhat, so polarized lenses are a must and you may need to rely more on popping corks or noisy topwaters to draw strikes. Be mindful that Basin offers less weather protection than LaGrange — with a 24% storm chance before 1 PM, commit to an early-morning window and don't push your luck into the afternoon."
     },
     "lagrange": {
-      "aiNote": "LaGrange Bayou is widely regarded as the top trout producer in this part of the bay, with legendary oyster bars at the mouth and interior grass flats that hold redfish year-round. Deep holes inside the bayou hold black drum and sheepshead, and the overall layout is the most protected water on this side of the bay. When weather builds, LaGrange is the go-to refuge on this stretch.",
-      "todaysCall": "LaGrange is an excellent call today — it's the most protected spot on this side of the bay if that sub-1 PM storm chance materializes, and the oyster bars at the mouth will be firing during the morning outgoing tide ahead of the 2:39 PM low. Speckled trout are the top producer across the bay right now, and the mouth bars here are prime early-morning trout water; work topwaters or suspending plugs over and around the shell in the low-light window right after the 5:57 AM sunrise. As the tide drops, shift inside to the grass flats and target reds in the draining water; the strong spring-tide pull from the waxing gibbous moon means more pronounced water movement and better bait concentration than a typical summer day. Slightly stained water suits this spot well — natural-colored soft plastics and gold spoons both work, and the deeper interior holes are worth a drop for black drum if the flat bite slows."
+      "aiNote": "LaGrange Bayou is considered the top trout producer among the bayous on this side of the bay, with legendary oyster bars at the mouth and interior grass flats that hold redfish year-round. Deep holes inside the bayou hold black drum and sheepshead, rounding out a diverse fishery. It is the most protected water on this side of the bay, making it the default choice when weather is building or conditions deteriorate elsewhere.",
+      "todaysCall": "LaGrange is the right call today for anglers who want premium protection if that pre-1 PM storm window materializes — you can stay productive and stay safe without having to run back to the ramp. Start on the oyster bar mouth during the early falling tide phase and work soft plastics or live shrimp across the bar edges; bay-wide reports show trout as the standout bite right now and these bars are as good a trout address as exists on the bay. The strong tidal push from the near-full moon will create above-average current flow across the bars, which is exactly the kind of feeding trigger that stacks trout and reds on ambush points. Slightly stained water calls for chartreuse, root beer, or dark-bodied plastics rather than natural-match patterns. If afternoon storms do roll through, you can retreat deeper into the bayou's interior and target black drum or sheepshead around the deep holes while waiting out the weather — this spot gives you options."
     },
     "fourmile": {
-      "aiNote": "Four Mile Creek is a tidal creek running between Shipyard Marina and the bay, making it one of the most convenient launches on the water. Incoming tides push baitfish up the creek, concentrating redfish and trout in the bends and grass edges, while the creek mouth is a reliable flounder zone. The upper section transitions to brackish water where bass appear alongside smaller reds, and the short, enclosed layout makes it the safest fishery when weather threatens.",
-      "todaysCall": "Four Mile is your safety net today — if that early storm chance pops before 1 PM, this enclosed creek is where you want to be. The tide was incoming through the predawn hours and is now falling toward the afternoon low, so fish the bends and grass edges where reds and trout stacked up on the overnight push; they'll be holding tight as water drains back out. Flounder have been reported on bay trips this week, so work a slow jig or live finger mullet along the bottom near the creek mouth early. The light west wind at 0–10 mph won't factor in here at all given the creek's protection, making for comfortable, fishable conditions throughout the morning."
+      "aiNote": "Four Mile Creek is a short tidal creek running between Shipyard Marina and the bay, making it one of the most convenient and protected fisheries on this part of the bay. Tidal flow pushes baitfish up the creek on incoming tides, concentrating redfish and trout in the bends and along grass edges. The creek mouth is a prime flounder zone, and the upper section transitions toward brackish water that holds bass alongside smaller reds.",
+      "todaysCall": "With the storm window before 1 PM and heat index approaching 105°F, Four Mile Creek's short run time and protected character make it an excellent default for today — you're never far from the ramp if conditions go sideways fast. The long falling tide running from now through the 3:27 PM low will push baitfish back toward the creek mouth, concentrating reds and trout in the bends through the mid-morning hours; fish the inside turns of each bend with paddle-tail soft plastics or live shrimp. The creek mouth is worth working for flounder, which the bay-wide report confirms are a regular bycatch on flat edges and sandy channels this time of year — drag a slow-rolled plastic or live finger mullet along the bottom at the transition zone. Slightly stained water here shouldn't be a major issue in the tight confines of the creek where fish are keying on current and structure rather than open-water sight-feeding. This is as close to a no-excuses, all-conditions option as the dashboard offers today."
     },
     "hogtown": {
-      "aiNote": "Hogtown Bayou is a signature Santa Rosa Beach guide destination and one of the most productive trout flats on the bay. Summer mornings are the peak window, with trout stacked on grass flats in two to four feet of water, and Spanish mackerel show at the mouth on moving tides. It sees regular pressure from local guides, but produces consistently enough to remain a top pick despite the traffic.",
-      "todaysCall": "Hogtown is a natural fit today — guide reports from this week specifically highlight the Santa Rosa Beach and Choctawhatchee Bay area as producing solid trout numbers with quality fish mixed in, and summer mornings on the grass flats here are the peak window for exactly that. Hit the 2–4 foot grass zone right at sunrise (5:57 AM) and work it hard through the early outgoing tide; the strong spring-tide current from the nearly full moon will keep bait moving and trout active. Slightly stained water means a noisy topwater or a chartreuse/white paddle tail under a popping cork will outperform finesse presentations in low light. Factor in the extra run time from Shipyard Marina compared to the bayous closer to the 331 bridge, and be heading back or tucked into protected water before the pre-1 PM storm window opens."
+      "aiNote": "Hogtown Bayou is a signature Santa Rosa Beach guide destination and one of the most consistently productive trout flats on Choctawhatchee Bay. Summer mornings are peak season, with trout stacked on grass in two to four feet of water, and Spanish mackerel show at the mouth on moving tides. The bayou sees regular angler pressure but continues to produce reliably — factor in the longer run time from the 331 Bridge area.",
+      "todaysCall": "This is the spot that aligns most directly with the bay-wide bite report — the Santa Rosa Beach guide notes in recent reports are almost certainly referencing Hogtown Bayou and surrounding flats, making this a high-confidence pick for trout right now. Hit the grass flats in two to four feet of water as early as possible after the 5:58 AM sunrise; the near-full moon's spring tide will be moving water across the flats even as the tide shifts to falling, which keeps trout actively feeding rather than sulking in deep holes. Slightly stained water means topwaters and louder subsurface presentations — popping corks with shrimp or paddle-tails in chartreuse or dark colors — will outperform finesse or natural-match rigs today. Check the mouth for Spanish mackerel on the moving water before heading to the flats; they tend to show when current is running and bait is concentrated. Factor in the longer run time from Shipyard Marina and make sure you're set up and fishing well before the pre-1 PM storm window — Hogtown is worth the run, but not if you're arriving as weather builds."
     },
     "rocky": {
-      "aiNote": "Rocky Bayou sits inside Fred Gannon Rocky Bayou State Park near Niceville, offering protected, scenic water that sees significantly less pressure than the bayous closer to the 331 bridge. Freshwater influence from Rocky Creek makes flounder fishing excellent, and the glass-calm state park coves are ideal for sight-fishing redfish. Mangrove snapper hold near dock pilings, rounding out a diverse and underutilized fishery.",
-      "todaysCall": "Rocky Bayou's low pressure and glass-calm coves make it a rewarding destination on a bright, sunny summer day — sight-fishing for reds in the clear state park shallows is at its best in early morning before the sun gets high and fish go deep into the shade. The 85°F water and bright sun will push fish tight to shaded structure and deeper edges by mid-morning, so prioritize the sight-fishing window in the first 90 minutes after the 5:57 AM sunrise. Mangrove snapper near the dock pilings are a great secondary target as the heat climbs — small jigs or live shrimp fished tight to the structure will get bit. Rocky is the furthest run from Shipyard Marina, so plan your departure accordingly and keep the pre-1 PM storm window in mind when deciding when to head back."
+      "aiNote": "Rocky Bayou sits inside Fred Gannon Rocky Bayou State Park near Niceville, offering a protected, scenic, and significantly less-pressured fishery compared to bayous closer to the 331 Bridge. Freshwater influence from Rocky Creek makes it an excellent flounder destination, and the glass-calm state park coves are well suited to sight-fishing redfish. Mangrove snapper hold near dock pilings, and the bayou is the furthest location from Shipyard Marina on this dashboard.",
+      "todaysCall": "Rocky Bayou's state park setting means light Sunday pressure even on a summer weekend, and the protected coves will stay calm and fishable even if the westerly breeze ticks up toward the higher end of the 5–10 mph forecast. The freshwater influence keeps water temperatures marginally cooler than the open bay, which matters on a day where surface temps are sitting at 85°F — target the upper sections of the bayou early for reds and flounder before heat pushes fish deeper or tighter to shade. Work the glass-calm coves for sight-fishing reds on the falling tide as water clarity, though slightly stained, is relatively better in the shaded, low-traffic environment here. Mangrove snapper around dock pilings are a reliable bonus target on any tide; drop a small jig or live shrimp tight to structure for a quick hit. The significant run time from Shipyard Marina is today's main logistical consideration — leave early enough to fish the prime morning window and still be headed home well before the pre-1 PM storm chance arrives."
     }
   },
   "waterTemp": 85
