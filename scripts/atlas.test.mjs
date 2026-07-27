@@ -102,10 +102,10 @@ test("every exported GeoJSON file is a valid FeatureCollection matching its laye
 test("Jolly Bay structure packet is exported once with reconciled geometry types", async () => {
   const expected = {
     channels: ["LineString", 3],
-    creek_mouths: ["Point", 3],
+    creek_mouths: ["Point", 7],
     shoreline_points: ["Point", 3],
     sand_holes: ["Polygon", 3],
-    navigation_cautions: ["Polygon", 2],
+    navigation_cautions: ["Polygon", 3],
   };
   const ids = new Set();
 
@@ -123,7 +123,7 @@ test("Jolly Bay structure packet is exported once with reconciled geometry types
     }
   }
 
-  assert.equal(ids.size, 14);
+  assert.equal(ids.size, 19);
 });
 
 test("Jolly Bay pilot: exactly 6 located + 3 unlocated fishing_locations, none promoted past visually_reviewed", async () => {
