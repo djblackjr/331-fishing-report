@@ -1,5 +1,17 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
+import L from "leaflet";
+import "leaflet/dist/leaflet.css";
+import markerIcon from "leaflet/dist/images/marker-icon.png";
+import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
+import markerShadow from "leaflet/dist/images/marker-shadow.png";
 import dailyData from "./data/conditions.json";
+
+// Leaflet's default marker icon references relative image paths that break
+// under Vite's bundling (the images never resolve, leaving a blank/broken
+// pin) — re-pointing them at the actual bundled asset URLs fixes it globally
+// for every L.marker() call in this file.
+delete L.Icon.Default.prototype._getIconUrl;
+L.Icon.Default.mergeOptions({ iconUrl: markerIcon, iconRetinaUrl: markerIcon2x, shadowUrl: markerShadow });
 
 // ── SHARED CONDITIONS ─────────────────────────────────────────────────────────
 // Only the truly evergreen config lives here. Everything that changes day-to-day
@@ -301,6 +313,7 @@ const LOCATIONS = [
     id: "bridge",
     label: "331 Bridge",
     emoji: "🌉",
+    lat: 30.400, lng: -86.135, // approximate — US-331/Clyde B. Wells bridge crossing, not a precise survey point
     overallScore: 8.0,
     conditions: "Excellent",
     species: [
@@ -326,6 +339,7 @@ const LOCATIONS = [
     id: "alaqua",
     label: "Alaqua Bayou",
     emoji: "🌿",
+    lat: 30.4865855, lng: -86.2029980, // OpenStreetMap
     overallScore: 7.5,
     conditions: "Good",
     species: [
@@ -347,6 +361,7 @@ const LOCATIONS = [
     id: "basin",
     label: "Basin Bayou",
     emoji: "🦅",
+    lat: 30.4940855, lng: -86.2432766, // OpenStreetMap
     overallScore: 7.5,
     conditions: "Good",
     species: [
@@ -368,6 +383,7 @@ const LOCATIONS = [
     id: "lagrange",
     label: "LaGrange Bayou",
     emoji: "🦪",
+    lat: 30.4668636, lng: -86.1457743, // OpenStreetMap
     overallScore: 8.5,
     conditions: "Excellent",
     species: [
@@ -389,6 +405,7 @@ const LOCATIONS = [
     id: "fourmile",
     label: "Four Mile Creek",
     emoji: "🛶",
+    lat: 30.4904, lng: -86.1376, // NOAA chart label, near Shipyard Marina's own address
     overallScore: 7.5,
     conditions: "Good",
     species: [
@@ -410,6 +427,7 @@ const LOCATIONS = [
     id: "hogtown",
     label: "Hogtown Bayou",
     emoji: "🌾",
+    lat: 30.3979769, lng: -86.2454994, // OpenStreetMap
     overallScore: 7.5,
     conditions: "Good",
     species: [
@@ -431,6 +449,7 @@ const LOCATIONS = [
     id: "rocky",
     label: "Rocky Bayou",
     emoji: "🪨",
+    lat: 30.5051974, lng: -86.4377264, // OpenStreetMap
     overallScore: 7.5,
     conditions: "Good",
     species: [
@@ -452,6 +471,7 @@ const LOCATIONS = [
     id: "mack",
     label: "Mack Bayou",
     emoji: "🌊",
+    lat: 30.4003944, lng: -86.3030728, // OpenStreetMap
     overallScore: 7.0,
     conditions: "Good",
     species: [
@@ -466,13 +486,14 @@ const LOCATIONS = [
       { order: 2, name: "Marsh Grass Edges", tide: "Mid-incoming", steps: ["Weedless paddle-tail worked along grass lines", "Watch for tailing reds in skinny water on a rising tide", "Sight-fishing quality similar to the state-park bayous further north"] },
       { order: 3, name: "Interior Holes", tide: "Outgoing", steps: ["Shrimp or cut bait on bottom for black drum", "Sheepshead near any structure with fiddler crab", "Good fallback once the mouth bite slows on the drop"] },
     ],
-    aiNote: "Mack Bayou sits on Choctawhatchee Bay's north shore near Topsail Hill Preserve State Park, well west of the 331 Bridge — this is a long-run destination, not a quick local trip. It shares the same protected-bayou character as Alaqua and LaGrange (marsh grass, oyster bars, a few interior holes) and sees noticeably less fishing pressure simply because of the distance. Neighbors Hewett Bayou and Buck Bayou immediately to the east, so all three can realistically be fished in one trip.",
+    aiNote: "Mack Bayou sits on the barrier-island (30-A) side of Choctawhatchee Bay near Topsail Hill Preserve State Park, well west of the 331 Bridge — this is a long-run destination, not a quick local trip. It shares the same protected-bayou character as Alaqua and LaGrange (marsh grass, oyster bars, a few interior holes) and sees noticeably less fishing pressure simply because of the distance. Neighbors Hewett Bayou and Buck Bayou immediately to the east, so all three can realistically be fished in one trip.",
     todaysCall: "Mack Bayou is a run-time spot — check that the long haul out here is worth it before committing. Fish the mouth and grass edges early on the incoming tide, then drop into the interior holes as the tide falls. Bay-wide conditions and bite trends generally apply here too, since the habitat mirrors the closer-in bayous — just budget extra time getting to and from the dock.",
   },
   {
     id: "hewett",
     label: "Hewett Bayou",
     emoji: "🦀",
+    lat: 30.3987, lng: -86.2935, // approximate — read from NOAA chart label, not in OpenStreetMap
     overallScore: 7.0,
     conditions: "Good",
     species: [
@@ -487,13 +508,14 @@ const LOCATIONS = [
       { order: 2, name: "Marsh Edges", tide: "Mid-incoming", steps: ["Weedless paddle-tail along the grass line", "Watch for wakes and tailing fish in skinny water", "Low boat traffic out here compared to bayous near the bridge"] },
       { order: 3, name: "Interior Water", tide: "Outgoing", steps: ["Shrimp on bottom in deeper holes for black drum", "Sheepshead near any dock or hard structure", "Fall back here once the entrance bite slows"] },
     ],
-    aiNote: "Hewett Bayou sits immediately east of Mack Bayou on Choctawhatchee Bay's north shore, near Topsail Hill Preserve State Park — another long-run spot from the 331 Bridge, but one that pairs naturally with Mack and Buck Bayou in the same trip. Same protected-bayou habitat as the other north-shore bayous: oyster bars and marsh grass at the mouth, a few deeper interior holes further in. Fishing pressure here is light simply because of the distance from the main boat ramps.",
+    aiNote: "Hewett Bayou sits immediately east of Mack Bayou on the barrier-island (30-A) side of Choctawhatchee Bay, near Topsail Hill Preserve State Park — another long-run spot from the 331 Bridge, but one that pairs naturally with Mack and Buck Bayou in the same trip. Same protected-bayou habitat as its neighbors: oyster bars and marsh grass at the mouth, a few deeper interior holes further in. Fishing pressure here is light simply because of the distance from the main boat ramps.",
     todaysCall: "Treat Hewett Bayou as part of a north-shore run alongside Mack and Buck Bayou rather than a standalone trip. Work the entrance and marsh edges early on the incoming tide, then fall back to the interior holes as the tide drops. General bay-wide wind and storm guidance applies the same way it does at the closer bayous — the extra factor here is simply run time.",
   },
   {
     id: "buck",
     label: "Buck Bayou",
     emoji: "🦌",
+    lat: 30.4079007, lng: -86.3087806, // OpenStreetMap
     overallScore: 6.5,
     conditions: "Fair",
     species: [
@@ -508,7 +530,7 @@ const LOCATIONS = [
       { order: 2, name: "Marsh Grass Edges", tide: "Mid-incoming", steps: ["Weedless paddle-tail along grass edges", "Sight-fish for tailing reds if water is clear", "Quiet water — pole or drift rather than run the motor"] },
       { order: 3, name: "Interior Water", tide: "Outgoing", steps: ["Shrimp on bottom in deeper spots for black drum", "Good last stop before heading back out to the bay"] },
     ],
-    aiNote: "Buck Bayou is the smallest and least-documented of the three neighboring bayous (with Mack and Hewett) on Choctawhatchee Bay's north shore near Topsail Hill Preserve State Park. Habitat and species mix should track its larger neighbors — marsh grass, some oyster structure, a modest interior — but there's less basis to speak confidently about it, hence the more conservative score and confidence numbers here. Best treated as a bonus stop on a Mack/Hewett Bayou trip rather than a standalone destination.",
+    aiNote: "Buck Bayou is the smallest and least-documented of the three neighboring bayous (with Mack and Hewett) on the barrier-island (30-A) side of Choctawhatchee Bay near Topsail Hill Preserve State Park. Habitat and species mix should track its larger neighbors — marsh grass, some oyster structure, a modest interior — but there's less basis to speak confidently about it, hence the more conservative score and confidence numbers here. Best treated as a bonus stop on a Mack/Hewett Bayou trip rather than a standalone destination.",
     todaysCall: "Fish Buck Bayou as an add-on to a Mack/Hewett Bayou trip rather than the main destination — work the mouth and grass edges on the incoming tide. General wind, storm, and tide guidance for the north-shore bayous applies here too, but treat any species pattern here as a reasonable guess rather than a proven local pattern.",
   },
 ];
@@ -967,6 +989,32 @@ function LurePicker({ lureKey, lureList }) {
   );
 }
 
+// Small embedded map per location, same idea as the standalone Fishing
+// Intelligence Atlas (atlas.html) but scoped to a single spot inline in the
+// daily report. Leaflet manages its own DOM imperatively — same reason the
+// Atlas stays vanilla JS instead of using react-leaflet — so this mounts and
+// tears down a whole map instance per location via a plain effect rather
+// than trying to imperatively pan/update one persistent instance across
+// location switches. Simpler and correctly avoids stale state when the user
+// swipes to a different spot.
+function LocationMiniMap({ lat, lng, label }) {
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    if (!containerRef.current || lat == null || lng == null) return;
+    const map = L.map(containerRef.current, { zoomControl: true, attributionControl: true }).setView([lat, lng], 14);
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    }).addTo(map);
+    L.marker([lat, lng]).addTo(map).bindPopup(label);
+    return () => map.remove();
+  }, [lat, lng, label]);
+
+  if (lat == null || lng == null) return null;
+  return <div ref={containerRef} style={{ height: 220, borderRadius: 10, overflow: "hidden" }} />;
+}
+
 function LocationReport({ loc }) {
   const C = CONDITIONS;
   const lureKey = C.sky === "Cloudy" ? "Cloudy morning" : C.sky === "Bright sun" ? "Bright sun" : C.waterClarity === "Dirty" ? "Dirty water" : "Slightly stained";
@@ -997,6 +1045,15 @@ function LocationReport({ loc }) {
         <div style={{ ...card, width: "100%", boxSizing: "border-box" }}>
           <TideCurve events={C.tideEvents} sunrise={C.sunrise} sunset={C.sunset} stormWindow={C.stormWindow} stormChance={C.stormChance} />
         </div>
+      )}
+
+      {/* Map — same tiles/library as the standalone Fishing Intelligence Atlas */}
+      {loc.lat != null && loc.lng != null && (
+        <Collapsible title="📍 Map" defaultOpen={false}>
+          <div style={{ marginTop: 10, border: "1px solid #1a3828", borderRadius: 10, overflow: "hidden" }}>
+            <LocationMiniMap lat={loc.lat} lng={loc.lng} label={loc.label} />
+          </div>
+        </Collapsible>
       )}
 
       {/* Species */}

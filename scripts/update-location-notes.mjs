@@ -70,19 +70,19 @@ const LOCATIONS = [
     id: "mack",
     label: "Mack Bayou",
     topSpecies: "redfish, speckled trout, flounder",
-    background: "Sits on Choctawhatchee Bay's north shore near Topsail Hill Preserve State Park, well west of the 331 Bridge — a long-run destination, not a quick local trip. Shares the same protected-bayou character as Alaqua and LaGrange (marsh grass, oyster bars, a few interior holes) and sees less pressure simply due to distance. Neighbors Hewett Bayou and Buck Bayou immediately to the east — realistically fishable in the same trip.",
+    background: "Sits on the barrier-island (30-A) side of Choctawhatchee Bay near Topsail Hill Preserve State Park, well west of the 331 Bridge — a long-run destination, not a quick local trip. Shares the same protected-bayou character as Alaqua and LaGrange (marsh grass, oyster bars, a few interior holes) and sees less pressure simply due to distance. Neighbors Hewett Bayou and Buck Bayou immediately to the east — realistically fishable in the same trip.",
   },
   {
     id: "hewett",
     label: "Hewett Bayou",
     topSpecies: "redfish, speckled trout, flounder",
-    background: "Sits immediately east of Mack Bayou on Choctawhatchee Bay's north shore, near Topsail Hill Preserve State Park — another long-run spot from the 331 Bridge that pairs naturally with Mack and Buck Bayou in the same trip. Same protected-bayou habitat as the other north-shore bayous: oyster bars and marsh grass at the mouth, a few deeper interior holes further in. Light pressure due to distance from the main boat ramps.",
+    background: "Sits immediately east of Mack Bayou on the barrier-island (30-A) side of Choctawhatchee Bay, near Topsail Hill Preserve State Park — another long-run spot from the 331 Bridge that pairs naturally with Mack and Buck Bayou in the same trip. Same protected-bayou habitat as its neighbors: oyster bars and marsh grass at the mouth, a few deeper interior holes further in. Light pressure due to distance from the main boat ramps.",
   },
   {
     id: "buck",
     label: "Buck Bayou",
     topSpecies: "redfish, speckled trout, flounder",
-    background: "The smallest and least-documented of the three neighboring north-shore bayous (with Mack and Hewett), near Topsail Hill Preserve State Park. Habitat should track its larger neighbors — marsh grass, some oyster structure, a modest interior — but there's less basis to speak confidently about it. Best treated as a bonus stop on a Mack/Hewett Bayou trip rather than a standalone destination.",
+    background: "The smallest and least-documented of the three neighboring bayous (with Mack and Hewett) on the barrier-island (30-A) side of Choctawhatchee Bay, near Topsail Hill Preserve State Park. Habitat should track its larger neighbors — marsh grass, some oyster structure, a modest interior — but there's less basis to speak confidently about it. Best treated as a bonus stop on a Mack/Hewett Bayou trip rather than a standalone destination.",
   },
 ];
 
