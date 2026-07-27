@@ -1049,7 +1049,11 @@ function LocationReport({ loc }) {
 
       {/* Map — same tiles/library as the standalone Fishing Intelligence Atlas */}
       {loc.lat != null && loc.lng != null && (
-        <Collapsible title="📍 Map">
+        // Keyed by location: Collapsible's open/closed state lives inside the
+        // component itself, and LocationReport isn't remounted when you
+        // switch locations — without this key, collapsing the map for one
+        // spot would leave it collapsed after switching to another.
+        <Collapsible key={loc.id} title="📍 Map">
           <div style={{ marginTop: 10, border: "1px solid #1a3828", borderRadius: 10, overflow: "hidden" }}>
             <LocationMiniMap lat={loc.lat} lng={loc.lng} label={loc.label} />
           </div>
