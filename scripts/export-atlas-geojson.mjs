@@ -108,11 +108,13 @@ async function main() {
   await mkdir(GEOJSON_DIR, { recursive: true });
 
   const layers = rowsToObjects(db.prepare(`SELECT * FROM layers ORDER BY sort_order`));
+  const featureCounts = new Map();
 
   for (const layer of layers) {
     const collection = layer.key === "fishing_locations"
       ? exportFishingLocations()
       : exportHabitatLayer(layer.key);
+    featureCounts.set(layer.key, collection.features.filter((feature) => feature.geometry !== null).length);
     await writeFile(join(GEOJSON_DIR, `${layer.key}.geojson`), JSON.stringify(collection, null, 2) + "\n");
     console.log(`  ${layer.key}.geojson — ${collection.features.length} feature(s)`);
   }
@@ -126,6 +128,7 @@ async function main() {
     category: l.category,
     color: l.color,
     defaultVisible: !!l.default_visible,
+    featureCount: featureCounts.get(l.key),
   }));
   await writeFile(join(OUT_DIR, "layers.json"), JSON.stringify(registry, null, 2) + "\n");
 

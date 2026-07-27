@@ -2,7 +2,7 @@
 // This file is served at /331-fishing-report/sw.js, so relative URLs stay
 // inside the repository instead of leaking to the github.io domain root.
 
-const CACHE_NAME = "331-fishing-report-v2";
+const CACHE_NAME = "331-fishing-report-v3";
 const APP_ROOT = new URL("./", self.location.href).href;
 const APP_SHELL = [
   APP_ROOT,
@@ -52,6 +52,27 @@ self.addEventListener("fetch", (event) => {
           const cache = await caches.open(CACHE_NAME);
           return (await cache.match(request)) || cache.match(APP_ROOT);
         })
+    );
+    return;
+  }
+
+  // Atlas exports keep stable filenames, so prefer the network while online.
+  // Without this, a previously cached empty layer can remain empty after a
+  // later data deployment.
+  if (
+    url.pathname.includes("/atlas/") &&
+    (url.pathname.endsWith(".json") || url.pathname.endsWith(".geojson"))
+  ) {
+    event.respondWith(
+      caches.open(CACHE_NAME).then(async (cache) => {
+        try {
+          const response = await fetch(request);
+          if (response.ok) await cache.put(request, response.clone());
+          return response;
+        } catch {
+          return (await cache.match(request)) || Response.error();
+        }
+      })
     );
     return;
   }

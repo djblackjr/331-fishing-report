@@ -5,7 +5,8 @@
     "geometryType": "Point",
     "category": "waypoints",
     "color": "#4ade80",
-    "defaultVisible": true
+    "defaultVisible": true,
+    "featureCount": 6
   },
   {
     "key": "grass_flats",
@@ -13,7 +14,8 @@
     "geometryType": "Polygon",
     "category": "habitat",
     "color": "#86c7a0",
-    "defaultVisible": true
+    "defaultVisible": true,
+    "featureCount": 0
   },
   {
     "key": "oyster_areas",
@@ -21,7 +23,8 @@
     "geometryType": "Polygon",
     "category": "habitat",
     "color": "#b08968",
-    "defaultVisible": true
+    "defaultVisible": true,
+    "featureCount": 0
   },
   {
     "key": "hard_bottom",
@@ -29,7 +32,8 @@
     "geometryType": "Polygon",
     "category": "habitat",
     "color": "#9ca3af",
-    "defaultVisible": false
+    "defaultVisible": false,
+    "featureCount": 0
   },
   {
     "key": "channels",
@@ -37,7 +41,8 @@
     "geometryType": "LineString",
     "category": "habitat",
     "color": "#38bdf8",
-    "defaultVisible": true
+    "defaultVisible": true,
+    "featureCount": 3
   },
   {
     "key": "drop_offs",
@@ -45,7 +50,8 @@
     "geometryType": "LineString",
     "category": "habitat",
     "color": "#0ea5e9",
-    "defaultVisible": false
+    "defaultVisible": false,
+    "featureCount": 0
   },
   {
     "key": "creek_mouths",
@@ -53,7 +59,8 @@
     "geometryType": "Point",
     "category": "habitat",
     "color": "#22d3ee",
-    "defaultVisible": false
+    "defaultVisible": false,
+    "featureCount": 3
   },
   {
     "key": "sand_holes",
@@ -61,7 +68,8 @@
     "geometryType": "Polygon",
     "category": "habitat",
     "color": "#fde68a",
-    "defaultVisible": false
+    "defaultVisible": false,
+    "featureCount": 3
   },
   {
     "key": "shoreline_points",
@@ -69,7 +77,8 @@
     "geometryType": "Point",
     "category": "habitat",
     "color": "#2dd4bf",
-    "defaultVisible": false
+    "defaultVisible": false,
+    "featureCount": 3
   },
   {
     "key": "redfish_routes",
@@ -77,7 +86,8 @@
     "geometryType": "LineString",
     "category": "species",
     "color": "#f87171",
-    "defaultVisible": false
+    "defaultVisible": false,
+    "featureCount": 0
   },
   {
     "key": "trout_habitat",
@@ -85,7 +95,8 @@
     "geometryType": "Polygon",
     "category": "species",
     "color": "#a78bfa",
-    "defaultVisible": false
+    "defaultVisible": false,
+    "featureCount": 0
   },
   {
     "key": "flounder_habitat",
@@ -93,7 +104,8 @@
     "geometryType": "Polygon",
     "category": "species",
     "color": "#fb923c",
-    "defaultVisible": false
+    "defaultVisible": false,
+    "featureCount": 0
   },
   {
     "key": "kayak_launches",
@@ -101,7 +113,8 @@
     "geometryType": "Point",
     "category": "access",
     "color": "#facc15",
-    "defaultVisible": true
+    "defaultVisible": true,
+    "featureCount": 0
   },
   {
     "key": "boat_ramps",
@@ -109,7 +122,8 @@
     "geometryType": "Point",
     "category": "access",
     "color": "#facc15",
-    "defaultVisible": true
+    "defaultVisible": true,
+    "featureCount": 0
   },
   {
     "key": "hazards",
@@ -117,7 +131,8 @@
     "geometryType": "Point",
     "category": "hazard",
     "color": "#ef4444",
-    "defaultVisible": true
+    "defaultVisible": true,
+    "featureCount": 0
   },
   {
     "key": "navigation_cautions",
@@ -125,7 +140,8 @@
     "geometryType": "Polygon",
     "category": "hazard",
     "color": "#f97316",
-    "defaultVisible": false
+    "defaultVisible": false,
+    "featureCount": 2
   },
   {
     "key": "user_catches",
@@ -133,6 +149,7 @@
     "geometryType": "Point",
     "category": "user",
     "color": "#34d399",
-    "defaultVisible": false
+    "defaultVisible": false,
+    "featureCount": 0
   }
 ]

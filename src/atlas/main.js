@@ -88,7 +88,7 @@ root.innerHTML = `
         <section class="atlas-panel">
           <h2 class="atlas-panel-title">About this map</h2>
           <p class="atlas-panel-hint">
-            Phase 1 pilot for Jolly Bay. Use the layer control (top right of the map) to toggle base maps and habitat/species layers. Most layers start empty — this is the framework, populated as locations are field-validated.
+            Phase 1 pilot for Jolly Bay. Use the layer control (top right of the map) to toggle populated habitat and structure layers. The number beside each layer is its plotted feature count.
           </p>
         </section>
       </aside>
@@ -204,11 +204,12 @@ async function init() {
     return;
   }
 
-  const overlays = {};
   let fishingLocationsLayer = null;
   let fishingLocationsRaw = [];
 
   for (const layerMeta of registry) {
+    if (layerMeta.featureCount === 0) continue;
+
     let featureCollection;
     try {
       featureCollection = await fetchJson(`atlas/geojson/${layerMeta.key}.geojson`);
@@ -216,10 +217,13 @@ async function init() {
       continue; // missing/unbuilt layer file — skip rather than break the whole map
     }
 
+    const plottedFeatureCount = featureCollection.features.filter((feature) => feature.geometry !== null).length;
+    if (plottedFeatureCount === 0) continue;
+
     const leafletLayer = buildFeatureLayer(layerMeta, featureCollection);
-    overlays[layerMeta.label] = leafletLayer;
+    const controlLabel = `${layerMeta.label} (${plottedFeatureCount})`;
     if (layerMeta.defaultVisible) leafletLayer.addTo(map);
-    layersControl.addOverlay(leafletLayer, layerMeta.label);
+    layersControl.addOverlay(leafletLayer, controlLabel);
 
     if (layerMeta.key === "fishing_locations") {
       fishingLocationsLayer = leafletLayer;

@@ -66,6 +66,7 @@ test("every layers.json entry has a valid geometry_type", async () => {
   assert.ok(registry.length > 0);
   for (const layer of registry) {
     assert.ok(["Point", "LineString", "Polygon"].includes(layer.geometryType), `${layer.key} has an invalid geometryType: ${layer.geometryType}`);
+    assert.ok(Number.isInteger(layer.featureCount) && layer.featureCount >= 0, `${layer.key} has an invalid featureCount`);
   }
 });
 
@@ -77,6 +78,11 @@ test("every exported GeoJSON file is a valid FeatureCollection matching its laye
   for (const layer of registry) {
     const collection = JSON.parse(await readFile(join(GEOJSON_DIR, `${layer.key}.geojson`), "utf8"));
     assert.equal(collection.type, "FeatureCollection", `${layer.key}.geojson is not a FeatureCollection`);
+    assert.equal(
+      layer.featureCount,
+      collection.features.filter((feature) => feature.geometry !== null).length,
+      `${layer.key} featureCount does not match its plotted features`
+    );
     for (const feature of collection.features) {
       assert.equal(feature.type, "Feature");
       if (feature.geometry === null) continue; // valid — not yet located
