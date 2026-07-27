@@ -127,16 +127,14 @@ const satellite = L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/servi
 // explicitly, or you get bare land/water polygons with no chart detail.
 // WMS endpoint verified directly against Jolly Bay's bounding box before
 // shipping — see docs/atlas.md.
-// A 1x1 transparent PNG. NOAA's tile server occasionally returns a response
-// Chrome's Opaque Response Blocking rejects (net::ERR_BLOCKED_BY_ORB) under
-// load from requesting all 13 sublayers at once; without a fallback, Leaflet
-// leaves the failed tile's <img> src untouched and the dark map background
-// shows through as a solid black square. `crossOrigin` below (the NOAA
-// service does send Access-Control-Allow-Origin) fixes most of these by
-// making the request a real CORS fetch instead of an opaque no-cors one;
-// this is the safety net for whatever still slips through.
-const TRANSPARENT_TILE =
-  "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=";
+// A 1x1 PNG solid-filled with the chart's own open-water color (verified by
+// sampling a real NCDS response: rgb(175,205,225)), used as the last-resort
+// fallback below. It used to be fully transparent, which let the page's dark
+// theme background (#0a1f14) show through as a solid black square everywhere
+// a tile failed — since failures used to cluster over water, that made the
+// whole bay look like a black hole instead of a merely-lower-detail patch.
+const FALLBACK_TILE =
+  "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVR4nGNYf/YhAASMAl4vKx8FAAAAAElFTkSuQmCC";
 
 const noaaChart = L.tileLayer.wms("https://gis.charttools.noaa.gov/arcgis/rest/services/MCS/NOAAChartDisplay/MapServer/exts/MaritimeChartService/WMSServer", {
   layers: "0,1,2,3,4,5,6,7,8,9,10,11,12",
@@ -145,8 +143,34 @@ const noaaChart = L.tileLayer.wms("https://gis.charttools.noaa.gov/arcgis/rest/s
   version: "1.3.0",
   maxZoom: 18,
   attribution: "Chart data: NOAA/NOS Office of Coast Survey",
-  crossOrigin: "anonymous",
-  errorTileUrl: TRANSPARENT_TILE,
+  // NO crossOrigin here, deliberately: an earlier version set
+  // crossOrigin: "anonymous" believing NOAA's WMS sends
+  // Access-Control-Allow-Origin. It doesn't (checked with curl -I) — so that
+  // setting forced every tile <img> into CORS mode against a server that
+  // never satisfies it, and the browser blocked 100% of tiles outright
+  // ("blocked by CORS policy", confirmed in a real headless-Chromium run),
+  // which is what actually produced the solid-black water, not occasional
+  // ORB flakiness. Plain opaque cross-origin <img> loads need no CORS header
+  // at all for on-screen display, so dropping it is the real fix.
+  errorTileUrl: FALLBACK_TILE,
+});
+
+// Retry a failed tile a couple of times (genuine transient network errors
+// often succeed on a second attempt) before letting Leaflet fall back to
+// FALLBACK_TILE. Retry count is tracked per <img> element since Leaflet
+// reuses/recycles tile elements as you pan.
+const TILE_RETRY_LIMIT = 2;
+const tileRetries = new WeakMap();
+noaaChart.on("tileerror", (e) => {
+  const img = e.tile;
+  const attempts = tileRetries.get(img) || 0;
+  if (attempts >= TILE_RETRY_LIMIT) return;
+  tileRetries.set(img, attempts + 1);
+  const src = img.src;
+  setTimeout(() => {
+    img.src = "";
+    img.src = src;
+  }, 400 * (attempts + 1));
 });
 
 osm.addTo(map);
