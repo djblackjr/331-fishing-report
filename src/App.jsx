@@ -1049,7 +1049,7 @@ function LocationReport({ loc }) {
 
       {/* Map — same tiles/library as the standalone Fishing Intelligence Atlas */}
       {loc.lat != null && loc.lng != null && (
-        <Collapsible title="📍 Map" defaultOpen={false}>
+        <Collapsible title="📍 Map">
           <div style={{ marginTop: 10, border: "1px solid #1a3828", borderRadius: 10, overflow: "hidden" }}>
             <LocationMiniMap lat={loc.lat} lng={loc.lng} label={loc.label} />
           </div>
