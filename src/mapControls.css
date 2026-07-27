@@ -1,0 +1,26 @@
+/* Dark-theme styling for the embedded per-location Leaflet mini-map
+   (LocationMiniMap in App.jsx). Leaflet's default control styling assumes a
+   light page background — the attribution text and zoom buttons render at
+   very low contrast sitting on this app's dark theme, which is what this
+   overrides. Colors match the palette already used throughout App.jsx
+   (#0f2a1c panel background, #d1f0e0 body text, #7ab898 muted text). */
+
+.leaflet-control-attribution {
+  background: #0f2a1cdd !important;
+  color: #d1f0e0 !important;
+}
+.leaflet-control-attribution a { color: #7ab898 !important; }
+
+.leaflet-control-zoom a {
+  background: #0f2a1c !important;
+  color: #d1f0e0 !important;
+  border-color: #1a3828 !important;
+}
+.leaflet-control-zoom a:hover { background: #16351f !important; }
+
+.leaflet-popup-content-wrapper {
+  background: #0f2a1c !important;
+  color: #d1f0e0 !important;
+  border: 1px solid #1a3828;
+}
+.leaflet-popup-tip { background: #0f2a1c !important; }
