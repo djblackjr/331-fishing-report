@@ -1047,19 +1047,6 @@ function LocationReport({ loc }) {
         </div>
       )}
 
-      {/* Map — same tiles/library as the standalone Fishing Intelligence Atlas */}
-      {loc.lat != null && loc.lng != null && (
-        // Keyed by location: Collapsible's open/closed state lives inside the
-        // component itself, and LocationReport isn't remounted when you
-        // switch locations — without this key, collapsing the map for one
-        // spot would leave it collapsed after switching to another.
-        <Collapsible key={loc.id} title="📍 Map">
-          <div style={{ marginTop: 10, border: "1px solid #1a3828", borderRadius: 10, overflow: "hidden" }}>
-            <LocationMiniMap lat={loc.lat} lng={loc.lng} label={loc.label} />
-          </div>
-        </Collapsible>
-      )}
-
       {/* Species */}
       <Collapsible title="🐟 Species Confidence">
         <div style={{ marginTop: 10 }}>
@@ -1448,6 +1435,20 @@ export default function App() {
             <div style={{ fontSize: 20, fontWeight: 700, color: "#f0faf4", marginBottom: 12 }}>
               {activeLoc.emoji} {activeLoc.label} <span style={{ fontSize: 13, color: "#4a6b58", fontWeight: 400 }}>· swipe for next spot</span>
             </div>
+
+            {/* Map — directly below the location choices, same tiles/library as
+                the standalone Fishing Intelligence Atlas. Keyed by location:
+                Collapsible's open/closed state lives inside the component
+                itself, and this isn't remounted when you switch locations —
+                without this key, collapsing the map for one spot would leave
+                it collapsed after switching to another. */}
+            {activeLoc.lat != null && activeLoc.lng != null && (
+              <Collapsible key={activeLoc.id} title="📍 Map">
+                <div style={{ marginTop: 10, border: "1px solid #1a3828", borderRadius: 10, overflow: "hidden" }}>
+                  <LocationMiniMap lat={activeLoc.lat} lng={activeLoc.lng} label={activeLoc.label} />
+                </div>
+              </Collapsible>
+            )}
 
             {/* Location report */}
             {activeLoc && <LocationReport loc={activeLoc} />}
