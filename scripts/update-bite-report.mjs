@@ -30,8 +30,12 @@ Only use a source if it actually has a current post (this week or last) that you
 
 Write a short (3-5 sentence) summary in your own words — paraphrase everything, never quote any source directly, even in quotation marks. If the most recent available reports are more than a week old (charter report blogs often update weekly, not daily), say so plainly rather than presenting stale info as brand new.
 ${waterTemp ? `\nIf you mention water temperature, use ${waterTemp}°F — a same-day measured reading for this exact spot — rather than whatever approximate figure ("low 80s", etc.) turns up in search results, which is often paraphrased from a days-old blog post.` : ""}
+For every source that contributes to the summary, preserve its exact page URL,
+page/report title, and the source's report date when one is visible. Never
+invent a URL or date.
+
 Respond with ONLY a JSON object, no other text, no markdown fences:
-{"localBiteReport": "your summary here", "localBiteSource": "brief attribution, e.g. site names you drew from"}`;
+{"localBiteReport": "your summary here", "localBiteSource": "brief attribution, e.g. site names you drew from", "sources": [{"title": "source/report title", "url": "https://exact-page-url", "reportDate": "YYYY-MM-DD or null"}]}`;
 }
 
 async function callClaude(prompt) {
@@ -85,6 +89,19 @@ async function main() {
     localBiteReport: result.localBiteReport,
     localBiteSource: `${result.localBiteSource} · Auto-refreshed via Claude API`,
     localBiteUpdated: new Date().toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "America/Chicago" }),
+    localBiteEvidence: (result.sources || []).flatMap((source) => {
+      try {
+        const url = new URL(source.url);
+        if (!["http:", "https:"].includes(url.protocol)) return [];
+        return [{
+          title: String(source.title || url.hostname),
+          url: url.href,
+          reportDate: source.reportDate || null,
+        }];
+      } catch {
+        return [];
+      }
+    }),
   };
 
   await writeFile(OUT_PATH, JSON.stringify(updated, null, 2) + "\n");

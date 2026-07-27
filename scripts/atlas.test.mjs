@@ -15,6 +15,7 @@ import { join } from "path";
 const DB_PATH = fileURLToPath(new URL("../db/atlas.db", import.meta.url));
 const GEOJSON_DIR = fileURLToPath(new URL("../public/atlas/geojson/", import.meta.url));
 const LAYERS_PATH = fileURLToPath(new URL("../public/atlas/layers.json", import.meta.url));
+const INTELLIGENCE_PATH = fileURLToPath(new URL("../public/atlas/intelligence.json", import.meta.url));
 
 // Rough Florida-panhandle / Choctawhatchee Bay sanity box — not a precise
 // boundary, just a smoke check that catches gross errors like a lat/lng
@@ -137,4 +138,35 @@ test("Jolly Bay pilot: exactly 6 located + 3 unlocated fishing_locations, none p
 
   const promoted = jollyBay.filter((f) => ["field_verified", "guide_verified"].includes(f.properties.validationStatus));
   assert.equal(promoted.length, 0, "no Jolly Bay pilot location should be promoted past visually_reviewed yet");
+});
+
+test("Atlas intelligence separates regional reports from spot verification and preserves sources", async () => {
+  const intelligence = JSON.parse(await readFile(INTELLIGENCE_PATH, "utf8"));
+  assert.equal(intelligence.type, "FishingIntelligence");
+  assert.match(intelligence.scopeNote, /do not prove a catch/i);
+  assert.ok(intelligence.currentReport.summary.length > 0);
+  assert.ok(intelligence.currentReport.sourceIds.length > 0);
+  assert.ok(intelligence.archivedReports.length >= 3);
+
+  const sourceIds = new Set(intelligence.sources.map((source) => source.id));
+  for (const source of intelligence.sources) {
+    assert.match(source.url, /^https:\/\//, `${source.id} must use an HTTPS source URL`);
+  }
+  for (const profile of Object.values(intelligence.profiles)) {
+    assert.ok(profile.targetSpecies.length > 0);
+    assert.ok(profile.bestTide && profile.approach && profile.baits);
+    for (const sourceId of profile.sourceIds) {
+      assert.ok(sourceIds.has(sourceId), `${profile.label} references missing source ${sourceId}`);
+    }
+  }
+
+  // Species flagged "current" must be exactly the ones the live bite report
+  // actually mentions today — checked structurally, not against a fixed
+  // species list, since localBiteReport is regenerated daily by automation
+  // and will legitimately name different species from one day to the next.
+  const currentSpecies = intelligence.speciesSignals.filter((signal) => signal.current).map((signal) => signal.key).sort();
+  assert.deepEqual(currentSpecies, [...intelligence.currentReport.species].sort());
+  for (const signal of intelligence.speciesSignals) {
+    assert.equal(signal.reportCount > 0, signal.lastReported !== null, `${signal.key} reportCount/lastReported disagree on whether it has ever been reported`);
+  }
 });

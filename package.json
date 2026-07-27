@@ -10,6 +10,7 @@
     "atlas:db": "node scripts/build-atlas-db.mjs",
     "atlas:import-structures": "node scripts/import-structure-layers.mjs",
     "atlas:export": "node scripts/export-atlas-geojson.mjs",
+    "atlas:intelligence": "node scripts/build-atlas-intelligence.mjs",
     "atlas:test": "node --test scripts/atlas.test.mjs"
   },
   "dependencies": {

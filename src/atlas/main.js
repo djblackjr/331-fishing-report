@@ -79,6 +79,11 @@ root.innerHTML = `
           <button class="atlas-reset" id="filter-reset" type="button">Reset filters</button>
         </section>
 
+        <section class="atlas-panel" id="atlas-intelligence-panel" hidden>
+          <h2 class="atlas-panel-title">Current Bay Fishing</h2>
+          <div id="atlas-intelligence-content"></div>
+        </section>
+
         <section class="atlas-panel" id="atlas-pending-panel" hidden>
           <h2 class="atlas-panel-title">Pending Field Validation</h2>
           <p class="atlas-panel-hint">No coordinates yet — not plotted on the map until surveyed.</p>
@@ -232,7 +237,17 @@ async function fetchJson(path) {
   return res.json();
 }
 
-function buildFeatureLayer(layerMeta, featureCollection) {
+function fishingContextForFeature(layerMeta, feature, intelligence) {
+  if (!intelligence) return null;
+  let profileKey = layerMeta.key;
+  if (layerMeta.key === "fishing_locations") {
+    profileKey = intelligence.habitatProfileMap?.[feature.properties?.habitat] || "fishing_locations";
+  }
+  const profile = intelligence.profiles?.[profileKey] || intelligence.profiles?.fishing_locations;
+  return profile ? { profile, packet: intelligence } : null;
+}
+
+function buildFeatureLayer(layerMeta, featureCollection, intelligence) {
   return L.geoJSON(featureCollection, {
     pointToLayer: (feature, latlng) => L.circleMarker(latlng, {
       radius: layerMeta.key === "fishing_locations" ? 9 : 6,
@@ -250,12 +265,87 @@ function buildFeatureLayer(layerMeta, featureCollection) {
         : feature.geometry?.type === "Polygon" ? 0.25 : 0,
     }),
     onEachFeature: (feature, leafletLayer) => {
+      const fishingContext = fishingContextForFeature(layerMeta, feature, intelligence);
       const html = layerMeta.key === "fishing_locations"
-        ? buildLocationPopup(feature.properties)
-        : buildFeaturePopup(feature.properties, layerMeta.label);
-      leafletLayer.bindPopup(html, { maxWidth: 300, className: "atlas-leaflet-popup" });
+        ? buildLocationPopup(feature.properties, fishingContext)
+        : buildFeaturePopup(feature.properties, layerMeta.label, fishingContext);
+      leafletLayer.bindPopup(html, { maxWidth: 340, maxHeight: 420, className: "atlas-leaflet-popup" });
     },
   });
+}
+
+function escapeHtml(value) {
+  return String(value ?? "").replace(/[&<>"']/g, (char) => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
+  }[char]));
+}
+
+function safeHttpUrl(value) {
+  try {
+    const url = new URL(value);
+    return ["http:", "https:"].includes(url.protocol) ? url.href : null;
+  } catch {
+    return null;
+  }
+}
+
+function renderCurrentIntelligence(intelligence) {
+  if (!intelligence?.currentReport) return;
+  const panel = document.getElementById("atlas-intelligence-panel");
+  const content = document.getElementById("atlas-intelligence-content");
+  const currentSpecies = (intelligence.speciesSignals || []).filter((signal) => signal.current);
+  const sourceMap = new Map((intelligence.sources || []).map((source) => [source.id, source]));
+  const sourceLinks = (intelligence.currentReport.sourceIds || [])
+    .map((id) => sourceMap.get(id))
+    .filter(Boolean)
+    .map((source) => {
+      const url = safeHttpUrl(source.url);
+      return url
+        ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(source.label)}</a>`
+        : "";
+    })
+    .filter(Boolean)
+    .join(" · ");
+  const conditions = intelligence.currentConditions || {};
+  const signalMap = new Map((intelligence.speciesSignals || []).map((signal) => [signal.key, signal]));
+  const timelineHtml = (intelligence.archivedReports || []).slice(0, 6).map((report) => {
+    const species = (report.species || [])
+      .map((key) => signalMap.get(key)?.label)
+      .filter(Boolean)
+      .join(", ");
+    const source = (report.sourceIds || []).map((id) => sourceMap.get(id)).find(Boolean);
+    const sourceUrl = safeHttpUrl(source?.url);
+    const sourceHtml = sourceUrl
+      ? `<a href="${escapeHtml(sourceUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(source.label)}</a>`
+      : escapeHtml(report.attribution);
+    return `<li><strong>${escapeHtml(report.displayDate || report.date)}</strong><span>${escapeHtml(species || "No positive species signal")}</span>${sourceHtml}</li>`;
+  }).join("");
+
+  content.innerHTML = `
+    <div class="atlas-intel-date">Regional report · ${escapeHtml(intelligence.currentReport.displayDate)}</div>
+    <div class="atlas-intel-species">
+      ${currentSpecies.map((species) => `<span>${escapeHtml(species.label)}</span>`).join("")}
+    </div>
+    <div class="atlas-intel-conditions">
+      ${conditions.waterTemp != null ? `<span>🌡️ ${escapeHtml(conditions.waterTemp)}°F water</span>` : ""}
+      ${conditions.wind ? `<span>💨 ${escapeHtml(conditions.wind)}</span>` : ""}
+      ${conditions.tide ? `<span>🌊 ${escapeHtml(conditions.tide)}</span>` : ""}
+    </div>
+    <details class="atlas-intel-report">
+      <summary>Read current regional report</summary>
+      <p>${escapeHtml(intelligence.currentReport.summary)}</p>
+    </details>
+    <div class="atlas-intel-evidence">${escapeHtml(intelligence.archivedReports?.length || 0)} archived report records support the trend view.</div>
+    ${timelineHtml ? `
+      <details class="atlas-intel-report atlas-intel-timeline">
+        <summary>View archived evidence timeline</summary>
+        <ul>${timelineHtml}</ul>
+      </details>
+    ` : ""}
+    ${sourceLinks ? `<div class="atlas-intel-sources"><span>Current sources:</span> ${sourceLinks}</div>` : ""}
+    <div class="atlas-intel-caveat">${escapeHtml(intelligence.scopeNote)}</div>
+  `;
+  panel.hidden = false;
 }
 
 function populateSelectOptions(select, values) {
@@ -283,11 +373,19 @@ function renderPendingList(features) {
 
 async function init() {
   let registry;
+  let intelligence = null;
   try {
     registry = await fetchJson("atlas/layers.json");
   } catch (err) {
     document.getElementById("atlas-map").innerHTML = `<div class="atlas-error">Couldn't load atlas layer data (${err.message}). Run "npm run atlas:export" and rebuild.</div>`;
     return;
+  }
+
+  try {
+    intelligence = await fetchJson("atlas/intelligence.json");
+    renderCurrentIntelligence(intelligence);
+  } catch {
+    // The map remains usable if the optional intelligence packet is absent.
   }
 
   let fishingLocationsLayer = null;
@@ -306,7 +404,7 @@ async function init() {
     const plottedFeatureCount = featureCollection.features.filter((feature) => feature.geometry !== null).length;
     if (plottedFeatureCount === 0) continue;
 
-    const leafletLayer = buildFeatureLayer(layerMeta, featureCollection);
+    const leafletLayer = buildFeatureLayer(layerMeta, featureCollection, intelligence);
     const controlLabel = `${layerMeta.label} (${plottedFeatureCount})`;
     if (layerMeta.defaultVisible) leafletLayer.addTo(map);
     layersControl.addOverlay(leafletLayer, controlLabel);

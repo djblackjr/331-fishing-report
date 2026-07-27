@@ -28,6 +28,18 @@
   "localBiteReport": "Reports from the past week out of Santa Rosa Beach and Destin show speckled trout numbers have been solid, with anglers finding plenty of fish throughout the bay and some quality ones mixed in. Bull redfish are also showing up in good shape — one recent Choctawhatchee Bay trip produced a 40-inch, 26-lb bull that took a solid 30-minute fight to land. Flounder are being picked up on bay trips as well, with a local charter reporting redfish, flounder, and trout all in the same session. Water temps are running at 86°F, which is pushing fish to early morning bites and shaded or deeper structure; guides are recommending getting on the water at first light before the heat of the day slows things down. These reports reflect trips from roughly the past week out of the Santa Rosa Beach and Destin area.",
   "localBiteSource": "captainexperiences.com (Choctawhatchee Bay reports page, reports dated 6 days ago and 1 week ago), fishingbooker.com (Choctawhatchee Bay reports page) · Auto-refreshed via Claude API",
   "localBiteUpdated": "July 27, 2026",
+  "localBiteEvidence": [
+    {
+      "title": "Destin Fishing Reports (July 2026)",
+      "url": "https://captainexperiences.com/fishing-reports/locations/regions/destin",
+      "reportDate": "2026-07-13"
+    },
+    {
+      "title": "Choctawhatchee Bay Fishing Reports (July 2026)",
+      "url": "https://fishingbooker.com/reports/destination/us/choctawhatchee-bay",
+      "reportDate": null
+    }
+  ],
   "previousDay": {
     "date": "Monday, July 27, 2026",
     "wind": {

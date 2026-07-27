@@ -34,12 +34,15 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: node scripts/update-location-notes.mjs
 
+      - name: Rebuild sourced Atlas fishing intelligence
+        run: npm run atlas:intelligence
+
       - name: Commit and push if changed
         id: commit
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Auto-refresh fishing conditions"
-          file_pattern: src/data/conditions.json
+          file_pattern: src/data/conditions.json public/atlas/intelligence.json
 
       - name: Trigger Pages deploy
         # A push made using the workflow's default built-in token does NOT

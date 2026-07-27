@@ -80,6 +80,43 @@ html, body, #atlas-root {
 
 .atlas-panel-hint { font-size: 13px; color: #86c7a0; line-height: 1.5; margin: 0; }
 
+.atlas-intel-date { color: #7ab898; font-size: 12px; margin-bottom: 7px; }
+.atlas-intel-species { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 8px; }
+.atlas-intel-species span {
+  padding: 3px 7px;
+  border-radius: 999px;
+  border: 1px solid #4ade8044;
+  background: #0d2918;
+  color: #4ade80;
+  font-size: 11px;
+  font-weight: 600;
+}
+.atlas-intel-conditions { display: grid; gap: 4px; color: #d1f0e0; font-size: 12px; line-height: 1.4; }
+.atlas-intel-report { margin-top: 9px; font-size: 12px; }
+.atlas-intel-report summary { color: #86c7a0; cursor: pointer; font-weight: 600; }
+.atlas-intel-report p { color: #d1f0e0; line-height: 1.55; margin: 7px 0 0; }
+.atlas-intel-timeline ul { list-style: none; padding: 0; margin: 7px 0 0; }
+.atlas-intel-timeline li {
+  display: grid;
+  gap: 2px;
+  padding: 6px 0;
+  border-bottom: 1px solid #1a3828;
+  color: #7ab898;
+  line-height: 1.35;
+}
+.atlas-intel-timeline li:last-child { border-bottom: 0; }
+.atlas-intel-timeline strong { color: #d1f0e0; }
+.atlas-intel-timeline a { color: #38bdf8; }
+.atlas-intel-evidence, .atlas-intel-caveat {
+  margin-top: 8px;
+  color: #7a8578;
+  font-size: 11px;
+  line-height: 1.45;
+}
+.atlas-intel-sources { margin-top: 8px; color: #7ab898; font-size: 11px; line-height: 1.5; }
+.atlas-intel-sources span { color: #86c7a0; font-weight: 600; }
+.atlas-intel-sources a { color: #38bdf8; }
+
 .atlas-field { display: block; margin-bottom: 10px; font-size: 13px; color: #86c7a0; }
 .atlas-field span { display: block; margin-bottom: 4px; }
 .atlas-field select, .atlas-field input[type="range"] { width: 100%; }
@@ -141,8 +178,8 @@ html, body, #atlas-root {
 .atlas-popup-title { font-size: 15px; font-weight: 700; color: #f0faf4; margin-bottom: 6px; }
 .atlas-popup-section-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: #7ab898; margin-top: 6px; }
 .atlas-popup-row { display: flex; justify-content: space-between; gap: 10px; font-size: 12px; padding: 3px 0; }
-.atlas-popup-label { color: #7ab898; }
-.atlas-popup-value { color: #d1f0e0; text-align: right; }
+.atlas-popup-label { color: #7ab898; flex-shrink: 0; }
+.atlas-popup-value { color: #d1f0e0; text-align: right; flex: 1; min-width: 0; overflow-wrap: break-word; }
 .atlas-popup-divider { border-top: 1px solid #1a3828; margin: 6px 0; }
 .atlas-popup-species { display: flex; flex-wrap: wrap; gap: 4px; margin: 4px 0; }
 .atlas-popup-chip {
@@ -154,6 +191,19 @@ html, body, #atlas-root {
   font-size: 11px;
 }
 .atlas-popup-empty { font-size: 12px; color: #7a8578; font-style: italic; margin: 4px 0; }
+.atlas-popup-intel-title { color: #4ade80; font-size: 12px; font-weight: 700; margin-top: 3px; }
+.atlas-popup-caveat {
+  margin-top: 6px;
+  padding: 6px;
+  border-radius: 5px;
+  background: #2a1a00;
+  color: #fde68a;
+  font-size: 10px;
+  line-height: 1.4;
+}
+.atlas-popup-sources { margin-top: 6px; color: #7ab898; font-size: 10px; line-height: 1.45; }
+.atlas-popup-sources span { color: #86c7a0; font-weight: 600; }
+.atlas-popup-sources a { color: #38bdf8; }
 
 /* Leaflet layer control: match the dark theme */
 .leaflet-control-layers {
