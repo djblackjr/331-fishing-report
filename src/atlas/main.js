@@ -113,10 +113,41 @@ const osm = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 });
 
-const satellite = L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}", {
+const satelliteImagery = L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}", {
   maxZoom: 19,
   attribution: "Tiles &copy; Esri &mdash; Source: Esri, Maxar, Earthstar Geographics, and the GIS User Community",
 });
+
+// World_Imagery is pixels only — no place names, water-body labels, or
+// boundaries baked in. Esri's own reference/labels overlay (below) only
+// carries towns and political boundaries; it has no hydrography at all, so
+// on an unincorporated stretch like Jolly Bay it renders completely blank —
+// verified directly (curl'd the raw tile) before relying on it. Water names
+// (bays, rivers, creeks — the ones that actually matter here) come from a
+// separate source: USGS National Map's USGSHydroCached service, a
+// public-domain, transparent-background overlay built specifically to sit
+// on top of imagery. Verified against Jolly Bay's own bounding box: it
+// renders "Jolly Bay", "Mitchell River", "Black Creek", "Bear Creek", etc.
+// It's also an ArcGIS Server REST tile endpoint under the hood, so — like
+// the Esri services below, and unlike Leaflet's own {z}/{x}/{y} default —
+// it takes {z}/{y}/{x} (row before column); confirmed with curl after the
+// {z}/{x}/{y} guess produced ERR_BLOCKED_BY_ORB in a real browser for every
+// tile.
+const satelliteHydroLabels = L.tileLayer("https://basemap.nationalmap.gov/arcgis/rest/services/USGSHydroCached/MapServer/tile/{z}/{y}/{x}", {
+  maxZoom: 16,
+  attribution: "Hydrography &copy; USGS National Map",
+});
+const satellitePlaceLabels = L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}", {
+  maxZoom: 19,
+  attribution: "Labels &copy; Esri",
+});
+// Bundle imagery + both label overlays into one LayerGroup so "Satellite
+// (Esri)" behaves as a single toggleable base layer instead of leaving the
+// labels as separate control entries the user would have to remember to
+// also switch on. Hydro labels sit just above the imagery so their light
+// water tint and linework read directly against the photo; place labels go
+// on top so town names stay legible over both.
+const satellite = L.layerGroup([satelliteImagery, satelliteHydroLabels, satellitePlaceLabels]);
 
 // NOAA Chart Display Service (NCDS) — replaces the retired RNC Tile Service.
 // The service has no single "all symbology" layer name; each S-57 category
