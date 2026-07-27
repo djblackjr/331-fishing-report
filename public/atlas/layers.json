@@ -60,7 +60,7 @@
     "category": "habitat",
     "color": "#22d3ee",
     "defaultVisible": false,
-    "featureCount": 3
+    "featureCount": 7
   },
   {
     "key": "sand_holes",
@@ -141,7 +141,7 @@
     "category": "hazard",
     "color": "#f97316",
     "defaultVisible": false,
-    "featureCount": 2
+    "featureCount": 3
   },
   {
     "key": "user_catches",

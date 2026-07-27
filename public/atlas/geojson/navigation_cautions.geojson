@@ -8,6 +8,54 @@
         "coordinates": [
           [
             [
+              -86.129,
+              30.406
+            ],
+            [
+              -86.123,
+              30.406
+            ],
+            [
+              -86.123,
+              30.404
+            ],
+            [
+              -86.129,
+              30.404
+            ],
+            [
+              -86.129,
+              30.406
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 18,
+        "externalId": "JB-HZ-003",
+        "region": "jolly_bay",
+        "name": "Foul ground at river/bay confluence",
+        "confidence": 65,
+        "validationStatus": "visually_reviewed",
+        "source": "noaa_chart_review: NOAA Chart Display Service (NCDS) WMS (gis.charttools.noaa.gov, MCS/NOAAChartDisplay), sublayers 0-12, reviewed 2026-07-27",
+        "lastUpdated": "2026-07-27",
+        "feature_type": "charted_foul_ground",
+        "field_verified": false,
+        "evidence": "NOAA chart symbology marks charted \"Foul\" ground (obstruction/debris) directly at the confluence where the Choctawhatchee River South Mouth and the Jolly Bay complex open into Choctawhatchee Bay near the ICW.",
+        "uncertainty": "Polygon bounds are a rough box around the charted foul-ground symbol cluster read from a rendered WMS tile, not a precise charted extent.",
+        "source_type": "noaa_chart_review",
+        "source_reference": "NOAA Chart Display Service (NCDS) WMS (gis.charttools.noaa.gov, MCS/NOAAChartDisplay), sublayers 0-12, reviewed 2026-07-27",
+        "review_date": "2026-07-27",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
               -86.125,
               30.4237
             ],

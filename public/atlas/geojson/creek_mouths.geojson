@@ -6,6 +6,34 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -86.1,
+          30.445
+        ]
+      },
+      "properties": {
+        "id": 15,
+        "externalId": "JB-CM-004",
+        "region": "jolly_bay",
+        "name": "Black Creek / Black River entrance",
+        "confidence": 70,
+        "validationStatus": "visually_reviewed",
+        "source": "noaa_chart_review: NOAA labels it Black Creek; OpenStreetMap labels the same waterway Black River (cross-checked 2026-07-27)",
+        "lastUpdated": "2026-07-27",
+        "feature_type": "named_creek_mouth",
+        "field_verified": false,
+        "evidence": "Labeled \"Black Creek\" on the NOAA nautical chart (ENC/NCDS) narrowing from open water into a defined creek channel northeast of Jolly Bay; the same waterway is tagged \"Black River\" in OpenStreetMap. Two independent sources disagree on the name, not on the location.",
+        "uncertainty": "Point placed at the approximate charted narrows/entrance read from a rendered WMS tile; not a surveyed position. Actual usable channel position and depth require on-water review.",
+        "source_type": "noaa_chart_review",
+        "source_reference": "NOAA Chart Display Service (NCDS) WMS (gis.charttools.noaa.gov, MCS/NOAAChartDisplay), sublayers 0-12, reviewed 2026-07-27; name discrepancy cross-checked against OpenStreetMap tile.openstreetmap.org rendering, 2026-07-27",
+        "review_date": "2026-07-27",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -86.123375,
           30.425863
         ]
@@ -26,6 +54,90 @@
         "source_type": "aerial_image_review",
         "source_reference": "Esri World Imagery export reviewed 2026-07-24; WGS84 bbox [-86.155,30.405,-86.105,30.449], 1600x1200",
         "review_date": "2026-07-24",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.124,
+          30.396
+        ]
+      },
+      "properties": {
+        "id": 19,
+        "externalId": "JB-CM-006",
+        "region": "jolly_bay",
+        "name": "Choctawhatchee River — South Mouth",
+        "confidence": 70,
+        "validationStatus": "visually_reviewed",
+        "source": "noaa_chart_review: NOAA Chart Display Service (NCDS) WMS (gis.charttools.noaa.gov, MCS/NOAAChartDisplay), sublayers 0-12, reviewed 2026-07-27",
+        "lastUpdated": "2026-07-27",
+        "feature_type": "named_river_mouth",
+        "field_verified": false,
+        "evidence": "Charted and labeled \"South Mouth\" of the Choctawhatchee River (NOAA ENC/NCDS), a distributary mouth of the Choctawhatchee River south of Jolly Bay near Bunker Cove and Bells Leg.",
+        "uncertainty": "Point placed at the approximate charted label position read from a rendered WMS tile; not a surveyed position. This is the southern distributary mouth, not the main Choctawhatchee River mouth near Freeport.",
+        "source_type": "noaa_chart_review",
+        "source_reference": "NOAA Chart Display Service (NCDS) WMS (gis.charttools.noaa.gov, MCS/NOAAChartDisplay), sublayers 0-12, reviewed 2026-07-27",
+        "review_date": "2026-07-27",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.126,
+          30.405
+        ]
+      },
+      "properties": {
+        "id": 17,
+        "externalId": "JB-CM-007",
+        "region": "jolly_bay",
+        "name": "ICW gateway (Jolly Bay complex to Choctawhatchee Bay)",
+        "confidence": 65,
+        "validationStatus": "visually_reviewed",
+        "source": "noaa_chart_review: NOAA Chart Display Service (NCDS) WMS (gis.charttools.noaa.gov, MCS/NOAAChartDisplay), sublayers 0-12, reviewed 2026-07-27",
+        "lastUpdated": "2026-07-27",
+        "feature_type": "icw_gateway",
+        "field_verified": false,
+        "evidence": "Approximate transition point where the Jolly Bay/Choctawhatchee River delta complex opens into Choctawhatchee Bay and the marked Gulf Intracoastal Waterway (GIWW) mainline; nearest charted GIWW aids to the west include green daybeacon \"C 15\" and red nun \"16\" (approx. 30.392, -86.148).",
+        "uncertainty": "This is a general gateway/transition area, not a single charted point — placed at the charted \"Foul\" ground boundary nearest the river complex. Not a substitute for the actual numbered ICW aids when transiting.",
+        "source_type": "noaa_chart_review",
+        "source_reference": "NOAA Chart Display Service (NCDS) WMS (gis.charttools.noaa.gov, MCS/NOAAChartDisplay), sublayers 0-12, reviewed 2026-07-27",
+        "review_date": "2026-07-27",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.115,
+          30.4255
+        ]
+      },
+      "properties": {
+        "id": 16,
+        "externalId": "JB-CM-005",
+        "region": "jolly_bay",
+        "name": "Mitchell River entrance",
+        "confidence": 70,
+        "validationStatus": "visually_reviewed",
+        "source": "noaa_chart_review: NOAA Chart Display Service (NCDS) WMS (gis.charttools.noaa.gov, MCS/NOAAChartDisplay), sublayers 0-12, reviewed 2026-07-27",
+        "lastUpdated": "2026-07-27",
+        "feature_type": "named_creek_mouth",
+        "field_verified": false,
+        "evidence": "Charted and labeled \"Mitchell River\" (NOAA ENC/NCDS), a distinct river channel entering the Jolly Bay marsh complex just east of the existing pilot area.",
+        "uncertainty": "Point placed at the approximate charted narrows/entrance read from a rendered WMS tile; not a surveyed position.",
+        "source_type": "noaa_chart_review",
+        "source_reference": "NOAA Chart Display Service (NCDS) WMS (gis.charttools.noaa.gov, MCS/NOAAChartDisplay), sublayers 0-12, reviewed 2026-07-27",
+        "review_date": "2026-07-27",
         "navigation_use": "not_for_navigation"
       }
     },
