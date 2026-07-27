@@ -66,6 +66,24 @@ const LOCATIONS = [
     topSpecies: "redfish, speckled trout, flounder, mangrove snapper",
     background: "Sits inside Fred Gannon Rocky Bayou State Park near Niceville — protected, scenic, significantly less pressured than bayous closer to the 331 bridge. Freshwater influence from Rocky Creek makes flounder fishing excellent; glass-calm state park coves are ideal for sight-fishing reds. Mangrove snapper hold near dock pilings. Furthest location from Shipyard Marina — factor in run time.",
   },
+  {
+    id: "mack",
+    label: "Mack Bayou",
+    topSpecies: "redfish, speckled trout, flounder",
+    background: "Sits on Choctawhatchee Bay's north shore near Topsail Hill Preserve State Park, well west of the 331 Bridge — a long-run destination, not a quick local trip. Shares the same protected-bayou character as Alaqua and LaGrange (marsh grass, oyster bars, a few interior holes) and sees less pressure simply due to distance. Neighbors Hewett Bayou and Buck Bayou immediately to the east — realistically fishable in the same trip.",
+  },
+  {
+    id: "hewett",
+    label: "Hewett Bayou",
+    topSpecies: "redfish, speckled trout, flounder",
+    background: "Sits immediately east of Mack Bayou on Choctawhatchee Bay's north shore, near Topsail Hill Preserve State Park — another long-run spot from the 331 Bridge that pairs naturally with Mack and Buck Bayou in the same trip. Same protected-bayou habitat as the other north-shore bayous: oyster bars and marsh grass at the mouth, a few deeper interior holes further in. Light pressure due to distance from the main boat ramps.",
+  },
+  {
+    id: "buck",
+    label: "Buck Bayou",
+    topSpecies: "redfish, speckled trout, flounder",
+    background: "The smallest and least-documented of the three neighboring north-shore bayous (with Mack and Hewett), near Topsail Hill Preserve State Park. Habitat should track its larger neighbors — marsh grass, some oyster structure, a modest interior — but there's less basis to speak confidently about it. Best treated as a bonus stop on a Mack/Hewett Bayou trip rather than a standalone destination.",
+  },
 ];
 
 function buildPrompt(c) {
@@ -86,7 +104,7 @@ Water clarity: ${c.waterClarity}
 Sky: ${c.sky}
 Recent bay-wide bite report: ${c.localBiteReport || "no recent report available"}
 
-Here are the 7 locations on this dashboard, with reference facts for each (do not contradict or invent facts beyond these):
+Here are the ${LOCATIONS.length} locations on this dashboard, with reference facts for each (do not contradict or invent facts beyond these):
 
 ${locList}
 
@@ -97,7 +115,7 @@ Write:
    - "todaysCall": 3-5 sentences of concrete, actionable advice for fishing THAT SPOT today specifically. Ground it in today's actual wind direction/speed, tide timing, storm chance/window, and moon/clarity data above. Reference the bay-wide bite report only if it's genuinely relevant to that spot's species — do not fabricate spot-specific catches that aren't in the report.
 
 Respond with ONLY a JSON object, no other text, no markdown fences, matching exactly this shape:
-{"aiSummary": "...", "locations": {"bridge": {"aiNote": "...", "todaysCall": "..."}, "alaqua": {...}, "basin": {...}, "lagrange": {...}, "fourmile": {...}, "hogtown": {...}, "rocky": {...}}}`;
+{"aiSummary": "...", "locations": {"bridge": {"aiNote": "...", "todaysCall": "..."}, "alaqua": {...}, "basin": {...}, "lagrange": {...}, "fourmile": {...}, "hogtown": {...}, "rocky": {...}, "mack": {...}, "hewett": {...}, "buck": {...}}}`;
 }
 
 async function callClaude(prompt) {

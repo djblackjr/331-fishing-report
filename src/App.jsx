@@ -121,7 +121,7 @@ function daysBetween(dateStrEarlier, dateStrLater) {
   return Math.round((b - a) / 86400000);
 }
 // ── BEST BET TODAY ───────────────────────────────────────────────────────────
-// Ranks all 7 locations by today's-adjusted score and returns the top pick.
+// Ranks every location by today's-adjusted score and returns the top pick.
 function getBestBet() {
   const ranked = LOCATIONS.map(loc => ({ loc, score: todaysAdjustedScore(loc.overallScore) }))
     .sort((a, b) => b.score - a.score);
@@ -447,6 +447,69 @@ const LOCATIONS = [
     ],
     aiNote: "Rocky Bayou sits inside Fred Gannon Rocky Bayou State Park near Niceville — protected, scenic, and significantly less pressured than the bayous closer to the 331 bridge. The freshwater influence from Rocky Creek makes flounder fishing here excellent, and the glass-calm coves in the state park are ideal for sight fishing reds on a flat tide. Mangrove snapper hold near dock pilings. The furthest location from Shipyard Marina in this report — factor in run time.",
     todaysCall: "Green light for Rocky today — the long run is safe. Glass-smooth state park coves ideal for sight-fishing reds. Target flounder at the tidal creek mouths. Water temps are running low 80s bay-wide and the bite has been consistent — Rocky's low pressure means these fish are less picky than what you'd find near the bridge. Launch by 5:30 AM to maximize water time and beat the midday heat. Solid full-morning trip today.",
+  },
+  {
+    id: "mack",
+    label: "Mack Bayou",
+    emoji: "🌊",
+    overallScore: 7.0,
+    conditions: "Good",
+    species: [
+      { name: "Redfish", confidence: 78, note: "Marsh grass edges and oyster bars throughout the bayou" },
+      { name: "Speckled Trout", confidence: 68, note: "Bayou mouth on incoming tide, especially early morning" },
+      { name: "Flounder", confidence: 55, note: "Sandy pockets near the mouth, mud minnow on jig" },
+      { name: "Black Drum", confidence: 45, note: "Deeper holes inside the bayou, shrimp on bottom" },
+      { name: "Sheepshead", confidence: 40, note: "Any hard structure or dock pilings near the mouth" },
+    ],
+    stops: [
+      { order: 1, name: "Bayou Mouth", tide: "Incoming tide", steps: ["Live shrimp under popping cork along the mouth", "Gold spoon slow-retrieved over oyster structure", (wind) => `${wind.description} — calm mornings are worth the run out here`] },
+      { order: 2, name: "Marsh Grass Edges", tide: "Mid-incoming", steps: ["Weedless paddle-tail worked along grass lines", "Watch for tailing reds in skinny water on a rising tide", "Sight-fishing quality similar to the state-park bayous further north"] },
+      { order: 3, name: "Interior Holes", tide: "Outgoing", steps: ["Shrimp or cut bait on bottom for black drum", "Sheepshead near any structure with fiddler crab", "Good fallback once the mouth bite slows on the drop"] },
+    ],
+    aiNote: "Mack Bayou sits on Choctawhatchee Bay's north shore near Topsail Hill Preserve State Park, well west of the 331 Bridge — this is a long-run destination, not a quick local trip. It shares the same protected-bayou character as Alaqua and LaGrange (marsh grass, oyster bars, a few interior holes) and sees noticeably less fishing pressure simply because of the distance. Neighbors Hewett Bayou and Buck Bayou immediately to the east, so all three can realistically be fished in one trip.",
+    todaysCall: "Mack Bayou is a run-time spot — check that the long haul out here is worth it before committing. Fish the mouth and grass edges early on the incoming tide, then drop into the interior holes as the tide falls. Bay-wide conditions and bite trends generally apply here too, since the habitat mirrors the closer-in bayous — just budget extra time getting to and from the dock.",
+  },
+  {
+    id: "hewett",
+    label: "Hewett Bayou",
+    emoji: "🦀",
+    overallScore: 7.0,
+    conditions: "Good",
+    species: [
+      { name: "Redfish", confidence: 80, note: "Oyster bars and marsh edges — similar pattern to Mack Bayou next door" },
+      { name: "Speckled Trout", confidence: 70, note: "Deeper water near the mouth on moving tide" },
+      { name: "Flounder", confidence: 55, note: "Sandy transition zones near the entrance, mud minnow on jig" },
+      { name: "Sheepshead", confidence: 45, note: "Structure and pilings near the mouth, fiddler crab" },
+      { name: "Black Drum", confidence: 40, note: "Interior holes, shrimp on bottom" },
+    ],
+    stops: [
+      { order: 1, name: "Bayou Entrance", tide: "Incoming tide", steps: ["Popping cork with live shrimp working the entrance", "Gold spoon along any visible oyster structure", (wind) => `${wind.description} — pair this with Mack Bayou next door on the same trip`] },
+      { order: 2, name: "Marsh Edges", tide: "Mid-incoming", steps: ["Weedless paddle-tail along the grass line", "Watch for wakes and tailing fish in skinny water", "Low boat traffic out here compared to bayous near the bridge"] },
+      { order: 3, name: "Interior Water", tide: "Outgoing", steps: ["Shrimp on bottom in deeper holes for black drum", "Sheepshead near any dock or hard structure", "Fall back here once the entrance bite slows"] },
+    ],
+    aiNote: "Hewett Bayou sits immediately east of Mack Bayou on Choctawhatchee Bay's north shore, near Topsail Hill Preserve State Park — another long-run spot from the 331 Bridge, but one that pairs naturally with Mack and Buck Bayou in the same trip. Same protected-bayou habitat as the other north-shore bayous: oyster bars and marsh grass at the mouth, a few deeper interior holes further in. Fishing pressure here is light simply because of the distance from the main boat ramps.",
+    todaysCall: "Treat Hewett Bayou as part of a north-shore run alongside Mack and Buck Bayou rather than a standalone trip. Work the entrance and marsh edges early on the incoming tide, then fall back to the interior holes as the tide drops. General bay-wide wind and storm guidance applies the same way it does at the closer bayous — the extra factor here is simply run time.",
+  },
+  {
+    id: "buck",
+    label: "Buck Bayou",
+    emoji: "🦌",
+    overallScore: 6.5,
+    conditions: "Fair",
+    species: [
+      { name: "Redfish", confidence: 72, note: "Marsh grass edges throughout the bayou" },
+      { name: "Speckled Trout", confidence: 60, note: "Near the mouth on incoming tide" },
+      { name: "Flounder", confidence: 50, note: "Sandy pockets near the entrance" },
+      { name: "Black Drum", confidence: 40, note: "Interior holes, shrimp on bottom" },
+      { name: "Sheepshead", confidence: 35, note: "Any hard structure near the mouth" },
+    ],
+    stops: [
+      { order: 1, name: "Bayou Mouth", tide: "Incoming tide", steps: ["Live shrimp under popping cork at the entrance", "Gold spoon over any oyster or hard bottom", "Smallest and least-fished of the three north-shore bayous"] },
+      { order: 2, name: "Marsh Grass Edges", tide: "Mid-incoming", steps: ["Weedless paddle-tail along grass edges", "Sight-fish for tailing reds if water is clear", "Quiet water — pole or drift rather than run the motor"] },
+      { order: 3, name: "Interior Water", tide: "Outgoing", steps: ["Shrimp on bottom in deeper spots for black drum", "Good last stop before heading back out to the bay"] },
+    ],
+    aiNote: "Buck Bayou is the smallest and least-documented of the three neighboring bayous (with Mack and Hewett) on Choctawhatchee Bay's north shore near Topsail Hill Preserve State Park. Habitat and species mix should track its larger neighbors — marsh grass, some oyster structure, a modest interior — but there's less basis to speak confidently about it, hence the more conservative score and confidence numbers here. Best treated as a bonus stop on a Mack/Hewett Bayou trip rather than a standalone destination.",
+    todaysCall: "Fish Buck Bayou as an add-on to a Mack/Hewett Bayou trip rather than the main destination — work the mouth and grass edges on the incoming tide. General wind, storm, and tide guidance for the north-shore bayous applies here too, but treat any species pattern here as a reasonable guess rather than a proven local pattern.",
   },
 ];
 
