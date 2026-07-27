@@ -119,16 +119,34 @@ const satellite = L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/servi
 });
 
 // NOAA Chart Display Service (NCDS) — replaces the retired RNC Tile Service.
-// Layer "1" is the composite "Layers" group (all chart symbology). WMS
-// endpoint verified directly against Jolly Bay's bounding box before
+// The service has no single "all symbology" layer name; each S-57 category
+// (0=chart info, 1=natural/man-made features, 2=depths/currents, 3=seabed,
+// 4=traffic routes, 5=special areas, 6=buoys/beacons/lights, 7=services,
+// 8=data quality, 9=low accuracy, 10=additional info, 11=shallow water
+// pattern, 12=overscale warning) is a separate sublayer that must be listed
+// explicitly, or you get bare land/water polygons with no chart detail.
+// WMS endpoint verified directly against Jolly Bay's bounding box before
 // shipping — see docs/atlas.md.
+// A 1x1 transparent PNG. NOAA's tile server occasionally returns a response
+// Chrome's Opaque Response Blocking rejects (net::ERR_BLOCKED_BY_ORB) under
+// load from requesting all 13 sublayers at once; without a fallback, Leaflet
+// leaves the failed tile's <img> src untouched and the dark map background
+// shows through as a solid black square. `crossOrigin` below (the NOAA
+// service does send Access-Control-Allow-Origin) fixes most of these by
+// making the request a real CORS fetch instead of an opaque no-cors one;
+// this is the safety net for whatever still slips through.
+const TRANSPARENT_TILE =
+  "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=";
+
 const noaaChart = L.tileLayer.wms("https://gis.charttools.noaa.gov/arcgis/rest/services/MCS/NOAAChartDisplay/MapServer/exts/MaritimeChartService/WMSServer", {
-  layers: "1",
+  layers: "0,1,2,3,4,5,6,7,8,9,10,11,12",
   format: "image/png",
   transparent: true,
   version: "1.3.0",
   maxZoom: 18,
   attribution: "Chart data: NOAA/NOS Office of Coast Survey",
+  crossOrigin: "anonymous",
+  errorTileUrl: TRANSPARENT_TILE,
 });
 
 osm.addTo(map);

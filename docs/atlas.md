@@ -205,8 +205,12 @@ Three switchable base layers, no Google tiles:
   if this app's traffic or use ever changes materially.
 - **NOAA Nautical Chart** — NOAA's Chart Display Service (NCDS), which
   replaced the retired `tileservice.charts.noaa.gov` RNC service in 2021.
-  Served as a WMS layer (`gis.charttools.noaa.gov/.../WMSServer`, layer
-  `1`), attribution `NOAA/NOS Office of Coast Survey`. Verified directly
+  Served as a WMS layer (`gis.charttools.noaa.gov/.../WMSServer`, sublayers
+  `0-12` — there's no single "all symbology" layer, so every S-57 category
+  from chart info through buoys/beacons to shallow-water pattern must be
+  listed explicitly; requesting layer `1` alone gives only bare land/water
+  polygons with no depths, soundings, or aids to navigation), attribution
+  `NOAA/NOS Office of Coast Survey`. Verified directly
   against Jolly Bay's bounding box before shipping. Public domain (US
   federal government work) — no licensing restriction, but it's a
   transparent overlay-style layer: outside charted marine areas it renders
