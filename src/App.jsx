@@ -403,6 +403,28 @@ const LOCATIONS = [
     todaysCall: "Premium trout day — sunny, calm, no weather pressure. Hit the oyster bars at the mouth at sunrise with popping cork and live shrimp. Guides across the bay have been calling the trout bite genuinely strong this week with water temps in the low 80s, and LaGrange's oyster bars are exactly the kind of structure that's been producing. As the sun climbs, switch to gold spoon on the interior grass flats. This is the best trout chance of the week.",
   },
   {
+    id: "mallet",
+    label: "Mallet Bayou",
+    emoji: "🌱",
+    lat: 30.4532529, lng: -86.1454966, // OpenStreetMap node, natural=bay, gnis:feature_id=286328 — confirmed against GNIS (Mallet Bayou, Walton County, FL)
+    overallScore: 6.5,
+    conditions: "Fair",
+    species: [
+      { name: "Redfish", confidence: 75, note: "Confluence with LaGrange Bayou and marsh edges throughout" },
+      { name: "Speckled Trout", confidence: 65, note: "Near the confluence on incoming tide, same bite as LaGrange next door" },
+      { name: "Flounder", confidence: 48, note: "Sandy pockets near the mouth, mud minnow on jig" },
+      { name: "Black Drum", confidence: 42, note: "Interior holes, shrimp on bottom" },
+      { name: "Sheepshead", confidence: 32, note: "Any hard structure near the confluence, fiddler crab" },
+    ],
+    stops: [
+      { order: 1, name: "Confluence with LaGrange Bayou", tide: "Incoming tide", steps: ["Live shrimp under popping cork working the mouth", "Gold spoon along any visible oyster structure", (wind) => `${wind.description} — pair this with LaGrange Bayou on the same trip`] },
+      { order: 2, name: "Marsh Edges", tide: "Mid-incoming", steps: ["Weedless paddle-tail along the grass line", "Watch for wakes and tailing fish in skinny water", "Quieter than LaGrange itself — less boat traffic this far up"] },
+      { order: 3, name: "Interior Holes", tide: "Outgoing", steps: ["Shrimp on bottom in deeper holes for black drum", "Sheepshead near any dock or hard structure", "Fall back here once the confluence bite slows"] },
+    ],
+    aiNote: "Mallet Bayou is a small tributary that feeds directly into LaGrange Bayou — this dashboard's top trout producer — just south of Freeport in Walton County. That direct connection means LaGrange's oyster-bar trout-and-redfish pattern plausibly extends up into this smaller, quieter water, though there's far less documented fishing history for Mallet Bayou itself than for LaGrange, hence the more conservative numbers here. Its small size and interior character likely make it a calm-water fallback when wind picks up on the open bay.",
+    todaysCall: "Treat Mallet Bayou as a quiet extension of a LaGrange Bayou trip rather than a standalone destination — work the confluence and marsh edges on the incoming tide, then fall back to the interior holes as it drops. General wind, storm, and tide guidance for LaGrange applies here too, but treat any species pattern as a reasonable inference from its larger neighbor rather than a proven local pattern.",
+  },
+  {
     id: "fourmile",
     label: "Four Mile Creek",
     emoji: "🛶",
@@ -445,28 +467,6 @@ const LOCATIONS = [
     ],
     aiNote: "Hogtown Bayou is the signature fishing spot of the Santa Rosa Beach guides and one of the most productive trout flats on Choctawhatchee Bay. It sees regular pressure but produces consistently. Summer mornings are peak — trout stack on the grass in 2-4 feet. Spanish mackerel show at the mouth on moving tides. Notably further from the 331 bridge than the other bayous — factor in run time when planning.",
     todaysCall: "Green light for Hogtown today — the long run is now safe. Smooth water and no storm threat make this a top pick for trout numbers, and the timing lines up: this is the Santa Rosa Beach spot where guides landed a 40+ inch, 26 lb bull redfish just this week, and the trout bite has been strong bay-wide. Fish the mouth at first light on the incoming tide with popping cork, then work interior grass flats. Plan run time so you are off by 10:30 AM before heat builds.",
-  },
-  {
-    id: "rocky",
-    label: "Rocky Bayou",
-    emoji: "🪨",
-    lat: 30.5051974, lng: -86.4377264, // OpenStreetMap
-    overallScore: 7.5,
-    conditions: "Good",
-    species: [
-      { name: "Redfish", confidence: 85, note: "Tidal marshes and glass-calm coves — top red drum bayou near Niceville" },
-      { name: "Speckled Trout", confidence: 72, note: "Grass flats and tidal creek edges, mornings on incoming tide" },
-      { name: "Flounder", confidence: 68, note: "Sandy bottom and creek mouths — freshwater influence from Rocky Creek concentrates them" },
-      { name: "Mangrove Snapper", confidence: 45, note: "Near dock pilings and structure inside bayou" },
-      { name: "Mullet", confidence: 80, note: "Abundant baitfish — cast net here to load up before fishing" },
-    ],
-    stops: [
-      { order: 1, name: "Rocky Bayou State Park Coves", tide: "Incoming tide", steps: ["Glass-calm protected coves — ideal sight fishing for reds", "Gold spoon or paddle-tail along marsh grass edges", "Low fishing pressure — fewer boats than other bayous"] },
-      { order: 2, name: "Tidal Creek Mouths", tide: "Mid-incoming", steps: ["Freshwater influence from Rocky Creek concentrates baitfish and flounder", "Mud minnow on 1/4 oz jig dragged on bottom", "Popping cork with shrimp for trout on the edges"] },
-      { order: 3, name: "Dock and Structure Zone", tide: "Any", steps: ["Mangrove snapper hold near dock pilings — small jig or live shrimp", "Free-line live mullet near structure for big reds", "Cast net for mullet first — abundant here and great live bait"] },
-    ],
-    aiNote: "Rocky Bayou sits inside Fred Gannon Rocky Bayou State Park near Niceville — protected, scenic, and significantly less pressured than the bayous closer to the 331 bridge. The freshwater influence from Rocky Creek makes flounder fishing here excellent, and the glass-calm coves in the state park are ideal for sight fishing reds on a flat tide. Mangrove snapper hold near dock pilings. The furthest location from Shipyard Marina in this report — factor in run time.",
-    todaysCall: "Green light for Rocky today — the long run is safe. Glass-smooth state park coves ideal for sight-fishing reds. Target flounder at the tidal creek mouths. Water temps are running low 80s bay-wide and the bite has been consistent — Rocky's low pressure means these fish are less picky than what you'd find near the bridge. Launch by 5:30 AM to maximize water time and beat the midday heat. Solid full-morning trip today.",
   },
   {
     id: "mack",

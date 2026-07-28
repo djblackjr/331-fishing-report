@@ -61,10 +61,10 @@ const LOCATIONS = [
     background: "Signature Santa Rosa Beach guide spot and one of the most productive trout flats on the bay. Sees regular pressure but produces consistently; summer mornings are peak with trout stacked on grass in 2-4 feet. Spanish mackerel show at the mouth on moving tides. Further from the 331 bridge than the other bayous — factor in run time.",
   },
   {
-    id: "rocky",
-    label: "Rocky Bayou",
-    topSpecies: "redfish, speckled trout, flounder, mangrove snapper",
-    background: "Sits inside Fred Gannon Rocky Bayou State Park near Niceville — protected, scenic, significantly less pressured than bayous closer to the 331 bridge. Freshwater influence from Rocky Creek makes flounder fishing excellent; glass-calm state park coves are ideal for sight-fishing reds. Mangrove snapper hold near dock pilings. Furthest location from Shipyard Marina — factor in run time.",
+    id: "mallet",
+    label: "Mallet Bayou",
+    topSpecies: "redfish, speckled trout, flounder",
+    background: "A small tributary that feeds directly into LaGrange Bayou — this dashboard's top trout producer — just south of Freeport. That direct connection means LaGrange's oyster-bar trout-and-redfish pattern plausibly extends into this smaller, quieter water, though there's far less documented fishing history for Mallet Bayou itself. Small and interior — likely a calm-water fallback when wind picks up on the open bay.",
   },
   {
     id: "mack",
@@ -115,7 +115,7 @@ Write:
    - "todaysCall": 3-5 sentences of concrete, actionable advice for fishing THAT SPOT today specifically. Ground it in today's actual wind direction/speed, tide timing, storm chance/window, and moon/clarity data above. Reference the bay-wide bite report only if it's genuinely relevant to that spot's species — do not fabricate spot-specific catches that aren't in the report.
 
 Respond with ONLY a JSON object, no other text, no markdown fences, matching exactly this shape:
-{"aiSummary": "...", "locations": {"bridge": {"aiNote": "...", "todaysCall": "..."}, "alaqua": {...}, "basin": {...}, "lagrange": {...}, "fourmile": {...}, "hogtown": {...}, "rocky": {...}, "mack": {...}, "hewett": {...}, "buck": {...}}}`;
+{"aiSummary": "...", "locations": {"bridge": {"aiNote": "...", "todaysCall": "..."}, "alaqua": {...}, "basin": {...}, "lagrange": {...}, "fourmile": {...}, "hogtown": {...}, "mallet": {...}, "mack": {...}, "hewett": {...}, "buck": {...}}}`;
 }
 
 async function callClaude(prompt) {
