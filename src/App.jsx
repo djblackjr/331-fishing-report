@@ -1172,7 +1172,7 @@ export default function App() {
 
   function selectLocTab(id) {
     setLocTab(id);
-    window.storage.set("lastLocTab", id).catch(() => {});
+    try { window.storage.set("lastLocTab", id).catch(() => {}); } catch {}
   }
 
   async function shareReport() {
