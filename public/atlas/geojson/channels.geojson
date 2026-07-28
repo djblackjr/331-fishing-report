@@ -31,12 +31,20 @@
             30.424067
           ],
           [
-            -86.116094,
-            30.424287
+            -86.118,
+            30.423449
           ],
           [
-            -86.112031,
-            30.42348
+            -86.116,
+            30.423512
+          ],
+          [
+            -86.114,
+            30.423628
+          ],
+          [
+            -86.112027,
+            30.423763
           ]
         ]
       },
@@ -48,14 +56,14 @@
         "confidence": 78,
         "validationStatus": "visually_reviewed",
         "source": "aerial_image_review: Esri World Imagery export reviewed 2026-07-24; WGS84 bbox [-86.155,30.405,-86.105,30.449], 1600x1200",
-        "lastUpdated": "2026-07-24",
+        "lastUpdated": "2026-07-28",
         "feature_type": "channel_centerline",
         "field_verified": false,
-        "evidence": "Continuous dark-water channel is clearly visible between marsh islands.",
+        "evidence": "Continuous dark-water channel is clearly visible between marsh islands. Re-traced 2026-07-28 against Esri World Imagery at higher zoom after the prior centerline was found cutting across dry marsh instead of following the visible water.",
         "uncertainty": "Centerline is approximate; width and depth are not represented.",
         "source_type": "aerial_image_review",
         "source_reference": "Esri World Imagery export reviewed 2026-07-24; WGS84 bbox [-86.155,30.405,-86.105,30.449], 1600x1200",
-        "review_date": "2026-07-24",
+        "review_date": "2026-07-28",
         "navigation_use": "not_for_navigation"
       }
     },
@@ -111,6 +119,10 @@
             30.42172
           ],
           [
+            -86.12425,
+            30.420685
+          ],
+          [
             -86.124781,
             30.42007
           ],
@@ -132,14 +144,14 @@
         "confidence": 68,
         "validationStatus": "visually_reviewed",
         "source": "aerial_image_review: Esri World Imagery export reviewed 2026-07-24; WGS84 bbox [-86.155,30.405,-86.105,30.449], 1600x1200",
-        "lastUpdated": "2026-07-24",
+        "lastUpdated": "2026-07-28",
         "feature_type": "channel_centerline",
         "field_verified": false,
-        "evidence": "Dark-water channel is visible through the southern marsh.",
+        "evidence": "Dark-water channel is visible through the southern marsh. Re-traced 2026-07-28 against Esri World Imagery at higher zoom after the prior centerline was found cutting across dry marsh instead of following the visible water.",
         "uncertainty": "Line ends where imagery becomes ambiguous; depth is unverified.",
         "source_type": "aerial_image_review",
         "source_reference": "Esri World Imagery export reviewed 2026-07-24; WGS84 bbox [-86.155,30.405,-86.105,30.449], 1600x1200",
-        "review_date": "2026-07-24",
+        "review_date": "2026-07-28",
         "navigation_use": "not_for_navigation"
       }
     }
