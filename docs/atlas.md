@@ -204,10 +204,12 @@ scoring doesn't need to re-fetch anything.
 
 ## Base maps (STEP 4)
 
-Three switchable base layers, no Google tiles:
+Switchable base layers, no Google tiles:
 
-- **OpenStreetMap** — standard `{s}.tile.openstreetmap.org`, `©
-  OpenStreetMap contributors`.
+- **OpenStreetMap** / **OpenStreetMap (bold labels)** — standard
+  `{s}.tile.openstreetmap.org`, `© OpenStreetMap contributors`; the bold
+  variant is CartoDB Voyager (`{s}.basemaps.cartocdn.com/rastertiles/voyager`),
+  same underlying OSM data with darker, bolder labels.
 - **Satellite (Esri)** — `server.arcgisonline.com/.../World_Imagery`,
   attribution `Esri — Source: Esri, Maxar, Earthstar Geographics, and the
   GIS User Community`. Free for this kind of small-scale, non-commercial
@@ -216,17 +218,36 @@ Three switchable base layers, no Google tiles:
   if this app's traffic or use ever changes materially.
 - **NOAA Nautical Chart** — NOAA's Chart Display Service (NCDS), which
   replaced the retired `tileservice.charts.noaa.gov` RNC service in 2021.
-  Served as a WMS layer (`gis.charttools.noaa.gov/.../WMSServer`, sublayers
-  `0-12` — there's no single "all symbology" layer, so every S-57 category
-  from chart info through buoys/beacons to shallow-water pattern must be
-  listed explicitly; requesting layer `1` alone gives only bare land/water
-  polygons with no depths, soundings, or aids to navigation), attribution
-  `NOAA/NOS Office of Coast Survey`. Verified directly
-  against Jolly Bay's bounding box before shipping. Public domain (US
-  federal government work) — no licensing restriction, but it's a
-  transparent overlay-style layer: outside charted marine areas it renders
-  as empty transparent tiles over the page background, so it reads best
-  zoomed into actual water.
+  Served as a WMS layer (`gis.charttools.noaa.gov/.../WMSServer`), requesting
+  only sublayers `1,2,3,11` (natural/man-made features, depths & soundings,
+  seabed/obstructions, shallow-water pattern) rather than the full `0-12`
+  stack — this app is fishing reference, not a navigation aid, and layers
+  `8`/`9` (data quality / low accuracy) render as a tiled "CATZOC"
+  triangle-and-star pattern that just obscures the sounding numbers anglers
+  actually want; `0`/`4`-`7`/`10`/`12` are chart-display boxes, traffic
+  routes, and overscale warnings, none of it relevant here. Attribution
+  `NOAA/NOS Office of Coast Survey`. Verified directly against Jolly Bay's
+  bounding box before shipping. Public domain (US federal government work)
+  — no licensing restriction, but it's a transparent overlay-style layer:
+  outside charted marine areas it renders as empty transparent tiles over
+  the page background, so it reads best zoomed into actual water.
+- **Bathymetry (NOAA/NCEI)** — NOAA/NCEI's CUDEM (Continuously Updated
+  Digital Elevation Model), a ~3m-resolution bathymetric-topographic grid,
+  added because the nautical chart above rates its own survey confidence
+  for Jolly Bay as CATZOC `D`, its lowest category — meaningfully finer
+  data does exist and does cover this exact water (confirmed directly
+  against Jolly Bay's coordinates; NOAA's BlueTopo bathymetric compilation,
+  by contrast, returns NoData here entirely). Served from an Esri
+  ImageServer (`gis.ngdc.noaa.gov/.../DEM_mosaics/DEM_tiles_mosaic`), so
+  tiles are built by hand in `src/atlas/main.js` (`CudemTileLayer`) via
+  `exportImage` rather than `L.tileLayer.wms`. Uses the service's own
+  built-in `ColorHillshade` rendering rule (NOAA/NCEI's own shaded-relief
+  bathy/topo color ramp for this dataset) rather than a hand-rolled
+  colormap — already renders the marsh creek network and shoreline
+  clearly. Values are NAVD88 elevation, not MLLW tidal depth, so treat this
+  as relative shallow/deep relief and creek-network reference, not exact
+  soundings — converting to a tidal datum via NOAA's VDatum would be
+  needed for that. Public domain (US federal government work).
 
 ## Jolly Bay pilot (STEP 11)
 

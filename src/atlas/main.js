@@ -174,6 +174,13 @@ const satellite = L.layerGroup([satelliteImagery, satelliteHydroLabels, satellit
 // 8=data quality, 9=low accuracy, 10=additional info, 11=shallow water
 // pattern, 12=overscale warning) is a separate sublayer that must be listed
 // explicitly, or you get bare land/water polygons with no chart detail.
+// Deliberately only requesting 1/2/3/11 (shoreline, depth soundings,
+// seabed/obstructions, shallow-water pattern) here rather than the full
+// 0-12 stack: this app is fishing reference, not navigation, and layers
+// 8/9 render as a tiled "CATZOC" triangle-and-star pattern (NOAA's own
+// survey-confidence rating, not depth data) that just obscures the actual
+// sounding numbers anglers care about — 0/4/5/6/7/10/12 are chart-display
+// boxes, traffic routes, and overscale warnings, none of it fishing-relevant.
 // WMS endpoint verified directly against Jolly Bay's bounding box before
 // shipping — see docs/atlas.md.
 // A 1x1 PNG solid-filled with the chart's own open-water color (verified by
@@ -186,7 +193,7 @@ const FALLBACK_TILE =
   "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVR4nGNYf/YhAASMAl4vKx8FAAAAAElFTkSuQmCC";
 
 const noaaChart = L.tileLayer.wms("https://gis.charttools.noaa.gov/arcgis/rest/services/MCS/NOAAChartDisplay/MapServer/exts/MaritimeChartService/WMSServer", {
-  layers: "0,1,2,3,4,5,6,7,8,9,10,11,12",
+  layers: "1,2,3,11",
   format: "image/png",
   transparent: true,
   version: "1.3.0",
@@ -222,10 +229,54 @@ noaaChart.on("tileerror", (e) => {
   }, 400 * (attempts + 1));
 });
 
+// NOAA/NCEI CUDEM (Continuously Updated Digital Elevation Model) — a ~3m
+// bathymetric-topographic grid. Added because NOAA's own nautical chart
+// rates its survey confidence for Jolly Bay as CATZOC D, its lowest
+// category (see docs/atlas.md); this is real, meaningfully finer-resolution
+// elevation data that does cover this exact water (verified directly
+// against Jolly Bay's coordinates — NOAA's own BlueTopo bathymetric
+// compilation, by contrast, returns NoData here entirely).
+//
+// Served from an Esri ImageServer, not a pre-styled WMS chart layer, so
+// tiles are built by hand via exportImage rather than L.tileLayer.wms.
+// Uses the service's own built-in "ColorHillshade" rendering rule (a
+// shaded-relief bathy/topo color ramp NOAA/NCEI ship specifically for this
+// dataset) rather than a hand-rolled colormap — it already renders the
+// marsh creek network and shoreline clearly. Values are NAVD88 elevation,
+// not MLLW tidal depth, so treat this as relative shallow/deep relief and
+// creek-network reference, not exact soundings.
+const CUDEM_URL = "https://gis.ngdc.noaa.gov/arcgis/rest/services/DEM_mosaics/DEM_tiles_mosaic/ImageServer/exportImage";
+const CUDEM_RENDERING_RULE = JSON.stringify({ rasterFunction: "ColorHillshade" });
+
+const CudemTileLayer = L.TileLayer.extend({
+  getTileUrl(coords) {
+    const tileBounds = this._tileCoordsToBounds(coords);
+    const nw = L.CRS.EPSG3857.project(tileBounds.getNorthWest());
+    const se = L.CRS.EPSG3857.project(tileBounds.getSouthEast());
+    const params = new URLSearchParams({
+      bbox: [nw.x, se.y, se.x, nw.y].join(","),
+      bboxSR: "102100",
+      imageSR: "102100",
+      size: `${this.options.tileSize},${this.options.tileSize}`,
+      format: "png",
+      renderingRule: CUDEM_RENDERING_RULE,
+      f: "image",
+    });
+    return `${CUDEM_URL}?${params.toString()}`;
+  },
+});
+
+const bathymetry = new CudemTileLayer("", {
+  tileSize: 256,
+  maxZoom: 17,
+  attribution: "Bathymetry: NOAA/NCEI CUDEM",
+  errorTileUrl: FALLBACK_TILE,
+});
+
 osm.addTo(map);
 
 const layersControl = L.control.layers(
-  { "OpenStreetMap": osm, "OpenStreetMap (bold labels)": osmBoldLabels, "Satellite (Esri)": satellite, "NOAA Nautical Chart": noaaChart },
+  { "OpenStreetMap": osm, "OpenStreetMap (bold labels)": osmBoldLabels, "Satellite (Esri)": satellite, "NOAA Nautical Chart": noaaChart, "Bathymetry (NOAA/NCEI)": bathymetry },
   {},
   { collapsed: window.innerWidth < 700 }
 ).addTo(map);
