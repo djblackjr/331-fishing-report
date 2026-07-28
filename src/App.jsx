@@ -1013,7 +1013,7 @@ function LocationMiniMap({ lat, lng, label }) {
   }, [lat, lng, label]);
 
   if (lat == null || lng == null) return null;
-  return <div ref={containerRef} style={{ height: 400, borderRadius: 10, overflow: "hidden" }} />;
+  return <div ref={containerRef} style={{ height: 460, borderRadius: 10, overflow: "hidden" }} />;
 }
 
 function LocationReport({ loc }) {
