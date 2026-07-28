@@ -1,39 +1,61 @@
 {
   "type": "FishingIntelligence",
   "region": "choctawhatchee_bay",
-  "generatedAt": "2026-07-27",
+  "generatedAt": "2026-07-28",
   "scopeNote": "Regional reports support timing and species activity only. They do not prove a catch, depth, bottom type, or safe navigation at a mapped Jolly Bay feature.",
   "currentConditions": {
-    "wind": "WNW 5 to 10 mph",
-    "tide": "High tide ~4:38 AM · Low tide ~4:07 PM · Sunrise 5:58 AM",
+    "wind": "W 0 to 10 mph",
+    "tide": "High tide ~5:22 AM · Low tide ~4:38 PM · Sunrise 5:59 AM",
     "waterTemp": 86,
     "sky": "Cloudy",
-    "stormChance": 29
+    "stormChance": 25
   },
   "currentReport": {
     "kind": "current_regional_report",
-    "date": "2026-07-27",
-    "displayDate": "July 27, 2026",
-    "summary": "Reports from the past week out of Santa Rosa Beach and Destin show speckled trout numbers have been solid, with anglers finding plenty of fish throughout the bay and some quality ones mixed in. Bull redfish are also showing up in good shape — one recent Choctawhatchee Bay trip produced a 40-inch, 26-lb bull that took a solid 30-minute fight to land. Flounder are being picked up on bay trips as well, with a local charter reporting redfish, flounder, and trout all in the same session. Water temps are running at 86°F, which is pushing fish to early morning bites and shaded or deeper structure; guides are recommending getting on the water at first light before the heat of the day slows things down. These reports reflect trips from roughly the past week out of the Santa Rosa Beach and Destin area.",
-    "attribution": "captainexperiences.com (Choctawhatchee Bay reports page, reports dated 6 days ago and 1 week ago), fishingbooker.com (Choctawhatchee Bay reports page) · Auto-refreshed via Claude API",
+    "date": "2026-07-28",
+    "displayDate": "July 28, 2026",
+    "summary": "Reports from the past week out of Choctawhatchee Bay/Santa Rosa Beach area show speckled trout as the dominant inshore target, with anglers finding good numbers scattered across the bay. A bull redfish over 40 inches and 26 lbs was recently landed out of Santa Rosa Beach, and guides note redfish are actively cruising. Wind has been a factor, pushing anglers to select fishing areas carefully, but the trout bite has held up well despite it. Water temperature at this location is currently 86°F. These are the most recent reports available; the most current individual catch report is approximately 6 days old as of late July 2026.",
+    "attribution": "captainexperiences.com (Choctawhatchee Bay Fishing Reports) · Auto-refreshed via Claude API",
     "sourceIds": [
       "captain-experiences-destin",
-      "fishingbooker-bay"
+      "report-aHR0cHM6Ly9jYXB0YW"
     ],
     "species": [
       "spotted_seatrout",
-      "redfish",
-      "gulf_flounder"
+      "redfish"
     ],
     "conditions": {
-      "wind": "WNW 5 to 10 mph",
-      "tide": "High tide ~4:38 AM · Low tide ~4:07 PM · Sunrise 5:58 AM",
+      "wind": "W 0 to 10 mph",
+      "tide": "High tide ~5:22 AM · Low tide ~4:38 PM · Sunrise 5:59 AM",
       "waterTemp": 86,
       "sky": "Cloudy",
-      "stormChance": 29
+      "stormChance": 25
     }
   },
   "archivedReports": [
+    {
+      "kind": "archived_app_snapshot",
+      "date": "2026-07-27",
+      "displayDate": "July 27, 2026",
+      "summary": "Reports from the past week out of Santa Rosa Beach and Destin show speckled trout numbers have been solid, with anglers finding plenty of fish throughout the bay and some quality ones mixed in. Bull redfish are also showing up in good shape — one recent Choctawhatchee Bay trip produced a 40-inch, 26-lb bull that took a solid 30-minute fight to land. Flounder are being picked up on bay trips as well, with a local charter reporting redfish, flounder, and trout all in the same session. Water temps are running at 86°F, which is pushing fish to early morning bites and shaded or deeper structure; guides are recommending getting on the water at first light before the heat of the day slows things down. These reports reflect trips from roughly the past week out of the Santa Rosa Beach and Destin area.",
+      "attribution": "captainexperiences.com (Choctawhatchee Bay reports page, reports dated 6 days ago and 1 week ago), fishingbooker.com (Choctawhatchee Bay reports page) · Auto-refreshed via Claude API",
+      "sourceIds": [
+        "captain-experiences-destin",
+        "fishingbooker-bay"
+      ],
+      "species": [
+        "spotted_seatrout",
+        "redfish",
+        "gulf_flounder"
+      ],
+      "conditions": {
+        "wind": "WNW 5 to 10 mph",
+        "tide": "High tide ~4:38 AM · Low tide ~4:07 PM · Sunrise 5:58 AM",
+        "waterTemp": 86,
+        "sky": "Cloudy",
+        "stormChance": 29
+      }
+    },
     {
       "kind": "archived_app_snapshot",
       "date": "2026-07-21",
@@ -153,25 +175,25 @@
       "key": "spotted_seatrout",
       "label": "Speckled trout",
       "current": true,
-      "reportCount": 6,
-      "lastReported": "2026-07-27",
+      "reportCount": 7,
+      "lastReported": "2026-07-28",
       "evidenceLevel": "current_regional_report"
     },
     {
       "key": "redfish",
       "label": "Redfish",
       "current": true,
-      "reportCount": 7,
-      "lastReported": "2026-07-27",
+      "reportCount": 8,
+      "lastReported": "2026-07-28",
       "evidenceLevel": "current_regional_report"
     },
     {
       "key": "gulf_flounder",
       "label": "Flounder",
-      "current": true,
+      "current": false,
       "reportCount": 3,
       "lastReported": "2026-07-27",
-      "evidenceLevel": "current_regional_report"
+      "evidenceLevel": "archived_regional_report"
     },
     {
       "key": "black_drum",
@@ -294,6 +316,14 @@
     "grass_flat": "sand_holes"
   },
   "sources": [
+    {
+      "id": "report-aHR0cHM6Ly9jYXB0YW",
+      "label": "Choctawhatchee Bay Fishing Reports (July 2026)",
+      "url": "https://captainexperiences.com/fishing-reports/locations/regions/choctawhatchee-bay",
+      "kind": "regional_report",
+      "reportDate": "2026-07-22",
+      "note": "Exact source page preserved by the daily bite-report research."
+    },
     {
       "id": "captain-experiences-destin",
       "label": "Captain Experiences — Destin reports",
