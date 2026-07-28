@@ -206,10 +206,8 @@ scoring doesn't need to re-fetch anything.
 
 Switchable base layers, no Google tiles:
 
-- **OpenStreetMap** / **OpenStreetMap (bold labels)** — standard
-  `{s}.tile.openstreetmap.org`, `© OpenStreetMap contributors`; the bold
-  variant is CartoDB Voyager (`{s}.basemaps.cartocdn.com/rastertiles/voyager`),
-  same underlying OSM data with darker, bolder labels.
+- **OpenStreetMap** — standard `{s}.tile.openstreetmap.org`, `©
+  OpenStreetMap contributors`.
 - **Satellite (Esri)** — `server.arcgisonline.com/.../World_Imagery`,
   attribution `Esri — Source: Esri, Maxar, Earthstar Geographics, and the
   GIS User Community`. Free for this kind of small-scale, non-commercial

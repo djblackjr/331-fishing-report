@@ -118,19 +118,6 @@ const osm = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 });
 
-// Standard OSM tiles are pre-rendered raster PNGs from OSM's own Carto
-// style — label text color is baked into the image server-side, so there's
-// no property here to darken just the font. CartoDB Voyager renders the
-// same underlying OSM data but with its own bolder, darker label style; it
-// gets its own separate control entry (rather than replacing "OpenStreetMap"
-// above) since the two have a visibly different color palette beyond just
-// the text.
-const osmBoldLabels = L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
-  maxZoom: 19,
-  subdomains: "abcd",
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-});
-
 const satelliteImagery = L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}", {
   maxZoom: 19,
   attribution: "Tiles &copy; Esri &mdash; Source: Esri, Maxar, Earthstar Geographics, and the GIS User Community",
@@ -276,7 +263,7 @@ const bathymetry = new CudemTileLayer("", {
 osm.addTo(map);
 
 const layersControl = L.control.layers(
-  { "OpenStreetMap": osm, "OpenStreetMap (bold labels)": osmBoldLabels, "Satellite (Esri)": satellite, "NOAA Nautical Chart": noaaChart, "Bathymetry (NOAA/NCEI)": bathymetry },
+  { "OpenStreetMap": osm, "Satellite (Esri)": satellite, "NOAA Nautical Chart": noaaChart, "Bathymetry (NOAA/NCEI)": bathymetry },
   {},
   { collapsed: window.innerWidth < 700 }
 ).addTo(map);
