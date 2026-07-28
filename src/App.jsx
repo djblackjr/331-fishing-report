@@ -314,7 +314,7 @@ const LOCATIONS = [
     id: "bridge",
     label: "331 Bridge",
     emoji: "🌉",
-    lat: 30.400, lng: -86.135, // approximate — US-331/Clyde B. Wells bridge crossing, not a precise survey point
+    lat: 30.4175, lng: -86.1604, // OpenStreetMap (Overpass) — midpoint of the bridge's "highway=trunk, bridge=yes, ref=US 331" way segments; unnamed in OSM, which is why Nominatim's name search missed it
     overallScore: 8.0,
     conditions: "Excellent",
     species: [
@@ -1013,7 +1013,7 @@ function LocationMiniMap({ lat, lng, label }) {
   }, [lat, lng, label]);
 
   if (lat == null || lng == null) return null;
-  return <div ref={containerRef} style={{ height: 220, borderRadius: 10, overflow: "hidden" }} />;
+  return <div ref={containerRef} style={{ height: 400, borderRadius: 10, overflow: "hidden" }} />;
 }
 
 function LocationReport({ loc }) {
