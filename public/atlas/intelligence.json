@@ -6,6 +6,16 @@
   "currentConditions": {
     "wind": "WNW 5 to 10 mph",
     "tide": "High tide ~4:38 AM · Low tide ~4:07 PM · Sunrise 5:58 AM",
+    "tideEvents": [
+      {
+        "type": "H",
+        "time": "4:38 AM"
+      },
+      {
+        "type": "L",
+        "time": "4:07 PM"
+      }
+    ],
     "waterTemp": 86,
     "sky": "Cloudy",
     "stormChance": 29
@@ -28,6 +38,16 @@
     "conditions": {
       "wind": "WNW 5 to 10 mph",
       "tide": "High tide ~4:38 AM · Low tide ~4:07 PM · Sunrise 5:58 AM",
+      "tideEvents": [
+        {
+          "type": "H",
+          "time": "4:38 AM"
+        },
+        {
+          "type": "L",
+          "time": "4:07 PM"
+        }
+      ],
       "waterTemp": 86,
       "sky": "Cloudy",
       "stormChance": 29
@@ -52,6 +72,16 @@
       "conditions": {
         "wind": "ESE 15 mph",
         "tide": "High tide ~11:59 PM · Low tide ~11:14 AM · Sunrise 5:54 AM",
+        "tideEvents": [
+          {
+            "type": "H",
+            "time": "11:59 PM"
+          },
+          {
+            "type": "L",
+            "time": "11:14 AM"
+          }
+        ],
         "waterTemp": 84,
         "sky": "Cloudy",
         "stormChance": 83
@@ -75,6 +105,16 @@
       "conditions": {
         "wind": "ENE 10 to 15 mph",
         "tide": "High tide ~11:43 PM · Low tide ~10:11 AM · Sunrise 5:54 AM",
+        "tideEvents": [
+          {
+            "type": "H",
+            "time": "11:43 PM"
+          },
+          {
+            "type": "L",
+            "time": "10:11 AM"
+          }
+        ],
         "waterTemp": 85,
         "sky": "Cloudy",
         "stormChance": 68
@@ -96,6 +136,16 @@
       "conditions": {
         "wind": "WSW 10 mph",
         "tide": "High tide ~12:04 PM · Low tide ~11:07 PM · Sunrise 5:51 AM",
+        "tideEvents": [
+          {
+            "type": "H",
+            "time": "12:04 PM"
+          },
+          {
+            "type": "L",
+            "time": "11:07 PM"
+          }
+        ],
         "waterTemp": null,
         "sky": "Cloudy",
         "stormChance": 20

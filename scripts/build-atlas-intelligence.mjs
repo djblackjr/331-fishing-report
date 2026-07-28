@@ -234,6 +234,7 @@ function reportRecord(data, kind) {
     conditions: {
       wind: data.wind?.description || null,
       tide: data.tide || null,
+      tideEvents: data.tideEvents || null,
       waterTemp: data.waterTemp ?? null,
       sky: data.sky || null,
       stormChance: data.stormChance ?? null,

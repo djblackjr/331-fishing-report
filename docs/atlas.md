@@ -249,6 +249,30 @@ Switchable base layers, no Google tiles:
   soundings — converting to a tidal datum via NOAA's VDatum would be
   needed for that. Public domain (US federal government work).
 
+## On-the-water interaction features
+
+Added to make the map actionable while actually out fishing, not just a
+static reference:
+
+- **Depth sampling** — clicking the map while the Bathymetry (NOAA/NCEI)
+  layer is active queries that same ImageServer's `identify` operation for
+  the exact elevation under the click and shows it in a popup (`src/atlas/main.js`,
+  the `map.on("click", ...)` handler near "DEPTH SAMPLING"). Same NAVD88
+  caveat as the layer itself applies to the sampled value.
+- **Real-time tide status** — the "Current Bay Fishing" sidebar panel shows
+  a computed "Incoming — high in 1h 20m" line (`describeTideNow()`) instead
+  of just today's raw high/low times, using the same tide-event data and
+  extend-by-average-spacing approach as the main dashboard's tide curve.
+  Guarded by `isDateToday()`: if the daily refresh has fallen behind and
+  `currentReport.date` isn't actually today, it falls back to the plain
+  "High tide ~X · Low tide ~Y" text rather than computing a misleadingly
+  confident "high in 20m" against stale times.
+- **"My location" (GPS)** — a 📍 control (top-left, next to zoom) calls
+  `map.locate({ watch: true })` and plots a marker + accuracy circle,
+  updating live as you move. Fails gracefully (a popup, not a crash) if
+  geolocation is denied or unavailable — expected on desktop/headless, real
+  usage is from a phone/tablet on the water.
+
 ## Jolly Bay pilot (STEP 11)
 
 Nine placeholder locations (`db/seed/jolly_bay_locations.sql`): North Grass

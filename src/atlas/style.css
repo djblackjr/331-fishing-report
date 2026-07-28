@@ -217,6 +217,16 @@ html, body, #atlas-root {
   color: #d1f0e0 !important;
   border-color: #7ab898 !important;
 }
+.atlas-locate-control a {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 16px;
+  background: #fff;
+  display: block;
+}
+.atlas-locate-control a.atlas-locate-pending { opacity: 0.5; }
 
 @media (max-width: 700px) {
   .atlas-header { flex-wrap: nowrap; padding: 8px 10px; gap: 8px; }

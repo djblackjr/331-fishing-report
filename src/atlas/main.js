@@ -281,6 +281,105 @@ const layersControl = L.control.layers(
   { collapsed: window.innerWidth < 700 }
 ).addTo(map);
 
+// ── "MY LOCATION" (GPS) ───────────────────────────────────────────────────
+// This map is meant to be read from a boat — knowing where you actually are
+// relative to the mapped spots matters more here than in most web maps.
+// `watch: true` keeps updating as you move rather than a one-shot fix.
+let locationMarker = null;
+let locationAccuracyCircle = null;
+
+const LocateControl = L.Control.extend({
+  options: { position: "topleft" },
+  onAdd() {
+    const container = L.DomUtil.create("div", "leaflet-bar atlas-locate-control");
+    const button = L.DomUtil.create("a", "", container);
+    button.href = "#";
+    button.title = "Show my location";
+    button.setAttribute("role", "button");
+    button.setAttribute("aria-label", "Show my location");
+    button.textContent = "📍";
+    L.DomEvent.on(button, "click", (evt) => {
+      L.DomEvent.stop(evt);
+      button.classList.add("atlas-locate-pending");
+      map.locate({ watch: true, enableHighAccuracy: true, setView: false, maxZoom: 17 });
+    });
+    return container;
+  },
+});
+map.addControl(new LocateControl());
+
+map.on("locationfound", (e) => {
+  document.querySelector(".atlas-locate-control a")?.classList.remove("atlas-locate-pending");
+  if (!locationMarker) {
+    locationMarker = L.circleMarker(e.latlng, { radius: 8, color: "#38bdf8", weight: 2, fillColor: "#38bdf8", fillOpacity: 0.9 })
+      .addTo(map)
+      .bindPopup("You are here");
+    locationAccuracyCircle = L.circle(e.latlng, { radius: e.accuracy, color: "#38bdf8", weight: 1, fillOpacity: 0.08 }).addTo(map);
+    map.setView(e.latlng, Math.max(map.getZoom(), 14));
+  } else {
+    locationMarker.setLatLng(e.latlng);
+    locationAccuracyCircle.setLatLng(e.latlng).setRadius(e.accuracy);
+  }
+});
+
+map.on("locationerror", (e) => {
+  document.querySelector(".atlas-locate-control a")?.classList.remove("atlas-locate-pending");
+  L.popup({ className: "atlas-leaflet-popup" })
+    .setLatLng(map.getCenter())
+    .setContent(`<div class="atlas-popup"><div class="atlas-popup-title">Couldn't get your location</div><div class="atlas-popup-caveat">${escapeHtml(e.message)}</div></div>`)
+    .openOn(map);
+});
+
+// ── DEPTH SAMPLING (click the Bathymetry layer) ──────────────────────────
+// The CUDEM tiles above are a visual backdrop only — this makes them an
+// actual tool by querying the same ImageServer's `identify` operation for
+// the exact elevation under the click. Endpoint sends
+// Access-Control-Allow-Origin: * (verified directly), so a plain fetch()
+// works without a proxy.
+const CUDEM_IDENTIFY_URL = "https://gis.ngdc.noaa.gov/arcgis/rest/services/DEM_mosaics/DEM_tiles_mosaic/ImageServer/identify";
+
+async function fetchCudemElevation(lat, lng) {
+  const params = new URLSearchParams({
+    geometry: JSON.stringify({ x: lng, y: lat, spatialReference: { wkid: 4326 } }),
+    geometryType: "esriGeometryPoint",
+    returnGeometry: "false",
+    f: "json",
+  });
+  const res = await fetch(`${CUDEM_IDENTIFY_URL}?${params.toString()}`);
+  if (!res.ok) throw new Error(`identify request failed (${res.status})`);
+  const data = await res.json();
+  if (data.error) throw new Error(data.error.message || "identify error");
+  return data;
+}
+
+map.on("click", async (e) => {
+  if (!map.hasLayer(bathymetry)) return; // only meaningful while the depth layer is actually showing
+  const popup = L.popup({ className: "atlas-leaflet-popup", maxWidth: 260 })
+    .setLatLng(e.latlng)
+    .setContent(`<div class="atlas-popup"><div class="atlas-popup-title">Sampling depth…</div></div>`)
+    .openOn(map);
+
+  try {
+    const result = await fetchCudemElevation(e.latlng.lat, e.latlng.lng);
+    const raw = result?.value;
+    const meters = raw != null && raw !== "NoData" ? Number.parseFloat(raw) : null;
+    popup.setContent(
+      meters != null && Number.isFinite(meters)
+        ? `<div class="atlas-popup">
+            <div class="atlas-popup-title">${meters <= 0 ? "Depth" : "Elevation"} here</div>
+            <div class="atlas-popup-row"><span class="atlas-popup-label">NAVD88</span><span class="atlas-popup-value">${Math.abs(meters).toFixed(2)} m (${Math.abs(meters * 3.28084).toFixed(1)} ft) ${meters <= 0 ? "below" : "above"}</span></div>
+            <div class="atlas-popup-caveat">NAVD88 elevation, not tidal (MLLW) depth — treat as relative relief, not an exact sounding at low tide. Source: NOAA/NCEI CUDEM.</div>
+          </div>`
+        : `<div class="atlas-popup">
+            <div class="atlas-popup-title">No data here</div>
+            <div class="atlas-popup-caveat">NOAA/NCEI's bathymetry grid has no coverage at this exact point.</div>
+          </div>`
+    );
+  } catch (err) {
+    popup.setContent(`<div class="atlas-popup"><div class="atlas-popup-title">Couldn't fetch depth</div><div class="atlas-popup-caveat">${escapeHtml(err.message)}</div></div>`);
+  }
+});
+
 // ── DATA LOADING ─────────────────────────────────────────────────────────
 async function fetchJson(path) {
   const res = await fetch(`${BASE}${path}`);
@@ -340,6 +439,64 @@ function safeHttpUrl(value) {
   }
 }
 
+function timeToMinutes(time) {
+  const m = String(time || "").match(/(\d+):(\d+)\s*(AM|PM)/i);
+  if (!m) return null;
+  let hours = Number.parseInt(m[1], 10) % 12;
+  if (/PM/i.test(m[3])) hours += 12;
+  return hours * 60 + Number.parseInt(m[2], 10);
+}
+
+// Computes "incoming, high in 1h 20m" from today's two tide events (this
+// location has a diurnal tide — one high, one low per day), the same
+// extend-by-average-spacing approach the main dashboard's tide curve uses so
+// a single H/L near midnight doesn't break the "what's next" lookup.
+function describeTideNow(tideEvents) {
+  if (!Array.isArray(tideEvents) || tideEvents.length < 2) return null;
+  const pts = tideEvents
+    .map((e) => ({ ...e, mins: timeToMinutes(e.time) }))
+    .filter((e) => e.mins != null)
+    .sort((a, b) => a.mins - b.mins);
+  if (pts.length < 2) return null;
+
+  const now = new Date();
+  const nowMins = now.getHours() * 60 + now.getMinutes();
+  const avgInterval = (pts[pts.length - 1].mins - pts[0].mins) / (pts.length - 1) || 360;
+
+  const anchors = [...pts];
+  while (anchors[0].mins > nowMins - 720) {
+    anchors.unshift({ mins: anchors[0].mins - avgInterval, type: anchors[0].type === "H" ? "L" : "H" });
+  }
+  while (anchors[anchors.length - 1].mins < nowMins + 720) {
+    anchors.push({ mins: anchors[anchors.length - 1].mins + avgInterval, type: anchors[anchors.length - 1].type === "H" ? "L" : "H" });
+  }
+
+  let next = anchors[anchors.length - 1];
+  for (let i = 0; i < anchors.length - 1; i++) {
+    if (anchors[i].mins <= nowMins && anchors[i + 1].mins >= nowMins) {
+      next = anchors[i + 1];
+      break;
+    }
+  }
+
+  const untilMins = Math.max(0, Math.round(next.mins - nowMins));
+  const hours = Math.floor(untilMins / 60), mins = untilMins % 60;
+  const untilLabel = hours > 0 ? `${hours}h ${mins}m` : `${mins}m`;
+  return { direction: next.type === "H" ? "Incoming" : "Outgoing", nextLabel: next.type === "H" ? "high" : "low", untilLabel };
+}
+
+// Only trust "right now" tide timing against today's actual events — if the
+// daily refresh has fallen behind (see docs/atlas.md on the deploy
+// pipeline), currentReport.date is a stale day and computing "high in 20m"
+// against yesterday's times would be actively misleading, worse than not
+// showing it.
+function isDateToday(dateISO) {
+  if (!dateISO) return false;
+  const now = new Date();
+  const localISO = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
+  return dateISO === localISO;
+}
+
 function renderCurrentIntelligence(intelligence) {
   if (!intelligence?.currentReport) return;
   const panel = document.getElementById("atlas-intelligence-panel");
@@ -358,6 +515,7 @@ function renderCurrentIntelligence(intelligence) {
     .filter(Boolean)
     .join(" · ");
   const conditions = intelligence.currentConditions || {};
+  const tideNow = isDateToday(intelligence.currentReport.date) ? describeTideNow(conditions.tideEvents) : null;
   const signalMap = new Map((intelligence.speciesSignals || []).map((signal) => [signal.key, signal]));
   const timelineHtml = (intelligence.archivedReports || []).slice(0, 6).map((report) => {
     const species = (report.species || [])
@@ -380,7 +538,9 @@ function renderCurrentIntelligence(intelligence) {
     <div class="atlas-intel-conditions">
       ${conditions.waterTemp != null ? `<span>🌡️ ${escapeHtml(conditions.waterTemp)}°F water</span>` : ""}
       ${conditions.wind ? `<span>💨 ${escapeHtml(conditions.wind)}</span>` : ""}
-      ${conditions.tide ? `<span>🌊 ${escapeHtml(conditions.tide)}</span>` : ""}
+      ${tideNow
+        ? `<span>🌊 ${escapeHtml(tideNow.direction)} — ${escapeHtml(tideNow.nextLabel)} in ${escapeHtml(tideNow.untilLabel)}</span>`
+        : conditions.tide ? `<span>🌊 ${escapeHtml(conditions.tide)}</span>` : ""}
     </div>
     <details class="atlas-intel-report">
       <summary>Read current regional report</summary>
