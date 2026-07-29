@@ -149,8 +149,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -86.2935,
-          30.3987
+          -86.2877798,
+          30.3964205
         ]
       },
       "properties": {
@@ -208,8 +208,8 @@
         "accessType": "boat",
         "confidence": 80,
         "validationStatus": "visually_reviewed",
-        "source": "Ported from src/App.jsx main dashboard content, 2026-07-29",
-        "notes": "Evidence: Ported from src/App.jsx's established LOCATIONS dataset. Coordinates originally sourced via NOAA chart label — approximate, not in OpenStreetMap. | Uncertainty: Species confidence and tactics reflect accumulated app content, not a field visit by this Atlas pilot specifically. Mapped point sits close to the developed shoreline edge, not clearly out in open water.",
+        "source": "Ported from src/App.jsx main dashboard content, 2026-07-29; coordinate corrected 2026-07-29 via USGS topo (topozone.com)",
+        "notes": "Evidence: Ported from src/App.jsx's established LOCATIONS dataset. Coordinates originally sourced via NOAA chart label — approximate, not in OpenStreetMap. | Uncertainty: Species confidence and tactics reflect accumulated app content, not a field visit by this Atlas pilot specifically. Mapped point sits close to the developed shoreline edge, not clearly out in open water. | Correction (2026-07-29): original coordinate (30.3987,-86.2935), inherited from src/App.jsx's NOAA-chart-label estimate, landed on a residential lot ~650m west of the actual bayou. Replaced with a USGS topo (topozone.com) coordinate for the \"Hewett Bayou\" stream feature on the Choctaw Beach quad, verified directly against satellite imagery to confirm it lands in the actual water basin. | Correction (2026-07-29, take 2): the topozone/GNIS point above still sat right at the shoreline tip, where the OpenStreetMap standard tile style does not render this narrow bayou as filled water below zoom 16 — so the marker still looked like it was on land at the app's usual zoom level. Moved ~170m southwest into the main basin (verified against satellite imagery, ~30m off the nearest dock, clear open water).",
         "lastUpdated": "2026-07-29",
         "catchCount": 0
       }
