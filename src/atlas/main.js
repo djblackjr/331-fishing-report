@@ -771,6 +771,21 @@ async function init() {
     }
   }
 
+  // fishing_locations is the ONLY layer with the wind-shelter badge, "add to
+  // today's run" toggle, and catch log — the layer loop above adds layers in
+  // db sort_order, which puts Channels/Creek Mouths/etc after (on top of)
+  // fishing_locations in the SVG stacking order. Since several of those
+  // lines run close to or through the small (radius-9) location markers,
+  // clicking near a marker often hit the wider line underneath it instead,
+  // landing on a plain habitat-feature popup with none of the new features
+  // — found by clicking "the first visible interactive thing" on the live
+  // site exactly as a real user would. bringToFront() fixes the z-order so
+  // a click on/near a marker actually hits the marker.
+  fishingLocationsLayer?.bringToFront();
+  // Any other overlay toggled on later re-stacks on top by default — keep
+  // fishing_locations above all of them regardless of what gets enabled.
+  map.on("overlayadd", () => fishingLocationsLayer?.bringToFront());
+
   if (!fishingLocationsRaw.length) return;
 
   renderPendingList(fishingLocationsRaw);
