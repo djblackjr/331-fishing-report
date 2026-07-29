@@ -26,7 +26,7 @@ root.innerHTML = `
       <a class="atlas-back" href="./">&larr; 331 Bridge Report</a>
       <div class="atlas-title">
         <span class="atlas-title-main">Fishing Intelligence Atlas</span>
-        <span class="atlas-title-sub">Jolly Bay pilot region</span>
+        <span class="atlas-title-sub">Choctawhatchee Bay</span>
       </div>
       <button class="atlas-sidebar-toggle" id="atlas-sidebar-toggle" type="button" aria-label="Toggle filters">Filters</button>
     </header>
@@ -801,6 +801,18 @@ async function init() {
   map.on("overlayadd", () => fishingLocationsLayer?.bringToFront());
 
   if (!fishingLocationsRaw.length) return;
+
+  // Fit the initial view to whatever's actually plotted, rather than the
+  // fixed Jolly-Bay-only center/zoom above — this now spans most of
+  // Choctawhatchee Bay (2026-07-29: added 331 Bridge, LaGrange, Four Mile
+  // Creek, Hogtown, Mack, and Hewett alongside the Jolly Bay pilot), and a
+  // fixed zoom would leave most of them off-screen. Recomputes automatically
+  // as more locations get added later — no hardcoded bounds to maintain.
+  const located = fishingLocationsRaw.filter((f) => f.geometry);
+  if (located.length > 1) {
+    const bounds = L.latLngBounds(located.map((f) => [f.geometry.coordinates[1], f.geometry.coordinates[0]]));
+    map.fitBounds(bounds, { padding: [40, 40] });
+  }
 
   renderPendingList(fishingLocationsRaw);
   renderTodaysRun(fishingLocationsRaw);

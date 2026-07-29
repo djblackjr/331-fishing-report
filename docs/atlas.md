@@ -329,11 +329,32 @@ classification only — no coordinates, no species, no tide/wind/lure
 guidance. **Do not invent any of that.** Fill it in only once actually
 field-validated, per the location-editing example above.
 
-The map centers on Jolly Bay itself (`30.4272691, -86.1280154` — USGS topo
-data via [topozone.com](https://www.topozone.com/florida/walton-fl/bay/jolly-bay/)),
-which is a real, publicly documented place name, not a fabricated fishing
-spot — that's just where the map opens, not a claim about any specific
-waypoint's location.
+The map used to center on Jolly Bay itself (`30.4272691, -86.1280154` —
+USGS topo data via [topozone.com](https://www.topozone.com/florida/walton-fl/bay/jolly-bay/)),
+a real, publicly documented place name, not a fabricated fishing spot. It
+now `fitBounds()`es to whatever's actually plotted instead (see below), so
+that starting point matters less than it used to, but it's still a real
+verified coordinate, not an invented one.
+
+## Bay-wide locations (added 2026-07-29)
+
+Six more named spots, ported from `src/App.jsx`'s main-dashboard
+`LOCATIONS` — 331 Bridge, LaGrange Bayou, Four Mile Creek, Hogtown Bayou,
+Mack Bayou, Hewett Bayou (`external_id` prefix `MAIN-`, each its own
+`region` — `bridge_331`, `lagrange_bayou`, etc., not grouped into one
+pilot region the way Jolly Bay's nine are). These already had real
+coordinates and rich species/tactic content from the long-running main
+app, so the only new research done for them was the wind-shelter
+`exposed_directions_json` assessment (same visual-satellite method as
+Jolly Bay's six located spots — see "On-the-water interaction features"
+above) — everything else is `confidence: 80`, `validation_status:
+'visually_reviewed'`, sourced as "ported from src/App.jsx", not
+independently field-verified by this Atlas.
+
+The map's initial view now `fitBounds()`s to every located
+`fishing_locations` feature (40px padding) instead of a fixed Jolly-Bay
+center/zoom, so it automatically re-fits as more locations get added later
+— nothing to hand-tune here on the next expansion.
 
 ## Future expansion
 
