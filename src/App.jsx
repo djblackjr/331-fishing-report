@@ -494,7 +494,7 @@ const LOCATIONS = [
     id: "hewett",
     label: "Hewett Bayou",
     emoji: "🦀",
-    lat: 30.3987, lng: -86.2935, // approximate — read from NOAA chart label, not in OpenStreetMap
+    lat: 30.3964205, lng: -86.2877798, // Nudged into the main basin 2026-07-29 — the USGS/topozone GNIS point (30.3979771,-86.2866115) sits right at the shoreline tip, where OSM's standard tile style doesn't fill this narrow bayou as water until zoom 16+, so the marker rendered on "land" at the app's zoom-14 mini-map even though it's technically in the bayou. This point sits ~30m off the nearest dock in the open basin, verified against satellite imagery, and renders correctly as water at zoom 14.
     overallScore: 7.0,
     conditions: "Good",
     species: [
