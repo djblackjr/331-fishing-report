@@ -454,7 +454,21 @@ function buildFeatureLayer(layerMeta, featureCollection, intelligence) {
       const buildHtml = () => isLocation
         ? buildLocationPopup(feature.properties, fishingContext)
         : buildFeaturePopup(feature.properties, layerMeta.label, fishingContext);
-      leafletLayer.bindPopup(buildHtml(), { maxWidth: 340, maxHeight: 420, className: "atlas-leaflet-popup" });
+      // Extra autoPan padding on the top/right: Leaflet's controls (layer
+      // control top-right, the header bar) sit ABOVE popups in z-index by
+      // Leaflet's own default CSS, so a popup opening close to either one
+      // renders partly underneath it — its buttons become unclickable
+      // because the control captures the click instead. Confirmed directly
+      // for the easternmost marker (Deep Bend), whose popup opened right
+      // under the expanded layer control. This keeps the autopan far enough
+      // from both to clear them.
+      leafletLayer.bindPopup(buildHtml(), {
+        maxWidth: 340,
+        maxHeight: 420,
+        className: "atlas-leaflet-popup",
+        autoPanPaddingTopLeft: [10, 70],
+        autoPanPaddingBottomRight: [220, 10],
+      });
 
       // fishing_locations popups carry a device-local catch-log form (see
       // catchlog.js) — regenerate content fresh on every open (so a catch
