@@ -1,73 +1,60 @@
 {
   "type": "FishingIntelligence",
   "region": "choctawhatchee_bay",
-  "generatedAt": "2026-07-28",
+  "generatedAt": "2026-07-29",
   "scopeNote": "Regional reports support timing and species activity only. They do not prove a catch, depth, bottom type, or safe navigation at a mapped Jolly Bay feature.",
   "currentConditions": {
     "wind": "W 5 to 10 mph",
     "windDir": "W",
-    "tide": "High tide ~11:02 AM · Low tide ~10:01 PM · Sunrise 5:59 AM",
+    "tide": "High tide ~6:02 AM · Low tide ~5:01 PM · Sunrise 5:59 AM",
     "tideEvents": [
       {
         "type": "H",
-        "time": "11:02 AM"
+        "time": "6:02 AM"
       },
       {
         "type": "L",
-        "time": "10:01 PM"
+        "time": "5:01 PM"
       }
     ],
     "waterTemp": 86,
     "sky": "Cloudy",
-    "stormChance": 28,
-    "pressure": {
-      "hpa": 1008.8,
-      "inHg": 29.79,
-      "direction": "falling",
-      "changeHpa3h": -0.9
-    }
+    "stormChance": 37,
+    "pressure": null
   },
   "currentReport": {
     "kind": "current_regional_report",
-    "date": "2026-07-28",
-    "displayDate": "July 28, 2026",
-    "summary": "The most current reports from Choctawhatchee Bay area guides (dated approximately July 22, 2026) show a strong speckled trout bite, with guides in the Santa Rosa Beach area reporting good numbers including some quality fish, alongside a 26-lb bull redfish caught this past week. Flounder have also been showing up in the bay alongside redfish and trout on recent charter trips out of Destin. Water temp is 86°F. Wind has been a factor requiring anglers to pick protected spots, but once conditions settle the bay bite has been productive across flats and near structure. The Half Hitch Destin tackle shop posted a fishing report dated July 13, 2026 (about two weeks ago); that report's inshore details were not fully retrievable, but the shop has been posting weekly and the July 6 report confirmed active summer bay fishing.",
-    "attribution": "captainexperiences.com (Choctawhatchee Bay reports page, report ~July 22, 2026); fishingbooker.com (Choctawhatchee Bay daily reports, July 2026); halfhitch.com (Destin Fishing Report 7-13-26, most recent confirmed post) · Auto-refreshed via Claude API",
+    "date": "2026-07-29",
+    "displayDate": "July 29, 2026",
+    "summary": "The most current reports from Choctawhatchee Bay (within the past week) confirm an active speckled trout bite across the bay, with multiple anglers reporting good numbers and some quality-sized fish. Bull redfish are also in the mix — one notable catch this week out of Santa Rosa Beach was a 40-inch, 26-lb bull red. Tarpon have been cruising the beaches and anglers are finding them in good numbers as well. Water temperature is 86°F. Early morning trips are strongly recommended to beat both the summer heat and crowded conditions; book charters well in advance as summer demand is high.",
+    "attribution": "captainexperiences.com (Choctawhatchee Bay reports page, reports from ~July 23 and ~July 22, 2026); fishingbooker.com (Choctawhatchee Bay daily reports, July 2026) · Auto-refreshed via Claude API",
     "sourceIds": [
       "captain-experiences-destin",
       "fishingbooker-bay",
-      "halfhitch-destin",
-      "report-aHR0cHM6Ly9jYXB0YW",
-      "report-aHR0cHM6Ly9oYWxmaG"
+      "report-aHR0cHM6Ly9jYXB0YW"
     ],
     "species": [
       "spotted_seatrout",
-      "redfish",
-      "gulf_flounder"
+      "redfish"
     ],
     "conditions": {
       "wind": "W 5 to 10 mph",
       "windDir": "W",
-      "tide": "High tide ~11:02 AM · Low tide ~10:01 PM · Sunrise 5:59 AM",
+      "tide": "High tide ~6:02 AM · Low tide ~5:01 PM · Sunrise 5:59 AM",
       "tideEvents": [
         {
           "type": "H",
-          "time": "11:02 AM"
+          "time": "6:02 AM"
         },
         {
           "type": "L",
-          "time": "10:01 PM"
+          "time": "5:01 PM"
         }
       ],
       "waterTemp": 86,
       "sky": "Cloudy",
-      "stormChance": 28,
-      "pressure": {
-        "hpa": 1008.8,
-        "inHg": 29.79,
-        "direction": "falling",
-        "changeHpa3h": -0.9
-      }
+      "stormChance": 37,
+      "pressure": null
     }
   },
   "archivedReports": [
@@ -265,7 +252,7 @@
       "label": "Speckled trout",
       "current": true,
       "reportCount": 7,
-      "lastReported": "2026-07-28",
+      "lastReported": "2026-07-29",
       "evidenceLevel": "current_regional_report"
     },
     {
@@ -273,16 +260,16 @@
       "label": "Redfish",
       "current": true,
       "reportCount": 8,
-      "lastReported": "2026-07-28",
+      "lastReported": "2026-07-29",
       "evidenceLevel": "current_regional_report"
     },
     {
       "key": "gulf_flounder",
       "label": "Flounder",
-      "current": true,
-      "reportCount": 4,
+      "current": false,
+      "reportCount": 3,
       "lastReported": "2026-07-28",
-      "evidenceLevel": "current_regional_report"
+      "evidenceLevel": "archived_regional_report"
     },
     {
       "key": "black_drum",
