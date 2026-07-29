@@ -5,7 +5,7 @@
     "dir": "W",
     "description": "W 5 to 10 mph"
   },
-  "weather": "Mostly Sunny then Chance Showers And Thunderstorms · High 96°F · Heat index up to 111°F",
+  "weather": "Slight Chance Showers And Thunderstorms · High 96°F · Heat index up to 111°F",
   "tide": "High tide ~6:02 AM · Low tide ~5:01 PM · Sunrise 5:59 AM",
   "tideEvents": [
     {
@@ -19,12 +19,12 @@
   ],
   "sunrise": "5:59 AM",
   "sunset": "7:42 PM",
-  "stormWindow": "after 1PM",
-  "stormChance": 37,
+  "stormWindow": "after 4PM",
+  "stormChance": 20,
   "moonPhase": "Full Moon (~99% illuminated) — strong tidal push (spring tide)",
   "waterClarity": "Slightly stained",
   "sky": "Cloudy",
-  "lastUpdated": "7/29/2026, 5:47:37 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "lastUpdated": "7/29/2026, 12:24:51 PM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
   "localBiteReport": "The most current reports from Choctawhatchee Bay (within the past week) confirm an active speckled trout bite across the bay, with multiple anglers reporting good numbers and some quality-sized fish. Bull redfish are also in the mix — one notable catch this week out of Santa Rosa Beach was a 40-inch, 26-lb bull red. Tarpon have been cruising the beaches and anglers are finding them in good numbers as well. Water temperature is 86°F. Early morning trips are strongly recommended to beat both the summer heat and crowded conditions; book charters well in advance as summer demand is high.",
   "localBiteSource": "captainexperiences.com (Choctawhatchee Bay reports page, reports from ~July 23 and ~July 22, 2026); fishingbooker.com (Choctawhatchee Bay daily reports, July 2026) · Auto-refreshed via Claude API",
   "localBiteUpdated": "July 29, 2026",
@@ -52,28 +52,28 @@
   },
   "openMeteo": [
     {
-      "high": 100,
+      "high": 99,
       "low": 80,
-      "stormChance": 22,
-      "windSpeed": 14,
+      "stormChance": 23,
+      "windSpeed": 12,
       "windDir": "W",
       "summary": "Overcast"
     },
     {
-      "high": 94,
-      "low": 79,
-      "stormChance": 70,
-      "windSpeed": 21,
-      "windDir": "SW",
-      "summary": "Drizzle"
+      "high": 97,
+      "low": 74,
+      "stormChance": 40,
+      "windSpeed": 33,
+      "windDir": "W",
+      "summary": "Unknown"
     },
     {
       "high": 94,
-      "low": 75,
-      "stormChance": 41,
-      "windSpeed": 14,
+      "low": 78,
+      "stormChance": 50,
+      "windSpeed": 13,
       "windDir": "SW",
-      "summary": "Light drizzle"
+      "summary": "Thunderstorm"
     }
   ],
   "forecast": [
@@ -83,10 +83,10 @@
       "high": 96,
       "low": null,
       "wind": "W 5 to 10 mph",
-      "storms": 37,
-      "headline": "Mostly Sunny then Chance Showers And Thunderstorms · Heat index 111",
-      "fishingScore": 7,
-      "aiCall": "A chance of showers and thunderstorms after 1pm. Mostly sunny. High near 96, with temperatures falling to around 91 in the afternoon. Heat index values as high as 111. West wind 5 to 10 mph. Chance of precipitation is 40%. New rainfall amounts less than a tenth of an inch possible.",
+      "storms": 20,
+      "headline": "Slight Chance Showers And Thunderstorms · Heat index 111",
+      "fishingScore": 7.7,
+      "aiCall": "A slight chance of showers and thunderstorms after 4pm. Mostly sunny. High near 96, with temperatures falling to around 91 in the afternoon. Heat index values as high as 111. West wind 5 to 10 mph. Chance of precipitation is 20%. New rainfall amounts less than a tenth of an inch possible.",
       "emoji": "⛈️"
     },
     {
@@ -98,7 +98,7 @@
       "storms": 68,
       "headline": "Showers And Thunderstorms Likely · Heat index 105",
       "fishingScore": 5.8,
-      "aiCall": "Showers and thunderstorms likely. Mostly sunny. High near 92, with temperatures falling to around 89 in the afternoon. Heat index values as high as 105. West wind 0 to 10 mph. Chance of precipitation is 70%.",
+      "aiCall": "Showers and thunderstorms likely. Mostly sunny. High near 92, with temperatures falling to around 89 in the afternoon. Heat index values as high as 105. West wind 0 to 10 mph. Chance of precipitation is 70%. New rainfall amounts between a quarter and half of an inch possible.",
       "emoji": "⛈️"
     },
     {
@@ -110,7 +110,7 @@
       "storms": 53,
       "headline": "Chance Showers And Thunderstorms",
       "fishingScore": 6.4,
-      "aiCall": "A chance of showers and thunderstorms before 10am, then a chance of showers and thunderstorms. Mostly sunny, with a high near 91. Chance of precipitation is 50%.",
+      "aiCall": "A chance of showers and thunderstorms before 10am, then a chance of showers and thunderstorms. Mostly sunny, with a high near 91. West wind 0 to 10 mph. Chance of precipitation is 50%.",
       "emoji": "⛈️"
     }
   ],
@@ -158,5 +158,11 @@
       "todaysCall": "Buck Bayou is a low-commitment add-on to a Mack/Hewett trip today — if you're already out on the 30-A side and have time before your weather-driven turnaround, a quick pass through Buck's mouth structure on the falling tide costs you very little and could yield opportunistic reds or trout. Don't build your day around it; given limited documented history here, it's the last priority in the three-bayou rotation. The same time constraints apply regardless — the 1 PM storm window and the long open-water run home mean you should treat any time at Buck Bayou as a bonus, not a given. If the bite is hot at Mack or Hewett, stay there rather than moving for the sake of covering water."
     }
   },
-  "waterTemp": 86
+  "waterTemp": 87,
+  "pressure": {
+    "hpa": 1010.8,
+    "inHg": 29.85,
+    "direction": "steady",
+    "changeHpa3h": -0.1
+  }
 }
