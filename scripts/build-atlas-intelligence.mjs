@@ -233,11 +233,13 @@ function reportRecord(data, kind) {
     species: positiveSpeciesMentions(data.localBiteReport),
     conditions: {
       wind: data.wind?.description || null,
+      windDir: data.wind?.dir || null,
       tide: data.tide || null,
       tideEvents: data.tideEvents || null,
       waterTemp: data.waterTemp ?? null,
       sky: data.sky || null,
       stormChance: data.stormChance ?? null,
+      pressure: data.pressure || null,
     },
   };
 }

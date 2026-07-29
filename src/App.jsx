@@ -1037,6 +1037,14 @@ function LocationReport({ loc }) {
           <div style={{ fontSize: 16, color: "#86c7a0", marginTop: 2 }}>{C.weather}</div>
           <div style={{ fontSize: 16, color: "#7ab898", marginTop: 2 }}>🌊 {C.tide}</div>
           <div style={{ fontSize: 16, color: "#7ab898", marginTop: 1 }}>💨 {C.wind.description} · 🌙 {C.moonPhase}</div>
+          {/* Guides watch this more closely than almost any other single number —
+              a falling barometer ahead of a front is the classic "bite's about to
+              turn on" signal; a steady high is the classic tough-bite day. */}
+          {C.pressure && (
+            <div style={{ fontSize: 16, color: "#7ab898", marginTop: 1 }}>
+              {C.pressure.direction === "falling" ? "📉" : C.pressure.direction === "rising" ? "📈" : "➡️"} Pressure {C.pressure.direction} ({C.pressure.inHg}" Hg)
+            </div>
+          )}
         </div>
         <WindCompass dir={C.wind.dir} />
       </div>

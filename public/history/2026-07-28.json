@@ -3,28 +3,28 @@
   "wind": {
     "speed": 10,
     "dir": "W",
-    "description": "W 5 to 10 mph"
+    "description": "W 0 to 10 mph"
   },
   "weather": "Mostly Sunny then Chance Showers And Thunderstorms · High 96°F · Heat index up to 111°F",
-  "tide": "High tide ~11:02 AM · Low tide ~10:01 PM · Sunrise 5:59 AM",
+  "tide": "High tide ~5:22 AM · Low tide ~4:38 PM · Sunrise 5:59 AM",
   "tideEvents": [
     {
       "type": "H",
-      "time": "11:02 AM"
+      "time": "5:22 AM"
     },
     {
       "type": "L",
-      "time": "10:01 PM"
+      "time": "4:38 PM"
     }
   ],
   "sunrise": "5:59 AM",
   "sunset": "7:42 PM",
-  "stormWindow": "after 3PM",
-  "stormChance": 28,
+  "stormWindow": "after 1PM",
+  "stormChance": 25,
   "moonPhase": "Full Moon (~100% illuminated) — strong tidal push (spring tide)",
   "waterClarity": "Slightly stained",
   "sky": "Cloudy",
-  "lastUpdated": "7/28/2026, 10:55:58 PM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "lastUpdated": "7/28/2026, 5:43:51 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
   "localBiteReport": "The most current reports from Choctawhatchee Bay area guides (dated approximately July 22, 2026) show a strong speckled trout bite, with guides in the Santa Rosa Beach area reporting good numbers including some quality fish, alongside a 26-lb bull redfish caught this past week. Flounder have also been showing up in the bay alongside redfish and trout on recent charter trips out of Destin. Water temp is 86°F. Wind has been a factor requiring anglers to pick protected spots, but once conditions settle the bay bite has been productive across flats and near structure. The Half Hitch Destin tackle shop posted a fishing report dated July 13, 2026 (about two weeks ago); that report's inshore details were not fully retrievable, but the shop has been posting weekly and the July 6 report confirmed active summer bay fishing.",
   "localBiteSource": "captainexperiences.com (Choctawhatchee Bay reports page, report ~July 22, 2026); fishingbooker.com (Choctawhatchee Bay daily reports, July 2026); halfhitch.com (Destin Fishing Report 7-13-26, most recent confirmed post) · Auto-refreshed via Claude API",
   "localBiteUpdated": "July 28, 2026",
@@ -57,65 +57,65 @@
   },
   "openMeteo": [
     {
-      "high": 97,
-      "low": 78,
+      "high": 98,
+      "low": 79,
       "stormChance": 15,
-      "windSpeed": 9,
+      "windSpeed": 13,
       "windDir": "SW",
-      "summary": "Partly cloudy"
+      "summary": "Overcast"
     },
     {
       "high": 99,
-      "low": 79,
-      "stormChance": 24,
-      "windSpeed": 20,
-      "windDir": "W",
-      "summary": "Heavy drizzle"
+      "low": 80,
+      "stormChance": 55,
+      "windSpeed": 16,
+      "windDir": "SW",
+      "summary": "Rain showers"
     },
     {
-      "high": 93,
-      "low": 77,
-      "stormChance": 70,
-      "windSpeed": 20,
-      "windDir": "SW",
-      "summary": "Light rain"
+      "high": 97,
+      "low": 74,
+      "stormChance": 56,
+      "windSpeed": 17,
+      "windDir": "W",
+      "summary": "Thunderstorm w/ hail"
     }
   ],
   "forecast": [
     {
-      "day": "Wed, Jul 29",
+      "day": "Tue, Jul 28",
       "label": "Today",
       "high": 96,
       "low": null,
-      "wind": "W 5 to 10 mph",
-      "storms": 28,
+      "wind": "W 0 to 10 mph",
+      "storms": 25,
       "headline": "Mostly Sunny then Chance Showers And Thunderstorms · Heat index 111",
-      "fishingScore": 7.4,
-      "aiCall": "A chance of showers and thunderstorms after 3pm. Mostly sunny. High near 96, with temperatures falling to around 93 in the afternoon. Heat index values as high as 111. West wind 5 to 10 mph. Chance of precipitation is 30%. New rainfall amounts less than a tenth of an inch possible.",
+      "fishingScore": 7.5,
+      "aiCall": "A chance of showers and thunderstorms after 1pm. Mostly sunny. High near 96, with temperatures falling to around 93 in the afternoon. Heat index values as high as 111. West wind 0 to 10 mph. Chance of precipitation is 30%. New rainfall amounts less than a tenth of an inch possible.",
+      "emoji": "⛈️"
+    },
+    {
+      "day": "Wed, Jul 29",
+      "label": "Tomorrow",
+      "high": 96,
+      "low": null,
+      "wind": "W 5 to 10 mph",
+      "storms": 25,
+      "headline": "Mostly Sunny then Chance Showers And Thunderstorms · Heat index 112",
+      "fishingScore": 7.5,
+      "aiCall": "A chance of showers and thunderstorms after 2pm. Mostly sunny. High near 96, with temperatures falling to around 93 in the afternoon. Heat index values as high as 112. West wind 5 to 10 mph. Chance of precipitation is 30%.",
       "emoji": "⛈️"
     },
     {
       "day": "Thu, Jul 30",
-      "label": "Tomorrow",
+      "label": "Thursday",
       "high": 92,
       "low": null,
-      "wind": "W 0 to 5 mph",
+      "wind": "W 5 to 10 mph",
       "storms": 65,
-      "headline": "Showers And Thunderstorms Likely · Heat index 103",
-      "fishingScore": 5.9,
-      "aiCall": "Showers and thunderstorms likely. Mostly sunny. High near 92, with temperatures falling to around 88 in the afternoon. Heat index values as high as 103. West wind 0 to 5 mph. Chance of precipitation is 70%.",
-      "emoji": "⛈️"
-    },
-    {
-      "day": "Fri, Jul 31",
-      "label": "Friday",
-      "high": 90,
-      "low": null,
-      "wind": "W 0 to 10 mph",
-      "storms": 60,
       "headline": "Showers And Thunderstorms Likely",
-      "fishingScore": 6.1,
-      "aiCall": "A chance of showers and thunderstorms before 7am, then a chance of showers and thunderstorms between 7am and 10am, then showers and thunderstorms likely between 10am and 4pm, then showers and thunderstorms likely. Mostly sunny, with a high near 90. Chance of precipitation is 60%.",
+      "fishingScore": 5.9,
+      "aiCall": "Showers and thunderstorms likely. Mostly sunny, with a high near 92. Chance of precipitation is 70%.",
       "emoji": "⛈️"
     }
   ],
@@ -163,11 +163,5 @@
       "todaysCall": "Treat Buck Bayou as a quick bonus stop while you're already on the 30-A side fishing Mack and Hewett — poke in, work the mouth structure and any visible oyster edges on the outgoing tide, and move on if it doesn't produce quickly. Slightly stained water means you're relying on lure action and presentation over sight-fishing precision; a dark soft plastic or small gold spoon covering water efficiently is the right call. Given the limited documentation on this spot, don't burn precious morning time here at the expense of the more proven neighboring bayous. As with all the 30-A locations today, the 1 PM storm window means your departure timeline from this side of the bay is non-negotiable."
     }
   },
-  "waterTemp": 86,
-  "pressure": {
-    "hpa": 1008.8,
-    "inHg": 29.79,
-    "direction": "falling",
-    "changeHpa3h": -0.9
-  }
+  "waterTemp": 86
 }

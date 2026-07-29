@@ -19,7 +19,11 @@
         "species": [],
         "depthTypical": null,
         "bestTide": null,
-        "bestWind": null,
+        "bestWind": "Interior channel — well protected overall, but wind running straight along the channel axis (east or west) can still build some chop.",
+        "exposedDirections": [
+          "E",
+          "W"
+        ],
         "bestSeason": null,
         "bestLures": [],
         "accessNotes": null,
@@ -27,8 +31,8 @@
         "confidence": 63,
         "validationStatus": "visually_reviewed",
         "source": "Aerial image review — Esri World Imagery export, reviewed 2026-07-24 (db/import/2026-07-24-jolly-bay-review/)",
-        "notes": "Evidence: Visible transition where the confined marsh channel opens toward broader bay water. | Uncertainty: Hydrodynamics and usable depth require tide/field review.",
-        "lastUpdated": "2026-07-24 21:16:00",
+        "notes": "Evidence: Visible transition where the confined marsh channel opens toward broader bay water. | Uncertainty: Hydrodynamics and usable depth require tide/field review. | Wind exposure (aerial assessment, 2026-07-28): well protected overall, but wind running straight along the channel axis (east or west) can still build some chop.",
+        "lastUpdated": "2026-07-29",
         "catchCount": 0
       }
     },
@@ -50,7 +54,8 @@
         "species": [],
         "depthTypical": null,
         "bestTide": null,
-        "bestWind": null,
+        "bestWind": "Interior marsh channel on all sides — protected from wind chop regardless of direction; the channel itself is the only real fetch line.",
+        "exposedDirections": [],
         "bestSeason": null,
         "bestLures": [],
         "accessNotes": null,
@@ -58,8 +63,8 @@
         "confidence": 58,
         "validationStatus": "visually_reviewed",
         "source": "Aerial image review — Esri World Imagery export, reviewed 2026-07-24 (db/import/2026-07-24-jolly-bay-review/)",
-        "notes": "Evidence: Distinct dark channel boundary against the adjacent marsh shallows. | Uncertainty: Channel edge is visible; an actual drop-off and depth require chart/sonar confirmation.",
-        "lastUpdated": "2026-07-24 21:16:00",
+        "notes": "Evidence: Distinct dark channel boundary against the adjacent marsh shallows. | Uncertainty: Channel edge is visible; an actual drop-off and depth require chart/sonar confirmation. | Wind exposure (aerial assessment, 2026-07-28): interior marsh channel on all sides — protected from wind chop regardless of direction.",
+        "lastUpdated": "2026-07-29",
         "catchCount": 0
       }
     },
@@ -81,7 +86,8 @@
         "species": [],
         "depthTypical": null,
         "bestTide": null,
-        "bestWind": null,
+        "bestWind": "Deep in the interior marsh channel — protected from wind chop regardless of direction.",
+        "exposedDirections": [],
         "bestSeason": null,
         "bestLures": [],
         "accessNotes": null,
@@ -89,8 +95,8 @@
         "confidence": 55,
         "validationStatus": "visually_reviewed",
         "source": "Aerial image review — Esri World Imagery export, reviewed 2026-07-24 (db/import/2026-07-24-jolly-bay-review/)",
-        "notes": "Evidence: Pronounced outside bend is visible in the eastern marsh channel. | Uncertainty: The bend is mapped; greater depth is only a hypothesis until measured.",
-        "lastUpdated": "2026-07-24 21:16:00",
+        "notes": "Evidence: Pronounced outside bend is visible in the eastern marsh channel. | Uncertainty: The bend is mapped; greater depth is only a hypothesis until measured. | Wind exposure (aerial assessment, 2026-07-28): deep in the interior marsh channel — protected from wind chop regardless of direction.",
+        "lastUpdated": "2026-07-29",
         "catchCount": 0
       }
     },
@@ -112,7 +118,11 @@
         "species": [],
         "depthTypical": null,
         "bestTide": null,
-        "bestWind": null,
+        "bestWind": "Tucked at the marsh/bay corner — open water to the south/southwest, the residential shoreline blocks north and east.",
+        "exposedDirections": [
+          "SW",
+          "S"
+        ],
         "bestSeason": null,
         "bestLures": [],
         "accessNotes": null,
@@ -120,8 +130,8 @@
         "confidence": 70,
         "validationStatus": "visually_reviewed",
         "source": "Aerial image review — Esri World Imagery export, reviewed 2026-07-24 (db/import/2026-07-24-jolly-bay-review/)",
-        "notes": "Evidence: Clearly visible narrow marsh drain entering the bay/channel system. | Uncertainty: Flow timing, depth, and navigability remain unverified.",
-        "lastUpdated": "2026-07-24 21:16:00",
+        "notes": "Evidence: Clearly visible narrow marsh drain entering the bay/channel system. | Uncertainty: Flow timing, depth, and navigability remain unverified. | Wind exposure (aerial assessment, 2026-07-28): tucked at the marsh/bay corner — open water to the south/southwest, shoreline blocks north and east.",
+        "lastUpdated": "2026-07-29",
         "catchCount": 0
       }
     },
@@ -138,6 +148,7 @@
         "depthTypical": null,
         "bestTide": null,
         "bestWind": null,
+        "exposedDirections": null,
         "bestSeason": null,
         "bestLures": [],
         "accessNotes": null,
@@ -168,7 +179,13 @@
         "species": [],
         "depthTypical": null,
         "bestTide": null,
-        "bestWind": null,
+        "bestWind": "Open bay to the west/southwest — exposed on any wind with real west-of-south component; the shoreline to the north/northeast blocks the rest.",
+        "exposedDirections": [
+          "W",
+          "SW",
+          "S",
+          "SE"
+        ],
         "bestSeason": null,
         "bestLures": [],
         "accessNotes": null,
@@ -176,8 +193,8 @@
         "confidence": 46,
         "validationStatus": "visually_reviewed",
         "source": "Aerial image review — Esri World Imagery export, reviewed 2026-07-24 (db/import/2026-07-24-jolly-bay-review/)",
-        "notes": "Evidence: Aerial tonal transition beside the north shoreline; submerged grass is not resolved. | Uncertainty: Flat edge is visible, but vegetation and depth are unverified.",
-        "lastUpdated": "2026-07-24 21:16:00",
+        "notes": "Evidence: Aerial tonal transition beside the north shoreline; submerged grass is not resolved. | Uncertainty: Flat edge is visible, but vegetation and depth are unverified. | Wind exposure (aerial assessment, 2026-07-28): open bay to the west/southwest — exposed on any wind with a west-of-south component; shoreline to the north/northeast blocks the rest.",
+        "lastUpdated": "2026-07-29",
         "catchCount": 0
       }
     },
@@ -194,6 +211,7 @@
         "depthTypical": null,
         "bestTide": null,
         "bestWind": null,
+        "exposedDirections": null,
         "bestSeason": null,
         "bestLures": [],
         "accessNotes": null,
@@ -219,6 +237,7 @@
         "depthTypical": null,
         "bestTide": null,
         "bestWind": null,
+        "exposedDirections": null,
         "bestSeason": null,
         "bestLures": [],
         "accessNotes": null,
@@ -249,7 +268,12 @@
         "species": [],
         "depthTypical": null,
         "bestTide": null,
-        "bestWind": null,
+        "bestWind": "Sits at a point tip with open bay to the west/southwest/south; marsh to the north/northeast is the only real shelter.",
+        "exposedDirections": [
+          "W",
+          "SW",
+          "S"
+        ],
         "bestSeason": null,
         "bestLures": [],
         "accessNotes": null,
@@ -257,8 +281,8 @@
         "confidence": 66,
         "validationStatus": "visually_reviewed",
         "source": "Aerial image review — Esri World Imagery export, reviewed 2026-07-24 (db/import/2026-07-24-jolly-bay-review/)",
-        "notes": "Evidence: Clearly visible point at the west end of a marsh island with adjacent color transition. | Uncertainty: Bottom type and water depth are unverified.",
-        "lastUpdated": "2026-07-24 21:16:00",
+        "notes": "Evidence: Clearly visible point at the west end of a marsh island with adjacent color transition. | Uncertainty: Bottom type and water depth are unverified. | Wind exposure (aerial assessment, 2026-07-28): point tip with open bay to the west/southwest/south; marsh to the north/northeast is the only real shelter.",
+        "lastUpdated": "2026-07-29",
         "catchCount": 0
       }
     }

@@ -154,6 +154,32 @@ html, body, #atlas-root {
 .atlas-pending-name { color: #d1f0e0; font-weight: 600; }
 .atlas-pending-meta { color: #7a8578; font-size: 12px; text-align: right; }
 
+.atlas-run-list { list-style: none; margin: 0 0 8px; padding: 0; }
+.atlas-run-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 0;
+  border-bottom: 1px solid #1a3828;
+  font-size: 13px;
+}
+.atlas-run-item:last-child { border-bottom: none; }
+.atlas-run-order {
+  background: #1e3a2f; color: #4ade80; border-radius: 999px;
+  width: 18px; height: 18px; line-height: 18px; text-align: center;
+  font-size: 11px; font-weight: 700; flex-shrink: 0;
+}
+.atlas-run-name { color: #d1f0e0; font-weight: 600; flex: 1; }
+.atlas-run-leg { color: #7a8578; font-size: 11px; flex-shrink: 0; }
+.atlas-run-move {
+  background: none; border: 1px solid #1a3828; border-radius: 4px;
+  color: #7ab898; cursor: pointer; font-size: 11px; padding: 1px 5px;
+  flex-shrink: 0;
+}
+.atlas-run-move:hover:not(:disabled) { border-color: #4ade8066; color: #4ade80; }
+.atlas-run-move:disabled { opacity: 0.3; cursor: default; }
+.atlas-run-total { color: #86c7a0; font-size: 12px; font-weight: 600; margin-bottom: 8px; }
+
 #atlas-map {
   flex: 1;
   min-width: 0;
@@ -176,6 +202,33 @@ html, body, #atlas-root {
 .atlas-leaflet-popup .leaflet-popup-tip { background: #0f2a1c; }
 .atlas-popup { font-family: 'Space Grotesk', sans-serif; min-width: 200px; }
 .atlas-popup-title { font-size: 15px; font-weight: 700; color: #f0faf4; margin-bottom: 6px; }
+.atlas-popup-shelter {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 5px;
+  margin-bottom: 8px;
+}
+.atlas-popup-shelter-protected { background: #1e3a2f; color: #4ade80; }
+.atlas-popup-shelter-exposed { background: #3a1e1e; color: #f87171; }
+
+.atlas-run-toggle {
+  display: block;
+  width: 100%;
+  background: #0f2a1c;
+  border: 1px solid #1a3828;
+  border-radius: 5px;
+  color: #7ab898;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  font-family: inherit;
+}
+.atlas-run-toggle:hover { border-color: #4ade8066; }
+.atlas-run-toggle-active { background: #1e3a2f; border-color: #4ade8066; color: #4ade80; }
 .atlas-popup-section-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: #7ab898; margin-top: 6px; }
 .atlas-popup-row { display: flex; justify-content: space-between; gap: 10px; font-size: 12px; padding: 3px 0; }
 .atlas-popup-label { color: #7ab898; flex-shrink: 0; }
@@ -204,6 +257,32 @@ html, body, #atlas-root {
 .atlas-popup-sources { margin-top: 6px; color: #7ab898; font-size: 10px; line-height: 1.45; }
 .atlas-popup-sources span { color: #86c7a0; font-weight: 600; }
 .atlas-popup-sources a { color: #38bdf8; }
+
+.atlas-catchlog-list { list-style: none; padding: 0; margin: 6px 0; }
+.atlas-catchlog-entry { padding: 6px 0; border-bottom: 1px solid #1a3828; font-size: 12px; }
+.atlas-catchlog-entry:last-child { border-bottom: 0; }
+.atlas-catchlog-entry-head { display: flex; align-items: center; gap: 6px; color: #d1f0e0; }
+.atlas-catchlog-entry-head strong { color: #4ade80; }
+.atlas-catchlog-entry-head span { color: #7a8578; font-size: 11px; margin-left: auto; }
+.atlas-catchlog-delete {
+  background: none; border: none; color: #7a8578; cursor: pointer;
+  font-size: 14px; line-height: 1; padding: 0 2px;
+}
+.atlas-catchlog-delete:hover { color: #f87171; }
+.atlas-catchlog-note { color: #86c7a0; margin-top: 2px; }
+.atlas-catchlog-conditions { color: #7a8578; font-size: 10.5px; margin-top: 2px; }
+.atlas-catchlog-form { display: flex; flex-direction: column; gap: 5px; margin-top: 6px; }
+.atlas-catchlog-input {
+  background: #0a1f14; border: 1px solid #1a3828; border-radius: 5px;
+  color: #d1f0e0; font-size: 12px; padding: 6px 8px; font-family: inherit;
+}
+.atlas-catchlog-input::placeholder { color: #4a6b58; }
+.atlas-catchlog-submit {
+  background: #1e3a2f; border: 1px solid #4ade8044; border-radius: 5px;
+  color: #4ade80; font-size: 12px; font-weight: 600; padding: 6px 8px;
+  cursor: pointer; font-family: inherit;
+}
+.atlas-catchlog-submit:hover { background: #244a3a; }
 
 /* Leaflet layer control: match the dark theme */
 .leaflet-control-layers {

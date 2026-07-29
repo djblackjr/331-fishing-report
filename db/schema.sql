@@ -80,7 +80,12 @@ CREATE TABLE locations (
   source            TEXT,
   notes             TEXT,
   created_at        TEXT NOT NULL DEFAULT (datetime('now')),
-  last_updated      TEXT NOT NULL DEFAULT (datetime('now'))
+  last_updated      TEXT NOT NULL DEFAULT (datetime('now')),
+  -- JSON array of 8-point compass directions this location has open-water
+  -- fetch toward (i.e. directions FROM WHICH wind creates exposure/chop
+  -- here) — see db/migrations/2026-07-28-wind-exposure.sql. NULL/empty
+  -- means "not yet assessed", not "protected from everything".
+  exposed_directions_json TEXT
 );
 
 -- Many-to-many: a location can hold several species, each with its own

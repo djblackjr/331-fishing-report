@@ -4,21 +4,28 @@
   "generatedAt": "2026-07-28",
   "scopeNote": "Regional reports support timing and species activity only. They do not prove a catch, depth, bottom type, or safe navigation at a mapped Jolly Bay feature.",
   "currentConditions": {
-    "wind": "W 0 to 10 mph",
-    "tide": "High tide ~5:22 AM · Low tide ~4:38 PM · Sunrise 5:59 AM",
+    "wind": "W 5 to 10 mph",
+    "windDir": "W",
+    "tide": "High tide ~11:02 AM · Low tide ~10:01 PM · Sunrise 5:59 AM",
     "tideEvents": [
       {
         "type": "H",
-        "time": "5:22 AM"
+        "time": "11:02 AM"
       },
       {
         "type": "L",
-        "time": "4:38 PM"
+        "time": "10:01 PM"
       }
     ],
     "waterTemp": 86,
     "sky": "Cloudy",
-    "stormChance": 25
+    "stormChance": 28,
+    "pressure": {
+      "hpa": 1008.8,
+      "inHg": 29.79,
+      "direction": "falling",
+      "changeHpa3h": -0.9
+    }
   },
   "currentReport": {
     "kind": "current_regional_report",
@@ -39,24 +46,69 @@
       "gulf_flounder"
     ],
     "conditions": {
-      "wind": "W 0 to 10 mph",
-      "tide": "High tide ~5:22 AM · Low tide ~4:38 PM · Sunrise 5:59 AM",
+      "wind": "W 5 to 10 mph",
+      "windDir": "W",
+      "tide": "High tide ~11:02 AM · Low tide ~10:01 PM · Sunrise 5:59 AM",
       "tideEvents": [
         {
           "type": "H",
-          "time": "5:22 AM"
+          "time": "11:02 AM"
         },
         {
           "type": "L",
-          "time": "4:38 PM"
+          "time": "10:01 PM"
         }
       ],
       "waterTemp": 86,
       "sky": "Cloudy",
-      "stormChance": 25
+      "stormChance": 28,
+      "pressure": {
+        "hpa": 1008.8,
+        "inHg": 29.79,
+        "direction": "falling",
+        "changeHpa3h": -0.9
+      }
     }
   },
   "archivedReports": [
+    {
+      "kind": "archived_app_snapshot",
+      "date": "2026-07-28",
+      "displayDate": "July 28, 2026",
+      "summary": "The most current reports from Choctawhatchee Bay area guides (dated approximately July 22, 2026) show a strong speckled trout bite, with guides in the Santa Rosa Beach area reporting good numbers including some quality fish, alongside a 26-lb bull redfish caught this past week. Flounder have also been showing up in the bay alongside redfish and trout on recent charter trips out of Destin. Water temp is 86°F. Wind has been a factor requiring anglers to pick protected spots, but once conditions settle the bay bite has been productive across flats and near structure. The Half Hitch Destin tackle shop posted a fishing report dated July 13, 2026 (about two weeks ago); that report's inshore details were not fully retrievable, but the shop has been posting weekly and the July 6 report confirmed active summer bay fishing.",
+      "attribution": "captainexperiences.com (Choctawhatchee Bay reports page, report ~July 22, 2026); fishingbooker.com (Choctawhatchee Bay daily reports, July 2026); halfhitch.com (Destin Fishing Report 7-13-26, most recent confirmed post) · Auto-refreshed via Claude API",
+      "sourceIds": [
+        "captain-experiences-destin",
+        "fishingbooker-bay",
+        "halfhitch-destin",
+        "report-aHR0cHM6Ly9jYXB0YW",
+        "report-aHR0cHM6Ly9oYWxmaG"
+      ],
+      "species": [
+        "spotted_seatrout",
+        "redfish",
+        "gulf_flounder"
+      ],
+      "conditions": {
+        "wind": "W 0 to 10 mph",
+        "windDir": "W",
+        "tide": "High tide ~5:22 AM · Low tide ~4:38 PM · Sunrise 5:59 AM",
+        "tideEvents": [
+          {
+            "type": "H",
+            "time": "5:22 AM"
+          },
+          {
+            "type": "L",
+            "time": "4:38 PM"
+          }
+        ],
+        "waterTemp": 86,
+        "sky": "Cloudy",
+        "stormChance": 25,
+        "pressure": null
+      }
+    },
     {
       "kind": "archived_app_snapshot",
       "date": "2026-07-21",
@@ -74,6 +126,7 @@
       ],
       "conditions": {
         "wind": "ESE 15 mph",
+        "windDir": "ESE",
         "tide": "High tide ~11:59 PM · Low tide ~11:14 AM · Sunrise 5:54 AM",
         "tideEvents": [
           {
@@ -87,7 +140,8 @@
         ],
         "waterTemp": 84,
         "sky": "Cloudy",
-        "stormChance": 83
+        "stormChance": 83,
+        "pressure": null
       }
     },
     {
@@ -107,6 +161,7 @@
       ],
       "conditions": {
         "wind": "ENE 10 to 15 mph",
+        "windDir": "ENE",
         "tide": "High tide ~11:43 PM · Low tide ~10:11 AM · Sunrise 5:54 AM",
         "tideEvents": [
           {
@@ -120,7 +175,8 @@
         ],
         "waterTemp": 85,
         "sky": "Cloudy",
-        "stormChance": 68
+        "stormChance": 68,
+        "pressure": null
       }
     },
     {
@@ -138,6 +194,7 @@
       ],
       "conditions": {
         "wind": "WSW 10 mph",
+        "windDir": "WSW",
         "tide": "High tide ~12:04 PM · Low tide ~11:07 PM · Sunrise 5:51 AM",
         "tideEvents": [
           {
@@ -151,7 +208,8 @@
         ],
         "waterTemp": null,
         "sky": "Cloudy",
-        "stormChance": 20
+        "stormChance": 20,
+        "pressure": null
       }
     },
     {
@@ -206,7 +264,7 @@
       "key": "spotted_seatrout",
       "label": "Speckled trout",
       "current": true,
-      "reportCount": 6,
+      "reportCount": 7,
       "lastReported": "2026-07-28",
       "evidenceLevel": "current_regional_report"
     },
@@ -214,7 +272,7 @@
       "key": "redfish",
       "label": "Redfish",
       "current": true,
-      "reportCount": 7,
+      "reportCount": 8,
       "lastReported": "2026-07-28",
       "evidenceLevel": "current_regional_report"
     },
@@ -222,7 +280,7 @@
       "key": "gulf_flounder",
       "label": "Flounder",
       "current": true,
-      "reportCount": 3,
+      "reportCount": 4,
       "lastReported": "2026-07-28",
       "evidenceLevel": "current_regional_report"
     },

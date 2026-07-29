@@ -3,6 +3,9 @@
 // framework) since this is a standalone vanilla-JS page — see docs/atlas.md
 // for why the Atlas isn't part of the React SPA.
 
+import { getCatchesForLocation } from "./catchlog.js";
+import { isInRun } from "./tripplan.js";
+
 // Staged pipeline, earliest to most confirmed — see db/schema.sql.
 const VALIDATION_LABELS = {
   placeholder: "Placeholder — unvalidated",
@@ -39,6 +42,80 @@ function safeHttpUrl(value) {
   } catch {
     return null;
   }
+}
+
+// 8-point compass centers, degrees. Matched against a 16-point wind reading
+// (e.g. "WNW") within a 45° arc either side, so a wind that's "close enough"
+// to an exposed direction still counts — this is a visually-assessed
+// approximation (see db/migrations/2026-07-28-wind-exposure.sql), not a
+// precise fetch calculation, so a generous tolerance is the honest choice.
+const DIR8_TO_DEG = { N: 0, NE: 45, E: 90, SE: 135, S: 180, SW: 225, W: 270, NW: 315 };
+const DIR16_TO_DEG = {
+  N: 0, NNE: 22.5, NE: 45, ENE: 67.5, E: 90, ESE: 112.5, SE: 135, SSE: 157.5,
+  S: 180, SSW: 202.5, SW: 225, WSW: 247.5, W: 270, WNW: 292.5, NW: 315, NNW: 337.5,
+};
+function angleDiff(a, b) {
+  const d = Math.abs(a - b) % 360;
+  return d > 180 ? 360 - d : d;
+}
+function windShelterStatus(exposedDirections, windDir) {
+  if (!Array.isArray(exposedDirections) || !windDir) return null;
+  const windDeg = DIR16_TO_DEG[windDir] ?? DIR8_TO_DEG[windDir];
+  if (windDeg == null) return null;
+  if (exposedDirections.length === 0) return { exposed: false };
+  const exposed = exposedDirections.some((dir) => {
+    const dirDeg = DIR8_TO_DEG[dir];
+    return dirDeg != null && angleDiff(windDeg, dirDeg) <= 45;
+  });
+  return { exposed };
+}
+
+// Device-local catch log (see catchlog.js) — a form plus whatever's already
+// logged here. Rendered fresh on every popupopen (main.js re-sets popup
+// content then), not just once at map load, so a catch logged a minute ago
+// shows up without needing to reload the page.
+function buildCatchLogSection(locationId) {
+  const entries = getCatchesForLocation(locationId);
+  const entriesHtml = entries.length
+    ? entries.map((entry) => {
+        const date = new Date(entry.loggedAt).toLocaleDateString("en-US", { month: "short", day: "numeric" });
+        const c = entry.conditions;
+        const conditionsBits = c
+          ? [c.wind, c.tide, c.pressure ? `${c.pressure.direction} (${c.pressure.inHg}" Hg)` : null].filter(Boolean).join(" · ")
+          : "";
+        return `
+          <li class="atlas-catchlog-entry" data-catch-id="${escapeHtml(entry.id)}">
+            <div class="atlas-catchlog-entry-head">
+              <strong>${escapeHtml(entry.species)}</strong>
+              <span>${escapeHtml(date)}</span>
+              <button type="button" class="atlas-catchlog-delete" data-catch-id="${escapeHtml(entry.id)}" aria-label="Delete this entry" title="Delete">&times;</button>
+            </div>
+            ${entry.note ? `<div class="atlas-catchlog-note">${escapeHtml(entry.note)}</div>` : ""}
+            ${conditionsBits ? `<div class="atlas-catchlog-conditions">${escapeHtml(conditionsBits)}</div>` : ""}
+          </li>`;
+      }).join("")
+    : `<div class="atlas-popup-empty">No catches logged here yet</div>`;
+
+  return `
+    <div class="atlas-popup-divider"></div>
+    <div class="atlas-popup-section-label">Your catch log</div>
+    <ul class="atlas-catchlog-list">${entriesHtml}</ul>
+    <form class="atlas-catchlog-form" data-location-id="${escapeHtml(locationId)}">
+      <input type="text" name="species" placeholder="Species (e.g. Redfish)" class="atlas-catchlog-input" required />
+      <input type="text" name="note" placeholder="Note (bait, size, tide stage...)" class="atlas-catchlog-input" />
+      <button type="submit" class="atlas-catchlog-submit">Log catch</button>
+    </form>
+    <div class="atlas-popup-caveat">Saved on this device only — not shared, not backed up, and not visible to anyone else.</div>
+  `;
+}
+
+function buildRunToggleButton(locationId) {
+  const inRun = isInRun(locationId);
+  return `
+    <button type="button" class="atlas-run-toggle ${inRun ? "atlas-run-toggle-active" : ""}" data-location-id="${escapeHtml(locationId)}">
+      ${inRun ? "✓ In today's run — tap to remove" : "+ Add to today's run"}
+    </button>
+  `;
 }
 
 function buildFishingIntelligence(context) {
@@ -108,9 +185,19 @@ export function buildLocationPopup(props, fishingContext = null) {
     ? `${props.catchCount} recorded catch${props.catchCount === 1 ? "" : "es"}`
     : "No catch history yet";
 
+  const windDirToday = fishingContext?.packet?.currentConditions?.windDir;
+  const shelter = windShelterStatus(props.exposedDirections, windDirToday);
+  const shelterHtml = shelter
+    ? `<div class="atlas-popup-shelter ${shelter.exposed ? "atlas-popup-shelter-exposed" : "atlas-popup-shelter-protected"}">
+        ${shelter.exposed ? "🔴 Exposed today" : "🟢 Protected today"} (wind ${escapeHtml(windDirToday)})
+      </div>`
+    : "";
+
   return `
     <div class="atlas-popup">
       <div class="atlas-popup-title">${escapeHtml(props.name)}</div>
+      ${shelterHtml}
+      ${buildRunToggleButton(props.id)}
       ${row("Habitat", props.habitatLabel)}
       <div class="atlas-popup-section-label">Species</div>
       ${speciesHtml}
@@ -131,6 +218,7 @@ export function buildLocationPopup(props, fishingContext = null) {
         <span class="atlas-popup-label">Status</span>
         <span class="atlas-popup-value" style="color:${validationColor}">${escapeHtml(validationLabel)}</span>
       </div>
+      ${buildCatchLogSection(props.id)}
       ${row("Source", props.source)}
       ${row("Last updated", props.lastUpdated)}
     </div>

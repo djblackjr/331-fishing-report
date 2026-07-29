@@ -131,6 +131,33 @@ async function getOpenMeteo() {
     summary: WMO_CODES[d.weathercode[i]] || "Unknown",
   }));
 }
+// ── Barometric pressure trend: Open-Meteo ────────────────────────────────────
+// Guides watch pressure trend more closely than almost any other single
+// number — a falling barometer ahead of a front is the classic "fish are
+// about to go crazy" signal, a stable high is the classic tough-bite
+// warning. Neither NWS's forecast endpoint nor its human-readable text
+// carries this, so this is a second, independent Open-Meteo call: current
+// sea-level pressure plus the same reading 3 hours ago (via `past_hours`),
+// enough to say "rising" / "falling" / "steady" without needing to store
+// our own history.
+async function getPressureTrend() {
+  const url = `https://api.open-meteo.com/v1/forecast?latitude=${LAT}&longitude=${LON}&hourly=pressure_msl&past_hours=3&forecast_hours=1&timezone=America%2FChicago`;
+  const data = await getJson(url);
+  const times = data.hourly.time;
+  const values = data.hourly.pressure_msl;
+  const current = values[values.length - 1];
+  const threeHoursAgo = values[0];
+  const delta = current - threeHoursAgo;
+  // +/-0.5 hPa over 3 hours is normal drift; anything past that is a real trend.
+  const direction = delta <= -0.5 ? "falling" : delta >= 0.5 ? "rising" : "steady";
+  return {
+    hpa: Math.round(current * 10) / 10,
+    inHg: Math.round((current * 0.02953) * 100) / 100,
+    direction,
+    changeHpa3h: Math.round(delta * 10) / 10,
+  };
+}
+
 // ── Water temp: Open-Meteo Marine API ────────────────────────────────────────
 // NOAA's tide station here (8729511) has no water-temperature sensor, and
 // relying on whatever guide blog posts happen to mention ("low 80s") is
@@ -219,6 +246,10 @@ async function main() {
     console.warn("Water temp fetch failed, keeping previous value:", err.message);
     return existing.waterTemp ?? null;
   });
+  const pressure = await getPressureTrend().catch((err) => {
+    console.warn("Pressure fetch failed, keeping previous value:", err.message);
+    return existing.pressure ?? null;
+  });
   const stormChance = forecast[0]?.storms || 0;
   const stormWindow = extractStormWindow(today.detailedForecast) || existing.stormWindow || "";
 
@@ -252,6 +283,7 @@ async function main() {
     sky: deriveSky(today.shortForecast),
     moonPhase: moon,
     waterTemp,
+    pressure,
     lastUpdated: `${new Date().toLocaleString("en-US", { timeZone: "America/Chicago" })} CT · Source: National Weather Service + NOAA Tides (station ${TIDE_STATION}) · Auto-refreshed`,
     forecast,
     openMeteo, // array of 3 days, same shape as `forecast` but from a different model source — see getOpenMeteo()

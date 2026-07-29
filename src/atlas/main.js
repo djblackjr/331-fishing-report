@@ -8,6 +8,8 @@ import "leaflet/dist/leaflet.css";
 import "./style.css";
 import { buildLocationPopup, buildFeaturePopup } from "./popup.js";
 import { DEFAULT_FILTERS, locationMatchesFilters } from "./filters.js";
+import { addCatch, deleteCatch } from "./catchlog.js";
+import { getRun, toggleStop, moveStop, clearRun, nauticalMilesBetween } from "./tripplan.js";
 
 // Jolly Bay, Walton County, FL — verified coordinates (USGS topo data via
 // topozone.com), not a fabricated fishing spot, just the map's starting
@@ -82,6 +84,14 @@ root.innerHTML = `
         <section class="atlas-panel" id="atlas-intelligence-panel" hidden>
           <h2 class="atlas-panel-title">Current Bay Fishing</h2>
           <div id="atlas-intelligence-content"></div>
+        </section>
+
+        <section class="atlas-panel" id="atlas-run-panel" hidden>
+          <h2 class="atlas-panel-title">Today's Run</h2>
+          <ol class="atlas-run-list" id="atlas-run-list"></ol>
+          <div class="atlas-run-total" id="atlas-run-total"></div>
+          <button class="atlas-reset" id="atlas-run-clear" type="button">Clear run</button>
+          <p class="atlas-panel-hint">Straight-line distance only — not a real boating route. Saved on this device only.</p>
         </section>
 
         <section class="atlas-panel" id="atlas-pending-panel" hidden>
@@ -260,11 +270,48 @@ const bathymetry = new CudemTileLayer("", {
   errorTileUrl: FALLBACK_TILE,
 });
 
+// Fish sit on a depth CHANGE — a ledge, a channel edge, a drop-off — not on
+// a depth number by itself. The bathymetry layer above shows relief but not
+// precisely where the breaks are; tight contour lines (every 0.5m, using the
+// same ImageServer's built-in Contour function) make those breaks legible
+// the way a topo map does, and are a checkbox overlay (not a base layer) so
+// they can be combined with Satellite or the bathymetry layer underneath.
+const CONTOUR_RENDERING_RULE = JSON.stringify({
+  rasterFunction: "Contour",
+  rasterFunctionArguments: { ContourType: 0, ZFactor: 1, Interval: 0.5 },
+});
+
+const DepthContourLayer = L.TileLayer.extend({
+  getTileUrl(coords) {
+    const tileBounds = this._tileCoordsToBounds(coords);
+    const nw = L.CRS.EPSG3857.project(tileBounds.getNorthWest());
+    const se = L.CRS.EPSG3857.project(tileBounds.getSouthEast());
+    const params = new URLSearchParams({
+      bbox: [nw.x, se.y, se.x, nw.y].join(","),
+      bboxSR: "102100",
+      imageSR: "102100",
+      size: `${this.options.tileSize},${this.options.tileSize}`,
+      format: "png32",
+      transparent: "true",
+      renderingRule: CONTOUR_RENDERING_RULE,
+      f: "image",
+    });
+    return `${CUDEM_URL}?${params.toString()}`;
+  },
+});
+
+const depthContours = new DepthContourLayer("", {
+  tileSize: 256,
+  maxZoom: 17,
+  attribution: "Depth contours: NOAA/NCEI CUDEM",
+  opacity: 0.85,
+});
+
 osm.addTo(map);
 
 const layersControl = L.control.layers(
   { "OpenStreetMap": osm, "Satellite (Esri)": satellite, "NOAA Nautical Chart": noaaChart, "Bathymetry (NOAA/NCEI)": bathymetry },
-  {},
+  { "Depth Contours (0.5m)": depthContours },
   { collapsed: window.innerWidth < 700 }
 ).addTo(map);
 
@@ -403,12 +450,72 @@ function buildFeatureLayer(layerMeta, featureCollection, intelligence) {
     }),
     onEachFeature: (feature, leafletLayer) => {
       const fishingContext = fishingContextForFeature(layerMeta, feature, intelligence);
-      const html = layerMeta.key === "fishing_locations"
+      const isLocation = layerMeta.key === "fishing_locations";
+      const buildHtml = () => isLocation
         ? buildLocationPopup(feature.properties, fishingContext)
         : buildFeaturePopup(feature.properties, layerMeta.label, fishingContext);
-      leafletLayer.bindPopup(html, { maxWidth: 340, maxHeight: 420, className: "atlas-leaflet-popup" });
+      leafletLayer.bindPopup(buildHtml(), { maxWidth: 340, maxHeight: 420, className: "atlas-leaflet-popup" });
+
+      // fishing_locations popups carry a device-local catch-log form (see
+      // catchlog.js) — regenerate content fresh on every open (so a catch
+      // logged a minute ago shows up) and re-wire the form/delete buttons,
+      // since Leaflet tears down the popup's DOM node when it closes.
+      if (isLocation) {
+        leafletLayer.on("popupopen", (e) => {
+          e.popup.setContent(buildHtml());
+          wirePopupInteractivity(e.popup, feature.properties.id, intelligence, buildHtml, featureCollection.features);
+        });
+      }
     },
   });
+}
+
+function wirePopupInteractivity(popup, locationId, intelligence, buildHtml, allLocations) {
+  const el = popup.getElement();
+  if (!el) return;
+
+  const form = el.querySelector(".atlas-catchlog-form");
+  if (form) {
+    form.addEventListener("submit", (evt) => {
+      evt.preventDefault();
+      const species = form.elements.species.value.trim();
+      const note = form.elements.note.value.trim();
+      if (!species) return;
+      const cc = intelligence?.currentConditions;
+      const conditions = cc ? { wind: cc.wind, tide: cc.tide, pressure: cc.pressure } : null;
+      addCatch(locationId, { species, note, conditions });
+      popup.setContent(buildHtml());
+      wirePopupInteractivity(popup, locationId, intelligence, buildHtml, allLocations);
+    });
+  }
+
+  el.querySelectorAll(".atlas-catchlog-delete").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      deleteCatch(btn.dataset.catchId);
+      popup.setContent(buildHtml());
+      wirePopupInteractivity(popup, locationId, intelligence, buildHtml, allLocations);
+    });
+  });
+
+  const runToggle = el.querySelector(".atlas-run-toggle");
+  if (runToggle) {
+    runToggle.addEventListener("click", () => {
+      // Deferred to the next tick: calling popup.setContent() synchronously
+      // inside a native "click" handler on an element still mid-bubble
+      // closes the popup (confirmed directly — Leaflet's click-propagation
+      // guard on the popup content doesn't survive the content node being
+      // replaced while that same click is still dispatching). The
+      // catch-log form's handlers don't hit this because they're wired to
+      // "submit", which only fires after the triggering click has already
+      // finished bubbling.
+      setTimeout(() => {
+        toggleStop(locationId);
+        popup.setContent(buildHtml());
+        wirePopupInteractivity(popup, locationId, intelligence, buildHtml, allLocations);
+        renderTodaysRun(allLocations);
+      }, 0);
+    });
+  }
 }
 
 function escapeHtml(value) {
@@ -528,6 +635,9 @@ function renderCurrentIntelligence(intelligence) {
       ${tideNow
         ? `<span>🌊 ${escapeHtml(tideNow.direction)} — ${escapeHtml(tideNow.nextLabel)} in ${escapeHtml(tideNow.untilLabel)}</span>`
         : conditions.tide ? `<span>🌊 ${escapeHtml(conditions.tide)}</span>` : ""}
+      ${conditions.pressure
+        ? `<span>${conditions.pressure.direction === "falling" ? "📉" : conditions.pressure.direction === "rising" ? "📈" : "➡️"} Pressure ${escapeHtml(conditions.pressure.direction)} (${escapeHtml(conditions.pressure.inHg)}" Hg)</span>`
+        : ""}
     </div>
     <details class="atlas-intel-report">
       <summary>Read current regional report</summary>
@@ -567,6 +677,54 @@ function renderPendingList(features) {
       <span class="atlas-pending-meta">${f.properties.habitatLabel || "Habitat TBD"} &middot; ${f.properties.validationStatus}</span>
     </li>
   `).join("");
+}
+
+let runPolyline = null;
+
+// Redraws both the sidebar list and the connecting line on the map from
+// whatever's currently in localStorage — called after every toggle/reorder/
+// clear so the two stay in sync, and once at load in case a run was already
+// saved from a previous visit.
+function renderTodaysRun(fishingLocationsRaw) {
+  const panel = document.getElementById("atlas-run-panel");
+  const list = document.getElementById("atlas-run-list");
+  const totalEl = document.getElementById("atlas-run-total");
+  const byId = new Map(fishingLocationsRaw.map((f) => [f.properties.id, f]));
+  const stops = getRun().map((id) => byId.get(id)).filter((f) => f && f.geometry);
+
+  if (runPolyline) {
+    map.removeLayer(runPolyline);
+    runPolyline = null;
+  }
+
+  if (!stops.length) {
+    panel.hidden = true;
+    return;
+  }
+  panel.hidden = false;
+
+  let totalNm = 0;
+  list.innerHTML = stops.map((feature, i) => {
+    const legNm = i > 0
+      ? nauticalMilesBetween(
+          stops[i - 1].geometry.coordinates[1], stops[i - 1].geometry.coordinates[0],
+          feature.geometry.coordinates[1], feature.geometry.coordinates[0]
+        )
+      : 0;
+    totalNm += legNm;
+    return `
+      <li class="atlas-run-item">
+        <span class="atlas-run-order">${i + 1}</span>
+        <span class="atlas-run-name">${escapeHtml(feature.properties.name)}</span>
+        ${i > 0 ? `<span class="atlas-run-leg">+${legNm.toFixed(1)} nm</span>` : ""}
+        <button type="button" class="atlas-run-move" data-move="-1" data-location-id="${feature.properties.id}" ${i === 0 ? "disabled" : ""} aria-label="Move up">&uarr;</button>
+        <button type="button" class="atlas-run-move" data-move="1" data-location-id="${feature.properties.id}" ${i === stops.length - 1 ? "disabled" : ""} aria-label="Move down">&darr;</button>
+      </li>`;
+  }).join("");
+  totalEl.textContent = stops.length > 1 ? `Total: ${totalNm.toFixed(1)} nm straight-line` : "";
+
+  const latlngs = stops.map((f) => [f.geometry.coordinates[1], f.geometry.coordinates[0]]);
+  runPolyline = L.polyline(latlngs, { color: "#facc15", weight: 3, dashArray: "6,8", opacity: 0.85 }).addTo(map);
 }
 
 async function init() {
@@ -616,6 +774,18 @@ async function init() {
   if (!fishingLocationsRaw.length) return;
 
   renderPendingList(fishingLocationsRaw);
+  renderTodaysRun(fishingLocationsRaw);
+
+  document.getElementById("atlas-run-clear").addEventListener("click", () => {
+    clearRun();
+    renderTodaysRun(fishingLocationsRaw);
+  });
+  document.getElementById("atlas-run-list").addEventListener("click", (e) => {
+    const btn = e.target.closest(".atlas-run-move");
+    if (!btn) return;
+    moveStop(Number(btn.dataset.locationId), Number(btn.dataset.move));
+    renderTodaysRun(fishingLocationsRaw);
+  });
 
   // Populate species/habitat filter dropdowns from whatever data actually
   // exists right now, rather than a hardcoded list that might not match.

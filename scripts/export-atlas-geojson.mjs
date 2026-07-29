@@ -62,6 +62,7 @@ function exportFishingLocations() {
       depthTypical: loc.depth_typical,
       bestTide: loc.best_tide,
       bestWind: loc.best_wind,
+      exposedDirections: loc.exposed_directions_json ? JSON.parse(loc.exposed_directions_json) : null,
       bestSeason: loc.best_season,
       bestLures: loc.best_lures_json ? JSON.parse(loc.best_lures_json) : [],
       accessNotes: loc.access_notes,
