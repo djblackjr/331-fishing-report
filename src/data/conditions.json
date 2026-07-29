@@ -24,7 +24,7 @@
   "moonPhase": "Full Moon (~99% illuminated) — strong tidal push (spring tide)",
   "waterClarity": "Slightly stained",
   "sky": "Cloudy",
-  "lastUpdated": "7/29/2026, 3:12:23 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "lastUpdated": "7/29/2026, 5:47:37 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
   "localBiteReport": "The most current reports from Choctawhatchee Bay (within the past week) confirm an active speckled trout bite across the bay, with multiple anglers reporting good numbers and some quality-sized fish. Bull redfish are also in the mix — one notable catch this week out of Santa Rosa Beach was a 40-inch, 26-lb bull red. Tarpon have been cruising the beaches and anglers are finding them in good numbers as well. Water temperature is 86°F. Early morning trips are strongly recommended to beat both the summer heat and crowded conditions; book charters well in advance as summer demand is high.",
   "localBiteSource": "captainexperiences.com (Choctawhatchee Bay reports page, reports from ~July 23 and ~July 22, 2026); fishingbooker.com (Choctawhatchee Bay daily reports, July 2026) · Auto-refreshed via Claude API",
   "localBiteUpdated": "July 29, 2026",
@@ -41,21 +41,21 @@
     }
   ],
   "previousDay": {
-    "date": "Tuesday, July 28, 2026",
+    "date": "Wednesday, July 29, 2026",
     "wind": {
       "dir": "W",
       "speed": 10
     },
     "high": 96,
-    "stormChance": 25,
-    "tide": "High tide ~5:22 AM · Low tide ~4:38 PM · Sunrise 5:59 AM"
+    "stormChance": 37,
+    "tide": "High tide ~6:02 AM · Low tide ~5:01 PM · Sunrise 5:59 AM"
   },
   "openMeteo": [
     {
-      "high": 99,
+      "high": 100,
       "low": 80,
       "stormChance": 22,
-      "windSpeed": 17,
+      "windSpeed": 14,
       "windDir": "W",
       "summary": "Overcast"
     },
@@ -70,7 +70,7 @@
     {
       "high": 94,
       "low": 75,
-      "stormChance": 45,
+      "stormChance": 41,
       "windSpeed": 14,
       "windDir": "SW",
       "summary": "Light drizzle"
