@@ -17,10 +17,15 @@
         "time": "5:01 PM"
       }
     ],
-    "waterTemp": 86,
+    "waterTemp": 87,
     "sky": "Cloudy",
-    "stormChance": 37,
-    "pressure": null
+    "stormChance": 20,
+    "pressure": {
+      "hpa": 1010.8,
+      "inHg": 29.85,
+      "direction": "steady",
+      "changeHpa3h": -0.1
+    }
   },
   "currentReport": {
     "kind": "current_regional_report",
@@ -51,13 +56,53 @@
           "time": "5:01 PM"
         }
       ],
-      "waterTemp": 86,
+      "waterTemp": 87,
       "sky": "Cloudy",
-      "stormChance": 37,
-      "pressure": null
+      "stormChance": 20,
+      "pressure": {
+        "hpa": 1010.8,
+        "inHg": 29.85,
+        "direction": "steady",
+        "changeHpa3h": -0.1
+      }
     }
   },
   "archivedReports": [
+    {
+      "kind": "archived_app_snapshot",
+      "date": "2026-07-29",
+      "displayDate": "July 29, 2026",
+      "summary": "The most current reports from Choctawhatchee Bay (within the past week) confirm an active speckled trout bite across the bay, with multiple anglers reporting good numbers and some quality-sized fish. Bull redfish are also in the mix — one notable catch this week out of Santa Rosa Beach was a 40-inch, 26-lb bull red. Tarpon have been cruising the beaches and anglers are finding them in good numbers as well. Water temperature is 86°F. Early morning trips are strongly recommended to beat both the summer heat and crowded conditions; book charters well in advance as summer demand is high.",
+      "attribution": "captainexperiences.com (Choctawhatchee Bay reports page, reports from ~July 23 and ~July 22, 2026); fishingbooker.com (Choctawhatchee Bay daily reports, July 2026) · Auto-refreshed via Claude API",
+      "sourceIds": [
+        "captain-experiences-destin",
+        "fishingbooker-bay",
+        "report-aHR0cHM6Ly9jYXB0YW"
+      ],
+      "species": [
+        "spotted_seatrout",
+        "redfish"
+      ],
+      "conditions": {
+        "wind": "W 5 to 10 mph",
+        "windDir": "W",
+        "tide": "High tide ~6:02 AM · Low tide ~5:01 PM · Sunrise 5:59 AM",
+        "tideEvents": [
+          {
+            "type": "H",
+            "time": "6:02 AM"
+          },
+          {
+            "type": "L",
+            "time": "5:01 PM"
+          }
+        ],
+        "waterTemp": 86,
+        "sky": "Cloudy",
+        "stormChance": 37,
+        "pressure": null
+      }
+    },
     {
       "kind": "archived_app_snapshot",
       "date": "2026-07-28",
@@ -251,7 +296,7 @@
       "key": "spotted_seatrout",
       "label": "Speckled trout",
       "current": true,
-      "reportCount": 7,
+      "reportCount": 8,
       "lastReported": "2026-07-29",
       "evidenceLevel": "current_regional_report"
     },
@@ -259,7 +304,7 @@
       "key": "redfish",
       "label": "Redfish",
       "current": true,
-      "reportCount": 8,
+      "reportCount": 9,
       "lastReported": "2026-07-29",
       "evidenceLevel": "current_regional_report"
     },
@@ -394,10 +439,10 @@
   "sources": [
     {
       "id": "report-aHR0cHM6Ly9jYXB0YW",
-      "label": "Choctawhatchee Bay Fishing Reports (July 2026)",
+      "label": "Choctawhatchee Bay Fishing Reports (June 2026)",
       "url": "https://captainexperiences.com/fishing-reports/locations/regions/choctawhatchee-bay",
       "kind": "regional_report",
-      "reportDate": "2026-07-22",
+      "reportDate": "2026-07-23",
       "note": "Exact source page preserved by the daily bite-report research."
     },
     {
