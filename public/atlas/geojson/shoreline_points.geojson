@@ -84,6 +84,62 @@
         "review_date": "2026-07-24",
         "navigation_use": "not_for_navigation"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.1375,
+          30.4674
+        ]
+      },
+      "properties": {
+        "id": 23,
+        "externalId": "LG-PT-002",
+        "region": "lagrange_bayou",
+        "name": "Northeast bank point",
+        "confidence": 74,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery export reviewed 2026-07-29; WGS84 bbox [-86.150,30.455,-86.130,30.472]",
+        "lastUpdated": "2026-07-29",
+        "feature_type": "shoreline_point",
+        "field_verified": false,
+        "evidence": "Clear point of land at a shoreline bend on the north side of the bayou.",
+        "uncertainty": "Depth and bottom composition off the point are unverified.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery export reviewed 2026-07-29; WGS84 bbox [-86.150,30.455,-86.130,30.472]",
+        "review_date": "2026-07-29",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.1434,
+          30.4644
+        ]
+      },
+      "properties": {
+        "id": 22,
+        "externalId": "LG-PT-001",
+        "region": "lagrange_bayou",
+        "name": "Western bank point",
+        "confidence": 76,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery export reviewed 2026-07-29; WGS84 bbox [-86.150,30.455,-86.130,30.472]",
+        "lastUpdated": "2026-07-29",
+        "feature_type": "shoreline_point",
+        "field_verified": false,
+        "evidence": "Sandy point clearly visible jutting into the bayou on the north shore.",
+        "uncertainty": "Depth and bottom composition off the point are unverified.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery export reviewed 2026-07-29; WGS84 bbox [-86.150,30.455,-86.130,30.472]",
+        "review_date": "2026-07-29",
+        "navigation_use": "not_for_navigation"
+      }
     }
   ]
 }

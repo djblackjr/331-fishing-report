@@ -154,6 +154,52 @@
         "review_date": "2026-07-28",
         "navigation_use": "not_for_navigation"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -86.16663,
+            30.46544
+          ],
+          [
+            -86.15875,
+            30.46694
+          ],
+          [
+            -86.14938,
+            30.46844
+          ],
+          [
+            -86.14075,
+            30.46975
+          ],
+          [
+            -86.13438,
+            30.47088
+          ]
+        ]
+      },
+      "properties": {
+        "id": 24,
+        "externalId": "LG-CH-001",
+        "region": "lagrange_bayou",
+        "name": "Main LaGrange Bayou channel",
+        "confidence": 75,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery export reviewed 2026-07-29; WGS84 bbox [-86.170,30.435,-86.125,30.475]",
+        "lastUpdated": "2026-07-29",
+        "feature_type": "channel_centerline",
+        "field_verified": false,
+        "evidence": "Continuous open dark-water channel traced across the full width of LaGrange Bayou, from the western shoreline toward the northeast tributary.",
+        "uncertainty": "Centerline is approximate; width and depth are not represented.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery export reviewed 2026-07-29; WGS84 bbox [-86.170,30.435,-86.125,30.475]",
+        "review_date": "2026-07-29",
+        "navigation_use": "not_for_navigation"
+      }
     }
   ]
 }

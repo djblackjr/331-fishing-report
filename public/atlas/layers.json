@@ -42,7 +42,7 @@
     "category": "habitat",
     "color": "#38bdf8",
     "defaultVisible": true,
-    "featureCount": 3
+    "featureCount": 4
   },
   {
     "key": "drop_offs",
@@ -60,7 +60,7 @@
     "category": "habitat",
     "color": "#22d3ee",
     "defaultVisible": false,
-    "featureCount": 7
+    "featureCount": 9
   },
   {
     "key": "sand_holes",
@@ -78,7 +78,7 @@
     "category": "habitat",
     "color": "#2dd4bf",
     "defaultVisible": false,
-    "featureCount": 3
+    "featureCount": 5
   },
   {
     "key": "redfish_routes",
@@ -141,7 +141,7 @@
     "category": "hazard",
     "color": "#f97316",
     "defaultVisible": false,
-    "featureCount": 3
+    "featureCount": 4
   },
   {
     "key": "user_catches",

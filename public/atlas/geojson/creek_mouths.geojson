@@ -196,6 +196,62 @@
         "review_date": "2026-07-24",
         "navigation_use": "not_for_navigation"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.133,
+          30.4708
+        ]
+      },
+      "properties": {
+        "id": 20,
+        "externalId": "LG-CM-001",
+        "region": "lagrange_bayou",
+        "name": "Northeast tributary mouth",
+        "confidence": 72,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery export reviewed 2026-07-29; WGS84 bbox [-86.170,30.435,-86.130,30.472]",
+        "lastUpdated": "2026-07-29",
+        "feature_type": "creek_mouth",
+        "field_verified": false,
+        "evidence": "Distinct tributary channel visibly continues north beyond the main LaGrange Bayou shoreline.",
+        "uncertainty": "Tributary name, flow, and navigability are unverified.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery export reviewed 2026-07-29; WGS84 bbox [-86.170,30.435,-86.130,30.472]",
+        "review_date": "2026-07-29",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.1344,
+          30.461
+        ]
+      },
+      "properties": {
+        "id": 21,
+        "externalId": "LG-CM-002",
+        "region": "lagrange_bayou",
+        "name": "Southeast feeder creek mouth",
+        "confidence": 70,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery export reviewed 2026-07-29; WGS84 bbox [-86.150,30.455,-86.130,30.472]",
+        "lastUpdated": "2026-07-29",
+        "feature_type": "creek_mouth",
+        "field_verified": false,
+        "evidence": "Winding tree-lined creek is visibly entering the bayou near a golf-course pond.",
+        "uncertainty": "Creek name and navigability are unverified.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery export reviewed 2026-07-29; WGS84 bbox [-86.150,30.455,-86.130,30.472]",
+        "review_date": "2026-07-29",
+        "navigation_use": "not_for_navigation"
+      }
     }
   ]
 }

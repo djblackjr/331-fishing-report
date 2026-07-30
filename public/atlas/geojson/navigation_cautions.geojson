@@ -156,6 +156,54 @@
         "review_date": "2026-07-24",
         "navigation_use": "not_for_navigation"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -86.149,
+              30.4585
+            ],
+            [
+              -86.144,
+              30.4585
+            ],
+            [
+              -86.144,
+              30.4545
+            ],
+            [
+              -86.149,
+              30.4545
+            ],
+            [
+              -86.149,
+              30.4585
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 25,
+        "externalId": "LG-HZ-001",
+        "region": "lagrange_bayou",
+        "name": "Peninsula narrows constriction",
+        "confidence": 60,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery export reviewed 2026-07-29; WGS84 bbox [-86.170,30.435,-86.125,30.475]",
+        "lastUpdated": "2026-07-29",
+        "feature_type": "shallow_water_caution",
+        "field_verified": false,
+        "evidence": "The channel visibly narrows to a fraction of its open-bayou width here, funneling past the tip of the central peninsula before reaching the Mallet Bayou confluence.",
+        "uncertainty": "Visual caution only; not a charted hazard and not for navigation.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery export reviewed 2026-07-29; WGS84 bbox [-86.170,30.435,-86.125,30.475]",
+        "review_date": "2026-07-29",
+        "navigation_use": "not_for_navigation"
+      }
     }
   ]
 }
