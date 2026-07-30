@@ -4,7 +4,7 @@
     "label": "Fishing Locations",
     "geometryType": "Point",
     "category": "waypoints",
-    "color": "#4ade80",
+    "color": "#16a34a",
     "defaultVisible": true,
     "featureCount": 18
   },
