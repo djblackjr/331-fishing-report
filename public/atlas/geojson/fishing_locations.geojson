@@ -538,6 +538,38 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -86.1052036,
+          30.3889939
+        ]
+      },
+      "properties": {
+        "id": 20,
+        "region": "jolly_bay",
+        "name": "Bunker Cove",
+        "habitat": "grass_flat",
+        "habitatLabel": "Grass Flat",
+        "species": [],
+        "depthTypical": null,
+        "bestTide": null,
+        "bestWind": null,
+        "exposedDirections": null,
+        "bestSeason": null,
+        "bestLures": [],
+        "accessNotes": null,
+        "accessType": null,
+        "confidence": 50,
+        "validationStatus": "user_reported",
+        "source": "GNIS via topozone.com/naturalatlas.com (Bunker Cove, Bunker quad, Walton County); user-reported as a known flats fishing spot, 2026-07-30",
+        "notes": "Evidence: named place confirmed via GNIS; coordinate verified in open water against Esri World Imagery — sits at the mouth of the cove opening onto a broad, visibly pale/shallow flat extending west into the Choctawhatchee River delta, consistent with flats habitat. | Uncertainty: submerged grass coverage, exact depth, and species/tactic patterns are not independently verified — flagged as a good flats spot by the user, not yet field- or aerial-confirmed for fishing quality by this Atlas.",
+        "lastUpdated": "2026-07-30",
+        "catchCount": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -86.12125,
           30.424067
         ]

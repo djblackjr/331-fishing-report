@@ -126,18 +126,21 @@ test("Jolly Bay structure packet is exported once with reconciled geometry types
   assert.equal(ids.size, 19);
 });
 
-test("Jolly Bay pilot: exactly 6 located + 3 unlocated fishing_locations, none promoted past visually_reviewed", async () => {
+test("Jolly Bay pilot: exactly 7 located + 3 unlocated fishing_locations, none promoted past visually_reviewed/user_reported", async () => {
   const collection = JSON.parse(await readFile(join(GEOJSON_DIR, "fishing_locations.geojson"), "utf8"));
   const jollyBay = collection.features.filter((f) => f.properties.region === "jolly_bay");
-  assert.equal(jollyBay.length, 9, "expected all 9 Jolly Bay pilot locations");
+  // 9 original pilot placeholders (JB-PROP-*) plus Bunker Cove (JB-CV-001,
+  // added 2026-07-30 at the user's request — a real GNIS-named cove they
+  // fish, not a fabricated spot; see its `source`/`notes` for the trail).
+  assert.equal(jollyBay.length, 10, "expected all 9 Jolly Bay pilot locations plus Bunker Cove");
 
   const located = jollyBay.filter((f) => f.geometry !== null);
   const unlocated = jollyBay.filter((f) => f.geometry === null);
-  assert.equal(located.length, 6, "expected 6 located Jolly Bay features");
+  assert.equal(located.length, 7, "expected 6 original located Jolly Bay features plus Bunker Cove");
   assert.equal(unlocated.length, 3, "expected 3 unlocated Jolly Bay features");
 
   const promoted = jollyBay.filter((f) => ["field_verified", "guide_verified"].includes(f.properties.validationStatus));
-  assert.equal(promoted.length, 0, "no Jolly Bay pilot location should be promoted past visually_reviewed yet");
+  assert.equal(promoted.length, 0, "no Jolly Bay pilot location should be promoted past visually_reviewed/user_reported yet");
 });
 
 test("Atlas intelligence separates regional reports from spot verification and preserves sources", async () => {
