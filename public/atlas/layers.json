@@ -58,7 +58,7 @@
     "label": "Creek Mouths",
     "geometryType": "Point",
     "category": "habitat",
-    "color": "#22d3ee",
+    "color": "#ec4899",
     "defaultVisible": false,
     "featureCount": 13
   },
@@ -76,7 +76,7 @@
     "label": "Shoreline Points",
     "geometryType": "Point",
     "category": "habitat",
-    "color": "#2dd4bf",
+    "color": "#7c3aed",
     "defaultVisible": false,
     "featureCount": 9
   },

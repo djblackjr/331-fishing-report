@@ -440,23 +440,27 @@ function fishingContextForFeature(layerMeta, feature, intelligence) {
 
 // A same-color stroke on a filled marker gives no edge contrast against a
 // busy basemap — a light green dot on light green marsh reads as almost
-// nothing. A black outline reads against any background color, so every
-// point/polygon shape gets one regardless of its fill; LineStrings (the
+// nothing. A black outline reads against any background color, so most
+// point/polygon shapes get one regardless of fill; LineStrings (the
 // channel centerlines) keep their own color as the stroke since a line has
-// no separate fill to outline.
+// no separate fill to outline. creek_mouths/shoreline_points are excluded
+// by request — their own fill color as a thin same-color edge instead of
+// the black ring, once they got distinct pink/violet fills of their own.
 const MARKER_OUTLINE = "#000000";
+const NO_BLACK_OUTLINE = new Set(["creek_mouths", "shoreline_points"]);
 
 function buildFeatureLayer(layerMeta, featureCollection, intelligence) {
+  const outlineColor = NO_BLACK_OUTLINE.has(layerMeta.key) ? layerMeta.color : MARKER_OUTLINE;
   return L.geoJSON(featureCollection, {
     pointToLayer: (feature, latlng) => L.circleMarker(latlng, {
       radius: layerMeta.key === "fishing_locations" ? 9 : 6,
-      color: MARKER_OUTLINE,
+      color: outlineColor,
       weight: 2,
       fillColor: layerMeta.color,
       fillOpacity: 0.9,
     }),
     style: (feature) => ({
-      color: feature.geometry?.type === "LineString" ? layerMeta.color : MARKER_OUTLINE,
+      color: feature.geometry?.type === "LineString" ? layerMeta.color : outlineColor,
       weight: feature.geometry?.type === "LineString" ? 3 : 2,
       fillColor: layerMeta.color,
       fillOpacity: feature.geometry?.type === "Point"
