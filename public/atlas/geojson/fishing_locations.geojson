@@ -6,6 +6,147 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -86.202998,
+          30.4865855
+        ]
+      },
+      "properties": {
+        "id": 16,
+        "region": "alaqua_bayou",
+        "name": "Alaqua Bayou",
+        "habitat": "oyster_bar",
+        "habitatLabel": "Oyster Bar",
+        "species": [
+          {
+            "key": "redfish",
+            "label": "Redfish",
+            "confidence": 90,
+            "note": "Oyster bars and creek bends, gold spoon or live shrimp"
+          },
+          {
+            "key": "speckled_trout",
+            "label": "Speckled Trout",
+            "confidence": 75,
+            "note": "Grass flat edges at bayou mouth on incoming tide"
+          },
+          {
+            "key": "flounder",
+            "label": "Flounder",
+            "confidence": 65,
+            "note": "Mud bottom near oyster bars, mud minnow on jig"
+          },
+          {
+            "key": "black_drum",
+            "label": "Black Drum",
+            "confidence": 55,
+            "note": "Deeper holes in the bayou, shrimp on bottom"
+          },
+          {
+            "key": "largemouth_bass",
+            "label": "Largemouth Bass",
+            "confidence": 45,
+            "note": "Upper creek near freshwater inflow, soft plastics"
+          }
+        ],
+        "depthTypical": "Oyster-bar mouth grading to deeper creek bends and holes upstream",
+        "bestTide": "Incoming at the mouth oyster bars; any tide fine further up the creek",
+        "bestWind": null,
+        "exposedDirections": [
+          "N",
+          "NE",
+          "E",
+          "SE",
+          "S"
+        ],
+        "bestSeason": null,
+        "bestLures": [
+          "Gold spoon along oyster bar edges",
+          "Live shrimp under popping cork",
+          "Slow-roll paddle-tail through creek bends",
+          "Topwater along overhanging banks at dawn"
+        ],
+        "accessNotes": "Northernmost of the dashboard's bayous, well up the east end of Choctawhatchee Bay — tree-lined and more sheltered than the open bay; upper creek transitions toward freshwater.",
+        "accessType": "boat",
+        "confidence": 80,
+        "validationStatus": "visually_reviewed",
+        "source": "Ported from src/App.jsx main dashboard content, 2026-07-29",
+        "notes": "Evidence: Ported from src/App.jsx's established LOCATIONS dataset. Coordinates originally sourced via OpenStreetMap. | Uncertainty: Species confidence and tactics reflect accumulated app content, not a field visit by this Atlas pilot specifically.",
+        "lastUpdated": "2026-07-29",
+        "catchCount": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.2432766,
+          30.4940855
+        ]
+      },
+      "properties": {
+        "id": 17,
+        "region": "basin_bayou",
+        "name": "Basin Bayou",
+        "habitat": "grass_flat",
+        "habitatLabel": "Grass Flat",
+        "species": [
+          {
+            "key": "redfish",
+            "label": "Redfish",
+            "confidence": 85,
+            "note": "Shallow grass flats and oyster bars throughout"
+          },
+          {
+            "key": "speckled_trout",
+            "label": "Speckled Trout",
+            "confidence": 70,
+            "note": "Bayou mouth and deeper grass flat edges"
+          },
+          {
+            "key": "flounder",
+            "label": "Flounder",
+            "confidence": 60,
+            "note": "Sandy pockets near the mouth, mud minnow"
+          },
+          {
+            "key": "black_drum",
+            "label": "Black Drum",
+            "confidence": 50,
+            "note": "Deeper holes, shrimp or cut crab on bottom"
+          },
+          {
+            "key": "pompano",
+            "label": "Pompano",
+            "confidence": 35,
+            "note": "Bayou mouth on moving tide, small jig or sand flea"
+          }
+        ],
+        "depthTypical": "Shallow interior grass flats grading to deeper water near the mouth",
+        "bestTide": "Incoming at the mouth; mid-incoming for the interior grass flats",
+        "bestWind": null,
+        "exposedDirections": [],
+        "bestSeason": null,
+        "bestLures": [
+          "Live shrimp under popping cork",
+          "Weedless gold spoon over grass",
+          "Paddle-tail on falling tide near oyster edges"
+        ],
+        "accessNotes": "Small, almost fully enclosed bayou on the north shore near Freeport — classic sight-fishing water, minimal open-water fetch in any direction.",
+        "accessType": "boat",
+        "confidence": 80,
+        "validationStatus": "visually_reviewed",
+        "source": "Ported from src/App.jsx main dashboard content, 2026-07-29",
+        "notes": "Evidence: Ported from src/App.jsx's established LOCATIONS dataset. Coordinates originally sourced via OpenStreetMap. | Uncertainty: Species confidence and tactics reflect accumulated app content, not a field visit by this Atlas pilot specifically.",
+        "lastUpdated": "2026-07-29",
+        "catchCount": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -86.1604,
           30.4175
         ]
@@ -72,6 +213,76 @@
         "validationStatus": "visually_reviewed",
         "source": "Ported from src/App.jsx main dashboard content, 2026-07-29",
         "notes": "Evidence: Ported from src/App.jsx's established LOCATIONS dataset (long-running main dashboard content, not a fresh survey). Coordinates originally sourced via OpenStreetMap/Overpass — midpoint of the bridge's mapped way segments. | Uncertainty: Species confidence and tactics reflect accumulated app content, not a field visit by this Atlas pilot specifically.",
+        "lastUpdated": "2026-07-29",
+        "catchCount": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.3087806,
+          30.4079007
+        ]
+      },
+      "properties": {
+        "id": 19,
+        "region": "buck_bayou",
+        "name": "Buck Bayou",
+        "habitat": "oyster_bar",
+        "habitatLabel": "Oyster Bar",
+        "species": [
+          {
+            "key": "redfish",
+            "label": "Redfish",
+            "confidence": 72,
+            "note": "Marsh grass edges throughout the bayou"
+          },
+          {
+            "key": "speckled_trout",
+            "label": "Speckled Trout",
+            "confidence": 60,
+            "note": "Near the mouth on incoming tide"
+          },
+          {
+            "key": "flounder",
+            "label": "Flounder",
+            "confidence": 50,
+            "note": "Sandy pockets near the entrance"
+          },
+          {
+            "key": "black_drum",
+            "label": "Black Drum",
+            "confidence": 40,
+            "note": "Interior holes, shrimp on bottom"
+          },
+          {
+            "key": "sheepshead",
+            "label": "Sheepshead",
+            "confidence": 35,
+            "note": "Any hard structure near the mouth"
+          }
+        ],
+        "depthTypical": "Bayou mouth and marsh edges, interior holes further in",
+        "bestTide": "Incoming tide at the mouth",
+        "bestWind": null,
+        "exposedDirections": [
+          "NE",
+          "E"
+        ],
+        "bestSeason": null,
+        "bestLures": [
+          "Live shrimp under popping cork at the entrance",
+          "Gold spoon over oyster or hard bottom",
+          "Weedless paddle-tail along grass edges"
+        ],
+        "accessNotes": "Barrier-island (30-A) side, smallest and least-fished of the three north-shore bayous with Mack and Hewett — best treated as a bonus stop on that trip.",
+        "accessType": "boat",
+        "confidence": 80,
+        "validationStatus": "visually_reviewed",
+        "source": "Ported from src/App.jsx main dashboard content, 2026-07-29",
+        "notes": "Evidence: Ported from src/App.jsx's established LOCATIONS dataset. Coordinates originally sourced via OpenStreetMap. | Uncertainty: Species confidence and tactics reflect accumulated app content, not a field visit by this Atlas pilot specifically.",
         "lastUpdated": "2026-07-29",
         "catchCount": 0
       }
@@ -709,6 +920,77 @@
         "validationStatus": "visually_reviewed",
         "source": "Ported from src/App.jsx main dashboard content, 2026-07-29",
         "notes": "Evidence: Ported from src/App.jsx's established LOCATIONS dataset. Coordinates originally sourced via OpenStreetMap. | Uncertainty: Species confidence and tactics reflect accumulated app content, not a field visit by this Atlas pilot specifically. Mapped point sits close to the developed shoreline edge, not clearly out in open water.",
+        "lastUpdated": "2026-07-29",
+        "catchCount": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.1454966,
+          30.4532529
+        ]
+      },
+      "properties": {
+        "id": 18,
+        "region": "mallet_bayou",
+        "name": "Mallet Bayou",
+        "habitat": "oyster_bar",
+        "habitatLabel": "Oyster Bar",
+        "species": [
+          {
+            "key": "redfish",
+            "label": "Redfish",
+            "confidence": 75,
+            "note": "Confluence with LaGrange Bayou and marsh edges throughout"
+          },
+          {
+            "key": "speckled_trout",
+            "label": "Speckled Trout",
+            "confidence": 65,
+            "note": "Near the confluence on incoming tide, same bite as LaGrange next door"
+          },
+          {
+            "key": "flounder",
+            "label": "Flounder",
+            "confidence": 48,
+            "note": "Sandy pockets near the mouth, mud minnow on jig"
+          },
+          {
+            "key": "black_drum",
+            "label": "Black Drum",
+            "confidence": 42,
+            "note": "Interior holes, shrimp on bottom"
+          },
+          {
+            "key": "sheepshead",
+            "label": "Sheepshead",
+            "confidence": 32,
+            "note": "Any hard structure near the confluence, fiddler crab"
+          }
+        ],
+        "depthTypical": "Shallow tributary mouth at the LaGrange Bayou confluence, interior holes further in",
+        "bestTide": "Incoming tide at the confluence",
+        "bestWind": null,
+        "exposedDirections": [
+          "N",
+          "NW",
+          "W"
+        ],
+        "bestSeason": null,
+        "bestLures": [
+          "Live shrimp under popping cork",
+          "Gold spoon along oyster structure",
+          "Weedless paddle-tail along marsh edges"
+        ],
+        "accessNotes": "Small tributary feeding directly into LaGrange Bayou — quieter, less-documented water; best paired with a LaGrange Bayou trip rather than fished standalone.",
+        "accessType": "boat",
+        "confidence": 80,
+        "validationStatus": "visually_reviewed",
+        "source": "Ported from src/App.jsx main dashboard content, 2026-07-29",
+        "notes": "Evidence: Ported from src/App.jsx's established LOCATIONS dataset. Coordinates originally sourced via OpenStreetMap (natural=bay node, gnis:feature_id=286328), cross-checked against GNIS. | Uncertainty: Species confidence and tactics reflect accumulated app content, not a field visit by this Atlas pilot specifically.",
         "lastUpdated": "2026-07-29",
         "catchCount": 0
       }

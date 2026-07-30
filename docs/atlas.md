@@ -338,23 +338,68 @@ verified coordinate, not an invented one.
 
 ## Bay-wide locations (added 2026-07-29)
 
-Six more named spots, ported from `src/App.jsx`'s main-dashboard
-`LOCATIONS` — 331 Bridge, LaGrange Bayou, Four Mile Creek, Hogtown Bayou,
-Mack Bayou, Hewett Bayou (`external_id` prefix `MAIN-`, each its own
-`region` — `bridge_331`, `lagrange_bayou`, etc., not grouped into one
-pilot region the way Jolly Bay's nine are). These already had real
-coordinates and rich species/tactic content from the long-running main
-app, so the only new research done for them was the wind-shelter
-`exposed_directions_json` assessment (same visual-satellite method as
-Jolly Bay's six located spots — see "On-the-water interaction features"
-above) — everything else is `confidence: 80`, `validation_status:
-'visually_reviewed'`, sourced as "ported from src/App.jsx", not
-independently field-verified by this Atlas.
+Ten named spots, ported from `src/App.jsx`'s main-dashboard `LOCATIONS` —
+331 Bridge, LaGrange Bayou, Four Mile Creek, Hogtown Bayou, Mack Bayou,
+Hewett Bayou (first six), plus Alaqua Bayou, Basin Bayou, Mallet Bayou,
+Buck Bayou (remaining four, added same day once it came up that the first
+batch wasn't actually all of App.jsx's bay-wide locations). `external_id`
+prefix `MAIN-`, each its own `region` — `bridge_331`, `lagrange_bayou`,
+`alaqua_bayou`, etc., not grouped into one pilot region the way Jolly
+Bay's nine are. These already had real coordinates and rich
+species/tactic content from the long-running main app, so the only new
+research done for them was the wind-shelter `exposed_directions_json`
+assessment (same visual-satellite method as Jolly Bay's six located spots
+— see "On-the-water interaction features" above) — everything else is
+`confidence: 80`, `validation_status: 'visually_reviewed'`, sourced as
+"ported from src/App.jsx", not independently field-verified by this
+Atlas. All ten coordinates were checked against Esri satellite imagery
+before porting (see "Coordinate audit" below) — Basin Bayou is nearly
+fully enclosed (`exposed_directions_json: []`), Alaqua sits at a wide
+mouth open on five sides, Mallet is only open toward LaGrange Bayou's
+wider water (`N`/`NW`/`W`), Buck mirrors its 30-A neighbors Mack/Hewett
+(`NE`/`E`).
 
 The map's initial view now `fitBounds()`s to every located
 `fishing_locations` feature (40px padding) instead of a fixed Jolly-Bay
 center/zoom, so it automatically re-fits as more locations get added later
 — nothing to hand-tune here on the next expansion.
+
+## Coordinate audit (2026-07-29)
+
+Hewett Bayou's marker was reported as rendering on land instead of in the
+bayou. Investigation found two separate bugs, both now fixed:
+
+1. The coordinate itself (a topozone.com/GNIS point) sat right at the
+   bayou's shoreline tip. At that exact spot, OpenStreetMap's standard
+   tile style doesn't render this particular narrow bayou as filled water
+   below zoom 16, so the Atlas/App.jsx mini-maps (which sit at zoom 14)
+   showed it on "land" even though the point is technically in the bayou.
+   Moved further into the main basin, verified against satellite imagery.
+2. `db/atlas.db` had been edited directly without re-running
+   `scripts/export-atlas-geojson.mjs`, so the Atlas map was actually
+   serving an even older, pre-correction coordinate that genuinely was on
+   a residential lot. Fixed by regenerating the export, and permanently by
+   adding `predev`/`prebuild` hooks to `package.json` so the export always
+   runs before `vite dev`/`vite build` — `db/atlas.db` and the deployed
+   GeoJSON can no longer drift apart even if the manual export step is
+   forgotten.
+
+That prompted a full audit of every Point-geometry layer (`fishing_locations`,
+`creek_mouths`) against Esri satellite imagery. Nine more locations had the
+same root cause — a coordinate read by eye off a NOAA chart tile or aerial
+image, landing on marsh/land/a rooftop instead of water — including Four
+Mile Creek (on Shipyard Marina's own warehouse roof) and a cluster of five
+in the Jolly Bay marsh complex (Bayou Mouth, Deep Bend, Drain, plus two
+`creek_mouths` rows) that had been placed 150–250m from the nearest actual
+channel. All corrected the same way: fetch an Esri World Imagery crop
+centered on the point, confirm the crosshair lands in open water, nudge
+into the nearest visible channel if not. `shoreline_points` were checked
+too and are correct by design — they're meant to sit at the land/water
+edge, not in open water.
+
+When adding any new Point-geometry location, verify it against a satellite
+crop before treating the coordinate as final — don't trust a chart-tile or
+GNIS point by eye alone.
 
 ## Future expansion
 
