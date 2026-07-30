@@ -102,7 +102,10 @@ test("every exported GeoJSON file is a valid FeatureCollection matching its laye
 test("Jolly Bay structure packet is exported once with reconciled geometry types", async () => {
   const expected = {
     channels: ["LineString", 3],
-    creek_mouths: ["Point", 7],
+    // Cypress River entrance (JB-CM-008) added 2026-07-30 — a real
+    // OpenStreetMap-tagged river connecting into Duck Lake, prompted by
+    // the user pointing at a chart crop of the delta.
+    creek_mouths: ["Point", 8],
     shoreline_points: ["Point", 3],
     sand_holes: ["Polygon", 3],
     navigation_cautions: ["Polygon", 3],
@@ -123,20 +126,21 @@ test("Jolly Bay structure packet is exported once with reconciled geometry types
     }
   }
 
-  assert.equal(ids.size, 19);
+  assert.equal(ids.size, 20);
 });
 
-test("Jolly Bay pilot: exactly 7 located + 3 unlocated fishing_locations, none promoted past visually_reviewed/user_reported", async () => {
+test("Jolly Bay pilot: exactly 8 located + 3 unlocated fishing_locations, none promoted past visually_reviewed/user_reported", async () => {
   const collection = JSON.parse(await readFile(join(GEOJSON_DIR, "fishing_locations.geojson"), "utf8"));
   const jollyBay = collection.features.filter((f) => f.properties.region === "jolly_bay");
-  // 9 original pilot placeholders (JB-PROP-*) plus Bunker Cove (JB-CV-001,
-  // added 2026-07-30 at the user's request — a real GNIS-named cove they
-  // fish, not a fabricated spot; see its `source`/`notes` for the trail).
-  assert.equal(jollyBay.length, 10, "expected all 9 Jolly Bay pilot locations plus Bunker Cove");
+  // 9 original pilot placeholders (JB-PROP-*) plus Bunker Cove (JB-CV-001)
+  // and Duck Lake (JB-DL-001) — both added 2026-07-30 from the user
+  // pointing at real, named features on a chart crop, not fabricated
+  // spots; see each one's `source`/`notes` for the trail.
+  assert.equal(jollyBay.length, 11, "expected all 9 Jolly Bay pilot locations plus Bunker Cove and Duck Lake");
 
   const located = jollyBay.filter((f) => f.geometry !== null);
   const unlocated = jollyBay.filter((f) => f.geometry === null);
-  assert.equal(located.length, 7, "expected 6 original located Jolly Bay features plus Bunker Cove");
+  assert.equal(located.length, 8, "expected 6 original located Jolly Bay features plus Bunker Cove and Duck Lake");
   assert.equal(unlocated.length, 3, "expected 3 unlocated Jolly Bay features");
 
   const promoted = jollyBay.filter((f) => ["field_verified", "guide_verified"].includes(f.properties.validationStatus));

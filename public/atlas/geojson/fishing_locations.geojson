@@ -666,6 +666,38 @@
     },
     {
       "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.1185516,
+          30.4099205
+        ]
+      },
+      "properties": {
+        "id": 21,
+        "region": "jolly_bay",
+        "name": "Duck Lake",
+        "habitat": "grass_flat",
+        "habitatLabel": "Grass Flat",
+        "species": [],
+        "depthTypical": null,
+        "bestTide": null,
+        "bestWind": null,
+        "exposedDirections": [],
+        "bestSeason": null,
+        "bestLures": [],
+        "accessNotes": null,
+        "accessType": null,
+        "confidence": 52,
+        "validationStatus": "visually_reviewed",
+        "source": "OpenStreetMap (node 369135204, natural=bay), reviewed 2026-07-30; user pointed to this area via a chart crop asking about river-mouth grass flats",
+        "notes": "Evidence: named lake confirmed via OpenStreetMap; coordinate verified in open water against Esri World Imagery — an enclosed marsh lake with visible pale shoal/flat signatures along its northeast margin, consistent with grass-flat habitat. | Uncertainty: submerged grass coverage, exact depth, and species/tactic patterns are not independently verified — no field or aerial fishing-quality confirmation yet, just the visible habitat character.",
+        "lastUpdated": "2026-07-30",
+        "catchCount": 0
+      }
+    },
+    {
+      "type": "Feature",
       "geometry": null,
       "properties": {
         "id": 3,
