@@ -1,30 +1,30 @@
 {
-  "date": "Wednesday, July 29, 2026",
+  "date": "Thursday, July 30, 2026",
   "wind": {
     "speed": 10,
-    "dir": "W",
-    "description": "W 5 to 10 mph"
+    "dir": "WSW",
+    "description": "WSW 0 to 10 mph"
   },
-  "weather": "Slight Chance Showers And Thunderstorms · High 96°F · Heat index up to 111°F",
-  "tide": "High tide ~6:02 AM · Low tide ~5:01 PM · Sunrise 5:59 AM",
+  "weather": "Chance Showers And Thunderstorms · High 93°F · Heat index up to 109°F",
+  "tide": "High tide ~6:43 AM · Low tide ~5:18 PM · Sunrise 6:00 AM",
   "tideEvents": [
     {
       "type": "H",
-      "time": "6:02 AM"
+      "time": "6:43 AM"
     },
     {
       "type": "L",
-      "time": "5:01 PM"
+      "time": "5:18 PM"
     }
   ],
-  "sunrise": "5:59 AM",
-  "sunset": "7:42 PM",
-  "stormWindow": "after 4PM",
-  "stormChance": 20,
-  "moonPhase": "Full Moon (~99% illuminated) — strong tidal push (spring tide)",
+  "sunrise": "6:00 AM",
+  "sunset": "7:41 PM",
+  "stormWindow": "after 11AM",
+  "stormChance": 47,
+  "moonPhase": "Waning Gibbous (~95% illuminated) — strong tidal push (spring tide)",
   "waterClarity": "Slightly stained",
   "sky": "Cloudy",
-  "lastUpdated": "7/29/2026, 12:24:51 PM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "lastUpdated": "7/30/2026, 3:12:18 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
   "localBiteReport": "The most current reports from Choctawhatchee Bay (within the past week) confirm an active speckled trout bite across the bay, with multiple anglers reporting good numbers and some quality-sized fish. Bull redfish are also in the mix — one notable catch this week out of Santa Rosa Beach was a 40-inch, 26-lb bull red. Tarpon have been cruising the beaches and anglers are finding them in good numbers as well. Water temperature is 86°F. Early morning trips are strongly recommended to beat both the summer heat and crowded conditions; book charters well in advance as summer demand is high.",
   "localBiteSource": "captainexperiences.com (Choctawhatchee Bay reports page, reports from ~July 23 and ~July 22, 2026); fishingbooker.com (Choctawhatchee Bay daily reports, July 2026) · Auto-refreshed via Claude API",
   "localBiteUpdated": "July 29, 2026",
@@ -47,74 +47,74 @@
       "speed": 10
     },
     "high": 96,
-    "stormChance": 37,
+    "stormChance": 20,
     "tide": "High tide ~6:02 AM · Low tide ~5:01 PM · Sunrise 5:59 AM"
   },
   "openMeteo": [
     {
-      "high": 99,
-      "low": 80,
-      "stormChance": 23,
-      "windSpeed": 12,
-      "windDir": "W",
-      "summary": "Overcast"
-    },
-    {
-      "high": 97,
-      "low": 74,
-      "stormChance": 40,
-      "windSpeed": 33,
-      "windDir": "W",
-      "summary": "Unknown"
-    },
-    {
-      "high": 94,
+      "high": 93,
       "low": 78,
-      "stormChance": 50,
-      "windSpeed": 13,
+      "stormChance": 52,
+      "windSpeed": 18,
+      "windDir": "SW",
+      "summary": "Light drizzle"
+    },
+    {
+      "high": 90,
+      "low": 81,
+      "stormChance": 52,
+      "windSpeed": 14,
+      "windDir": "SW",
+      "summary": "Light drizzle"
+    },
+    {
+      "high": 88,
+      "low": 78,
+      "stormChance": 76,
+      "windSpeed": 9,
       "windDir": "SW",
       "summary": "Thunderstorm"
     }
   ],
   "forecast": [
     {
-      "day": "Wed, Jul 29",
-      "label": "Today",
-      "high": 96,
-      "low": null,
-      "wind": "W 5 to 10 mph",
-      "storms": 20,
-      "headline": "Slight Chance Showers And Thunderstorms · Heat index 111",
-      "fishingScore": 7.7,
-      "aiCall": "A slight chance of showers and thunderstorms after 4pm. Mostly sunny. High near 96, with temperatures falling to around 91 in the afternoon. Heat index values as high as 111. West wind 5 to 10 mph. Chance of precipitation is 20%. New rainfall amounts less than a tenth of an inch possible.",
-      "emoji": "⛈️"
-    },
-    {
       "day": "Thu, Jul 30",
-      "label": "Tomorrow",
-      "high": 92,
+      "label": "Today",
+      "high": 93,
       "low": null,
-      "wind": "W 0 to 10 mph",
-      "storms": 68,
-      "headline": "Showers And Thunderstorms Likely · Heat index 105",
-      "fishingScore": 5.8,
-      "aiCall": "Showers and thunderstorms likely. Mostly sunny. High near 92, with temperatures falling to around 89 in the afternoon. Heat index values as high as 105. West wind 0 to 10 mph. Chance of precipitation is 70%. New rainfall amounts between a quarter and half of an inch possible.",
+      "wind": "WSW 0 to 10 mph",
+      "storms": 47,
+      "headline": "Chance Showers And Thunderstorms · Heat index 109",
+      "fishingScore": 6.6,
+      "aiCall": "A chance of showers and thunderstorms after 11am. Mostly sunny. High near 93, with temperatures falling to around 89 in the afternoon. Heat index values as high as 109. West southwest wind 0 to 10 mph. Chance of precipitation is 50%. New rainfall amounts between a quarter and half of an inch possible.",
       "emoji": "⛈️"
     },
     {
       "day": "Fri, Jul 31",
-      "label": "Friday",
-      "high": 91,
+      "label": "Tomorrow",
+      "high": 90,
       "low": null,
-      "wind": "W 0 to 10 mph",
-      "storms": 53,
-      "headline": "Chance Showers And Thunderstorms",
-      "fishingScore": 6.4,
-      "aiCall": "A chance of showers and thunderstorms before 10am, then a chance of showers and thunderstorms. Mostly sunny, with a high near 91. West wind 0 to 10 mph. Chance of precipitation is 50%.",
+      "wind": "WSW 0 to 10 mph",
+      "storms": 72,
+      "headline": "Chance Showers And Thunderstorms then Showers And Thunderstorms Likely · Heat index 103",
+      "fishingScore": 5.6,
+      "aiCall": "A chance of showers and thunderstorms before 8am, then showers and thunderstorms likely between 8am and 1pm, then showers and thunderstorms likely. Mostly sunny. High near 90, with temperatures falling to around 87 in the afternoon. Heat index values as high as 103. West southwest wind 0 to 10 mph. Chance of precipitation is 70%.",
+      "emoji": "⛈️"
+    },
+    {
+      "day": "Sat, Aug 1",
+      "label": "Saturday",
+      "high": 88,
+      "low": null,
+      "wind": "WSW 5 to 10 mph",
+      "storms": 88,
+      "headline": "Showers And Thunderstorms",
+      "fishingScore": 5,
+      "aiCall": "Showers and thunderstorms. Mostly cloudy, with a high near 88. Chance of precipitation is 90%.",
       "emoji": "⛈️"
     }
   ],
-  "dateISO": "2026-07-29",
+  "dateISO": "2026-07-30",
   "aiSummary": "Choctawhatchee Bay is firing on all cylinders this Wednesday, with an active speckled trout bite reported bay-wide, bull redfish in the mix, and tarpon cruising nearby beaches — but summer heat and a 37% storm chance after 1 PM make an early start non-negotiable. Water temps are sitting at 86°F under a full moon spring tide, so fish will be most active in the low-light hours around the 6:02 AM high tide before the heat settles in. Plan to be off the open water by early afternoon, and keep one eye on the western sky as convective storms can build quickly.",
   "locationNotes": {
     "bridge": {
@@ -158,11 +158,11 @@
       "todaysCall": "Buck Bayou is a low-commitment add-on to a Mack/Hewett trip today — if you're already out on the 30-A side and have time before your weather-driven turnaround, a quick pass through Buck's mouth structure on the falling tide costs you very little and could yield opportunistic reds or trout. Don't build your day around it; given limited documented history here, it's the last priority in the three-bayou rotation. The same time constraints apply regardless — the 1 PM storm window and the long open-water run home mean you should treat any time at Buck Bayou as a bonus, not a given. If the bite is hot at Mack or Hewett, stay there rather than moving for the sake of covering water."
     }
   },
-  "waterTemp": 87,
+  "waterTemp": 86,
   "pressure": {
-    "hpa": 1010.8,
-    "inHg": 29.85,
-    "direction": "steady",
-    "changeHpa3h": -0.1
+    "hpa": 1012.7,
+    "inHg": 29.91,
+    "direction": "rising",
+    "changeHpa3h": 0.7
   }
 }
