@@ -1042,7 +1042,7 @@ function LocationReport({ loc }) {
               turn on" signal; a steady high is the classic tough-bite day. */}
           {C.pressure && (
             <div style={{ fontSize: 16, color: "#7ab898", marginTop: 1 }}>
-              {C.pressure.direction === "falling" ? "📉" : C.pressure.direction === "rising" ? "📈" : "➡️"} Pressure {C.pressure.direction} ({C.pressure.inHg}" Hg)
+              {C.pressure.direction === "falling" ? "📉" : C.pressure.direction === "rising" ? "📈" : "➡️"} Pressure {C.pressure.direction} ({C.pressure.hpa} mb)
             </div>
           )}
         </div>

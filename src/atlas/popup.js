@@ -81,7 +81,7 @@ function buildCatchLogSection(locationId) {
         const date = new Date(entry.loggedAt).toLocaleDateString("en-US", { month: "short", day: "numeric" });
         const c = entry.conditions;
         const conditionsBits = c
-          ? [c.wind, c.tide, c.pressure ? `${c.pressure.direction} (${c.pressure.inHg}" Hg)` : null].filter(Boolean).join(" · ")
+          ? [c.wind, c.tide, c.pressure ? `${c.pressure.direction} (${c.pressure.hpa} mb)` : null].filter(Boolean).join(" · ")
           : "";
         return `
           <li class="atlas-catchlog-entry" data-catch-id="${escapeHtml(entry.id)}">

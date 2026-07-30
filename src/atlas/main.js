@@ -650,7 +650,7 @@ function renderCurrentIntelligence(intelligence) {
         ? `<span>🌊 ${escapeHtml(tideNow.direction)} — ${escapeHtml(tideNow.nextLabel)} in ${escapeHtml(tideNow.untilLabel)}</span>`
         : conditions.tide ? `<span>🌊 ${escapeHtml(conditions.tide)}</span>` : ""}
       ${conditions.pressure
-        ? `<span>${conditions.pressure.direction === "falling" ? "📉" : conditions.pressure.direction === "rising" ? "📈" : "➡️"} Pressure ${escapeHtml(conditions.pressure.direction)} (${escapeHtml(conditions.pressure.inHg)}" Hg)</span>`
+        ? `<span>${conditions.pressure.direction === "falling" ? "📉" : conditions.pressure.direction === "rising" ? "📈" : "➡️"} Pressure ${escapeHtml(conditions.pressure.direction)} (${escapeHtml(conditions.pressure.hpa)} mb)</span>`
         : ""}
     </div>
     <details class="atlas-intel-report">
