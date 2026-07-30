@@ -6,6 +6,90 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -86.19575,
+          30.48335
+        ]
+      },
+      "properties": {
+        "id": 27,
+        "externalId": "AQ-CM-002",
+        "region": "alaqua_bayou",
+        "name": "East marsh creek mouth",
+        "confidence": 71,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery export reviewed 2026-07-29; WGS84 bbox [-86.225,30.470,-86.180,30.505]",
+        "lastUpdated": "2026-07-29",
+        "feature_type": "creek_mouth",
+        "field_verified": false,
+        "evidence": "Winding marsh creek clearly visible entering the bayou from the east.",
+        "uncertainty": "Creek name and navigability are unverified.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery export reviewed 2026-07-29; WGS84 bbox [-86.225,30.470,-86.180,30.505]",
+        "review_date": "2026-07-29",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.1935,
+          30.49549
+        ]
+      },
+      "properties": {
+        "id": 26,
+        "externalId": "AQ-CM-001",
+        "region": "alaqua_bayou",
+        "name": "Northeast tributary inlet",
+        "confidence": 66,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery export reviewed 2026-07-29; WGS84 bbox [-86.225,30.470,-86.180,30.505]",
+        "lastUpdated": "2026-07-29",
+        "feature_type": "creek_mouth",
+        "field_verified": false,
+        "evidence": "Small tributary/cove visibly joins the main bayou channel here, opposite a cleared parcel.",
+        "uncertainty": "Tributary name, flow, and navigability are unverified.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery export reviewed 2026-07-29; WGS84 bbox [-86.225,30.470,-86.180,30.505]",
+        "review_date": "2026-07-29",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.241875,
+          30.50104
+        ]
+      },
+      "properties": {
+        "id": 32,
+        "externalId": "BS-CM-001",
+        "region": "basin_bayou",
+        "name": "North tributary mouth",
+        "confidence": 70,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery export reviewed 2026-07-29; WGS84 bbox [-86.255,30.485,-86.230,30.505]",
+        "lastUpdated": "2026-07-29",
+        "feature_type": "creek_mouth",
+        "field_verified": false,
+        "evidence": "Narrow tributary stream is clearly visible feeding the bayou from the north.",
+        "uncertainty": "Stream name, flow, and navigability are unverified.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery export reviewed 2026-07-29; WGS84 bbox [-86.255,30.485,-86.230,30.505]",
+        "review_date": "2026-07-29",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -86.09425,
           30.44825
         ]

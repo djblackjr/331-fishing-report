@@ -8,6 +8,102 @@
         "coordinates": [
           [
             [
+              -86.21188,
+              30.48532
+            ],
+            [
+              -86.20325,
+              30.48532
+            ],
+            [
+              -86.20325,
+              30.47942
+            ],
+            [
+              -86.21188,
+              30.47942
+            ],
+            [
+              -86.21188,
+              30.48532
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 31,
+        "externalId": "AQ-HZ-001",
+        "region": "alaqua_bayou",
+        "name": "Bayou-mouth narrows caution",
+        "confidence": 60,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery export reviewed 2026-07-29; WGS84 bbox [-86.225,30.470,-86.180,30.505]",
+        "lastUpdated": "2026-07-29",
+        "feature_type": "shallow_water_caution",
+        "field_verified": false,
+        "evidence": "The bayou visibly constricts between the western sand point and the eastern shore before opening to the wider bay.",
+        "uncertainty": "Visual caution only; not a charted hazard and not for navigation.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery export reviewed 2026-07-29; WGS84 bbox [-86.225,30.470,-86.180,30.505]",
+        "review_date": "2026-07-29",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -86.24667,
+              30.49708
+            ],
+            [
+              -86.24,
+              30.49708
+            ],
+            [
+              -86.24,
+              30.495
+            ],
+            [
+              -86.24667,
+              30.495
+            ],
+            [
+              -86.24667,
+              30.49708
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 36,
+        "externalId": "BS-HZ-001",
+        "region": "basin_bayou",
+        "name": "Mid-bayou waist constriction caution",
+        "confidence": 58,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery export reviewed 2026-07-29; WGS84 bbox [-86.255,30.485,-86.230,30.505]",
+        "lastUpdated": "2026-07-29",
+        "feature_type": "shallow_water_caution",
+        "field_verified": false,
+        "evidence": "The bayou visibly pinches to roughly half its open width at this waist, between the east and west points.",
+        "uncertainty": "Visual caution only; not a charted hazard and not for navigation.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery export reviewed 2026-07-29; WGS84 bbox [-86.255,30.485,-86.230,30.505]",
+        "review_date": "2026-07-29",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
               -86.129,
               30.406
             ],

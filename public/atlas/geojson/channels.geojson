@@ -7,6 +7,94 @@
         "type": "LineString",
         "coordinates": [
           [
+            -86.208125,
+            30.47942
+          ],
+          [
+            -86.2025,
+            30.48696
+          ],
+          [
+            -86.19875,
+            30.49352
+          ],
+          [
+            -86.198,
+            30.50008
+          ]
+        ]
+      },
+      "properties": {
+        "id": 30,
+        "externalId": "AQ-CH-001",
+        "region": "alaqua_bayou",
+        "name": "Main Alaqua Bayou channel",
+        "confidence": 74,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery export reviewed 2026-07-29; WGS84 bbox [-86.225,30.470,-86.180,30.505]",
+        "lastUpdated": "2026-07-29",
+        "feature_type": "channel_centerline",
+        "field_verified": false,
+        "evidence": "Continuous open dark-water channel traced from the bayou mouth, through the main body, into the upper creek transition.",
+        "uncertainty": "Centerline is approximate; width and depth are not represented.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery export reviewed 2026-07-29; WGS84 bbox [-86.225,30.470,-86.180,30.505]",
+        "review_date": "2026-07-29",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -86.242083,
+            30.500208
+          ],
+          [
+            -86.2425,
+            30.496667
+          ],
+          [
+            -86.243542,
+            30.495625
+          ],
+          [
+            -86.245625,
+            30.4925
+          ],
+          [
+            -86.249167,
+            30.487917
+          ]
+        ]
+      },
+      "properties": {
+        "id": 35,
+        "externalId": "BS-CH-001",
+        "region": "basin_bayou",
+        "name": "Main Basin Bayou channel",
+        "confidence": 78,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery export reviewed 2026-07-29; WGS84 bbox [-86.255,30.485,-86.230,30.505]",
+        "lastUpdated": "2026-07-29",
+        "feature_type": "channel_centerline",
+        "field_verified": false,
+        "evidence": "Traced down the open center of the bayou's single connected body, from the north tributary mouth to the south outlet near the beach.",
+        "uncertainty": "Centerline is approximate; width and depth are not represented. This is a single open pond-like body rather than a distinct channel, so the line is more of a navigational reference than a true channel.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery export reviewed 2026-07-29; WGS84 bbox [-86.255,30.485,-86.230,30.505]",
+        "review_date": "2026-07-29",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
             -86.137031,
             30.42205
           ],

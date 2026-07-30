@@ -401,6 +401,46 @@ When adding any new Point-geometry location, verify it against a satellite
 crop before treating the coordinate as final — don't trust a chart-tile or
 GNIS point by eye alone.
 
+## Structure layers beyond Jolly Bay (added 2026-07-29)
+
+Until this point, `creek_mouths`, `shoreline_points`, `sand_holes`,
+`channels`, and `navigation_cautions` existed for `region: 'jolly_bay'`
+only — every other region's `fishing_locations` had no surrounding
+structure data at all, which read as inconsistent (and looked like it
+might be fabricated) once the Atlas had 16 locations spread across the
+whole bay. Digitized three more regions the same way Jolly Bay was
+built — visual review against Esri World Imagery, `confidence` roughly
+58–78 reflecting how clear each feature actually was, `validation_status:
+'visually_reviewed'`, external_id prefixes `LG-`/`AQ-`/`BS-`:
+
+- **`lagrange_bayou`** (covers both LaGrange and Mallet Bayou, since
+  Mallet is a direct tributary): 2 creek mouths, 2 shoreline points, 1
+  channel centerline across the main open-water body, 1 navigation
+  caution at the constriction past the central peninsula.
+- **`alaqua_bayou`**: 2 creek mouths, 2 shoreline points (the western one
+  is the sand point at the bayou mouth App.jsx calls the prime oyster-bar
+  spot), 1 channel centerline from the mouth up into the upper creek, 1
+  navigation caution at the bayou-mouth narrows.
+- **`basin_bayou`**: 1 creek mouth (its only tributary), 2 shoreline
+  points at the bayou's mid-point "waist," 1 channel centerline, 1
+  navigation caution at that same waist. Matches this bayou's
+  `exposed_directions_json: []` — it's a nearly fully enclosed body.
+
+No `sand_holes` were added in any of the three: none of the reviewed
+imagery showed a genuine submerged pale-shoal signature the way Jolly
+Bay's did (Alaqua has a pale sand spit at its western point, but it reads
+as an exposed dune, not a shoal visible through water) — consistent with
+this project's rule of skipping a layer rather than inventing a feature
+to fill it. `331 Bridge`, `Four Mile Creek`, `Hogtown`, `Mack`, `Hewett`,
+and `Buck` bayou still have no structure-layer data; extend the same way
+when there's a reason to prioritize them.
+
+Verified live for all three regions: `npm run atlas:test` still passes
+(9/9), layer counts in the control match the new row counts, markers
+render at the correct positions with zero console errors, and both a
+`fishing_locations` popup (Basin Bayou) and a `habitat_features` popup
+(Basin Bayou's creek mouth) were checked directly in a real browser.
+
 ## Future expansion
 
 - **More regions**: `locations.region` and `habitat_features.region` are

@@ -6,6 +6,118 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -86.20381,
+          30.48367
+        ]
+      },
+      "properties": {
+        "id": 29,
+        "externalId": "AQ-PT-002",
+        "region": "alaqua_bayou",
+        "name": "Eastern narrows point",
+        "confidence": 74,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery export reviewed 2026-07-29; WGS84 bbox [-86.225,30.470,-86.180,30.505]",
+        "lastUpdated": "2026-07-29",
+        "feature_type": "shoreline_point",
+        "field_verified": false,
+        "evidence": "Clear point of land opposite the western sand point, forming the bayou's narrows.",
+        "uncertainty": "Depth and bottom composition off the point are unverified.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery export reviewed 2026-07-29; WGS84 bbox [-86.225,30.470,-86.180,30.505]",
+        "review_date": "2026-07-29",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.213,
+          30.48482
+        ]
+      },
+      "properties": {
+        "id": 28,
+        "externalId": "AQ-PT-001",
+        "region": "alaqua_bayou",
+        "name": "Western sand point",
+        "confidence": 75,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery export reviewed 2026-07-29; WGS84 bbox [-86.225,30.470,-86.180,30.505]",
+        "lastUpdated": "2026-07-29",
+        "feature_type": "shoreline_point",
+        "field_verified": false,
+        "evidence": "Prominent sand spit/point clearly visible on the west shore at the bayou narrows — matches App.jsx's description of oyster bars at the mouth being the prime spot.",
+        "uncertainty": "Depth and bottom composition off the point are unverified; the pale area may be an exposed dune rather than a submerged shoal.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery export reviewed 2026-07-29; WGS84 bbox [-86.225,30.470,-86.180,30.505]",
+        "review_date": "2026-07-29",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.239375,
+          30.49625
+        ]
+      },
+      "properties": {
+        "id": 33,
+        "externalId": "BS-PT-001",
+        "region": "basin_bayou",
+        "name": "East waist point",
+        "confidence": 74,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery export reviewed 2026-07-29; WGS84 bbox [-86.255,30.485,-86.230,30.505]",
+        "lastUpdated": "2026-07-29",
+        "feature_type": "shoreline_point",
+        "field_verified": false,
+        "evidence": "Clear point of land where the bayou narrows to its mid-point 'waist'.",
+        "uncertainty": "Depth and bottom composition off the point are unverified.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery export reviewed 2026-07-29; WGS84 bbox [-86.255,30.485,-86.230,30.505]",
+        "review_date": "2026-07-29",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.246875,
+          30.495
+        ]
+      },
+      "properties": {
+        "id": 34,
+        "externalId": "BS-PT-002",
+        "region": "basin_bayou",
+        "name": "West waist point",
+        "confidence": 66,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery export reviewed 2026-07-29; WGS84 bbox [-86.255,30.485,-86.230,30.505]",
+        "lastUpdated": "2026-07-29",
+        "feature_type": "shoreline_point",
+        "field_verified": false,
+        "evidence": "Subtle point opposite the east waist point, on the west shore where the bayou narrows.",
+        "uncertainty": "Point is less pronounced than its eastern counterpart; exact tip position is approximate.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery export reviewed 2026-07-29; WGS84 bbox [-86.255,30.485,-86.230,30.505]",
+        "review_date": "2026-07-29",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -86.124844,
           30.42315
         ]
