@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "predev": "node scripts/export-atlas-geojson.mjs",
+    "prebuild": "node scripts/export-atlas-geojson.mjs",
     "build": "vite build",
     "preview": "vite preview",
     "atlas:db": "node scripts/build-atlas-db.mjs",

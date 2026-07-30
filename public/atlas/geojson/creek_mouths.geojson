@@ -6,8 +6,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -86.1,
-          30.445
+          -86.09425,
+          30.44825
         ]
       },
       "properties": {
@@ -22,7 +22,7 @@
         "feature_type": "named_creek_mouth",
         "field_verified": false,
         "evidence": "Labeled \"Black Creek\" on the NOAA nautical chart (ENC/NCDS) narrowing from open water into a defined creek channel northeast of Jolly Bay; the same waterway is tagged \"Black River\" in OpenStreetMap. Two independent sources disagree on the name, not on the location.",
-        "uncertainty": "Point placed at the approximate charted narrows/entrance read from a rendered WMS tile; not a surveyed position. Actual usable channel position and depth require on-water review.",
+        "uncertainty": "Point placed at the approximate charted narrows/entrance read from a rendered WMS tile; not a surveyed position. Actual usable channel position and depth require on-water review. Correction (2026-07-29): original point sat well within the forest ~250m from the river, not water; moved into the river channel per satellite imagery review.",
         "source_type": "noaa_chart_review",
         "source_reference": "NOAA Chart Display Service (NCDS) WMS (gis.charttools.noaa.gov, MCS/NOAAChartDisplay), sublayers 0-12, reviewed 2026-07-27; name discrepancy cross-checked against OpenStreetMap tile.openstreetmap.org rendering, 2026-07-27",
         "review_date": "2026-07-27",
@@ -118,8 +118,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -86.115,
-          30.4255
+          -86.1075,
+          30.4315
         ]
       },
       "properties": {
@@ -134,7 +134,7 @@
         "feature_type": "named_creek_mouth",
         "field_verified": false,
         "evidence": "Charted and labeled \"Mitchell River\" (NOAA ENC/NCDS), a distinct river channel entering the Jolly Bay marsh complex just east of the existing pilot area.",
-        "uncertainty": "Point placed at the approximate charted narrows/entrance read from a rendered WMS tile; not a surveyed position.",
+        "uncertainty": "Point placed at the approximate charted narrows/entrance read from a rendered WMS tile; not a surveyed position. Correction (2026-07-29): original point sat deep in the marsh island, not water; moved into the visible river channel per satellite imagery review.",
         "source_type": "noaa_chart_review",
         "source_reference": "NOAA Chart Display Service (NCDS) WMS (gis.charttools.noaa.gov, MCS/NOAAChartDisplay), sublayers 0-12, reviewed 2026-07-27",
         "review_date": "2026-07-27",
@@ -146,8 +146,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -86.118906,
-          30.428283
+          -86.118799,
+          30.42881
         ]
       },
       "properties": {
@@ -162,7 +162,7 @@
         "feature_type": "tidal_drain",
         "field_verified": false,
         "evidence": "Narrow marsh drain visibly opens into broader water.",
-        "uncertainty": "Flow timing and usable depth require on-water review.",
+        "uncertainty": "Flow timing and usable depth require on-water review. Correction (2026-07-29): original point sat in solid marsh, not water; moved into the visible tidal channel per satellite imagery review.",
         "source_type": "aerial_image_review",
         "source_reference": "Esri World Imagery export reviewed 2026-07-24; WGS84 bbox [-86.155,30.405,-86.105,30.449], 1600x1200",
         "review_date": "2026-07-24",
@@ -174,8 +174,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -86.123281,
-          30.42172
+          -86.122828,
+          30.42174
         ]
       },
       "properties": {
@@ -190,7 +190,7 @@
         "feature_type": "channel_mouth",
         "field_verified": false,
         "evidence": "Confined southern channel visibly meets the main east-west channel.",
-        "uncertainty": "Hydrodynamics and depth are unverified.",
+        "uncertainty": "Hydrodynamics and depth are unverified. Correction (2026-07-29): original point sat on the marsh island, not water; moved into the visible channel confluence per satellite imagery review.",
         "source_type": "aerial_image_review",
         "source_reference": "Esri World Imagery export reviewed 2026-07-24; WGS84 bbox [-86.155,30.405,-86.105,30.449], 1600x1200",
         "review_date": "2026-07-24",

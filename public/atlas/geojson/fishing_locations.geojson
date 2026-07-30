@@ -81,8 +81,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -86.1376,
-          30.4904
+          -86.13732,
+          30.488505
         ]
       },
       "properties": {
@@ -138,8 +138,8 @@
         "accessType": "boat",
         "confidence": 80,
         "validationStatus": "visually_reviewed",
-        "source": "Ported from src/App.jsx main dashboard content, 2026-07-29",
-        "notes": "Evidence: Ported from src/App.jsx's established LOCATIONS dataset. Coordinates originally sourced via NOAA chart label, near Shipyard Marina's own address. | Uncertainty: Species confidence and tactics reflect accumulated app content, not a field visit by this Atlas pilot specifically.",
+        "source": "Ported from src/App.jsx main dashboard content, 2026-07-29; coordinate corrected 2026-07-29 (moved off marina rooftop into channel)",
+        "notes": "Evidence: Ported from src/App.jsx's established LOCATIONS dataset. Coordinates originally sourced via NOAA chart label, near Shipyard Marina's own address. | Uncertainty: Species confidence and tactics reflect accumulated app content, not a field visit by this Atlas pilot specifically. | Correction (2026-07-29): original coordinate (30.4904,-86.1376) landed on Shipyard Marina's warehouse rooftop, not the creek. Moved into the open channel just downstream of the docks, verified against satellite imagery.",
         "lastUpdated": "2026-07-29",
         "catchCount": 0
       }
@@ -292,8 +292,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -86.123281,
-          30.421683
+          -86.122828,
+          30.421703
         ]
       },
       "properties": {
@@ -317,7 +317,7 @@
         "confidence": 63,
         "validationStatus": "visually_reviewed",
         "source": "Aerial image review — Esri World Imagery export, reviewed 2026-07-24 (db/import/2026-07-24-jolly-bay-review/)",
-        "notes": "Evidence: Visible transition where the confined marsh channel opens toward broader bay water. | Uncertainty: Hydrodynamics and usable depth require tide/field review. | Wind exposure (aerial assessment, 2026-07-28): well protected overall, but wind running straight along the channel axis (east or west) can still build some chop.",
+        "notes": "Evidence: Visible transition where the confined marsh channel opens toward broader bay water. | Uncertainty: Hydrodynamics and usable depth require tide/field review. | Wind exposure (aerial assessment, 2026-07-28): well protected overall, but wind running straight along the channel axis (east or west) can still build some chop. | Correction (2026-07-29): original point (30.421683,-86.123281) sat on the marsh island, not in water. Moved ~45m east into the visible channel confluence, verified against satellite imagery.",
         "lastUpdated": "2026-07-29",
         "catchCount": 0
       }
@@ -359,8 +359,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -86.1125,
-          30.424067
+          -86.11258,
+          30.42382
         ]
       },
       "properties": {
@@ -381,7 +381,7 @@
         "confidence": 55,
         "validationStatus": "visually_reviewed",
         "source": "Aerial image review — Esri World Imagery export, reviewed 2026-07-24 (db/import/2026-07-24-jolly-bay-review/)",
-        "notes": "Evidence: Pronounced outside bend is visible in the eastern marsh channel. | Uncertainty: The bend is mapped; greater depth is only a hypothesis until measured. | Wind exposure (aerial assessment, 2026-07-28): deep in the interior marsh channel — protected from wind chop regardless of direction.",
+        "notes": "Evidence: Pronounced outside bend is visible in the eastern marsh channel. | Uncertainty: The bend is mapped; greater depth is only a hypothesis until measured. | Wind exposure (aerial assessment, 2026-07-28): deep in the interior marsh channel — protected from wind chop regardless of direction. | Correction (2026-07-29): original point (30.424067,-86.1125) sat on the marsh point at the bend, not in water. Moved into the visible channel, verified against satellite imagery.",
         "lastUpdated": "2026-07-29",
         "catchCount": 0
       }
@@ -391,8 +391,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -86.118906,
-          30.428283
+          -86.118799,
+          30.42881
         ]
       },
       "properties": {
@@ -416,7 +416,7 @@
         "confidence": 70,
         "validationStatus": "visually_reviewed",
         "source": "Aerial image review — Esri World Imagery export, reviewed 2026-07-24 (db/import/2026-07-24-jolly-bay-review/)",
-        "notes": "Evidence: Clearly visible narrow marsh drain entering the bay/channel system. | Uncertainty: Flow timing, depth, and navigability remain unverified. | Wind exposure (aerial assessment, 2026-07-28): tucked at the marsh/bay corner — open water to the south/southwest, shoreline blocks north and east.",
+        "notes": "Evidence: Clearly visible narrow marsh drain entering the bay/channel system. | Uncertainty: Flow timing, depth, and navigability remain unverified. | Wind exposure (aerial assessment, 2026-07-28): tucked at the marsh/bay corner — open water to the south/southwest, shoreline blocks north and east. | Correction (2026-07-29): original point (30.428283,-86.118906) sat in solid marsh ~150m from the nearest channel, not in water. Moved into the visible tidal channel, verified against satellite imagery.",
         "lastUpdated": "2026-07-29",
         "catchCount": 0
       }

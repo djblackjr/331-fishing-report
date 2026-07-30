@@ -428,7 +428,7 @@ const LOCATIONS = [
     id: "fourmile",
     label: "Four Mile Creek",
     emoji: "🛶",
-    lat: 30.4904, lng: -86.1376, // NOAA chart label, near Shipyard Marina's own address
+    lat: 30.488505, lng: -86.13732, // corrected 2026-07-29 — the NOAA-chart/Shipyard-Marina-address point landed on the marina's warehouse rooftop, not the creek; moved into the open channel just downstream of the docks, verified against satellite imagery
     overallScore: 7.5,
     conditions: "Good",
     species: [
