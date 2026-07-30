@@ -107,14 +107,21 @@ root.innerHTML = `
           </p>
         </section>
       </aside>
+      <div class="atlas-sidebar-backdrop" id="atlas-sidebar-backdrop"></div>
       <div id="atlas-map"></div>
     </div>
   </div>
 `;
 
-document.getElementById("atlas-sidebar-toggle").addEventListener("click", () => {
-  document.getElementById("atlas-sidebar").classList.toggle("atlas-sidebar-open");
-});
+function toggleSidebar(open) {
+  const sidebar = document.getElementById("atlas-sidebar");
+  const backdrop = document.getElementById("atlas-sidebar-backdrop");
+  const next = open ?? !sidebar.classList.contains("atlas-sidebar-open");
+  sidebar.classList.toggle("atlas-sidebar-open", next);
+  backdrop.classList.toggle("atlas-sidebar-open", next);
+}
+document.getElementById("atlas-sidebar-toggle").addEventListener("click", () => toggleSidebar());
+document.getElementById("atlas-sidebar-backdrop").addEventListener("click", () => toggleSidebar(false));
 
 // ── MAP + BASE LAYERS ────────────────────────────────────────────────────
 const map = L.map("atlas-map", { zoomControl: true }).setView(JOLLY_BAY_CENTER, JOLLY_BAY_ZOOM);
@@ -347,7 +354,7 @@ map.on("locationfound", (e) => {
   if (!locationMarker) {
     locationMarker = L.circleMarker(e.latlng, { radius: 8, color: "#38bdf8", weight: 2, fillColor: "#38bdf8", fillOpacity: 0.9 })
       .addTo(map)
-      .bindPopup("You are here");
+      .bindPopup("You are here", { autoPanPaddingTopLeft: [56, 130], autoPanPaddingBottomRight: [220, 10] });
     locationAccuracyCircle = L.circle(e.latlng, { radius: e.accuracy, color: "#38bdf8", weight: 1, fillOpacity: 0.08 }).addTo(map);
     map.setView(e.latlng, Math.max(map.getZoom(), 14));
   } else {
@@ -358,7 +365,7 @@ map.on("locationfound", (e) => {
 
 map.on("locationerror", (e) => {
   document.querySelector(".atlas-locate-control a")?.classList.remove("atlas-locate-pending");
-  L.popup({ className: "atlas-leaflet-popup" })
+  L.popup({ className: "atlas-leaflet-popup", autoPanPaddingTopLeft: [56, 130], autoPanPaddingBottomRight: [220, 10] })
     .setLatLng(map.getCenter())
     .setContent(`<div class="atlas-popup"><div class="atlas-popup-title">Couldn't get your location</div><div class="atlas-popup-caveat">${escapeHtml(e.message)}</div></div>`)
     .openOn(map);
@@ -388,7 +395,7 @@ async function fetchCudemElevation(lat, lng) {
 
 map.on("click", async (e) => {
   if (!map.hasLayer(bathymetry)) return; // only meaningful while the depth layer is actually showing
-  const popup = L.popup({ className: "atlas-leaflet-popup", maxWidth: 260 })
+  const popup = L.popup({ className: "atlas-leaflet-popup", maxWidth: 260, autoPanPaddingTopLeft: [56, 130], autoPanPaddingBottomRight: [220, 10] })
     .setLatLng(e.latlng)
     .setContent(`<div class="atlas-popup"><div class="atlas-popup-title">Sampling depth…</div></div>`)
     .openOn(map);
@@ -454,19 +461,22 @@ function buildFeatureLayer(layerMeta, featureCollection, intelligence) {
       const buildHtml = () => isLocation
         ? buildLocationPopup(feature.properties, fishingContext)
         : buildFeaturePopup(feature.properties, layerMeta.label, fishingContext);
-      // Extra autoPan padding on the top/right: Leaflet's controls (layer
-      // control top-right, the header bar) sit ABOVE popups in z-index by
-      // Leaflet's own default CSS, so a popup opening close to either one
-      // renders partly underneath it — its buttons become unclickable
-      // because the control captures the click instead. Confirmed directly
-      // for the easternmost marker (Deep Bend), whose popup opened right
-      // under the expanded layer control. This keeps the autopan far enough
-      // from both to clear them.
+      // Extra autoPan padding on all four sides: Leaflet's controls (zoom
+      // + GPS locate top-left, layer control top-right, the header bar)
+      // sit ABOVE popups in z-index by Leaflet's own default CSS, so a
+      // popup opening close to any of them renders partly underneath —
+      // its buttons (or even its title) become unclickable/unreadable
+      // because the control captures the click/paints over the text
+      // instead. Confirmed directly for the easternmost marker (Deep
+      // Bend, layer control) and for Hewett Bayou on a mobile viewport
+      // (the zoom+locate column, measured via getBoundingClientRect at
+      // 44x118px, is far wider/taller than the old 10px left padding).
+      // This keeps the autopan far enough from all of them.
       leafletLayer.bindPopup(buildHtml(), {
         maxWidth: 340,
         maxHeight: 420,
         className: "atlas-leaflet-popup",
-        autoPanPaddingTopLeft: [10, 70],
+        autoPanPaddingTopLeft: [56, 130],
         autoPanPaddingBottomRight: [220, 10],
       });
 

@@ -319,7 +319,13 @@ html, body, #atlas-root {
     top: 54px;
     left: 0;
     bottom: 0;
-    z-index: 1000;
+    /* Leaflet's own controls (zoom, GPS, layer icon, attribution) sit in
+       .leaflet-top/.leaflet-bottom, which leaflet.css hard-codes to
+       z-index: 1000. Matching that value here left the stacking order
+       decided by DOM position (Leaflet's controls are appended after
+       this element, so they painted on top of the open sidebar on
+       mobile) — needs to clear it outright, not just tie it. */
+    z-index: 1200;
     width: 85vw;
     max-width: 340px;
     transform: translateX(-100%);
@@ -327,4 +333,27 @@ html, body, #atlas-root {
     box-shadow: 8px 0 24px #00000066;
   }
   .atlas-sidebar.atlas-sidebar-open { transform: translateX(0); }
+
+  .atlas-sidebar-backdrop {
+    display: none;
+    position: fixed;
+    top: 54px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #00000066;
+    z-index: 1100;
+  }
+  .atlas-sidebar-backdrop.atlas-sidebar-open { display: block; }
+
+  /* The popup JS options set maxWidth: 340/260 — fine on desktop, but on
+     a narrow phone viewport that width leaves no room to also satisfy the
+     left AND right autoPan clearance the JS options ask for (space to
+     clear the zoom/locate column on one side, the layer control on the
+     other), so the popup got auto-panned until its own right edge ran off
+     the screen. Leaflet measures the popup's actual rendered width for
+     its autoPan math, so capping it here in CSS (rather than trying to
+     retune the JS pixel paddings per breakpoint) makes that math resolve
+     inside the viewport automatically. */
+  .atlas-leaflet-popup .leaflet-popup-content { max-width: calc(100vw - 90px) !important; }
 }
