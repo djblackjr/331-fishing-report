@@ -21,10 +21,10 @@
     "sky": "Cloudy",
     "stormChance": 47,
     "pressure": {
-      "hpa": 1012.7,
+      "hpa": 1013,
       "inHg": 29.91,
       "direction": "rising",
-      "changeHpa3h": 0.7
+      "changeHpa3h": 0.9
     }
   },
   "currentReport": {
@@ -60,17 +60,17 @@
       "sky": "Cloudy",
       "stormChance": 47,
       "pressure": {
-        "hpa": 1012.7,
+        "hpa": 1013,
         "inHg": 29.91,
         "direction": "rising",
-        "changeHpa3h": 0.7
+        "changeHpa3h": 0.9
       }
     }
   },
   "archivedReports": [
     {
       "kind": "archived_app_snapshot",
-      "date": "2026-07-29",
+      "date": "2026-07-30",
       "displayDate": "July 29, 2026",
       "summary": "The most current reports from Choctawhatchee Bay (within the past week) confirm an active speckled trout bite across the bay, with multiple anglers reporting good numbers and some quality-sized fish. Bull redfish are also in the mix — one notable catch this week out of Santa Rosa Beach was a 40-inch, 26-lb bull red. Tarpon have been cruising the beaches and anglers are finding them in good numbers as well. Water temperature is 86°F. Early morning trips are strongly recommended to beat both the summer heat and crowded conditions; book charters well in advance as summer demand is high.",
       "attribution": "captainexperiences.com (Choctawhatchee Bay reports page, reports from ~July 23 and ~July 22, 2026); fishingbooker.com (Choctawhatchee Bay daily reports, July 2026) · Auto-refreshed via Claude API",
@@ -84,27 +84,27 @@
         "redfish"
       ],
       "conditions": {
-        "wind": "W 5 to 10 mph",
-        "windDir": "W",
-        "tide": "High tide ~6:02 AM · Low tide ~5:01 PM · Sunrise 5:59 AM",
+        "wind": "WSW 0 to 10 mph",
+        "windDir": "WSW",
+        "tide": "High tide ~6:43 AM · Low tide ~5:18 PM · Sunrise 6:00 AM",
         "tideEvents": [
           {
             "type": "H",
-            "time": "6:02 AM"
+            "time": "6:43 AM"
           },
           {
             "type": "L",
-            "time": "5:01 PM"
+            "time": "5:18 PM"
           }
         ],
-        "waterTemp": 87,
+        "waterTemp": 86,
         "sky": "Cloudy",
-        "stormChance": 20,
+        "stormChance": 47,
         "pressure": {
-          "hpa": 1010.8,
-          "inHg": 29.85,
-          "direction": "steady",
-          "changeHpa3h": -0.1
+          "hpa": 1012.7,
+          "inHg": 29.91,
+          "direction": "rising",
+          "changeHpa3h": 0.7
         }
       }
     },
