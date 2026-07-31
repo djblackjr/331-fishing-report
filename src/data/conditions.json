@@ -24,7 +24,7 @@
   "moonPhase": "Waning Gibbous (~90% illuminated) — strong tidal push (spring tide)",
   "waterClarity": "Slightly stained",
   "sky": "Cloudy",
-  "lastUpdated": "7/31/2026, 5:49:02 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "lastUpdated": "7/31/2026, 6:53:02 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
   "localBiteReport": "The most current reports from Choctawhatchee Bay (within the past week) confirm an active speckled trout bite across the bay, with multiple anglers reporting good numbers and some quality-sized fish. Bull redfish are also in the mix — one notable catch this week out of Santa Rosa Beach was a 40-inch, 26-lb bull red. Tarpon have been cruising the beaches and anglers are finding them in good numbers as well. Water temperature is 86°F. Early morning trips are strongly recommended to beat both the summer heat and crowded conditions; book charters well in advance as summer demand is high.",
   "localBiteSource": "captainexperiences.com (Choctawhatchee Bay reports page, reports from ~July 23 and ~July 22, 2026); fishingbooker.com (Choctawhatchee Bay daily reports, July 2026) · Auto-refreshed via Claude API",
   "localBiteUpdated": "July 29, 2026",
@@ -52,9 +52,9 @@
   },
   "openMeteo": [
     {
-      "high": 90,
+      "high": 92,
       "low": 78,
-      "stormChance": 47,
+      "stormChance": 43,
       "windSpeed": 12,
       "windDir": "SW",
       "summary": "Overcast"
@@ -62,18 +62,18 @@
     {
       "high": 86,
       "low": 77,
-      "stormChance": 52,
+      "stormChance": 50,
       "windSpeed": 20,
       "windDir": "SW",
       "summary": "Thunderstorm"
     },
     {
-      "high": 80,
-      "low": 75,
+      "high": 86,
+      "low": 77,
       "stormChance": 85,
-      "windSpeed": 11,
+      "windSpeed": 15,
       "windDir": "SW",
-      "summary": "Rain showers"
+      "summary": "Thunderstorm"
     }
   ],
   "forecast": [
@@ -98,7 +98,7 @@
       "storms": 86,
       "headline": "Showers And Thunderstorms",
       "fishingScore": 5.1,
-      "aiCall": "Showers and thunderstorms before 10am, then showers and thunderstorms likely between 10am and noon, then showers and thunderstorms between noon and 1pm, then showers and thunderstorms likely. Some of the storms could produce heavy rain. Mostly cloudy, with a high near 87. West southwest wind 5 to 10 mph. Chance of precipitation is 90%.",
+      "aiCall": "Showers and thunderstorms before 10am, then showers and thunderstorms likely between 10am and noon, then showers and thunderstorms between noon and 1pm, then showers and thunderstorms likely. Some of the storms could produce heavy rain. Mostly cloudy, with a high near 87. West southwest wind 5 to 10 mph. Chance of precipitation is 90%. New rainfall amounts between 1 and 2 inches possible.",
       "emoji": "⛈️"
     },
     {
@@ -110,7 +110,7 @@
       "storms": 90,
       "headline": "Showers And Thunderstorms",
       "fishingScore": 4.4,
-      "aiCall": "Showers and thunderstorms before 1pm, then showers and thunderstorms between 1pm and 4pm, then showers and thunderstorms. Mostly cloudy, with a high near 86. Chance of precipitation is 90%.",
+      "aiCall": "Showers and thunderstorms before 1pm, then showers and thunderstorms between 1pm and 4pm, then showers and thunderstorms. Mostly cloudy, with a high near 86. Southwest wind 10 to 15 mph. Chance of precipitation is 90%.",
       "emoji": "⛈️"
     }
   ],
@@ -160,9 +160,9 @@
   },
   "waterTemp": 85,
   "pressure": {
-    "hpa": 1014,
-    "inHg": 29.94,
-    "direction": "steady",
-    "changeHpa3h": -0.2
+    "hpa": 1015.2,
+    "inHg": 29.98,
+    "direction": "rising",
+    "changeHpa3h": 0.9
   }
 }
