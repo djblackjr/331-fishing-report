@@ -196,24 +196,34 @@ const satellite = L.layerGroup([satelliteImagery, satelliteHydroLabels, satellit
 const FALLBACK_TILE =
   "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVR4nGNYf/YhAASMAl4vKx8FAAAAAElFTkSuQmCC";
 
-const noaaChart = L.tileLayer.wms("https://gis.charttools.noaa.gov/arcgis/rest/services/MCS/NOAAChartDisplay/MapServer/exts/MaritimeChartService/WMSServer", {
-  layers: "1,2,3,11",
-  format: "image/png",
-  transparent: true,
-  version: "1.3.0",
-  maxZoom: 18,
-  attribution: "Chart data: NOAA/NOS Office of Coast Survey",
-  // NO crossOrigin here, deliberately: an earlier version set
-  // crossOrigin: "anonymous" believing NOAA's WMS sends
-  // Access-Control-Allow-Origin. It doesn't (checked with curl -I) — so that
-  // setting forced every tile <img> into CORS mode against a server that
-  // never satisfies it, and the browser blocked 100% of tiles outright
-  // ("blocked by CORS policy", confirmed in a real headless-Chromium run),
-  // which is what actually produced the solid-black water, not occasional
-  // ORB flakiness. Plain opaque cross-origin <img> loads need no CORS header
-  // at all for on-screen display, so dropping it is the real fix.
-  errorTileUrl: FALLBACK_TILE,
-});
+function makeNoaaChartLayer(sublayers) {
+  return L.tileLayer.wms("https://gis.charttools.noaa.gov/arcgis/rest/services/MCS/NOAAChartDisplay/MapServer/exts/MaritimeChartService/WMSServer", {
+    layers: sublayers,
+    format: "image/png",
+    transparent: true,
+    version: "1.3.0",
+    maxZoom: 18,
+    attribution: "Chart data: NOAA/NOS Office of Coast Survey",
+    // NO crossOrigin here, deliberately: an earlier version set
+    // crossOrigin: "anonymous" believing NOAA's WMS sends
+    // Access-Control-Allow-Origin. It doesn't (checked with curl -I) — so that
+    // setting forced every tile <img> into CORS mode against a server that
+    // never satisfies it, and the browser blocked 100% of tiles outright
+    // ("blocked by CORS policy", confirmed in a real headless-Chromium run),
+    // which is what actually produced the solid-black water, not occasional
+    // ORB flakiness. Plain opaque cross-origin <img> loads need no CORS header
+    // at all for on-screen display, so dropping it is the real fix.
+    errorTileUrl: FALLBACK_TILE,
+  });
+}
+
+const noaaChart = makeNoaaChartLayer("1,2,3,11");
+
+// Same base chart plus sublayer 6 (buoys, beacons, lights, fog signals,
+// radar) for anglers who want aids-to-navigation shown — kept as a
+// separate radio option rather than folded into the default chart so the
+// fishing-focused view (see comment above) stays uncluttered by default.
+const noaaChartNav = makeNoaaChartLayer("1,2,3,6,11");
 
 // Retry a failed tile a couple of times (genuine transient network errors
 // often succeed on a second attempt) before letting Leaflet fall back to
@@ -221,7 +231,7 @@ const noaaChart = L.tileLayer.wms("https://gis.charttools.noaa.gov/arcgis/rest/s
 // reuses/recycles tile elements as you pan.
 const TILE_RETRY_LIMIT = 2;
 const tileRetries = new WeakMap();
-noaaChart.on("tileerror", (e) => {
+function retryFailedTile(e) {
   const img = e.tile;
   const attempts = tileRetries.get(img) || 0;
   if (attempts >= TILE_RETRY_LIMIT) return;
@@ -231,7 +241,9 @@ noaaChart.on("tileerror", (e) => {
     img.src = "";
     img.src = src;
   }, 400 * (attempts + 1));
-});
+}
+noaaChart.on("tileerror", retryFailedTile);
+noaaChartNav.on("tileerror", retryFailedTile);
 
 // NOAA/NCEI CUDEM (Continuously Updated Digital Elevation Model) — a ~3m
 // bathymetric-topographic grid. Added because NOAA's own nautical chart
@@ -317,7 +329,7 @@ const depthContours = new DepthContourLayer("", {
 osm.addTo(map);
 
 const layersControl = L.control.layers(
-  { "OpenStreetMap": osm, "Satellite (Esri)": satellite, "NOAA Nautical Chart": noaaChart, "Bathymetry (NOAA/NCEI)": bathymetry },
+  { "OpenStreetMap": osm, "Satellite (Esri)": satellite, "NOAA Nautical Chart": noaaChart, "NOAA Nautical Chart w/ NAV": noaaChartNav, "Bathymetry (NOAA/NCEI)": bathymetry },
   { "Depth Contours (0.5m)": depthContours },
   { collapsed: window.innerWidth < 700 }
 ).addTo(map);
