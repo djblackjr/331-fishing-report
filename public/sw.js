@@ -2,7 +2,7 @@
 // This file is served at /331-fishing-report/sw.js, so relative URLs stay
 // inside the repository instead of leaking to the github.io domain root.
 
-const CACHE_NAME = "331-fishing-report-v3";
+const CACHE_NAME = "331-fishing-report-v4";
 const APP_ROOT = new URL("./", self.location.href).href;
 const APP_SHELL = [
   APP_ROOT,
