@@ -24,7 +24,7 @@
   "moonPhase": "Waning Gibbous (~90% illuminated) — strong tidal push (spring tide)",
   "waterClarity": "Slightly stained",
   "sky": "Cloudy",
-  "lastUpdated": "7/31/2026, 3:12:17 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "lastUpdated": "7/31/2026, 5:49:02 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
   "localBiteReport": "The most current reports from Choctawhatchee Bay (within the past week) confirm an active speckled trout bite across the bay, with multiple anglers reporting good numbers and some quality-sized fish. Bull redfish are also in the mix — one notable catch this week out of Santa Rosa Beach was a 40-inch, 26-lb bull red. Tarpon have been cruising the beaches and anglers are finding them in good numbers as well. Water temperature is 86°F. Early morning trips are strongly recommended to beat both the summer heat and crowded conditions; book charters well in advance as summer demand is high.",
   "localBiteSource": "captainexperiences.com (Choctawhatchee Bay reports page, reports from ~July 23 and ~July 22, 2026); fishingbooker.com (Choctawhatchee Bay daily reports, July 2026) · Auto-refreshed via Claude API",
   "localBiteUpdated": "July 29, 2026",
@@ -41,28 +41,28 @@
     }
   ],
   "previousDay": {
-    "date": "Thursday, July 30, 2026",
+    "date": "Friday, July 31, 2026",
     "wind": {
       "dir": "WSW",
       "speed": 10
     },
-    "high": 93,
-    "stormChance": 47,
-    "tide": "High tide ~6:43 AM · Low tide ~5:18 PM · Sunrise 6:00 AM"
+    "high": 90,
+    "stormChance": 68,
+    "tide": "High tide ~7:26 AM · Low tide ~5:24 PM · Sunrise 6:01 AM"
   },
   "openMeteo": [
     {
-      "high": 91,
-      "low": 77,
-      "stormChance": 38,
+      "high": 90,
+      "low": 78,
+      "stormChance": 47,
       "windSpeed": 12,
       "windDir": "SW",
-      "summary": "Rain showers"
+      "summary": "Overcast"
     },
     {
       "high": 86,
       "low": 77,
-      "stormChance": 46,
+      "stormChance": 52,
       "windSpeed": 20,
       "windDir": "SW",
       "summary": "Thunderstorm"
@@ -70,7 +70,7 @@
     {
       "high": 80,
       "low": 75,
-      "stormChance": 80,
+      "stormChance": 85,
       "windSpeed": 11,
       "windDir": "SW",
       "summary": "Rain showers"
@@ -160,9 +160,9 @@
   },
   "waterTemp": 85,
   "pressure": {
-    "hpa": 1014.5,
-    "inHg": 29.96,
+    "hpa": 1014,
+    "inHg": 29.94,
     "direction": "steady",
-    "changeHpa3h": -0.4
+    "changeHpa3h": -0.2
   }
 }
