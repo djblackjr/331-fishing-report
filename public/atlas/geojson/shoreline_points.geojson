@@ -118,6 +118,118 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -86.1525,
+          30.431
+        ]
+      },
+      "properties": {
+        "id": 39,
+        "externalId": "BR-PT-002",
+        "region": "bridge_331",
+        "name": "North bridge landing point",
+        "confidence": 71,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery export reviewed 2026-07-30; WGS84 bbox [-86.185,30.400,-86.135,30.435]",
+        "lastUpdated": "2026-07-30",
+        "feature_type": "shoreline_point",
+        "field_verified": false,
+        "evidence": "Sandy beach point at the north end of the causeway, just east of where the bridge meets shore.",
+        "uncertainty": "Depth and bottom composition off the point are unverified.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery export reviewed 2026-07-30; WGS84 bbox [-86.185,30.400,-86.135,30.435]",
+        "review_date": "2026-07-30",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.13639,
+          30.42632
+        ]
+      },
+      "properties": {
+        "id": 38,
+        "externalId": "BR-PT-001",
+        "region": "bridge_331",
+        "name": "Southeast sand point",
+        "confidence": 74,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery export reviewed 2026-07-30; WGS84 bbox [-86.185,30.400,-86.135,30.435]",
+        "lastUpdated": "2026-07-30",
+        "feature_type": "shoreline_point",
+        "field_verified": false,
+        "evidence": "Clear sandy point visible jutting into the bay southeast of the causeway.",
+        "uncertainty": "Depth and bottom composition off the point are unverified.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery export reviewed 2026-07-30; WGS84 bbox [-86.185,30.400,-86.135,30.435]",
+        "review_date": "2026-07-30",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.285417,
+          30.399042
+        ]
+      },
+      "properties": {
+        "id": 51,
+        "externalId": "HW-PT-001",
+        "region": "hewett_bayou",
+        "name": "Basin-mouth point",
+        "confidence": 72,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery export reviewed 2026-07-31; WGS84 bbox [-86.300,30.385,-86.275,30.408]",
+        "lastUpdated": "2026-07-31",
+        "feature_type": "shoreline_point",
+        "field_verified": false,
+        "evidence": "Clear point of land at the entrance to the main basin.",
+        "uncertainty": "Depth and bottom composition off the point are unverified.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery export reviewed 2026-07-31; WGS84 bbox [-86.300,30.385,-86.275,30.408]",
+        "review_date": "2026-07-31",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.242906,
+          30.391097
+        ]
+      },
+      "properties": {
+        "id": 46,
+        "externalId": "HT-PT-001",
+        "region": "hogtown_bayou",
+        "name": "Canal-mouth sand point",
+        "confidence": 73,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery export reviewed 2026-07-30; WGS84 bbox [-86.265,30.385,-86.230,30.412]",
+        "lastUpdated": "2026-07-30",
+        "feature_type": "shoreline_point",
+        "field_verified": false,
+        "evidence": "Small sand point clearly visible immediately east of the south canal entrance.",
+        "uncertainty": "Depth and bottom composition off the point are unverified.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery export reviewed 2026-07-30; WGS84 bbox [-86.265,30.385,-86.230,30.412]",
+        "review_date": "2026-07-30",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -86.124844,
           30.42315
         ]
@@ -250,6 +362,34 @@
         "source_type": "aerial_image_review",
         "source_reference": "Esri World Imagery export reviewed 2026-07-29; WGS84 bbox [-86.150,30.455,-86.130,30.472]",
         "review_date": "2026-07-29",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.300833,
+          30.402
+        ]
+      },
+      "properties": {
+        "id": 48,
+        "externalId": "MK-PT-001",
+        "region": "mack_bayou",
+        "name": "Bayou-mouth point",
+        "confidence": 73,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery export reviewed 2026-07-31; WGS84 bbox [-86.315,30.390,-86.290,30.412]",
+        "lastUpdated": "2026-07-31",
+        "feature_type": "shoreline_point",
+        "field_verified": false,
+        "evidence": "Clear point of land where the bayou channel opens into the bay.",
+        "uncertainty": "Depth and bottom composition off the point are unverified.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery export reviewed 2026-07-31; WGS84 bbox [-86.315,30.390,-86.290,30.412]",
+        "review_date": "2026-07-31",
         "navigation_use": "not_for_navigation"
       }
     }

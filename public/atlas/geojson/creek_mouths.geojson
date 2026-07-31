@@ -90,6 +90,62 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -86.1365,
+          30.48623
+        ]
+      },
+      "properties": {
+        "id": 42,
+        "externalId": "FM-CM-001",
+        "region": "four_mile_creek",
+        "name": "Tributary confluence",
+        "confidence": 68,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery export reviewed 2026-07-30; WGS84 bbox [-86.150,30.480,-86.125,30.500]",
+        "lastUpdated": "2026-07-30",
+        "feature_type": "creek_mouth",
+        "field_verified": false,
+        "evidence": "Narrow tributary drain clearly joins the main creek here, opposite Shipyard Marina.",
+        "uncertainty": "Tributary name, flow, and navigability are unverified.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery export reviewed 2026-07-30; WGS84 bbox [-86.150,30.480,-86.125,30.500]",
+        "review_date": "2026-07-30",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.244073,
+          30.389863
+        ]
+      },
+      "properties": {
+        "id": 45,
+        "externalId": "HT-CM-001",
+        "region": "hogtown_bayou",
+        "name": "South canal entrance",
+        "confidence": 72,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery export reviewed 2026-07-30; WGS84 bbox [-86.265,30.385,-86.230,30.412]",
+        "lastUpdated": "2026-07-30",
+        "feature_type": "creek_mouth",
+        "field_verified": false,
+        "evidence": "Developed canal/channel clearly opens into the bayou on the south shore, opposite a public boat ramp.",
+        "uncertainty": "Canal name and navigability are unverified.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery export reviewed 2026-07-30; WGS84 bbox [-86.265,30.385,-86.230,30.412]",
+        "review_date": "2026-07-30",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -86.09425,
           30.44825
         ]

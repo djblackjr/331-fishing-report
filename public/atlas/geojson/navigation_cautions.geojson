@@ -104,6 +104,54 @@
         "coordinates": [
           [
             [
+              -86.153487,
+              30.434423
+            ],
+            [
+              -86.152346,
+              30.433911
+            ],
+            [
+              -86.166929,
+              30.401411
+            ],
+            [
+              -86.168071,
+              30.401923
+            ],
+            [
+              -86.153487,
+              30.434423
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 41,
+        "externalId": "BR-HZ-001",
+        "region": "bridge_331",
+        "name": "331 causeway riprap corridor",
+        "confidence": 65,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery export reviewed 2026-07-30; WGS84 bbox [-86.185,30.400,-86.135,30.435]",
+        "lastUpdated": "2026-07-30",
+        "feature_type": "shallow_water_caution",
+        "field_verified": false,
+        "evidence": "Riprap and pilings line the causeway for its full length, visible as a distinct pale fringe against open water on both sides.",
+        "uncertainty": "Visual caution only; not a charted hazard and not for navigation. Exact riprap extent underwater is unverified.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery export reviewed 2026-07-30; WGS84 bbox [-86.185,30.400,-86.135,30.435]",
+        "review_date": "2026-07-30",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
               -86.129,
               30.406
             ],

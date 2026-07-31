@@ -8,6 +8,174 @@
         "coordinates": [
           [
             [
+              -86.13986,
+              30.42435
+            ],
+            [
+              -86.138354,
+              30.4236
+            ],
+            [
+              -86.138354,
+              30.4221
+            ],
+            [
+              -86.13986,
+              30.42135
+            ],
+            [
+              -86.141366,
+              30.4221
+            ],
+            [
+              -86.141366,
+              30.4236
+            ],
+            [
+              -86.13986,
+              30.42435
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 40,
+        "externalId": "BR-SH-001",
+        "region": "bridge_331",
+        "name": "Southeast shoal",
+        "confidence": 70,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery export reviewed 2026-07-30; WGS84 bbox [-86.185,30.400,-86.135,30.435]",
+        "lastUpdated": "2026-07-30",
+        "feature_type": "visible_shoal",
+        "field_verified": false,
+        "evidence": "Distinct pale, circular submerged shoal clearly visible in open water southeast of the causeway.",
+        "uncertainty": "Classified only as a visible shoal; sediment composition and depth are unverified.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery export reviewed 2026-07-30; WGS84 bbox [-86.185,30.400,-86.135,30.435]",
+        "review_date": "2026-07-30",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -86.291667,
+              30.406375
+            ],
+            [
+              -86.290161,
+              30.405625
+            ],
+            [
+              -86.290161,
+              30.404125
+            ],
+            [
+              -86.291667,
+              30.403375
+            ],
+            [
+              -86.293173,
+              30.404125
+            ],
+            [
+              -86.293173,
+              30.405625
+            ],
+            [
+              -86.291667,
+              30.406375
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 50,
+        "externalId": "HW-SH-001",
+        "region": "hewett_bayou",
+        "name": "North shoal",
+        "confidence": 71,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery export reviewed 2026-07-31; WGS84 bbox [-86.300,30.385,-86.275,30.408]",
+        "lastUpdated": "2026-07-31",
+        "feature_type": "visible_shoal",
+        "field_verified": false,
+        "evidence": "Extensive pale shoal clearly visible in open water north of the bayou mouth.",
+        "uncertainty": "Classified only as a visible shoal; sediment composition and depth are unverified.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery export reviewed 2026-07-31; WGS84 bbox [-86.300,30.385,-86.275,30.408]",
+        "review_date": "2026-07-31",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -86.252167,
+              30.406823
+            ],
+            [
+              -86.250661,
+              30.406073
+            ],
+            [
+              -86.250661,
+              30.404573
+            ],
+            [
+              -86.252167,
+              30.403823
+            ],
+            [
+              -86.253673,
+              30.404573
+            ],
+            [
+              -86.253673,
+              30.406073
+            ],
+            [
+              -86.252167,
+              30.406823
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 44,
+        "externalId": "HT-SH-001",
+        "region": "hogtown_bayou",
+        "name": "Mid-bayou shoal",
+        "confidence": 69,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery export reviewed 2026-07-30; WGS84 bbox [-86.265,30.385,-86.230,30.412]",
+        "lastUpdated": "2026-07-30",
+        "feature_type": "visible_shoal",
+        "field_verified": false,
+        "evidence": "Distinct pale, oval shoal clearly visible in open water near the north shore, separate from the surrounding grass-flat margin.",
+        "uncertainty": "Classified only as a visible shoal; sediment composition and depth are unverified.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery export reviewed 2026-07-30; WGS84 bbox [-86.265,30.385,-86.230,30.412]",
+        "review_date": "2026-07-30",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
               -86.133125,
               30.418127
             ],
@@ -166,6 +334,62 @@
         "source_type": "aerial_image_review",
         "source_reference": "Esri World Imagery export reviewed 2026-07-24; WGS84 bbox [-86.155,30.405,-86.105,30.449], 1600x1200",
         "review_date": "2026-07-24",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -86.295208,
+              30.408292
+            ],
+            [
+              -86.293702,
+              30.407542
+            ],
+            [
+              -86.293702,
+              30.406042
+            ],
+            [
+              -86.295208,
+              30.405292
+            ],
+            [
+              -86.296714,
+              30.406042
+            ],
+            [
+              -86.296714,
+              30.407542
+            ],
+            [
+              -86.295208,
+              30.408292
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 47,
+        "externalId": "MK-SH-001",
+        "region": "mack_bayou",
+        "name": "Bay-mouth shoal",
+        "confidence": 71,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery export reviewed 2026-07-31; WGS84 bbox [-86.315,30.390,-86.290,30.412]",
+        "lastUpdated": "2026-07-31",
+        "feature_type": "visible_shoal",
+        "field_verified": false,
+        "evidence": "Extensive pale shoal clearly visible in open water off the bayou mouth.",
+        "uncertainty": "Classified only as a visible shoal; sediment composition and depth are unverified.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery export reviewed 2026-07-31; WGS84 bbox [-86.315,30.390,-86.290,30.412]",
+        "review_date": "2026-07-31",
         "navigation_use": "not_for_navigation"
       }
     }

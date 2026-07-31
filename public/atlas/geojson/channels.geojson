@@ -95,6 +95,94 @@
         "type": "LineString",
         "coordinates": [
           [
+            -86.145,
+            30.497292
+          ],
+          [
+            -86.1417,
+            30.494167
+          ],
+          [
+            -86.1377,
+            30.49125
+          ],
+          [
+            -86.1375,
+            30.48438
+          ],
+          [
+            -86.13729,
+            30.48063
+          ]
+        ]
+      },
+      "properties": {
+        "id": 43,
+        "externalId": "FM-CH-001",
+        "region": "four_mile_creek",
+        "name": "Four Mile Creek channel",
+        "confidence": 76,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery export reviewed 2026-07-30; WGS84 bbox [-86.150,30.480,-86.125,30.500]",
+        "lastUpdated": "2026-07-30",
+        "feature_type": "channel_centerline",
+        "field_verified": false,
+        "evidence": "Continuous open dark-water channel traced from the upper creek through Shipyard Marina to the southern extent of the reviewed imagery.",
+        "uncertainty": "Centerline is approximate; width and depth are not represented.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery export reviewed 2026-07-30; WGS84 bbox [-86.150,30.480,-86.125,30.500]",
+        "review_date": "2026-07-30",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -86.2877798,
+            30.3964205
+          ],
+          [
+            -86.289583,
+            30.394467
+          ],
+          [
+            -86.291042,
+            30.390306
+          ],
+          [
+            -86.29125,
+            30.388217
+          ]
+        ]
+      },
+      "properties": {
+        "id": 52,
+        "externalId": "HW-CH-001",
+        "region": "hewett_bayou",
+        "name": "Hewett Bayou channel",
+        "confidence": 74,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery export reviewed 2026-07-31; WGS84 bbox [-86.300,30.385,-86.275,30.408]",
+        "lastUpdated": "2026-07-31",
+        "feature_type": "channel_centerline",
+        "field_verified": false,
+        "evidence": "Continuous open dark-water channel traced from the basin mouth south through the residential waterway into a winding creek.",
+        "uncertainty": "Centerline is approximate; width and depth are not represented.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery export reviewed 2026-07-31; WGS84 bbox [-86.300,30.385,-86.275,30.408]",
+        "review_date": "2026-07-31",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
             -86.137031,
             30.42205
           ],
@@ -286,6 +374,44 @@
         "source_type": "aerial_image_review",
         "source_reference": "Esri World Imagery export reviewed 2026-07-29; WGS84 bbox [-86.170,30.435,-86.125,30.475]",
         "review_date": "2026-07-29",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -86.301458,
+            30.40325
+          ],
+          [
+            -86.3025,
+            30.401583
+          ],
+          [
+            -86.3025,
+            30.39325
+          ]
+        ]
+      },
+      "properties": {
+        "id": 49,
+        "externalId": "MK-CH-001",
+        "region": "mack_bayou",
+        "name": "Mack Bayou channel",
+        "confidence": 74,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery export reviewed 2026-07-31; WGS84 bbox [-86.315,30.390,-86.290,30.412]",
+        "lastUpdated": "2026-07-31",
+        "feature_type": "channel_centerline",
+        "field_verified": false,
+        "evidence": "Continuous open dark-water channel traced from the bay mouth south through the developed shoreline.",
+        "uncertainty": "Centerline is approximate; width and depth are not represented.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery export reviewed 2026-07-31; WGS84 bbox [-86.315,30.390,-86.290,30.412]",
+        "review_date": "2026-07-31",
         "navigation_use": "not_for_navigation"
       }
     }
