@@ -219,11 +219,12 @@ function makeNoaaChartLayer(sublayers) {
 
 const noaaChart = makeNoaaChartLayer("1,2,3,11");
 
-// Same base chart plus sublayer 6 (buoys, beacons, lights, fog signals,
-// radar) for anglers who want aids-to-navigation shown — kept as a
+// Same base chart plus sublayer 5 (special areas), 6 (buoys, beacons,
+// lights, fog signals, radar), 7 (services), and 10 (additional info) for
+// anglers who want the full aids-to-navigation picture shown — kept as a
 // separate radio option rather than folded into the default chart so the
 // fishing-focused view (see comment above) stays uncluttered by default.
-const noaaChartNav = makeNoaaChartLayer("1,2,3,6,11");
+const noaaChartNav = makeNoaaChartLayer("1,2,3,5,6,7,10,11");
 
 // Retry a failed tile a couple of times (genuine transient network errors
 // often succeed on a second attempt) before letting Leaflet fall back to
