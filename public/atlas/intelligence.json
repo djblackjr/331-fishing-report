@@ -1,35 +1,35 @@
 {
   "type": "FishingIntelligence",
   "region": "choctawhatchee_bay",
-  "generatedAt": "2026-07-30",
+  "generatedAt": "2026-07-31",
   "scopeNote": "Regional reports support timing and species activity only. They do not prove a catch, depth, bottom type, or safe navigation at a mapped Jolly Bay feature.",
   "currentConditions": {
     "wind": "WSW 0 to 10 mph",
     "windDir": "WSW",
-    "tide": "High tide ~6:43 AM · Low tide ~5:18 PM · Sunrise 6:00 AM",
+    "tide": "High tide ~7:26 AM · Low tide ~5:24 PM · Sunrise 6:01 AM",
     "tideEvents": [
       {
         "type": "H",
-        "time": "6:43 AM"
+        "time": "7:26 AM"
       },
       {
         "type": "L",
-        "time": "5:18 PM"
+        "time": "5:24 PM"
       }
     ],
-    "waterTemp": 86,
+    "waterTemp": 85,
     "sky": "Cloudy",
-    "stormChance": 47,
+    "stormChance": 68,
     "pressure": {
-      "hpa": 1013,
-      "inHg": 29.91,
-      "direction": "rising",
-      "changeHpa3h": 0.9
+      "hpa": 1014.5,
+      "inHg": 29.96,
+      "direction": "steady",
+      "changeHpa3h": -0.4
     }
   },
   "currentReport": {
     "kind": "current_regional_report",
-    "date": "2026-07-30",
+    "date": "2026-07-31",
     "displayDate": "July 29, 2026",
     "summary": "The most current reports from Choctawhatchee Bay (within the past week) confirm an active speckled trout bite across the bay, with multiple anglers reporting good numbers and some quality-sized fish. Bull redfish are also in the mix — one notable catch this week out of Santa Rosa Beach was a 40-inch, 26-lb bull red. Tarpon have been cruising the beaches and anglers are finding them in good numbers as well. Water temperature is 86°F. Early morning trips are strongly recommended to beat both the summer heat and crowded conditions; book charters well in advance as summer demand is high.",
     "attribution": "captainexperiences.com (Choctawhatchee Bay reports page, reports from ~July 23 and ~July 22, 2026); fishingbooker.com (Choctawhatchee Bay daily reports, July 2026) · Auto-refreshed via Claude API",
@@ -45,25 +45,25 @@
     "conditions": {
       "wind": "WSW 0 to 10 mph",
       "windDir": "WSW",
-      "tide": "High tide ~6:43 AM · Low tide ~5:18 PM · Sunrise 6:00 AM",
+      "tide": "High tide ~7:26 AM · Low tide ~5:24 PM · Sunrise 6:01 AM",
       "tideEvents": [
         {
           "type": "H",
-          "time": "6:43 AM"
+          "time": "7:26 AM"
         },
         {
           "type": "L",
-          "time": "5:18 PM"
+          "time": "5:24 PM"
         }
       ],
-      "waterTemp": 86,
+      "waterTemp": 85,
       "sky": "Cloudy",
-      "stormChance": 47,
+      "stormChance": 68,
       "pressure": {
-        "hpa": 1013,
-        "inHg": 29.91,
-        "direction": "rising",
-        "changeHpa3h": 0.9
+        "hpa": 1014.5,
+        "inHg": 29.96,
+        "direction": "steady",
+        "changeHpa3h": -0.4
       }
     }
   },
@@ -101,10 +101,10 @@
         "sky": "Cloudy",
         "stormChance": 47,
         "pressure": {
-          "hpa": 1012.7,
+          "hpa": 1013,
           "inHg": 29.91,
           "direction": "rising",
-          "changeHpa3h": 0.7
+          "changeHpa3h": 0.9
         }
       }
     },
@@ -302,7 +302,7 @@
       "label": "Speckled trout",
       "current": true,
       "reportCount": 8,
-      "lastReported": "2026-07-30",
+      "lastReported": "2026-07-31",
       "evidenceLevel": "current_regional_report"
     },
     {
@@ -310,7 +310,7 @@
       "label": "Redfish",
       "current": true,
       "reportCount": 9,
-      "lastReported": "2026-07-30",
+      "lastReported": "2026-07-31",
       "evidenceLevel": "current_regional_report"
     },
     {
