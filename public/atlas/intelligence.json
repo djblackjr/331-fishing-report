@@ -1,38 +1,38 @@
 {
   "type": "FishingIntelligence",
   "region": "choctawhatchee_bay",
-  "generatedAt": "2026-07-31",
+  "generatedAt": "2026-08-01",
   "scopeNote": "Regional reports support timing and species activity only. They do not prove a catch, depth, bottom type, or safe navigation at a mapped Jolly Bay feature.",
   "currentConditions": {
-    "wind": "WSW 0 to 10 mph",
+    "wind": "WSW 5 to 15 mph",
     "windDir": "WSW",
-    "tide": "High tide ~7:26 AM · Low tide ~5:24 PM · Sunrise 6:01 AM",
+    "tide": "High tide ~8:15 AM · Low tide ~5:10 PM · Sunrise 6:01 AM",
     "tideEvents": [
       {
         "type": "H",
-        "time": "7:26 AM"
+        "time": "8:15 AM"
       },
       {
         "type": "L",
-        "time": "5:24 PM"
+        "time": "5:10 PM"
       }
     ],
     "waterTemp": 85,
     "sky": "Cloudy",
-    "stormChance": 68,
+    "stormChance": 50,
     "pressure": {
-      "hpa": 1015.2,
-      "inHg": 29.98,
-      "direction": "rising",
-      "changeHpa3h": 0.9
+      "hpa": 1012.2,
+      "inHg": 29.89,
+      "direction": "falling",
+      "changeHpa3h": -1.9
     }
   },
   "currentReport": {
     "kind": "current_regional_report",
-    "date": "2026-07-31",
-    "displayDate": "July 29, 2026",
-    "summary": "The most current reports from Choctawhatchee Bay (within the past week) confirm an active speckled trout bite across the bay, with multiple anglers reporting good numbers and some quality-sized fish. Bull redfish are also in the mix — one notable catch this week out of Santa Rosa Beach was a 40-inch, 26-lb bull red. Tarpon have been cruising the beaches and anglers are finding them in good numbers as well. Water temperature is 86°F. Early morning trips are strongly recommended to beat both the summer heat and crowded conditions; book charters well in advance as summer demand is high.",
-    "attribution": "captainexperiences.com (Choctawhatchee Bay reports page, reports from ~July 23 and ~July 22, 2026); fishingbooker.com (Choctawhatchee Bay daily reports, July 2026) · Auto-refreshed via Claude API",
+    "date": "2026-08-01",
+    "displayDate": "August 1, 2026",
+    "summary": "The most recent angler reports from Choctawhatchee Bay (as of late July 2026) point to a solid speckled trout bite across the bay, with guides out of Santa Rosa Beach reporting good numbers of fish and a few quality ones mixed in. Bull redfish are also showing up — one charter logged a 40¼-inch, 26-lb bull caught this past week. Water temp is 85°F. July inshore fishing here tends to favor early-morning trips before the heat sets in, with trout scattered but actively feeding and redfish cruising the bay and beaches. Note: the most recent dated reports available online are from approximately July 26–28, 2026.",
+    "attribution": "captainexperiences.com (Choctawhatchee Bay Fishing Reports, July 2026); fishingbooker.com (Daily Choctawhatchee Bay Fishing Reports, July 2026) · Auto-refreshed via Claude API",
     "sourceIds": [
       "captain-experiences-destin",
       "fishingbooker-bay",
@@ -43,27 +43,27 @@
       "redfish"
     ],
     "conditions": {
-      "wind": "WSW 0 to 10 mph",
+      "wind": "WSW 5 to 15 mph",
       "windDir": "WSW",
-      "tide": "High tide ~7:26 AM · Low tide ~5:24 PM · Sunrise 6:01 AM",
+      "tide": "High tide ~8:15 AM · Low tide ~5:10 PM · Sunrise 6:01 AM",
       "tideEvents": [
         {
           "type": "H",
-          "time": "7:26 AM"
+          "time": "8:15 AM"
         },
         {
           "type": "L",
-          "time": "5:24 PM"
+          "time": "5:10 PM"
         }
       ],
       "waterTemp": 85,
       "sky": "Cloudy",
-      "stormChance": 68,
+      "stormChance": 50,
       "pressure": {
-        "hpa": 1015.2,
-        "inHg": 29.98,
-        "direction": "rising",
-        "changeHpa3h": 0.9
+        "hpa": 1012.2,
+        "inHg": 29.89,
+        "direction": "falling",
+        "changeHpa3h": -1.9
       }
     }
   },
@@ -101,10 +101,10 @@
         "sky": "Cloudy",
         "stormChance": 68,
         "pressure": {
-          "hpa": 1014,
-          "inHg": 29.94,
-          "direction": "steady",
-          "changeHpa3h": -0.2
+          "hpa": 1015.2,
+          "inHg": 29.98,
+          "direction": "rising",
+          "changeHpa3h": 0.9
         }
       }
     },
@@ -302,7 +302,7 @@
       "label": "Speckled trout",
       "current": true,
       "reportCount": 8,
-      "lastReported": "2026-07-31",
+      "lastReported": "2026-08-01",
       "evidenceLevel": "current_regional_report"
     },
     {
@@ -310,7 +310,7 @@
       "label": "Redfish",
       "current": true,
       "reportCount": 9,
-      "lastReported": "2026-07-31",
+      "lastReported": "2026-08-01",
       "evidenceLevel": "current_regional_report"
     },
     {
