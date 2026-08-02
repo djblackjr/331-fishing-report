@@ -21,10 +21,10 @@
     "sky": "Cloudy",
     "stormChance": 88,
     "pressure": {
-      "hpa": 1009.2,
-      "inHg": 29.8,
-      "direction": "falling",
-      "changeHpa3h": -0.5
+      "hpa": 1009.4,
+      "inHg": 29.81,
+      "direction": "rising",
+      "changeHpa3h": 0.6
     }
   },
   "currentReport": {
@@ -61,51 +61,52 @@
       "sky": "Cloudy",
       "stormChance": 88,
       "pressure": {
-        "hpa": 1009.2,
-        "inHg": 29.8,
-        "direction": "falling",
-        "changeHpa3h": -0.5
+        "hpa": 1009.4,
+        "inHg": 29.81,
+        "direction": "rising",
+        "changeHpa3h": 0.6
       }
     }
   },
   "archivedReports": [
     {
       "kind": "archived_app_snapshot",
-      "date": "2026-08-01",
-      "displayDate": "August 1, 2026",
-      "summary": "The most current angler-submitted reports from Choctawhatchee Bay (within the past week, as of August 1, 2026) show a solid speckled trout bite with good numbers and some quality fish in the mix, along with bull redfish actively cruising — one catch logged was a 40-plus-inch, 26-pound bull red. Water temperature is 85°F. Windy conditions over the past couple of weeks pushed anglers to be selective about where they set up, but the trout remained scattered and willing to bite across multiple areas of the bay. The Half Hitch Destin fishing blog's most recent accessible reports (dated late June 2026, roughly 4–6 weeks ago) are somewhat dated but consistent with the pattern: inshore action on trout and reds has been best early mornings and near dark on the flats, with menhaden used as live bait being a reliable producer around bayou mouths and docklines.",
-      "attribution": "captainexperiences.com (Choctawhatchee Bay reports page, reports from 6 days ago and 1 week ago); halfhitch.com Destin Fishing Reports blog (most recent crawlable content from late June 2026) · Auto-refreshed via Claude API",
+      "date": "2026-08-02",
+      "displayDate": "August 2, 2026",
+      "summary": "The most current reports available for Choctawhatchee Bay are from late July/early August 2026, with the most recent individual charter post dated approximately July 27 (about 6 days ago). Speckled trout are the dominant inshore story right now — guides report trout scattered throughout the bay and still feeding actively despite windy conditions, with anglers advised to be selective about where they fish until the wind settles. Bull redfish are also in the mix and receiving a lot of attention; one recent trip landed a 40¼-inch, 26-lb bull red, and limit catches of upper-slot reds have been reported out of Santa Rosa Beach. A late-June trip on West Bay/Choctawhatchee also produced speckled trout, slot reds, and a notable 43-lb black drum, suggesting black drum remain a legitimate target around the bay system. Water temperature at this location is 85°F. Note: the Half Hitch Destin fishing report blog appears to have last posted on June 15, 2026 — no July update was findable — so that source is not reflected here.",
+      "attribution": "captainexperiences.com (Choctawhatchee Bay Fishing Reports, July 2026); fishingbooker.com (Daily Choctawhatchee Bay Fishing Reports, July 2026) · Auto-refreshed via Claude API",
       "sourceIds": [
         "captain-experiences-destin",
-        "halfhitch-destin",
+        "fishingbooker-bay",
         "report-aHR0cHM6Ly9jYXB0YW"
       ],
       "species": [
         "spotted_seatrout",
-        "redfish"
+        "redfish",
+        "black_drum"
       ],
       "conditions": {
-        "wind": "WSW 5 to 15 mph",
+        "wind": "WSW 10 to 15 mph",
         "windDir": "WSW",
-        "tide": "High tide ~8:15 AM · Low tide ~5:10 PM · Sunrise 6:01 AM",
+        "tide": "High tide ~9:14 AM · Low tide ~4:35 PM · Sunrise 6:02 AM",
         "tideEvents": [
           {
             "type": "H",
-            "time": "8:15 AM"
+            "time": "9:14 AM"
           },
           {
             "type": "L",
-            "time": "5:10 PM"
+            "time": "4:35 PM"
           }
         ],
         "waterTemp": 85,
         "sky": "Cloudy",
-        "stormChance": 50,
+        "stormChance": 88,
         "pressure": {
-          "hpa": 1012.6,
-          "inHg": 29.9,
-          "direction": "steady",
-          "changeHpa3h": -0.4
+          "hpa": 1009.2,
+          "inHg": 29.8,
+          "direction": "falling",
+          "changeHpa3h": -0.5
         }
       }
     },
@@ -326,7 +327,7 @@
       "key": "black_drum",
       "label": "Black drum",
       "current": true,
-      "reportCount": 2,
+      "reportCount": 3,
       "lastReported": "2026-08-02",
       "evidenceLevel": "current_regional_report"
     },
@@ -445,10 +446,10 @@
   "sources": [
     {
       "id": "report-aHR0cHM6Ly9jYXB0YW",
-      "label": "Choctawhatchee Bay Fishing Reports (July 2026)",
-      "url": "https://captainexperiences.com/fishing-reports/locations/regions/choctawhatchee-bay",
+      "label": "Choctawhatchee River / West Bay Fishing Reports (July 2026) — Captain Trey trip review",
+      "url": "https://captainexperiences.com/fishing-reports/locations/regions/choctawhatchee-river",
       "kind": "regional_report",
-      "reportDate": "2026-07-26",
+      "reportDate": "2026-06-30",
       "note": "Exact source page preserved by the daily bite-report research."
     },
     {
@@ -467,13 +468,6 @@
       "note": "Exact source page preserved by the daily bite-report research."
     },
     {
-      "id": "halfhitch-destin",
-      "label": "Half Hitch — Destin fishing reports",
-      "url": "https://halfhitch.com/blog/category/destin-fishing-reports",
-      "kind": "regional_report",
-      "note": "Dated reports from a local Destin tackle shop."
-    },
-    {
       "id": "captain-experiences-destin",
       "label": "Captain Experiences — Destin reports",
       "url": "https://captainexperiences.com/fishing-reports/locations/regions/destin",
@@ -486,6 +480,13 @@
       "url": "https://fishingbooker.com/reports/charter/7020",
       "kind": "regional_report",
       "note": "Archived Freeport reports, including live-shrimp catches around structure."
+    },
+    {
+      "id": "halfhitch-destin",
+      "label": "Half Hitch — Destin fishing reports",
+      "url": "https://halfhitch.com/blog/category/destin-fishing-reports",
+      "kind": "regional_report",
+      "note": "Dated reports from a local Destin tackle shop."
     },
     {
       "id": "30a-shallow-water",
