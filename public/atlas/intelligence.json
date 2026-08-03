@@ -29,28 +29,28 @@
     "sky": "Bright sun",
     "stormChance": 13,
     "pressure": {
-      "hpa": 1009.7,
-      "inHg": 29.82,
-      "direction": "steady",
-      "changeHpa3h": 0
+      "hpa": 1011.2,
+      "inHg": 29.86,
+      "direction": "rising",
+      "changeHpa3h": 1.5
     }
   },
   "currentReport": {
     "kind": "current_regional_report",
     "date": "2026-08-03",
     "displayDate": "August 3, 2026",
-    "summary": "The most recent available reports (from late July/early August 2026) show speckled trout and redfish as the top inshore producers on Choctawhatchee Bay. A Santa Rosa Beach guide reported within the past week that trout have been plentiful — including quality fish — alongside bull redfish, with one oversized red weighing in at 26 lbs. FishingBooker's July 2026 Choctawhatchee Bay feed notes that bull redfish and trophy-sized trout are the main draw right now, with charters running busy and early morning trips recommended. The Half Hitch PCB report from July 1 (the closest adjacent report with readable inshore bay content) described redfish feeding actively in passes and around bridge structure on falling tides, with bay trout also producing on live bait like pinfish and finger mullet — conditions typical for this stretch of the Panhandle in summer. Water temperature at this location is 84°F. No flounder, sheepshead, or black drum reports rose to the surface in this week's available sources, though those species are resident in the bay year-round.",
-    "attribution": "captainexperiences.com (Choctawhatchee Bay reports page, July 2026); fishingbooker.com (Choctawhatchee Bay daily reports, July 2026); halfhitch.com (PCB Fishing Report 7-1-26, adjacent area) · Auto-refreshed via Claude API",
+    "summary": "Reports from late July 2026 on the Choctawhatchee Bay/Santa Rosa Beach area show speckled trout as the standout inshore bite, with anglers finding good numbers of fish across the bay despite some wind limiting accessible areas. Redfish have also been active, with a notable bull red (over 26 lbs) landed out of Santa Rosa Beach and guides reporting reds cruising bridges, flats, and the pass on tide movement — live bait like pinfish and finger mullet have been the top producers for both species. The most recent Half Hitch Destin report on record is dated July 13, 2026 (content not fully retrievable), but the broader regional picture from early July shows bay trout biting well on live bait, over-slot reds feeding aggressively in passes and around bridges on falling tides, and at least one recent client trip yielding reds, trout, and a 43-lb black drum. Water temperature is 84°F.",
+    "attribution": "captainexperiences.com (Choctawhatchee Bay Fishing Reports, late July 2026); halfhitch.com (Destin Fishing Reports index, most recent post 7-13-26) · Auto-refreshed via Claude API",
     "sourceIds": [
       "captain-experiences-destin",
-      "fishingbooker-bay",
       "halfhitch-destin",
       "report-aHR0cHM6Ly9jYXB0YW",
       "report-aHR0cHM6Ly9oYWxmaG"
     ],
     "species": [
       "spotted_seatrout",
-      "redfish"
+      "redfish",
+      "black_drum"
     ],
     "conditions": {
       "wind": "WNW 0 to 10 mph",
@@ -78,52 +78,61 @@
       "sky": "Bright sun",
       "stormChance": 13,
       "pressure": {
-        "hpa": 1009.7,
-        "inHg": 29.82,
-        "direction": "steady",
-        "changeHpa3h": 0
+        "hpa": 1011.2,
+        "inHg": 29.86,
+        "direction": "rising",
+        "changeHpa3h": 1.5
       }
     }
   },
   "archivedReports": [
     {
       "kind": "archived_app_snapshot",
-      "date": "2026-08-02",
-      "displayDate": "August 2, 2026",
-      "summary": "The most current reports available for Choctawhatchee Bay are from late July/early August 2026, with the most recent individual charter post dated approximately July 27 (about 6 days ago). Speckled trout are the dominant inshore story right now — guides report trout scattered throughout the bay and still feeding actively despite windy conditions, with anglers advised to be selective about where they fish until the wind settles. Bull redfish are also in the mix and receiving a lot of attention; one recent trip landed a 40¼-inch, 26-lb bull red, and limit catches of upper-slot reds have been reported out of Santa Rosa Beach. A late-June trip on West Bay/Choctawhatchee also produced speckled trout, slot reds, and a notable 43-lb black drum, suggesting black drum remain a legitimate target around the bay system. Water temperature at this location is 85°F. Note: the Half Hitch Destin fishing report blog appears to have last posted on June 15, 2026 — no July update was findable — so that source is not reflected here.",
-      "attribution": "captainexperiences.com (Choctawhatchee Bay Fishing Reports, July 2026); fishingbooker.com (Daily Choctawhatchee Bay Fishing Reports, July 2026) · Auto-refreshed via Claude API",
+      "date": "2026-08-03",
+      "displayDate": "August 3, 2026",
+      "summary": "The most recent available reports (from late July/early August 2026) show speckled trout and redfish as the top inshore producers on Choctawhatchee Bay. A Santa Rosa Beach guide reported within the past week that trout have been plentiful — including quality fish — alongside bull redfish, with one oversized red weighing in at 26 lbs. FishingBooker's July 2026 Choctawhatchee Bay feed notes that bull redfish and trophy-sized trout are the main draw right now, with charters running busy and early morning trips recommended. The Half Hitch PCB report from July 1 (the closest adjacent report with readable inshore bay content) described redfish feeding actively in passes and around bridge structure on falling tides, with bay trout also producing on live bait like pinfish and finger mullet — conditions typical for this stretch of the Panhandle in summer. Water temperature at this location is 84°F. No flounder, sheepshead, or black drum reports rose to the surface in this week's available sources, though those species are resident in the bay year-round.",
+      "attribution": "captainexperiences.com (Choctawhatchee Bay reports page, July 2026); fishingbooker.com (Choctawhatchee Bay daily reports, July 2026); halfhitch.com (PCB Fishing Report 7-1-26, adjacent area) · Auto-refreshed via Claude API",
       "sourceIds": [
         "captain-experiences-destin",
         "fishingbooker-bay",
-        "report-aHR0cHM6Ly9jYXB0YW"
+        "halfhitch-destin",
+        "report-aHR0cHM6Ly9jYXB0YW",
+        "report-aHR0cHM6Ly9oYWxmaG"
       ],
       "species": [
         "spotted_seatrout",
-        "redfish",
-        "black_drum"
+        "redfish"
       ],
       "conditions": {
-        "wind": "WSW 10 to 15 mph",
-        "windDir": "WSW",
-        "tide": "High tide ~9:14 AM · Low tide ~4:35 PM · Sunrise 6:02 AM",
+        "wind": "WNW 0 to 10 mph",
+        "windDir": "WNW",
+        "tide": "High tide ~10:31 PM · Low tide ~5:44 AM · Sunrise 6:02 AM",
         "tideEvents": [
           {
             "type": "H",
-            "time": "9:14 AM"
+            "time": "10:31 PM"
           },
           {
             "type": "L",
-            "time": "4:35 PM"
+            "time": "5:44 AM"
+          },
+          {
+            "type": "H",
+            "time": "10:41 AM"
+          },
+          {
+            "type": "L",
+            "time": "1:46 PM"
           }
         ],
-        "waterTemp": 85,
-        "sky": "Cloudy",
-        "stormChance": 88,
+        "waterTemp": 84,
+        "sky": "Bright sun",
+        "stormChance": 13,
         "pressure": {
-          "hpa": 1009.4,
-          "inHg": 29.81,
-          "direction": "rising",
-          "changeHpa3h": 0.6
+          "hpa": 1009.7,
+          "inHg": 29.82,
+          "direction": "steady",
+          "changeHpa3h": 0
         }
       }
     },
@@ -343,10 +352,10 @@
     {
       "key": "black_drum",
       "label": "Black drum",
-      "current": false,
+      "current": true,
       "reportCount": 2,
-      "lastReported": "2026-08-02",
-      "evidenceLevel": "archived_regional_report"
+      "lastReported": "2026-08-03",
+      "evidenceLevel": "current_regional_report"
     },
     {
       "key": "sheepshead",
@@ -463,10 +472,18 @@
   "sources": [
     {
       "id": "report-aHR0cHM6Ly9jYXB0YW",
-      "label": "Choctawhatchee River / West Bay Fishing Reports (July 2026) — Captain Trey trip review",
-      "url": "https://captainexperiences.com/fishing-reports/locations/regions/choctawhatchee-river",
+      "label": "Choctawhatchee Bay Fishing Reports (July 2026)",
+      "url": "https://captainexperiences.com/fishing-reports/locations/regions/choctawhatchee-bay",
       "kind": "regional_report",
-      "reportDate": "2026-06-30",
+      "reportDate": null,
+      "note": "Exact source page preserved by the daily bite-report research."
+    },
+    {
+      "id": "report-aHR0cHM6Ly9oYWxmaG",
+      "label": "Panama City Beach Fishing Report 7-1-26",
+      "url": "https://halfhitch.com/blog/pcb-fishing-report-7-1-26",
+      "kind": "regional_report",
+      "reportDate": "2026-07-01",
       "note": "Exact source page preserved by the daily bite-report research."
     },
     {
@@ -475,14 +492,6 @@
       "url": "https://fishingbooker.com/reports/destination/us/choctawhatchee-bay",
       "kind": "regional_report",
       "note": "Dated charter and angler reports for Choctawhatchee Bay."
-    },
-    {
-      "id": "report-aHR0cHM6Ly9oYWxmaG",
-      "label": "Destin Fishing Report 7-13-26",
-      "url": "https://halfhitch.com/blog/destin-fishing-report-7-13-26",
-      "kind": "regional_report",
-      "reportDate": "2026-07-13",
-      "note": "Exact source page preserved by the daily bite-report research."
     },
     {
       "id": "captain-experiences-destin",
