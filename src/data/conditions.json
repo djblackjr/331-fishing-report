@@ -24,45 +24,45 @@
   "moonPhase": "Last Quarter (~36% illuminated) — moderate tidal push",
   "waterClarity": "Slightly stained",
   "sky": "Bright sun",
-  "lastUpdated": "8/6/2026, 3:12:12 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
-  "localBiteReport": "The most recent angler reports from late July 2026 show speckled trout and redfish as the dominant inshore action in Choctawhatchee Bay. Multiple charter clients reported plentiful trout along with bull redfish — including one fish reported at over 26 lbs — with guides noting the trout are scattered across the bay but actively feeding. Water temperature as of today's on-site reading is 85°F. The fishingbooker feed for the bay (reports dated July 27–28, 2026) echoes the same theme: bull redfish and trophy-class trout are drawing the most attention, and early morning trips are strongly recommended to beat summer heat and crowds. Note: the most recent Half Hitch Destin fishing report found was dated July 13, 2026 — roughly three and a half weeks old — and the 30A Shallow Water Guide Service blog has not published a report since mid-March 2026, so neither contributed current inshore detail to this summary.",
-  "localBiteSource": "captainexperiences.com (Choctawhatchee Bay reports page, July 2026); fishingbooker.com (Daily Choctawhatchee Bay Fishing Reports, July 2026) · Auto-refreshed via Claude API",
+  "lastUpdated": "8/6/2026, 5:47:44 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "localBiteReport": "Note: The most recent reports found are approximately 2–3 weeks old (mid-to-late July 2026) — no fresh August reports were accessible at time of search. That said, conditions have been solidly favorable for inshore bay fishing. A Santa Rosa Beach guide on captainexperiences.com (reported ~late July) noted good numbers of speckled trout across scattered areas of Choctawhatchee Bay, along with bull redfish in the mix — including a 40-inch, 26-lb fish reported by one angler. Wind has been a recurring factor requiring guides to be selective about which flats and areas they work, but the trout bite has remained active even with breezy conditions. The Half Hitch Destin blog (most recent post title visible: July 20, 2026) has been publishing weekly reports, though the full inshore detail from that specific post was not retrievable in search; prior weeks confirmed a generally active summer bay pattern. Water temp at this location is 85°F as of today.",
+  "localBiteSource": "captainexperiences.com (Choctawhatchee Bay fishing reports page), halfhitch.com (Destin Fishing Reports blog) · Auto-refreshed via Claude API",
   "localBiteUpdated": "August 6, 2026",
   "localBiteEvidence": [
     {
-      "title": "Choctawhatchee Bay Fishing Reports (July 2026)",
+      "title": "Choctawhatchee Bay Fishing Reports",
       "url": "https://captainexperiences.com/fishing-reports/locations/regions/choctawhatchee-bay",
       "reportDate": "2026-07-31"
     },
     {
-      "title": "Daily Choctawhatchee Bay Fishing Reports (July 2026)",
-      "url": "https://fishingbooker.com/reports/destination/us/choctawhatchee-bay",
-      "reportDate": "2026-07-28"
+      "title": "Destin Fishing Report 7-20-26",
+      "url": "https://halfhitch.com/blog/destin-fishing-report-7-20-26",
+      "reportDate": "2026-07-20"
     }
   ],
   "previousDay": {
-    "date": "Wednesday, August 5, 2026",
+    "date": "Thursday, August 6, 2026",
     "wind": {
-      "dir": "WSW",
+      "dir": "SSE",
       "speed": 10
     },
     "high": 91,
-    "stormChance": 29,
-    "tide": "High tide ~10:56 PM · Low tide ~10:15 AM · Sunrise 6:04 AM"
+    "stormChance": 13,
+    "tide": "High tide ~11:42 PM · Low tide ~11:32 AM · Sunrise 6:04 AM"
   },
   "openMeteo": [
     {
-      "high": 90,
-      "low": 77,
-      "stormChance": 11,
-      "windSpeed": 10,
+      "high": 91,
+      "low": 76,
+      "stormChance": 8,
+      "windSpeed": 9,
       "windDir": "S",
-      "summary": "Overcast"
+      "summary": "Mostly clear"
     },
     {
       "high": 88,
       "low": 76,
-      "stormChance": 48,
+      "stormChance": 38,
       "windSpeed": 8,
       "windDir": "E",
       "summary": "Overcast"
@@ -70,7 +70,7 @@
     {
       "high": 97,
       "low": 77,
-      "stormChance": 30,
+      "stormChance": 32,
       "windSpeed": 7,
       "windDir": "N",
       "summary": "Thunderstorm"
@@ -160,9 +160,9 @@
   },
   "waterTemp": 85,
   "pressure": {
-    "hpa": 1018.4,
-    "inHg": 30.07,
-    "direction": "falling",
-    "changeHpa3h": -1
+    "hpa": 1019.2,
+    "inHg": 30.1,
+    "direction": "rising",
+    "changeHpa3h": 0.7
   }
 }
