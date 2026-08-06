@@ -1,71 +1,69 @@
 {
   "type": "FishingIntelligence",
   "region": "choctawhatchee_bay",
-  "generatedAt": "2026-08-05",
+  "generatedAt": "2026-08-06",
   "scopeNote": "Regional reports support timing and species activity only. They do not prove a catch, depth, bottom type, or safe navigation at a mapped Jolly Bay feature.",
   "currentConditions": {
-    "wind": "WSW 0 to 10 mph",
-    "windDir": "WSW",
-    "tide": "High tide ~10:56 PM · Low tide ~10:15 AM · Sunrise 6:04 AM",
+    "wind": "SSE 0 to 10 mph",
+    "windDir": "SSE",
+    "tide": "High tide ~11:42 PM · Low tide ~11:32 AM · Sunrise 6:04 AM",
     "tideEvents": [
       {
         "type": "H",
-        "time": "10:56 PM"
+        "time": "11:42 PM"
       },
       {
         "type": "L",
-        "time": "10:15 AM"
+        "time": "11:32 AM"
       }
     ],
     "waterTemp": 85,
-    "sky": "Cloudy",
-    "stormChance": 29,
+    "sky": "Bright sun",
+    "stormChance": 13,
     "pressure": {
-      "hpa": 1015.9,
-      "inHg": 30,
-      "direction": "steady",
-      "changeHpa3h": 0.3
+      "hpa": 1018.4,
+      "inHg": 30.07,
+      "direction": "falling",
+      "changeHpa3h": -1
     }
   },
   "currentReport": {
     "kind": "current_regional_report",
-    "date": "2026-08-05",
-    "displayDate": "August 5, 2026",
-    "summary": "Note: The most current sourced reports are from late July 2026 (roughly two weeks old), as no posts dated this week (Aug 1–5) were found. That said, conditions in the bay appear active. A Santa Rosa Beach guide reporting about six days ago (approximately July 30) noted a strong speckled trout bite with good numbers and quality fish, plus a notable bull redfish catch — a 40¼-inch, 26-lb fish landed in the bay. Water temp is 85°F at this location. FishingBooker's July Choctawhatchee Bay overview similarly highlights bull redfish and trophy-class trout as the headline inshore targets, with guides recommending early-morning departures to beat summer heat and crowds. The Half Hitch Destin report from July 20 (the most recent retrievable post) focused largely on offshore action, but bay trout had been described as consistent and scattered throughout the system in the weeks prior, with anglers finding fish by being selective about wind-sheltered areas.",
-    "attribution": "captainexperiences.com (Choctawhatchee Bay reports page); fishingbooker.com (Choctawhatchee Bay destination reports); halfhitch.com (Destin Fishing Reports blog) · Auto-refreshed via Claude API",
+    "date": "2026-08-06",
+    "displayDate": "August 6, 2026",
+    "summary": "The most recent angler reports from late July 2026 show speckled trout and redfish as the dominant inshore action in Choctawhatchee Bay. Multiple charter clients reported plentiful trout along with bull redfish — including one fish reported at over 26 lbs — with guides noting the trout are scattered across the bay but actively feeding. Water temperature as of today's on-site reading is 85°F. The fishingbooker feed for the bay (reports dated July 27–28, 2026) echoes the same theme: bull redfish and trophy-class trout are drawing the most attention, and early morning trips are strongly recommended to beat summer heat and crowds. Note: the most recent Half Hitch Destin fishing report found was dated July 13, 2026 — roughly three and a half weeks old — and the 30A Shallow Water Guide Service blog has not published a report since mid-March 2026, so neither contributed current inshore detail to this summary.",
+    "attribution": "captainexperiences.com (Choctawhatchee Bay reports page, July 2026); fishingbooker.com (Daily Choctawhatchee Bay Fishing Reports, July 2026) · Auto-refreshed via Claude API",
     "sourceIds": [
       "captain-experiences-destin",
       "fishingbooker-bay",
-      "halfhitch-destin",
-      "report-aHR0cHM6Ly9jYXB0YW",
-      "report-aHR0cHM6Ly9oYWxmaG"
+      "report-aHR0cHM6Ly9jYXB0YW"
     ],
     "species": [
       "spotted_seatrout",
       "redfish"
     ],
     "conditions": {
-      "wind": "WSW 0 to 10 mph",
-      "windDir": "WSW",
-      "tide": "High tide ~10:56 PM · Low tide ~10:15 AM · Sunrise 6:04 AM",
+      "wind": "SSE 0 to 10 mph",
+      "windDir": "SSE",
+      "tide": "High tide ~11:42 PM · Low tide ~11:32 AM · Sunrise 6:04 AM",
       "tideEvents": [
         {
           "type": "H",
-          "time": "10:56 PM"
+          "time": "11:42 PM"
         },
         {
           "type": "L",
-          "time": "10:15 AM"
+          "time": "11:32 AM"
         }
       ],
       "waterTemp": 85,
-      "sky": "Cloudy",
-      "stormChance": 29,
+      "sky": "Bright sun",
+      "stormChance": 13,
       "pressure": {
-        "hpa": 1015.9,
-        "inHg": 30,
-        "direction": "steady",
-        "changeHpa3h": 0.3
+        "hpa": 1018.4,
+        "inHg": 30.07,
+        "direction": "falling",
+        "changeHpa3h": -1
       }
     }
   },
@@ -105,10 +103,10 @@
         "sky": "Cloudy",
         "stormChance": 29,
         "pressure": {
-          "hpa": 1014.7,
-          "inHg": 29.96,
-          "direction": "falling",
-          "changeHpa3h": -1.5
+          "hpa": 1015.9,
+          "inHg": 30,
+          "direction": "steady",
+          "changeHpa3h": 0.3
         }
       }
     },
@@ -306,7 +304,7 @@
       "label": "Speckled trout",
       "current": true,
       "reportCount": 8,
-      "lastReported": "2026-08-05",
+      "lastReported": "2026-08-06",
       "evidenceLevel": "current_regional_report"
     },
     {
@@ -314,7 +312,7 @@
       "label": "Redfish",
       "current": true,
       "reportCount": 9,
-      "lastReported": "2026-08-05",
+      "lastReported": "2026-08-06",
       "evidenceLevel": "current_regional_report"
     },
     {
