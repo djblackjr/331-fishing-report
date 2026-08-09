@@ -1,72 +1,69 @@
 {
   "type": "FishingIntelligence",
   "region": "choctawhatchee_bay",
-  "generatedAt": "2026-08-08",
+  "generatedAt": "2026-08-09",
   "scopeNote": "Regional reports support timing and species activity only. They do not prove a catch, depth, bottom type, or safe navigation at a mapped Jolly Bay feature.",
   "currentConditions": {
-    "wind": "E 0 to 5 mph",
-    "windDir": "E",
-    "tide": "High tide ~1:58 AM · Low tide ~1:42 PM · Sunrise 6:06 AM",
+    "wind": "SE 0 to 10 mph",
+    "windDir": "SE",
+    "tide": "High tide ~3:06 AM · Low tide ~2:42 PM · Sunrise 6:06 AM",
     "tideEvents": [
       {
         "type": "H",
-        "time": "1:58 AM"
+        "time": "3:06 AM"
       },
       {
         "type": "L",
-        "time": "1:42 PM"
+        "time": "2:42 PM"
       }
     ],
     "waterTemp": 86,
     "sky": "Cloudy",
-    "stormChance": 23,
+    "stormChance": 29,
     "pressure": {
-      "hpa": 1018.1,
-      "inHg": 30.06,
+      "hpa": 1017.2,
+      "inHg": 30.04,
       "direction": "falling",
-      "changeHpa3h": -1.5
+      "changeHpa3h": -1.7
     }
   },
   "currentReport": {
     "kind": "current_regional_report",
-    "date": "2026-08-08",
-    "displayDate": "August 8, 2026",
-    "summary": "Note: The most current sourced content is from late July to early August 2026 — approximately one to two weeks old, not this exact week. With water temperatures at 86°F, Choctawhatchee Bay is in classic summer pattern: speckled trout and redfish are the primary inshore targets, with guides working early morning topwater on grass flats and docks before shifting to deeper structure, bridges, oyster beds, and bayous as the day heats up. A Santa Rosa Beach-area guide reported solid speckled trout numbers along with a notable bull redfish encounter in late July. The FishingBooker summary for the bay through July flags bull redfish and larger trout as the standout catches right now. The destinfloridaboatcharters.com August report (published July 31) lists speckled trout, redfish, black drum, and flounder as the active inshore targets, with live bait leading and artificials a secondary option; early mornings are producing the best action before fish push into shaded structure.",
-    "attribution": "captainexperiences.com (Choctawhatchee Bay report page, July 2026); fishingbooker.com (Choctawhatchee Bay daily reports, July 2026); destinfloridaboatcharters.com (August fishing report, published July 31, 2026) · Auto-refreshed via Claude API",
+    "date": "2026-08-09",
+    "displayDate": "August 9, 2026",
+    "summary": "The most recent inshore reports from Choctawhatchee Bay (best available as of early August 2026, with the freshest captainexperiences.com angler entry approximately 6 days old at time of indexing) show speckled trout as the standout species — scattered across the bay but actively feeding. Bull redfish are also showing up in good size, with one Santa Rosa Beach angler reporting a 40-inch, 26-lb bull red caught recently. Water temperature is 86°F on today's measured reading. Fishingbooker's July 2026 seasonal summary for the bay notes that bull reds and trophy-sized trout are the headline inshore targets this time of year, with redfish concentrating around the Hogtown Bayou flats and trout spread more widely. No current dedicated blog reports were found from the Half Hitch Destin store (last visible report dated June 21, 2026) or from 30A Shallow Water Guide Service for August.",
+    "attribution": "captainexperiences.com (Choctawhatchee Bay fishing reports page); fishingbooker.com (Choctawhatchee Bay reports/destination page, July 2026 seasonal notes) · Auto-refreshed via Claude API",
     "sourceIds": [
       "captain-experiences-destin",
       "fishingbooker-bay",
-      "report-aHR0cHM6Ly9jYXB0YW",
-      "report-aHR0cHM6Ly9kZXN0aW"
+      "report-aHR0cHM6Ly9jYXB0YW"
     ],
     "species": [
       "spotted_seatrout",
-      "redfish",
-      "gulf_flounder",
-      "black_drum"
+      "redfish"
     ],
     "conditions": {
-      "wind": "E 0 to 5 mph",
-      "windDir": "E",
-      "tide": "High tide ~1:58 AM · Low tide ~1:42 PM · Sunrise 6:06 AM",
+      "wind": "SE 0 to 10 mph",
+      "windDir": "SE",
+      "tide": "High tide ~3:06 AM · Low tide ~2:42 PM · Sunrise 6:06 AM",
       "tideEvents": [
         {
           "type": "H",
-          "time": "1:58 AM"
+          "time": "3:06 AM"
         },
         {
           "type": "L",
-          "time": "1:42 PM"
+          "time": "2:42 PM"
         }
       ],
       "waterTemp": 86,
       "sky": "Cloudy",
-      "stormChance": 23,
+      "stormChance": 29,
       "pressure": {
-        "hpa": 1018.1,
-        "inHg": 30.06,
+        "hpa": 1017.2,
+        "inHg": 30.04,
         "direction": "falling",
-        "changeHpa3h": -1.5
+        "changeHpa3h": -1.7
       }
     }
   },
@@ -75,8 +72,8 @@
       "kind": "archived_app_snapshot",
       "date": "2026-08-08",
       "displayDate": "August 8, 2026",
-      "summary": "Note: The most current sourced reports are from late July to early August 2026, roughly one to two weeks old. Speckled trout and redfish are the headline inshore species on Choctawhatchee Bay right now, with local guides reporting solid trout action across the bay and at least one angler landing a 40-inch, 26-pound bull redfish out of Santa Rosa Beach. Black drum and flounder are also showing up as bay targets for August. Water temperature is 86°F, and the summer heat is pushing guides to strongly recommend early morning trips — topwater action can be explosive at first light before the sun gets high, with docks, grass flats, oyster beds, and bridge structure all holding fish as the day warms. Live bait (shrimp, pinfish, finger mullet) is the top producer, though soft plastics and shallow-running plugs are working for reds around bridge pilings and passes on outgoing tides.",
-      "attribution": "captainexperiences.com (Choctawhatchee Bay reports page), fishingbooker.com (Choctawhatchee Bay reports feed), destinfloridaboatcharters.com (August 2026 Destin fishing report) · Auto-refreshed via Claude API",
+      "summary": "Note: The most current sourced content is from late July to early August 2026 — approximately one to two weeks old, not this exact week. With water temperatures at 86°F, Choctawhatchee Bay is in classic summer pattern: speckled trout and redfish are the primary inshore targets, with guides working early morning topwater on grass flats and docks before shifting to deeper structure, bridges, oyster beds, and bayous as the day heats up. A Santa Rosa Beach-area guide reported solid speckled trout numbers along with a notable bull redfish encounter in late July. The FishingBooker summary for the bay through July flags bull redfish and larger trout as the standout catches right now. The destinfloridaboatcharters.com August report (published July 31) lists speckled trout, redfish, black drum, and flounder as the active inshore targets, with live bait leading and artificials a secondary option; early mornings are producing the best action before fish push into shaded structure.",
+      "attribution": "captainexperiences.com (Choctawhatchee Bay report page, July 2026); fishingbooker.com (Choctawhatchee Bay daily reports, July 2026); destinfloridaboatcharters.com (August fishing report, published July 31, 2026) · Auto-refreshed via Claude API",
       "sourceIds": [
         "captain-experiences-destin",
         "fishingbooker-bay",
@@ -107,10 +104,10 @@
         "sky": "Cloudy",
         "stormChance": 23,
         "pressure": {
-          "hpa": 1017.9,
+          "hpa": 1018.1,
           "inHg": 30.06,
           "direction": "falling",
-          "changeHpa3h": -1.7
+          "changeHpa3h": -1.5
         }
       }
     },
@@ -308,7 +305,7 @@
       "label": "Speckled trout",
       "current": true,
       "reportCount": 8,
-      "lastReported": "2026-08-08",
+      "lastReported": "2026-08-09",
       "evidenceLevel": "current_regional_report"
     },
     {
@@ -316,24 +313,24 @@
       "label": "Redfish",
       "current": true,
       "reportCount": 9,
-      "lastReported": "2026-08-08",
+      "lastReported": "2026-08-09",
       "evidenceLevel": "current_regional_report"
     },
     {
       "key": "gulf_flounder",
       "label": "Flounder",
-      "current": true,
-      "reportCount": 5,
+      "current": false,
+      "reportCount": 4,
       "lastReported": "2026-08-08",
-      "evidenceLevel": "current_regional_report"
+      "evidenceLevel": "archived_regional_report"
     },
     {
       "key": "black_drum",
       "label": "Black drum",
-      "current": true,
-      "reportCount": 3,
+      "current": false,
+      "reportCount": 2,
       "lastReported": "2026-08-08",
-      "evidenceLevel": "current_regional_report"
+      "evidenceLevel": "archived_regional_report"
     },
     {
       "key": "sheepshead",
@@ -450,10 +447,10 @@
   "sources": [
     {
       "id": "report-aHR0cHM6Ly9jYXB0YW",
-      "label": "Choctawhatchee Bay Fishing Reports",
+      "label": "Choctawhatchee Bay Fishing Reports (July 2026)",
       "url": "https://captainexperiences.com/fishing-reports/locations/regions/choctawhatchee-bay",
       "kind": "regional_report",
-      "reportDate": null,
+      "reportDate": "2026-07-31",
       "note": "Exact source page preserved by the daily bite-report research."
     },
     {
@@ -464,19 +461,19 @@
       "note": "Dated charter and angler reports for Choctawhatchee Bay."
     },
     {
-      "id": "report-aHR0cHM6Ly9kZXN0aW",
-      "label": "August Fishing Report: What's Biting in Destin? Find out for yourself!",
-      "url": "https://destinfloridaboatcharters.com/2026/07/31/august-fishing-report-whats-biting-in-destin/",
-      "kind": "regional_report",
-      "reportDate": "2026-07-31",
-      "note": "Exact source page preserved by the daily bite-report research."
-    },
-    {
       "id": "report-aHR0cHM6Ly9oYWxmaG",
       "label": "Destin Fishing Report 7-13-26",
       "url": "https://halfhitch.com/blog/destin-fishing-report-7-13-26",
       "kind": "regional_report",
       "reportDate": "2026-07-13",
+      "note": "Exact source page preserved by the daily bite-report research."
+    },
+    {
+      "id": "report-aHR0cHM6Ly9kZXN0aW",
+      "label": "August Fishing Report: What's Biting in Destin? Find out for yourself!",
+      "url": "https://destinfloridaboatcharters.com/2026/07/31/august-fishing-report-whats-biting-in-destin/",
+      "kind": "regional_report",
+      "reportDate": "2026-07-31",
       "note": "Exact source page preserved by the daily bite-report research."
     },
     {
