@@ -24,9 +24,9 @@
   "moonPhase": "New Moon (~1% illuminated) — strong tidal push (spring tide)",
   "waterClarity": "Slightly stained",
   "sky": "Bright sun",
-  "lastUpdated": "8/11/2026, 3:12:11 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
-  "localBiteReport": "Note: The most current readable reports found are from late June 2026 — no August 2026 inshore-specific report was accessible from any of these sources this week. Based on reports from that period, speckled trout were the standout inshore bite on Choctawhatchee Bay, described as scattered but active across the bay with some quality fish showing up near Santa Rosa Beach. Bull redfish were also in the mix, with at least one 26-lb fish landed in the West Bay/Choctawhatchee area, and charter anglers were limiting out on reds in the backwater creeks off West Bay. Water temp as of today's on-site reading is 87°F. Early morning trips are strongly recommended to beat summer heat and boat traffic.",
-  "localBiteSource": "captainexperiences.com (Choctawhatchee Bay fishing reports page, most recent entries ~June 2026); fishingbooker.com (Choctawhatchee Bay destination feed, July 2026 page title, late-July individual reports) · Auto-refreshed via Claude API",
+  "lastUpdated": "8/11/2026, 4:11:22 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "localBiteReport": "Note: The most current reports found are from late July to mid-June 2026 — roughly two to four weeks old as of August 11, 2026, so treat conditions as recent background context rather than same-day intel. Water temp today is 87°F. On Choctawhatchee Bay, speckled trout are the standout inshore species right now, with a steady and widespread bite across the bay; guides out of Santa Rosa Beach reported good numbers of trout along with bull redfish, including at least one fish over 40 inches. FishingBooker's July summary for the bay echoes this, highlighting bull reds and trophy-sized trout as the primary targets, with guides recommending early morning departures due to summer heat and boat traffic. The Half Hitch Destin report from mid-July (the most recent available from that source) did not surface inshore-specific detail in search results, but the broader seasonal pattern for August historically puts redfish and trout active on early morning and late evening tides, with flounder a secondary target on grass flat edges.",
+  "localBiteSource": "captainexperiences.com (Choctawhatchee Bay reports page), fishingbooker.com (Choctawhatchee Bay reports feed), halfhitch.com (Destin Fishing Report 7-13-26 listing) · Auto-refreshed via Claude API",
   "localBiteUpdated": "August 11, 2026",
   "localBiteEvidence": [
     {
@@ -38,39 +38,44 @@
       "title": "Daily Choctawhatchee Bay Fishing Reports (July 2026)",
       "url": "https://fishingbooker.com/reports/destination/us/choctawhatchee-bay",
       "reportDate": "2026-07-28"
+    },
+    {
+      "title": "Destin Fishing Report 7-13-26",
+      "url": "https://halfhitch.com/stores/destin",
+      "reportDate": "2026-07-13"
     }
   ],
   "previousDay": {
-    "date": "Monday, August 10, 2026",
+    "date": "Tuesday, August 11, 2026",
     "wind": {
-      "dir": "SSW",
-      "speed": 5
+      "dir": "W",
+      "speed": 10
     },
-    "high": 92,
-    "stormChance": 11,
-    "tide": "High tide ~4:08 AM · Low tide ~3:36 PM · Sunrise 6:07 AM"
+    "high": 91,
+    "stormChance": 12,
+    "tide": "High tide ~5:07 AM · Low tide ~4:20 PM · Sunrise 6:07 AM"
   },
   "openMeteo": [
     {
-      "high": 92,
+      "high": 93,
       "low": 77,
-      "stormChance": 5,
+      "stormChance": 6,
       "windSpeed": 11,
       "windDir": "SW",
-      "summary": "Overcast"
+      "summary": "Clear"
     },
     {
-      "high": 92,
-      "low": 80,
-      "stormChance": 20,
+      "high": 93,
+      "low": 79,
+      "stormChance": 9,
       "windSpeed": 13,
       "windDir": "SW",
-      "summary": "Overcast"
+      "summary": "Mostly clear"
     },
     {
       "high": 98,
       "low": 80,
-      "stormChance": 9,
+      "stormChance": 10,
       "windSpeed": 14,
       "windDir": "SW",
       "summary": "Thunderstorm w/ hail"
@@ -115,54 +120,54 @@
     }
   ],
   "dateISO": "2026-08-11",
-  "aiSummary": "Choctawhatchee Bay is fishing under full summer conditions today — sunny skies, a heat index hitting 103°F, and 87°F water mean an early start isn't optional, it's essential. Light west winds of 0–10 mph keep most water fishable through mid-morning, but a 12% storm chance after 1 PM is reason enough to be off the water or close to the ramp by early afternoon. The most recent bay-wide reports (late June) pointed to scattered but active speckled trout across the bay, quality bull redfish in backwater creeks off West Bay, and a strong recommendation for early morning trips — all of which still applies in spades today.",
+  "aiSummary": "Choctawhatchee Bay is fishing well for speckled trout and redfish this Tuesday, with guides reporting consistent trout action bay-wide and bull reds in the mix — get on the water early before heat index values climb toward 103°F and the afternoon storm window opens after 1 PM. Today's new moon is driving spring tides, meaning stronger tidal pushes through creek mouths and oyster bars at both the early-morning high (5:07 AM) and the afternoon low (4:20 PM) — both transitions are worth targeting. Wind is light out of the west at 0–10 mph, water is 87°F and slightly stained, and a 12% storm chance after 1 PM is manageable if you plan to be off the water by early afternoon.",
   "locationNotes": {
     "bridge": {
-      "aiNote": "The 331 Bridge spans the narrow neck of Choctawhatchee Bay, creating a current funnel where bait gets pushed through on both tides. Pilings hold trout, redfish, sheepshead, and black drum year-round, with the lee-side pilings serving as the prime ambush zone on incoming tides. Because it sits in open water, this spot is the first on the bay to become unfishable when wind picks up or chop builds.",
-      "todaysCall": "High tide crested well before sunrise at 5:07 AM, so the tide will be falling through the morning — work the outgoing current against the pilings as bait flushes back into the bay. Light west winds of 0–10 mph should keep conditions manageable through mid-morning, so target the lee (east) side of the pilings early for trout and redfish before the sun climbs too high. Slightly stained water is a modest edge here since fish holding tight to structure won't be as easily spooked; darker soft plastics and noisy topwaters in the first hour of light can draw strikes. Wrap up well before 1 PM given the afternoon storm window — this exposed open-water spot offers no shelter if weather moves in."
+      "aiNote": "The 331 Bridge spans the narrow neck of Choctawhatchee Bay, creating a current funnel where bait gets pushed through on both tides. Pilings hold speckled trout, redfish, sheepshead, and black drum year-round, with the lee-side pilings being the prime ambush zone on incoming tides. This is open, exposed water — it's typically the first spot to become unfishable when wind picks up and chop builds.",
+      "todaysCall": "Light westerly wind at 0–10 mph means chop should be minimal at the bridge this morning, making it a fishable window before conditions can deteriorate. The new moon's spring tide already pushed through on the 5:07 AM high, so current should still be moving and concentrating bait around the pilings in the early hours — target the lee-side pilings as that flow relaxes. Bay-wide reports put trout active and widespread, so work the pilings with live shrimp or a soft plastic under a popping cork. Wrap up well before 1 PM given the afternoon storm window, and keep an eye on any wind increase that could quickly make this open-water spot uncomfortable."
     },
     "alaqua": {
-      "aiNote": "Alaqua Bayou offers protected water with a strong year-round redfish population, plus trout and flounder at the creek mouth. The oyster bars at the mouth are the prime zone, and tree cover keeps the interior a few degrees cooler than the open bay while also providing shelter from wind and weather. The upper creek transitions toward brackish water and can hold bass alongside smaller reds.",
-      "todaysCall": "With the tide falling through the morning toward a 4:20 PM low, focus on the oyster bars at the creek mouth early — outgoing water will pull bait off the bars and stack reds and trout right at the edges. Tree cover is a real asset today given the brutal heat index, so push into the interior as the morning wears on and fish the shaded banks for reds. The new moon's spring-tide pull will give the outgoing some extra push, helping concentrate baitfish and predators alike at creek mouths and bar edges. Slightly stained water favors slower, more tactile presentations like a slow-rolled paddle tail on a light jig; finish well before the post-1 PM storm window."
+      "aiNote": "Alaqua Bayou offers protected water with a strong year-round redfish population, plus speckled trout and flounder at the mouth. The oyster bars at the creek mouth are the prime structure to target, and tree cover keeps the bayou a few degrees cooler than the open bay while providing shelter from wind and weather. The upper creek transitions toward brackish water and can hold bass alongside smaller redfish.",
+      "todaysCall": "Alaqua is a smart pick today — the tree-lined banks offer shade and a break from the intense morning heat, and light westerly wind at 0–10 mph means the protected interior will be glassy. Work the oyster bars at the creek mouth during the morning hours while the new moon's spring tide is still in motion from the early high — stronger tidal flow here should push baitfish onto the bars and stack redfish and trout in the ambush zone. Bay-wide reports confirm redfish and trout are active, and this bayou's consistent red population makes it a reliable bet. Clear out before 1 PM to beat the afternoon storm window."
     },
     "basin": {
-      "aiNote": "Basin Bayou sees less fishing pressure than Alaqua and LaGrange, meaning the fish here tend to be less educated and more cooperative. The interior grass flats are classic sight-fishing territory for redfish in under two feet of water, and pompano occasionally appear at the mouth on moving tides in late spring and early summer. It is somewhat less protected than LaGrange when weather builds on the open bay.",
-      "todaysCall": "Light west winds today make Basin Bayou's relatively open character a non-issue through mid-morning — an ideal window to pole or drift the interior grass flats sight-fishing for reds on the falling tide. The outgoing tide pulling toward the 4:20 PM low will start moving fish off the flats and toward the bayou mouth through mid-morning, so begin shallow and work your way out as water drops. Slightly stained water limits visibility for sight-fishing but a push poling approach with weedless soft plastics or a slow-rolled shrimp imitation will still find fish in the grass. Get off the water before 1 PM; this spot's limited protection means you don't want to be caught here if afternoon storms materialize."
+      "aiNote": "Basin Bayou sees less pressure than neighboring Alaqua and LaGrange, which tends to mean less-educated fish and a more relaxed fishing experience. The interior grass flats are classic sight-fishing territory for redfish in under two feet of water, and pompano occasionally show at the mouth on moving tides in late spring and early summer. It is somewhat less protected than LaGrange when weather builds.",
+      "todaysCall": "The new moon's spring tide will push stronger tidal flow through Basin Bayou's mouth this morning — arrive early to catch the tail end of that post-high movement and work the grass flat edges as bait gets swept in. Slightly stained water today means you can get closer to tailing or cruising reds on the interior flats without spooking them as easily, which is a small edge for sight fishing. Light westerly wind at 0–10 mph should be manageable here, though Basin offers less wind protection than LaGrange if a stray breeze builds. Plan to wrap up fishing by noon given the heat index and the 12% storm chance after 1 PM."
     },
     "lagrange": {
-      "aiNote": "LaGrange Bayou is the top trout producer among the bayous on this dashboard, with legendary oyster bars at the mouth and interior grass flats that hold redfish year-round. Deep interior holes are reliable for black drum and sheepshead, and the bayou offers the most protected water on this side of the bay — the go-to spot when weather threatens. It draws more pressure than Basin Bayou but produces consistently across seasons.",
-      "todaysCall": "This is a high-percentage stop today: the falling tide after a spring-tide high will flush bait hard across the oyster bar mouths right through the prime morning window, setting up a textbook trout-and-redfish ambush. Late June reports had trout and redfish both active across Choctawhatchee Bay, and LaGrange's oyster bars are exactly the structure those fish gravitate to when tides are moving. Fish the bar edges and drop-offs first with a popping cork and live shrimp or a soft plastic on a light jig head; as the tide drops further, probe the deeper interior holes for black drum and sheepshead. Slightly stained water and a new moon (low ambient light even at dawn) both favor earlier, more aggressive presentations — be on the water at or before first light. LaGrange's protection makes it a viable option even if clouds build later, but still aim to wrap by 1 PM."
+      "aiNote": "LaGrange Bayou is widely considered the top trout producer in this part of Choctawhatchee Bay, with legendary oyster bars at the mouth and interior grass flats that hold redfish year-round. Deep holes inside hold black drum and sheepshead, and the bayou offers the most protected water on this side of the bay. It is the go-to refuge when weather builds elsewhere.",
+      "todaysCall": "LaGrange is the strongest call on the board today — it's the bay's top trout producer, bay-wide reports confirm a steady and widespread trout bite, and the new moon's spring tide amplifies tidal flow over those legendary oyster-bar structures at the mouth. Fish the bars on the outgoing tide as it builds toward the 4:20 PM low, but given the heat and the afternoon storm window after 1 PM, focus your prime effort on the early morning hours instead. Slightly stained water and bright sun make the interior grass flats trickier for sight fishing midday, so prioritize the oyster structure and deeper interior holes early. This is also the safest spot to stay longer if conditions deteriorate, since it's the most protected water in the area."
     },
     "fourmile": {
-      "aiNote": "Four Mile Creek is a short tidal creek running between Shipyard Marina and the bay, where tidal flow pushes baitfish up the creek on incoming tides and concentrates redfish and trout in the bends and grass edges. The creek mouth is a prime flounder zone, and the upper section transitions toward brackish water with bass and smaller reds mixed in. Its compact, sheltered layout makes it the safest fishery on this dashboard when weather threatens.",
-      "todaysCall": "The tide is falling all morning toward a 4:20 PM low, which means baitfish will be flushing back out through the creek — work the bends and grass edges near mid-creek first, then move toward the mouth as water drops and fish stage before exiting into the bay. The creek mouth flounder zone is worth a few casts as the outgoing tide concentrates mullet and small pinfish in the shallower slots; slow-dragged paddle tails or gulp shrimp on the bottom are the play. With today's light west winds and protected layout, comfort won't be an issue through the morning, but the summer heat index of 103°F means shade is scarce inside the creek — stay hydrated and fish efficiently. If afternoon storms materialize after 1 PM, Four Mile Creek is your best bail-out option on this dashboard."
+      "aiNote": "Four Mile Creek is a tidal creek running between Shipyard Marina and the bay, where tidal flow pushes baitfish up the creek on incoming tides and concentrates redfish and trout in the bends and along grass edges. The creek mouth is a prime flounder zone, and the upper section transitions toward brackish water that can hold bass alongside smaller reds. Short and well-protected, it is consistently the safest fishery when weather is a concern.",
+      "todaysCall": "Four Mile Creek is an excellent early-morning option today — it's short, protected, and the new moon's spring tide will have been pushing baitfish into the bends since before first light. Work the bends and grass edges in the lower and middle sections during the morning as that tidal flow continues to relax after the 5:07 AM high. The creek mouth is worth a few casts for flounder, especially in the slightly stained water where they tend to ambush readily. If afternoon storms threaten, this is your safest bailout spot — you can fish right up to the storm window without worrying much about exposure."
     },
     "hogtown": {
-      "aiNote": "Hogtown Bayou is a signature Santa Rosa Beach guide spot and one of the most productive trout flats on Choctawhatchee Bay, with fish stacked on grass in two to four feet of water during summer mornings. Spanish mackerel show at the mouth on moving tides, and the location draws regular pressure but produces consistently throughout the season. Factor in the longer run time from the 331 Bridge compared to the bayous on the Freeport side.",
-      "todaysCall": "This is the spot most directly supported by the late June bite reports, which called out quality trout near Santa Rosa Beach — Hogtown Bayou is the textbook address for that pattern, and conditions today are favorable if you get there early. Plan for the longer run and be on the grass flats as close to first light as possible; summer trout here are most active before the sun beats down, and the falling tide through mid-morning will keep bait moving across the flat. Topwaters and weedless soft plastics worked over the two-to-four-foot grass are the classic morning approach; switch to a slower subsurface presentation as the sun climbs. Keep an eye on the mouth for Spanish mackerel on any tide movement, and build extra buffer time into your return trip given the run distance and the post-1 PM storm window."
+      "aiNote": "Hogtown Bayou is a signature Santa Rosa Beach guide destination and one of the most consistently productive trout flats on Choctawhatchee Bay. Summer mornings are peak time, with trout stacked on grass in two to four feet of water, and Spanish mackerel show at the mouth on moving tides. It sees regular guide pressure but produces reliably, though it is farther from the 331 Bridge than the other bayous — factor in run time.",
+      "todaysCall": "Hogtown is arguably the top trout flat call today — bay-wide reports specifically name Santa Rosa Beach guides finding good trout numbers, and this is their signature spot. Get there early: summer mornings are when trout are stacked on the grass in two to four feet, and the new moon's spring tide adds extra tidal movement to fire up the bite. The longer run from the 331 area means you want to be idling into position before or right at sunrise (6:07 AM), so plan your departure accordingly. Check the bayou mouth for Spanish mackerel on any tidal movement, and be wheels-up well before 1 PM to beat both the heat and the afternoon storm window on the longer run home."
     },
     "mallet": {
-      "aiNote": "Mallet Bayou is a small tributary that feeds directly into LaGrange Bayou just south of Freeport, and its direct connection to one of the bay's top trout-and-redfish producers means LaGrange's oyster-bar patterns plausibly extend into this quieter, less-pressured water. There is significantly less documented fishing history for Mallet Bayou itself, so confidence is lower than for its larger neighbor. Its small, interior character makes it a natural calm-water fallback when wind or weather pushes anglers off the open bay.",
-      "todaysCall": "Today's light winds and modest storm risk make this a reasonable exploratory option for anglers who want to avoid LaGrange's heavier pressure while staying on the same productive water system. Work the connection point between Mallet and LaGrange on the falling tide — any bait flushing out of Mallet will draw reds and trout to that junction. Slightly stained water is no handicap in tight, shallow water like this; go with a weedless soft plastic or weightless live shrimp and work the banks slowly. Manage expectations relative to LaGrange — this is a lower-confidence, potentially rewarding side trip, not a proven primary destination."
+      "aiNote": "Mallet Bayou is a small tributary that feeds directly into LaGrange Bayou just south of Freeport. Its direct connection to LaGrange — this dashboard's top trout producer — means LaGrange's oyster-bar trout-and-redfish pattern plausibly extends into this quieter, smaller water, though documented fishing history for Mallet Bayou itself is limited. Its small, interior character makes it a likely calm-water fallback when wind picks up on the open bay.",
+      "todaysCall": "Mallet is worth considering today as a quieter extension of the LaGrange complex — if the main bayou mouth is seeing pressure, slip into Mallet for a less-pressured look at what should be a similar trout-and-redfish pattern. The new moon's spring tide will push water through the connection between Mallet and LaGrange, so fish any current seams or structure near that junction early in the morning. Light westerly wind at 0–10 mph means wind is not a driver today, but Mallet's small, interior nature keeps it calm regardless. Treat it as a complement to a LaGrange trip rather than a standalone destination, and keep the 1 PM storm window in mind."
     },
     "mack": {
-      "aiNote": "Mack Bayou sits on the barrier-island, 30-A side of Choctawhatchee Bay near Topsail Hill Preserve State Park — a long run from the 331 Bridge that should be treated as a destination trip, not a quick local stop. It shares the same protected-bayou character as Alaqua and LaGrange, with marsh grass, oyster bars, and interior holes, and sees less pressure simply because of the distance involved. Hewett Bayou and Buck Bayou sit immediately to the east and are realistically fishable in the same trip.",
-      "todaysCall": "If you're willing to make the run, today's light west winds and calm morning conditions are about as good as it gets for the long haul to the 30-A bayous — but leave the dock well before sunrise to maximize your fishable window before heat and the post-1 PM storm chance shrink it. Fish the oyster bars and marsh grass edges at the mouth on the falling tide, targeting redfish and trout with the same early-morning approach that works across the bay. Slightly stained water is consistent with what you'll find elsewhere today — expect normal presentations to hold. Budget time to also hit Hewett and potentially Buck Bayou on the same trip; making the run for just one small bayou is rarely the most efficient use of the day."
+      "aiNote": "Mack Bayou sits on the barrier-island, 30-A side of Choctawhatchee Bay near Topsail Hill Preserve State Park — a long run from the 331 Bridge and not a quick local trip. It shares the protected-bayou character of Alaqua and LaGrange, with marsh grass, oyster bars, and a few interior holes, and sees lighter pressure simply due to its distance. Hewett Bayou and Buck Bayou sit immediately to the east and are realistically fishable in the same trip.",
+      "todaysCall": "If you are willing to make the long run, Mack Bayou offers light pressure and the same oyster-bar and marsh-grass habitat that is producing redfish and trout bay-wide right now. The new moon's spring tide means stronger flow at the mouth — time your arrival to fish the outgoing tide building toward the afternoon low, but with a long run home and a storm window after 1 PM, commit to an early departure. Slightly stained water should keep fish less wary along the oyster structure. Pair Mack with Hewett on the same trip to make the run worthwhile, and have a firm turnaround time to beat afternoon weather."
     },
     "hewett": {
-      "aiNote": "Hewett Bayou sits immediately east of Mack Bayou on the barrier-island, 30-A side of Choctawhatchee Bay near Topsail Hill Preserve State Park, sharing the same protected-bayou habitat of oyster bars, marsh grass, and deeper interior holes. Like Mack Bayou, it's a long run from the 331 Bridge and sees light pressure as a result. It pairs naturally with Mack and Buck Bayou in a single trip.",
-      "todaysCall": "The same logic that applies to Mack Bayou today applies here — light west winds and calm morning conditions justify the long run if you plan the trip correctly and depart early. Hit the mouth structure on the falling tide first, working oyster bar edges for trout and reds before moving deeper into the interior holes as water drops. Light pressure at this distance from the main ramps means fish here are less wary than at closer spots; the slightly stained water is a neutral factor, so standard soft plastics and shrimp presentations should produce. Pair with Mack and Buck Bayou and be pointed toward home well before 1 PM given the storm window and the run time back."
+      "aiNote": "Hewett Bayou sits immediately east of Mack Bayou on the barrier-island, 30-A side of Choctawhatchee Bay near Topsail Hill Preserve State Park — another long-run destination that pairs naturally with Mack and Buck Bayou in a single trip. It offers the same protected habitat as its neighbors, including oyster bars and marsh grass at the mouth and a few deeper interior holes farther in. Light fishing pressure is a consistent advantage here thanks to the distance from main boat ramps.",
+      "todaysCall": "Hewett benefits from the same light-pressure, protected-bayou formula as Mack next door, and today's bay-wide trout-and-redfish bite gives you reason to make the run. Fish the oyster bars at the mouth during the morning tidal movement driven by the new moon's spring tide, then explore the interior holes for any stacked fish before heat shuts things down. The long run home under a 103°F heat index and a post-1 PM storm window means you need a firm turnaround — plan to be heading back by noon at the latest. Pair with Mack and optionally Buck to make the distance count."
     },
     "buck": {
-      "aiNote": "Buck Bayou is the smallest and least-documented of the three neighboring bayous on the barrier-island, 30-A side of Choctawhatchee Bay near Topsail Hill Preserve State Park. Its habitat should track its larger neighbors — marsh grass, some oyster structure, and a modest interior — but there is less basis to speak confidently about its specific fishing character. It is best approached as a bonus stop on a Mack and Hewett Bayou trip rather than a standalone destination.",
-      "todaysCall": "Buck Bayou makes most sense today as a quick exploratory add-on after fishing Mack and Hewett — if the tide and time allow, poke in and work the mouth structure on the falling tide for opportunistic reds and trout. Don't burn your prime early-morning window here; prioritize Mack and Hewett first and treat Buck as a low-pressure bonus cast on the way back. Expectations should be calibrated accordingly — this is the thinnest confidence play on the dashboard, and today is not the day to gamble a long run on a single unknown small bayou. If Mack and Hewett are producing, stay there rather than rushing to cover Buck before the storm window opens."
+      "aiNote": "Buck Bayou is the smallest and least-documented of the three neighboring bayous on the barrier-island, 30-A side of Choctawhatchee Bay near Topsail Hill Preserve State Park. Its habitat should mirror its larger neighbors — marsh grass, some oyster structure, and a modest interior — but there is less basis to speak with confidence about it. It is best treated as a bonus stop on a Mack and Hewett Bayou trip rather than a standalone destination worth a long run on its own.",
+      "todaysCall": "Buck is a reasonable bonus cast on a Mack-and-Hewett trip today — poke in, work any visible oyster structure at the mouth during tidal movement from the new moon's spring tide, and move on if it doesn't produce quickly. With limited documented history here, don't burn significant time that could be better spent at Mack or Hewett where the habitat is better understood. Slightly stained water and light westerly wind keep conditions manageable on this side of the bay. As with the other long-run 30-A spots, have a firm noon turnaround in mind to beat the heat and the afternoon storm window on the run back."
     }
   },
   "waterTemp": 87,
   "pressure": {
-    "hpa": 1018.9,
-    "inHg": 30.09,
+    "hpa": 1019.7,
+    "inHg": 30.11,
     "direction": "falling",
-    "changeHpa3h": -2.2
+    "changeHpa3h": -0.7
   }
 }
