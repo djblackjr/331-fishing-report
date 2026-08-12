@@ -160,12 +160,23 @@ function todaysAdjustedScore(loc) {
 
   // Bay-wide species-activity signal, sourced from the Atlas's daily
   // intelligence packet — regional evidence only, not spot-specific proof
-  // (see that packet's own scopeNote). Only checks this location's
-  // top-confidence species so one strong signal can't stack across five.
-  const topSpecies = loc.species?.[0];
-  const signalKey = topSpecies && SPECIES_SIGNAL_KEY[topSpecies.name];
-  const signal = signalKey && (CONDITIONS.speciesSignals || []).find(s => s.key === signalKey);
-  if (signal) score += signal.current ? 0.3 : -0.1;
+  // (see that packet's own scopeNote). Weighted across this location's
+  // whole species list (not just its top pick) so two locations that share
+  // the same #1 species but differ further down the list — e.g. one backed
+  // up by flounder and black drum, another by sheepshead — actually score
+  // differently instead of moving in lockstep. Each mapped species
+  // contributes in proportion to its own confidence; species this packet
+  // doesn't track (Largemouth Bass, Spanish Mackerel, Pompano) are skipped
+  // rather than guessed at.
+  const signals = CONDITIONS.speciesSignals || [];
+  const mapped = (loc.species || [])
+    .map(s => ({ confidence: s.confidence, signal: signals.find(sig => sig.key === SPECIES_SIGNAL_KEY[s.name]) }))
+    .filter(s => s.signal);
+  const totalConfidence = mapped.reduce((sum, s) => sum + s.confidence, 0);
+  if (totalConfidence > 0) {
+    const weightedActivity = mapped.reduce((sum, s) => sum + s.confidence * (s.signal.current ? 1 : -1), 0) / totalConfidence;
+    score += weightedActivity * 0.3; // scales to the same +/-0.3 range the old top-species-only check used
+  }
 
   return Math.max(3, Math.min(10, Math.round(score * 10) / 10));
 }
