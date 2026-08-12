@@ -88,12 +88,86 @@ function ratingLabel(score) {
 function ratingColor(score) {
   return score >= 7.5 ? "#4ade80" : score >= 6 ? "#facc15" : "#f87171";
 }
-function todaysAdjustedScore(baseScore) {
+// Maps this report's species display names to the Atlas intelligence
+// packet's species keys (public/atlas/intelligence.json, echoed into
+// conditions.json as `speciesSignals` by build-atlas-intelligence.mjs).
+// Species not tracked by that packet (e.g. Largemouth Bass, Spanish
+// Mackerel, Pompano) are simply left unmapped and skipped below.
+const SPECIES_SIGNAL_KEY = {
+  "Speckled Trout": "spotted_seatrout",
+  "Redfish": "redfish",
+  "Flounder": "gulf_flounder",
+  "Black Drum": "black_drum",
+  "Sheepshead": "sheepshead",
+};
+
+// Finds which way the tide is moving at a given minutes-since-midnight,
+// from the same H/L event list the tide curve renders. Extends one virtual
+// event on each side using the day's actual average H-L spacing (same
+// technique TideCurve uses) so a target time before the first event or
+// after the last one still resolves instead of returning nothing.
+function tideDirectionAt(events, targetMins) {
+  if (!events || events.length < 2 || targetMins == null) return null;
+  const pts = events.map(e => ({ ...e, mins: timeToMinutes(e.time) })).filter(e => e.mins != null).sort((a, b) => a.mins - b.mins);
+  if (pts.length < 2) return null;
+  const avgInterval = (pts[pts.length - 1].mins - pts[0].mins) / (pts.length - 1);
+  const before = { mins: pts[0].mins - avgInterval, type: pts[0].type === "H" ? "L" : "H" };
+  const after = { mins: pts[pts.length - 1].mins + avgInterval, type: pts[pts.length - 1].type === "H" ? "L" : "H" };
+  const all = [before, ...pts, after];
+  for (let i = 0; i < all.length - 1; i++) {
+    if (targetMins >= all[i].mins && targetMins <= all[i + 1].mins) {
+      return all[i].type === "L" ? "incoming" : "outgoing"; // rising off a low = incoming, falling off a high = outgoing
+    }
+  }
+  return null;
+}
+
+// Takes a full LOCATIONS entry (not just its base score) so the
+// tide-alignment and species-signal factors below have what they need.
+function todaysAdjustedScore(loc) {
   const today = FORECAST[0] || {};
-  let score = baseScore;
+  let score = loc.overallScore;
+
+  // Weather — unchanged from the original model.
   score -= (today.storms || 0) / 40; // 40% storm chance ≈ -1.0
   if ((CONDITIONS.wind?.speed || 0) > 15) score -= 1;
-  return Math.max(3, Math.round(score * 10) / 10);
+
+  // Moon phase / tidal strength — spring tides (new/full moon) push more
+  // water and move more bait; neap tides (quarter moons) move noticeably
+  // less water and fish less predictably.
+  const moon = (CONDITIONS.moonPhase || "").toLowerCase();
+  if (moon.includes("spring tide")) score += 0.3;
+  else if (moon.includes("neap tide")) score -= 0.2;
+
+  // Water temp — reds/trout get lethargic and push to deeper, cooler water
+  // outside a comfortable activity range.
+  const wt = CONDITIONS.waterTemp;
+  if (typeof wt === "number" && (wt > 88 || wt < 55)) score -= 0.4;
+
+  // Water clarity — muddy/off-color water hurts sight-fishing and most of
+  // the artificial presentations this report leans on.
+  const clarity = (CONDITIONS.waterClarity || "").toLowerCase();
+  if (clarity.includes("muddy") || clarity.includes("off-color") || clarity.includes("off color")) score -= 0.3;
+
+  // Tide alignment — does today's tide match this spot's preferred stage
+  // (per its own stops/species notes, captured in `bestTide`) during the
+  // best fishing window?
+  if (loc.bestTide) {
+    const dir = tideDirectionAt(CONDITIONS.tideEvents, getBestWindow().start);
+    if (dir === loc.bestTide) score += 0.3;
+    else if (dir) score -= 0.2;
+  }
+
+  // Bay-wide species-activity signal, sourced from the Atlas's daily
+  // intelligence packet — regional evidence only, not spot-specific proof
+  // (see that packet's own scopeNote). Only checks this location's
+  // top-confidence species so one strong signal can't stack across five.
+  const topSpecies = loc.species?.[0];
+  const signalKey = topSpecies && SPECIES_SIGNAL_KEY[topSpecies.name];
+  const signal = signalKey && (CONDITIONS.speciesSignals || []).find(s => s.key === signalKey);
+  if (signal) score += signal.current ? 0.3 : -0.1;
+
+  return Math.max(3, Math.min(10, Math.round(score * 10) / 10));
 }
 
 // Averages today's high temp and storm chance across whichever of the two
@@ -136,7 +210,7 @@ function daysBetween(dateStrEarlier, dateStrLater) {
 // ── BEST BET TODAY ───────────────────────────────────────────────────────────
 // Ranks every location by today's-adjusted score and returns the top pick.
 function getBestBet() {
-  const ranked = LOCATIONS.map(loc => ({ loc, score: todaysAdjustedScore(loc.overallScore) }))
+  const ranked = LOCATIONS.map(loc => ({ loc, score: todaysAdjustedScore(loc) }))
     .sort((a, b) => b.score - a.score);
   return ranked[0];
 }
@@ -316,6 +390,7 @@ const LOCATIONS = [
     emoji: "🌉",
     lat: 30.4175, lng: -86.1604, // OpenStreetMap (Overpass) — midpoint of the bridge's "highway=trunk, bridge=yes, ref=US 331" way segments; unnamed in OSM, which is why Nominatim's name search missed it
     overallScore: 8.0,
+    bestTide: "incoming", // matches this location's own stops[0]/species notes
     conditions: "Excellent",
     species: [
       { name: "Speckled Trout", confidence: 88, note: "Along pilings on incoming tide, topwater at first light" },
@@ -342,6 +417,7 @@ const LOCATIONS = [
     emoji: "🌿",
     lat: 30.4865855, lng: -86.2029980, // OpenStreetMap
     overallScore: 7.5,
+    bestTide: "incoming", // matches this location's own stops[0]/species notes
     conditions: "Good",
     species: [
       { name: "Redfish", confidence: 90, note: "Oyster bars and creek bends, gold spoon or live shrimp" },
@@ -364,6 +440,7 @@ const LOCATIONS = [
     emoji: "🦅",
     lat: 30.4940855, lng: -86.2432766, // OpenStreetMap
     overallScore: 7.5,
+    bestTide: "incoming", // matches this location's own stops[0]/species notes
     conditions: "Good",
     species: [
       { name: "Redfish", confidence: 85, note: "Shallow grass flats and oyster bars throughout" },
@@ -386,6 +463,7 @@ const LOCATIONS = [
     emoji: "🦪",
     lat: 30.4668636, lng: -86.1457743, // OpenStreetMap
     overallScore: 8.5,
+    bestTide: "incoming", // matches this location's own stops[0]/species notes
     conditions: "Excellent",
     species: [
       { name: "Speckled Trout", confidence: 92, note: "Oyster bars and grass flats — best trout spot in the area" },
@@ -408,6 +486,7 @@ const LOCATIONS = [
     emoji: "🌱",
     lat: 30.4532529, lng: -86.1454966, // OpenStreetMap node, natural=bay, gnis:feature_id=286328 — confirmed against GNIS (Mallet Bayou, Walton County, FL)
     overallScore: 6.5,
+    bestTide: "incoming", // matches this location's own stops[0]/species notes
     conditions: "Fair",
     species: [
       { name: "Redfish", confidence: 75, note: "Confluence with LaGrange Bayou and marsh edges throughout" },
@@ -430,6 +509,7 @@ const LOCATIONS = [
     emoji: "🛶",
     lat: 30.488505, lng: -86.13732, // corrected 2026-07-29 — the NOAA-chart/Shipyard-Marina-address point landed on the marina's warehouse rooftop, not the creek; moved into the open channel just downstream of the docks, verified against satellite imagery
     overallScore: 7.5,
+    bestTide: "incoming", // matches this location's own stops[0]/species notes
     conditions: "Good",
     species: [
       { name: "Redfish", confidence: 85, note: "Grass flat edges and creek bends — tailing reds in skinny water" },
@@ -452,6 +532,7 @@ const LOCATIONS = [
     emoji: "🌾",
     lat: 30.3979769, lng: -86.2454994, // OpenStreetMap
     overallScore: 7.5,
+    bestTide: "incoming", // matches this location's own stops[0]/species notes
     conditions: "Good",
     species: [
       { name: "Speckled Trout", confidence: 88, note: "Grass flats and grassy patches — peak summer bite, schools active early morning" },
@@ -474,6 +555,7 @@ const LOCATIONS = [
     emoji: "🌊",
     lat: 30.4003944, lng: -86.3030728, // OpenStreetMap
     overallScore: 7.0,
+    bestTide: "incoming", // matches this location's own stops[0]/species notes
     conditions: "Good",
     species: [
       { name: "Redfish", confidence: 78, note: "Marsh grass edges and oyster bars throughout the bayou" },
@@ -496,6 +578,7 @@ const LOCATIONS = [
     emoji: "🦀",
     lat: 30.3964205, lng: -86.2877798, // Nudged into the main basin 2026-07-29 — the USGS/topozone GNIS point (30.3979771,-86.2866115) sits right at the shoreline tip, where OSM's standard tile style doesn't fill this narrow bayou as water until zoom 16+, so the marker rendered on "land" at the app's zoom-14 mini-map even though it's technically in the bayou. This point sits ~30m off the nearest dock in the open basin, verified against satellite imagery, and renders correctly as water at zoom 14.
     overallScore: 7.0,
+    bestTide: "incoming", // matches this location's own stops[0]/species notes
     conditions: "Good",
     species: [
       { name: "Redfish", confidence: 80, note: "Oyster bars and marsh edges — similar pattern to Mack Bayou next door" },
@@ -518,6 +601,7 @@ const LOCATIONS = [
     emoji: "🦌",
     lat: 30.4079007, lng: -86.3087806, // OpenStreetMap
     overallScore: 6.5,
+    bestTide: "incoming", // matches this location's own stops[0]/species notes
     conditions: "Fair",
     species: [
       { name: "Redfish", confidence: 72, note: "Marsh grass edges throughout the bayou" },
@@ -1020,7 +1104,7 @@ function LocationReport({ loc }) {
   const C = CONDITIONS;
   const lureKey = C.sky === "Cloudy" ? "Cloudy morning" : C.sky === "Bright sun" ? "Bright sun" : C.waterClarity === "Dirty" ? "Dirty water" : "Slightly stained";
   const lures = C.lureMatrix[lureKey] || [];
-  const todaysScore = todaysAdjustedScore(loc.overallScore);
+  const todaysScore = todaysAdjustedScore(loc);
   const todaysLabel = ratingLabel(todaysScore);
   const cc = ratingColor(todaysScore);
   const card = { background: "#0f2a1c", borderRadius: 10, padding: "13px 15px", border: "1px solid #1a3828", marginBottom: 10 };
@@ -1421,7 +1505,7 @@ export default function App() {
           <div style={{ display: "flex", gap: 6, marginBottom: 14, overflowX: "auto", paddingBottom: 4, WebkitOverflowScrolling: "touch" }}>
             {LOCATIONS.map(loc => {
               const active = locTab === loc.id;
-              const sc = todaysAdjustedScore(loc.overallScore);
+              const sc = todaysAdjustedScore(loc);
               const dot = ratingColor(sc);
               return (
                 <button key={loc.id} onClick={() => selectLocTab(loc.id)} style={{

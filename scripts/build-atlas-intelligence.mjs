@@ -311,6 +311,18 @@ async function main() {
   };
 
   await writeFile(OUTPUT_PATH, JSON.stringify(packet, null, 2) + "\n");
+
+  // Echo the trimmed species-activity signal into conditions.json too, so
+  // the main dashboard's Best Bet score (src/App.jsx's todaysAdjustedScore)
+  // can read it as a plain static field like everything else in that file,
+  // instead of adding a second runtime data-fetch path just for this. This
+  // keeps the two systems' *architecture* decoupled (the dashboard still
+  // only ever reads conditions.json) while sharing the one computation.
+  current.speciesSignals = speciesSignals.map(({ key, label, current: isCurrent, reportCount, lastReported }) => (
+    { key, label, current: isCurrent, reportCount, lastReported }
+  ));
+  await writeFile(CONDITIONS_PATH, JSON.stringify(current, null, 2) + "\n");
+
   console.log(`Built Atlas intelligence from 1 current + ${archives.length} archived report(s).`);
 }
 

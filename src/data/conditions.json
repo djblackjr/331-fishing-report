@@ -169,5 +169,42 @@
     "inHg": 30.11,
     "direction": "falling",
     "changeHpa3h": -0.7
-  }
+  },
+  "speciesSignals": [
+    {
+      "key": "spotted_seatrout",
+      "label": "Speckled trout",
+      "current": true,
+      "reportCount": 7,
+      "lastReported": "2026-08-11"
+    },
+    {
+      "key": "redfish",
+      "label": "Redfish",
+      "current": true,
+      "reportCount": 8,
+      "lastReported": "2026-08-11"
+    },
+    {
+      "key": "gulf_flounder",
+      "label": "Flounder",
+      "current": true,
+      "reportCount": 4,
+      "lastReported": "2026-08-11"
+    },
+    {
+      "key": "black_drum",
+      "label": "Black drum",
+      "current": false,
+      "reportCount": 1,
+      "lastReported": "2026-06-22"
+    },
+    {
+      "key": "sheepshead",
+      "label": "Sheepshead",
+      "current": false,
+      "reportCount": 1,
+      "lastReported": "2026-07-01"
+    }
+  ]
 }
