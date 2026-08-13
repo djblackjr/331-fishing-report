@@ -1,0 +1,199 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -86.311581,
+            30.406401
+          ],
+          [
+            -86.304581,
+            30.409401
+          ]
+        ]
+      },
+      "properties": {
+        "id": 70,
+        "externalId": "BK-DZ-001",
+        "region": "buck_bayou",
+        "name": "Buck Bayou dock-lined shoreline",
+        "confidence": 28,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery aerial review 2026-08-13",
+        "lastUpdated": "2026-08-13 17:47:17",
+        "feature_type": "dock_zone",
+        "field_verified": false,
+        "evidence": "Coarse 2-point estimate, no pre-existing channel trace to anchor to for this region — represents the general run of the dense dock-lined resort shoreline visible via Esri World Imagery, not a precise trace.",
+        "uncertainty": "Approximates a stretch of dock-lined shoreline, not a trace of every individual dock — see evidence field for exactly how this line was derived.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery aerial review 2026-08-13",
+        "review_date": "2026-08-13",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -86.2877798,
+            30.3964205
+          ],
+          [
+            -86.289583,
+            30.394467
+          ],
+          [
+            -86.291042,
+            30.390306
+          ],
+          [
+            -86.29125,
+            30.388217
+          ]
+        ]
+      },
+      "properties": {
+        "id": 69,
+        "externalId": "HW-DZ-001",
+        "region": "hewett_bayou",
+        "name": "Hewett Bayou dock-lined shoreline",
+        "confidence": 35,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery aerial review 2026-08-13",
+        "lastUpdated": "2026-08-13 17:47:17",
+        "feature_type": "dock_zone",
+        "field_verified": false,
+        "evidence": "Approximates the developed, dock-lined shoreline paralleling the main channel (reuses this project's existing verified channel trace). Shoreline here is dense resort/residential development with continuous private docks, confirmed via Esri World Imagery.",
+        "uncertainty": "Approximates a stretch of dock-lined shoreline, not a trace of every individual dock — see evidence field for exactly how this line was derived.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery aerial review 2026-08-13",
+        "review_date": "2026-08-13",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -86.16663,
+            30.46544
+          ],
+          [
+            -86.15875,
+            30.46694
+          ],
+          [
+            -86.14938,
+            30.46844
+          ],
+          [
+            -86.14075,
+            30.46975
+          ],
+          [
+            -86.13438,
+            30.47088
+          ]
+        ]
+      },
+      "properties": {
+        "id": 67,
+        "externalId": "LG-DZ-001",
+        "region": "lagrange_bayou",
+        "name": "LaGrange Bayou dock-lined shoreline",
+        "confidence": 35,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery aerial review 2026-08-13",
+        "lastUpdated": "2026-08-13 17:47:17",
+        "feature_type": "dock_zone",
+        "field_verified": false,
+        "evidence": "Approximates the developed, dock-lined shoreline paralleling the main channel — reuses this project's existing verified channel trace as an anchor, not a separate shoreline digitization. Both banks here are wall-to-wall private residential docks (confirmed via Esri World Imagery); this is not a claim that every individual dock sits exactly on this line.",
+        "uncertainty": "Approximates a stretch of dock-lined shoreline, not a trace of every individual dock — see evidence field for exactly how this line was derived.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery aerial review 2026-08-13",
+        "review_date": "2026-08-13",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -86.301458,
+            30.40325
+          ],
+          [
+            -86.3025,
+            30.401583
+          ],
+          [
+            -86.3025,
+            30.39325
+          ]
+        ]
+      },
+      "properties": {
+        "id": 68,
+        "externalId": "MK-DZ-001",
+        "region": "mack_bayou",
+        "name": "Mack Bayou dock-lined shoreline",
+        "confidence": 35,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery aerial review 2026-08-13",
+        "lastUpdated": "2026-08-13 17:47:17",
+        "feature_type": "dock_zone",
+        "field_verified": false,
+        "evidence": "Approximates the developed, dock-lined shoreline paralleling the main channel (reuses this project's existing verified channel trace). Shoreline here is dense resort/residential development with continuous private docks, confirmed via Esri World Imagery.",
+        "uncertainty": "Approximates a stretch of dock-lined shoreline, not a trace of every individual dock — see evidence field for exactly how this line was derived.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery aerial review 2026-08-13",
+        "review_date": "2026-08-13",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -86.152497,
+            30.457753
+          ],
+          [
+            -86.143747,
+            30.451753
+          ]
+        ]
+      },
+      "properties": {
+        "id": 71,
+        "externalId": "ML-DZ-001",
+        "region": "mallet_bayou",
+        "name": "Mallet Bayou dock-lined shoreline",
+        "confidence": 28,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery aerial review 2026-08-13",
+        "lastUpdated": "2026-08-13 17:47:17",
+        "feature_type": "dock_zone",
+        "field_verified": false,
+        "evidence": "Coarse 2-point estimate, no pre-existing channel trace to anchor to for this region — represents the general run of dense dock-lined shoreline near the LaGrange confluence visible via Esri World Imagery, not a precise trace.",
+        "uncertainty": "Approximates a stretch of dock-lined shoreline, not a trace of every individual dock — see evidence field for exactly how this line was derived.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery aerial review 2026-08-13",
+        "review_date": "2026-08-13",
+        "navigation_use": "not_for_navigation"
+      }
+    }
+  ]
+}

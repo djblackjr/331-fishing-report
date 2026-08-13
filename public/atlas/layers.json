@@ -81,6 +81,24 @@
     "featureCount": 14
   },
   {
+    "key": "docks",
+    "label": "Docks",
+    "geometryType": "Point",
+    "category": "habitat",
+    "color": "#d97706",
+    "defaultVisible": false,
+    "featureCount": 14
+  },
+  {
+    "key": "dock_zones",
+    "label": "Dock-Lined Shoreline",
+    "geometryType": "LineString",
+    "category": "habitat",
+    "color": "#92400e",
+    "defaultVisible": false,
+    "featureCount": 5
+  },
+  {
     "key": "redfish_routes",
     "label": "Redfish Routes",
     "geometryType": "LineString",

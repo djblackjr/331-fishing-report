@@ -1,0 +1,397 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.198,
+          30.4824
+        ]
+      },
+      "properties": {
+        "id": 57,
+        "externalId": "AL-DK-005",
+        "region": "alaqua_bayou",
+        "name": "Alaqua cove-mouth dock",
+        "confidence": 40,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery aerial review 2026-08-13",
+        "lastUpdated": "2026-08-13 17:47:17",
+        "feature_type": "dock",
+        "field_verified": false,
+        "evidence": "dock near the cove-mouth community",
+        "uncertainty": "Position estimated by eye from a moderate-zoom aerial crop, not pixel-verified or surveyed — treat as approximate, not exact.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery aerial review 2026-08-13",
+        "review_date": "2026-08-13",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.20115,
+          30.49296
+        ]
+      },
+      "properties": {
+        "id": 53,
+        "externalId": "AL-DK-001",
+        "region": "alaqua_bayou",
+        "name": "Alaqua narrows dock",
+        "confidence": 40,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery aerial review 2026-08-13",
+        "lastUpdated": "2026-08-13 17:47:17",
+        "feature_type": "dock",
+        "field_verified": false,
+        "evidence": "small pier at the marsh/creek narrows",
+        "uncertainty": "Position estimated by eye from a moderate-zoom aerial crop, not pixel-verified or surveyed — treat as approximate, not exact.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery aerial review 2026-08-13",
+        "review_date": "2026-08-13",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.1989,
+          30.48416
+        ]
+      },
+      "properties": {
+        "id": 56,
+        "externalId": "AL-DK-004",
+        "region": "alaqua_bayou",
+        "name": "Alaqua south shore dock",
+        "confidence": 40,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery aerial review 2026-08-13",
+        "lastUpdated": "2026-08-13 17:47:17",
+        "feature_type": "dock",
+        "field_verified": false,
+        "evidence": "residential dock near south-shore community",
+        "uncertainty": "Position estimated by eye from a moderate-zoom aerial crop, not pixel-verified or surveyed — treat as approximate, not exact.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery aerial review 2026-08-13",
+        "review_date": "2026-08-13",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.20385,
+          30.48724
+        ]
+      },
+      "properties": {
+        "id": 54,
+        "externalId": "AL-DK-002",
+        "region": "alaqua_bayou",
+        "name": "Alaqua west shore dock 1",
+        "confidence": 40,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery aerial review 2026-08-13",
+        "lastUpdated": "2026-08-13 17:47:17",
+        "feature_type": "dock",
+        "field_verified": false,
+        "evidence": "residential dock, west shore",
+        "uncertainty": "Position estimated by eye from a moderate-zoom aerial crop, not pixel-verified or surveyed — treat as approximate, not exact.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery aerial review 2026-08-13",
+        "review_date": "2026-08-13",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.2025,
+          30.48504
+        ]
+      },
+      "properties": {
+        "id": 55,
+        "externalId": "AL-DK-003",
+        "region": "alaqua_bayou",
+        "name": "Alaqua west shore dock 2",
+        "confidence": 40,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery aerial review 2026-08-13",
+        "lastUpdated": "2026-08-13 17:47:17",
+        "feature_type": "dock",
+        "field_verified": false,
+        "evidence": "residential dock, west shore",
+        "uncertainty": "Position estimated by eye from a moderate-zoom aerial crop, not pixel-verified or surveyed — treat as approximate, not exact.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery aerial review 2026-08-13",
+        "review_date": "2026-08-13",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.257977,
+          30.488086
+        ]
+      },
+      "properties": {
+        "id": 58,
+        "externalId": "BA-DK-001",
+        "region": "basin_bayou",
+        "name": "Basin beachfront dock 1",
+        "confidence": 40,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery aerial review 2026-08-13",
+        "lastUpdated": "2026-08-13 17:47:17",
+        "feature_type": "dock",
+        "field_verified": false,
+        "evidence": "dock at the small beachfront community",
+        "uncertainty": "Position estimated by eye from a moderate-zoom aerial crop, not pixel-verified or surveyed — treat as approximate, not exact.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery aerial review 2026-08-13",
+        "review_date": "2026-08-13",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.253777,
+          30.487486
+        ]
+      },
+      "properties": {
+        "id": 59,
+        "externalId": "BA-DK-002",
+        "region": "basin_bayou",
+        "name": "Basin beachfront dock 2",
+        "confidence": 40,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery aerial review 2026-08-13",
+        "lastUpdated": "2026-08-13 17:47:17",
+        "feature_type": "dock",
+        "field_verified": false,
+        "evidence": "dock at the small beachfront community",
+        "uncertainty": "Position estimated by eye from a moderate-zoom aerial crop, not pixel-verified or surveyed — treat as approximate, not exact.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery aerial review 2026-08-13",
+        "review_date": "2026-08-13",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.243277,
+          30.488086
+        ]
+      },
+      "properties": {
+        "id": 60,
+        "externalId": "BA-DK-003",
+        "region": "basin_bayou",
+        "name": "Basin channel-outlet dock",
+        "confidence": 40,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery aerial review 2026-08-13",
+        "lastUpdated": "2026-08-13 17:47:17",
+        "feature_type": "dock",
+        "field_verified": false,
+        "evidence": "dock near the pond/channel outlet to the bayou",
+        "uncertainty": "Position estimated by eye from a moderate-zoom aerial crop, not pixel-verified or surveyed — treat as approximate, not exact.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery aerial review 2026-08-13",
+        "review_date": "2026-08-13",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.13802,
+          30.478005
+        ]
+      },
+      "properties": {
+        "id": 63,
+        "externalId": "FM-DK-003",
+        "region": "four_mile_creek",
+        "name": "Four Mile Creek dock, east bank",
+        "confidence": 40,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery aerial review 2026-08-13",
+        "lastUpdated": "2026-08-13 17:47:17",
+        "feature_type": "dock",
+        "field_verified": false,
+        "evidence": "residential dock, east bank",
+        "uncertainty": "Position estimated by eye from a moderate-zoom aerial crop, not pixel-verified or surveyed — treat as approximate, not exact.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery aerial review 2026-08-13",
+        "review_date": "2026-08-13",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.13732,
+          30.475005
+        ]
+      },
+      "properties": {
+        "id": 64,
+        "externalId": "FM-DK-004",
+        "region": "four_mile_creek",
+        "name": "Four Mile Creek dock, lower reach",
+        "confidence": 40,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery aerial review 2026-08-13",
+        "lastUpdated": "2026-08-13 17:47:17",
+        "feature_type": "dock",
+        "field_verified": false,
+        "evidence": "residential dock near the lower creek/bay mouth",
+        "uncertainty": "Position estimated by eye from a moderate-zoom aerial crop, not pixel-verified or surveyed — treat as approximate, not exact.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery aerial review 2026-08-13",
+        "review_date": "2026-08-13",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.14012,
+          30.484905
+        ]
+      },
+      "properties": {
+        "id": 61,
+        "externalId": "FM-DK-001",
+        "region": "four_mile_creek",
+        "name": "Four Mile Creek dock, marina south",
+        "confidence": 40,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery aerial review 2026-08-13",
+        "lastUpdated": "2026-08-13 17:47:17",
+        "feature_type": "dock",
+        "field_verified": false,
+        "evidence": "residential dock just south of Shipyard Marina",
+        "uncertainty": "Position estimated by eye from a moderate-zoom aerial crop, not pixel-verified or surveyed — treat as approximate, not exact.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery aerial review 2026-08-13",
+        "review_date": "2026-08-13",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.14152,
+          30.481005
+        ]
+      },
+      "properties": {
+        "id": 62,
+        "externalId": "FM-DK-002",
+        "region": "four_mile_creek",
+        "name": "Four Mile Creek dock, west bank",
+        "confidence": 40,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery aerial review 2026-08-13",
+        "lastUpdated": "2026-08-13 17:47:17",
+        "feature_type": "dock",
+        "field_verified": false,
+        "evidence": "residential dock, west bank",
+        "uncertainty": "Position estimated by eye from a moderate-zoom aerial crop, not pixel-verified or surveyed — treat as approximate, not exact.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery aerial review 2026-08-13",
+        "review_date": "2026-08-13",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.250749,
+          30.390777
+        ]
+      },
+      "properties": {
+        "id": 65,
+        "externalId": "HT-DK-001",
+        "region": "hogtown_bayou",
+        "name": "Hogtown mouth-community dock 1",
+        "confidence": 40,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery aerial review 2026-08-13",
+        "lastUpdated": "2026-08-13 17:47:17",
+        "feature_type": "dock",
+        "field_verified": false,
+        "evidence": "dock at the small community near the bayou mouth",
+        "uncertainty": "Position estimated by eye from a moderate-zoom aerial crop, not pixel-verified or surveyed — treat as approximate, not exact.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery aerial review 2026-08-13",
+        "review_date": "2026-08-13",
+        "navigation_use": "not_for_navigation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.246199,
+          30.388977
+        ]
+      },
+      "properties": {
+        "id": 66,
+        "externalId": "HT-DK-002",
+        "region": "hogtown_bayou",
+        "name": "Hogtown mouth-community dock 2",
+        "confidence": 40,
+        "validationStatus": "visually_reviewed",
+        "source": "aerial_image_review: Esri World Imagery aerial review 2026-08-13",
+        "lastUpdated": "2026-08-13 17:47:17",
+        "feature_type": "dock",
+        "field_verified": false,
+        "evidence": "dock at the small community near the bayou mouth",
+        "uncertainty": "Position estimated by eye from a moderate-zoom aerial crop, not pixel-verified or surveyed — treat as approximate, not exact.",
+        "source_type": "aerial_image_review",
+        "source_reference": "Esri World Imagery aerial review 2026-08-13",
+        "review_date": "2026-08-13",
+        "navigation_use": "not_for_navigation"
+      }
+    }
+  ]
+}
