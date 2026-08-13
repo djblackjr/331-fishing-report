@@ -415,6 +415,20 @@ function leeSide(dir) { const oct = nearestOctant(dir); return DIR_WORD[OPPOSITE
 function windWord(dir) { return DIR_WORD[nearestOctant(dir)] || dir; }
 function capitalize(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
 
+// Shared step-text generator for any stop built around oyster bars or other
+// hard structure: with any real wind behind it, bait and the fish feeding on
+// it stack against the downwind (lee) side of the structure — the same read
+// the 331 Bridge stop already made, just reusable everywhere there's actual
+// structure to have a lee side. On a near-calm day there's no lee to speak
+// of, so fish spread evenly instead of stacking. Only wired into stops that
+// already reference real oyster bars/hard bottom below — grass-only stops
+// don't get this, since there's no structure for "lee side" to mean anything.
+function leeSideBaitNote(structureLabel = "the structure") {
+  return (wind) => wind.speed > 3
+    ? `${capitalize(windWord(wind.dir))} wind stacks bait against the ${leeSide(wind.dir)} side of ${structureLabel} — work that edge first`
+    : `${wind.description} — calm enough that fish should be spread evenly across ${structureLabel}, not stacked on one side`;
+}
+
 // "Monday, July 20, 2026" → { day: "MON", month: "JUL", date: "20" }, for the
 // compact date stamp on the share card.
 function shortDate(dateStr) {
@@ -476,7 +490,7 @@ const LOCATIONS = [
       { name: "Largemouth Bass", confidence: 45, note: "Upper creek near freshwater inflow, soft plastics" },
     ],
     stops: [
-      { order: 1, name: "Bayou Mouth Oyster Bars", tide: "Incoming tide", steps: ["Gold spoon along oyster bar edges", "Live shrimp under popping cork", (wind) => `${wind.description} — calm conditions concentrate fish at the mouth, prime spot`] },
+      { order: 1, name: "Bayou Mouth Oyster Bars", tide: "Incoming tide", steps: ["Gold spoon along oyster bar edges", "Live shrimp under popping cork", leeSideBaitNote("the oyster bars")] },
       { order: 2, name: "Creek Bends (Mid-Bayou)", tide: "Mid-incoming", steps: ["Slow-roll paddle-tail through bends", "Topwater along overhanging banks at dawn", "Mud minnow on 1/4 oz jig for flounder on bottom"] },
       { order: 3, name: "Upper Alaqua Creek", tide: "Any", steps: ["Transitions to bass-fishing style in upper reaches", "Soft plastics and small swimbaits near structure", "Watch for alligators — keep hooks away from the bank"] },
     ],
@@ -501,7 +515,7 @@ const LOCATIONS = [
     stops: [
       { order: 1, name: "Basin Bayou Mouth", tide: "Incoming tide", steps: ["Live shrimp under popping cork", "Work the tide line where bay meets bayou", "Pompano possible on small jigs near the mouth"] },
       { order: 2, name: "Interior Grass Flats", tide: "Mid-incoming", steps: ["Weedless gold spoon — slow retrieve over grass", "Sight fish for tailing reds in skinny water", "Stay shallow — most reds here are in under 2 feet"] },
-      { order: 3, name: "Oyster Bar Edges", tide: "Outgoing", steps: ["Switch to paddle-tail on falling tide", "Work parallel to oyster edges, not over them", "Flounder stack in sandy pockets adjacent to bars"] },
+      { order: 3, name: "Oyster Bar Edges", tide: "Outgoing", steps: ["Switch to paddle-tail on falling tide", "Work parallel to oyster edges, not over them", "Flounder stack in sandy pockets adjacent to bars", leeSideBaitNote("these oyster bars")] },
     ],
     aiNote: "Basin Bayou sees less pressure than Alaqua and LaGrange, which means less-educated fish. The interior grass flats are classic sight-fishing territory for reds — poling or drifting quietly in under 2 feet. Pompano occasionally show at the mouth on moving tides in late spring and early summer. Less protected than LaGrange when weather builds.",
     todaysCall: "Sunny calm day — smooth water is ideal for sight-fishing the interior grass flats. Perfect for spotting tailing reds in skinny water, and guides have been finding some genuinely big reds on the flats this week — including a 40+ inch bull redfish reported near Santa Rosa Beach. Start at the mouth with small jigs for pompano on the moving tide, then pole inside as the sun climbs.",
@@ -522,7 +536,7 @@ const LOCATIONS = [
       { name: "Sheepshead", confidence: 45, note: "Dock pilings and any hard structure inside bayou" },
     ],
     stops: [
-      { order: 1, name: "LaGrange Mouth Oyster Bars", tide: "Incoming tide", steps: ["Popping cork with live shrimp — classic setup", "Bone topwater along bar edges at first light", "Best trout spot in the area on incoming tide"] },
+      { order: 1, name: "LaGrange Mouth Oyster Bars", tide: "Incoming tide", steps: ["Popping cork with live shrimp — classic setup", "Bone topwater along bar edges at first light", "Best trout spot in the area on incoming tide", leeSideBaitNote("the oyster bars")] },
       { order: 2, name: "Interior Grass Flats", tide: "Mid-incoming", steps: ["Gold spoon or weedless paddle-tail", "Slow retrieve over submerged grass", "Reds and trout both active here mid-morning"] },
       { order: 3, name: "Deep Holes (Interior)", tide: "Outgoing or any falling water", steps: ["Fish deeper holes with shrimp on bottom for black drum", "Sheepshead near any dock pilings or hard structure", "Protected water makes a good late-morning stop as heat builds"] },
     ],
@@ -545,7 +559,7 @@ const LOCATIONS = [
       { name: "Sheepshead", confidence: 32, note: "Any hard structure near the confluence, fiddler crab" },
     ],
     stops: [
-      { order: 1, name: "Confluence with LaGrange Bayou", tide: "Incoming tide", steps: ["Live shrimp under popping cork working the mouth", "Gold spoon along any visible oyster structure", (wind) => `${wind.description} — pair this with LaGrange Bayou on the same trip`] },
+      { order: 1, name: "Confluence with LaGrange Bayou", tide: "Incoming tide", steps: ["Live shrimp under popping cork working the mouth", "Gold spoon along any visible oyster structure", leeSideBaitNote("the oyster structure"), (wind) => `${wind.description} — pair this with LaGrange Bayou on the same trip`] },
       { order: 2, name: "Marsh Edges", tide: "Mid-incoming", steps: ["Weedless paddle-tail along the grass line", "Watch for wakes and tailing fish in skinny water", "Quieter than LaGrange itself — less boat traffic this far up"] },
       { order: 3, name: "Interior Holes", tide: "Outgoing", steps: ["Shrimp on bottom in deeper holes for black drum", "Sheepshead near any dock or hard structure", "Fall back here once the confluence bite slows"] },
     ],
@@ -614,7 +628,7 @@ const LOCATIONS = [
       { name: "Sheepshead", confidence: 40, note: "Any hard structure or dock pilings near the mouth" },
     ],
     stops: [
-      { order: 1, name: "Bayou Mouth", tide: "Incoming tide", steps: ["Live shrimp under popping cork along the mouth", "Gold spoon slow-retrieved over oyster structure", (wind) => `${wind.description} — calm mornings are worth the run out here`] },
+      { order: 1, name: "Bayou Mouth", tide: "Incoming tide", steps: ["Live shrimp under popping cork along the mouth", "Gold spoon slow-retrieved over oyster structure", leeSideBaitNote("the oyster structure"), (wind) => `${wind.description} — calm mornings are worth the run out here`] },
       { order: 2, name: "Marsh Grass Edges", tide: "Mid-incoming", steps: ["Weedless paddle-tail worked along grass lines", "Watch for tailing reds in skinny water on a rising tide", "Sight-fishing quality similar to the state-park bayous further north"] },
       { order: 3, name: "Interior Holes", tide: "Outgoing", steps: ["Shrimp or cut bait on bottom for black drum", "Sheepshead near any structure with fiddler crab", "Good fallback once the mouth bite slows on the drop"] },
     ],
@@ -637,7 +651,7 @@ const LOCATIONS = [
       { name: "Black Drum", confidence: 40, note: "Interior holes, shrimp on bottom" },
     ],
     stops: [
-      { order: 1, name: "Bayou Entrance", tide: "Incoming tide", steps: ["Popping cork with live shrimp working the entrance", "Gold spoon along any visible oyster structure", (wind) => `${wind.description} — pair this with Mack Bayou next door on the same trip`] },
+      { order: 1, name: "Bayou Entrance", tide: "Incoming tide", steps: ["Popping cork with live shrimp working the entrance", "Gold spoon along any visible oyster structure", leeSideBaitNote("the oyster structure"), (wind) => `${wind.description} — pair this with Mack Bayou next door on the same trip`] },
       { order: 2, name: "Marsh Edges", tide: "Mid-incoming", steps: ["Weedless paddle-tail along the grass line", "Watch for wakes and tailing fish in skinny water", "Low boat traffic out here compared to bayous near the bridge"] },
       { order: 3, name: "Interior Water", tide: "Outgoing", steps: ["Shrimp on bottom in deeper holes for black drum", "Sheepshead near any dock or hard structure", "Fall back here once the entrance bite slows"] },
     ],
@@ -660,7 +674,7 @@ const LOCATIONS = [
       { name: "Sheepshead", confidence: 35, note: "Any hard structure near the mouth" },
     ],
     stops: [
-      { order: 1, name: "Bayou Mouth", tide: "Incoming tide", steps: ["Live shrimp under popping cork at the entrance", "Gold spoon over any oyster or hard bottom", "Smallest and least-fished of the three north-shore bayous"] },
+      { order: 1, name: "Bayou Mouth", tide: "Incoming tide", steps: ["Live shrimp under popping cork at the entrance", "Gold spoon over any oyster or hard bottom", "Smallest and least-fished of the three north-shore bayous", leeSideBaitNote("any oyster or hard bottom here")] },
       { order: 2, name: "Marsh Grass Edges", tide: "Mid-incoming", steps: ["Weedless paddle-tail along grass edges", "Sight-fish for tailing reds if water is clear", "Quiet water — pole or drift rather than run the motor"] },
       { order: 3, name: "Interior Water", tide: "Outgoing", steps: ["Shrimp on bottom in deeper spots for black drum", "Good last stop before heading back out to the bay"] },
     ],
