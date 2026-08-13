@@ -7,6 +7,7 @@
 // Run on schedule: see .github/workflows/daily-refresh.yml
 
 import { writeFile, readFile, mkdir } from "fs/promises";
+import * as SunCalc from "suncalc";
 
 const LAT = 30.48;   // approx. 331 Bridge / Shipyard Marina
 const LON = -86.14;
@@ -217,6 +218,64 @@ function moonPhase(date = new Date()) {
   return `${name} (~${illum}% illuminated) — ${tidalNote}`;
 }
 
+// ── Solunar feeding windows: computed locally via SunCalc's moon-position
+// math (no API, no key) ──────────────────────────────────────────────────
+// Classic solunar theory: fish feed most actively in the ~2-hour windows
+// centered on the moon transiting directly overhead or underfoot ("majors"),
+// plus shorter ~1-hour windows centered on moonrise/moonset ("minors"). This
+// is a genuinely different signal than the tide (which only tracks water
+// movement, not the moon's position relative to this exact spot on earth) —
+// the app shows it alongside the tide-based best window, not folded into it.
+//
+// Implemented by sampling the moon's altitude at LAT/LON every 5 minutes
+// across the Central-time calendar day (padded a few hours on each side so a
+// transit near midnight isn't missed) and reading off: altitude local maxima
+// (transit → major), local minima (antitransit → major), and rising/falling
+// zero-crossings (moonrise/moonset → minor). One consistent sampling method
+// for all four instead of mixing SunCalc's getMoonTimes() (whose "local day"
+// depends on the runtime's own timezone, not America/Chicago specifically).
+function centralOffsetMinutes(date) {
+  const part = new Intl.DateTimeFormat("en-US", { timeZone: "America/Chicago", timeZoneName: "shortOffset" })
+    .formatToParts(date).find((p) => p.type === "timeZoneName").value; // e.g. "GMT-5"
+  const m = part.match(/GMT([+-]\d+)/);
+  return m ? parseInt(m[1], 10) * 60 : -300;
+}
+function centralMidnightUTC(dateISO) {
+  const approx = new Date(`${dateISO}T00:00:00Z`);
+  return new Date(approx.getTime() - centralOffsetMinutes(approx) * 60000);
+}
+function fmtCT(date) {
+  return date.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit", timeZone: "America/Chicago" });
+}
+function getSolunar(dateISO) {
+  const dayStart = centralMidnightUTC(dateISO);
+  const dayEnd = new Date(dayStart.getTime() + 24 * 3600000);
+  const padStart = new Date(dayStart.getTime() - 4 * 3600000);
+  const padEnd = new Date(dayEnd.getTime() + 4 * 3600000);
+  const step = 5 * 60000;
+  const samples = [];
+  for (let t = padStart.getTime(); t <= padEnd.getTime(); t += step) {
+    const d = new Date(t);
+    samples.push({ time: d, alt: SunCalc.getMoonPosition(d, LAT, LON).altitude });
+  }
+  const majors = [], minors = [];
+  for (let i = 1; i < samples.length - 1; i++) {
+    const { time, alt } = samples[i];
+    if (time < dayStart || time >= dayEnd) continue; // only keep extremes that fall on this CT calendar day
+    const prev = samples[i - 1].alt, next = samples[i + 1].alt;
+    if (alt > prev && alt > next) majors.push({ time, type: "overhead" });
+    else if (alt < prev && alt < next) majors.push({ time, type: "underfoot" });
+    else if (prev < 0 && alt >= 0) minors.push({ time, type: "moonrise" });
+    else if (prev >= 0 && alt < 0) minors.push({ time, type: "moonset" });
+  }
+  const windowText = (time, halfHours) =>
+    `${fmtCT(new Date(time.getTime() - halfHours * 3600000))}–${fmtCT(new Date(time.getTime() + halfHours * 3600000))}`;
+  return {
+    majors: majors.map((x) => ({ type: x.type, peak: fmtCT(x.time), window: windowText(x.time, 1) })),
+    minors: minors.map((x) => ({ type: x.type, peak: fmtCT(x.time), window: windowText(x.time, 0.5) })),
+  };
+}
+
 // ── Main ───────────────────────────────────────────────────────────────────
 function extractStormWindow(text) {
   const m = text.match(/(before|after)\s+(\d+\s*(?:AM|PM))/i);
@@ -250,6 +309,14 @@ async function main() {
     console.warn("Pressure fetch failed, keeping previous value:", err.message);
     return existing.pressure ?? null;
   });
+  const todayISO = new Intl.DateTimeFormat("en-CA", { timeZone: "America/Chicago" }).format(new Date());
+  let solunar;
+  try {
+    solunar = getSolunar(todayISO);
+  } catch (err) {
+    console.warn("Solunar computation failed, keeping previous value:", err.message);
+    solunar = existing.solunar ?? null;
+  }
   const stormChance = forecast[0]?.storms || 0;
   const stormWindow = extractStormWindow(today.detailedForecast) || existing.stormWindow || "";
 
@@ -272,7 +339,7 @@ async function main() {
     // en-CA locale formats as YYYY-MM-DD, which is exactly what we need for a
     // reliable filename/lookup key — the human-readable `date` string above
     // isn't safe to parse back programmatically, this is.
-    dateISO: new Intl.DateTimeFormat("en-CA", { timeZone: "America/Chicago" }).format(new Date()),
+    dateISO: todayISO,
     wind: { speed: windMph, dir: windDir, description: `${today.windDirection} ${today.windSpeed}` },
     weather: `${today.shortForecast} · High ${today.temperature}°F${heatIndexFrom(today.detailedForecast) ? ` · Heat index up to ${heatIndexFrom(today.detailedForecast)}°F` : ""}`,
     tide: `${tide.text} · Sunrise ${sun.sunrise}`,
@@ -285,6 +352,7 @@ async function main() {
     moonPhase: moon,
     waterTemp,
     pressure,
+    solunar,
     lastUpdated: `${new Date().toLocaleString("en-US", { timeZone: "America/Chicago" })} CT · Source: National Weather Service + NOAA Tides (station ${TIDE_STATION}) · Auto-refreshed`,
     forecast,
     openMeteo, // array of 3 days, same shape as `forecast` but from a different model source — see getOpenMeteo()

@@ -1480,6 +1480,22 @@ export default function App() {
               <div style={{ color: "#f0faf4", fontWeight: 700 }}>{bestWindow.startText} – {bestWindow.endText}</div>
               <div style={{ fontSize: 11, color: "#86c7a0", marginTop: 1 }}>{bestWindow.reason}</div>
             </div>
+            {/* Solunar majors/minors — a different signal than the tide-based
+                window above (moon position vs. water movement), shown
+                alongside it rather than merged in. */}
+            {(C.solunar?.majors?.length > 0) && (
+              <div style={{ fontSize: 13, border: "1px solid #1a3828", background: "#0f2a1c", borderRadius: 8, padding: "7px 11px", textAlign: "left" }}>
+                <div style={{ fontSize: 11, color: "#7ab898", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 2 }}>🌙 Solunar majors</div>
+                {C.solunar.majors.map((m, i) => (
+                  <div key={i} style={{ color: "#f0faf4", fontWeight: 700 }}>{m.window}</div>
+                ))}
+                {C.solunar.minors?.length > 0 && (
+                  <div style={{ fontSize: 11, color: "#86c7a0", marginTop: 1 }}>
+                    Minors: {C.solunar.minors.map(m => m.window).join(" · ")}
+                  </div>
+                )}
+              </div>
+            )}
             {C.stormChance >= 10 && (
               <div style={{ fontSize: 13, border: "1px solid #1a3828", background: "#0f2a1c", borderRadius: 8, padding: "7px 11px", textAlign: "left" }}>
                 <div style={{ fontSize: 11, color: "#7ab898", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 2 }}>⛈️ Storm risk</div>
