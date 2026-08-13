@@ -66,6 +66,27 @@ const STATIC_CONDITIONS = {
 const CONDITIONS = { ...dailyData, ...STATIC_CONDITIONS };
 const FORECAST = dailyData.forecast;
 
+// Structured, machine-checkable mirror of the closed-season rules already
+// spelled out in STATIC_CONDITIONS.regulations' free-text `rules` strings
+// (e.g. "Closed February", "Gulf season closed Oct 15–Nov 30") — kept as a
+// separate table because parsing that prose reliably isn't worth it, but the
+// two must be updated together if a season changes. Used to flag a species
+// in the per-location confidence list instead of silently recommending
+// harvest during a closed window.
+const SEASON_CLOSURES = {
+  "Speckled Trout": [{ startMonth: 2, startDay: 1, endMonth: 2, endDay: 29 }], // February, FWC rule eff. April 1 2026
+  "Flounder": [{ startMonth: 10, startDay: 15, endMonth: 11, endDay: 30 }], // Gulf state season
+};
+function isClosedSeason(speciesName, dateISO) {
+  const ranges = SEASON_CLOSURES[speciesName];
+  if (!ranges || !dateISO) return false;
+  const [, m, d] = dateISO.split("-").map(Number);
+  return ranges.some(r =>
+    (m > r.startMonth || (m === r.startMonth && d >= r.startDay)) &&
+    (m < r.endMonth || (m === r.endMonth && d <= r.endDay))
+  );
+}
+
 function getLocationNotes(loc) {
   const notes = CONDITIONS.locationNotes?.[loc.id] || {};
   return {
@@ -122,6 +143,18 @@ function tideDirectionAt(events, targetMins) {
   return null;
 }
 
+// Day-over-day change in bay water temp, in °F (positive = warming). A sharp
+// swing matters as much as the absolute level — a fast post-front drop can
+// shut a bite down even at an otherwise comfortable number, and a fast
+// rebound after a cold snap can trigger a strong feeding push. Returns null
+// (rather than 0) when yesterday's reading isn't available, so callers can
+// tell "no change" apart from "no data".
+function waterTempDelta() {
+  const prev = CONDITIONS.previousDay?.waterTemp;
+  const cur = CONDITIONS.waterTemp;
+  return (typeof prev === "number" && typeof cur === "number") ? cur - prev : null;
+}
+
 // Takes a full LOCATIONS entry (not just its base score) so the
 // tide-alignment and species-signal factors below have what they need.
 function todaysAdjustedScore(loc) {
@@ -143,6 +176,11 @@ function todaysAdjustedScore(loc) {
   // outside a comfortable activity range.
   const wt = CONDITIONS.waterTemp;
   if (typeof wt === "number" && (wt > 88 || wt < 55)) score -= 0.4;
+  const wtDelta = waterTempDelta();
+  if (wtDelta != null) {
+    if (wtDelta <= -5) score -= 0.5; // sharp drop — classic post-front lockjaw
+    else if (wtDelta >= 5) score += 0.2; // sharp rebound warm-up can trigger a feeding push
+  }
 
   // Water clarity — muddy/off-color water hurts sight-fishing and most of
   // the artificial presentations this report leans on.
@@ -1140,6 +1178,13 @@ function LocationReport({ loc }) {
               {C.pressure.direction === "falling" ? "📉" : C.pressure.direction === "rising" ? "📈" : "➡️"} Pressure {C.pressure.direction} ({C.pressure.hpa} mb)
             </div>
           )}
+          {/* Trend, not just level — a fast swing either direction changes the
+              bite even when the absolute reading still looks "fine". */}
+          {Math.abs(waterTempDelta() ?? 0) >= 2 && (
+            <div style={{ fontSize: 16, color: "#7ab898", marginTop: 1 }}>
+              {waterTempDelta() < 0 ? "📉" : "📈"} Water temp {waterTempDelta() < 0 ? "dropping" : "rising"} ({waterTempDelta() > 0 ? "+" : ""}{waterTempDelta()}° vs yesterday)
+            </div>
+          )}
         </div>
         <WindCompass dir={C.wind.dir} />
       </div>
@@ -1154,16 +1199,24 @@ function LocationReport({ loc }) {
       {/* Species */}
       <Collapsible title="🐟 Species Confidence">
         <div style={{ marginTop: 10 }}>
-          {loc.species.map(s => (
+          {loc.species.map(s => {
+            const closed = isClosedSeason(s.name, C.dateISO);
+            return (
             <div key={s.name} style={{ marginBottom: 11 }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 3 }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 3, flexWrap: "wrap" }}>
                 <span style={{ fontSize: 16, fontWeight: 600, color: "#d1f0e0", minWidth: 130 }}>{s.name}</span>
                 <ConfBar pct={s.confidence} />
                 <span style={{ fontSize: 16, fontWeight: 700, color: s.confidence >= 75 ? "#4ade80" : s.confidence >= 50 ? "#facc15" : "#f87171", minWidth: 36, textAlign: "right" }}>{s.confidence}%</span>
+                {closed && (
+                  <span style={{ fontSize: 12, fontWeight: 700, color: "#f87171", background: "#f8717122", border: "1px solid #f8717155", borderRadius: 6, padding: "2px 7px", whiteSpace: "nowrap" }}>
+                    🚫 Closed season — catch &amp; release only
+                  </span>
+                )}
               </div>
               <div style={{ fontSize: 16, color: "#7ab898" }}>{s.note}</div>
             </div>
-          ))}
+            );
+          })}
         </div>
       </Collapsible>
 

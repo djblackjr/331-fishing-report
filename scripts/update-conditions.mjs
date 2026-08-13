@@ -263,6 +263,7 @@ async function main() {
     high: existing.forecast?.[0]?.high,
     stormChance: existing.stormChance ?? existing.forecast?.[0]?.storms ?? 0,
     tide: existing.tide,
+    waterTemp: existing.waterTemp ?? null,
   };
 
   const updated = {
