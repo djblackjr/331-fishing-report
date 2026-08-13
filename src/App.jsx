@@ -189,11 +189,31 @@ function todaysAdjustedScore(loc) {
 
   // Tide alignment — does today's tide match this spot's preferred stage
   // (per its own stops/species notes, captured in `bestTide`) during the
-  // best fishing window?
+  // best fishing window? `bestTide` is "incoming" at all 10 locations —
+  // checked every one's own stops/species notes directly (2026-08) rather
+  // than assume that's a copy-paste artifact, and it holds up: the
+  // mouth/oyster-bar stop is the highest-confidence pattern everywhere in
+  // this bay, because bait gets pushed up onto that structure from the
+  // open bay on the incoming tide — a real, shared estuary pattern, not a
+  // lazy default.
+  //
+  // What genuinely does vary by location — derived straight from each
+  // location's own `stops`, not a hand-set flag that could drift out of
+  // sync with them — is whether there's also a documented fallback stop
+  // built around the opposite tide (an interior deep hole or drop-off
+  // explicitly tagged "Outgoing"). Every location has one except Alaqua,
+  // whose three stops are Incoming / Mid-incoming / Any (bass water) —
+  // nothing there for a falling tide. So a wrong-tide day costs almost
+  // nothing where that fallback exists, and the full penalty only where
+  // it genuinely doesn't.
   if (loc.bestTide) {
     const dir = tideDirectionAt(CONDITIONS.tideEvents, getBestWindow().start);
     if (dir === loc.bestTide) score += 0.3;
-    else if (dir) score -= 0.2;
+    else if (dir) {
+      const opposite = loc.bestTide === "incoming" ? "outgoing" : "incoming";
+      const hasFallback = (loc.stops || []).some(s => typeof s.tide === "string" && new RegExp(opposite, "i").test(s.tide));
+      score -= hasFallback ? 0.05 : 0.2;
+    }
   }
 
   // Bay-wide species-activity signal, sourced from the Atlas's daily
