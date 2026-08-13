@@ -132,9 +132,25 @@ function tideDirectionAt(events, targetMins) {
   const pts = events.map(e => ({ ...e, mins: timeToMinutes(e.time) })).filter(e => e.mins != null).sort((a, b) => a.mins - b.mins);
   if (pts.length < 2) return null;
   const avgInterval = (pts[pts.length - 1].mins - pts[0].mins) / (pts.length - 1);
-  const before = { mins: pts[0].mins - avgInterval, type: pts[0].type === "H" ? "L" : "H" };
-  const after = { mins: pts[pts.length - 1].mins + avgInterval, type: pts[pts.length - 1].type === "H" ? "L" : "H" };
-  const all = [before, ...pts, after];
+  if (!avgInterval) return null;
+  const all = [...pts];
+  // Extend virtual points on both ends (alternating H/L, avgInterval apart)
+  // until targetMins is safely bracketed. A single virtual point on each
+  // side (the original approach) covers the common case, but a day whose
+  // only H and L happen to sit close together — e.g. near a
+  // diurnal-inequality date, or the 3-Day Look Ahead's day-2/3 tide
+  // predictions, which only carry that one day's events — can leave an
+  // early-morning target short of the first virtual point, silently
+  // returning null instead of a real direction. Capped iteration count
+  // guards against runaway extension on degenerate data.
+  let guard = 0;
+  while (all[0].mins > targetMins && guard++ < 200) {
+    all.unshift({ mins: all[0].mins - avgInterval, type: all[0].type === "H" ? "L" : "H" });
+  }
+  guard = 0;
+  while (all[all.length - 1].mins < targetMins && guard++ < 200) {
+    all.push({ mins: all[all.length - 1].mins + avgInterval, type: all[all.length - 1].type === "H" ? "L" : "H" });
+  }
   for (let i = 0; i < all.length - 1; i++) {
     if (targetMins >= all[i].mins && targetMins <= all[i + 1].mins) {
       return all[i].type === "L" ? "incoming" : "outgoing"; // rising off a low = incoming, falling off a high = outgoing
@@ -157,37 +173,56 @@ function waterTempDelta() {
 
 // Takes a full LOCATIONS entry (not just its base score) so the
 // tide-alignment and species-signal factors below have what they need.
-function todaysAdjustedScore(loc) {
-  const today = FORECAST[0] || {};
+// dayIndex selects which of FORECAST's 3 entries to score against (0 =
+// today, 1 = tomorrow, 2 = day after). Every factor below is either a real
+// per-day forecast (weather, tide, moon phase — update-conditions.mjs now
+// fetches/computes all three out to day 2) or is explicitly noted as reused
+// from today's single reading because no multi-day forecast source exists
+// for it (water temp, water clarity, species-activity signal) — see each
+// block's comment. The day-over-day *trend* bonuses (water-temp delta,
+// which needs a real "yesterday" reading to compare against) only apply to
+// today; extending a measured trend out to a day we have no real reading
+// for would overstate how confident that projection actually is, so those
+// are skipped entirely on day 1/2 rather than guessed at.
+function adjustedScoreForDay(loc, dayIndex = 0) {
+  const day = FORECAST[dayIndex] || {};
   let score = loc.overallScore;
 
-  // Weather — unchanged from the original model.
-  score -= (today.storms || 0) / 40; // 40% storm chance ≈ -1.0
-  if ((CONDITIONS.wind?.speed || 0) > 15) score -= 1;
+  // Weather — real forecast for every day in the 3-day window.
+  score -= (day.storms || 0) / 40; // 40% storm chance ≈ -1.0
+  const windSpeed = dayIndex === 0 ? (CONDITIONS.wind?.speed || 0) : (day.windSpeed || 0);
+  if (windSpeed > 15) score -= 1;
 
-  // Moon phase / tidal strength — spring tides (new/full moon) push more
-  // water and move more bait; neap tides (quarter moons) move noticeably
-  // less water and fish less predictably.
-  const moon = (CONDITIONS.moonPhase || "").toLowerCase();
+  // Moon phase / tidal strength — real forecast for every day (pure
+  // astronomy computed for that specific date, not approximated). Spring
+  // tides (new/full moon) push more water and move more bait; neap tides
+  // (quarter moons) move noticeably less water and fish less predictably.
+  const moon = (dayIndex === 0 ? CONDITIONS.moonPhase : (day.moonPhase || CONDITIONS.moonPhase) || "").toLowerCase();
   if (moon.includes("spring tide")) score += 0.3;
   else if (moon.includes("neap tide")) score -= 0.2;
 
   // Water temp — reds/trout get lethargic and push to deeper, cooler water
-  // outside a comfortable activity range.
+  // outside a comfortable activity range. No multi-day water-temp forecast
+  // exists, so day 1/2 reuse today's single reading as a "conditions
+  // roughly persist" assumption — reasonable over a couple of days, but not
+  // a real prediction, which is why the trend bonus below stays today-only.
   const wt = CONDITIONS.waterTemp;
   if (typeof wt === "number" && (wt > 88 || wt < 55)) score -= 0.4;
-  const wtDelta = waterTempDelta();
-  if (wtDelta != null) {
-    if (wtDelta <= -5) score -= 0.5; // sharp drop — classic post-front lockjaw
-    else if (wtDelta >= 5) score += 0.2; // sharp rebound warm-up can trigger a feeding push
+  if (dayIndex === 0) {
+    const wtDelta = waterTempDelta();
+    if (wtDelta != null) {
+      if (wtDelta <= -5) score -= 0.5; // sharp drop — classic post-front lockjaw
+      else if (wtDelta >= 5) score += 0.2; // sharp rebound warm-up can trigger a feeding push
+    }
   }
 
   // Water clarity — muddy/off-color water hurts sight-fishing and most of
-  // the artificial presentations this report leans on.
+  // the artificial presentations this report leans on. No forecast source;
+  // reused from today's reading same as water temp above.
   const clarity = (CONDITIONS.waterClarity || "").toLowerCase();
   if (clarity.includes("muddy") || clarity.includes("off-color") || clarity.includes("off color")) score -= 0.3;
 
-  // Tide alignment — does today's tide match this spot's preferred stage
+  // Tide alignment — does that day's tide match this spot's preferred stage
   // (per its own stops/species notes, captured in `bestTide`) during the
   // best fishing window? `bestTide` is "incoming" at all 10 locations —
   // checked every one's own stops/species notes directly (2026-08) rather
@@ -195,7 +230,11 @@ function todaysAdjustedScore(loc) {
   // mouth/oyster-bar stop is the highest-confidence pattern everywhere in
   // this bay, because bait gets pushed up onto that structure from the
   // open bay on the incoming tide — a real, shared estuary pattern, not a
-  // lazy default.
+  // lazy default. Real per-day tide predictions now back this check for
+  // day 1/2 too (not just today), so the direction actually reflects that
+  // specific day — the best-window start time (sunrise) is reused from
+  // today across all 3 days, since sunrise shifts only ~1-2 min/day this
+  // time of year, well within this check's tolerance.
   //
   // What genuinely does vary by location — derived straight from each
   // location's own `stops`, not a hand-set flag that could drift out of
@@ -207,7 +246,8 @@ function todaysAdjustedScore(loc) {
   // nothing where that fallback exists, and the full penalty only where
   // it genuinely doesn't.
   if (loc.bestTide) {
-    const dir = tideDirectionAt(CONDITIONS.tideEvents, getBestWindow().start);
+    const tideEvents = dayIndex === 0 ? CONDITIONS.tideEvents : (day.tideEvents?.length ? day.tideEvents : CONDITIONS.tideEvents);
+    const dir = tideDirectionAt(tideEvents, getBestWindow().start);
     if (dir === loc.bestTide) score += 0.3;
     else if (dir) {
       const opposite = loc.bestTide === "incoming" ? "outgoing" : "incoming";
@@ -218,14 +258,17 @@ function todaysAdjustedScore(loc) {
 
   // Bay-wide species-activity signal, sourced from the Atlas's daily
   // intelligence packet — regional evidence only, not spot-specific proof
-  // (see that packet's own scopeNote). Weighted across this location's
-  // whole species list (not just its top pick) so two locations that share
-  // the same #1 species but differ further down the list — e.g. one backed
-  // up by flounder and black drum, another by sheepshead — actually score
-  // differently instead of moving in lockstep. Each mapped species
-  // contributes in proportion to its own confidence; species this packet
-  // doesn't track (Largemouth Bass, Spanish Mackerel, Pompano) are skipped
-  // rather than guessed at.
+  // (see that packet's own scopeNote). No multi-day version of this exists
+  // either (it's a read on the last week or two of reports, not a
+  // forecast), so day 1/2 reuse today's signal on the same "recent pattern
+  // reasonably persists a couple of days" assumption as water temp/clarity
+  // above. Weighted across this location's whole species list (not just
+  // its top pick) so two locations that share the same #1 species but
+  // differ further down the list — e.g. one backed up by flounder and
+  // black drum, another by sheepshead — actually score differently instead
+  // of moving in lockstep. Each mapped species contributes in proportion
+  // to its own confidence; species this packet doesn't track (Largemouth
+  // Bass, Spanish Mackerel, Pompano) are skipped rather than guessed at.
   const signals = CONDITIONS.speciesSignals || [];
   const mapped = (loc.species || [])
     .map(s => ({ confidence: s.confidence, signal: signals.find(sig => sig.key === SPECIES_SIGNAL_KEY[s.name]) }))
@@ -237,6 +280,12 @@ function todaysAdjustedScore(loc) {
   }
 
   return Math.max(3, Math.min(10, Math.round(score * 10) / 10));
+}
+
+// Back-compat name for the day-0 (today) case — kept so every existing call
+// site didn't need to change just to thread a dayIndex through.
+function todaysAdjustedScore(loc) {
+  return adjustedScoreForDay(loc, 0);
 }
 
 // Averages today's high temp and storm chance across whichever of the two
@@ -277,9 +326,11 @@ function daysBetween(dateStrEarlier, dateStrLater) {
   return Math.round((b - a) / 86400000);
 }
 // ── BEST BET TODAY ───────────────────────────────────────────────────────────
-// Ranks every location by today's-adjusted score and returns the top pick.
-function getBestBet() {
-  const ranked = LOCATIONS.map(loc => ({ loc, score: todaysAdjustedScore(loc) }))
+// Ranks every location by that day's adjusted score and returns the top
+// pick. dayIndex defaults to 0 (today); the 3-Day Look Ahead calls this for
+// 1 and 2 as well so each day gets its own real Best Bet, not just today's.
+function getBestBet(dayIndex = 0) {
+  const ranked = LOCATIONS.map(loc => ({ loc, score: adjustedScoreForDay(loc, dayIndex) }))
     .sort((a, b) => b.score - a.score);
   return ranked[0];
 }
@@ -967,21 +1018,22 @@ function ShareCard({ C, bestBet }) {
 
 // ── FORECAST COMPONENT ─────────────────────────────────────────────────────────
 function ForecastStrip() {
-  const bestBet = getBestBet(); // used to override Today's score below — see comment inline
   return (
     <Collapsible title="📅 3-Day Look Ahead" defaultOpen={true}>
       <div style={{ marginTop: 12 }}>
         {FORECAST.map((day, i) => {
-          // Today's score (i === 0) previously came from its own independent
-          // formula (scoreFor() in the automation script), while every
-          // location score comes from todaysAdjustedScore(). These were two
-          // unrelated calculations that both displayed as "X/10" — nothing
-          // guaranteed they'd agree, which is exactly the bug that showed up
-          // (top score 8.6, but every individual location capped at 8.3).
-          // Today's score now IS the Best Bet score, so they can't diverge.
-          // Tomorrow/day-after keep their own forecast-based score, since we
-          // don't have location-adjusted data for future days.
-          const sc = i === 0 ? bestBet.score : day.fishingScore;
+          // Score (and now Best Bet location) for every day in the window
+          // comes from the same location-adjusted ranking, not a separate
+          // formula — this used to only be true for i===0 (day.fishingScore
+          // was its own independent number for tomorrow/day-after, which
+          // could silently disagree with the location cards). Now every day
+          // gets a real per-day Best Bet: real tide predictions and moon
+          // phase for that specific date, real forecasted storms/wind —
+          // see adjustedScoreForDay()'s comments for exactly which factors
+          // are day-specific vs. reused from today (water temp, clarity,
+          // species signal have no multi-day forecast source).
+          const bestBet = getBestBet(i);
+          const sc = bestBet.score;
           const color = ratingColor(sc);
           const rating = ratingLabel(sc);
           const stormColor = day.storms >= 60 ? "#f87171" : day.storms >= 30 ? "#facc15" : "#4ade80";
@@ -996,6 +1048,11 @@ function ForecastStrip() {
                   <div style={{ fontSize: 16, fontWeight: 700, color: color }}>{rating} conditions</div>
                 </div>
                 <div style={{ fontSize: 37 }}>{day.emoji}</div>
+              </div>
+
+              {/* Best Bet for this specific day */}
+              <div style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 15, color: "#4ade80", fontWeight: 600, marginBottom: 8, background: "#0d2918", border: "1px solid #4ade8033", borderRadius: 8, padding: "6px 10px" }}>
+                🏆 Best bet: {bestBet.loc.emoji} {bestBet.loc.label}
               </div>
 
               {/* Headline */}

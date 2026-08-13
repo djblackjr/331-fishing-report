@@ -88,10 +88,18 @@ function buildForecastEntries(periods) {
     const heat = heatIndexFrom(p.detailedForecast);
     return {
       day: new Date(p.startTime).toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" }),
+      // en-CA -> YYYY-MM-DD, matching the top-level `dateISO` convention.
+      // Lets the client (and this script, below) look up this specific
+      // day's real tide predictions and moon phase instead of reusing
+      // today's — the NWS period's own startTime is the authoritative
+      // source of which calendar day this entry actually is.
+      dateISO: new Intl.DateTimeFormat("en-CA", { timeZone: "America/Chicago" }).format(new Date(p.startTime)),
       label: labels[i] || p.name,
       high: p.temperature,
       low: null, // filled in from the following night period by caller if desired
       wind: `${p.windDirection} ${p.windSpeed}`,
+      windSpeed: windMph, // parsed number, so the client's per-day score doesn't have to re-parse "5 to 10 mph" text
+      windDir: (p.windDirection.match(/[NSEW]+/) || ["E"])[0],
       storms: storms ? Math.max(pop, 20) : pop,
       headline: `${p.shortForecast}${heat ? ` · Heat index ${heat}` : ""}`,
       fishingScore: scoreFor({ windMph, pop, storms }),
@@ -170,18 +178,31 @@ async function getWaterTemp() {
   return Math.round(data.current.sea_surface_temperature);
 }
 
-async function getTideData() {
-  const today = new Date();
-  const ymd = today.toISOString().slice(0, 10).replace(/-/g, "");
-  const url = `https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?product=predictions&application=331FishingReport&begin_date=${ymd}&end_date=${ymd}&datum=MLLW&station=${TIDE_STATION}&time_zone=lst_ldt&units=english&interval=hilo&format=json`;
+// todayISO drives the request range so this reliably spans the Central-time
+// "today" through "today + daysAhead", regardless of what timezone the
+// runtime (e.g. a GitHub Actions runner) itself is in. NOAA's
+// time_zone=lst_ldt makes every returned `t` timestamp already local to the
+// station (Central time) — "2026-08-13 12:01" — so byDate can key off its
+// first 10 characters directly with no further conversion.
+async function getTideData(todayISO, daysAhead = 2) {
+  const begin = todayISO.replace(/-/g, "");
+  const endDate = new Date(`${todayISO}T12:00:00Z`); // noon UTC sidesteps any DST-boundary edge case when adding days
+  endDate.setUTCDate(endDate.getUTCDate() + daysAhead);
+  const end = new Intl.DateTimeFormat("en-CA", { timeZone: "America/Chicago" }).format(endDate).replace(/-/g, "");
+  const url = `https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?product=predictions&application=331FishingReport&begin_date=${begin}&end_date=${end}&datum=MLLW&station=${TIDE_STATION}&time_zone=lst_ldt&units=english&interval=hilo&format=json`;
   const data = await getJson(url);
   const preds = data.predictions || [];
   const fmt = (t) => new Date(t.replace(" ", "T")).toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit", timeZone: "America/Chicago" });
-  const events = preds.map((p) => ({ type: p.type, time: fmt(p.t) })); // structured, for the tide-curve graph
+  const byDate = {};
+  for (const p of preds) {
+    const dateKey = p.t.slice(0, 10); // "2026-08-13 12:01" -> "2026-08-13"
+    (byDate[dateKey] ||= []).push({ type: p.type, time: fmt(p.t) });
+  }
+  const events = byDate[todayISO] || []; // structured, for the tide-curve graph
   const highs = events.filter((e) => e.type === "H").map((e) => e.time);
   const lows = events.filter((e) => e.type === "L").map((e) => e.time);
   const text = `High tide ~${highs[0] || "n/a"} · Low tide ~${lows[0] || "n/a"}`;
-  return { text, events };
+  return { text, events, byDate };
 }
 
 // ── Sunrise/sunset: sunrise-sunset.org ────────────────────────────────────────
@@ -288,13 +309,18 @@ async function main() {
   // forever by inheriting whatever its last real value was.
   const { yrNo: _droppedYrNo, ...existing } = JSON.parse(await readFile(OUT_PATH, "utf-8"));
 
+  const todayISO = new Intl.DateTimeFormat("en-CA", { timeZone: "America/Chicago" }).format(new Date());
+
   const periods = await getForecast();
   const today = periods.find((p) => p.isDaytime) || periods[0];
   const windMph = parseWindSpeed(today.windSpeed);
   const windDir = (today.windDirection.match(/[NSEW]+/) || ["E"])[0];
 
   const forecast = buildForecastEntries(periods);
-  const tide = await getTideData().catch(() => ({ text: existing.tide, events: existing.tideEvents || [] }));
+  // Fetched out to daysAhead=2 (today + the next 2 days) so the 3-Day Look
+  // Ahead's per-day Best Bet can check each day's own real tide direction
+  // instead of reusing today's — see `byDate` below.
+  const tide = await getTideData(todayISO, 2).catch(() => ({ text: existing.tide, events: existing.tideEvents || [], byDate: {} }));
   const sun = await getSunTimes().catch(() => ({ sunrise: existing.sunrise, sunset: existing.sunset }));
   const openMeteo = await getOpenMeteo().catch((err) => {
     console.warn("Open-Meteo fetch failed, keeping previous value:", err.message);
@@ -309,7 +335,23 @@ async function main() {
     console.warn("Pressure fetch failed, keeping previous value:", err.message);
     return existing.pressure ?? null;
   });
-  const todayISO = new Intl.DateTimeFormat("en-CA", { timeZone: "America/Chicago" }).format(new Date());
+
+  // Attach each forecast day's own real tide predictions (from the range
+  // fetch above) and its own real moon phase (moonPhase() is pure date
+  // arithmetic, so this is exact, not approximated) — everything the
+  // per-day Best Bet's tide-alignment and spring/neap checks need. Water
+  // temp, water clarity, pressure trend, and species-activity signal have
+  // no equivalent multi-day forecast source and stay same-as-today; see
+  // adjustedScoreForDay()'s comments in src/App.jsx for how those are
+  // handled on day 2/3.
+  for (const f of forecast) {
+    f.tideEvents = tide.byDate?.[f.dateISO] || [];
+    // Encoded without a timezone suffix so Date parses it in the runtime's
+    // own local zone and moonPhase() reads the same components straight
+    // back off it — self-consistent regardless of what "local" means here,
+    // since no zone conversion actually happens in either direction.
+    f.moonPhase = moonPhase(new Date(`${f.dateISO}T12:00:00`));
+  }
   let solunar;
   try {
     solunar = getSolunar(todayISO);
