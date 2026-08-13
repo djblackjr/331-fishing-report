@@ -146,8 +146,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -86.257977,
-          30.488086
+          -86.257957,
+          30.486651
         ]
       },
       "properties": {
@@ -155,10 +155,10 @@
         "externalId": "BA-DK-001",
         "region": "basin_bayou",
         "name": "Basin beachfront dock 1",
-        "confidence": 40,
+        "confidence": 55,
         "validationStatus": "visually_reviewed",
-        "source": "aerial_image_review: Esri World Imagery aerial review 2026-08-13",
-        "lastUpdated": "2026-08-13 17:47:17",
+        "source": "aerial_image_review: Esri World Imagery re-check 2026-08-13 (corrected from inland placement to actual pier, pixel-verified against fresh tile pull)",
+        "lastUpdated": "2026-08-13 22:59:22",
         "feature_type": "dock",
         "field_verified": false,
         "evidence": "dock at the small beachfront community",
@@ -174,8 +174,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -86.253777,
-          30.487486
+          -86.255071,
+          30.486813
         ]
       },
       "properties": {
@@ -183,10 +183,10 @@
         "externalId": "BA-DK-002",
         "region": "basin_bayou",
         "name": "Basin beachfront dock 2",
-        "confidence": 40,
+        "confidence": 55,
         "validationStatus": "visually_reviewed",
-        "source": "aerial_image_review: Esri World Imagery aerial review 2026-08-13",
-        "lastUpdated": "2026-08-13 17:47:17",
+        "source": "aerial_image_review: Esri World Imagery re-check 2026-08-13 (corrected from inland placement to actual pier, pixel-verified against fresh tile pull)",
+        "lastUpdated": "2026-08-13 22:59:22",
         "feature_type": "dock",
         "field_verified": false,
         "evidence": "dock at the small beachfront community",
@@ -202,8 +202,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -86.243277,
-          30.488086
+          -86.244829,
+          30.486805
         ]
       },
       "properties": {
@@ -211,10 +211,10 @@
         "externalId": "BA-DK-003",
         "region": "basin_bayou",
         "name": "Basin channel-outlet dock",
-        "confidence": 40,
+        "confidence": 55,
         "validationStatus": "visually_reviewed",
-        "source": "aerial_image_review: Esri World Imagery aerial review 2026-08-13",
-        "lastUpdated": "2026-08-13 17:47:17",
+        "source": "aerial_image_review: Esri World Imagery re-check 2026-08-13 (corrected from inland placement to actual pier, pixel-verified against fresh tile pull)",
+        "lastUpdated": "2026-08-13 22:59:22",
         "feature_type": "dock",
         "field_verified": false,
         "evidence": "dock near the pond/channel outlet to the bayou",

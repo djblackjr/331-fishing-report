@@ -96,7 +96,7 @@
     "category": "habitat",
     "color": "#92400e",
     "defaultVisible": false,
-    "featureCount": 5
+    "featureCount": 0
   },
   {
     "key": "redfish_routes",
