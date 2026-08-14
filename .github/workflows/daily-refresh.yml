@@ -21,6 +21,9 @@ jobs:
         with:
           node-version: 24
 
+      - name: Install dependencies
+        run: npm install
+
       - name: Fetch live conditions and update conditions.json
         run: node scripts/update-conditions.mjs
 
