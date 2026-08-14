@@ -87,7 +87,7 @@
     "category": "habitat",
     "color": "#d97706",
     "defaultVisible": false,
-    "featureCount": 14
+    "featureCount": 11
   },
   {
     "key": "dock_zones",
@@ -96,7 +96,7 @@
     "category": "habitat",
     "color": "#92400e",
     "defaultVisible": false,
-    "featureCount": 0
+    "featureCount": 5
   },
   {
     "key": "redfish_routes",

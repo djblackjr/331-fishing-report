@@ -6,36 +6,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -86.198,
-          30.4824
-        ]
-      },
-      "properties": {
-        "id": 57,
-        "externalId": "AL-DK-005",
-        "region": "alaqua_bayou",
-        "name": "Alaqua cove-mouth dock",
-        "confidence": 40,
-        "validationStatus": "visually_reviewed",
-        "source": "aerial_image_review: Esri World Imagery aerial review 2026-08-13",
-        "lastUpdated": "2026-08-13 17:47:17",
-        "feature_type": "dock",
-        "field_verified": false,
-        "evidence": "dock near the cove-mouth community",
-        "uncertainty": "Position estimated by eye from a moderate-zoom aerial crop, not pixel-verified or surveyed — treat as approximate, not exact.",
-        "source_type": "aerial_image_review",
-        "source_reference": "Esri World Imagery aerial review 2026-08-13",
-        "review_date": "2026-08-13",
-        "navigation_use": "not_for_navigation"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -86.20115,
-          30.49296
+          -86.20118,
+          30.49671
         ]
       },
       "properties": {
@@ -45,15 +17,15 @@
         "name": "Alaqua narrows dock",
         "confidence": 40,
         "validationStatus": "visually_reviewed",
-        "source": "aerial_image_review: Esri World Imagery aerial review 2026-08-13",
-        "lastUpdated": "2026-08-13 17:47:17",
+        "source": "aerial_image_review: Esri World Imagery re-check 2026-08-14 (corrected from open-water placement to the actual covered boat lift/pier, pixel-verified against fresh tile pull)",
+        "lastUpdated": "2026-08-14 11:00:00",
         "feature_type": "dock",
         "field_verified": false,
         "evidence": "small pier at the marsh/creek narrows",
-        "uncertainty": "Position estimated by eye from a moderate-zoom aerial crop, not pixel-verified or surveyed — treat as approximate, not exact.",
+        "uncertainty": "Re-verified 2026-08-14 by pixel-mapping a fresh Esri World Imagery tile against the visible covered boat lift/pier structure; original 2026-08-13 eyeballed placement was ~415m south, out in open water.",
         "source_type": "aerial_image_review",
-        "source_reference": "Esri World Imagery aerial review 2026-08-13",
-        "review_date": "2026-08-13",
+        "source_reference": "Esri World Imagery re-check 2026-08-14",
+        "review_date": "2026-08-14",
         "navigation_use": "not_for_navigation"
       }
     },
@@ -62,36 +34,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -86.1989,
-          30.48416
-        ]
-      },
-      "properties": {
-        "id": 56,
-        "externalId": "AL-DK-004",
-        "region": "alaqua_bayou",
-        "name": "Alaqua south shore dock",
-        "confidence": 40,
-        "validationStatus": "visually_reviewed",
-        "source": "aerial_image_review: Esri World Imagery aerial review 2026-08-13",
-        "lastUpdated": "2026-08-13 17:47:17",
-        "feature_type": "dock",
-        "field_verified": false,
-        "evidence": "residential dock near south-shore community",
-        "uncertainty": "Position estimated by eye from a moderate-zoom aerial crop, not pixel-verified or surveyed — treat as approximate, not exact.",
-        "source_type": "aerial_image_review",
-        "source_reference": "Esri World Imagery aerial review 2026-08-13",
-        "review_date": "2026-08-13",
-        "navigation_use": "not_for_navigation"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -86.20385,
-          30.48724
+          -86.20558,
+          30.48913
         ]
       },
       "properties": {
@@ -101,43 +45,15 @@
         "name": "Alaqua west shore dock 1",
         "confidence": 40,
         "validationStatus": "visually_reviewed",
-        "source": "aerial_image_review: Esri World Imagery aerial review 2026-08-13",
-        "lastUpdated": "2026-08-13 17:47:17",
+        "source": "aerial_image_review: Esri World Imagery re-check 2026-08-14 (corrected from open-water placement to the actual pier, pixel-verified against fresh tile pull)",
+        "lastUpdated": "2026-08-14 11:00:00",
         "feature_type": "dock",
         "field_verified": false,
         "evidence": "residential dock, west shore",
-        "uncertainty": "Position estimated by eye from a moderate-zoom aerial crop, not pixel-verified or surveyed — treat as approximate, not exact.",
+        "uncertainty": "Re-verified 2026-08-14 by pixel-mapping a fresh Esri World Imagery tile against the visible pier structure; original 2026-08-13 eyeballed placement was ~250m out in open water.",
         "source_type": "aerial_image_review",
-        "source_reference": "Esri World Imagery aerial review 2026-08-13",
-        "review_date": "2026-08-13",
-        "navigation_use": "not_for_navigation"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -86.2025,
-          30.48504
-        ]
-      },
-      "properties": {
-        "id": 55,
-        "externalId": "AL-DK-003",
-        "region": "alaqua_bayou",
-        "name": "Alaqua west shore dock 2",
-        "confidence": 40,
-        "validationStatus": "visually_reviewed",
-        "source": "aerial_image_review: Esri World Imagery aerial review 2026-08-13",
-        "lastUpdated": "2026-08-13 17:47:17",
-        "feature_type": "dock",
-        "field_verified": false,
-        "evidence": "residential dock, west shore",
-        "uncertainty": "Position estimated by eye from a moderate-zoom aerial crop, not pixel-verified or surveyed — treat as approximate, not exact.",
-        "source_type": "aerial_image_review",
-        "source_reference": "Esri World Imagery aerial review 2026-08-13",
-        "review_date": "2026-08-13",
+        "source_reference": "Esri World Imagery re-check 2026-08-14",
+        "review_date": "2026-08-14",
         "navigation_use": "not_for_navigation"
       }
     },
