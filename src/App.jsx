@@ -1065,6 +1065,18 @@ function ForecastStrip() {
                 <span style={{ color: stormColor }}>⛈️ {day.storms}%</span>
               </div>
 
+              {/* Tide times — real per-day NOAA predictions, not reused from today (see FORECAST comment above) */}
+              {day.tideEvents?.length > 0 && (
+                <div style={{ fontSize: 15, color: "#7ab898", marginBottom: 10 }}>
+                  🌊 {day.tideEvents.map((e, j) => (
+                    <span key={j}>
+                      {j > 0 && " · "}
+                      {e.type === "H" ? "High" : "Low"} <b style={{ color: "#d1f0e0" }}>{e.time}</b>
+                    </span>
+                  ))}
+                </div>
+              )}
+
               {/* AI call */}
               <div style={{ fontSize: 16, color: "#86c7a0", lineHeight: 1.6, paddingTop: 10, borderTop: "1px solid #1a3828" }}>
                 💡 {day.aiCall}
