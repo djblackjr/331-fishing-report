@@ -21,10 +21,10 @@
     "sky": "Cloudy",
     "stormChance": 34,
     "pressure": {
-      "hpa": 1015.3,
-      "inHg": 29.98,
+      "hpa": 1016,
+      "inHg": 30,
       "direction": "falling",
-      "changeHpa3h": -1.2
+      "changeHpa3h": -0.5
     }
   },
   "currentReport": {
@@ -60,17 +60,17 @@
       "sky": "Cloudy",
       "stormChance": 34,
       "pressure": {
-        "hpa": 1015.3,
-        "inHg": 29.98,
+        "hpa": 1016,
+        "inHg": 30,
         "direction": "falling",
-        "changeHpa3h": -1.2
+        "changeHpa3h": -0.5
       }
     }
   },
   "archivedReports": [
     {
       "kind": "archived_app_snapshot",
-      "date": "2026-08-20",
+      "date": "2026-08-21",
       "displayDate": "August 12, 2026",
       "summary": "Note: The most current inshore-focused reports found for Choctawhatchee Bay are from late July to early August 2026 — roughly 1–2 weeks old — so treat this as recent rather than this-week current. Speckled trout have been the standout bay species, with multiple reports of solid numbers spread across the grass flats; one Santa Rosa Beach-area report (about a week old) highlighted a 40-inch, 26-lb bull redfish alongside good trout action. The fishingbooker.com Choctawhatchee Bay seasonal summary for July–August describes bull redfish and trophy-sized trout as the primary inshore targets right now, with guides recommending early morning trips to beat summer crowds and heat. Water temperature at this location is measuring 87°F, which is pushing fish into slightly deeper, shadier water during midday — early morning and evening windows on the grass flats and around structure will be most productive.",
       "attribution": "captainexperiences.com (Choctawhatchee Bay reports page), fishingbooker.com (Choctawhatchee Bay reports/destination page) · Auto-refreshed via Claude API",
@@ -84,27 +84,27 @@
         "redfish"
       ],
       "conditions": {
-        "wind": "W 0 to 10 mph",
+        "wind": "W 0 to 5 mph",
         "windDir": "W",
-        "tide": "High tide ~11:17 PM · Low tide ~11:31 AM · Sunrise 6:13 AM",
+        "tide": "High tide ~12:23 AM · Low tide ~12:28 PM · Sunrise 6:13 AM",
         "tideEvents": [
           {
             "type": "H",
-            "time": "11:17 PM"
+            "time": "12:23 AM"
           },
           {
             "type": "L",
-            "time": "11:31 AM"
+            "time": "12:28 PM"
           }
         ],
         "waterTemp": 86,
         "sky": "Cloudy",
-        "stormChance": 29,
+        "stormChance": 34,
         "pressure": {
-          "hpa": 1015.4,
+          "hpa": 1015.3,
           "inHg": 29.98,
-          "direction": "steady",
-          "changeHpa3h": -0.4
+          "direction": "falling",
+          "changeHpa3h": -1.2
         }
       }
     },
