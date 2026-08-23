@@ -24,7 +24,7 @@
   "moonPhase": "Waxing Gibbous (~84% illuminated) — strong tidal push (spring tide)",
   "waterClarity": "Slightly stained",
   "sky": "Cloudy",
-  "lastUpdated": "8/23/2026, 3:12:15 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "lastUpdated": "8/23/2026, 3:44:56 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
   "localBiteReport": "Note: The most current inshore-focused reports found for Choctawhatchee Bay are from late July to early August 2026 — roughly 1–2 weeks old — so treat this as recent rather than this-week current. Speckled trout have been the standout bay species, with multiple reports of solid numbers spread across the grass flats; one Santa Rosa Beach-area report (about a week old) highlighted a 40-inch, 26-lb bull redfish alongside good trout action. The fishingbooker.com Choctawhatchee Bay seasonal summary for July–August describes bull redfish and trophy-sized trout as the primary inshore targets right now, with guides recommending early morning trips to beat summer crowds and heat. Water temperature at this location is measuring 87°F, which is pushing fish into slightly deeper, shadier water during midday — early morning and evening windows on the grass flats and around structure will be most productive.",
   "localBiteSource": "captainexperiences.com (Choctawhatchee Bay reports page), fishingbooker.com (Choctawhatchee Bay reports/destination page) · Auto-refreshed via Claude API",
   "localBiteUpdated": "August 12, 2026",
@@ -41,24 +41,24 @@
     }
   ],
   "previousDay": {
-    "date": "Saturday, August 22, 2026",
+    "date": "Sunday, August 23, 2026",
     "wind": {
-      "dir": "WSW",
+      "dir": "W",
       "speed": 5
     },
-    "high": 91,
-    "stormChance": 25,
-    "tide": "High tide ~1:34 AM · Low tide ~1:19 PM · Sunrise 6:14 AM",
+    "high": 95,
+    "stormChance": 21,
+    "tide": "High tide ~2:37 AM · Low tide ~2:04 PM · Sunrise 6:15 AM",
     "waterTemp": 86
   },
   "openMeteo": [
     {
-      "high": 92,
+      "high": 91,
       "low": 77,
       "stormChance": 9,
-      "windSpeed": 9,
-      "windDir": "W",
-      "summary": "Fog"
+      "windSpeed": 7,
+      "windDir": "NW",
+      "summary": "Overcast"
     },
     {
       "high": 90,
@@ -203,10 +203,10 @@
   },
   "waterTemp": 86,
   "pressure": {
-    "hpa": 1014.1,
-    "inHg": 29.95,
-    "direction": "steady",
-    "changeHpa3h": -0.2
+    "hpa": 1013.7,
+    "inHg": 29.93,
+    "direction": "falling",
+    "changeHpa3h": -0.6
   },
   "speciesSignals": [
     {
