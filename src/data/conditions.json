@@ -2,10 +2,10 @@
   "date": "Thursday, August 27, 2026",
   "wind": {
     "speed": 5,
-    "dir": "SW",
-    "description": "SW 0 to 5 mph"
+    "dir": "SSW",
+    "description": "SSW 5 mph"
   },
-  "weather": "Chance Showers And Thunderstorms · High 89°F · Heat index up to 100°F",
+  "weather": "Showers And Thunderstorms Likely · High 89°F · Heat index up to 100°F",
   "tide": "High tide ~5:50 AM · Low tide ~3:58 PM · Sunrise 6:17 AM",
   "tideEvents": [
     {
@@ -20,11 +20,11 @@
   "sunrise": "6:17 AM",
   "sunset": "7:14 PM",
   "stormWindow": "before 7AM",
-  "stormChance": 48,
+  "stormChance": 72,
   "moonPhase": "Full Moon (~100% illuminated) — strong tidal push (spring tide)",
   "waterClarity": "Slightly stained",
   "sky": "Cloudy",
-  "lastUpdated": "8/27/2026, 3:12:18 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "lastUpdated": "8/27/2026, 2:02:55 PM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
   "localBiteReport": "Note: The most current inshore-focused reports found for Choctawhatchee Bay are from late July to early August 2026 — roughly 1–2 weeks old — so treat this as recent rather than this-week current. Speckled trout have been the standout bay species, with multiple reports of solid numbers spread across the grass flats; one Santa Rosa Beach-area report (about a week old) highlighted a 40-inch, 26-lb bull redfish alongside good trout action. The fishingbooker.com Choctawhatchee Bay seasonal summary for July–August describes bull redfish and trophy-sized trout as the primary inshore targets right now, with guides recommending early morning trips to beat summer crowds and heat. Water temperature at this location is measuring 87°F, which is pushing fish into slightly deeper, shadier water during midday — early morning and evening windows on the grass flats and around structure will be most productive.",
   "localBiteSource": "captainexperiences.com (Choctawhatchee Bay reports page), fishingbooker.com (Choctawhatchee Bay reports/destination page) · Auto-refreshed via Claude API",
   "localBiteUpdated": "August 12, 2026",
@@ -41,40 +41,40 @@
     }
   ],
   "previousDay": {
-    "date": "Wednesday, August 26, 2026",
+    "date": "Thursday, August 27, 2026",
     "wind": {
-      "dir": "SSW",
-      "speed": 10
+      "dir": "SW",
+      "speed": 5
     },
-    "high": 90,
-    "stormChance": 49,
-    "tide": "High tide ~5:01 AM · Low tide ~3:39 PM · Sunrise 6:16 AM",
-    "waterTemp": 86
+    "high": 89,
+    "stormChance": 48,
+    "tide": "High tide ~5:50 AM · Low tide ~3:58 PM · Sunrise 6:17 AM",
+    "waterTemp": 87
   },
   "openMeteo": [
     {
-      "high": 89,
+      "high": 86,
       "low": 77,
       "stormChance": 41,
-      "windSpeed": 10,
-      "windDir": "W",
-      "summary": "Violent rain showers"
-    },
-    {
-      "high": 86,
-      "low": 73,
-      "stormChance": 64,
-      "windSpeed": 11,
-      "windDir": "E",
+      "windSpeed": 9,
+      "windDir": "NE",
       "summary": "Rain showers"
     },
     {
-      "high": 85,
-      "low": 72,
-      "stormChance": 55,
+      "high": 82,
+      "low": 74,
+      "stormChance": 49,
       "windSpeed": 9,
       "windDir": "SE",
-      "summary": "Thunderstorm"
+      "summary": "Heavy rain"
+    },
+    {
+      "high": 80,
+      "low": 73,
+      "stormChance": 50,
+      "windSpeed": 9,
+      "windDir": "SE",
+      "summary": "Rain showers"
     }
   ],
   "forecast": [
@@ -84,13 +84,13 @@
       "label": "Today",
       "high": 89,
       "low": null,
-      "wind": "SW 0 to 5 mph",
+      "wind": "SSW 5 mph",
       "windSpeed": 5,
-      "windDir": "SW",
-      "storms": 48,
-      "headline": "Chance Showers And Thunderstorms · Heat index 100",
-      "fishingScore": 6.6,
-      "aiCall": "A slight chance of showers and thunderstorms before 7am, then a chance of showers and thunderstorms between 7am and 11am, then a chance of showers and thunderstorms between 11am and 3pm, then a chance of showers and thunderstorms. Partly sunny. High near 89, with temperatures falling to around 83 in the afternoon. Heat index values as high as 100. Southwest wind 0 to 5 mph. Chance of precipitation is 50%. New rainfall amounts between a quarter and half of an inch possible.",
+      "windDir": "SSW",
+      "storms": 72,
+      "headline": "Showers And Thunderstorms Likely · Heat index 100",
+      "fishingScore": 5.6,
+      "aiCall": "Showers and thunderstorms likely. Mostly cloudy. High near 89, with temperatures falling to around 83 in the afternoon. Heat index values as high as 100. South southwest wind around 5 mph. Chance of precipitation is 70%. New rainfall amounts between a tenth and quarter of an inch possible.",
       "emoji": "⛈️",
       "tideEvents": [
         {
@@ -108,15 +108,15 @@
       "day": "Fri, Aug 28",
       "dateISO": "2026-08-28",
       "label": "Tomorrow",
-      "high": 88,
+      "high": 86,
       "low": null,
-      "wind": "NW 0 to 5 mph",
+      "wind": "SSE 0 to 5 mph",
       "windSpeed": 5,
-      "windDir": "NW",
-      "storms": 62,
-      "headline": "Showers And Thunderstorms Likely",
-      "fishingScore": 6,
-      "aiCall": "Showers and thunderstorms likely. Partly sunny. High near 88, with temperatures falling to around 82 in the afternoon. Northwest wind 0 to 5 mph. Chance of precipitation is 60%.",
+      "windDir": "SSE",
+      "storms": 73,
+      "headline": "Showers And Thunderstorms",
+      "fishingScore": 5.6,
+      "aiCall": "Showers and thunderstorms before 1pm, then showers and thunderstorms likely. Mostly cloudy. High near 86, with temperatures falling to around 82 in the afternoon. South southeast wind 0 to 5 mph. Chance of precipitation is 70%. New rainfall amounts between a half and three quarters of an inch possible.",
       "emoji": "⛈️",
       "tideEvents": [
         {
@@ -134,15 +134,15 @@
       "day": "Sat, Aug 29",
       "dateISO": "2026-08-29",
       "label": "Saturday",
-      "high": 89,
+      "high": 87,
       "low": null,
       "wind": "ESE 0 to 5 mph",
       "windSpeed": 5,
       "windDir": "ESE",
-      "storms": 52,
-      "headline": "Chance Showers And Thunderstorms",
-      "fishingScore": 6.4,
-      "aiCall": "A chance of showers and thunderstorms before 1pm, then a chance of showers and thunderstorms. Mostly cloudy, with a high near 89. Chance of precipitation is 50%.",
+      "storms": 64,
+      "headline": "Showers And Thunderstorms Likely",
+      "fishingScore": 5.9,
+      "aiCall": "A chance of showers and thunderstorms before 7am, then a chance of showers and thunderstorms between 7am and 10am, then showers and thunderstorms likely between 10am and 4pm, then showers and thunderstorms likely. Mostly cloudy, with a high near 87. East southeast wind 0 to 5 mph. Chance of precipitation is 60%.",
       "emoji": "⛈️",
       "tideEvents": [
         {
@@ -203,10 +203,10 @@
   },
   "waterTemp": 87,
   "pressure": {
-    "hpa": 1013.1,
-    "inHg": 29.92,
+    "hpa": 1014.9,
+    "inHg": 29.97,
     "direction": "falling",
-    "changeHpa3h": -1.5
+    "changeHpa3h": -0.7
   },
   "speciesSignals": [
     {
