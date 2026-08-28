@@ -4,8 +4,8 @@
   "generatedAt": "2026-08-28",
   "scopeNote": "Regional reports support timing and species activity only. They do not prove a catch, depth, bottom type, or safe navigation at a mapped Jolly Bay feature.",
   "currentConditions": {
-    "wind": "ESE 0 to 5 mph",
-    "windDir": "ESE",
+    "wind": "SSE 0 to 5 mph",
+    "windDir": "SSE",
     "tide": "High tide ~6:50 AM · Low tide ~4:03 PM · Sunrise 6:17 AM",
     "tideEvents": [
       {
@@ -17,14 +17,14 @@
         "time": "4:03 PM"
       }
     ],
-    "waterTemp": 87,
+    "waterTemp": 86,
     "sky": "Cloudy",
-    "stormChance": 74,
+    "stormChance": 82,
     "pressure": {
-      "hpa": 1015.3,
-      "inHg": 29.98,
-      "direction": "steady",
-      "changeHpa3h": 0.1
+      "hpa": 1014.9,
+      "inHg": 29.97,
+      "direction": "falling",
+      "changeHpa3h": -2.7
     }
   },
   "currentReport": {
@@ -43,8 +43,8 @@
       "redfish"
     ],
     "conditions": {
-      "wind": "ESE 0 to 5 mph",
-      "windDir": "ESE",
+      "wind": "SSE 0 to 5 mph",
+      "windDir": "SSE",
       "tide": "High tide ~6:50 AM · Low tide ~4:03 PM · Sunrise 6:17 AM",
       "tideEvents": [
         {
@@ -56,21 +56,21 @@
           "time": "4:03 PM"
         }
       ],
-      "waterTemp": 87,
+      "waterTemp": 86,
       "sky": "Cloudy",
-      "stormChance": 74,
+      "stormChance": 82,
       "pressure": {
-        "hpa": 1015.3,
-        "inHg": 29.98,
-        "direction": "steady",
-        "changeHpa3h": 0.1
+        "hpa": 1014.9,
+        "inHg": 29.97,
+        "direction": "falling",
+        "changeHpa3h": -2.7
       }
     }
   },
   "archivedReports": [
     {
       "kind": "archived_app_snapshot",
-      "date": "2026-08-27",
+      "date": "2026-08-28",
       "displayDate": "August 12, 2026",
       "summary": "Note: The most current inshore-focused reports found for Choctawhatchee Bay are from late July to early August 2026 — roughly 1–2 weeks old — so treat this as recent rather than this-week current. Speckled trout have been the standout bay species, with multiple reports of solid numbers spread across the grass flats; one Santa Rosa Beach-area report (about a week old) highlighted a 40-inch, 26-lb bull redfish alongside good trout action. The fishingbooker.com Choctawhatchee Bay seasonal summary for July–August describes bull redfish and trophy-sized trout as the primary inshore targets right now, with guides recommending early morning trips to beat summer crowds and heat. Water temperature at this location is measuring 87°F, which is pushing fish into slightly deeper, shadier water during midday — early morning and evening windows on the grass flats and around structure will be most productive.",
       "attribution": "captainexperiences.com (Choctawhatchee Bay reports page), fishingbooker.com (Choctawhatchee Bay reports/destination page) · Auto-refreshed via Claude API",
@@ -84,27 +84,27 @@
         "redfish"
       ],
       "conditions": {
-        "wind": "SSW 5 mph",
-        "windDir": "SSW",
-        "tide": "High tide ~5:50 AM · Low tide ~3:58 PM · Sunrise 6:17 AM",
+        "wind": "ESE 0 to 5 mph",
+        "windDir": "ESE",
+        "tide": "High tide ~6:50 AM · Low tide ~4:03 PM · Sunrise 6:17 AM",
         "tideEvents": [
           {
             "type": "H",
-            "time": "5:50 AM"
+            "time": "6:50 AM"
           },
           {
             "type": "L",
-            "time": "3:58 PM"
+            "time": "4:03 PM"
           }
         ],
         "waterTemp": 87,
         "sky": "Cloudy",
-        "stormChance": 72,
+        "stormChance": 74,
         "pressure": {
-          "hpa": 1014.9,
-          "inHg": 29.97,
-          "direction": "falling",
-          "changeHpa3h": -0.7
+          "hpa": 1015.3,
+          "inHg": 29.98,
+          "direction": "steady",
+          "changeHpa3h": 0.1
         }
       }
     },

@@ -2,10 +2,10 @@
   "date": "Friday, August 28, 2026",
   "wind": {
     "speed": 5,
-    "dir": "ESE",
-    "description": "ESE 0 to 5 mph"
+    "dir": "SSE",
+    "description": "SSE 0 to 5 mph"
   },
-  "weather": "Chance Showers And Thunderstorms then Showers And Thunderstorms Likely · High 85°F",
+  "weather": "Showers And Thunderstorms Likely · High 84°F",
   "tide": "High tide ~6:50 AM · Low tide ~4:03 PM · Sunrise 6:17 AM",
   "tideEvents": [
     {
@@ -19,12 +19,12 @@
   ],
   "sunrise": "6:17 AM",
   "sunset": "7:13 PM",
-  "stormWindow": "before 7AM",
-  "stormChance": 74,
+  "stormWindow": "before 5PM",
+  "stormChance": 82,
   "moonPhase": "Full Moon (~99% illuminated) — strong tidal push (spring tide)",
   "waterClarity": "Slightly stained",
   "sky": "Cloudy",
-  "lastUpdated": "8/28/2026, 3:12:15 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "lastUpdated": "8/28/2026, 3:10:38 PM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
   "localBiteReport": "Note: The most current inshore-focused reports found for Choctawhatchee Bay are from late July to early August 2026 — roughly 1–2 weeks old — so treat this as recent rather than this-week current. Speckled trout have been the standout bay species, with multiple reports of solid numbers spread across the grass flats; one Santa Rosa Beach-area report (about a week old) highlighted a 40-inch, 26-lb bull redfish alongside good trout action. The fishingbooker.com Choctawhatchee Bay seasonal summary for July–August describes bull redfish and trophy-sized trout as the primary inshore targets right now, with guides recommending early morning trips to beat summer crowds and heat. Water temperature at this location is measuring 87°F, which is pushing fish into slightly deeper, shadier water during midday — early morning and evening windows on the grass flats and around structure will be most productive.",
   "localBiteSource": "captainexperiences.com (Choctawhatchee Bay reports page), fishingbooker.com (Choctawhatchee Bay reports/destination page) · Auto-refreshed via Claude API",
   "localBiteUpdated": "August 12, 2026",
@@ -41,40 +41,40 @@
     }
   ],
   "previousDay": {
-    "date": "Thursday, August 27, 2026",
+    "date": "Friday, August 28, 2026",
     "wind": {
-      "dir": "SSW",
+      "dir": "ESE",
       "speed": 5
     },
-    "high": 89,
-    "stormChance": 72,
-    "tide": "High tide ~5:50 AM · Low tide ~3:58 PM · Sunrise 6:17 AM",
+    "high": 85,
+    "stormChance": 74,
+    "tide": "High tide ~6:50 AM · Low tide ~4:03 PM · Sunrise 6:17 AM",
     "waterTemp": 87
   },
   "openMeteo": [
     {
-      "high": 87,
+      "high": 84,
+      "low": 73,
+      "stormChance": 77,
+      "windSpeed": 8,
+      "windDir": "E",
+      "summary": "Rain showers"
+    },
+    {
+      "high": 86,
       "low": 74,
-      "stormChance": 48,
-      "windSpeed": 7,
-      "windDir": "E",
-      "summary": "Rain"
-    },
-    {
-      "high": 82,
-      "low": 75,
-      "stormChance": 51,
-      "windSpeed": 10,
-      "windDir": "E",
-      "summary": "Drizzle"
-    },
-    {
-      "high": 92,
-      "low": 72,
-      "stormChance": 57,
+      "stormChance": 21,
       "windSpeed": 9,
       "windDir": "E",
-      "summary": "Light drizzle"
+      "summary": "Overcast"
+    },
+    {
+      "high": 94,
+      "low": 73,
+      "stormChance": 61,
+      "windSpeed": 9,
+      "windDir": "SE",
+      "summary": "Drizzle"
     }
   ],
   "forecast": [
@@ -82,15 +82,15 @@
       "day": "Fri, Aug 28",
       "dateISO": "2026-08-28",
       "label": "Today",
-      "high": 85,
+      "high": 84,
       "low": null,
-      "wind": "ESE 0 to 5 mph",
+      "wind": "SSE 0 to 5 mph",
       "windSpeed": 5,
-      "windDir": "ESE",
-      "storms": 74,
-      "headline": "Chance Showers And Thunderstorms then Showers And Thunderstorms Likely",
-      "fishingScore": 5.5,
-      "aiCall": "A chance of showers and thunderstorms before 7am, then showers and thunderstorms likely between 7am and 8am, then a chance of showers and thunderstorms between 8am and 10am, then showers and thunderstorms likely between 10am and 1pm, then showers and thunderstorms likely. Mostly cloudy. High near 85, with temperatures falling to around 81 in the afternoon. East southeast wind 0 to 5 mph. Chance of precipitation is 70%. New rainfall amounts between a half and three quarters of an inch possible.",
+      "windDir": "SSE",
+      "storms": 82,
+      "headline": "Showers And Thunderstorms Likely",
+      "fishingScore": 5.2,
+      "aiCall": "Showers and thunderstorms likely before 5pm, then showers and thunderstorms. Mostly cloudy. High near 84, with temperatures falling to around 81 in the afternoon. South southeast wind 0 to 5 mph. Chance of precipitation is 80%. New rainfall amounts between a quarter and half of an inch possible.",
       "emoji": "⛈️",
       "tideEvents": [
         {
@@ -108,15 +108,15 @@
       "day": "Sat, Aug 29",
       "dateISO": "2026-08-29",
       "label": "Tomorrow",
-      "high": 85,
+      "high": 86,
       "low": null,
       "wind": "ESE 5 mph",
       "windSpeed": 5,
       "windDir": "ESE",
-      "storms": 68,
+      "storms": 60,
       "headline": "Showers And Thunderstorms Likely",
-      "fishingScore": 5.8,
-      "aiCall": "Showers and thunderstorms likely before 10am, then a chance of showers and thunderstorms between 10am and 11am, then showers and thunderstorms likely between 11am and 1pm, then showers and thunderstorms likely. Mostly cloudy. High near 85, with temperatures falling to around 81 in the afternoon. East southeast wind around 5 mph. Chance of precipitation is 70%.",
+      "fishingScore": 6.1,
+      "aiCall": "A chance of showers and thunderstorms before 7am, then a chance of showers and thunderstorms between 7am and 10am, then showers and thunderstorms likely. Mostly cloudy. High near 86, with temperatures falling to around 82 in the afternoon. East southeast wind around 5 mph. Chance of precipitation is 60%. New rainfall amounts between a tenth and quarter of an inch possible.",
       "emoji": "⛈️",
       "tideEvents": [
         {
@@ -134,15 +134,15 @@
       "day": "Sun, Aug 30",
       "dateISO": "2026-08-30",
       "label": "Sunday",
-      "high": 88,
+      "high": 89,
       "low": null,
-      "wind": "SE 5 mph",
+      "wind": "ESE 5 mph",
       "windSpeed": 5,
-      "windDir": "SE",
-      "storms": 72,
-      "headline": "Showers And Thunderstorms Likely",
+      "windDir": "ESE",
+      "storms": 73,
+      "headline": "Chance Showers And Thunderstorms then Showers And Thunderstorms Likely",
       "fishingScore": 5.6,
-      "aiCall": "Showers and thunderstorms likely before 1pm, then showers and thunderstorms likely between 1pm and 4pm, then showers and thunderstorms likely. Partly sunny, with a high near 88. Chance of precipitation is 70%.",
+      "aiCall": "A chance of showers and thunderstorms before 10am, then showers and thunderstorms likely between 10am and 4pm, then showers and thunderstorms likely. Partly sunny, with a high near 89. East southeast wind around 5 mph. Chance of precipitation is 70%.",
       "emoji": "⛈️",
       "tideEvents": [
         {
@@ -209,12 +209,12 @@
       "todaysCall": "Buck makes sense only as the third stop on a Mack-Hewett-Buck run — the run time alone rules it out as a solo destination, especially on a day with afternoon storm risk. If you've worked Mack and Hewett through the morning outgoing tide and still have time before your 1 PM turnaround, swing through Buck's mouth to probe the oyster and grass structure for any reds or trout that didn't commit earlier. Keep expectations measured given limited fishing documentation here, but the habitat connection to its neighbors means the same early-morning moving-tide approach applies. Don't linger — your priority is being well clear of open water on the long run back before storm cells can develop."
     }
   },
-  "waterTemp": 87,
+  "waterTemp": 86,
   "pressure": {
-    "hpa": 1015.3,
-    "inHg": 29.98,
-    "direction": "steady",
-    "changeHpa3h": 0.1
+    "hpa": 1014.9,
+    "inHg": 29.97,
+    "direction": "falling",
+    "changeHpa3h": -2.7
   },
   "speciesSignals": [
     {
