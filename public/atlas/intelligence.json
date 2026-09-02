@@ -1,35 +1,35 @@
 {
   "type": "FishingIntelligence",
   "region": "choctawhatchee_bay",
-  "generatedAt": "2026-09-01",
+  "generatedAt": "2026-09-02",
   "scopeNote": "Regional reports support timing and species activity only. They do not prove a catch, depth, bottom type, or safe navigation at a mapped Jolly Bay feature.",
   "currentConditions": {
-    "wind": "ESE 5 mph",
-    "windDir": "ESE",
-    "tide": "High tide ~8:38 PM · Low tide ~6:31 AM · Sunrise 6:20 AM",
+    "wind": "ENE 0 to 5 mph",
+    "windDir": "ENE",
+    "tide": "High tide ~9:11 PM · Low tide ~8:17 AM · Sunrise 6:20 AM",
     "tideEvents": [
       {
         "type": "H",
-        "time": "8:38 PM"
+        "time": "9:11 PM"
       },
       {
         "type": "L",
-        "time": "6:31 AM"
+        "time": "8:17 AM"
       }
     ],
-    "waterTemp": 86,
+    "waterTemp": 87,
     "sky": "Cloudy",
-    "stormChance": 35,
+    "stormChance": 20,
     "pressure": {
-      "hpa": 1018.8,
-      "inHg": 30.09,
-      "direction": "rising",
-      "changeHpa3h": 2.1
+      "hpa": 1016.2,
+      "inHg": 30.01,
+      "direction": "steady",
+      "changeHpa3h": -0.4
     }
   },
   "currentReport": {
     "kind": "current_regional_report",
-    "date": "2026-09-01",
+    "date": "2026-09-02",
     "displayDate": "August 12, 2026",
     "summary": "Note: The most current inshore-focused reports found for Choctawhatchee Bay are from late July to early August 2026 — roughly 1–2 weeks old — so treat this as recent rather than this-week current. Speckled trout have been the standout bay species, with multiple reports of solid numbers spread across the grass flats; one Santa Rosa Beach-area report (about a week old) highlighted a 40-inch, 26-lb bull redfish alongside good trout action. The fishingbooker.com Choctawhatchee Bay seasonal summary for July–August describes bull redfish and trophy-sized trout as the primary inshore targets right now, with guides recommending early morning trips to beat summer crowds and heat. Water temperature at this location is measuring 87°F, which is pushing fish into slightly deeper, shadier water during midday — early morning and evening windows on the grass flats and around structure will be most productive.",
     "attribution": "captainexperiences.com (Choctawhatchee Bay reports page), fishingbooker.com (Choctawhatchee Bay reports/destination page) · Auto-refreshed via Claude API",
@@ -43,27 +43,27 @@
       "redfish"
     ],
     "conditions": {
-      "wind": "ESE 5 mph",
-      "windDir": "ESE",
-      "tide": "High tide ~8:38 PM · Low tide ~6:31 AM · Sunrise 6:20 AM",
+      "wind": "ENE 0 to 5 mph",
+      "windDir": "ENE",
+      "tide": "High tide ~9:11 PM · Low tide ~8:17 AM · Sunrise 6:20 AM",
       "tideEvents": [
         {
           "type": "H",
-          "time": "8:38 PM"
+          "time": "9:11 PM"
         },
         {
           "type": "L",
-          "time": "6:31 AM"
+          "time": "8:17 AM"
         }
       ],
-      "waterTemp": 86,
+      "waterTemp": 87,
       "sky": "Cloudy",
-      "stormChance": 35,
+      "stormChance": 20,
       "pressure": {
-        "hpa": 1018.8,
-        "inHg": 30.09,
-        "direction": "rising",
-        "changeHpa3h": 2.1
+        "hpa": 1016.2,
+        "inHg": 30.01,
+        "direction": "steady",
+        "changeHpa3h": -0.4
       }
     }
   },
@@ -84,7 +84,7 @@
         "redfish"
       ],
       "conditions": {
-        "wind": "ESE 0 to 5 mph",
+        "wind": "ESE 5 mph",
         "windDir": "ESE",
         "tide": "High tide ~8:38 PM · Low tide ~6:31 AM · Sunrise 6:20 AM",
         "tideEvents": [
@@ -101,10 +101,10 @@
         "sky": "Cloudy",
         "stormChance": 35,
         "pressure": {
-          "hpa": 1015.8,
-          "inHg": 30,
-          "direction": "falling",
-          "changeHpa3h": -1.5
+          "hpa": 1018.8,
+          "inHg": 30.09,
+          "direction": "rising",
+          "changeHpa3h": 2.1
         }
       }
     },
@@ -326,7 +326,7 @@
       "label": "Speckled trout",
       "current": true,
       "reportCount": 9,
-      "lastReported": "2026-09-01",
+      "lastReported": "2026-09-02",
       "evidenceLevel": "current_regional_report"
     },
     {
@@ -334,7 +334,7 @@
       "label": "Redfish",
       "current": true,
       "reportCount": 10,
-      "lastReported": "2026-09-01",
+      "lastReported": "2026-09-02",
       "evidenceLevel": "current_regional_report"
     },
     {
