@@ -24,7 +24,7 @@
   "moonPhase": "Last Quarter (~36% illuminated) — moderate tidal push",
   "waterClarity": "Slightly stained",
   "sky": "Cloudy",
-  "lastUpdated": "9/5/2026, 3:12:24 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "lastUpdated": "9/5/2026, 6:48:47 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
   "localBiteReport": "Note: The most current inshore-focused reports found for Choctawhatchee Bay are from late July to early August 2026 — roughly 1–2 weeks old — so treat this as recent rather than this-week current. Speckled trout have been the standout bay species, with multiple reports of solid numbers spread across the grass flats; one Santa Rosa Beach-area report (about a week old) highlighted a 40-inch, 26-lb bull redfish alongside good trout action. The fishingbooker.com Choctawhatchee Bay seasonal summary for July–August describes bull redfish and trophy-sized trout as the primary inshore targets right now, with guides recommending early morning trips to beat summer crowds and heat. Water temperature at this location is measuring 87°F, which is pushing fish into slightly deeper, shadier water during midday — early morning and evening windows on the grass flats and around structure will be most productive.",
   "localBiteSource": "captainexperiences.com (Choctawhatchee Bay reports page), fishingbooker.com (Choctawhatchee Bay reports/destination page) · Auto-refreshed via Claude API",
   "localBiteUpdated": "August 12, 2026",
@@ -41,29 +41,29 @@
     }
   ],
   "previousDay": {
-    "date": "Friday, September 4, 2026",
+    "date": "Saturday, September 5, 2026",
     "wind": {
-      "dir": "SE",
+      "dir": "NNW",
       "speed": 5
     },
-    "high": 88,
-    "stormChance": 67,
-    "tide": "High tide ~11:10 PM · Low tide ~11:23 AM · Sunrise 6:21 AM",
+    "high": 89,
+    "stormChance": 52,
+    "tide": "High tide ~12:32 AM · Low tide ~12:27 PM · Sunrise 6:22 AM",
     "waterTemp": 87
   },
   "openMeteo": [
     {
-      "high": 89,
-      "low": 75,
-      "stormChance": 18,
-      "windSpeed": 7,
+      "high": 91,
+      "low": 76,
+      "stormChance": 16,
+      "windSpeed": 9,
       "windDir": "W",
-      "summary": "Overcast"
+      "summary": "Fog"
     },
     {
       "high": 90,
       "low": 76,
-      "stormChance": 29,
+      "stormChance": 19,
       "windSpeed": 10,
       "windDir": "W",
       "summary": "Overcast"
@@ -71,10 +71,10 @@
     {
       "high": 96,
       "low": 73,
-      "stormChance": 65,
+      "stormChance": 71,
       "windSpeed": 10,
       "windDir": "SW",
-      "summary": "Thunderstorm"
+      "summary": "Thunderstorm w/ hail"
     }
   ],
   "forecast": [
@@ -116,7 +116,7 @@
       "storms": 30,
       "headline": "Sunny then Chance Showers And Thunderstorms · Heat index 103",
       "fishingScore": 7.3,
-      "aiCall": "A chance of showers and thunderstorms between 1pm and 3pm. Sunny. High near 91, with temperatures falling to around 88 in the afternoon. Heat index values as high as 103. West wind 0 to 10 mph. Chance of precipitation is 30%.",
+      "aiCall": "A chance of showers and thunderstorms between 1pm and 3pm. Sunny. High near 91, with temperatures falling to around 88 in the afternoon. Heat index values as high as 103. West wind 0 to 10 mph. Chance of precipitation is 30%. New rainfall amounts less than a tenth of an inch possible.",
       "emoji": "⛈️",
       "tideEvents": [
         {
@@ -142,7 +142,7 @@
       "storms": 67,
       "headline": "Chance Showers And Thunderstorms",
       "fishingScore": 5.8,
-      "aiCall": "A chance of showers and thunderstorms before 1pm, then showers and thunderstorms likely between 1pm and 4pm, then showers and thunderstorms likely. Mostly sunny, with a high near 91. Chance of precipitation is 70%.",
+      "aiCall": "A chance of showers and thunderstorms before 1pm, then showers and thunderstorms likely between 1pm and 4pm, then showers and thunderstorms likely. Mostly sunny, with a high near 91. West southwest wind 0 to 5 mph. Chance of precipitation is 70%.",
       "emoji": "⛈️",
       "tideEvents": [
         {
@@ -203,10 +203,10 @@
   },
   "waterTemp": 87,
   "pressure": {
-    "hpa": 1013.6,
-    "inHg": 29.93,
-    "direction": "steady",
-    "changeHpa3h": 0
+    "hpa": 1014.1,
+    "inHg": 29.95,
+    "direction": "rising",
+    "changeHpa3h": 1.1
   },
   "speciesSignals": [
     {
