@@ -1,30 +1,30 @@
 {
-  "date": "Friday, September 4, 2026",
+  "date": "Saturday, September 5, 2026",
   "wind": {
     "speed": 5,
-    "dir": "SE",
-    "description": "SE 5 mph"
+    "dir": "NNW",
+    "description": "NNW 0 to 5 mph"
   },
-  "weather": "Showers And Thunderstorms Likely · High 88°F",
-  "tide": "High tide ~11:10 PM · Low tide ~11:23 AM · Sunrise 6:21 AM",
+  "weather": "Chance Showers And Thunderstorms · High 89°F · Heat index up to 100°F",
+  "tide": "High tide ~12:32 AM · Low tide ~12:27 PM · Sunrise 6:22 AM",
   "tideEvents": [
     {
       "type": "H",
-      "time": "11:10 PM"
+      "time": "12:32 AM"
     },
     {
       "type": "L",
-      "time": "11:23 AM"
+      "time": "12:27 PM"
     }
   ],
-  "sunrise": "6:21 AM",
-  "sunset": "7:05 PM",
-  "stormWindow": "after 1PM",
-  "stormChance": 67,
-  "moonPhase": "Last Quarter (~46% illuminated) — moderate tidal push",
+  "sunrise": "6:22 AM",
+  "sunset": "7:03 PM",
+  "stormWindow": "before 7AM",
+  "stormChance": 52,
+  "moonPhase": "Last Quarter (~36% illuminated) — moderate tidal push",
   "waterClarity": "Slightly stained",
   "sky": "Cloudy",
-  "lastUpdated": "9/4/2026, 7:41:33 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "lastUpdated": "9/5/2026, 3:12:24 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
   "localBiteReport": "Note: The most current inshore-focused reports found for Choctawhatchee Bay are from late July to early August 2026 — roughly 1–2 weeks old — so treat this as recent rather than this-week current. Speckled trout have been the standout bay species, with multiple reports of solid numbers spread across the grass flats; one Santa Rosa Beach-area report (about a week old) highlighted a 40-inch, 26-lb bull redfish alongside good trout action. The fishingbooker.com Choctawhatchee Bay seasonal summary for July–August describes bull redfish and trophy-sized trout as the primary inshore targets right now, with guides recommending early morning trips to beat summer crowds and heat. Water temperature at this location is measuring 87°F, which is pushing fish into slightly deeper, shadier water during midday — early morning and evening windows on the grass flats and around structure will be most productive.",
   "localBiteSource": "captainexperiences.com (Choctawhatchee Bay reports page), fishingbooker.com (Choctawhatchee Bay reports/destination page) · Auto-refreshed via Claude API",
   "localBiteUpdated": "August 12, 2026",
@@ -53,70 +53,44 @@
   },
   "openMeteo": [
     {
-      "high": 88,
-      "low": 77,
-      "stormChance": 35,
-      "windSpeed": 14,
-      "windDir": "NE",
-      "summary": "Rain showers"
-    },
-    {
-      "high": 88,
+      "high": 89,
       "low": 75,
-      "stormChance": 24,
+      "stormChance": 18,
       "windSpeed": 7,
-      "windDir": "S",
+      "windDir": "W",
       "summary": "Overcast"
     },
     {
-      "high": 94,
-      "low": 77,
-      "stormChance": 38,
-      "windSpeed": 11,
+      "high": 90,
+      "low": 76,
+      "stormChance": 29,
+      "windSpeed": 10,
       "windDir": "W",
-      "summary": "Thunderstorm w/ hail"
+      "summary": "Overcast"
+    },
+    {
+      "high": 96,
+      "low": 73,
+      "stormChance": 65,
+      "windSpeed": 10,
+      "windDir": "SW",
+      "summary": "Thunderstorm"
     }
   ],
   "forecast": [
     {
-      "day": "Fri, Sep 4",
-      "dateISO": "2026-09-04",
-      "label": "Today",
-      "high": 88,
-      "low": null,
-      "wind": "SE 5 mph",
-      "windSpeed": 5,
-      "windDir": "SE",
-      "storms": 67,
-      "headline": "Showers And Thunderstorms Likely",
-      "fishingScore": 5.8,
-      "aiCall": "Showers and thunderstorms likely between 8am and 4pm, then showers and thunderstorms likely between 4pm and 5pm, then a chance of showers and thunderstorms. Partly sunny. High near 88, with temperatures falling to around 85 in the afternoon. Southeast wind around 5 mph. Chance of precipitation is 70%. New rainfall amounts between a quarter and half of an inch possible.",
-      "emoji": "⛈️",
-      "tideEvents": [
-        {
-          "type": "H",
-          "time": "11:10 PM"
-        },
-        {
-          "type": "L",
-          "time": "11:23 AM"
-        }
-      ],
-      "moonPhase": "Last Quarter (~46% illuminated) — moderate tidal push"
-    },
-    {
       "day": "Sat, Sep 5",
       "dateISO": "2026-09-05",
-      "label": "Tomorrow",
+      "label": "Today",
       "high": 89,
       "low": null,
       "wind": "NNW 0 to 5 mph",
       "windSpeed": 5,
       "windDir": "NNW",
-      "storms": 51,
+      "storms": 52,
       "headline": "Chance Showers And Thunderstorms · Heat index 100",
-      "fishingScore": 6.5,
-      "aiCall": "A chance of rain showers before 7am, then a chance of showers and thunderstorms between 7am and 10am, then a chance of showers and thunderstorms between 10am and 4pm. Mostly sunny, with a high near 89. Heat index values as high as 100. North northwest wind 0 to 5 mph. Chance of precipitation is 50%. New rainfall amounts between a tenth and quarter of an inch possible.",
+      "fishingScore": 6.4,
+      "aiCall": "A slight chance of showers and thunderstorms before 7am, then a chance of showers and thunderstorms between 7am and 10am, then a chance of showers and thunderstorms. Mostly sunny, with a high near 89. Heat index values as high as 100. North northwest wind 0 to 5 mph. Chance of precipitation is 50%. New rainfall amounts less than a tenth of an inch possible.",
       "emoji": "⛈️",
       "tideEvents": [
         {
@@ -133,16 +107,16 @@
     {
       "day": "Sun, Sep 6",
       "dateISO": "2026-09-06",
-      "label": "Sunday",
-      "high": 90,
+      "label": "Tomorrow",
+      "high": 91,
       "low": null,
       "wind": "W 0 to 10 mph",
       "windSpeed": 10,
       "windDir": "W",
-      "storms": 48,
-      "headline": "Chance Showers And Thunderstorms",
-      "fishingScore": 6.6,
-      "aiCall": "A slight chance of rain showers between 7am and 10am, then a chance of showers and thunderstorms. Mostly sunny, with a high near 90. West wind 0 to 10 mph. Chance of precipitation is 50%.",
+      "storms": 30,
+      "headline": "Sunny then Chance Showers And Thunderstorms · Heat index 103",
+      "fishingScore": 7.3,
+      "aiCall": "A chance of showers and thunderstorms between 1pm and 3pm. Sunny. High near 91, with temperatures falling to around 88 in the afternoon. Heat index values as high as 103. West wind 0 to 10 mph. Chance of precipitation is 30%.",
       "emoji": "⛈️",
       "tideEvents": [
         {
@@ -155,9 +129,35 @@
         }
       ],
       "moonPhase": "Waning Crescent (~26% illuminated) — moderate tidal push"
+    },
+    {
+      "day": "Mon, Sep 7",
+      "dateISO": "2026-09-07",
+      "label": "Labor Day",
+      "high": 91,
+      "low": null,
+      "wind": "WSW 0 to 5 mph",
+      "windSpeed": 5,
+      "windDir": "WSW",
+      "storms": 67,
+      "headline": "Chance Showers And Thunderstorms",
+      "fishingScore": 5.8,
+      "aiCall": "A chance of showers and thunderstorms before 1pm, then showers and thunderstorms likely between 1pm and 4pm, then showers and thunderstorms likely. Mostly sunny, with a high near 91. Chance of precipitation is 70%.",
+      "emoji": "⛈️",
+      "tideEvents": [
+        {
+          "type": "H",
+          "time": "2:58 AM"
+        },
+        {
+          "type": "L",
+          "time": "2:08 PM"
+        }
+      ],
+      "moonPhase": "Waning Crescent (~17% illuminated) — strong tidal push (spring tide)"
     }
   ],
-  "dateISO": "2026-09-04",
+  "dateISO": "2026-09-05",
   "aiSummary": "Speckled trout and redfish are the story on Choctawhatchee Bay right now, with solid trout numbers on the grass flats and bull reds showing up in recent reports — fish early, as 87°F water is pushing the bite hard toward dawn and well before midday heat sets in. A new moon spring tide is driving stronger-than-usual tidal movement today, with high tide just after sunrise and low tide in the late afternoon, giving anglers a productive moving-water window through mid-morning. A 21% storm chance kicks in after 1 PM, so plan to be off the open water by early afternoon and lean toward protected bayous if you're staying out late.",
   "locationNotes": {
     "bridge": {
@@ -203,10 +203,10 @@
   },
   "waterTemp": 87,
   "pressure": {
-    "hpa": 1014.1,
-    "inHg": 29.95,
-    "direction": "rising",
-    "changeHpa3h": 0.6
+    "hpa": 1013.6,
+    "inHg": 29.93,
+    "direction": "steady",
+    "changeHpa3h": 0
   },
   "speciesSignals": [
     {
@@ -214,14 +214,14 @@
       "label": "Speckled trout",
       "current": true,
       "reportCount": 9,
-      "lastReported": "2026-09-04"
+      "lastReported": "2026-09-05"
     },
     {
       "key": "redfish",
       "label": "Redfish",
       "current": true,
       "reportCount": 10,
-      "lastReported": "2026-09-04"
+      "lastReported": "2026-09-05"
     },
     {
       "key": "gulf_flounder",
@@ -249,20 +249,25 @@
     "majors": [
       {
         "type": "overhead",
-        "peak": "6:40 AM",
-        "window": "5:40 AM–7:40 AM"
+        "peak": "7:40 AM",
+        "window": "6:40 AM–8:40 AM"
       },
       {
         "type": "underfoot",
-        "peak": "7:10 PM",
-        "window": "6:10 PM–8:10 PM"
+        "peak": "8:15 PM",
+        "window": "7:15 PM–9:15 PM"
       }
     ],
     "minors": [
       {
+        "type": "moonrise",
+        "peak": "12:15 AM",
+        "window": "11:45 PM–12:45 AM"
+      },
+      {
         "type": "moonset",
-        "peak": "2:10 PM",
-        "window": "1:40 PM–2:40 PM"
+        "peak": "3:10 PM",
+        "window": "2:40 PM–3:40 PM"
       }
     ]
   }
