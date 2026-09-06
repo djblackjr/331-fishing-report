@@ -33,11 +33,13 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: node scripts/update-bite-report.mjs
 
-      - name: Refresh AI summary and per-location notes
-        id: location_notes
-        env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: node scripts/update-location-notes.mjs
+      # Per-location "Today's advice" and the bay-wide daily summary used to
+      # be a second Claude call here (update-location-notes.mjs), but that
+      # script only ever synthesized text from data already in
+      # conditions.json — no web search, nothing Claude could see that the
+      # page itself can't. That's now computed client-side in App.jsx
+      # (getTodaysCall/getDailySummary) at zero cost, so there's nothing
+      # left for this workflow to run for it.
 
       - name: Rebuild sourced Atlas fishing intelligence
         run: npm run atlas:intelligence
@@ -64,24 +66,23 @@ jobs:
             https://api.github.com/repos/djblackjr/331-fishing-report/actions/workflows/deploy-pages.yml/dispatches \
             -d '{"ref":"main"}'
 
-      - name: Fail run if an AI-powered refresh step failed
-        # The bite-report and location-notes scripts exit 0 on their own
-        # failures on purpose (a bad Claude API call — missing key, billing,
-        # rate limit, malformed response — shouldn't block the free
-        # weather/tide refresh above, which already committed and deployed
-        # by this point). But that used to mean a stuck Anthropic API key
-        # could silently no-op for weeks while every run still showed
-        # green. This step runs last and fails the job (red X, and a
-        # notification via GitHub's normal failed-workflow alerts) whenever
-        # either script reported trouble, so it can't go unnoticed again.
-        if: always() && (steps.bite_report.outputs.failed == 'true' || steps.location_notes.outputs.failed == 'true')
+      - name: Fail run if the bite-report refresh failed
+        # update-bite-report.mjs exits 0 on its own failures on purpose (a
+        # bad Claude API call — missing key, billing, rate limit, malformed
+        # response — shouldn't block the free weather/tide refresh above,
+        # which already committed and deployed by this point). But that
+        # used to mean a stuck Anthropic API key could silently no-op for
+        # weeks while every run still showed green. This step runs last and
+        # fails the job (red X, and a notification via GitHub's normal
+        # failed-workflow alerts) whenever the script reported trouble, so
+        # it can't go unnoticed again.
+        if: always() && steps.bite_report.outputs.failed == 'true'
         run: |
           {
-            echo "## ⚠️ AI-powered refresh failed"
+            echo "## ⚠️ Bite report refresh failed"
             echo
-            [ "${{ steps.bite_report.outputs.failed }}" = "true" ] && echo "- **What's Being Caught** bite report did not refresh — see the 'Refresh local bite report' step's error annotation above."
-            [ "${{ steps.location_notes.outputs.failed }}" = "true" ] && echo "- **AI summary / per-location notes** did not refresh — see the 'Refresh AI summary and per-location notes' step's error annotation above."
+            echo "**What's Being Caught** did not refresh — see the 'Refresh local bite report' step's error annotation above."
             echo
-            echo "Weather, tide, and forecast data above still refreshed normally — only the Claude-powered copy is stale. Check the ANTHROPIC_API_KEY secret and the Anthropic account's billing/credit balance."
+            echo "Weather, tide, and forecast data above still refreshed normally — only the bite report is stale. Check the ANTHROPIC_API_KEY secret and the Anthropic account's billing/credit balance."
           } >> "$GITHUB_STEP_SUMMARY"
           exit 1

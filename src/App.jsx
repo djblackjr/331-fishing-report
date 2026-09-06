@@ -88,11 +88,9 @@ function isClosedSeason(speciesName, dateISO) {
 }
 
 function getLocationNotes(loc) {
-  const notes = CONDITIONS.locationNotes?.[loc.id] || {};
   return {
     ...loc,
-    aiNote: notes.aiNote ?? loc.aiNote,
-    todaysCall: notes.todaysCall ?? loc.todaysCall,
+    todaysCall: getTodaysCall(loc),
   };
 }
 
@@ -377,6 +375,79 @@ function getConditionsDiff() {
   }
   if (changes.length === 0) return "Conditions steady since yesterday — no meaningful change in wind, temps, or storm risk.";
   return `Since yesterday: ${changes.join(" · ")}.`;
+}
+
+// ── TEMPLATED DAILY COPY (no API call) ───────────────────────────────────────
+// This used to be written by scripts/update-location-notes.mjs calling
+// Claude once a day. That script only ever synthesized text from data the
+// pipeline already had (wind, storm timing, tide, each location's own
+// stops/species) — it never needed web search or anything Claude could see
+// that this page can't — so it's assembled here instead: zero cost, always
+// in sync with what's rendered elsewhere on the page, and with no risk of a
+// stale/invented specific (a named catch, a number) surviving past the day
+// it was true. update-bite-report.mjs is different — that one genuinely
+// reads external fishing-report sites and paraphrases them, which nothing
+// on this page can substitute for — and is the one piece that still calls
+// the Anthropic API.
+function resolveText(val, wind) {
+  return typeof val === "function" ? val(wind) : val;
+}
+
+// Picks which of this location's stops to recommend for the tide direction
+// actually happening during today's best window, falling back to its primary
+// (bestTide-matching) stop otherwise — the same wrong-tide fallback logic
+// adjustedScoreForDay() already uses to score the day, just reused here to
+// pick a stop instead of a score.
+function pickStopForTide(loc, tideDir) {
+  if (!loc.stops?.length) return null;
+  if (!tideDir || tideDir === loc.bestTide) return loc.stops[0];
+  const opposite = loc.bestTide === "incoming" ? "outgoing" : "incoming";
+  return loc.stops.find(s => typeof s.tide === "string" && new RegExp(opposite, "i").test(s.tide)) || loc.stops[0];
+}
+
+// Per-location "Today's advice" — deliberately doesn't repeat the wind-
+// specific tip already shown in that stop's own step list below it (see
+// leeSideBaitNote() and the Fishing Spots section); this just says which
+// stop to fish and why, given today's actual tide timing and top species.
+function getTodaysCall(loc) {
+  const window = getBestWindow();
+  const tideDir = tideDirectionAt(CONDITIONS.tideEvents, window.start);
+  const stop = pickStopForTide(loc, tideDir);
+  if (!stop) return null;
+
+  const sentences = [];
+  if (CONDITIONS.stormChance >= 40) {
+    sentences.push(`${CONDITIONS.stormChance}% chance of storms today${CONDITIONS.stormWindow ? ` (${CONDITIONS.stormWindow})` : ""} — fish the ${window.startText}–${window.endText} window and be ready to head in.`);
+  } else if (CONDITIONS.stormChance >= 20) {
+    sentences.push(`A ${CONDITIONS.stormChance}% storm chance keeps today a morning-window day — best bet is ${window.startText}–${window.endText}.`);
+  } else {
+    sentences.push(`Low storm risk today — fish ${window.startText}–${window.endText} without much weather pressure.`);
+  }
+
+  const stopLabel = resolveText(stop.name, CONDITIONS.wind);
+  if (tideDir && tideDir !== loc.bestTide) {
+    sentences.push(`The tide will be ${tideDir} during that window rather than this spot's usual ${loc.bestTide} pattern, so ${stopLabel} is the better call today.`);
+  } else {
+    sentences.push(`The tide will be ${tideDir || loc.bestTide} during that window — right in this spot's wheelhouse at ${stopLabel}.`);
+  }
+
+  const top = (loc.species || [])[0];
+  if (top) sentences.push(`Top target: ${top.name} — ${top.note}.`);
+
+  return sentences.join(" ");
+}
+
+// Bay-wide equivalent of the old Claude-written "AI Summary" card — today's
+// weather/storm picture plus the day's top-scoring location.
+function getDailySummary() {
+  const window = getBestWindow();
+  const best = getBestBet();
+  const sentences = [`${CONDITIONS.weather} · ${CONDITIONS.wind.description}.`];
+  sentences.push(CONDITIONS.stormChance >= 40
+    ? `${CONDITIONS.stormChance}% storm chance${CONDITIONS.stormWindow ? ` (${CONDITIONS.stormWindow})` : ""} — plan around the ${window.startText}–${window.endText} window.`
+    : `Fish ${window.startText}–${window.endText} for the best conditions today.`);
+  if (best) sentences.push(`Today's top pick: ${best.loc.label} at ${best.score.toFixed(1)}/10 (${ratingLabel(best.score)}).`);
+  return sentences.join(" ");
 }
 
 // ── BAIT INVENTORY & RECOMMENDATIONS ─────────────────────────────────────────
@@ -982,7 +1053,7 @@ function Collapsible({ title, children, defaultOpen = true }) {
 // document. Sized 4:5 to match how those surfaces crop a portrait image.
 function ShareCard({ C, bestBet }) {
   const { day, month, date } = shortDate(C.date);
-  const caption = truncateWords(C.aiSummary, 130);
+  const caption = truncateWords(getDailySummary(), 130);
   const statStyle = { fontSize: 11, background: "#0f2a1c", border: "1px solid #1a3828", borderRadius: 6, padding: "5px 8px", color: "#86c7a0" };
   return (
     <div style={{
@@ -1357,7 +1428,7 @@ function LocationReport({ loc }) {
       <div style={{ background: "#0d2918", border: "1px solid #4ade8033", borderRadius: 10, padding: "14px 16px", marginBottom: 10 }}>
         <div style={{ fontSize: 15, color: "#4ade80", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 8, fontWeight: 600 }}>📌 Spot Notes</div>
         <div style={{ fontSize: 14, color: "#7ab898", marginBottom: 12, lineHeight: 1.6 }}>
-          AI-backed context for this location plus the best next move for today.
+          Background on this location plus today's best move, computed from current conditions.
         </div>
 
         {/* Static: why this spot */}
@@ -1419,6 +1490,7 @@ export default function App() {
   const bestBet = getBestBet();
   const bestWindow = getBestWindow();
   const conditionsDiff = getConditionsDiff();
+  const dailySummary = getDailySummary();
   const bitReportAge = C.localBiteUpdated ? daysBetween(C.localBiteUpdated, C.date) : null;
   const avgForecast = averageForecast();
 
@@ -1651,12 +1723,10 @@ export default function App() {
         {/* 3-day look ahead — always visible */}
         <ForecastStrip />
 
-        {C.aiSummary && (
-          <div style={{ background: "#0f2a1c", border: "1px solid #1a3828", borderRadius: 10, padding: "13px 16px", marginBottom: 10 }}>
-            <div style={{ fontSize: 15, color: "#4ade80", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 8, fontWeight: 600 }}>💬 AI Summary</div>
-            <p style={{ margin: 0, fontSize: 16, color: "#d1f0e0", lineHeight: 1.75 }}>{C.aiSummary}</p>
-          </div>
-        )}
+        <div style={{ background: "#0f2a1c", border: "1px solid #1a3828", borderRadius: 10, padding: "13px 16px", marginBottom: 10 }}>
+          <div style={{ fontSize: 15, color: "#4ade80", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 8, fontWeight: 600 }}>📋 Today's Summary</div>
+          <p style={{ margin: 0, fontSize: 16, color: "#d1f0e0", lineHeight: 1.75 }}>{dailySummary}</p>
+        </div>
 
         {/* Local bite report — grounded in real recent guide/charter reports */}
         <div style={{ background: "#0f2a1c", border: "1px solid #1a3828", borderRadius: 10, padding: "13px 16px", marginBottom: 4 }}>
