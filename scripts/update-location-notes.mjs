@@ -9,12 +9,24 @@
 // Run manually:   ANTHROPIC_API_KEY=... node scripts/update-location-notes.mjs
 // Run on schedule: see .github/workflows/daily-refresh.yml
 
-import { readFile, writeFile } from "fs/promises";
+import { readFile, writeFile, appendFile } from "fs/promises";
 
 const OUT_PATH = new URL("../src/data/conditions.json", import.meta.url);
 const API_KEY = process.env.ANTHROPIC_API_KEY;
 
+// Non-fatal by design (see update-bite-report.mjs for why) — but still
+// surfaces via a GitHub Actions error annotation plus a `failed=true`
+// step output, which daily-refresh.yml's final step checks to fail the
+// overall run red instead of reporting success on a silent no-op.
+async function markFailed(message) {
+  console.log(`::error title=Location Notes Refresh Failed::${message}`);
+  if (process.env.GITHUB_OUTPUT) {
+    await appendFile(process.env.GITHUB_OUTPUT, "failed=true\n");
+  }
+}
+
 if (!API_KEY) {
+  await markFailed("ANTHROPIC_API_KEY not set");
   console.error("ANTHROPIC_API_KEY not set — skipping location notes update (non-fatal).");
   process.exit(0); // exit 0 on purpose: missing key shouldn't fail the whole daily refresh
 }
@@ -148,11 +160,13 @@ async function main() {
   try {
     result = await callClaude(buildPrompt(existing));
   } catch (err) {
+    await markFailed(err.message);
     console.error("Location notes update failed, leaving previous values in place:", err.message);
     process.exit(0); // non-fatal — keep yesterday's notes rather than breaking the whole refresh
   }
 
   if (!result.aiSummary || !result.locations || Object.keys(result.locations).length !== LOCATIONS.length) {
+    await markFailed("Unexpected response shape from Claude API");
     console.error("Unexpected response shape, leaving previous values in place.");
     process.exit(0);
   }

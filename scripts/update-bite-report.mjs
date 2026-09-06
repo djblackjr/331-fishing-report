@@ -7,12 +7,30 @@
 // for weather/tides — this genuinely needs a model reading and synthesizing
 // text, same as when you'd ask Claude manually in a chat.
 
-import { readFile, writeFile } from "fs/promises";
+import { readFile, writeFile, appendFile } from "fs/promises";
 
 const OUT_PATH = new URL("../src/data/conditions.json", import.meta.url);
 const API_KEY = process.env.ANTHROPIC_API_KEY;
 
+// Every failure path below is intentionally non-fatal (exit 0) — a bad
+// bite-report refresh shouldn't take down the free weather/tide refresh
+// that runs later in the same job. But "non-fatal" used to also mean
+// "invisible": the workflow reported success every day for weeks while
+// this silently no-op'd on an Anthropic billing error. markFailed() keeps
+// it non-blocking here while still (a) writing a GitHub Actions error
+// annotation so it shows up in the run's UI, and (b) setting a
+// `failed=true` step output the workflow's final step checks to fail the
+// overall run red — see the "Fail run if AI refresh steps failed" step
+// in daily-refresh.yml.
+async function markFailed(message) {
+  console.log(`::error title=Bite Report Refresh Failed::${message}`);
+  if (process.env.GITHUB_OUTPUT) {
+    await appendFile(process.env.GITHUB_OUTPUT, "failed=true\n");
+  }
+}
+
 if (!API_KEY) {
+  await markFailed("ANTHROPIC_API_KEY not set");
   console.error("ANTHROPIC_API_KEY not set — skipping bite report update (non-fatal).");
   process.exit(0); // exit 0 on purpose: missing key shouldn't fail the whole daily refresh
 }
@@ -74,11 +92,13 @@ async function main() {
   try {
     result = await callClaude(buildPrompt(existing.waterTemp));
   } catch (err) {
+    await markFailed(err.message);
     console.error("Bite report update failed, leaving previous value in place:", err.message);
     process.exit(0); // non-fatal — keep yesterday's bite report rather than breaking the whole refresh
   }
 
   if (!result.localBiteReport) {
+    await markFailed("Unexpected response shape from Claude API");
     console.error("Unexpected response shape, leaving previous value in place.");
     process.exit(0);
   }
