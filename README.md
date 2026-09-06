@@ -5,37 +5,30 @@ A daily fishing conditions app for the 331 Bridge / Choctawhatchee Bay area (Fre
 ## What this is
 - React + Vite single-page app
 - Main component: `src/App.jsx`
-- Trip log data persists via `window.storage` (Claude artifact storage) — this only works when run as a Claude artifact, not on a plain Netlify deploy. On Netlify, the Trip Log tab's save/delete calls will silently fail (wrapped in try/catch), everything else works fine.
+- Trip log data persists via `window.storage` (Claude artifact storage) — this only works when run as a Claude artifact, not on a plain static deploy. On GitHub Pages, the Trip Log tab's save/delete calls will silently fail (wrapped in try/catch), everything else works fine.
 
-## How to keep this alive (read this before you lose it again)
+## Hosting: GitHub Pages
+This repo is hosted on GitHub Pages, not Netlify — `.github/workflows/deploy-pages.yml` builds the app (`npm run build`) and publishes `dist/` on every push to `main`, no separate hosting account or manual redeploy step involved. `daily-refresh.yml`'s automated commits also dispatch this workflow directly (see the "Trigger Pages deploy" step) since a push made with the workflow's default token doesn't trigger other workflows on its own.
 
-**1. This code must live in Git, not just in a chat.**
-Every time you get an updated version of `App.jsx` from Claude, replace the file in this repo and commit it:
+- Live site: `https://djblackjr.github.io/331-fishing-report/`
+- Enable/inspect: repo Settings → Pages (source: GitHub Actions)
+- `vite.config.js` sets `base: '/331-fishing-report/'` to match Pages' project-site URL structure — change this if the repo is ever renamed or moved to a custom domain (in which case `base` becomes `/`).
+
+**This code must live in Git, not just in a chat.** Every time you get an updated version of a file from Claude, replace it in this repo and commit it:
 ```bash
-git add src/App.jsx
-git commit -m "Update conditions for <date>"
+git add <file>
+git commit -m "Update <what changed>"
 git push
 ```
 Once it's committed, it's permanent — you can always `git log` and roll back to any prior day's version.
 
-**2. Connect this repo to Netlify (one-time setup).**
-- Go to https://app.netlify.com → "Add new site" → "Import an existing project"
-- Connect GitHub → select `djblackjr/331-fishing-report`
-- Build command: `npm run build`
-- Publish directory: `dist`
-- Deploy
-
-Once connected, **every `git push` automatically triggers a new live deploy.** No manual redeploying, no losing the link.
-
 ## Daily update workflow
-The `CONDITIONS`, `FORECAST`, and the "What's Being Caught" block at the top of `App.jsx` are the only parts meant to change day-to-day. Everything else (species notes, fishing strategy stops, regulations, bait rigs) is evergreen reference content.
+`.github/workflows/daily-refresh.yml` runs this automatically — no manual Claude-chat step needed day to day. On its schedule (plus an external cron-job.org ping, since GitHub's native cron proved unreliable for this repo) it:
+1. Fetches live weather/tide/forecast data (`scripts/update-conditions.mjs`) — free, no API key needed.
+2. Refreshes the "What's Being Caught" bite report (`scripts/update-bite-report.mjs`) — the one piece that calls the Anthropic API, since it genuinely reads and paraphrases external fishing-report sites. Requires the `ANTHROPIC_API_KEY` repo secret to have a funded Anthropic account; the workflow now fails loudly (red run + GitHub's normal failure notification) if that call errors out, instead of silently going stale.
+3. Rebuilds the Atlas intelligence packet and commits+pushes `conditions.json` if anything changed, which triggers the GitHub Pages deploy above.
 
-Each morning:
-1. Ask Claude (a fresh chat, or this one) to look up current WeatherBug conditions for Freeport, FL 32459 and current local Choctawhatchee Bay fishing reports.
-2. Ask it to update `CONDITIONS`, `FORECAST`, and `localBiteReport` in `App.jsx` accordingly.
-3. Commit and push the updated file (step 1 above). Netlify redeploys automatically.
-
-Because a new Claude chat has no memory of past sessions, always paste in either this README or the current `App.jsx` so it has full context — don't assume it remembers building this.
+Per-location "Today's advice" and the bay-wide daily summary are computed client-side in `App.jsx` from that same data (`getTodaysCall`/`getDailySummary`) — no API call needed for those.
 
 ## Claude Code transfer setup
 To transfer this repo into Claude Code and keep the daily refresh working:
