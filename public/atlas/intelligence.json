@@ -21,10 +21,10 @@
     "sky": "Cloudy",
     "stormChance": 20,
     "pressure": {
-      "hpa": 1011.2,
-      "inHg": 29.86,
-      "direction": "falling",
-      "changeHpa3h": -1
+      "hpa": 1012.5,
+      "inHg": 29.9,
+      "direction": "rising",
+      "changeHpa3h": 0.9
     }
   },
   "currentReport": {
@@ -58,17 +58,17 @@
       "sky": "Cloudy",
       "stormChance": 20,
       "pressure": {
-        "hpa": 1011.2,
-        "inHg": 29.86,
-        "direction": "falling",
-        "changeHpa3h": -1
+        "hpa": 1012.5,
+        "inHg": 29.9,
+        "direction": "rising",
+        "changeHpa3h": 0.9
       }
     }
   },
   "archivedReports": [
     {
       "kind": "archived_app_snapshot",
-      "date": "2026-09-05",
+      "date": "2026-09-06",
       "displayDate": "September 6, 2026",
       "summary": "This week's Northwest Florida report puts Choctawhatchee Bay right at the start of the fall transition — cooling water and heavy concentrations of bait are pushing into the bayous, flats, bridge pilings, and roll-downs. Spanish mackerel have turned on steadily over the past week as schools of greenies move out of open water into those bridge and bayou areas, giving guides a reliable target alongside the bay's usual inshore species. Redfish and general flats activity are expected to keep building as September moves toward October, with anglers working live greenies on knocker rigs for trout while the mackerel bite holds. Regional water temperatures have eased a couple of degrees off their summer peak; this location is still reading a warm 87°F, so early morning and evening trips around bridge structure and bait-holding flats remain the most productive windows.",
       "attribution": "greatdaysoutdoors.com (Northwest Florida Fishing Report, Sept 4–10) · Refreshed via Claude Code",
@@ -80,27 +80,27 @@
         "redfish"
       ],
       "conditions": {
-        "wind": "W 0 to 10 mph",
+        "wind": "W 0 to 5 mph",
         "windDir": "W",
-        "tide": "High tide ~12:32 AM · Low tide ~12:27 PM · Sunrise 6:22 AM",
+        "tide": "High tide ~1:50 AM · Low tide ~1:21 PM · Sunrise 6:22 AM",
         "tideEvents": [
           {
             "type": "H",
-            "time": "12:32 AM"
+            "time": "1:50 AM"
           },
           {
             "type": "L",
-            "time": "12:27 PM"
+            "time": "1:21 PM"
           }
         ],
         "waterTemp": 87,
         "sky": "Cloudy",
         "stormChance": 20,
         "pressure": {
-          "hpa": 1012.1,
-          "inHg": 29.89,
-          "direction": "rising",
-          "changeHpa3h": 0.5
+          "hpa": 1011.2,
+          "inHg": 29.86,
+          "direction": "falling",
+          "changeHpa3h": -1
         }
       }
     },
