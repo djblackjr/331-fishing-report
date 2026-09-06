@@ -25,19 +25,14 @@
   "waterClarity": "Slightly stained",
   "sky": "Cloudy",
   "lastUpdated": "9/5/2026, 6:48:47 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
-  "localBiteReport": "Note: The most current inshore-focused reports found for Choctawhatchee Bay are from late July to early August 2026 — roughly 1–2 weeks old — so treat this as recent rather than this-week current. Speckled trout have been the standout bay species, with multiple reports of solid numbers spread across the grass flats; one Santa Rosa Beach-area report (about a week old) highlighted a 40-inch, 26-lb bull redfish alongside good trout action. The fishingbooker.com Choctawhatchee Bay seasonal summary for July–August describes bull redfish and trophy-sized trout as the primary inshore targets right now, with guides recommending early morning trips to beat summer crowds and heat. Water temperature at this location is measuring 87°F, which is pushing fish into slightly deeper, shadier water during midday — early morning and evening windows on the grass flats and around structure will be most productive.",
-  "localBiteSource": "captainexperiences.com (Choctawhatchee Bay reports page), fishingbooker.com (Choctawhatchee Bay reports/destination page) · Auto-refreshed via Claude API",
-  "localBiteUpdated": "August 12, 2026",
+  "localBiteReport": "This week's Northwest Florida report puts Choctawhatchee Bay right at the start of the fall transition — cooling water and heavy concentrations of bait are pushing into the bayous, flats, bridge pilings, and roll-downs. Spanish mackerel have turned on steadily over the past week as schools of greenies move out of open water into those bridge and bayou areas, giving guides a reliable target alongside the bay's usual inshore species. Redfish and general flats activity are expected to keep building as September moves toward October, with anglers working live greenies on knocker rigs for trout while the mackerel bite holds. Regional water temperatures have eased a couple of degrees off their summer peak; this location is still reading a warm 87°F, so early morning and evening trips around bridge structure and bait-holding flats remain the most productive windows.",
+  "localBiteSource": "greatdaysoutdoors.com (Northwest Florida Fishing Report, Sept 4–10) · Refreshed via Claude Code",
+  "localBiteUpdated": "September 6, 2026",
   "localBiteEvidence": [
     {
-      "title": "Choctawhatchee Bay Fishing Reports (August 2026)",
-      "url": "https://captainexperiences.com/fishing-reports/locations/regions/choctawhatchee-bay",
-      "reportDate": "2026-08-06"
-    },
-    {
-      "title": "Daily Choctawhatchee Bay Fishing Reports (July 2026)",
-      "url": "https://fishingbooker.com/reports/destination/us/choctawhatchee-bay",
-      "reportDate": "2026-07-28"
+      "title": "Northwest Florida Fishing Report for September 4 - 10, 2026",
+      "url": "https://greatdaysoutdoors.com/northwest-florida-fishing-report-for-september-4-10-2026/",
+      "reportDate": "2026-09-04"
     }
   ],
   "previousDay": {
