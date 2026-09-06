@@ -1,20 +1,20 @@
 {
-  "date": "Saturday, September 5, 2026",
+  "date": "Sunday, September 6, 2026",
   "wind": {
-    "speed": 10,
+    "speed": 5,
     "dir": "W",
-    "description": "W 0 to 10 mph"
+    "description": "W 0 to 5 mph"
   },
-  "weather": "Sunny then Slight Chance Showers And Thunderstorms · High 91°F · Heat index up to 103°F",
-  "tide": "High tide ~12:32 AM · Low tide ~12:27 PM · Sunrise 6:22 AM",
+  "weather": "Sunny then Slight Chance Showers And Thunderstorms · High 91°F · Heat index up to 105°F",
+  "tide": "High tide ~1:50 AM · Low tide ~1:21 PM · Sunrise 6:22 AM",
   "tideEvents": [
     {
       "type": "H",
-      "time": "12:32 AM"
+      "time": "1:50 AM"
     },
     {
       "type": "L",
-      "time": "12:27 PM"
+      "time": "1:21 PM"
     }
   ],
   "sunrise": "6:22 AM",
@@ -24,7 +24,7 @@
   "moonPhase": "Waning Crescent (~26% illuminated) — moderate tidal push",
   "waterClarity": "Slightly stained",
   "sky": "Cloudy",
-  "lastUpdated": "9/5/2026, 9:45:31 PM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "lastUpdated": "9/6/2026, 3:12:15 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
   "localBiteReport": "This week's Northwest Florida report puts Choctawhatchee Bay right at the start of the fall transition — cooling water and heavy concentrations of bait are pushing into the bayous, flats, bridge pilings, and roll-downs. Spanish mackerel have turned on steadily over the past week as schools of greenies move out of open water into those bridge and bayou areas, giving guides a reliable target alongside the bay's usual inshore species. Redfish and general flats activity are expected to keep building as September moves toward October, with anglers working live greenies on knocker rigs for trout while the mackerel bite holds. Regional water temperatures have eased a couple of degrees off their summer peak; this location is still reading a warm 87°F, so early morning and evening trips around bridge structure and bait-holding flats remain the most productive windows.",
   "localBiteSource": "greatdaysoutdoors.com (Northwest Florida Fishing Report, Sept 4–10) · Refreshed via Claude Code",
   "localBiteUpdated": "September 6, 2026",
@@ -38,38 +38,38 @@
   "previousDay": {
     "date": "Saturday, September 5, 2026",
     "wind": {
-      "dir": "NNW",
-      "speed": 5
+      "dir": "W",
+      "speed": 10
     },
-    "high": 89,
-    "stormChance": 52,
+    "high": 91,
+    "stormChance": 20,
     "tide": "High tide ~12:32 AM · Low tide ~12:27 PM · Sunrise 6:22 AM",
     "waterTemp": 87
   },
   "openMeteo": [
     {
-      "high": 89,
-      "low": 76,
-      "stormChance": 37,
-      "windSpeed": 9,
-      "windDir": "W",
-      "summary": "Fog"
-    },
-    {
       "high": 91,
       "low": 78,
-      "stormChance": 11,
+      "stormChance": 15,
       "windSpeed": 9,
       "windDir": "SW",
       "summary": "Overcast"
     },
     {
-      "high": 86,
+      "high": 88,
       "low": 75,
-      "stormChance": 67,
+      "stormChance": 58,
       "windSpeed": 16,
-      "windDir": "SE",
+      "windDir": "S",
       "summary": "Rain"
+    },
+    {
+      "high": 94,
+      "low": 75,
+      "stormChance": 49,
+      "windSpeed": 9,
+      "windDir": "E",
+      "summary": "Rain showers"
     }
   ],
   "forecast": [
@@ -79,13 +79,13 @@
       "label": "Today",
       "high": 91,
       "low": null,
-      "wind": "W 0 to 10 mph",
-      "windSpeed": 10,
+      "wind": "W 0 to 5 mph",
+      "windSpeed": 5,
       "windDir": "W",
       "storms": 20,
-      "headline": "Sunny then Slight Chance Showers And Thunderstorms · Heat index 103",
-      "fishingScore": 7.7,
-      "aiCall": "A slight chance of showers and thunderstorms between 1pm and 5pm. Sunny. High near 91, with temperatures falling to around 87 in the afternoon. Heat index values as high as 103. West wind 0 to 10 mph. Chance of precipitation is 20%.",
+      "headline": "Sunny then Slight Chance Showers And Thunderstorms · Heat index 105",
+      "fishingScore": 7.8,
+      "aiCall": "A slight chance of showers and thunderstorms between 1pm and 4pm. Sunny. High near 91, with temperatures falling to around 87 in the afternoon. Heat index values as high as 105. West wind 0 to 5 mph. Chance of precipitation is 20%.",
       "emoji": "⛈️",
       "tideEvents": [
         {
@@ -105,13 +105,13 @@
       "label": "Tomorrow",
       "high": 91,
       "low": null,
-      "wind": "W 0 to 5 mph",
+      "wind": "WSW 0 to 5 mph",
       "windSpeed": 5,
-      "windDir": "W",
-      "storms": 81,
-      "headline": "Chance Showers And Thunderstorms · Heat index 103",
-      "fishingScore": 5.3,
-      "aiCall": "A slight chance of showers and thunderstorms before 7am, then a chance of showers and thunderstorms between 7am and 10am, then a chance of showers and thunderstorms between 10am and 1pm, then showers and thunderstorms. Mostly sunny. High near 91, with temperatures falling to around 84 in the afternoon. Heat index values as high as 103. West wind 0 to 5 mph. Chance of precipitation is 80%.",
+      "windDir": "WSW",
+      "storms": 63,
+      "headline": "Showers And Thunderstorms Likely · Heat index 105",
+      "fishingScore": 6,
+      "aiCall": "Showers and thunderstorms likely. Mostly sunny. High near 91, with temperatures falling to around 87 in the afternoon. Heat index values as high as 105. West southwest wind 0 to 5 mph. Chance of precipitation is 60%.",
       "emoji": "⛈️",
       "tideEvents": [
         {
@@ -131,25 +131,34 @@
       "label": "Tuesday",
       "high": 89,
       "low": null,
-      "wind": "E 5 to 10 mph",
+      "wind": "ESE 5 to 10 mph",
       "windSpeed": 10,
-      "windDir": "E",
-      "storms": 69,
+      "windDir": "ESE",
+      "storms": 51,
       "headline": "Chance Showers And Thunderstorms",
-      "fishingScore": 5.7,
-      "aiCall": "A chance of showers and thunderstorms before 1pm, then showers and thunderstorms likely. Partly sunny, with a high near 89. Chance of precipitation is 70%.",
+      "fishingScore": 6.5,
+      "aiCall": "A slight chance of rain showers between 7am and 10am, then a chance of showers and thunderstorms. Mostly sunny, with a high near 89. Chance of precipitation is 50%.",
       "emoji": "⛈️",
-      "tideEvents": [],
+      "tideEvents": [
+        {
+          "type": "H",
+          "time": "4:00 AM"
+        },
+        {
+          "type": "L",
+          "time": "2:48 PM"
+        }
+      ],
       "moonPhase": "Waning Crescent (~10% illuminated) — strong tidal push (spring tide)"
     }
   ],
-  "dateISO": "2026-09-05",
+  "dateISO": "2026-09-06",
   "waterTemp": 87,
   "pressure": {
-    "hpa": 1012.1,
-    "inHg": 29.89,
-    "direction": "rising",
-    "changeHpa3h": 0.5
+    "hpa": 1011.2,
+    "inHg": 29.86,
+    "direction": "falling",
+    "changeHpa3h": -1
   },
   "speciesSignals": [
     {
@@ -157,14 +166,14 @@
       "label": "Speckled trout",
       "current": true,
       "reportCount": 9,
-      "lastReported": "2026-09-05"
+      "lastReported": "2026-09-06"
     },
     {
       "key": "redfish",
       "label": "Redfish",
       "current": true,
       "reportCount": 10,
-      "lastReported": "2026-09-05"
+      "lastReported": "2026-09-06"
     },
     {
       "key": "gulf_flounder",
@@ -192,25 +201,25 @@
     "majors": [
       {
         "type": "overhead",
-        "peak": "7:40 AM",
-        "window": "6:40 AM–8:40 AM"
+        "peak": "8:45 AM",
+        "window": "7:45 AM–9:45 AM"
       },
       {
         "type": "underfoot",
-        "peak": "8:15 PM",
-        "window": "7:15 PM–9:15 PM"
+        "peak": "9:15 PM",
+        "window": "8:15 PM–10:15 PM"
       }
     ],
     "minors": [
       {
         "type": "moonrise",
-        "peak": "12:15 AM",
-        "window": "11:45 PM–12:45 AM"
+        "peak": "1:20 AM",
+        "window": "12:50 AM–1:50 AM"
       },
       {
         "type": "moonset",
-        "peak": "3:10 PM",
-        "window": "2:40 PM–3:40 PM"
+        "peak": "4:05 PM",
+        "window": "3:35 PM–4:35 PM"
       }
     ]
   }
