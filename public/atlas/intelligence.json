@@ -4,8 +4,8 @@
   "generatedAt": "2026-09-07",
   "scopeNote": "Regional reports support timing and species activity only. They do not prove a catch, depth, bottom type, or safe navigation at a mapped Jolly Bay feature.",
   "currentConditions": {
-    "wind": "SE 0 to 5 mph",
-    "windDir": "SE",
+    "wind": "SSE 5 mph",
+    "windDir": "SSE",
     "tide": "High tide ~2:58 AM · Low tide ~2:08 PM · Sunrise 6:23 AM",
     "tideEvents": [
       {
@@ -17,14 +17,14 @@
         "time": "2:08 PM"
       }
     ],
-    "waterTemp": 87,
+    "waterTemp": 88,
     "sky": "Cloudy",
     "stormChance": 48,
     "pressure": {
-      "hpa": 1014.7,
-      "inHg": 29.96,
+      "hpa": 1014.1,
+      "inHg": 29.95,
       "direction": "rising",
-      "changeHpa3h": 2.1
+      "changeHpa3h": 0.8
     }
   },
   "currentReport": {
@@ -41,8 +41,8 @@
       "redfish"
     ],
     "conditions": {
-      "wind": "SE 0 to 5 mph",
-      "windDir": "SE",
+      "wind": "SSE 5 mph",
+      "windDir": "SSE",
       "tide": "High tide ~2:58 AM · Low tide ~2:08 PM · Sunrise 6:23 AM",
       "tideEvents": [
         {
@@ -54,14 +54,14 @@
           "time": "2:08 PM"
         }
       ],
-      "waterTemp": 87,
+      "waterTemp": 88,
       "sky": "Cloudy",
       "stormChance": 48,
       "pressure": {
-        "hpa": 1014.7,
-        "inHg": 29.96,
+        "hpa": 1014.1,
+        "inHg": 29.95,
         "direction": "rising",
-        "changeHpa3h": 2.1
+        "changeHpa3h": 0.8
       }
     }
   },
@@ -80,8 +80,8 @@
         "redfish"
       ],
       "conditions": {
-        "wind": "NE 0 to 5 mph",
-        "windDir": "NE",
+        "wind": "SE 0 to 5 mph",
+        "windDir": "SE",
         "tide": "High tide ~2:58 AM · Low tide ~2:08 PM · Sunrise 6:23 AM",
         "tideEvents": [
           {
@@ -95,12 +95,12 @@
         ],
         "waterTemp": 87,
         "sky": "Cloudy",
-        "stormChance": 66,
+        "stormChance": 48,
         "pressure": {
-          "hpa": 1011.3,
-          "inHg": 29.86,
-          "direction": "steady",
-          "changeHpa3h": -0.3
+          "hpa": 1014.7,
+          "inHg": 29.96,
+          "direction": "rising",
+          "changeHpa3h": 2.1
         }
       }
     },
