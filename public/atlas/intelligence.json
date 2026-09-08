@@ -30,15 +30,17 @@
   "currentReport": {
     "kind": "current_regional_report",
     "date": "2026-09-07",
-    "displayDate": "September 6, 2026",
-    "summary": "This week's Northwest Florida report puts Choctawhatchee Bay right at the start of the fall transition — cooling water and heavy concentrations of bait are pushing into the bayous, flats, bridge pilings, and roll-downs. Spanish mackerel have turned on steadily over the past week as schools of greenies move out of open water into those bridge and bayou areas, giving guides a reliable target alongside the bay's usual inshore species. Redfish and general flats activity are expected to keep building as September moves toward October, with anglers working live greenies on knocker rigs for trout while the mackerel bite holds. Regional water temperatures have eased a couple of degrees off their summer peak; this location is still reading a warm 87°F, so early morning and evening trips around bridge structure and bait-holding flats remain the most productive windows.",
-    "attribution": "greatdaysoutdoors.com (Northwest Florida Fishing Report, Sept 4–10) · Refreshed via Claude Code",
+    "displayDate": "September 7, 2026",
+    "summary": "The week of September 4–8, 2026 is showing the first real signs of the fall transition on Choctawhatchee Bay, with water at 88°F and bait schools on the move. Capt. Blake Nelson (Last Cast Charters) reports that greenies are pushing out of deeper open water and into the bayous, bridge areas, and flats, which is drawing more consistent action near structure. Redfish opportunities are improving for sight fishing on the flats, and early-morning timing is key as the heat continues to shut things down mid-day. The report does not specifically call out a strong speckled trout, flounder, or black drum bite this week — the dominant inshore story right now is redfish on the flats as fall patterns begin to develop.",
+    "attribution": "Great Days Outdoors – Northwest Florida Fishing Report (Sept 4–10, 2026), featuring Capt. Blake Nelson / Last Cast Charters on Choctawhatchee Bay · Auto-refreshed via Claude API",
     "sourceIds": [
       "report-aHR0cHM6Ly9ncmVhdG"
     ],
     "species": [
       "spotted_seatrout",
-      "redfish"
+      "redfish",
+      "gulf_flounder",
+      "black_drum"
     ],
     "conditions": {
       "wind": "ENE 5 to 10 mph",
@@ -80,9 +82,9 @@
         "redfish"
       ],
       "conditions": {
-        "wind": "SSE 5 mph",
-        "windDir": "SSE",
-        "tide": "High tide ~2:58 AM · Low tide ~2:08 PM · Sunrise 6:23 AM",
+        "wind": "ENE 5 to 10 mph",
+        "windDir": "ENE",
+        "tide": "High tide ~2:58 AM · Low tide ~2:08 PM · Sunrise 6:24 AM",
         "tideEvents": [
           {
             "type": "H",
@@ -95,12 +97,12 @@
         ],
         "waterTemp": 88,
         "sky": "Cloudy",
-        "stormChance": 48,
+        "stormChance": 20,
         "pressure": {
-          "hpa": 1014.1,
-          "inHg": 29.95,
+          "hpa": 1016,
+          "inHg": 30,
           "direction": "rising",
-          "changeHpa3h": 0.8
+          "changeHpa3h": 2.4
         }
       }
     },
@@ -336,18 +338,18 @@
     {
       "key": "gulf_flounder",
       "label": "Flounder",
-      "current": false,
-      "reportCount": 3,
-      "lastReported": "2026-07-28",
-      "evidenceLevel": "archived_regional_report"
+      "current": true,
+      "reportCount": 4,
+      "lastReported": "2026-09-07",
+      "evidenceLevel": "current_regional_report"
     },
     {
       "key": "black_drum",
       "label": "Black drum",
-      "current": false,
-      "reportCount": 1,
-      "lastReported": "2026-06-22",
-      "evidenceLevel": "archived_regional_report"
+      "current": true,
+      "reportCount": 2,
+      "lastReported": "2026-09-07",
+      "evidenceLevel": "current_regional_report"
     },
     {
       "key": "sheepshead",
