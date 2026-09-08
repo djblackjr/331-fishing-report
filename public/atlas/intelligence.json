@@ -4,9 +4,9 @@
   "generatedAt": "2026-09-07",
   "scopeNote": "Regional reports support timing and species activity only. They do not prove a catch, depth, bottom type, or safe navigation at a mapped Jolly Bay feature.",
   "currentConditions": {
-    "wind": "SSE 5 mph",
-    "windDir": "SSE",
-    "tide": "High tide ~2:58 AM · Low tide ~2:08 PM · Sunrise 6:23 AM",
+    "wind": "ENE 5 to 10 mph",
+    "windDir": "ENE",
+    "tide": "High tide ~2:58 AM · Low tide ~2:08 PM · Sunrise 6:24 AM",
     "tideEvents": [
       {
         "type": "H",
@@ -19,12 +19,12 @@
     ],
     "waterTemp": 88,
     "sky": "Cloudy",
-    "stormChance": 48,
+    "stormChance": 20,
     "pressure": {
-      "hpa": 1014.1,
-      "inHg": 29.95,
+      "hpa": 1016,
+      "inHg": 30,
       "direction": "rising",
-      "changeHpa3h": 0.8
+      "changeHpa3h": 2.4
     }
   },
   "currentReport": {
@@ -41,9 +41,9 @@
       "redfish"
     ],
     "conditions": {
-      "wind": "SSE 5 mph",
-      "windDir": "SSE",
-      "tide": "High tide ~2:58 AM · Low tide ~2:08 PM · Sunrise 6:23 AM",
+      "wind": "ENE 5 to 10 mph",
+      "windDir": "ENE",
+      "tide": "High tide ~2:58 AM · Low tide ~2:08 PM · Sunrise 6:24 AM",
       "tideEvents": [
         {
           "type": "H",
@@ -56,12 +56,12 @@
       ],
       "waterTemp": 88,
       "sky": "Cloudy",
-      "stormChance": 48,
+      "stormChance": 20,
       "pressure": {
-        "hpa": 1014.1,
-        "inHg": 29.95,
+        "hpa": 1016,
+        "inHg": 30,
         "direction": "rising",
-        "changeHpa3h": 0.8
+        "changeHpa3h": 2.4
       }
     }
   },
@@ -80,8 +80,8 @@
         "redfish"
       ],
       "conditions": {
-        "wind": "SE 0 to 5 mph",
-        "windDir": "SE",
+        "wind": "SSE 5 mph",
+        "windDir": "SSE",
         "tide": "High tide ~2:58 AM · Low tide ~2:08 PM · Sunrise 6:23 AM",
         "tideEvents": [
           {
@@ -93,14 +93,14 @@
             "time": "2:08 PM"
           }
         ],
-        "waterTemp": 87,
+        "waterTemp": 88,
         "sky": "Cloudy",
         "stormChance": 48,
         "pressure": {
-          "hpa": 1014.7,
-          "inHg": 29.96,
+          "hpa": 1014.1,
+          "inHg": 29.95,
           "direction": "rising",
-          "changeHpa3h": 2.1
+          "changeHpa3h": 0.8
         }
       }
     },
