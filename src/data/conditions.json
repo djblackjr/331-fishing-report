@@ -5,7 +5,7 @@
     "dir": "E",
     "description": "E 5 to 10 mph"
   },
-  "weather": "Sunny then Chance Showers And Thunderstorms · High 91°F · Heat index up to 100°F",
+  "weather": "Mostly Sunny then Chance Showers And Thunderstorms · High 91°F · Heat index up to 100°F",
   "tide": "High tide ~5:00 AM · Low tide ~3:20 PM · Sunrise 6:24 AM",
   "tideEvents": [
     {
@@ -24,9 +24,9 @@
   "moonPhase": "Waning Crescent (~5% illuminated) — strong tidal push (spring tide)",
   "waterClarity": "Slightly stained",
   "sky": "Cloudy",
-  "lastUpdated": "9/9/2026, 3:12:14 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
-  "localBiteReport": "The week of September 4–10, 2026 is showing the first signs of the fall transition on Choctawhatchee Bay, with water temperatures at 87°F and large concentrations of baitfish beginning to push onto the flats and into bayous and bridge areas. The redfish sight-fishing bite is described as improving, and Capt. Blake Nelson of Last Cast Charters (fishing Choctawhatchee Bay) anticipates the main slot-red push to arrive with the fall mullet movement — likely the second or third week of September into October. When that wave arrives, cut or butterfly-rigged finger mullet on a single-drop rig near flats and roll-downs is the recommended setup, with heavier leader (25–30 lb) if bull reds show. The prior week's report (Aug 28–Sep 3) noted that the bay was still in a late-summer holding pattern for most classic inshore species, with speckled trout a consistent target in deeper water — the fall transition is just beginning to kick things into gear.",
-  "localBiteSource": "greatdaysoutdoors.com (Northwest Florida Fishing Report) · Auto-refreshed via Claude API",
+  "lastUpdated": "9/9/2026, 7:56:09 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "localBiteReport": "The week of September 4–10, 2026 brought the first clear signs of the fall transition to Choctawhatchee Bay, according to the Northwest Florida Fishing Report. Large schools of baitfish (greenies) have been pushing from deeper open water into bayous, flats, and bridge areas across the bay. Slot redfish are beginning to show up on the flats and are expected to build through the second and third weeks of September as the fall mullet run gets underway — blue crab and cut/butterfly-rigged finger mullet on a single-drop rig are the recommended setups when they arrive. Water temperature measured at this location is 87°F, and the midday heat continues to push fish activity toward early morning windows. The most current reports available are from the week of September 4–10, 2026.",
+  "localBiteSource": "Great Days Outdoors – Northwest Florida Fishing Report (greatdaysoutdoors.com), featuring Capt. Blake Nelson of Last Cast Charters (Choctawhatchee Bay) · Auto-refreshed via Claude API",
   "localBiteUpdated": "September 9, 2026",
   "localBiteEvidence": [
     {
@@ -41,40 +41,40 @@
     }
   ],
   "previousDay": {
-    "date": "Tuesday, September 8, 2026",
+    "date": "Wednesday, September 9, 2026",
     "wind": {
-      "dir": "ENE",
+      "dir": "E",
       "speed": 10
     },
     "high": 91,
-    "stormChance": 11,
-    "tide": "High tide ~4:00 AM · Low tide ~2:48 PM · Sunrise 6:24 AM",
+    "stormChance": 27,
+    "tide": "High tide ~5:00 AM · Low tide ~3:20 PM · Sunrise 6:24 AM",
     "waterTemp": 87
   },
   "openMeteo": [
     {
-      "high": 93,
-      "low": 75,
-      "stormChance": 15,
+      "high": 92,
+      "low": 74,
+      "stormChance": 13,
       "windSpeed": 10,
-      "windDir": "NE",
-      "summary": "Light drizzle"
+      "windDir": "E",
+      "summary": "Overcast"
     },
     {
       "high": 86,
       "low": 76,
-      "stormChance": 54,
+      "stormChance": 41,
       "windSpeed": 10,
       "windDir": "SE",
       "summary": "Light drizzle"
     },
     {
-      "high": 90,
+      "high": 91,
       "low": 78,
-      "stormChance": 72,
-      "windSpeed": 10,
-      "windDir": "SW",
-      "summary": "Overcast"
+      "stormChance": 69,
+      "windSpeed": 11,
+      "windDir": "S",
+      "summary": "Thunderstorm"
     }
   ],
   "forecast": [
@@ -88,9 +88,9 @@
       "windSpeed": 10,
       "windDir": "E",
       "storms": 27,
-      "headline": "Sunny then Chance Showers And Thunderstorms · Heat index 100",
+      "headline": "Mostly Sunny then Chance Showers And Thunderstorms · Heat index 100",
       "fishingScore": 7.4,
-      "aiCall": "A chance of showers and thunderstorms after 1pm. Sunny, with a high near 91. Heat index values as high as 100. East wind 5 to 10 mph. Chance of precipitation is 30%. New rainfall amounts less than a tenth of an inch possible.",
+      "aiCall": "A chance of showers and thunderstorms after 1pm. Mostly sunny, with a high near 91. Heat index values as high as 100. East wind 5 to 10 mph. Chance of precipitation is 30%. New rainfall amounts less than a tenth of an inch possible.",
       "emoji": "⛈️",
       "tideEvents": [
         {
@@ -116,7 +116,7 @@
       "storms": 68,
       "headline": "Chance Showers And Thunderstorms",
       "fishingScore": 5.8,
-      "aiCall": "A slight chance of showers and thunderstorms before 7am, then a chance of showers and thunderstorms between 7am and 8am, then a chance of showers and thunderstorms between 8am and 1pm, then showers and thunderstorms likely between 1pm and 3pm, then a chance of showers and thunderstorms. Mostly sunny. High near 89, with temperatures falling to around 85 in the afternoon. Southeast wind 0 to 5 mph. Chance of precipitation is 70%.",
+      "aiCall": "A slight chance of showers and thunderstorms before 7am, then a chance of showers and thunderstorms between 7am and 8am, then a chance of showers and thunderstorms between 8am and 1pm, then showers and thunderstorms likely between 1pm and 3pm, then a chance of showers and thunderstorms. Mostly sunny. High near 89, with temperatures falling to around 85 in the afternoon. Southeast wind 0 to 5 mph. Chance of precipitation is 70%. New rainfall amounts between a tenth and quarter of an inch possible.",
       "emoji": "⛈️",
       "tideEvents": [
         {
@@ -142,7 +142,7 @@
       "storms": 86,
       "headline": "Chance Showers And Thunderstorms then Patchy Fog",
       "fishingScore": 5.1,
-      "aiCall": "A chance of showers and thunderstorms before 7am, then patchy fog and showers and thunderstorms. Partly sunny, with a high near 88. Chance of precipitation is 90%.",
+      "aiCall": "A chance of showers and thunderstorms before 7am, then patchy fog and showers and thunderstorms. Partly sunny, with a high near 88. South wind 0 to 5 mph. Chance of precipitation is 90%.",
       "emoji": "⛈️",
       "tideEvents": [
         {
@@ -168,17 +168,17 @@
   "dateISO": "2026-09-09",
   "waterTemp": 87,
   "pressure": {
-    "hpa": 1019.4,
-    "inHg": 30.1,
-    "direction": "falling",
-    "changeHpa3h": -1.1
+    "hpa": 1021.1,
+    "inHg": 30.15,
+    "direction": "rising",
+    "changeHpa3h": 1.5
   },
   "speciesSignals": [
     {
       "key": "spotted_seatrout",
       "label": "Speckled trout",
-      "current": true,
-      "reportCount": 9,
+      "current": false,
+      "reportCount": 8,
       "lastReported": "2026-09-09"
     },
     {
