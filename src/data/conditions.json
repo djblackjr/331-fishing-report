@@ -24,9 +24,9 @@
   "moonPhase": "New Moon (~1% illuminated) — strong tidal push (spring tide)",
   "waterClarity": "Slightly stained",
   "sky": "Cloudy",
-  "lastUpdated": "9/10/2026, 3:12:20 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
-  "localBiteReport": "The week of September 4–10 brought the first noticeable signs of the fall transition to Choctawhatchee Bay, with water temperatures at 87°F and enormous concentrations of bait beginning to push through the system. Capt. Blake Nelson of Last Cast Charters reported baitfish schools moving from deeper open water into bayous, flats, bridge areas, and roll-downs — activity that should steadily improve redfish and general flats fishing as September progresses toward October. The influx of bait is setting the stage for better sight-fishing opportunities on the flats for reds, with local guides expecting the bite to build meaningfully over the coming weeks. Note: this report is approximately one week old, published September 4–10, 2026.",
-  "localBiteSource": "Great Days Outdoors (Northwest Florida Fishing Report, featuring Capt. Blake Nelson / Last Cast Charters on Choctawhatchee Bay) · Auto-refreshed via Claude API",
+  "lastUpdated": "9/10/2026, 7:53:11 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "localBiteReport": "The week of September 4–10, 2026 is bringing the first clear signs of the fall transition to Choctawhatchee Bay, with water temperatures at 87°F and enormous bait concentrations moving through the system. Capt. Blake Nelson of Last Cast Charters reports that schools of greenies (scaled sardines) are pushing from deeper open water into bayous, flats, bridge areas, and roll-downs, which is starting to concentrate predators and improve overall activity on the bay's flats. The redfish flat-sight-fishing bite is described as improving and expected to build further over the coming weeks as the fall mullet run gets underway — Capt. Nelson anticipates the first meaningful slot redfish opportunity arriving in the second or third week of September. This is a transitional window: the deep-summer doldrums are easing, but the full fall inshore push for reds, trout, and flounder hasn't fired yet — the next week or two should accelerate things considerably.",
+  "localBiteSource": "greatdaysoutdoors.com — Northwest Florida Fishing Report for September 4–10, 2026 (Capt. Blake Nelson / Last Cast Charters, Choctawhatchee Bay) · Auto-refreshed via Claude API",
   "localBiteUpdated": "September 10, 2026",
   "localBiteEvidence": [
     {
@@ -36,40 +36,40 @@
     }
   ],
   "previousDay": {
-    "date": "Wednesday, September 9, 2026",
+    "date": "Thursday, September 10, 2026",
     "wind": {
-      "dir": "E",
-      "speed": 10
+      "dir": "SE",
+      "speed": 5
     },
-    "high": 91,
-    "stormChance": 27,
-    "tide": "High tide ~5:00 AM · Low tide ~3:20 PM · Sunrise 6:24 AM",
+    "high": 88,
+    "stormChance": 49,
+    "tide": "High tide ~6:06 AM · Low tide ~3:39 PM · Sunrise 6:25 AM",
     "waterTemp": 87
   },
   "openMeteo": [
     {
-      "high": 87,
+      "high": 88,
       "low": 77,
       "stormChance": 31,
-      "windSpeed": 14,
+      "windSpeed": 11,
       "windDir": "S",
       "summary": "Overcast"
     },
     {
       "high": 83,
-      "low": 76,
-      "stormChance": 40,
+      "low": 75,
+      "stormChance": 39,
       "windSpeed": 10,
-      "windDir": "SE",
-      "summary": "Rain"
+      "windDir": "S",
+      "summary": "Rain showers"
     },
     {
       "high": 91,
-      "low": 79,
-      "stormChance": 61,
+      "low": 78,
+      "stormChance": 68,
       "windSpeed": 10,
       "windDir": "SW",
-      "summary": "Overcast"
+      "summary": "Thunderstorm w/ hail"
     }
   ],
   "forecast": [
@@ -111,7 +111,7 @@
       "storms": 50,
       "headline": "Chance Showers And Thunderstorms",
       "fishingScore": 6.5,
-      "aiCall": "A chance of showers and thunderstorms before 7am, then a chance of showers and thunderstorms between 7am and 10am, then a chance of showers and thunderstorms. Mostly sunny. High near 87, with temperatures falling to around 84 in the afternoon. South wind 0 to 10 mph. Chance of precipitation is 50%.",
+      "aiCall": "A chance of showers and thunderstorms before 7am, then a chance of showers and thunderstorms between 7am and 10am, then a chance of showers and thunderstorms. Mostly sunny. High near 87, with temperatures falling to around 84 in the afternoon. South wind 0 to 10 mph. Chance of precipitation is 50%. New rainfall amounts between a quarter and half of an inch possible.",
       "emoji": "⛈️",
       "tideEvents": [
         {
@@ -145,7 +145,7 @@
       "storms": 71,
       "headline": "Showers And Thunderstorms Likely",
       "fishingScore": 5.7,
-      "aiCall": "Showers and thunderstorms likely before 1pm, then a chance of showers and thunderstorms. Mostly sunny, with a high near 88. Chance of precipitation is 70%.",
+      "aiCall": "Showers and thunderstorms likely before 1pm, then a chance of showers and thunderstorms. Mostly sunny, with a high near 88. South southwest wind 0 to 5 mph. Chance of precipitation is 70%.",
       "emoji": "⛈️",
       "tideEvents": [
         {
@@ -163,18 +163,18 @@
   "dateISO": "2026-09-10",
   "waterTemp": 87,
   "pressure": {
-    "hpa": 1015.9,
-    "inHg": 30,
-    "direction": "falling",
-    "changeHpa3h": -1.9
+    "hpa": 1017.7,
+    "inHg": 30.05,
+    "direction": "rising",
+    "changeHpa3h": 0.8
   },
   "speciesSignals": [
     {
       "key": "spotted_seatrout",
       "label": "Speckled trout",
-      "current": false,
-      "reportCount": 7,
-      "lastReported": "2026-08-12"
+      "current": true,
+      "reportCount": 8,
+      "lastReported": "2026-09-10"
     },
     {
       "key": "redfish",
@@ -186,9 +186,9 @@
     {
       "key": "gulf_flounder",
       "label": "Flounder",
-      "current": false,
-      "reportCount": 3,
-      "lastReported": "2026-07-28"
+      "current": true,
+      "reportCount": 4,
+      "lastReported": "2026-09-10"
     },
     {
       "key": "black_drum",

@@ -21,23 +21,25 @@
     "sky": "Cloudy",
     "stormChance": 49,
     "pressure": {
-      "hpa": 1015.9,
-      "inHg": 30,
-      "direction": "falling",
-      "changeHpa3h": -1.9
+      "hpa": 1017.7,
+      "inHg": 30.05,
+      "direction": "rising",
+      "changeHpa3h": 0.8
     }
   },
   "currentReport": {
     "kind": "current_regional_report",
     "date": "2026-09-10",
     "displayDate": "September 10, 2026",
-    "summary": "The week of September 4–10 brought the first noticeable signs of the fall transition to Choctawhatchee Bay, with water temperatures at 87°F and enormous concentrations of bait beginning to push through the system. Capt. Blake Nelson of Last Cast Charters reported baitfish schools moving from deeper open water into bayous, flats, bridge areas, and roll-downs — activity that should steadily improve redfish and general flats fishing as September progresses toward October. The influx of bait is setting the stage for better sight-fishing opportunities on the flats for reds, with local guides expecting the bite to build meaningfully over the coming weeks. Note: this report is approximately one week old, published September 4–10, 2026.",
-    "attribution": "Great Days Outdoors (Northwest Florida Fishing Report, featuring Capt. Blake Nelson / Last Cast Charters on Choctawhatchee Bay) · Auto-refreshed via Claude API",
+    "summary": "The week of September 4–10, 2026 is bringing the first clear signs of the fall transition to Choctawhatchee Bay, with water temperatures at 87°F and enormous bait concentrations moving through the system. Capt. Blake Nelson of Last Cast Charters reports that schools of greenies (scaled sardines) are pushing from deeper open water into bayous, flats, bridge areas, and roll-downs, which is starting to concentrate predators and improve overall activity on the bay's flats. The redfish flat-sight-fishing bite is described as improving and expected to build further over the coming weeks as the fall mullet run gets underway — Capt. Nelson anticipates the first meaningful slot redfish opportunity arriving in the second or third week of September. This is a transitional window: the deep-summer doldrums are easing, but the full fall inshore push for reds, trout, and flounder hasn't fired yet — the next week or two should accelerate things considerably.",
+    "attribution": "greatdaysoutdoors.com — Northwest Florida Fishing Report for September 4–10, 2026 (Capt. Blake Nelson / Last Cast Charters, Choctawhatchee Bay) · Auto-refreshed via Claude API",
     "sourceIds": [
       "report-aHR0cHM6Ly9ncmVhdG"
     ],
     "species": [
-      "redfish"
+      "spotted_seatrout",
+      "redfish",
+      "gulf_flounder"
     ],
     "conditions": {
       "wind": "SE 5 mph",
@@ -57,20 +59,20 @@
       "sky": "Cloudy",
       "stormChance": 49,
       "pressure": {
-        "hpa": 1015.9,
-        "inHg": 30,
-        "direction": "falling",
-        "changeHpa3h": -1.9
+        "hpa": 1017.7,
+        "inHg": 30.05,
+        "direction": "rising",
+        "changeHpa3h": 0.8
       }
     }
   },
   "archivedReports": [
     {
       "kind": "archived_app_snapshot",
-      "date": "2026-09-09",
-      "displayDate": "September 9, 2026",
-      "summary": "The week of September 4–10, 2026 brought the first clear signs of the fall transition to Choctawhatchee Bay, according to the Northwest Florida Fishing Report. Large schools of baitfish (greenies) have been pushing from deeper open water into bayous, flats, and bridge areas across the bay. Slot redfish are beginning to show up on the flats and are expected to build through the second and third weeks of September as the fall mullet run gets underway — blue crab and cut/butterfly-rigged finger mullet on a single-drop rig are the recommended setups when they arrive. Water temperature measured at this location is 87°F, and the midday heat continues to push fish activity toward early morning windows. The most current reports available are from the week of September 4–10, 2026.",
-      "attribution": "Great Days Outdoors – Northwest Florida Fishing Report (greatdaysoutdoors.com), featuring Capt. Blake Nelson of Last Cast Charters (Choctawhatchee Bay) · Auto-refreshed via Claude API",
+      "date": "2026-09-10",
+      "displayDate": "September 10, 2026",
+      "summary": "The week of September 4–10 brought the first noticeable signs of the fall transition to Choctawhatchee Bay, with water temperatures at 87°F and enormous concentrations of bait beginning to push through the system. Capt. Blake Nelson of Last Cast Charters reported baitfish schools moving from deeper open water into bayous, flats, bridge areas, and roll-downs — activity that should steadily improve redfish and general flats fishing as September progresses toward October. The influx of bait is setting the stage for better sight-fishing opportunities on the flats for reds, with local guides expecting the bite to build meaningfully over the coming weeks. Note: this report is approximately one week old, published September 4–10, 2026.",
+      "attribution": "Great Days Outdoors (Northwest Florida Fishing Report, featuring Capt. Blake Nelson / Last Cast Charters on Choctawhatchee Bay) · Auto-refreshed via Claude API",
       "sourceIds": [
         "report-aHR0cHM6Ly9ncmVhdG"
       ],
@@ -78,27 +80,27 @@
         "redfish"
       ],
       "conditions": {
-        "wind": "E 5 to 10 mph",
-        "windDir": "E",
-        "tide": "High tide ~5:00 AM · Low tide ~3:20 PM · Sunrise 6:24 AM",
+        "wind": "SE 5 mph",
+        "windDir": "SE",
+        "tide": "High tide ~6:06 AM · Low tide ~3:39 PM · Sunrise 6:25 AM",
         "tideEvents": [
           {
             "type": "H",
-            "time": "5:00 AM"
+            "time": "6:06 AM"
           },
           {
             "type": "L",
-            "time": "3:20 PM"
+            "time": "3:39 PM"
           }
         ],
         "waterTemp": 87,
         "sky": "Cloudy",
-        "stormChance": 27,
+        "stormChance": 49,
         "pressure": {
-          "hpa": 1021.1,
-          "inHg": 30.15,
-          "direction": "rising",
-          "changeHpa3h": 1.5
+          "hpa": 1015.9,
+          "inHg": 30,
+          "direction": "falling",
+          "changeHpa3h": -1.9
         }
       }
     },
@@ -318,10 +320,10 @@
     {
       "key": "spotted_seatrout",
       "label": "Speckled trout",
-      "current": false,
-      "reportCount": 7,
-      "lastReported": "2026-08-12",
-      "evidenceLevel": "archived_regional_report"
+      "current": true,
+      "reportCount": 8,
+      "lastReported": "2026-09-10",
+      "evidenceLevel": "current_regional_report"
     },
     {
       "key": "redfish",
@@ -334,10 +336,10 @@
     {
       "key": "gulf_flounder",
       "label": "Flounder",
-      "current": false,
-      "reportCount": 3,
-      "lastReported": "2026-07-28",
-      "evidenceLevel": "archived_regional_report"
+      "current": true,
+      "reportCount": 4,
+      "lastReported": "2026-09-10",
+      "evidenceLevel": "current_regional_report"
     },
     {
       "key": "black_drum",
@@ -462,10 +464,10 @@
   "sources": [
     {
       "id": "report-aHR0cHM6Ly9ncmVhdG",
-      "label": "Northwest Florida Fishing Report for August 28 - September 3, 2026",
-      "url": "https://greatdaysoutdoors.com/northwest-florida-fishing-report-for-august-28-september-3-2026/",
+      "label": "Northwest Florida Fishing Report for September 4 - 10, 2026",
+      "url": "https://greatdaysoutdoors.com/northwest-florida-fishing-report-for-september-4-10-2026/",
       "kind": "regional_report",
-      "reportDate": "2026-08-28",
+      "reportDate": "2026-09-04",
       "note": "Exact source page preserved by the daily bite-report research."
     },
     {
