@@ -32,60 +32,50 @@
   "moonPhase": "New Moon (~0% illuminated) — strong tidal push (spring tide)",
   "waterClarity": "Slightly stained",
   "sky": "Cloudy",
-  "lastUpdated": "9/11/2026, 3:12:18 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
-  "localBiteReport": "Note: The most recent angler catch reports found for Choctawhatchee Bay are from June–July 2026 — roughly 2 to 3 months old — so treat these as background context rather than a live bite update. That said, the picture is consistent: speckled trout have been the standout inshore species, scattered across the bay's grass flats and biting actively, with bull redfish (some pushing 25+ lbs) also showing well around the bay's channels and structure. Anglers fishing the Santa Rosa Beach and West Bay areas reported solid mixed bags of trout and slot reds, and a 43-lb black drum was landed on a West Bay trip in late June. Water temperature today at this location is 87°F. September typically marks the beginning of the fall transition, which historically improves both redfish and trout action on Choctawhatchee Bay as bait schools up and fish begin staging near creek mouths and channel edges.",
-  "localBiteSource": "captainexperiences.com (Choctawhatchee Bay Fishing Reports, most recent posts June 2026); fishingbooker.com (Choctawhatchee Bay Fishing Reports, most recent content July 2026) · Auto-refreshed via Claude API",
+  "lastUpdated": "9/11/2026, 7:47:36 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "localBiteReport": "The week of September 4–10, 2026 brought the first signs of the fall transition to Choctawhatchee Bay, with water beginning to cool slightly and large concentrations of baitfish pushing into bayous, flats, bridge areas, and roll-downs across the bay. Capt. Blake Nelson (Last Cast Charters) reported that redfish and general flats activity are expected to improve steadily over the coming weeks as the seasonal shift continues, with slot reds and bull reds both in the picture. Bait schools — primarily greenies — are now accessible in shallower inshore structure, setting up better opportunities for redfish on the flats as September progresses. Water temperature at this location measured 87°F. These details are from a report dated September 4–10, 2026, roughly one week old at time of writing.",
+  "localBiteSource": "greatdaysoutdoors.com (Northwest Florida Fishing Report, week of Sept 4–10, 2026) · Auto-refreshed via Claude API",
   "localBiteUpdated": "September 11, 2026",
   "localBiteEvidence": [
     {
-      "title": "Choctawhatchee Bay Fishing Reports",
-      "url": "https://captainexperiences.com/fishing-reports/locations/regions/choctawhatchee-bay",
-      "reportDate": "2026-06-17"
-    },
-    {
-      "title": "Choctawhatchee River Fishing Reports (West Bay area reports)",
-      "url": "https://captainexperiences.com/fishing-reports/locations/regions/choctawhatchee-river",
-      "reportDate": "2026-06-30"
-    },
-    {
-      "title": "Daily Choctawhatchee Bay Fishing Reports",
-      "url": "https://fishingbooker.com/reports/destination/us/choctawhatchee-bay",
-      "reportDate": "2026-07-01"
+      "title": "Northwest Florida Fishing Report for September 4 - 10, 2026",
+      "url": "https://greatdaysoutdoors.com/northwest-florida-fishing-report-for-september-4-10-2026/",
+      "reportDate": "2026-09-04"
     }
   ],
   "previousDay": {
-    "date": "Thursday, September 10, 2026",
+    "date": "Friday, September 11, 2026",
     "wind": {
-      "dir": "SE",
-      "speed": 5
+      "dir": "S",
+      "speed": 10
     },
-    "high": 88,
-    "stormChance": 49,
-    "tide": "High tide ~6:06 AM · Low tide ~3:39 PM · Sunrise 6:25 AM",
+    "high": 86,
+    "stormChance": 90,
+    "tide": "High tide ~8:56 PM · Low tide ~10:35 PM · Sunrise 6:25 AM",
     "waterTemp": 87
   },
   "openMeteo": [
     {
-      "high": 85,
-      "low": 78,
+      "high": 80,
+      "low": 76,
       "stormChance": 63,
-      "windSpeed": 10,
-      "windDir": "S",
-      "summary": "Rain showers"
+      "windSpeed": 8,
+      "windDir": "SE",
+      "summary": "Rain"
     },
     {
       "high": 85,
       "low": 76,
-      "stormChance": 44,
+      "stormChance": 31,
       "windSpeed": 9,
       "windDir": "SE",
       "summary": "Heavy rain"
     },
     {
-      "high": 94,
+      "high": 93,
       "low": 77,
-      "stormChance": 42,
-      "windSpeed": 10,
+      "stormChance": 44,
+      "windSpeed": 9,
       "windDir": "SW",
       "summary": "Thunderstorm"
     }
@@ -137,7 +127,7 @@
       "storms": 67,
       "headline": "Showers And Thunderstorms Likely",
       "fishingScore": 5.8,
-      "aiCall": "A chance of showers and thunderstorms before 7am, then a chance of showers and thunderstorms between 7am and 9am, then showers and thunderstorms likely between 9am and 1pm, then a chance of showers and thunderstorms. Mostly sunny. High near 88, with temperatures falling to around 85 in the afternoon. South southwest wind 0 to 10 mph. Chance of precipitation is 70%.",
+      "aiCall": "A chance of showers and thunderstorms before 7am, then a chance of showers and thunderstorms between 7am and 9am, then showers and thunderstorms likely between 9am and 1pm, then a chance of showers and thunderstorms. Mostly sunny. High near 88, with temperatures falling to around 85 in the afternoon. South southwest wind 0 to 10 mph. Chance of precipitation is 70%. New rainfall amounts between a half and three quarters of an inch possible.",
       "emoji": "⛈️",
       "tideEvents": [
         {
@@ -163,7 +153,7 @@
       "storms": 56,
       "headline": "Chance Showers And Thunderstorms then Slight Chance Showers And Thunderstorms",
       "fishingScore": 6.3,
-      "aiCall": "A chance of showers and thunderstorms before 10am, then a slight chance of showers and thunderstorms between 10am and 1pm, then showers and thunderstorms likely. Mostly sunny, with a high near 90. Chance of precipitation is 60%.",
+      "aiCall": "A chance of showers and thunderstorms before 10am, then a slight chance of showers and thunderstorms between 10am and 1pm, then showers and thunderstorms likely. Mostly sunny, with a high near 90. West wind 0 to 5 mph. Chance of precipitation is 60%.",
       "emoji": "⛈️",
       "tideEvents": [
         {
@@ -181,17 +171,17 @@
   "dateISO": "2026-09-11",
   "waterTemp": 87,
   "pressure": {
-    "hpa": 1014.1,
-    "inHg": 29.95,
-    "direction": "falling",
-    "changeHpa3h": -1.6
+    "hpa": 1015.2,
+    "inHg": 29.98,
+    "direction": "rising",
+    "changeHpa3h": 0.9
   },
   "speciesSignals": [
     {
       "key": "spotted_seatrout",
       "label": "Speckled trout",
-      "current": true,
-      "reportCount": 9,
+      "current": false,
+      "reportCount": 8,
       "lastReported": "2026-09-11"
     },
     {
@@ -205,13 +195,13 @@
       "key": "gulf_flounder",
       "label": "Flounder",
       "current": false,
-      "reportCount": 4,
-      "lastReported": "2026-09-10"
+      "reportCount": 3,
+      "lastReported": "2026-07-28"
     },
     {
       "key": "black_drum",
       "label": "Black drum",
-      "current": true,
+      "current": false,
       "reportCount": 2,
       "lastReported": "2026-09-11"
     },
