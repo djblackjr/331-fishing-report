@@ -17,22 +17,22 @@
         "time": "2:40 AM"
       }
     ],
-    "waterTemp": 87,
+    "waterTemp": 86,
     "sky": "Cloudy",
     "stormChance": 66,
     "pressure": {
-      "hpa": 1013,
-      "inHg": 29.91,
-      "direction": "falling",
-      "changeHpa3h": -1.2
+      "hpa": 1014.6,
+      "inHg": 29.96,
+      "direction": "rising",
+      "changeHpa3h": 1
     }
   },
   "currentReport": {
     "kind": "current_regional_report",
     "date": "2026-09-12",
     "displayDate": "September 12, 2026",
-    "summary": "Reports from the week of September 4–12, 2026 indicate the bay is showing early signs of the fall transition. Redfish are active on the flats around Santa Rosa Beach and the broader Choctawhatchee Bay, with at least one guide noting a bull redfish topping 26 lbs landed this week, and captains expecting the flats bite to continue improving through September and into October. Speckled trout are scattered but feeding, with guides reporting plenty of action and a few quality fish mixed in — windy conditions have made anglers selective about which areas to target. Water temperature is 87°F. Bait schools (greenies/pogies) have been moving from open water into bayous, flats, and bridge areas, which is pulling predators with them and setting up what guides expect to be a strong fall run for redfish and trout as the season progresses.",
-    "attribution": "greatdaysoutdoors.com (Northwest Florida Fishing Report, week of Sept 4–10, 2026); captainexperiences.com Santa Rosa Beach fishing reports (reports posted 6 days and 1 week ago) · Auto-refreshed via Claude API",
+    "summary": "The most current available report for Choctawhatchee Bay is from the week of September 4–10, 2026 (about one week old as of today). According to Capt. Blake Nelson of Last Cast Charters, the bay is showing clear early signs of the fall transition, with large concentrations of baitfish pushing from open water into bayous, flats, and bridge areas. Redfish are the headline inshore story: sight-fishing opportunities on the flats are improving, and local guides expect the slot-red bite to pick up meaningfully from mid-to-late September onward as the fall mullet run gets underway — cut or butterfly-rigged finger mullet on a single-drop rig with an orange or pink bead is the anticipated setup. Water temperature is 86°F. Speckled trout are also reported active in the bay's grass flat areas, and captainexperiences.com trip reports from Santa Rosa Beach anglers (dated approximately 6 days before the report pull) note good numbers of speckled trout alongside bull redfish in the 26-lb class being landed.",
+    "attribution": "greatdaysoutdoors.com (Northwest Florida Fishing Report, Sept 4–10, 2026); captainexperiences.com (Choctawhatchee Bay fishing reports page) · Auto-refreshed via Claude API",
     "sourceIds": [
       "captain-experiences-destin",
       "report-aHR0cHM6Ly9ncmVhdG",
@@ -56,60 +56,55 @@
           "time": "2:40 AM"
         }
       ],
-      "waterTemp": 87,
+      "waterTemp": 86,
       "sky": "Cloudy",
       "stormChance": 66,
       "pressure": {
-        "hpa": 1013,
-        "inHg": 29.91,
-        "direction": "falling",
-        "changeHpa3h": -1.2
+        "hpa": 1014.6,
+        "inHg": 29.96,
+        "direction": "rising",
+        "changeHpa3h": 1
       }
     }
   },
   "archivedReports": [
     {
       "kind": "archived_app_snapshot",
-      "date": "2026-09-11",
-      "displayDate": "September 11, 2026",
-      "summary": "The week of September 4–10, 2026 brought the first signs of the fall transition to Choctawhatchee Bay, with water beginning to cool slightly and large concentrations of baitfish pushing into bayous, flats, bridge areas, and roll-downs across the bay. Capt. Blake Nelson (Last Cast Charters) reported that redfish and general flats activity are expected to improve steadily over the coming weeks as the seasonal shift continues, with slot reds and bull reds both in the picture. Bait schools — primarily greenies — are now accessible in shallower inshore structure, setting up better opportunities for redfish on the flats as September progresses. Water temperature at this location measured 87°F. These details are from a report dated September 4–10, 2026, roughly one week old at time of writing.",
-      "attribution": "greatdaysoutdoors.com (Northwest Florida Fishing Report, week of Sept 4–10, 2026) · Auto-refreshed via Claude API",
+      "date": "2026-09-12",
+      "displayDate": "September 12, 2026",
+      "summary": "Reports from the week of September 4–12, 2026 indicate the bay is showing early signs of the fall transition. Redfish are active on the flats around Santa Rosa Beach and the broader Choctawhatchee Bay, with at least one guide noting a bull redfish topping 26 lbs landed this week, and captains expecting the flats bite to continue improving through September and into October. Speckled trout are scattered but feeding, with guides reporting plenty of action and a few quality fish mixed in — windy conditions have made anglers selective about which areas to target. Water temperature is 87°F. Bait schools (greenies/pogies) have been moving from open water into bayous, flats, and bridge areas, which is pulling predators with them and setting up what guides expect to be a strong fall run for redfish and trout as the season progresses.",
+      "attribution": "greatdaysoutdoors.com (Northwest Florida Fishing Report, week of Sept 4–10, 2026); captainexperiences.com Santa Rosa Beach fishing reports (reports posted 6 days and 1 week ago) · Auto-refreshed via Claude API",
       "sourceIds": [
-        "report-aHR0cHM6Ly9ncmVhdG"
+        "captain-experiences-destin",
+        "report-aHR0cHM6Ly9ncmVhdG",
+        "report-aHR0cHM6Ly9jYXB0YW"
       ],
       "species": [
+        "spotted_seatrout",
         "redfish"
       ],
       "conditions": {
-        "wind": "S 0 to 10 mph",
-        "windDir": "S",
-        "tide": "High tide ~8:56 PM · Low tide ~10:35 PM · Sunrise 6:25 AM",
+        "wind": "WSW 0 to 5 mph",
+        "windDir": "WSW",
+        "tide": "High tide ~7:18 PM · Low tide ~2:40 AM · Sunrise 6:26 AM",
         "tideEvents": [
           {
             "type": "H",
-            "time": "8:56 PM"
+            "time": "7:18 PM"
           },
           {
             "type": "L",
-            "time": "10:35 PM"
-          },
-          {
-            "type": "H",
-            "time": "7:26 AM"
-          },
-          {
-            "type": "L",
-            "time": "3:04 PM"
+            "time": "2:40 AM"
           }
         ],
         "waterTemp": 87,
         "sky": "Cloudy",
-        "stormChance": 90,
+        "stormChance": 66,
         "pressure": {
-          "hpa": 1015.2,
-          "inHg": 29.98,
-          "direction": "rising",
-          "changeHpa3h": 0.9
+          "hpa": 1013,
+          "inHg": 29.91,
+          "direction": "falling",
+          "changeHpa3h": -1.2
         }
       }
     },
@@ -330,7 +325,7 @@
       "key": "spotted_seatrout",
       "label": "Speckled trout",
       "current": true,
-      "reportCount": 8,
+      "reportCount": 9,
       "lastReported": "2026-09-12",
       "evidenceLevel": "current_regional_report"
     },
@@ -481,10 +476,10 @@
     },
     {
       "id": "report-aHR0cHM6Ly9jYXB0YW",
-      "label": "Choctawhatchee Bay Fishing Reports (August 2026)",
-      "url": "https://captainexperiences.com/fishing-reports/locations/regions/choctawhatchee-bay",
+      "label": "Santa Rosa Beach Fishing Reports (September 2026) — captainexperiences.com",
+      "url": "https://captainexperiences.com/fishing-reports/locations/florida/santa-rosa-beach",
       "kind": "regional_report",
-      "reportDate": "2026-08-06",
+      "reportDate": "2026-09-06",
       "note": "Exact source page preserved by the daily bite-report research."
     },
     {
