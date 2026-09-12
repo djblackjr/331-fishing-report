@@ -1,46 +1,43 @@
 {
-  "date": "Friday, September 11, 2026",
+  "date": "Saturday, September 12, 2026",
   "wind": {
-    "speed": 10,
-    "dir": "S",
-    "description": "S 0 to 10 mph"
+    "speed": 5,
+    "dir": "WSW",
+    "description": "WSW 0 to 5 mph"
   },
-  "weather": "Showers And Thunderstorms then Chance Showers And Thunderstorms · High 86°F",
-  "tide": "High tide ~8:56 PM · Low tide ~10:35 PM · Sunrise 6:25 AM",
+  "weather": "Showers And Thunderstorms Likely then Chance Showers And Thunderstorms · High 88°F",
+  "tide": "High tide ~7:18 PM · Low tide ~2:40 AM · Sunrise 6:26 AM",
   "tideEvents": [
     {
       "type": "H",
-      "time": "8:56 PM"
+      "time": "7:18 PM"
     },
     {
       "type": "L",
-      "time": "10:35 PM"
-    },
-    {
-      "type": "H",
-      "time": "7:26 AM"
-    },
-    {
-      "type": "L",
-      "time": "3:04 PM"
+      "time": "2:40 AM"
     }
   ],
-  "sunrise": "6:25 AM",
-  "sunset": "6:56 PM",
-  "stormWindow": "after 9AM",
-  "stormChance": 90,
-  "moonPhase": "New Moon (~0% illuminated) — strong tidal push (spring tide)",
+  "sunrise": "6:26 AM",
+  "sunset": "6:55 PM",
+  "stormWindow": "before 9AM",
+  "stormChance": 66,
+  "moonPhase": "New Moon (~1% illuminated) — strong tidal push (spring tide)",
   "waterClarity": "Slightly stained",
   "sky": "Cloudy",
-  "lastUpdated": "9/11/2026, 7:47:36 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
-  "localBiteReport": "The week of September 4–10, 2026 brought the first signs of the fall transition to Choctawhatchee Bay, with water beginning to cool slightly and large concentrations of baitfish pushing into bayous, flats, bridge areas, and roll-downs across the bay. Capt. Blake Nelson (Last Cast Charters) reported that redfish and general flats activity are expected to improve steadily over the coming weeks as the seasonal shift continues, with slot reds and bull reds both in the picture. Bait schools — primarily greenies — are now accessible in shallower inshore structure, setting up better opportunities for redfish on the flats as September progresses. Water temperature at this location measured 87°F. These details are from a report dated September 4–10, 2026, roughly one week old at time of writing.",
-  "localBiteSource": "greatdaysoutdoors.com (Northwest Florida Fishing Report, week of Sept 4–10, 2026) · Auto-refreshed via Claude API",
-  "localBiteUpdated": "September 11, 2026",
+  "lastUpdated": "9/12/2026, 3:12:15 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "localBiteReport": "Reports from the week of September 4–12, 2026 indicate the bay is showing early signs of the fall transition. Redfish are active on the flats around Santa Rosa Beach and the broader Choctawhatchee Bay, with at least one guide noting a bull redfish topping 26 lbs landed this week, and captains expecting the flats bite to continue improving through September and into October. Speckled trout are scattered but feeding, with guides reporting plenty of action and a few quality fish mixed in — windy conditions have made anglers selective about which areas to target. Water temperature is 87°F. Bait schools (greenies/pogies) have been moving from open water into bayous, flats, and bridge areas, which is pulling predators with them and setting up what guides expect to be a strong fall run for redfish and trout as the season progresses.",
+  "localBiteSource": "greatdaysoutdoors.com (Northwest Florida Fishing Report, week of Sept 4–10, 2026); captainexperiences.com Santa Rosa Beach fishing reports (reports posted 6 days and 1 week ago) · Auto-refreshed via Claude API",
+  "localBiteUpdated": "September 12, 2026",
   "localBiteEvidence": [
     {
       "title": "Northwest Florida Fishing Report for September 4 - 10, 2026",
       "url": "https://greatdaysoutdoors.com/northwest-florida-fishing-report-for-september-4-10-2026/",
       "reportDate": "2026-09-04"
+    },
+    {
+      "title": "Santa Rosa Beach Fishing Reports (September 2026) — captainexperiences.com",
+      "url": "https://captainexperiences.com/fishing-reports/locations/florida/santa-rosa-beach",
+      "reportDate": "2026-09-06"
     }
   ],
   "previousDay": {
@@ -56,78 +53,44 @@
   },
   "openMeteo": [
     {
-      "high": 80,
+      "high": 83,
       "low": 76,
-      "stormChance": 63,
-      "windSpeed": 8,
-      "windDir": "SE",
-      "summary": "Rain"
-    },
-    {
-      "high": 85,
-      "low": 76,
-      "stormChance": 31,
+      "stormChance": 34,
       "windSpeed": 9,
-      "windDir": "SE",
-      "summary": "Heavy rain"
+      "windDir": "S",
+      "summary": "Drizzle"
     },
     {
-      "high": 93,
+      "high": 87,
+      "low": 75,
+      "stormChance": 40,
+      "windSpeed": 7,
+      "windDir": "W",
+      "summary": "Overcast"
+    },
+    {
+      "high": 97,
       "low": 77,
-      "stormChance": 44,
-      "windSpeed": 9,
-      "windDir": "SW",
-      "summary": "Thunderstorm"
+      "stormChance": 15,
+      "windSpeed": 7,
+      "windDir": "W",
+      "summary": "Overcast"
     }
   ],
   "forecast": [
     {
-      "day": "Fri, Sep 11",
-      "dateISO": "2026-09-11",
-      "label": "Today",
-      "high": 86,
-      "low": null,
-      "wind": "S 0 to 10 mph",
-      "windSpeed": 10,
-      "windDir": "S",
-      "storms": 90,
-      "headline": "Showers And Thunderstorms then Chance Showers And Thunderstorms",
-      "fishingScore": 4.9,
-      "aiCall": "Showers and thunderstorms before noon, then a chance of showers and thunderstorms between noon and 5pm. Mostly cloudy. High near 86, with temperatures falling to around 83 in the afternoon. South wind 0 to 10 mph. Chance of precipitation is 90%. New rainfall amounts between a half and three quarters of an inch possible.",
-      "emoji": "⛈️",
-      "tideEvents": [
-        {
-          "type": "H",
-          "time": "8:56 PM"
-        },
-        {
-          "type": "L",
-          "time": "10:35 PM"
-        },
-        {
-          "type": "H",
-          "time": "7:26 AM"
-        },
-        {
-          "type": "L",
-          "time": "3:04 PM"
-        }
-      ],
-      "moonPhase": "New Moon (~0% illuminated) — strong tidal push (spring tide)"
-    },
-    {
       "day": "Sat, Sep 12",
       "dateISO": "2026-09-12",
-      "label": "Tomorrow",
+      "label": "Today",
       "high": 88,
       "low": null,
-      "wind": "SSW 0 to 10 mph",
-      "windSpeed": 10,
-      "windDir": "SSW",
-      "storms": 67,
-      "headline": "Showers And Thunderstorms Likely",
-      "fishingScore": 5.8,
-      "aiCall": "A chance of showers and thunderstorms before 7am, then a chance of showers and thunderstorms between 7am and 9am, then showers and thunderstorms likely between 9am and 1pm, then a chance of showers and thunderstorms. Mostly sunny. High near 88, with temperatures falling to around 85 in the afternoon. South southwest wind 0 to 10 mph. Chance of precipitation is 70%. New rainfall amounts between a half and three quarters of an inch possible.",
+      "wind": "WSW 0 to 5 mph",
+      "windSpeed": 5,
+      "windDir": "WSW",
+      "storms": 66,
+      "headline": "Showers And Thunderstorms Likely then Chance Showers And Thunderstorms",
+      "fishingScore": 5.9,
+      "aiCall": "Showers and thunderstorms likely before 9am, then a chance of showers and thunderstorms between 9am and 5pm. Partly sunny, with a high near 88. West southwest wind 0 to 5 mph. Chance of precipitation is 70%. New rainfall amounts between a quarter and half of an inch possible.",
       "emoji": "⛈️",
       "tideEvents": [
         {
@@ -144,16 +107,16 @@
     {
       "day": "Sun, Sep 13",
       "dateISO": "2026-09-13",
-      "label": "Sunday",
+      "label": "Tomorrow",
       "high": 90,
       "low": null,
       "wind": "W 0 to 5 mph",
       "windSpeed": 5,
       "windDir": "W",
-      "storms": 56,
-      "headline": "Chance Showers And Thunderstorms then Slight Chance Showers And Thunderstorms",
-      "fishingScore": 6.3,
-      "aiCall": "A chance of showers and thunderstorms before 10am, then a slight chance of showers and thunderstorms between 10am and 1pm, then showers and thunderstorms likely. Mostly sunny, with a high near 90. West wind 0 to 5 mph. Chance of precipitation is 60%.",
+      "storms": 48,
+      "headline": "Mostly Sunny then Chance Showers And Thunderstorms · Heat index 102",
+      "fishingScore": 6.6,
+      "aiCall": "A chance of showers and thunderstorms after noon. Mostly sunny. High near 90, with temperatures falling to around 87 in the afternoon. Heat index values as high as 102. West wind 0 to 5 mph. Chance of precipitation is 50%.",
       "emoji": "⛈️",
       "tideEvents": [
         {
@@ -166,30 +129,56 @@
         }
       ],
       "moonPhase": "Waxing Crescent (~4% illuminated) — strong tidal push (spring tide)"
+    },
+    {
+      "day": "Mon, Sep 14",
+      "dateISO": "2026-09-14",
+      "label": "Monday",
+      "high": 92,
+      "low": null,
+      "wind": "NW 0 to 5 mph",
+      "windSpeed": 5,
+      "windDir": "NW",
+      "storms": 20,
+      "headline": "Sunny then Slight Chance Showers And Thunderstorms",
+      "fishingScore": 7.9,
+      "aiCall": "A slight chance of showers and thunderstorms after 1pm. Sunny, with a high near 92. Chance of precipitation is 20%.",
+      "emoji": "⛈️",
+      "tideEvents": [
+        {
+          "type": "H",
+          "time": "7:39 PM"
+        },
+        {
+          "type": "L",
+          "time": "5:53 AM"
+        }
+      ],
+      "moonPhase": "Waxing Crescent (~10% illuminated) — strong tidal push (spring tide)"
     }
   ],
-  "dateISO": "2026-09-11",
+  "dateISO": "2026-09-12",
   "waterTemp": 87,
   "pressure": {
-    "hpa": 1015.2,
-    "inHg": 29.98,
-    "direction": "rising",
-    "changeHpa3h": 0.9
+    "hpa": 1013,
+    "inHg": 29.91,
+    "direction": "falling",
+    "changeHpa3h": -1.2
   },
   "speciesSignals": [
     {
       "key": "spotted_seatrout",
       "label": "Speckled trout",
-      "current": false,
+      "current": true,
       "reportCount": 8,
-      "lastReported": "2026-09-11"
+      "lastReported": "2026-09-12"
     },
     {
       "key": "redfish",
       "label": "Redfish",
       "current": true,
       "reportCount": 10,
-      "lastReported": "2026-09-11"
+      "lastReported": "2026-09-12"
     },
     {
       "key": "gulf_flounder",
@@ -202,8 +191,8 @@
       "key": "black_drum",
       "label": "Black drum",
       "current": false,
-      "reportCount": 2,
-      "lastReported": "2026-09-11"
+      "reportCount": 1,
+      "lastReported": "2026-06-22"
     },
     {
       "key": "sheepshead",
@@ -217,25 +206,25 @@
     "majors": [
       {
         "type": "underfoot",
-        "peak": "12:45 AM",
-        "window": "11:45 PM–1:45 AM"
+        "peak": "1:30 AM",
+        "window": "12:30 AM–2:30 AM"
       },
       {
         "type": "overhead",
-        "peak": "1:05 PM",
-        "window": "12:05 PM–2:05 PM"
+        "peak": "1:50 PM",
+        "window": "12:50 PM–2:50 PM"
       }
     ],
     "minors": [
       {
         "type": "moonrise",
-        "peak": "6:55 AM",
-        "window": "6:25 AM–7:25 AM"
+        "peak": "8:00 AM",
+        "window": "7:30 AM–8:30 AM"
       },
       {
         "type": "moonset",
-        "peak": "7:10 PM",
-        "window": "6:40 PM–7:40 PM"
+        "peak": "7:40 PM",
+        "window": "7:10 PM–8:10 PM"
       }
     ]
   }
