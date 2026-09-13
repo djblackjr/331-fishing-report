@@ -21,18 +21,18 @@
     "sky": "Cloudy",
     "stormChance": 29,
     "pressure": {
-      "hpa": 1015.2,
-      "inHg": 29.98,
-      "direction": "falling",
-      "changeHpa3h": -1.1
+      "hpa": 1018.3,
+      "inHg": 30.07,
+      "direction": "rising",
+      "changeHpa3h": 2.4
     }
   },
   "currentReport": {
     "kind": "current_regional_report",
     "date": "2026-09-13",
     "displayDate": "September 13, 2026",
-    "summary": "The most current report available (week of September 4–10, 2026) comes from Capt. Blake Nelson with Last Cast Charters, who covers Choctawhatchee Bay weekly for the Northwest Florida Fishing Report. Water temp is 87°F. The bay is showing early signs of the fall transition: large schools of baitfish (greenies/pogies) are moving from deeper open water onto flats, into bayous, and around bridge areas — a signal that redfish and trout activity on the flats should improve as September pushes toward October. Slot redfish on the flats are expected to pick up significantly with the upcoming fall mullet run, with the second or third week of September historically being the first meaningful opportunity; bull reds are also being reported patrolling deeper channels and around the East Pass jetties. Speckled trout are holding around grass, sandy pockets, docks, and deeper cuts, and are responding to soft plastics and live bait. Overall, the bay bite is in a transitional lull between summer and fall patterns — conditions are building toward what guides expect to be one of the better inshore stretches of the year.",
-    "attribution": "greatdaysoutdoors.com (Northwest Florida Fishing Report, featuring Capt. Blake Nelson / Last Cast Charters, Choctawhatchee Bay) · Auto-refreshed via Claude API",
+    "summary": "The week of September 4–10, 2026 brought the first clear signs of the fall transition to Choctawhatchee Bay, according to Capt. Blake Nelson of Last Cast Charters (Destin area). Large schools of baitfish — greenies and pogies — have been pushing from open deeper water into the bayous, flats, and bridge areas, which is starting to wake up the inshore bite. Redfish action on the flats is improving and is expected to build significantly through the rest of September as the mullet migration gets underway; Blake anticipates the first strong slot-redfish bite arriving in the second or third week of the month. Speckled trout have been holding around grass, sandy pockets, docks, and deeper cuts throughout the bay, and bull reds have been showing around Rocky Bayou, Boggy Bayou, Joe's Bayou, Marler Bayou, and the East Pass — responding to topwater plugs and large swimbaits worked through feeding baitfish schools. Water temperature at this location is 87°F, which is keeping midday fishing slow; early morning remains the most productive window for inshore species.",
+    "attribution": "Great Days Outdoors (Northwest Florida Fishing Report, Sep 4–10 2026, featuring Capt. Blake Nelson / Last Cast Charters); Great Days Outdoors (Northwest Florida Fishing Report, Aug 28–Sep 3 2026, same source) · Auto-refreshed via Claude API",
     "sourceIds": [
       "report-aHR0cHM6Ly9ncmVhdG"
     ],
@@ -58,51 +58,49 @@
       "sky": "Cloudy",
       "stormChance": 29,
       "pressure": {
-        "hpa": 1015.2,
-        "inHg": 29.98,
-        "direction": "falling",
-        "changeHpa3h": -1.1
+        "hpa": 1018.3,
+        "inHg": 30.07,
+        "direction": "rising",
+        "changeHpa3h": 2.4
       }
     }
   },
   "archivedReports": [
     {
       "kind": "archived_app_snapshot",
-      "date": "2026-09-12",
-      "displayDate": "September 12, 2026",
-      "summary": "The most current available report for Choctawhatchee Bay is from the week of September 4–10, 2026 (about one week old as of today). According to Capt. Blake Nelson of Last Cast Charters, the bay is showing clear early signs of the fall transition, with large concentrations of baitfish pushing from open water into bayous, flats, and bridge areas. Redfish are the headline inshore story: sight-fishing opportunities on the flats are improving, and local guides expect the slot-red bite to pick up meaningfully from mid-to-late September onward as the fall mullet run gets underway — cut or butterfly-rigged finger mullet on a single-drop rig with an orange or pink bead is the anticipated setup. Water temperature is 86°F. Speckled trout are also reported active in the bay's grass flat areas, and captainexperiences.com trip reports from Santa Rosa Beach anglers (dated approximately 6 days before the report pull) note good numbers of speckled trout alongside bull redfish in the 26-lb class being landed.",
-      "attribution": "greatdaysoutdoors.com (Northwest Florida Fishing Report, Sept 4–10, 2026); captainexperiences.com (Choctawhatchee Bay fishing reports page) · Auto-refreshed via Claude API",
+      "date": "2026-09-13",
+      "displayDate": "September 13, 2026",
+      "summary": "The most current report available (week of September 4–10, 2026) comes from Capt. Blake Nelson with Last Cast Charters, who covers Choctawhatchee Bay weekly for the Northwest Florida Fishing Report. Water temp is 87°F. The bay is showing early signs of the fall transition: large schools of baitfish (greenies/pogies) are moving from deeper open water onto flats, into bayous, and around bridge areas — a signal that redfish and trout activity on the flats should improve as September pushes toward October. Slot redfish on the flats are expected to pick up significantly with the upcoming fall mullet run, with the second or third week of September historically being the first meaningful opportunity; bull reds are also being reported patrolling deeper channels and around the East Pass jetties. Speckled trout are holding around grass, sandy pockets, docks, and deeper cuts, and are responding to soft plastics and live bait. Overall, the bay bite is in a transitional lull between summer and fall patterns — conditions are building toward what guides expect to be one of the better inshore stretches of the year.",
+      "attribution": "greatdaysoutdoors.com (Northwest Florida Fishing Report, featuring Capt. Blake Nelson / Last Cast Charters, Choctawhatchee Bay) · Auto-refreshed via Claude API",
       "sourceIds": [
-        "captain-experiences-destin",
-        "report-aHR0cHM6Ly9ncmVhdG",
-        "report-aHR0cHM6Ly9jYXB0YW"
+        "report-aHR0cHM6Ly9ncmVhdG"
       ],
       "species": [
         "spotted_seatrout",
         "redfish"
       ],
       "conditions": {
-        "wind": "WSW 0 to 5 mph",
-        "windDir": "WSW",
-        "tide": "High tide ~7:18 PM · Low tide ~2:40 AM · Sunrise 6:26 AM",
+        "wind": "W 0 to 5 mph",
+        "windDir": "W",
+        "tide": "High tide ~7:22 PM · Low tide ~4:44 AM · Sunrise 6:26 AM",
         "tideEvents": [
           {
             "type": "H",
-            "time": "7:18 PM"
+            "time": "7:22 PM"
           },
           {
             "type": "L",
-            "time": "2:40 AM"
+            "time": "4:44 AM"
           }
         ],
-        "waterTemp": 86,
+        "waterTemp": 87,
         "sky": "Cloudy",
-        "stormChance": 66,
+        "stormChance": 29,
         "pressure": {
-          "hpa": 1014.6,
-          "inHg": 29.96,
-          "direction": "rising",
-          "changeHpa3h": 1
+          "hpa": 1015.2,
+          "inHg": 29.98,
+          "direction": "falling",
+          "changeHpa3h": -1.1
         }
       }
     },
@@ -466,18 +464,18 @@
   "sources": [
     {
       "id": "report-aHR0cHM6Ly9ncmVhdG",
-      "label": "Northwest Florida Fishing Report for September 4 - 10, 2026",
-      "url": "https://greatdaysoutdoors.com/northwest-florida-fishing-report-for-september-4-10-2026/",
+      "label": "Northwest Florida Fishing Report for August 28 – September 3, 2026",
+      "url": "https://greatdaysoutdoors.com/northwest-florida-fishing-report-for-august-28-september-3-2026/",
       "kind": "regional_report",
-      "reportDate": "2026-09-04",
+      "reportDate": "2026-08-28",
       "note": "Exact source page preserved by the daily bite-report research."
     },
     {
       "id": "report-aHR0cHM6Ly9jYXB0YW",
-      "label": "Choctawhatchee Bay Fishing Reports",
+      "label": "Choctawhatchee Bay Fishing Reports (August 2026)",
       "url": "https://captainexperiences.com/fishing-reports/locations/regions/choctawhatchee-bay",
       "kind": "regional_report",
-      "reportDate": null,
+      "reportDate": "2026-08-06",
       "note": "Exact source page preserved by the daily bite-report research."
     },
     {

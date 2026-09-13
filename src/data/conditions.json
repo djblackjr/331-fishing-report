@@ -24,46 +24,46 @@
   "moonPhase": "Waxing Crescent (~4% illuminated) — strong tidal push (spring tide)",
   "waterClarity": "Slightly stained",
   "sky": "Cloudy",
-  "lastUpdated": "9/13/2026, 3:12:15 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
-  "localBiteReport": "The most current report available (week of September 4–10, 2026) comes from Capt. Blake Nelson with Last Cast Charters, who covers Choctawhatchee Bay weekly for the Northwest Florida Fishing Report. Water temp is 87°F. The bay is showing early signs of the fall transition: large schools of baitfish (greenies/pogies) are moving from deeper open water onto flats, into bayous, and around bridge areas — a signal that redfish and trout activity on the flats should improve as September pushes toward October. Slot redfish on the flats are expected to pick up significantly with the upcoming fall mullet run, with the second or third week of September historically being the first meaningful opportunity; bull reds are also being reported patrolling deeper channels and around the East Pass jetties. Speckled trout are holding around grass, sandy pockets, docks, and deeper cuts, and are responding to soft plastics and live bait. Overall, the bay bite is in a transitional lull between summer and fall patterns — conditions are building toward what guides expect to be one of the better inshore stretches of the year.",
-  "localBiteSource": "greatdaysoutdoors.com (Northwest Florida Fishing Report, featuring Capt. Blake Nelson / Last Cast Charters, Choctawhatchee Bay) · Auto-refreshed via Claude API",
+  "lastUpdated": "9/13/2026, 8:17:17 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "localBiteReport": "The week of September 4–10, 2026 brought the first clear signs of the fall transition to Choctawhatchee Bay, according to Capt. Blake Nelson of Last Cast Charters (Destin area). Large schools of baitfish — greenies and pogies — have been pushing from open deeper water into the bayous, flats, and bridge areas, which is starting to wake up the inshore bite. Redfish action on the flats is improving and is expected to build significantly through the rest of September as the mullet migration gets underway; Blake anticipates the first strong slot-redfish bite arriving in the second or third week of the month. Speckled trout have been holding around grass, sandy pockets, docks, and deeper cuts throughout the bay, and bull reds have been showing around Rocky Bayou, Boggy Bayou, Joe's Bayou, Marler Bayou, and the East Pass — responding to topwater plugs and large swimbaits worked through feeding baitfish schools. Water temperature at this location is 87°F, which is keeping midday fishing slow; early morning remains the most productive window for inshore species.",
+  "localBiteSource": "Great Days Outdoors (Northwest Florida Fishing Report, Sep 4–10 2026, featuring Capt. Blake Nelson / Last Cast Charters); Great Days Outdoors (Northwest Florida Fishing Report, Aug 28–Sep 3 2026, same source) · Auto-refreshed via Claude API",
   "localBiteUpdated": "September 13, 2026",
   "localBiteEvidence": [
     {
-      "title": "Northwest Florida Fishing Report for September 4–10, 2026",
+      "title": "Northwest Florida Fishing Report for September 4 - 10, 2026",
       "url": "https://greatdaysoutdoors.com/northwest-florida-fishing-report-for-september-4-10-2026/",
       "reportDate": "2026-09-04"
     },
     {
-      "title": "Northwest Florida Fishing Report for August 28 – September 3, 2026",
+      "title": "Northwest Florida Fishing Report for August 28 - September 3, 2026",
       "url": "https://greatdaysoutdoors.com/northwest-florida-fishing-report-for-august-28-september-3-2026/",
       "reportDate": "2026-08-28"
     }
   ],
   "previousDay": {
-    "date": "Saturday, September 12, 2026",
+    "date": "Sunday, September 13, 2026",
     "wind": {
-      "dir": "WSW",
+      "dir": "W",
       "speed": 5
     },
-    "high": 88,
-    "stormChance": 66,
-    "tide": "High tide ~7:18 PM · Low tide ~2:40 AM · Sunrise 6:26 AM",
-    "waterTemp": 86
+    "high": 91,
+    "stormChance": 29,
+    "tide": "High tide ~7:22 PM · Low tide ~4:44 AM · Sunrise 6:26 AM",
+    "waterTemp": 87
   },
   "openMeteo": [
     {
       "high": 88,
       "low": 75,
-      "stormChance": 15,
+      "stormChance": 9,
       "windSpeed": 6,
-      "windDir": "NW",
+      "windDir": "W",
       "summary": "Overcast"
     },
     {
       "high": 91,
       "low": 77,
-      "stormChance": 4,
+      "stormChance": 5,
       "windSpeed": 7,
       "windDir": "W",
       "summary": "Rain showers"
@@ -71,8 +71,8 @@
     {
       "high": 97,
       "low": 77,
-      "stormChance": 2,
-      "windSpeed": 7,
+      "stormChance": 6,
+      "windSpeed": 8,
       "windDir": "SE",
       "summary": "Overcast"
     }
@@ -142,7 +142,7 @@
       "storms": 2,
       "headline": "Sunny",
       "fishingScore": 8.9,
-      "aiCall": "Sunny, with a high near 94.",
+      "aiCall": "Sunny, with a high near 94. East northeast wind 0 to 5 mph.",
       "emoji": "☀️",
       "tideEvents": [
         {
@@ -160,10 +160,10 @@
   "dateISO": "2026-09-13",
   "waterTemp": 87,
   "pressure": {
-    "hpa": 1015.2,
-    "inHg": 29.98,
-    "direction": "falling",
-    "changeHpa3h": -1.1
+    "hpa": 1018.3,
+    "inHg": 30.07,
+    "direction": "rising",
+    "changeHpa3h": 2.4
   },
   "speciesSignals": [
     {
