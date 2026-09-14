@@ -4,8 +4,8 @@
   "generatedAt": "2026-09-14",
   "scopeNote": "Regional reports support timing and species activity only. They do not prove a catch, depth, bottom type, or safe navigation at a mapped Jolly Bay feature.",
   "currentConditions": {
-    "wind": "NW 0 to 5 mph",
-    "windDir": "NW",
+    "wind": "WNW 0 to 5 mph",
+    "windDir": "WNW",
     "tide": "High tide ~7:39 PM · Low tide ~5:53 AM · Sunrise 6:27 AM",
     "tideEvents": [
       {
@@ -21,28 +21,31 @@
     "sky": "Bright sun",
     "stormChance": 4,
     "pressure": {
-      "hpa": 1016.2,
-      "inHg": 30.01,
-      "direction": "falling",
-      "changeHpa3h": -0.7
+      "hpa": 1019,
+      "inHg": 30.09,
+      "direction": "rising",
+      "changeHpa3h": 2.1
     }
   },
   "currentReport": {
     "kind": "current_regional_report",
     "date": "2026-09-14",
     "displayDate": "September 14, 2026",
-    "summary": "The most recent available report covering Choctawhatchee Bay inshore fishing is from the week of September 4–10, 2026 — about ten days old at time of writing. According to Capt. Blake Nelson of Last Cast Charters (a Choctawhatchee Bay guide featured in the Northwest Florida Fishing Report), the bay is beginning to show the first signs of fall transition: large schools of baitfish (greenies/menhaden) that had been sitting in deeper open water are now pushing into bayous, flats, bridge areas, and tidal roll-downs. Redfish activity on the flats is described as improving and expected to continue building through the rest of September as the fall mullet movement gets underway — Capt. Nelson anticipates the first meaningful slot-red push arriving in the second or third week of September and running into October, with cut or butterfly-rigged finger mullet being his go-to presentation when that bite materializes. Bull redfish and jack crevalle have also been reported feeding on pogies and greenies around Rocky Bayou, Boggy Bayou, Joe's Bayou, Marler Bayou, and the East Pass area. Water temperature at this location today is 87°F, which continues to push trout and slot reds toward deeper grass edges, sandy pockets, docks, and cuts during midday — early morning and evening remain the most productive windows for flats fishing.",
-    "attribution": "Great Days Outdoors / Northwest Florida Fishing Report (greatdaysoutdoors.com), featuring Capt. Blake Nelson of Last Cast Charters reporting on Choctawhatchee Bay · Auto-refreshed via Claude API",
+    "summary": "The most recent available report covering Choctawhatchee Bay is from the week of September 4–10, 2026 — roughly 10 days old, not this week. According to Capt. Blake Nelson of Last Cast Charters (via Great Days Outdoors), the bay is showing the first signs of the fall transition, with large schools of baitfish pushing from deeper open water onto flats, bayous, and bridge areas. Sight-fishing opportunities for redfish on the flats are described as improving, and the prior week's report (Aug 28–Sept 3) noted that the arrival of slot reds in earnest is expected during the second or third week of September as the mullet run gets underway — which puts us right at that window now with water temps at 87°F. Trout, flounder, sheepshead, and black drum were not called out specifically in these reports, but fall transitions in the bay historically activate all of those species as bait schools compress and water temps begin to ease.",
+    "attribution": "Great Days Outdoors – Northwest Florida Fishing Report (greatdaysoutdoors.com) · Auto-refreshed via Claude API",
     "sourceIds": [
       "report-aHR0cHM6Ly9ncmVhdG"
     ],
     "species": [
       "spotted_seatrout",
-      "redfish"
+      "redfish",
+      "gulf_flounder",
+      "black_drum",
+      "sheepshead"
     ],
     "conditions": {
-      "wind": "NW 0 to 5 mph",
-      "windDir": "NW",
+      "wind": "WNW 0 to 5 mph",
+      "windDir": "WNW",
       "tide": "High tide ~7:39 PM · Low tide ~5:53 AM · Sunrise 6:27 AM",
       "tideEvents": [
         {
@@ -58,20 +61,20 @@
       "sky": "Bright sun",
       "stormChance": 4,
       "pressure": {
-        "hpa": 1016.2,
-        "inHg": 30.01,
-        "direction": "falling",
-        "changeHpa3h": -0.7
+        "hpa": 1019,
+        "inHg": 30.09,
+        "direction": "rising",
+        "changeHpa3h": 2.1
       }
     }
   },
   "archivedReports": [
     {
       "kind": "archived_app_snapshot",
-      "date": "2026-09-13",
-      "displayDate": "September 13, 2026",
-      "summary": "The week of September 4–10, 2026 brought the first clear signs of the fall transition to Choctawhatchee Bay, according to Capt. Blake Nelson of Last Cast Charters (Destin area). Large schools of baitfish — greenies and pogies — have been pushing from open deeper water into the bayous, flats, and bridge areas, which is starting to wake up the inshore bite. Redfish action on the flats is improving and is expected to build significantly through the rest of September as the mullet migration gets underway; Blake anticipates the first strong slot-redfish bite arriving in the second or third week of the month. Speckled trout have been holding around grass, sandy pockets, docks, and deeper cuts throughout the bay, and bull reds have been showing around Rocky Bayou, Boggy Bayou, Joe's Bayou, Marler Bayou, and the East Pass — responding to topwater plugs and large swimbaits worked through feeding baitfish schools. Water temperature at this location is 87°F, which is keeping midday fishing slow; early morning remains the most productive window for inshore species.",
-      "attribution": "Great Days Outdoors (Northwest Florida Fishing Report, Sep 4–10 2026, featuring Capt. Blake Nelson / Last Cast Charters); Great Days Outdoors (Northwest Florida Fishing Report, Aug 28–Sep 3 2026, same source) · Auto-refreshed via Claude API",
+      "date": "2026-09-14",
+      "displayDate": "September 14, 2026",
+      "summary": "The most recent available report covering Choctawhatchee Bay inshore fishing is from the week of September 4–10, 2026 — about ten days old at time of writing. According to Capt. Blake Nelson of Last Cast Charters (a Choctawhatchee Bay guide featured in the Northwest Florida Fishing Report), the bay is beginning to show the first signs of fall transition: large schools of baitfish (greenies/menhaden) that had been sitting in deeper open water are now pushing into bayous, flats, bridge areas, and tidal roll-downs. Redfish activity on the flats is described as improving and expected to continue building through the rest of September as the fall mullet movement gets underway — Capt. Nelson anticipates the first meaningful slot-red push arriving in the second or third week of September and running into October, with cut or butterfly-rigged finger mullet being his go-to presentation when that bite materializes. Bull redfish and jack crevalle have also been reported feeding on pogies and greenies around Rocky Bayou, Boggy Bayou, Joe's Bayou, Marler Bayou, and the East Pass area. Water temperature at this location today is 87°F, which continues to push trout and slot reds toward deeper grass edges, sandy pockets, docks, and cuts during midday — early morning and evening remain the most productive windows for flats fishing.",
+      "attribution": "Great Days Outdoors / Northwest Florida Fishing Report (greatdaysoutdoors.com), featuring Capt. Blake Nelson of Last Cast Charters reporting on Choctawhatchee Bay · Auto-refreshed via Claude API",
       "sourceIds": [
         "report-aHR0cHM6Ly9ncmVhdG"
       ],
@@ -80,27 +83,27 @@
         "redfish"
       ],
       "conditions": {
-        "wind": "W 0 to 5 mph",
-        "windDir": "W",
-        "tide": "High tide ~7:22 PM · Low tide ~4:44 AM · Sunrise 6:26 AM",
+        "wind": "NW 0 to 5 mph",
+        "windDir": "NW",
+        "tide": "High tide ~7:39 PM · Low tide ~5:53 AM · Sunrise 6:27 AM",
         "tideEvents": [
           {
             "type": "H",
-            "time": "7:22 PM"
+            "time": "7:39 PM"
           },
           {
             "type": "L",
-            "time": "4:44 AM"
+            "time": "5:53 AM"
           }
         ],
         "waterTemp": 87,
-        "sky": "Cloudy",
-        "stormChance": 29,
+        "sky": "Bright sun",
+        "stormChance": 4,
         "pressure": {
-          "hpa": 1018.3,
-          "inHg": 30.07,
-          "direction": "rising",
-          "changeHpa3h": 2.4
+          "hpa": 1016.2,
+          "inHg": 30.01,
+          "direction": "falling",
+          "changeHpa3h": -0.7
         }
       }
     },
@@ -336,26 +339,26 @@
     {
       "key": "gulf_flounder",
       "label": "Flounder",
-      "current": false,
-      "reportCount": 3,
-      "lastReported": "2026-07-28",
-      "evidenceLevel": "archived_regional_report"
+      "current": true,
+      "reportCount": 4,
+      "lastReported": "2026-09-14",
+      "evidenceLevel": "current_regional_report"
     },
     {
       "key": "black_drum",
       "label": "Black drum",
-      "current": false,
-      "reportCount": 1,
-      "lastReported": "2026-06-22",
-      "evidenceLevel": "archived_regional_report"
+      "current": true,
+      "reportCount": 2,
+      "lastReported": "2026-09-14",
+      "evidenceLevel": "current_regional_report"
     },
     {
       "key": "sheepshead",
       "label": "Sheepshead",
-      "current": false,
-      "reportCount": 1,
-      "lastReported": "2026-07-01",
-      "evidenceLevel": "archived_regional_report"
+      "current": true,
+      "reportCount": 2,
+      "lastReported": "2026-09-14",
+      "evidenceLevel": "current_regional_report"
     }
   ],
   "profiles": {

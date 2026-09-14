@@ -2,8 +2,8 @@
   "date": "Monday, September 14, 2026",
   "wind": {
     "speed": 5,
-    "dir": "NW",
-    "description": "NW 0 to 5 mph"
+    "dir": "WNW",
+    "description": "WNW 0 to 5 mph"
   },
   "weather": "Sunny · High 93°F · Heat index up to 103°F",
   "tide": "High tide ~7:39 PM · Low tide ~5:53 AM · Sunrise 6:27 AM",
@@ -24,55 +24,55 @@
   "moonPhase": "Waxing Crescent (~10% illuminated) — strong tidal push (spring tide)",
   "waterClarity": "Slightly stained",
   "sky": "Bright sun",
-  "lastUpdated": "9/14/2026, 3:12:20 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
-  "localBiteReport": "The most recent available report covering Choctawhatchee Bay inshore fishing is from the week of September 4–10, 2026 — about ten days old at time of writing. According to Capt. Blake Nelson of Last Cast Charters (a Choctawhatchee Bay guide featured in the Northwest Florida Fishing Report), the bay is beginning to show the first signs of fall transition: large schools of baitfish (greenies/menhaden) that had been sitting in deeper open water are now pushing into bayous, flats, bridge areas, and tidal roll-downs. Redfish activity on the flats is described as improving and expected to continue building through the rest of September as the fall mullet movement gets underway — Capt. Nelson anticipates the first meaningful slot-red push arriving in the second or third week of September and running into October, with cut or butterfly-rigged finger mullet being his go-to presentation when that bite materializes. Bull redfish and jack crevalle have also been reported feeding on pogies and greenies around Rocky Bayou, Boggy Bayou, Joe's Bayou, Marler Bayou, and the East Pass area. Water temperature at this location today is 87°F, which continues to push trout and slot reds toward deeper grass edges, sandy pockets, docks, and cuts during midday — early morning and evening remain the most productive windows for flats fishing.",
-  "localBiteSource": "Great Days Outdoors / Northwest Florida Fishing Report (greatdaysoutdoors.com), featuring Capt. Blake Nelson of Last Cast Charters reporting on Choctawhatchee Bay · Auto-refreshed via Claude API",
+  "lastUpdated": "9/14/2026, 9:59:04 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "localBiteReport": "The most recent available report covering Choctawhatchee Bay is from the week of September 4–10, 2026 — roughly 10 days old, not this week. According to Capt. Blake Nelson of Last Cast Charters (via Great Days Outdoors), the bay is showing the first signs of the fall transition, with large schools of baitfish pushing from deeper open water onto flats, bayous, and bridge areas. Sight-fishing opportunities for redfish on the flats are described as improving, and the prior week's report (Aug 28–Sept 3) noted that the arrival of slot reds in earnest is expected during the second or third week of September as the mullet run gets underway — which puts us right at that window now with water temps at 87°F. Trout, flounder, sheepshead, and black drum were not called out specifically in these reports, but fall transitions in the bay historically activate all of those species as bait schools compress and water temps begin to ease.",
+  "localBiteSource": "Great Days Outdoors – Northwest Florida Fishing Report (greatdaysoutdoors.com) · Auto-refreshed via Claude API",
   "localBiteUpdated": "September 14, 2026",
   "localBiteEvidence": [
     {
-      "title": "Northwest Florida Fishing Report for September 4 - 10, 2026",
+      "title": "Northwest Florida Fishing Report for September 4 – 10, 2026",
       "url": "https://greatdaysoutdoors.com/northwest-florida-fishing-report-for-september-4-10-2026/",
       "reportDate": "2026-09-04"
     },
     {
-      "title": "Northwest Florida Fishing Report for August 28 - September 3, 2026",
+      "title": "Northwest Florida Fishing Report for August 28 – September 3, 2026",
       "url": "https://greatdaysoutdoors.com/northwest-florida-fishing-report-for-august-28-september-3-2026/",
       "reportDate": "2026-08-28"
     }
   ],
   "previousDay": {
-    "date": "Sunday, September 13, 2026",
+    "date": "Monday, September 14, 2026",
     "wind": {
-      "dir": "W",
+      "dir": "NW",
       "speed": 5
     },
-    "high": 91,
-    "stormChance": 29,
-    "tide": "High tide ~7:22 PM · Low tide ~4:44 AM · Sunrise 6:26 AM",
+    "high": 93,
+    "stormChance": 4,
+    "tide": "High tide ~7:39 PM · Low tide ~5:53 AM · Sunrise 6:27 AM",
     "waterTemp": 87
   },
   "openMeteo": [
     {
-      "high": 89,
-      "low": 75,
-      "stormChance": 4,
-      "windSpeed": 6,
+      "high": 90,
+      "low": 76,
+      "stormChance": 6,
+      "windSpeed": 8,
       "windDir": "NW",
       "summary": "Clear"
     },
     {
       "high": 91,
-      "low": 75,
-      "stormChance": 19,
-      "windSpeed": 9,
+      "low": 76,
+      "stormChance": 12,
+      "windSpeed": 13,
       "windDir": "NE",
       "summary": "Overcast"
     },
     {
       "high": 93,
       "low": 75,
-      "stormChance": 7,
-      "windSpeed": 11,
+      "stormChance": 12,
+      "windSpeed": 12,
       "windDir": "E",
       "summary": "Overcast"
     }
@@ -84,13 +84,13 @@
       "label": "Today",
       "high": 93,
       "low": null,
-      "wind": "NW 0 to 5 mph",
+      "wind": "WNW 0 to 5 mph",
       "windSpeed": 5,
-      "windDir": "NW",
+      "windDir": "WNW",
       "storms": 4,
       "headline": "Sunny · Heat index 103",
       "fishingScore": 8.8,
-      "aiCall": "Sunny, with a high near 93. Heat index values as high as 103. Northwest wind 0 to 5 mph.",
+      "aiCall": "Sunny, with a high near 93. Heat index values as high as 103. West northwest wind 0 to 5 mph.",
       "emoji": "☀️",
       "tideEvents": [
         {
@@ -142,7 +142,7 @@
       "storms": 1,
       "headline": "Sunny",
       "fishingScore": 8.5,
-      "aiCall": "Sunny, with a high near 91.",
+      "aiCall": "Sunny, with a high near 91. East northeast wind 10 to 15 mph, with gusts as high as 25 mph.",
       "emoji": "☀️",
       "tideEvents": [
         {
@@ -160,10 +160,10 @@
   "dateISO": "2026-09-14",
   "waterTemp": 87,
   "pressure": {
-    "hpa": 1016.2,
-    "inHg": 30.01,
-    "direction": "falling",
-    "changeHpa3h": -0.7
+    "hpa": 1019,
+    "inHg": 30.09,
+    "direction": "rising",
+    "changeHpa3h": 2.1
   },
   "speciesSignals": [
     {
@@ -183,23 +183,23 @@
     {
       "key": "gulf_flounder",
       "label": "Flounder",
-      "current": false,
-      "reportCount": 3,
-      "lastReported": "2026-07-28"
+      "current": true,
+      "reportCount": 4,
+      "lastReported": "2026-09-14"
     },
     {
       "key": "black_drum",
       "label": "Black drum",
-      "current": false,
-      "reportCount": 1,
-      "lastReported": "2026-06-22"
+      "current": true,
+      "reportCount": 2,
+      "lastReported": "2026-09-14"
     },
     {
       "key": "sheepshead",
       "label": "Sheepshead",
-      "current": false,
-      "reportCount": 1,
-      "lastReported": "2026-07-01"
+      "current": true,
+      "reportCount": 2,
+      "lastReported": "2026-09-14"
     }
   ],
   "solunar": {
