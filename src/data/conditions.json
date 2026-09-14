@@ -1,33 +1,33 @@
 {
-  "date": "Sunday, September 13, 2026",
+  "date": "Monday, September 14, 2026",
   "wind": {
     "speed": 5,
-    "dir": "W",
-    "description": "W 0 to 5 mph"
+    "dir": "NW",
+    "description": "NW 0 to 5 mph"
   },
-  "weather": "Mostly Sunny then Slight Chance Showers And Thunderstorms · High 91°F · Heat index up to 102°F",
-  "tide": "High tide ~7:22 PM · Low tide ~4:44 AM · Sunrise 6:26 AM",
+  "weather": "Sunny · High 93°F · Heat index up to 103°F",
+  "tide": "High tide ~7:39 PM · Low tide ~5:53 AM · Sunrise 6:27 AM",
   "tideEvents": [
     {
       "type": "H",
-      "time": "7:22 PM"
+      "time": "7:39 PM"
     },
     {
       "type": "L",
-      "time": "4:44 AM"
+      "time": "5:53 AM"
     }
   ],
-  "sunrise": "6:26 AM",
-  "sunset": "6:53 PM",
+  "sunrise": "6:27 AM",
+  "sunset": "6:52 PM",
   "stormWindow": "before 9AM",
-  "stormChance": 29,
-  "moonPhase": "Waxing Crescent (~4% illuminated) — strong tidal push (spring tide)",
+  "stormChance": 4,
+  "moonPhase": "Waxing Crescent (~10% illuminated) — strong tidal push (spring tide)",
   "waterClarity": "Slightly stained",
-  "sky": "Cloudy",
-  "lastUpdated": "9/13/2026, 8:17:17 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
-  "localBiteReport": "The week of September 4–10, 2026 brought the first clear signs of the fall transition to Choctawhatchee Bay, according to Capt. Blake Nelson of Last Cast Charters (Destin area). Large schools of baitfish — greenies and pogies — have been pushing from open deeper water into the bayous, flats, and bridge areas, which is starting to wake up the inshore bite. Redfish action on the flats is improving and is expected to build significantly through the rest of September as the mullet migration gets underway; Blake anticipates the first strong slot-redfish bite arriving in the second or third week of the month. Speckled trout have been holding around grass, sandy pockets, docks, and deeper cuts throughout the bay, and bull reds have been showing around Rocky Bayou, Boggy Bayou, Joe's Bayou, Marler Bayou, and the East Pass — responding to topwater plugs and large swimbaits worked through feeding baitfish schools. Water temperature at this location is 87°F, which is keeping midday fishing slow; early morning remains the most productive window for inshore species.",
-  "localBiteSource": "Great Days Outdoors (Northwest Florida Fishing Report, Sep 4–10 2026, featuring Capt. Blake Nelson / Last Cast Charters); Great Days Outdoors (Northwest Florida Fishing Report, Aug 28–Sep 3 2026, same source) · Auto-refreshed via Claude API",
-  "localBiteUpdated": "September 13, 2026",
+  "sky": "Bright sun",
+  "lastUpdated": "9/14/2026, 3:12:20 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "localBiteReport": "The most recent available report covering Choctawhatchee Bay inshore fishing is from the week of September 4–10, 2026 — about ten days old at time of writing. According to Capt. Blake Nelson of Last Cast Charters (a Choctawhatchee Bay guide featured in the Northwest Florida Fishing Report), the bay is beginning to show the first signs of fall transition: large schools of baitfish (greenies/menhaden) that had been sitting in deeper open water are now pushing into bayous, flats, bridge areas, and tidal roll-downs. Redfish activity on the flats is described as improving and expected to continue building through the rest of September as the fall mullet movement gets underway — Capt. Nelson anticipates the first meaningful slot-red push arriving in the second or third week of September and running into October, with cut or butterfly-rigged finger mullet being his go-to presentation when that bite materializes. Bull redfish and jack crevalle have also been reported feeding on pogies and greenies around Rocky Bayou, Boggy Bayou, Joe's Bayou, Marler Bayou, and the East Pass area. Water temperature at this location today is 87°F, which continues to push trout and slot reds toward deeper grass edges, sandy pockets, docks, and cuts during midday — early morning and evening remain the most productive windows for flats fishing.",
+  "localBiteSource": "Great Days Outdoors / Northwest Florida Fishing Report (greatdaysoutdoors.com), featuring Capt. Blake Nelson of Last Cast Charters reporting on Choctawhatchee Bay · Auto-refreshed via Claude API",
+  "localBiteUpdated": "September 14, 2026",
   "localBiteEvidence": [
     {
       "title": "Northwest Florida Fishing Report for September 4 - 10, 2026",
@@ -53,70 +53,44 @@
   },
   "openMeteo": [
     {
-      "high": 88,
+      "high": 89,
       "low": 75,
-      "stormChance": 9,
+      "stormChance": 4,
       "windSpeed": 6,
-      "windDir": "W",
-      "summary": "Overcast"
+      "windDir": "NW",
+      "summary": "Clear"
     },
     {
       "high": 91,
-      "low": 77,
-      "stormChance": 5,
-      "windSpeed": 7,
-      "windDir": "W",
-      "summary": "Rain showers"
+      "low": 75,
+      "stormChance": 19,
+      "windSpeed": 9,
+      "windDir": "NE",
+      "summary": "Overcast"
     },
     {
-      "high": 97,
-      "low": 77,
-      "stormChance": 6,
-      "windSpeed": 8,
-      "windDir": "SE",
+      "high": 93,
+      "low": 75,
+      "stormChance": 7,
+      "windSpeed": 11,
+      "windDir": "E",
       "summary": "Overcast"
     }
   ],
   "forecast": [
     {
-      "day": "Sun, Sep 13",
-      "dateISO": "2026-09-13",
-      "label": "Today",
-      "high": 91,
-      "low": null,
-      "wind": "W 0 to 5 mph",
-      "windSpeed": 5,
-      "windDir": "W",
-      "storms": 29,
-      "headline": "Mostly Sunny then Slight Chance Showers And Thunderstorms · Heat index 102",
-      "fishingScore": 7.3,
-      "aiCall": "A slight chance of showers and thunderstorms between 1pm and 3pm, then a chance of showers and thunderstorms between 3pm and 5pm, then a slight chance of showers and thunderstorms. Mostly sunny. High near 91, with temperatures falling to around 87 in the afternoon. Heat index values as high as 102. West wind 0 to 5 mph. Chance of precipitation is 30%. New rainfall amounts less than a tenth of an inch possible.",
-      "emoji": "⛈️",
-      "tideEvents": [
-        {
-          "type": "H",
-          "time": "7:22 PM"
-        },
-        {
-          "type": "L",
-          "time": "4:44 AM"
-        }
-      ],
-      "moonPhase": "Waxing Crescent (~4% illuminated) — strong tidal push (spring tide)"
-    },
-    {
       "day": "Mon, Sep 14",
       "dateISO": "2026-09-14",
-      "label": "Tomorrow",
-      "high": 94,
+      "label": "Today",
+      "high": 93,
       "low": null,
-      "wind": "NNW 0 to 5 mph",
+      "wind": "NW 0 to 5 mph",
       "windSpeed": 5,
-      "windDir": "NNW",
-      "storms": 1,
-      "headline": "Sunny · Heat index 106",
-      "fishingScore": 9,
-      "aiCall": "Sunny, with a high near 94. Heat index values as high as 106. North northwest wind 0 to 5 mph.",
+      "windDir": "NW",
+      "storms": 4,
+      "headline": "Sunny · Heat index 103",
+      "fishingScore": 8.8,
+      "aiCall": "Sunny, with a high near 93. Heat index values as high as 103. Northwest wind 0 to 5 mph.",
       "emoji": "☀️",
       "tideEvents": [
         {
@@ -133,17 +107,17 @@
     {
       "day": "Tue, Sep 15",
       "dateISO": "2026-09-15",
-      "label": "Tuesday",
-      "high": 94,
+      "label": "Tomorrow",
+      "high": 93,
       "low": null,
       "wind": "ENE 0 to 5 mph",
       "windSpeed": 5,
       "windDir": "ENE",
-      "storms": 2,
-      "headline": "Sunny",
-      "fishingScore": 8.9,
-      "aiCall": "Sunny, with a high near 94. East northeast wind 0 to 5 mph.",
-      "emoji": "☀️",
+      "storms": 20,
+      "headline": "Sunny then Slight Chance Showers And Thunderstorms · Heat index 103",
+      "fishingScore": 7.8,
+      "aiCall": "A slight chance of showers and thunderstorms after 4pm. Sunny. High near 93, with temperatures falling to around 89 in the afternoon. Heat index values as high as 103. East northeast wind 0 to 5 mph. Chance of precipitation is 20%.",
+      "emoji": "⛈️",
       "tideEvents": [
         {
           "type": "H",
@@ -155,15 +129,41 @@
         }
       ],
       "moonPhase": "Waxing Crescent (~17% illuminated) — strong tidal push (spring tide)"
+    },
+    {
+      "day": "Wed, Sep 16",
+      "dateISO": "2026-09-16",
+      "label": "Wednesday",
+      "high": 91,
+      "low": null,
+      "wind": "ENE 10 to 15 mph",
+      "windSpeed": 15,
+      "windDir": "ENE",
+      "storms": 1,
+      "headline": "Sunny",
+      "fishingScore": 8.5,
+      "aiCall": "Sunny, with a high near 91.",
+      "emoji": "☀️",
+      "tideEvents": [
+        {
+          "type": "H",
+          "time": "8:42 PM"
+        },
+        {
+          "type": "L",
+          "time": "8:17 AM"
+        }
+      ],
+      "moonPhase": "Waxing Crescent (~26% illuminated) — moderate tidal push"
     }
   ],
-  "dateISO": "2026-09-13",
+  "dateISO": "2026-09-14",
   "waterTemp": 87,
   "pressure": {
-    "hpa": 1018.3,
-    "inHg": 30.07,
-    "direction": "rising",
-    "changeHpa3h": 2.4
+    "hpa": 1016.2,
+    "inHg": 30.01,
+    "direction": "falling",
+    "changeHpa3h": -0.7
   },
   "speciesSignals": [
     {
@@ -171,14 +171,14 @@
       "label": "Speckled trout",
       "current": true,
       "reportCount": 9,
-      "lastReported": "2026-09-13"
+      "lastReported": "2026-09-14"
     },
     {
       "key": "redfish",
       "label": "Redfish",
       "current": true,
       "reportCount": 10,
-      "lastReported": "2026-09-13"
+      "lastReported": "2026-09-14"
     },
     {
       "key": "gulf_flounder",
@@ -206,25 +206,25 @@
     "majors": [
       {
         "type": "underfoot",
-        "peak": "2:15 AM",
-        "window": "1:15 AM–3:15 AM"
+        "peak": "3:00 AM",
+        "window": "2:00 AM–4:00 AM"
       },
       {
         "type": "overhead",
-        "peak": "2:35 PM",
-        "window": "1:35 PM–3:35 PM"
+        "peak": "3:20 PM",
+        "window": "2:20 PM–4:20 PM"
       }
     ],
     "minors": [
       {
         "type": "moonrise",
-        "peak": "9:00 AM",
-        "window": "8:30 AM–9:30 AM"
+        "peak": "10:00 AM",
+        "window": "9:30 AM–10:30 AM"
       },
       {
         "type": "moonset",
-        "peak": "8:10 PM",
-        "window": "7:40 PM–8:40 PM"
+        "peak": "8:45 PM",
+        "window": "8:15 PM–9:15 PM"
       }
     ]
   }
