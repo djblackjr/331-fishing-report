@@ -24,20 +24,20 @@
   "moonPhase": "Waxing Crescent (~26% illuminated) — moderate tidal push",
   "waterClarity": "Slightly stained",
   "sky": "Bright sun",
-  "lastUpdated": "9/16/2026, 8:31:01 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
-  "localBiteReport": "The most recent available report covering Choctawhatchee Bay specifically is from the week of September 4–10, 2026 (about one week old). According to that report, the bay is showing early signs of the fall transition: large schools of baitfish (greenies/menhaden) have moved from open water into bayous, flats, and bridge areas, and the flats redfish bite is described as improving and expected to strengthen further as September progresses toward October. A Santa Rosa Beach angler report posted approximately 6 days ago noted plenty of speckled trout activity and a notable bull redfish catch (a 40¼-inch, 26-lb fish) out of the bay. Water temperature at this location today is 87°F, which continues to push the best redfish and trout action to early mornings and evenings on the flats, with bait concentrations near bridge structures also worth targeting.",
+  "lastUpdated": "9/16/2026, 8:37:16 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "localBiteReport": "The most current report covering Choctawhatchee Bay is from the week of September 4–10, 2026, so the information below is about 1–1.5 weeks old. According to that report, the bay is showing early signs of the fall transition, with large schools of baitfish (greenies/menhaden) pushing from deeper open water into bayous, flats, and bridge areas — a strong signal that redfish flats activity is expected to improve as September pushes toward October. Capt. Blake Nelson of Last Cast Charters noted the bite on the flats is trending upward, with conditions getting better week over week. On a separate angler report from captainexperiences.com posted approximately 6 days ago (around September 10), a Santa Rosa Beach guide noted a very active speckled trout bite with plenty of fish, plus a large bull redfish (40+ inches, 26 lbs) landed in the bay. Water temperature at this location is currently measured at 87°F, which continues to push fish toward early-morning and late-afternoon feeding windows and into slightly deeper, cooler pockets during midday.",
   "localBiteSource": "greatdaysoutdoors.com (Northwest Florida Fishing Report, Sep 4–10, 2026); captainexperiences.com (Choctawhatchee Bay angler report, ~Sep 10, 2026) · Auto-refreshed via Claude API",
   "localBiteUpdated": "September 16, 2026",
   "localBiteEvidence": [
     {
       "title": "Northwest Florida Fishing Report for September 4 - 10, 2026",
       "url": "https://greatdaysoutdoors.com/northwest-florida-fishing-report-for-september-4-10-2026/",
-      "reportDate": "2026-09-10"
+      "reportDate": "2026-09-04"
     },
     {
-      "title": "Choctawhatchee Bay Fishing Reports — Dexter E., Santa Rosa Beach (reported 6 days ago)",
+      "title": "Choctawhatchee Bay Fishing Reports — captainexperiences.com",
       "url": "https://captainexperiences.com/fishing-reports/locations/regions/choctawhatchee-bay",
-      "reportDate": null
+      "reportDate": "2026-09-10"
     }
   ],
   "previousDay": {
