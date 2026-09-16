@@ -1,35 +1,35 @@
 {
   "type": "FishingIntelligence",
   "region": "choctawhatchee_bay",
-  "generatedAt": "2026-09-15",
+  "generatedAt": "2026-09-16",
   "scopeNote": "Regional reports support timing and species activity only. They do not prove a catch, depth, bottom type, or safe navigation at a mapped Jolly Bay feature.",
   "currentConditions": {
-    "wind": "ENE 5 mph",
+    "wind": "ENE 10 to 15 mph",
     "windDir": "ENE",
-    "tide": "High tide ~8:06 PM · Low tide ~6:58 AM · Sunrise 6:27 AM",
+    "tide": "High tide ~8:42 PM · Low tide ~8:17 AM · Sunrise 6:28 AM",
     "tideEvents": [
       {
         "type": "H",
-        "time": "8:06 PM"
+        "time": "8:42 PM"
       },
       {
         "type": "L",
-        "time": "6:58 AM"
+        "time": "8:17 AM"
       }
     ],
     "waterTemp": 87,
     "sky": "Bright sun",
-    "stormChance": 13,
+    "stormChance": 2,
     "pressure": {
-      "hpa": 1019.5,
-      "inHg": 30.11,
-      "direction": "rising",
-      "changeHpa3h": 2
+      "hpa": 1020.1,
+      "inHg": 30.12,
+      "direction": "falling",
+      "changeHpa3h": -1.1
     }
   },
   "currentReport": {
     "kind": "current_regional_report",
-    "date": "2026-09-15",
+    "date": "2026-09-16",
     "displayDate": "September 15, 2026",
     "summary": "The most current verifiable report with Choctawhatchee Bay-specific inshore detail is from the week of September 4–10, 2026 — roughly 10 days old, not this current week. According to Captain Blake Nelson of Last Cast Charters (Choctawhatchee Bay), the bay is showing early signs of the fall transition, with large concentrations of bait — pogies and greenies — moving from open water into bayous, bridge areas, and flats. Bull redfish and jack crevalle are actively feeding on those bait schools around Rocky Bayou, Boggy Bayou, Joe's Bayou, Marler Bayou, and near the East Pass, best targeted on topwater plugs and large swimbaits. Slot reds, speckled trout, and mangrove snapper are holding around grass edges, sandy pockets, docks, and deeper cuts; afternoon thunderstorms have been the primary safety concern for anglers on the bay. Looking ahead, Blake expected the first meaningful slot-redfish push tied to the fall mullet run to begin during the second or third week of September — which aligns with this week — making now a potentially prime transition window. Water temperature at this location is 87°F.",
     "attribution": "Great Days Outdoors – Northwest Florida Fishing Report (week of Sept 4–10, 2026), featuring Capt. Blake Nelson / Last Cast Charters (Choctawhatchee Bay) · Auto-refreshed via Claude API",
@@ -41,27 +41,27 @@
       "redfish"
     ],
     "conditions": {
-      "wind": "ENE 5 mph",
+      "wind": "ENE 10 to 15 mph",
       "windDir": "ENE",
-      "tide": "High tide ~8:06 PM · Low tide ~6:58 AM · Sunrise 6:27 AM",
+      "tide": "High tide ~8:42 PM · Low tide ~8:17 AM · Sunrise 6:28 AM",
       "tideEvents": [
         {
           "type": "H",
-          "time": "8:06 PM"
+          "time": "8:42 PM"
         },
         {
           "type": "L",
-          "time": "6:58 AM"
+          "time": "8:17 AM"
         }
       ],
       "waterTemp": 87,
       "sky": "Bright sun",
-      "stormChance": 13,
+      "stormChance": 2,
       "pressure": {
-        "hpa": 1019.5,
-        "inHg": 30.11,
-        "direction": "rising",
-        "changeHpa3h": 2
+        "hpa": 1020.1,
+        "inHg": 30.12,
+        "direction": "falling",
+        "changeHpa3h": -1.1
       }
     }
   },
@@ -70,19 +70,17 @@
       "kind": "archived_app_snapshot",
       "date": "2026-09-15",
       "displayDate": "September 15, 2026",
-      "summary": "The most recent available report (September 4–10, 2026) from Great Days Outdoors, featuring Capt. Blake Nelson of Last Cast Charters, notes the first signs of fall transition across Choctawhatchee Bay, with large concentrations of bait — schools of greenies — pushing from open water into bayous, flats, bridge areas, and rolldowns. Redfish activity on the flats is described as improving and expected to strengthen further as September moves toward October; water temp is 87°F. A Santa Rosa Beach angler report on CaptainExperiences (~Sept 9) logged a 40¼-inch, 26-lb bull redfish alongside solid speckled trout numbers. A Fort Walton Beach captain also posted around the same time noting redfish and trout building in the bay as the season transitions to fall, with redfish expected to be particularly strong. No current flounder, sheepshead, or black drum catches were specifically mentioned in this week's reports, though these species are resident year-round in the bay.",
-      "attribution": "Great Days Outdoors (Northwest Florida Fishing Report), CaptainExperiences.com (Choctawhatchee Bay angler feed) · Auto-refreshed via Claude API",
+      "summary": "The most current verifiable report with Choctawhatchee Bay-specific inshore detail is from the week of September 4–10, 2026 — roughly 10 days old, not this current week. According to Captain Blake Nelson of Last Cast Charters (Choctawhatchee Bay), the bay is showing early signs of the fall transition, with large concentrations of bait — pogies and greenies — moving from open water into bayous, bridge areas, and flats. Bull redfish and jack crevalle are actively feeding on those bait schools around Rocky Bayou, Boggy Bayou, Joe's Bayou, Marler Bayou, and near the East Pass, best targeted on topwater plugs and large swimbaits. Slot reds, speckled trout, and mangrove snapper are holding around grass edges, sandy pockets, docks, and deeper cuts; afternoon thunderstorms have been the primary safety concern for anglers on the bay. Looking ahead, Blake expected the first meaningful slot-redfish push tied to the fall mullet run to begin during the second or third week of September — which aligns with this week — making now a potentially prime transition window. Water temperature at this location is 87°F.",
+      "attribution": "Great Days Outdoors – Northwest Florida Fishing Report (week of Sept 4–10, 2026), featuring Capt. Blake Nelson / Last Cast Charters (Choctawhatchee Bay) · Auto-refreshed via Claude API",
       "sourceIds": [
-        "captain-experiences-destin",
-        "report-aHR0cHM6Ly9ncmVhdG",
-        "report-aHR0cHM6Ly9jYXB0YW"
+        "report-aHR0cHM6Ly9ncmVhdG"
       ],
       "species": [
         "spotted_seatrout",
         "redfish"
       ],
       "conditions": {
-        "wind": "ENE 0 to 5 mph",
+        "wind": "ENE 5 mph",
         "windDir": "ENE",
         "tide": "High tide ~8:06 PM · Low tide ~6:58 AM · Sunrise 6:27 AM",
         "tideEvents": [
@@ -99,10 +97,10 @@
         "sky": "Bright sun",
         "stormChance": 13,
         "pressure": {
-          "hpa": 1016.4,
-          "inHg": 30.01,
-          "direction": "falling",
-          "changeHpa3h": -0.5
+          "hpa": 1019.5,
+          "inHg": 30.11,
+          "direction": "rising",
+          "changeHpa3h": 2
         }
       }
     },
@@ -324,7 +322,7 @@
       "label": "Speckled trout",
       "current": true,
       "reportCount": 9,
-      "lastReported": "2026-09-15",
+      "lastReported": "2026-09-16",
       "evidenceLevel": "current_regional_report"
     },
     {
@@ -332,7 +330,7 @@
       "label": "Redfish",
       "current": true,
       "reportCount": 10,
-      "lastReported": "2026-09-15",
+      "lastReported": "2026-09-16",
       "evidenceLevel": "current_regional_report"
     },
     {
@@ -466,18 +464,18 @@
   "sources": [
     {
       "id": "report-aHR0cHM6Ly9ncmVhdG",
-      "label": "Northwest Florida Fishing Report for September 4–10, 2026",
-      "url": "https://greatdaysoutdoors.com/northwest-florida-fishing-report-for-september-4-10-2026/",
+      "label": "Northwest Florida Fishing Report for August 28 – September 3, 2026",
+      "url": "https://greatdaysoutdoors.com/northwest-florida-fishing-report-for-august-28-september-3-2026/",
       "kind": "regional_report",
-      "reportDate": "2026-09-04",
+      "reportDate": "2026-08-28",
       "note": "Exact source page preserved by the daily bite-report research."
     },
     {
       "id": "report-aHR0cHM6Ly9jYXB0YW",
-      "label": "Boggy Bayou Fishing Reports – CaptainExperiences (Ken C., Fort Walton Beach)",
-      "url": "https://captainexperiences.com/fishing-reports/locations/regions/boggy-bayou",
+      "label": "Choctawhatchee Bay Fishing Reports (August 2026)",
+      "url": "https://captainexperiences.com/fishing-reports/locations/regions/choctawhatchee-bay",
       "kind": "regional_report",
-      "reportDate": "2026-09-08",
+      "reportDate": "2026-08-06",
       "note": "Exact source page preserved by the daily bite-report research."
     },
     {
