@@ -66,13 +66,19 @@ async function callClaude(prompt) {
     },
     body: JSON.stringify({
       model: "claude-sonnet-4-6",
-      max_tokens: 1000,
+      max_tokens: 4000,
       messages: [{ role: "user", content: prompt }],
       tools: [{ type: "web_search_20250305", name: "web_search" }],
     }),
   });
   if (!res.ok) throw new Error(`Anthropic API error: ${res.status} ${await res.text()}`);
   const data = await res.json();
+  // Web search queries and tool-use blocks count toward max_tokens alongside
+  // the final JSON, so an overrun truncates the JSON mid-array and surfaces as
+  // a cryptic "Expected ',' or ']'" parse error instead of naming the cause.
+  if (data.stop_reason === "max_tokens") {
+    throw new Error("Response hit max_tokens before the JSON was complete");
+  }
   // Response may include multiple content blocks (tool use, tool results, text).
   // The final text block is what we want; find it rather than assuming position.
   const textBlocks = data.content.filter((b) => b.type === "text").map((b) => b.text);
