@@ -21,20 +21,22 @@
     "sky": "Bright sun",
     "stormChance": 2,
     "pressure": {
-      "hpa": 1020.1,
-      "inHg": 30.12,
-      "direction": "falling",
-      "changeHpa3h": -1.1
+      "hpa": 1023.1,
+      "inHg": 30.21,
+      "direction": "rising",
+      "changeHpa3h": 1.9
     }
   },
   "currentReport": {
     "kind": "current_regional_report",
     "date": "2026-09-16",
-    "displayDate": "September 15, 2026",
-    "summary": "The most current verifiable report with Choctawhatchee Bay-specific inshore detail is from the week of September 4–10, 2026 — roughly 10 days old, not this current week. According to Captain Blake Nelson of Last Cast Charters (Choctawhatchee Bay), the bay is showing early signs of the fall transition, with large concentrations of bait — pogies and greenies — moving from open water into bayous, bridge areas, and flats. Bull redfish and jack crevalle are actively feeding on those bait schools around Rocky Bayou, Boggy Bayou, Joe's Bayou, Marler Bayou, and near the East Pass, best targeted on topwater plugs and large swimbaits. Slot reds, speckled trout, and mangrove snapper are holding around grass edges, sandy pockets, docks, and deeper cuts; afternoon thunderstorms have been the primary safety concern for anglers on the bay. Looking ahead, Blake expected the first meaningful slot-redfish push tied to the fall mullet run to begin during the second or third week of September — which aligns with this week — making now a potentially prime transition window. Water temperature at this location is 87°F.",
-    "attribution": "Great Days Outdoors – Northwest Florida Fishing Report (week of Sept 4–10, 2026), featuring Capt. Blake Nelson / Last Cast Charters (Choctawhatchee Bay) · Auto-refreshed via Claude API",
+    "displayDate": "September 16, 2026",
+    "summary": "The most recent available report covering Choctawhatchee Bay specifically is from the week of September 4–10, 2026 (about one week old). According to that report, the bay is showing early signs of the fall transition: large schools of baitfish (greenies/menhaden) have moved from open water into bayous, flats, and bridge areas, and the flats redfish bite is described as improving and expected to strengthen further as September progresses toward October. A Santa Rosa Beach angler report posted approximately 6 days ago noted plenty of speckled trout activity and a notable bull redfish catch (a 40¼-inch, 26-lb fish) out of the bay. Water temperature at this location today is 87°F, which continues to push the best redfish and trout action to early mornings and evenings on the flats, with bait concentrations near bridge structures also worth targeting.",
+    "attribution": "greatdaysoutdoors.com (Northwest Florida Fishing Report, Sep 4–10, 2026); captainexperiences.com (Choctawhatchee Bay angler report, ~Sep 10, 2026) · Auto-refreshed via Claude API",
     "sourceIds": [
-      "report-aHR0cHM6Ly9ncmVhdG"
+      "captain-experiences-destin",
+      "report-aHR0cHM6Ly9ncmVhdG",
+      "report-aHR0cHM6Ly9jYXB0YW"
     ],
     "species": [
       "spotted_seatrout",
@@ -58,17 +60,17 @@
       "sky": "Bright sun",
       "stormChance": 2,
       "pressure": {
-        "hpa": 1020.1,
-        "inHg": 30.12,
-        "direction": "falling",
-        "changeHpa3h": -1.1
+        "hpa": 1023.1,
+        "inHg": 30.21,
+        "direction": "rising",
+        "changeHpa3h": 1.9
       }
     }
   },
   "archivedReports": [
     {
       "kind": "archived_app_snapshot",
-      "date": "2026-09-15",
+      "date": "2026-09-16",
       "displayDate": "September 15, 2026",
       "summary": "The most current verifiable report with Choctawhatchee Bay-specific inshore detail is from the week of September 4–10, 2026 — roughly 10 days old, not this current week. According to Captain Blake Nelson of Last Cast Charters (Choctawhatchee Bay), the bay is showing early signs of the fall transition, with large concentrations of bait — pogies and greenies — moving from open water into bayous, bridge areas, and flats. Bull redfish and jack crevalle are actively feeding on those bait schools around Rocky Bayou, Boggy Bayou, Joe's Bayou, Marler Bayou, and near the East Pass, best targeted on topwater plugs and large swimbaits. Slot reds, speckled trout, and mangrove snapper are holding around grass edges, sandy pockets, docks, and deeper cuts; afternoon thunderstorms have been the primary safety concern for anglers on the bay. Looking ahead, Blake expected the first meaningful slot-redfish push tied to the fall mullet run to begin during the second or third week of September — which aligns with this week — making now a potentially prime transition window. Water temperature at this location is 87°F.",
       "attribution": "Great Days Outdoors – Northwest Florida Fishing Report (week of Sept 4–10, 2026), featuring Capt. Blake Nelson / Last Cast Charters (Choctawhatchee Bay) · Auto-refreshed via Claude API",
@@ -80,27 +82,27 @@
         "redfish"
       ],
       "conditions": {
-        "wind": "ENE 5 mph",
+        "wind": "ENE 10 to 15 mph",
         "windDir": "ENE",
-        "tide": "High tide ~8:06 PM · Low tide ~6:58 AM · Sunrise 6:27 AM",
+        "tide": "High tide ~8:42 PM · Low tide ~8:17 AM · Sunrise 6:28 AM",
         "tideEvents": [
           {
             "type": "H",
-            "time": "8:06 PM"
+            "time": "8:42 PM"
           },
           {
             "type": "L",
-            "time": "6:58 AM"
+            "time": "8:17 AM"
           }
         ],
         "waterTemp": 87,
         "sky": "Bright sun",
-        "stormChance": 13,
+        "stormChance": 2,
         "pressure": {
-          "hpa": 1019.5,
-          "inHg": 30.11,
-          "direction": "rising",
-          "changeHpa3h": 2
+          "hpa": 1020.1,
+          "inHg": 30.12,
+          "direction": "falling",
+          "changeHpa3h": -1.1
         }
       }
     },
