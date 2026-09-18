@@ -24,9 +24,9 @@
   "moonPhase": "First Quarter (~46% illuminated) — moderate tidal push",
   "waterClarity": "Slightly stained",
   "sky": "Bright sun",
-  "lastUpdated": "9/18/2026, 3:12:22 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
-  "localBiteReport": "The most current dated report available is the Great Days Outdoors Northwest Florida Fishing Report for September 4–10, 2026 (roughly two weeks ago). According to that report, Choctawhatchee Bay is entering an early fall transition: baitfish schools — primarily greenies and menhaden — are pushing out of open water and concentrating in bayous, flats, bridge areas, and tidal roll-downs, which is steadily improving the bay's overall inshore bite. Capt. Blake Nelson of Last Cast Charters noted that redfish and general flats activity are expected to pick up further as September progresses into October, with slot-sized reds becoming increasingly available. A FishingBooker charter feed entry from Freeport dated August 6, 2026 noted that fish were biting best at first light through about 8:30 a.m. and again in the late afternoon from 5:00 p.m. to dark, with live menhaden on a Carolina rig producing well for redfish. Water temperature at this location is 86°F (same-day measured reading). Note: the most recent field reports found are approximately 1–2 weeks old; no same-week Choctawhatchee Bay inshore reports were located.",
-  "localBiteSource": "Great Days Outdoors (Northwest Florida Fishing Report, Sep 4–10, 2026); FishingBooker Choctawhatchee Bay charter feed (Aug 6, 2026) · Auto-refreshed via Claude API",
+  "lastUpdated": "9/18/2026, 7:56:01 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "localBiteReport": "The most recent available report covering Choctawhatchee Bay specifically is from the week of September 4–10, 2026 — about two weeks old. That report (greatdaysoutdoors.com) describes the bay entering its early fall transition: large schools of baitfish (greenies/pogies) have pushed from open deeper water into bayous, flats, bridge areas, and rolldowns, drawing predators into more accessible positions. Capt. Blake Nelson (Last Cast Charters) noted bull redfish and jack crevalle actively feeding on those bait schools around Boggy Bayou, Rocky Bayou, Joe's Bayou, Marler Bayou, and near the East Pass. Slot-sized redfish were also moving up, and trout plus mangrove snapper were holding around grass edges, sandy pockets, and docks. Looking ahead from that report, the expectation was that the fall mullet run — and with it the first meaningful push of slot redfish — would arrive in the second or third week of September (right about now), making this a prime window to watch flats and drains carefully. Water temperature at this exact location today is 86°F.",
+  "localBiteSource": "greatdaysoutdoors.com (Northwest Florida Fishing Report, featuring Capt. Blake Nelson / Last Cast Charters on Choctawhatchee Bay) · Auto-refreshed via Claude API",
   "localBiteUpdated": "September 18, 2026",
   "localBiteEvidence": [
     {
@@ -35,20 +35,20 @@
       "reportDate": "2026-09-04"
     },
     {
-      "title": "Daily Choctawhatchee Bay Fishing Reports — Choctawhatchee Bay Fishing Charters (FishingBooker)",
-      "url": "https://fishingbooker.com/profile/view/50495",
-      "reportDate": "2026-08-06"
+      "title": "Northwest Florida Fishing Report for August 28 - September 3, 2026",
+      "url": "https://greatdaysoutdoors.com/northwest-florida-fishing-report-for-august-28-september-3-2026/",
+      "reportDate": "2026-08-28"
     }
   ],
   "previousDay": {
-    "date": "Thursday, September 17, 2026",
+    "date": "Friday, September 18, 2026",
     "wind": {
       "dir": "ENE",
-      "speed": 10
+      "speed": 5
     },
-    "high": 90,
-    "stormChance": 0,
-    "tide": "High tide ~9:27 PM · Low tide ~9:44 AM · Sunrise 6:29 AM",
+    "high": 93,
+    "stormChance": 3,
+    "tide": "High tide ~10:23 PM · Low tide ~10:55 AM · Sunrise 6:29 AM",
     "waterTemp": 86
   },
   "openMeteo": [
@@ -56,14 +56,14 @@
       "high": 90,
       "low": 68,
       "stormChance": 2,
-      "windSpeed": 7,
+      "windSpeed": 6,
       "windDir": "NE",
-      "summary": "Clear"
+      "summary": "Overcast"
     },
     {
       "high": 94,
       "low": 71,
-      "stormChance": 22,
+      "stormChance": 13,
       "windSpeed": 9,
       "windDir": "NW",
       "summary": "Overcast"
@@ -74,7 +74,7 @@
       "stormChance": 63,
       "windSpeed": 8,
       "windDir": "S",
-      "summary": "Thunderstorm"
+      "summary": "Drizzle"
     }
   ],
   "forecast": [
@@ -116,7 +116,7 @@
       "storms": 20,
       "headline": "Sunny then Slight Chance Showers And Thunderstorms · Heat index 100",
       "fishingScore": 7.8,
-      "aiCall": "A slight chance of showers and thunderstorms between 4pm and 5pm. Sunny. High near 93, with temperatures falling to around 88 in the afternoon. Heat index values as high as 100. Northeast wind 0 to 5 mph. Chance of precipitation is 20%.",
+      "aiCall": "A slight chance of showers and thunderstorms between 4pm and 5pm. Sunny. High near 93, with temperatures falling to around 88 in the afternoon. Heat index values as high as 100. Northeast wind 0 to 5 mph. Chance of precipitation is 20%. New rainfall amounts less than a tenth of an inch possible.",
       "emoji": "⛈️",
       "tideEvents": [
         {
@@ -142,7 +142,7 @@
       "storms": 66,
       "headline": "Mostly Sunny then Showers And Thunderstorms Likely",
       "fishingScore": 5.9,
-      "aiCall": "Showers and thunderstorms likely after 1pm. Mostly sunny, with a high near 91. Chance of precipitation is 70%.",
+      "aiCall": "Showers and thunderstorms likely after 1pm. Mostly sunny, with a high near 91. Southeast wind 0 to 5 mph. Chance of precipitation is 70%.",
       "emoji": "⛈️",
       "tideEvents": [
         {
@@ -160,18 +160,18 @@
   "dateISO": "2026-09-18",
   "waterTemp": 86,
   "pressure": {
-    "hpa": 1019.4,
-    "inHg": 30.1,
-    "direction": "falling",
-    "changeHpa3h": -1.9
+    "hpa": 1020.7,
+    "inHg": 30.14,
+    "direction": "rising",
+    "changeHpa3h": 0.8
   },
   "speciesSignals": [
     {
       "key": "spotted_seatrout",
       "label": "Speckled trout",
-      "current": false,
-      "reportCount": 7,
-      "lastReported": "2026-08-12"
+      "current": true,
+      "reportCount": 8,
+      "lastReported": "2026-09-18"
     },
     {
       "key": "redfish",
