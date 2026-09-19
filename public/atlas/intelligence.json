@@ -1,67 +1,68 @@
 {
   "type": "FishingIntelligence",
   "region": "choctawhatchee_bay",
-  "generatedAt": "2026-09-18",
+  "generatedAt": "2026-09-19",
   "scopeNote": "Regional reports support timing and species activity only. They do not prove a catch, depth, bottom type, or safe navigation at a mapped Jolly Bay feature.",
   "currentConditions": {
-    "wind": "ENE 5 mph",
-    "windDir": "ENE",
-    "tide": "High tide ~10:23 PM · Low tide ~10:55 AM · Sunrise 6:29 AM",
+    "wind": "NE 0 to 5 mph",
+    "windDir": "NE",
+    "tide": "High tide ~11:32 PM · Low tide ~11:48 AM · Sunrise 6:30 AM",
     "tideEvents": [
       {
         "type": "H",
-        "time": "10:23 PM"
+        "time": "11:32 PM"
       },
       {
         "type": "L",
-        "time": "10:55 AM"
+        "time": "11:48 AM"
       }
     ],
     "waterTemp": 86,
     "sky": "Bright sun",
-    "stormChance": 3,
+    "stormChance": 13,
     "pressure": {
-      "hpa": 1020.7,
-      "inHg": 30.14,
-      "direction": "rising",
-      "changeHpa3h": 0.8
+      "hpa": 1016.5,
+      "inHg": 30.02,
+      "direction": "falling",
+      "changeHpa3h": -0.9
     }
   },
   "currentReport": {
     "kind": "current_regional_report",
-    "date": "2026-09-18",
-    "displayDate": "September 18, 2026",
-    "summary": "The most recent available report covering Choctawhatchee Bay specifically is from the week of September 4–10, 2026 — about two weeks old. That report (greatdaysoutdoors.com) describes the bay entering its early fall transition: large schools of baitfish (greenies/pogies) have pushed from open deeper water into bayous, flats, bridge areas, and rolldowns, drawing predators into more accessible positions. Capt. Blake Nelson (Last Cast Charters) noted bull redfish and jack crevalle actively feeding on those bait schools around Boggy Bayou, Rocky Bayou, Joe's Bayou, Marler Bayou, and near the East Pass. Slot-sized redfish were also moving up, and trout plus mangrove snapper were holding around grass edges, sandy pockets, and docks. Looking ahead from that report, the expectation was that the fall mullet run — and with it the first meaningful push of slot redfish — would arrive in the second or third week of September (right about now), making this a prime window to watch flats and drains carefully. Water temperature at this exact location today is 86°F.",
-    "attribution": "greatdaysoutdoors.com (Northwest Florida Fishing Report, featuring Capt. Blake Nelson / Last Cast Charters on Choctawhatchee Bay) · Auto-refreshed via Claude API",
+    "date": "2026-09-19",
+    "displayDate": "September 19, 2026",
+    "summary": "The fall transition is underway on Choctawhatchee Bay as of this week (September 18–24, 2026). Water temperature is 86°F. Capt. Adam Schroeder of Ignite The Bite Charters in Destin reports that bait is now abundant throughout the bay, and that abundance is directly fueling the best inshore bite he has seen all year — redfish, trout, and flounder are all active and accessible. Redfish are the standout species, with slot fish and larger bulls spread from the Destin pass through the main bay system; live scaled sardines, shrimp, and croakers around structure are the top presentations, with the bite heavily influenced by tide movement. Trout and flounder are also in the mix, and anglers should plan trips around tidal windows — fish may sit on structure for hours before turning on for a short, productive feeding window when the current hits the right stage.",
+    "attribution": "Great Days Outdoors — Northwest Florida Fishing Report (September 18–24, 2026) · Auto-refreshed via Claude API",
     "sourceIds": [
       "report-aHR0cHM6Ly9ncmVhdG"
     ],
     "species": [
       "spotted_seatrout",
-      "redfish"
+      "redfish",
+      "gulf_flounder"
     ],
     "conditions": {
-      "wind": "ENE 5 mph",
-      "windDir": "ENE",
-      "tide": "High tide ~10:23 PM · Low tide ~10:55 AM · Sunrise 6:29 AM",
+      "wind": "NE 0 to 5 mph",
+      "windDir": "NE",
+      "tide": "High tide ~11:32 PM · Low tide ~11:48 AM · Sunrise 6:30 AM",
       "tideEvents": [
         {
           "type": "H",
-          "time": "10:23 PM"
+          "time": "11:32 PM"
         },
         {
           "type": "L",
-          "time": "10:55 AM"
+          "time": "11:48 AM"
         }
       ],
       "waterTemp": 86,
       "sky": "Bright sun",
-      "stormChance": 3,
+      "stormChance": 13,
       "pressure": {
-        "hpa": 1020.7,
-        "inHg": 30.14,
-        "direction": "rising",
-        "changeHpa3h": 0.8
+        "hpa": 1016.5,
+        "inHg": 30.02,
+        "direction": "falling",
+        "changeHpa3h": -0.9
       }
     }
   },
@@ -70,14 +71,13 @@
       "kind": "archived_app_snapshot",
       "date": "2026-09-18",
       "displayDate": "September 18, 2026",
-      "summary": "The most current dated report available is the Great Days Outdoors Northwest Florida Fishing Report for September 4–10, 2026 (roughly two weeks ago). According to that report, Choctawhatchee Bay is entering an early fall transition: baitfish schools — primarily greenies and menhaden — are pushing out of open water and concentrating in bayous, flats, bridge areas, and tidal roll-downs, which is steadily improving the bay's overall inshore bite. Capt. Blake Nelson of Last Cast Charters noted that redfish and general flats activity are expected to pick up further as September progresses into October, with slot-sized reds becoming increasingly available. A FishingBooker charter feed entry from Freeport dated August 6, 2026 noted that fish were biting best at first light through about 8:30 a.m. and again in the late afternoon from 5:00 p.m. to dark, with live menhaden on a Carolina rig producing well for redfish. Water temperature at this location is 86°F (same-day measured reading). Note: the most recent field reports found are approximately 1–2 weeks old; no same-week Choctawhatchee Bay inshore reports were located.",
-      "attribution": "Great Days Outdoors (Northwest Florida Fishing Report, Sep 4–10, 2026); FishingBooker Choctawhatchee Bay charter feed (Aug 6, 2026) · Auto-refreshed via Claude API",
+      "summary": "The most recent available report covering Choctawhatchee Bay specifically is from the week of September 4–10, 2026 — about two weeks old. That report (greatdaysoutdoors.com) describes the bay entering its early fall transition: large schools of baitfish (greenies/pogies) have pushed from open deeper water into bayous, flats, bridge areas, and rolldowns, drawing predators into more accessible positions. Capt. Blake Nelson (Last Cast Charters) noted bull redfish and jack crevalle actively feeding on those bait schools around Boggy Bayou, Rocky Bayou, Joe's Bayou, Marler Bayou, and near the East Pass. Slot-sized redfish were also moving up, and trout plus mangrove snapper were holding around grass edges, sandy pockets, and docks. Looking ahead from that report, the expectation was that the fall mullet run — and with it the first meaningful push of slot redfish — would arrive in the second or third week of September (right about now), making this a prime window to watch flats and drains carefully. Water temperature at this exact location today is 86°F.",
+      "attribution": "greatdaysoutdoors.com (Northwest Florida Fishing Report, featuring Capt. Blake Nelson / Last Cast Charters on Choctawhatchee Bay) · Auto-refreshed via Claude API",
       "sourceIds": [
-        "fishingbooker-bay",
-        "report-aHR0cHM6Ly9ncmVhdG",
-        "report-aHR0cHM6Ly9maXNoaW"
+        "report-aHR0cHM6Ly9ncmVhdG"
       ],
       "species": [
+        "spotted_seatrout",
         "redfish"
       ],
       "conditions": {
@@ -98,10 +98,10 @@
         "sky": "Bright sun",
         "stormChance": 3,
         "pressure": {
-          "hpa": 1019.4,
-          "inHg": 30.1,
-          "direction": "falling",
-          "changeHpa3h": -1.9
+          "hpa": 1020.7,
+          "inHg": 30.14,
+          "direction": "rising",
+          "changeHpa3h": 0.8
         }
       }
     },
@@ -322,8 +322,8 @@
       "key": "spotted_seatrout",
       "label": "Speckled trout",
       "current": true,
-      "reportCount": 8,
-      "lastReported": "2026-09-18",
+      "reportCount": 9,
+      "lastReported": "2026-09-19",
       "evidenceLevel": "current_regional_report"
     },
     {
@@ -331,16 +331,16 @@
       "label": "Redfish",
       "current": true,
       "reportCount": 10,
-      "lastReported": "2026-09-18",
+      "lastReported": "2026-09-19",
       "evidenceLevel": "current_regional_report"
     },
     {
       "key": "gulf_flounder",
       "label": "Flounder",
-      "current": false,
-      "reportCount": 3,
-      "lastReported": "2026-07-28",
-      "evidenceLevel": "archived_regional_report"
+      "current": true,
+      "reportCount": 4,
+      "lastReported": "2026-09-19",
+      "evidenceLevel": "current_regional_report"
     },
     {
       "key": "black_drum",
@@ -465,10 +465,10 @@
   "sources": [
     {
       "id": "report-aHR0cHM6Ly9ncmVhdG",
-      "label": "Northwest Florida Fishing Report for September 4 - 10, 2026",
-      "url": "https://greatdaysoutdoors.com/northwest-florida-fishing-report-for-september-4-10-2026/",
+      "label": "Northwest Florida Fishing Report for August 28 - September 3, 2026",
+      "url": "https://greatdaysoutdoors.com/northwest-florida-fishing-report-for-august-28-september-3-2026/",
       "kind": "regional_report",
-      "reportDate": "2026-09-04",
+      "reportDate": "2026-08-28",
       "note": "Exact source page preserved by the daily bite-report research."
     },
     {
@@ -492,14 +492,6 @@
       "url": "https://halfhitch.com/blog/destin-fishing-report-7-13-26",
       "kind": "regional_report",
       "reportDate": "2026-07-13",
-      "note": "Exact source page preserved by the daily bite-report research."
-    },
-    {
-      "id": "report-aHR0cHM6Ly9maXNoaW",
-      "label": "Daily Choctawhatchee Bay Fishing Reports — Choctawhatchee Bay Fishing Charters (FishingBooker)",
-      "url": "https://fishingbooker.com/profile/view/50495",
-      "kind": "regional_report",
-      "reportDate": "2026-08-06",
       "note": "Exact source page preserved by the daily bite-report research."
     },
     {
