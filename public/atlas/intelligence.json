@@ -4,8 +4,8 @@
   "generatedAt": "2026-09-20",
   "scopeNote": "Regional reports support timing and species activity only. They do not prove a catch, depth, bottom type, or safe navigation at a mapped Jolly Bay feature.",
   "currentConditions": {
-    "wind": "NNW 0 to 5 mph",
-    "windDir": "NNW",
+    "wind": "NW 0 to 5 mph",
+    "windDir": "NW",
     "tide": "High tide ~12:47 AM · Low tide ~12:28 PM · Sunrise 6:30 AM",
     "tideEvents": [
       {
@@ -21,18 +21,18 @@
     "sky": "Cloudy",
     "stormChance": 55,
     "pressure": {
-      "hpa": 1013.6,
-      "inHg": 29.93,
-      "direction": "falling",
-      "changeHpa3h": -1.4
+      "hpa": 1016.3,
+      "inHg": 30.01,
+      "direction": "rising",
+      "changeHpa3h": 2.5
     }
   },
   "currentReport": {
     "kind": "current_regional_report",
     "date": "2026-09-20",
     "displayDate": "September 20, 2026",
-    "summary": "The inshore bite around Destin and Choctawhatchee Bay is in excellent shape this week, with local guide Capt. Adam Schroeder calling it one of the best of the year. Bait is now easy to find early in the morning, and that abundance is driving solid action on redfish, flounder, and trout, with both slot-sized and bull reds biting well around bridges and structure on an outgoing tide. Live croakers and spot minnows are the go-to for bigger redfish near the Destin and Brooks bridges, while flounder are mixing in on the same structure-focused live-bait presentations. Water temperature is 86°F. Flounder season closes October 15, so now is a good window to target them before the fall closure.",
-    "attribution": "Great Days Outdoors – Northwest Florida Fishing Report (September 18–24, 2026) · Auto-refreshed via Claude API",
+    "summary": "The most current report available (week of September 18–24, 2026) from Great Days Outdoors describes an early-fall inshore fishing window around Destin and Choctawhatchee Bay that local guides are calling one of the best of the year. Redfish are the standout bite, with slot fish and oversized bulls spread from Destin Pass across Santa Rosa Sound and the main bay system; live scaled sardines, shrimp, and croakers are all producing, especially around structure and bridge pilings on moving tides. Flounder and speckled trout are also showing up consistently alongside the reds, with abundant baitfish in the bay credited for the broad inshore improvement. Water temperature at this location reads 86°F. The fall transition appears to be accelerating — expect the mullet run and associated redfish activity to build further through late September into October.",
+    "attribution": "Great Days Outdoors – Northwest Florida Fishing Report (September 18–24, 2026), featuring Capt. Adam Schroeder (Ignite The Bite Charters, Destin) and Capt. Tyler Massey (Hot Spots Charters, Pensacola) · Auto-refreshed via Claude API",
     "sourceIds": [
       "report-aHR0cHM6Ly9ncmVhdG"
     ],
@@ -42,8 +42,8 @@
       "gulf_flounder"
     ],
     "conditions": {
-      "wind": "NNW 0 to 5 mph",
-      "windDir": "NNW",
+      "wind": "NW 0 to 5 mph",
+      "windDir": "NW",
       "tide": "High tide ~12:47 AM · Low tide ~12:28 PM · Sunrise 6:30 AM",
       "tideEvents": [
         {
@@ -59,20 +59,20 @@
       "sky": "Cloudy",
       "stormChance": 55,
       "pressure": {
-        "hpa": 1013.6,
-        "inHg": 29.93,
-        "direction": "falling",
-        "changeHpa3h": -1.4
+        "hpa": 1016.3,
+        "inHg": 30.01,
+        "direction": "rising",
+        "changeHpa3h": 2.5
       }
     }
   },
   "archivedReports": [
     {
       "kind": "archived_app_snapshot",
-      "date": "2026-09-19",
-      "displayDate": "September 19, 2026",
-      "summary": "The most current report covering Choctawhatchee Bay and the Destin area (dated September 18–24, 2026, published within the last 24 hours) shows a strong fall transition underway. Around Destin, an abundance of bait in the bay is fueling solid action on redfish, flounder, and trout, with local guide Capt. Adam Schroeder calling the inshore bite one of the best he's seen all year. Redfish are the standout species, with slot fish and oversized bulls spread from Destin Pass into the main bay; live scaled sardines, shrimp, and croakers are the top baits, and tidal movement around structure is the key timing factor. Trout and flounder are also actively feeding alongside the redfish, and the fall bait migration is still building — conditions should hold or improve in the coming weeks. Water temperature at this location is currently 86°F.",
-      "attribution": "greatdaysoutdoors.com (Northwest Florida Fishing Report, September 18–24, 2026) · Auto-refreshed via Claude API",
+      "date": "2026-09-20",
+      "displayDate": "September 20, 2026",
+      "summary": "The inshore bite around Destin and Choctawhatchee Bay is in excellent shape this week, with local guide Capt. Adam Schroeder calling it one of the best of the year. Bait is now easy to find early in the morning, and that abundance is driving solid action on redfish, flounder, and trout, with both slot-sized and bull reds biting well around bridges and structure on an outgoing tide. Live croakers and spot minnows are the go-to for bigger redfish near the Destin and Brooks bridges, while flounder are mixing in on the same structure-focused live-bait presentations. Water temperature is 86°F. Flounder season closes October 15, so now is a good window to target them before the fall closure.",
+      "attribution": "Great Days Outdoors – Northwest Florida Fishing Report (September 18–24, 2026) · Auto-refreshed via Claude API",
       "sourceIds": [
         "report-aHR0cHM6Ly9ncmVhdG"
       ],
@@ -82,27 +82,27 @@
         "gulf_flounder"
       ],
       "conditions": {
-        "wind": "ENE 0 to 5 mph",
-        "windDir": "ENE",
-        "tide": "High tide ~11:32 PM · Low tide ~11:48 AM · Sunrise 6:30 AM",
+        "wind": "NNW 0 to 5 mph",
+        "windDir": "NNW",
+        "tide": "High tide ~12:47 AM · Low tide ~12:28 PM · Sunrise 6:30 AM",
         "tideEvents": [
           {
             "type": "H",
-            "time": "11:32 PM"
+            "time": "12:47 AM"
           },
           {
             "type": "L",
-            "time": "11:48 AM"
+            "time": "12:28 PM"
           }
         ],
         "waterTemp": 86,
-        "sky": "Bright sun",
-        "stormChance": 13,
+        "sky": "Cloudy",
+        "stormChance": 55,
         "pressure": {
-          "hpa": 1016.1,
-          "inHg": 30.01,
-          "direction": "rising",
-          "changeHpa3h": 0.5
+          "hpa": 1013.6,
+          "inHg": 29.93,
+          "direction": "falling",
+          "changeHpa3h": -1.4
         }
       }
     },
