@@ -2,10 +2,10 @@
   "date": "Monday, September 21, 2026",
   "wind": {
     "speed": 5,
-    "dir": "E",
-    "description": "E 0 to 5 mph"
+    "dir": "SSE",
+    "description": "SSE 5 mph"
   },
-  "weather": "Sunny then Chance Showers And Thunderstorms · High 90°F",
+  "weather": "Mostly Sunny then Chance Showers And Thunderstorms · High 90°F",
   "tide": "High tide ~1:53 AM · Low tide ~1:00 PM · Sunrise 6:31 AM",
   "tideEvents": [
     {
@@ -24,8 +24,8 @@
   "moonPhase": "Waxing Gibbous (~76% illuminated) — moderate tidal push",
   "waterClarity": "Slightly stained",
   "sky": "Cloudy",
-  "lastUpdated": "9/21/2026, 3:12:16 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
-  "localBiteReport": "The week of September 18–24, 2026 is shaping up to be one of the better inshore windows of the year around Destin and Choctawhatchee Bay. Redfish are the star of the show right now — slot fish and oversized bulls are spread from the East Pass all the way into Santa Rosa Sound and the main bay, with live bait (scaled sardines, live shrimp, and croakers) working best around moving water and structure. Bait has become abundant and easy to catch in the area, and that bait presence is directly translating into improved action for trout and flounder alongside the reds. Capt. Adam Schroeder (Ignite the Bite Charters, Destin) called the current inshore bite one of the best he has seen all year. Water temp today at this location is 86°F — still warm, but the early-fall transition is underway and conditions should continue to improve through October.",
+  "lastUpdated": "9/21/2026, 10:04:01 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "localBiteReport": "The fall transition is underway on Choctawhatchee Bay and the Destin inshore fishery as of the week of September 18–24, 2026. Redfish are the standout bite right now, with slot fish and oversized bulls spread from the pass throughout Santa Rosa Sound and into the main bay system. An abundance of bait has made catching easier and is directly fueling the action for redfish, flounder, and speckled trout around the Destin area — one local guide describes the inshore bite as among the best he has seen all year. Water temperature is 86°F. Early-morning trips are recommended to beat heat-related midday slowdowns, and tidal movement remains critical for consistent results on all inshore species.",
   "localBiteSource": "Great Days Outdoors – Northwest Florida Fishing Report (September 18–24, 2026) · Auto-refreshed via Claude API",
   "localBiteUpdated": "September 21, 2026",
   "localBiteEvidence": [
@@ -36,40 +36,40 @@
     }
   ],
   "previousDay": {
-    "date": "Sunday, September 20, 2026",
+    "date": "Monday, September 21, 2026",
     "wind": {
-      "dir": "NW",
+      "dir": "E",
       "speed": 5
     },
-    "high": 91,
-    "stormChance": 55,
-    "tide": "High tide ~12:47 AM · Low tide ~12:28 PM · Sunrise 6:30 AM",
+    "high": 90,
+    "stormChance": 46,
+    "tide": "High tide ~1:53 AM · Low tide ~1:00 PM · Sunrise 6:31 AM",
     "waterTemp": 86
   },
   "openMeteo": [
     {
-      "high": 88,
-      "low": 70,
+      "high": 89,
+      "low": 71,
       "stormChance": 15,
-      "windSpeed": 6,
+      "windSpeed": 5,
       "windDir": "NE",
       "summary": "Overcast"
     },
     {
       "high": 92,
-      "low": 73,
-      "stormChance": 23,
-      "windSpeed": 9,
+      "low": 74,
+      "stormChance": 11,
+      "windSpeed": 10,
       "windDir": "NW",
       "summary": "Overcast"
     },
     {
       "high": 94,
       "low": 73,
-      "stormChance": 16,
-      "windSpeed": 8,
-      "windDir": "NE",
-      "summary": "Light drizzle"
+      "stormChance": 13,
+      "windSpeed": 7,
+      "windDir": "E",
+      "summary": "Heavy drizzle"
     }
   ],
   "forecast": [
@@ -79,13 +79,13 @@
       "label": "Today",
       "high": 90,
       "low": null,
-      "wind": "E 0 to 5 mph",
+      "wind": "SSE 5 mph",
       "windSpeed": 5,
-      "windDir": "E",
+      "windDir": "SSE",
       "storms": 46,
-      "headline": "Sunny then Chance Showers And Thunderstorms",
+      "headline": "Mostly Sunny then Chance Showers And Thunderstorms",
       "fishingScore": 6.7,
-      "aiCall": "A chance of showers and thunderstorms between 1pm and 3pm, then a chance of showers and thunderstorms between 3pm and 4pm, then a chance of showers and thunderstorms. Sunny. High near 90, with temperatures falling to around 87 in the afternoon. East wind 0 to 5 mph. Chance of precipitation is 50%. New rainfall amounts less than a tenth of an inch possible.",
+      "aiCall": "A chance of showers and thunderstorms between 1pm and 3pm, then a chance of showers and thunderstorms between 3pm and 4pm, then a chance of showers and thunderstorms. Mostly sunny. High near 90, with temperatures falling to around 87 in the afternoon. South southeast wind around 5 mph. Chance of precipitation is 50%. New rainfall amounts less than a tenth of an inch possible.",
       "emoji": "⛈️",
       "tideEvents": [
         {
@@ -111,7 +111,7 @@
       "storms": 28,
       "headline": "Mostly Sunny then Chance Showers And Thunderstorms · Heat index 100",
       "fishingScore": 7.4,
-      "aiCall": "A slight chance of rain showers between 1pm and 4pm, then a chance of showers and thunderstorms. Mostly sunny. High near 91, with temperatures falling to around 88 in the afternoon. Heat index values as high as 100. South southeast wind 0 to 5 mph. Chance of precipitation is 30%.",
+      "aiCall": "A slight chance of rain showers between 1pm and 4pm, then a chance of showers and thunderstorms. Mostly sunny. High near 91, with temperatures falling to around 88 in the afternoon. Heat index values as high as 100. South southeast wind 0 to 5 mph. Chance of precipitation is 30%. New rainfall amounts less than a tenth of an inch possible.",
       "emoji": "⛈️",
       "tideEvents": [
         {
@@ -137,7 +137,7 @@
       "storms": 25,
       "headline": "Sunny then Chance Showers And Thunderstorms",
       "fishingScore": 7.5,
-      "aiCall": "A chance of showers and thunderstorms after 1pm. Sunny, with a high near 92. Chance of precipitation is 30%.",
+      "aiCall": "A chance of showers and thunderstorms after 1pm. Sunny, with a high near 92. East northeast wind 0 to 5 mph. Chance of precipitation is 30%.",
       "emoji": "⛈️",
       "tideEvents": [
         {
@@ -155,10 +155,10 @@
   "dateISO": "2026-09-21",
   "waterTemp": 86,
   "pressure": {
-    "hpa": 1013.3,
+    "hpa": 1013.2,
     "inHg": 29.92,
-    "direction": "steady",
-    "changeHpa3h": -0.3
+    "direction": "falling",
+    "changeHpa3h": -0.7
   },
   "speciesSignals": [
     {
