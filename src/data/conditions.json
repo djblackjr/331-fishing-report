@@ -1,33 +1,33 @@
 {
-  "date": "Monday, September 21, 2026",
+  "date": "Tuesday, September 22, 2026",
   "wind": {
     "speed": 5,
-    "dir": "SSE",
-    "description": "SSE 5 mph"
+    "dir": "ENE",
+    "description": "ENE 0 to 5 mph"
   },
-  "weather": "Mostly Sunny then Chance Showers And Thunderstorms · High 90°F",
-  "tide": "High tide ~1:53 AM · Low tide ~1:00 PM · Sunrise 6:31 AM",
+  "weather": "Mostly Sunny then Slight Chance Showers And Thunderstorms · High 91°F · Heat index up to 101°F",
+  "tide": "High tide ~2:49 AM · Low tide ~1:25 PM · Sunrise 6:31 AM",
   "tideEvents": [
     {
       "type": "H",
-      "time": "1:53 AM"
+      "time": "2:49 AM"
     },
     {
       "type": "L",
-      "time": "1:00 PM"
+      "time": "1:25 PM"
     }
   ],
   "sunrise": "6:31 AM",
-  "sunset": "6:43 PM",
-  "stormWindow": "after 11AM",
-  "stormChance": 46,
-  "moonPhase": "Waxing Gibbous (~76% illuminated) — moderate tidal push",
+  "sunset": "6:42 PM",
+  "stormWindow": "after 1PM",
+  "stormChance": 21,
+  "moonPhase": "Waxing Gibbous (~85% illuminated) — strong tidal push (spring tide)",
   "waterClarity": "Slightly stained",
   "sky": "Cloudy",
-  "lastUpdated": "9/21/2026, 10:04:01 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
-  "localBiteReport": "The fall transition is underway on Choctawhatchee Bay and the Destin inshore fishery as of the week of September 18–24, 2026. Redfish are the standout bite right now, with slot fish and oversized bulls spread from the pass throughout Santa Rosa Sound and into the main bay system. An abundance of bait has made catching easier and is directly fueling the action for redfish, flounder, and speckled trout around the Destin area — one local guide describes the inshore bite as among the best he has seen all year. Water temperature is 86°F. Early-morning trips are recommended to beat heat-related midday slowdowns, and tidal movement remains critical for consistent results on all inshore species.",
-  "localBiteSource": "Great Days Outdoors – Northwest Florida Fishing Report (September 18–24, 2026) · Auto-refreshed via Claude API",
-  "localBiteUpdated": "September 21, 2026",
+  "lastUpdated": "9/22/2026, 3:12:15 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "localBiteReport": "The week of September 18–24, 2026 is shaping up as one of the better early-fall inshore windows in recent memory around the Destin/Choctawhatchee Bay area. Redfish are the standout species, with slot fish and oversized reds spread from the East Pass into the main bay system; local guides are leaning on live scaled sardines, shrimp, and croakers fished around structure, with the bite heavily tide-dependent. Flounder and speckled trout are also showing up alongside the reds, and an abundance of bait moving through the bay is credited with fueling that broader inshore improvement. Water temp today is 86°F. Note that flounder harvest closes October 15, so the next few weeks are a good window to target them before the closure.",
+  "localBiteSource": "Great Days Outdoors (Northwest Florida Fishing Report, Sept 18–24 2026 edition featuring Capt. Adam Schroeder / Ignite the Bite Charters out of Destin) · Auto-refreshed via Claude API",
+  "localBiteUpdated": "September 22, 2026",
   "localBiteEvidence": [
     {
       "title": "Northwest Florida Fishing Report for September 18 – 24, 2026",
@@ -38,7 +38,7 @@
   "previousDay": {
     "date": "Monday, September 21, 2026",
     "wind": {
-      "dir": "E",
+      "dir": "SSE",
       "speed": 5
     },
     "high": 90,
@@ -48,70 +48,44 @@
   },
   "openMeteo": [
     {
-      "high": 89,
-      "low": 71,
-      "stormChance": 15,
+      "high": 90,
+      "low": 74,
+      "stormChance": 12,
       "windSpeed": 5,
       "windDir": "NE",
       "summary": "Overcast"
     },
     {
       "high": 92,
-      "low": 74,
-      "stormChance": 11,
-      "windSpeed": 10,
-      "windDir": "NW",
-      "summary": "Overcast"
+      "low": 75,
+      "stormChance": 9,
+      "windSpeed": 7,
+      "windDir": "NE",
+      "summary": "Light drizzle"
     },
     {
-      "high": 94,
-      "low": 73,
-      "stormChance": 13,
-      "windSpeed": 7,
-      "windDir": "E",
-      "summary": "Heavy drizzle"
+      "high": 89,
+      "low": 71,
+      "stormChance": 14,
+      "windSpeed": 12,
+      "windDir": "NE",
+      "summary": "Overcast"
     }
   ],
   "forecast": [
     {
-      "day": "Mon, Sep 21",
-      "dateISO": "2026-09-21",
-      "label": "Today",
-      "high": 90,
-      "low": null,
-      "wind": "SSE 5 mph",
-      "windSpeed": 5,
-      "windDir": "SSE",
-      "storms": 46,
-      "headline": "Mostly Sunny then Chance Showers And Thunderstorms",
-      "fishingScore": 6.7,
-      "aiCall": "A chance of showers and thunderstorms between 1pm and 3pm, then a chance of showers and thunderstorms between 3pm and 4pm, then a chance of showers and thunderstorms. Mostly sunny. High near 90, with temperatures falling to around 87 in the afternoon. South southeast wind around 5 mph. Chance of precipitation is 50%. New rainfall amounts less than a tenth of an inch possible.",
-      "emoji": "⛈️",
-      "tideEvents": [
-        {
-          "type": "H",
-          "time": "1:53 AM"
-        },
-        {
-          "type": "L",
-          "time": "1:00 PM"
-        }
-      ],
-      "moonPhase": "Waxing Gibbous (~76% illuminated) — moderate tidal push"
-    },
-    {
       "day": "Tue, Sep 22",
       "dateISO": "2026-09-22",
-      "label": "Tomorrow",
+      "label": "Today",
       "high": 91,
       "low": null,
-      "wind": "SSE 0 to 5 mph",
+      "wind": "ENE 0 to 5 mph",
       "windSpeed": 5,
-      "windDir": "SSE",
-      "storms": 28,
-      "headline": "Mostly Sunny then Chance Showers And Thunderstorms · Heat index 100",
-      "fishingScore": 7.4,
-      "aiCall": "A slight chance of rain showers between 1pm and 4pm, then a chance of showers and thunderstorms. Mostly sunny. High near 91, with temperatures falling to around 88 in the afternoon. Heat index values as high as 100. South southeast wind 0 to 5 mph. Chance of precipitation is 30%. New rainfall amounts less than a tenth of an inch possible.",
+      "windDir": "ENE",
+      "storms": 21,
+      "headline": "Mostly Sunny then Slight Chance Showers And Thunderstorms · Heat index 101",
+      "fishingScore": 7.7,
+      "aiCall": "A slight chance of showers and thunderstorms after 1pm. Mostly sunny. High near 91, with temperatures falling to around 88 in the afternoon. Heat index values as high as 101. East northeast wind 0 to 5 mph. Chance of precipitation is 20%.",
       "emoji": "⛈️",
       "tideEvents": [
         {
@@ -128,17 +102,17 @@
     {
       "day": "Wed, Sep 23",
       "dateISO": "2026-09-23",
-      "label": "Wednesday",
+      "label": "Tomorrow",
       "high": 92,
       "low": null,
-      "wind": "ENE 0 to 5 mph",
+      "wind": "NE 0 to 5 mph",
       "windSpeed": 5,
-      "windDir": "ENE",
-      "storms": 25,
-      "headline": "Sunny then Chance Showers And Thunderstorms",
-      "fishingScore": 7.5,
-      "aiCall": "A chance of showers and thunderstorms after 1pm. Sunny, with a high near 92. East northeast wind 0 to 5 mph. Chance of precipitation is 30%.",
-      "emoji": "⛈️",
+      "windDir": "NE",
+      "storms": 12,
+      "headline": "Sunny · Heat index 101",
+      "fishingScore": 8.5,
+      "aiCall": "Sunny. High near 92, with temperatures falling to around 89 in the afternoon. Heat index values as high as 101. Northeast wind 0 to 5 mph.",
+      "emoji": "☀️",
       "tideEvents": [
         {
           "type": "H",
@@ -150,15 +124,41 @@
         }
       ],
       "moonPhase": "Waxing Gibbous (~91% illuminated) — strong tidal push (spring tide)"
+    },
+    {
+      "day": "Thu, Sep 24",
+      "dateISO": "2026-09-24",
+      "label": "Thursday",
+      "high": 88,
+      "low": null,
+      "wind": "NE 5 to 10 mph",
+      "windSpeed": 10,
+      "windDir": "NE",
+      "storms": 13,
+      "headline": "Sunny",
+      "fishingScore": 8.5,
+      "aiCall": "Sunny, with a high near 88.",
+      "emoji": "☀️",
+      "tideEvents": [
+        {
+          "type": "H",
+          "time": "4:47 AM"
+        },
+        {
+          "type": "L",
+          "time": "1:48 PM"
+        }
+      ],
+      "moonPhase": "Full Moon (~96% illuminated) — strong tidal push (spring tide)"
     }
   ],
-  "dateISO": "2026-09-21",
+  "dateISO": "2026-09-22",
   "waterTemp": 86,
   "pressure": {
-    "hpa": 1013.2,
-    "inHg": 29.92,
+    "hpa": 1012.5,
+    "inHg": 29.9,
     "direction": "falling",
-    "changeHpa3h": -0.7
+    "changeHpa3h": -1.1
   },
   "speciesSignals": [
     {
@@ -166,21 +166,21 @@
       "label": "Speckled trout",
       "current": true,
       "reportCount": 9,
-      "lastReported": "2026-09-21"
+      "lastReported": "2026-09-22"
     },
     {
       "key": "redfish",
       "label": "Redfish",
       "current": true,
       "reportCount": 10,
-      "lastReported": "2026-09-21"
+      "lastReported": "2026-09-22"
     },
     {
       "key": "gulf_flounder",
       "label": "Flounder",
       "current": true,
       "reportCount": 5,
-      "lastReported": "2026-09-21"
+      "lastReported": "2026-09-22"
     },
     {
       "key": "black_drum",
@@ -201,25 +201,25 @@
     "majors": [
       {
         "type": "underfoot",
-        "peak": "8:45 AM",
-        "window": "7:45 AM–9:45 AM"
+        "peak": "9:35 AM",
+        "window": "8:35 AM–10:35 AM"
       },
       {
         "type": "overhead",
-        "peak": "9:15 PM",
-        "window": "8:15 PM–10:15 PM"
+        "peak": "10:00 PM",
+        "window": "9:00 PM–11:00 PM"
       }
     ],
     "minors": [
       {
         "type": "moonset",
-        "peak": "1:30 AM",
-        "window": "1:00 AM–2:00 AM"
+        "peak": "2:30 AM",
+        "window": "2:00 AM–3:00 AM"
       },
       {
         "type": "moonrise",
-        "peak": "4:00 PM",
-        "window": "3:30 PM–4:30 PM"
+        "peak": "4:35 PM",
+        "window": "4:05 PM–5:05 PM"
       }
     ]
   }

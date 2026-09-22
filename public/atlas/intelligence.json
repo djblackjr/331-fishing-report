@@ -1,38 +1,38 @@
 {
   "type": "FishingIntelligence",
   "region": "choctawhatchee_bay",
-  "generatedAt": "2026-09-21",
+  "generatedAt": "2026-09-22",
   "scopeNote": "Regional reports support timing and species activity only. They do not prove a catch, depth, bottom type, or safe navigation at a mapped Jolly Bay feature.",
   "currentConditions": {
-    "wind": "SSE 5 mph",
-    "windDir": "SSE",
-    "tide": "High tide ~1:53 AM · Low tide ~1:00 PM · Sunrise 6:31 AM",
+    "wind": "ENE 0 to 5 mph",
+    "windDir": "ENE",
+    "tide": "High tide ~2:49 AM · Low tide ~1:25 PM · Sunrise 6:31 AM",
     "tideEvents": [
       {
         "type": "H",
-        "time": "1:53 AM"
+        "time": "2:49 AM"
       },
       {
         "type": "L",
-        "time": "1:00 PM"
+        "time": "1:25 PM"
       }
     ],
     "waterTemp": 86,
     "sky": "Cloudy",
-    "stormChance": 46,
+    "stormChance": 21,
     "pressure": {
-      "hpa": 1013.2,
-      "inHg": 29.92,
+      "hpa": 1012.5,
+      "inHg": 29.9,
       "direction": "falling",
-      "changeHpa3h": -0.7
+      "changeHpa3h": -1.1
     }
   },
   "currentReport": {
     "kind": "current_regional_report",
-    "date": "2026-09-21",
-    "displayDate": "September 21, 2026",
-    "summary": "The fall transition is underway on Choctawhatchee Bay and the Destin inshore fishery as of the week of September 18–24, 2026. Redfish are the standout bite right now, with slot fish and oversized bulls spread from the pass throughout Santa Rosa Sound and into the main bay system. An abundance of bait has made catching easier and is directly fueling the action for redfish, flounder, and speckled trout around the Destin area — one local guide describes the inshore bite as among the best he has seen all year. Water temperature is 86°F. Early-morning trips are recommended to beat heat-related midday slowdowns, and tidal movement remains critical for consistent results on all inshore species.",
-    "attribution": "Great Days Outdoors – Northwest Florida Fishing Report (September 18–24, 2026) · Auto-refreshed via Claude API",
+    "date": "2026-09-22",
+    "displayDate": "September 22, 2026",
+    "summary": "The week of September 18–24, 2026 is shaping up as one of the better early-fall inshore windows in recent memory around the Destin/Choctawhatchee Bay area. Redfish are the standout species, with slot fish and oversized reds spread from the East Pass into the main bay system; local guides are leaning on live scaled sardines, shrimp, and croakers fished around structure, with the bite heavily tide-dependent. Flounder and speckled trout are also showing up alongside the reds, and an abundance of bait moving through the bay is credited with fueling that broader inshore improvement. Water temp today is 86°F. Note that flounder harvest closes October 15, so the next few weeks are a good window to target them before the closure.",
+    "attribution": "Great Days Outdoors (Northwest Florida Fishing Report, Sept 18–24 2026 edition featuring Capt. Adam Schroeder / Ignite the Bite Charters out of Destin) · Auto-refreshed via Claude API",
     "sourceIds": [
       "report-aHR0cHM6Ly9ncmVhdG"
     ],
@@ -42,27 +42,27 @@
       "gulf_flounder"
     ],
     "conditions": {
-      "wind": "SSE 5 mph",
-      "windDir": "SSE",
-      "tide": "High tide ~1:53 AM · Low tide ~1:00 PM · Sunrise 6:31 AM",
+      "wind": "ENE 0 to 5 mph",
+      "windDir": "ENE",
+      "tide": "High tide ~2:49 AM · Low tide ~1:25 PM · Sunrise 6:31 AM",
       "tideEvents": [
         {
           "type": "H",
-          "time": "1:53 AM"
+          "time": "2:49 AM"
         },
         {
           "type": "L",
-          "time": "1:00 PM"
+          "time": "1:25 PM"
         }
       ],
       "waterTemp": 86,
       "sky": "Cloudy",
-      "stormChance": 46,
+      "stormChance": 21,
       "pressure": {
-        "hpa": 1013.2,
-        "inHg": 29.92,
+        "hpa": 1012.5,
+        "inHg": 29.9,
         "direction": "falling",
-        "changeHpa3h": -0.7
+        "changeHpa3h": -1.1
       }
     }
   },
@@ -71,7 +71,7 @@
       "kind": "archived_app_snapshot",
       "date": "2026-09-21",
       "displayDate": "September 21, 2026",
-      "summary": "The week of September 18–24, 2026 is shaping up to be one of the better inshore windows of the year around Destin and Choctawhatchee Bay. Redfish are the star of the show right now — slot fish and oversized bulls are spread from the East Pass all the way into Santa Rosa Sound and the main bay, with live bait (scaled sardines, live shrimp, and croakers) working best around moving water and structure. Bait has become abundant and easy to catch in the area, and that bait presence is directly translating into improved action for trout and flounder alongside the reds. Capt. Adam Schroeder (Ignite the Bite Charters, Destin) called the current inshore bite one of the best he has seen all year. Water temp today at this location is 86°F — still warm, but the early-fall transition is underway and conditions should continue to improve through October.",
+      "summary": "The fall transition is underway on Choctawhatchee Bay and the Destin inshore fishery as of the week of September 18–24, 2026. Redfish are the standout bite right now, with slot fish and oversized bulls spread from the pass throughout Santa Rosa Sound and into the main bay system. An abundance of bait has made catching easier and is directly fueling the action for redfish, flounder, and speckled trout around the Destin area — one local guide describes the inshore bite as among the best he has seen all year. Water temperature is 86°F. Early-morning trips are recommended to beat heat-related midday slowdowns, and tidal movement remains critical for consistent results on all inshore species.",
       "attribution": "Great Days Outdoors – Northwest Florida Fishing Report (September 18–24, 2026) · Auto-refreshed via Claude API",
       "sourceIds": [
         "report-aHR0cHM6Ly9ncmVhdG"
@@ -82,8 +82,8 @@
         "gulf_flounder"
       ],
       "conditions": {
-        "wind": "E 0 to 5 mph",
-        "windDir": "E",
+        "wind": "SSE 5 mph",
+        "windDir": "SSE",
         "tide": "High tide ~1:53 AM · Low tide ~1:00 PM · Sunrise 6:31 AM",
         "tideEvents": [
           {
@@ -99,10 +99,10 @@
         "sky": "Cloudy",
         "stormChance": 46,
         "pressure": {
-          "hpa": 1013.3,
+          "hpa": 1013.2,
           "inHg": 29.92,
-          "direction": "steady",
-          "changeHpa3h": -0.3
+          "direction": "falling",
+          "changeHpa3h": -0.7
         }
       }
     },
@@ -324,7 +324,7 @@
       "label": "Speckled trout",
       "current": true,
       "reportCount": 9,
-      "lastReported": "2026-09-21",
+      "lastReported": "2026-09-22",
       "evidenceLevel": "current_regional_report"
     },
     {
@@ -332,7 +332,7 @@
       "label": "Redfish",
       "current": true,
       "reportCount": 10,
-      "lastReported": "2026-09-21",
+      "lastReported": "2026-09-22",
       "evidenceLevel": "current_regional_report"
     },
     {
@@ -340,7 +340,7 @@
       "label": "Flounder",
       "current": true,
       "reportCount": 5,
-      "lastReported": "2026-09-21",
+      "lastReported": "2026-09-22",
       "evidenceLevel": "current_regional_report"
     },
     {
