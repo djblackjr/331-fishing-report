@@ -24,49 +24,49 @@
   "moonPhase": "Waxing Gibbous (~85% illuminated) — strong tidal push (spring tide)",
   "waterClarity": "Slightly stained",
   "sky": "Cloudy",
-  "lastUpdated": "9/22/2026, 3:12:15 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
-  "localBiteReport": "The week of September 18–24, 2026 is shaping up as one of the better early-fall inshore windows in recent memory around the Destin/Choctawhatchee Bay area. Redfish are the standout species, with slot fish and oversized reds spread from the East Pass into the main bay system; local guides are leaning on live scaled sardines, shrimp, and croakers fished around structure, with the bite heavily tide-dependent. Flounder and speckled trout are also showing up alongside the reds, and an abundance of bait moving through the bay is credited with fueling that broader inshore improvement. Water temp today is 86°F. Note that flounder harvest closes October 15, so the next few weeks are a good window to target them before the closure.",
-  "localBiteSource": "Great Days Outdoors (Northwest Florida Fishing Report, Sept 18–24 2026 edition featuring Capt. Adam Schroeder / Ignite the Bite Charters out of Destin) · Auto-refreshed via Claude API",
+  "lastUpdated": "9/22/2026, 8:22:16 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "localBiteReport": "The most current report available (September 18–24, 2026 week) from Great Days Outdoors' Northwest Florida Fishing Report indicates that inshore fishing around Destin and Choctawhatchee Bay is putting up some of the best action guides have seen all year. Redfish are the headline bite, with both slot-sized and oversized fish spread throughout the bay system, from the East Pass all the way into Santa Rosa Sound. An abundance of bait moving into bayous, flats, and bridge areas is also benefiting flounder and trout, which are actively feeding. Water temperature at this location is 86°F. The fall transition is underway, with bait pushing shallower and guides expecting redfish and general flats activity to keep improving through October.",
+  "localBiteSource": "Great Days Outdoors – Northwest Florida Fishing Report (September 18–24, 2026) · Auto-refreshed via Claude API",
   "localBiteUpdated": "September 22, 2026",
   "localBiteEvidence": [
     {
-      "title": "Northwest Florida Fishing Report for September 18 – 24, 2026",
+      "title": "Northwest Florida Fishing Report for September 18 - 24, 2026",
       "url": "https://greatdaysoutdoors.com/northwest-florida-fishing-report-for-september-18-24-2026/",
       "reportDate": "2026-09-18"
     }
   ],
   "previousDay": {
-    "date": "Monday, September 21, 2026",
+    "date": "Tuesday, September 22, 2026",
     "wind": {
-      "dir": "SSE",
+      "dir": "ENE",
       "speed": 5
     },
-    "high": 90,
-    "stormChance": 46,
-    "tide": "High tide ~1:53 AM · Low tide ~1:00 PM · Sunrise 6:31 AM",
+    "high": 91,
+    "stormChance": 21,
+    "tide": "High tide ~2:49 AM · Low tide ~1:25 PM · Sunrise 6:31 AM",
     "waterTemp": 86
   },
   "openMeteo": [
     {
-      "high": 90,
+      "high": 91,
       "low": 74,
-      "stormChance": 12,
-      "windSpeed": 5,
-      "windDir": "NE",
+      "stormChance": 13,
+      "windSpeed": 8,
+      "windDir": "W",
       "summary": "Overcast"
     },
     {
       "high": 92,
-      "low": 75,
-      "stormChance": 9,
-      "windSpeed": 7,
+      "low": 74,
+      "stormChance": 14,
+      "windSpeed": 6,
       "windDir": "NE",
-      "summary": "Light drizzle"
+      "summary": "Overcast"
     },
     {
       "high": 89,
-      "low": 71,
-      "stormChance": 14,
+      "low": 73,
+      "stormChance": 7,
       "windSpeed": 12,
       "windDir": "NE",
       "summary": "Overcast"
@@ -137,7 +137,7 @@
       "storms": 13,
       "headline": "Sunny",
       "fishingScore": 8.5,
-      "aiCall": "Sunny, with a high near 88.",
+      "aiCall": "Sunny, with a high near 88. Northeast wind 5 to 10 mph.",
       "emoji": "☀️",
       "tideEvents": [
         {
@@ -155,10 +155,10 @@
   "dateISO": "2026-09-22",
   "waterTemp": 86,
   "pressure": {
-    "hpa": 1012.5,
-    "inHg": 29.9,
-    "direction": "falling",
-    "changeHpa3h": -1.1
+    "hpa": 1014.7,
+    "inHg": 29.96,
+    "direction": "rising",
+    "changeHpa3h": 2.3
   },
   "speciesSignals": [
     {
