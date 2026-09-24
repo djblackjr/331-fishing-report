@@ -21,26 +21,25 @@
     "sky": "Bright sun",
     "stormChance": 0,
     "pressure": {
-      "hpa": 1017,
-      "inHg": 30.03,
-      "direction": "steady",
-      "changeHpa3h": 0.1
+      "hpa": 1019.3,
+      "inHg": 30.1,
+      "direction": "rising",
+      "changeHpa3h": 2.6
     }
   },
   "currentReport": {
     "kind": "current_regional_report",
     "date": "2026-09-24",
     "displayDate": "September 24, 2026",
-    "summary": "The most recent available report for Choctawhatchee Bay comes from the FishingBooker charter feed for this bay, last updated in early August 2026 — so note these reports are roughly 6–7 weeks old rather than this week. The Freeport-based charter noted redfish fishing best in early morning (daylight to about 8:30 am) and again in the late evening, using live menhaden on a Carolina rig or freelined, with a couple of over-slot reds and a stud sheepshead reported on a July 1 trip. Water temps at 86°F are keeping fish on a dawn/dusk bite window, with anglers advised to book early-morning trips. Bull redfish and speckled trout were described as the standout inshore targets on the bay heading into late summer, with the bite improving daily according to the charter's own report feed.",
-    "attribution": "FishingBooker – Choctawhatchee Bay destination report feed (Freeport, FL charter reports) · Auto-refreshed via Claude API",
+    "summary": "The inshore bite around Destin and Choctawhatchee Bay is reportedly one of the best of the year right now, according to a report dated September 18–24, 2026 featuring Capt. Adam Schroeder of Ignite The Bite Charters out of Destin. Bait has become abundant and easy to find early in the morning, and redfish, flounder, and trout are all responding well to it. Both bull reds and slot redfish are active, with the outgoing tide around the bridges being a particularly productive window — larger redfish are responding to live croakers and spot minnows around bridge structure. Water temperature at this location is currently 86°F, which is keeping fish on a summer-style pattern of early-morning and late-afternoon activity on the flats, with fish moving to deeper structure mid-day.",
+    "attribution": "Great Days Outdoors – Northwest Florida Fishing Report (September 18–24, 2026) · Auto-refreshed via Claude API",
     "sourceIds": [
-      "fishingbooker-bay",
-      "report-aHR0cHM6Ly9maXNoaW"
+      "report-aHR0cHM6Ly9ncmVhdG"
     ],
     "species": [
       "spotted_seatrout",
       "redfish",
-      "sheepshead"
+      "gulf_flounder"
     ],
     "conditions": {
       "wind": "NE 10 mph",
@@ -60,50 +59,51 @@
       "sky": "Bright sun",
       "stormChance": 0,
       "pressure": {
-        "hpa": 1017,
-        "inHg": 30.03,
-        "direction": "steady",
-        "changeHpa3h": 0.1
+        "hpa": 1019.3,
+        "inHg": 30.1,
+        "direction": "rising",
+        "changeHpa3h": 2.6
       }
     }
   },
   "archivedReports": [
     {
       "kind": "archived_app_snapshot",
-      "date": "2026-09-23",
-      "displayDate": "September 23, 2026",
-      "summary": "The inshore bite around Choctawhatchee Bay and Destin is in excellent shape this week, with Capt. Adam Schroeder (Ignite The Bite Charters, Destin) calling it one of the best he has seen all year. Bait is now abundant and easy to find early in the morning, and redfish — both bull reds and slot fish — are the headline target, biting well around the Destin Bridge, Brooks Bridge, the jetties, and deeper docks on an outgoing tide, with croakers and spot minnows as preferred live baits. Flounder and speckled trout are also responding to the improved bait presence, and are frequently mixed in with the redfish bite around bridge structure. Water temperature is 86°F. This early-fall window is considered one of the more productive inshore periods of the year, with the fall mullet run expected to keep pushing more slot reds onto the flats through October.",
-      "attribution": "greatdaysoutdoors.com (Northwest Florida Fishing Report, September 18–24, 2026) · Auto-refreshed via Claude API",
+      "date": "2026-09-24",
+      "displayDate": "September 24, 2026",
+      "summary": "The most recent available report for Choctawhatchee Bay comes from the FishingBooker charter feed for this bay, last updated in early August 2026 — so note these reports are roughly 6–7 weeks old rather than this week. The Freeport-based charter noted redfish fishing best in early morning (daylight to about 8:30 am) and again in the late evening, using live menhaden on a Carolina rig or freelined, with a couple of over-slot reds and a stud sheepshead reported on a July 1 trip. Water temps at 86°F are keeping fish on a dawn/dusk bite window, with anglers advised to book early-morning trips. Bull redfish and speckled trout were described as the standout inshore targets on the bay heading into late summer, with the bite improving daily according to the charter's own report feed.",
+      "attribution": "FishingBooker – Choctawhatchee Bay destination report feed (Freeport, FL charter reports) · Auto-refreshed via Claude API",
       "sourceIds": [
-        "report-aHR0cHM6Ly9ncmVhdG"
+        "fishingbooker-bay",
+        "report-aHR0cHM6Ly9maXNoaW"
       ],
       "species": [
         "spotted_seatrout",
         "redfish",
-        "gulf_flounder"
+        "sheepshead"
       ],
       "conditions": {
-        "wind": "NE 5 mph",
+        "wind": "NE 10 mph",
         "windDir": "NE",
-        "tide": "High tide ~3:44 AM · Low tide ~1:44 PM · Sunrise 6:32 AM",
+        "tide": "High tide ~4:47 AM · Low tide ~1:48 PM · Sunrise 6:32 AM",
         "tideEvents": [
           {
             "type": "H",
-            "time": "3:44 AM"
+            "time": "4:47 AM"
           },
           {
             "type": "L",
-            "time": "1:44 PM"
+            "time": "1:48 PM"
           }
         ],
         "waterTemp": 86,
-        "sky": "Cloudy",
-        "stormChance": 20,
+        "sky": "Bright sun",
+        "stormChance": 0,
         "pressure": {
-          "hpa": 1017.1,
+          "hpa": 1017,
           "inHg": 30.03,
-          "direction": "rising",
-          "changeHpa3h": 1.8
+          "direction": "steady",
+          "changeHpa3h": 0.1
         }
       }
     },
@@ -339,10 +339,10 @@
     {
       "key": "gulf_flounder",
       "label": "Flounder",
-      "current": false,
+      "current": true,
       "reportCount": 4,
-      "lastReported": "2026-09-23",
-      "evidenceLevel": "archived_regional_report"
+      "lastReported": "2026-09-24",
+      "evidenceLevel": "current_regional_report"
     },
     {
       "key": "black_drum",
@@ -355,10 +355,10 @@
     {
       "key": "sheepshead",
       "label": "Sheepshead",
-      "current": true,
+      "current": false,
       "reportCount": 2,
       "lastReported": "2026-09-24",
-      "evidenceLevel": "current_regional_report"
+      "evidenceLevel": "archived_regional_report"
     }
   ],
   "profiles": {
@@ -466,18 +466,11 @@
   },
   "sources": [
     {
-      "id": "fishingbooker-bay",
-      "label": "FishingBooker — Choctawhatchee Bay reports",
-      "url": "https://fishingbooker.com/reports/destination/us/choctawhatchee-bay",
+      "id": "report-aHR0cHM6Ly9ncmVhdG",
+      "label": "Northwest Florida Fishing Report for September 18 – 24, 2026",
+      "url": "https://greatdaysoutdoors.com/northwest-florida-fishing-report-for-september-18-24-2026/",
       "kind": "regional_report",
-      "note": "Dated charter and angler reports for Choctawhatchee Bay."
-    },
-    {
-      "id": "report-aHR0cHM6Ly9maXNoaW",
-      "label": "Fishing Reports by Choctawhatchee Bay Fishing Charters, Freeport – FishingBooker",
-      "url": "https://fishingbooker.com/profile/view/50495",
-      "kind": "regional_report",
-      "reportDate": "2026-08-06",
+      "reportDate": "2026-09-18",
       "note": "Exact source page preserved by the daily bite-report research."
     },
     {
@@ -489,6 +482,13 @@
       "note": "Exact source page preserved by the daily bite-report research."
     },
     {
+      "id": "fishingbooker-bay",
+      "label": "FishingBooker — Choctawhatchee Bay reports",
+      "url": "https://fishingbooker.com/reports/destination/us/choctawhatchee-bay",
+      "kind": "regional_report",
+      "note": "Dated charter and angler reports for Choctawhatchee Bay."
+    },
+    {
       "id": "report-aHR0cHM6Ly9oYWxmaG",
       "label": "Destin Fishing Report 7-13-26",
       "url": "https://halfhitch.com/blog/destin-fishing-report-7-13-26",
@@ -497,11 +497,11 @@
       "note": "Exact source page preserved by the daily bite-report research."
     },
     {
-      "id": "report-aHR0cHM6Ly9ncmVhdG",
-      "label": "Northwest Florida Fishing Report for September 18 - 24, 2026",
-      "url": "https://greatdaysoutdoors.com/northwest-florida-fishing-report-for-september-18-24-2026/",
+      "id": "report-aHR0cHM6Ly9maXNoaW",
+      "label": "Fishing Reports by Choctawhatchee Bay Fishing Charters, Freeport – FishingBooker",
+      "url": "https://fishingbooker.com/profile/view/50495",
       "kind": "regional_report",
-      "reportDate": "2026-09-18",
+      "reportDate": "2026-08-06",
       "note": "Exact source page preserved by the daily bite-report research."
     },
     {

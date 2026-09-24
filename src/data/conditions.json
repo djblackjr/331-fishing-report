@@ -24,39 +24,34 @@
   "moonPhase": "Full Moon (~96% illuminated) — strong tidal push (spring tide)",
   "waterClarity": "Slightly stained",
   "sky": "Bright sun",
-  "lastUpdated": "9/24/2026, 3:12:19 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
-  "localBiteReport": "The most recent available report for Choctawhatchee Bay comes from the FishingBooker charter feed for this bay, last updated in early August 2026 — so note these reports are roughly 6–7 weeks old rather than this week. The Freeport-based charter noted redfish fishing best in early morning (daylight to about 8:30 am) and again in the late evening, using live menhaden on a Carolina rig or freelined, with a couple of over-slot reds and a stud sheepshead reported on a July 1 trip. Water temps at 86°F are keeping fish on a dawn/dusk bite window, with anglers advised to book early-morning trips. Bull redfish and speckled trout were described as the standout inshore targets on the bay heading into late summer, with the bite improving daily according to the charter's own report feed.",
-  "localBiteSource": "FishingBooker – Choctawhatchee Bay destination report feed (Freeport, FL charter reports) · Auto-refreshed via Claude API",
+  "lastUpdated": "9/24/2026, 8:30:46 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "localBiteReport": "The inshore bite around Destin and Choctawhatchee Bay is reportedly one of the best of the year right now, according to a report dated September 18–24, 2026 featuring Capt. Adam Schroeder of Ignite The Bite Charters out of Destin. Bait has become abundant and easy to find early in the morning, and redfish, flounder, and trout are all responding well to it. Both bull reds and slot redfish are active, with the outgoing tide around the bridges being a particularly productive window — larger redfish are responding to live croakers and spot minnows around bridge structure. Water temperature at this location is currently 86°F, which is keeping fish on a summer-style pattern of early-morning and late-afternoon activity on the flats, with fish moving to deeper structure mid-day.",
+  "localBiteSource": "Great Days Outdoors – Northwest Florida Fishing Report (September 18–24, 2026) · Auto-refreshed via Claude API",
   "localBiteUpdated": "September 24, 2026",
   "localBiteEvidence": [
     {
-      "title": "Daily Choctawhatchee Bay Fishing Reports (August 2026)",
-      "url": "https://fishingbooker.com/reports/destination/us/choctawhatchee-bay",
-      "reportDate": "2026-08-06"
-    },
-    {
-      "title": "Fishing Reports by Choctawhatchee Bay Fishing Charters, Freeport – FishingBooker",
-      "url": "https://fishingbooker.com/profile/view/50495",
-      "reportDate": "2026-08-06"
+      "title": "Northwest Florida Fishing Report for September 18 – 24, 2026",
+      "url": "https://greatdaysoutdoors.com/northwest-florida-fishing-report-for-september-18-24-2026/",
+      "reportDate": "2026-09-18"
     }
   ],
   "previousDay": {
-    "date": "Wednesday, September 23, 2026",
+    "date": "Thursday, September 24, 2026",
     "wind": {
       "dir": "NE",
-      "speed": 5
+      "speed": 10
     },
-    "high": 91,
-    "stormChance": 20,
-    "tide": "High tide ~3:44 AM · Low tide ~1:44 PM · Sunrise 6:32 AM",
+    "high": 85,
+    "stormChance": 0,
+    "tide": "High tide ~4:47 AM · Low tide ~1:48 PM · Sunrise 6:32 AM",
     "waterTemp": 86
   },
   "openMeteo": [
     {
-      "high": 85,
-      "low": 71,
-      "stormChance": 1,
-      "windSpeed": 11,
+      "high": 86,
+      "low": 72,
+      "stormChance": 0,
+      "windSpeed": 10,
       "windDir": "NE",
       "summary": "Overcast"
     },
@@ -69,11 +64,11 @@
       "summary": "Overcast"
     },
     {
-      "high": 87,
+      "high": 88,
       "low": 65,
       "stormChance": 0,
-      "windSpeed": 6,
-      "windDir": "E",
+      "windSpeed": 7,
+      "windDir": "S",
       "summary": "Overcast"
     }
   ],
@@ -154,7 +149,7 @@
       "storms": 0,
       "headline": "Sunny",
       "fishingScore": 9,
-      "aiCall": "Sunny, with a high near 84.",
+      "aiCall": "Sunny, with a high near 84. Northeast wind around 5 mph.",
       "emoji": "☀️",
       "tideEvents": [
         {
@@ -180,10 +175,10 @@
   "dateISO": "2026-09-24",
   "waterTemp": 86,
   "pressure": {
-    "hpa": 1017,
-    "inHg": 30.03,
-    "direction": "steady",
-    "changeHpa3h": 0.1
+    "hpa": 1019.3,
+    "inHg": 30.1,
+    "direction": "rising",
+    "changeHpa3h": 2.6
   },
   "speciesSignals": [
     {
@@ -203,9 +198,9 @@
     {
       "key": "gulf_flounder",
       "label": "Flounder",
-      "current": false,
+      "current": true,
       "reportCount": 4,
-      "lastReported": "2026-09-23"
+      "lastReported": "2026-09-24"
     },
     {
       "key": "black_drum",
@@ -217,7 +212,7 @@
     {
       "key": "sheepshead",
       "label": "Sheepshead",
-      "current": true,
+      "current": false,
       "reportCount": 2,
       "lastReported": "2026-09-24"
     }
