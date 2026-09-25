@@ -36,34 +36,39 @@
   "moonPhase": "Full Moon (~99% illuminated) — strong tidal push (spring tide)",
   "waterClarity": "Slightly stained",
   "sky": "Bright sun",
-  "lastUpdated": "9/25/2026, 3:12:12 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
-  "localBiteReport": "The most recent detailed inshore report covering the Destin/Choctawhatchee Bay area is from the week of September 18–24, 2026. Capt. Adam Schroeder of Ignite The Bite Charters in Destin called the inshore bite one of the best he has seen all year, with bait now easy to find early in the morning and redfish, flounder, and trout all responding well. Both slot redfish and bull reds are biting, with Adam favoring live croakers or spot minnows fished around bridges on an outgoing tide for the bigger fish; flounder are regularly mixing into those same bridge and structure areas. Water temperature as of today (September 25) is 86°F at this location.",
-  "localBiteSource": "Great Days Outdoors – Northwest Florida Fishing Report (Sept 18–24, 2026) · Auto-refreshed via Claude API",
+  "lastUpdated": "9/25/2026, 8:41:19 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "localBiteReport": "The Choctawhatchee Bay and Destin inshore fishery is in one of its better stretches of the year heading into late September, with the early-fall transition well underway. Capt. Adam Schroeder of Ignite The Bite Charters (Destin) reported last week that bait has become plentiful and easy to locate each morning, and described the current inshore bite as among the best he has seen all year — with redfish, flounder, and speckled trout all responding. Both slot-sized and bull redfish are active around the Destin and Fort Walton area bridges on outgoing tides, with croakers and spot minnows the preferred live-bait choice for targeting larger reds; flounder are mixed in as a reliable bonus species when targeting similar structure. Water temp at the bay is 86°F. The September 4–10 report (one week prior) similarly noted that concentrations of greenies and other bait were pushing from deeper open water onto flats, bayous, and bridge areas in Choctawhatchee Bay, which was already improving the Spanish mackerel bite and setting up better conditions for trout and reds on the flats — a pattern that the following week's report confirms has continued to mature.",
+  "localBiteSource": "Great Days Outdoors (Northwest Florida Fishing Report, weeks of Sept 18–24 and Sept 4–10, 2026) · Auto-refreshed via Claude API",
   "localBiteUpdated": "September 25, 2026",
   "localBiteEvidence": [
     {
       "title": "Northwest Florida Fishing Report for September 18 – 24, 2026",
       "url": "https://greatdaysoutdoors.com/northwest-florida-fishing-report-for-september-18-24-2026/",
       "reportDate": "2026-09-18"
+    },
+    {
+      "title": "Northwest Florida Fishing Report for September 4 – 10, 2026",
+      "url": "https://greatdaysoutdoors.com/northwest-florida-fishing-report-for-september-4-10-2026/",
+      "reportDate": "2026-09-04"
     }
   ],
   "previousDay": {
-    "date": "Thursday, September 24, 2026",
+    "date": "Friday, September 25, 2026",
     "wind": {
       "dir": "NE",
       "speed": 10
     },
-    "high": 85,
+    "high": 82,
     "stormChance": 0,
-    "tide": "High tide ~4:47 AM · Low tide ~1:48 PM · Sunrise 6:32 AM",
+    "tide": "High tide ~8:58 PM · Low tide ~11:06 PM · Sunrise 6:33 AM",
     "waterTemp": 86
   },
   "openMeteo": [
     {
-      "high": 82,
-      "low": 67,
+      "high": 80,
+      "low": 68,
       "stormChance": 0,
-      "windSpeed": 10,
+      "windSpeed": 9,
       "windDir": "NE",
       "summary": "Overcast"
     },
@@ -76,11 +81,11 @@
       "summary": "Overcast"
     },
     {
-      "high": 90,
-      "low": 70,
-      "stormChance": 2,
-      "windSpeed": 8,
-      "windDir": "W",
+      "high": 89,
+      "low": 69,
+      "stormChance": 1,
+      "windSpeed": 7,
+      "windDir": "NW",
       "summary": "Overcast"
     }
   ],
@@ -169,7 +174,7 @@
       "storms": 1,
       "headline": "Mostly Sunny",
       "fishingScore": 9,
-      "aiCall": "Mostly sunny, with a high near 87.",
+      "aiCall": "Mostly sunny, with a high near 87. Northwest wind 0 to 5 mph.",
       "emoji": "☀️",
       "tideEvents": [
         {
@@ -187,10 +192,10 @@
   "dateISO": "2026-09-25",
   "waterTemp": 86,
   "pressure": {
-    "hpa": 1017.4,
-    "inHg": 30.04,
-    "direction": "falling",
-    "changeHpa3h": -0.7
+    "hpa": 1019.8,
+    "inHg": 30.11,
+    "direction": "rising",
+    "changeHpa3h": 2.4
   },
   "speciesSignals": [
     {

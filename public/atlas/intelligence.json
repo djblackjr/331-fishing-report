@@ -33,18 +33,18 @@
     "sky": "Bright sun",
     "stormChance": 0,
     "pressure": {
-      "hpa": 1017.4,
-      "inHg": 30.04,
-      "direction": "falling",
-      "changeHpa3h": -0.7
+      "hpa": 1019.8,
+      "inHg": 30.11,
+      "direction": "rising",
+      "changeHpa3h": 2.4
     }
   },
   "currentReport": {
     "kind": "current_regional_report",
     "date": "2026-09-25",
     "displayDate": "September 25, 2026",
-    "summary": "The most recent detailed inshore report covering the Destin/Choctawhatchee Bay area is from the week of September 18–24, 2026. Capt. Adam Schroeder of Ignite The Bite Charters in Destin called the inshore bite one of the best he has seen all year, with bait now easy to find early in the morning and redfish, flounder, and trout all responding well. Both slot redfish and bull reds are biting, with Adam favoring live croakers or spot minnows fished around bridges on an outgoing tide for the bigger fish; flounder are regularly mixing into those same bridge and structure areas. Water temperature as of today (September 25) is 86°F at this location.",
-    "attribution": "Great Days Outdoors – Northwest Florida Fishing Report (Sept 18–24, 2026) · Auto-refreshed via Claude API",
+    "summary": "The Choctawhatchee Bay and Destin inshore fishery is in one of its better stretches of the year heading into late September, with the early-fall transition well underway. Capt. Adam Schroeder of Ignite The Bite Charters (Destin) reported last week that bait has become plentiful and easy to locate each morning, and described the current inshore bite as among the best he has seen all year — with redfish, flounder, and speckled trout all responding. Both slot-sized and bull redfish are active around the Destin and Fort Walton area bridges on outgoing tides, with croakers and spot minnows the preferred live-bait choice for targeting larger reds; flounder are mixed in as a reliable bonus species when targeting similar structure. Water temp at the bay is 86°F. The September 4–10 report (one week prior) similarly noted that concentrations of greenies and other bait were pushing from deeper open water onto flats, bayous, and bridge areas in Choctawhatchee Bay, which was already improving the Spanish mackerel bite and setting up better conditions for trout and reds on the flats — a pattern that the following week's report confirms has continued to mature.",
+    "attribution": "Great Days Outdoors (Northwest Florida Fishing Report, weeks of Sept 18–24 and Sept 4–10, 2026) · Auto-refreshed via Claude API",
     "sourceIds": [
       "report-aHR0cHM6Ly9ncmVhdG"
     ],
@@ -83,20 +83,20 @@
       "sky": "Bright sun",
       "stormChance": 0,
       "pressure": {
-        "hpa": 1017.4,
-        "inHg": 30.04,
-        "direction": "falling",
-        "changeHpa3h": -0.7
+        "hpa": 1019.8,
+        "inHg": 30.11,
+        "direction": "rising",
+        "changeHpa3h": 2.4
       }
     }
   },
   "archivedReports": [
     {
       "kind": "archived_app_snapshot",
-      "date": "2026-09-24",
-      "displayDate": "September 24, 2026",
-      "summary": "The inshore bite around Destin and Choctawhatchee Bay is reportedly one of the best of the year right now, according to a report dated September 18–24, 2026 featuring Capt. Adam Schroeder of Ignite The Bite Charters out of Destin. Bait has become abundant and easy to find early in the morning, and redfish, flounder, and trout are all responding well to it. Both bull reds and slot redfish are active, with the outgoing tide around the bridges being a particularly productive window — larger redfish are responding to live croakers and spot minnows around bridge structure. Water temperature at this location is currently 86°F, which is keeping fish on a summer-style pattern of early-morning and late-afternoon activity on the flats, with fish moving to deeper structure mid-day.",
-      "attribution": "Great Days Outdoors – Northwest Florida Fishing Report (September 18–24, 2026) · Auto-refreshed via Claude API",
+      "date": "2026-09-25",
+      "displayDate": "September 25, 2026",
+      "summary": "The most recent detailed inshore report covering the Destin/Choctawhatchee Bay area is from the week of September 18–24, 2026. Capt. Adam Schroeder of Ignite The Bite Charters in Destin called the inshore bite one of the best he has seen all year, with bait now easy to find early in the morning and redfish, flounder, and trout all responding well. Both slot redfish and bull reds are biting, with Adam favoring live croakers or spot minnows fished around bridges on an outgoing tide for the bigger fish; flounder are regularly mixing into those same bridge and structure areas. Water temperature as of today (September 25) is 86°F at this location.",
+      "attribution": "Great Days Outdoors – Northwest Florida Fishing Report (Sept 18–24, 2026) · Auto-refreshed via Claude API",
       "sourceIds": [
         "report-aHR0cHM6Ly9ncmVhdG"
       ],
@@ -106,27 +106,39 @@
         "gulf_flounder"
       ],
       "conditions": {
-        "wind": "NE 10 mph",
+        "wind": "NE 5 to 10 mph",
         "windDir": "NE",
-        "tide": "High tide ~4:47 AM · Low tide ~1:48 PM · Sunrise 6:32 AM",
+        "tide": "High tide ~8:58 PM · Low tide ~11:06 PM · Sunrise 6:33 AM",
         "tideEvents": [
           {
             "type": "H",
-            "time": "4:47 AM"
+            "time": "8:58 PM"
           },
           {
             "type": "L",
-            "time": "1:48 PM"
+            "time": "11:06 PM"
+          },
+          {
+            "type": "H",
+            "time": "6:12 AM"
+          },
+          {
+            "type": "L",
+            "time": "1:09 PM"
+          },
+          {
+            "type": "H",
+            "time": "6:29 PM"
           }
         ],
         "waterTemp": 86,
         "sky": "Bright sun",
         "stormChance": 0,
         "pressure": {
-          "hpa": 1019.3,
-          "inHg": 30.1,
-          "direction": "rising",
-          "changeHpa3h": 2.6
+          "hpa": 1017.4,
+          "inHg": 30.04,
+          "direction": "falling",
+          "changeHpa3h": -0.7
         }
       }
     },
