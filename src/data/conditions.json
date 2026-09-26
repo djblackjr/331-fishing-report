@@ -32,9 +32,9 @@
   "moonPhase": "Full Moon (~100% illuminated) — strong tidal push (spring tide)",
   "waterClarity": "Slightly stained",
   "sky": "Bright sun",
-  "lastUpdated": "9/26/2026, 3:12:16 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
-  "localBiteReport": "The most recent available report (week of September 18–24, 2026) points to one of the better inshore stretches of the year around Destin and Choctawhatchee Bay. Bait is now abundant and easy to find early in the morning, which is directly fueling strong action on redfish and flounder, with trout mixed in as well. Both bull reds and slot-sized redfish are biting well, especially on outgoing tides around bridges — croakers and spot minnows are the top live-bait choices for larger fish. Flounder are being caught as part of mixed-bag efforts alongside redfish, and the overall inshore picture, with water temperature at 86°F, reflects a classic early-fall transition kicking into gear across the area.",
-  "localBiteSource": "Great Days Outdoors – Northwest Florida Fishing Report (Sept. 18–24, 2026), featuring Capt. Adam Schroeder, Ignite The Bite Charters, Destin · Auto-refreshed via Claude API",
+  "lastUpdated": "9/26/2026, 8:00:55 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "localBiteReport": "The early-fall transition is delivering one of the better inshore windows of the year around Choctawhatchee Bay and Destin, with water temps at 85°F. Redfish are the standout target right now — both slot-sized fish and larger bulls are accessible, with bigger reds holding near bridges where live croakers and spot minnows are the preferred bait. Flounder and speckled trout are also producing well, showing up mixed in with the redfish bite as bait has become much easier to locate in the mornings. Structure-oriented fishing near the Destin Bridge, Brooks Bridge, jetties, and deeper docks is especially productive at the moment, with tide movement being a key factor. Note: this summary is based on the most recently available report covering the week of September 18–24, 2026.",
+  "localBiteSource": "greatdaysoutdoors.com – Northwest Florida Fishing Report (Capt. Adam Schroeder, Ignite The Bite Charters, Destin) · Auto-refreshed via Claude API",
   "localBiteUpdated": "September 26, 2026",
   "localBiteEvidence": [
     {
@@ -44,23 +44,23 @@
     }
   ],
   "previousDay": {
-    "date": "Friday, September 25, 2026",
+    "date": "Saturday, September 26, 2026",
     "wind": {
-      "dir": "NE",
-      "speed": 10
+      "dir": "N",
+      "speed": 5
     },
-    "high": 82,
+    "high": 85,
     "stormChance": 0,
-    "tide": "High tide ~8:58 PM · Low tide ~11:06 PM · Sunrise 6:33 AM",
+    "tide": "High tide ~8:42 AM · Low tide ~1:22 AM · Sunrise 6:34 AM",
     "waterTemp": 86
   },
   "openMeteo": [
     {
-      "high": 83,
+      "high": 84,
       "low": 62,
       "stormChance": 0,
-      "windSpeed": 7,
-      "windDir": "NE",
+      "windSpeed": 6,
+      "windDir": "N",
       "summary": "Overcast"
     },
     {
@@ -73,9 +73,9 @@
     },
     {
       "high": 90,
-      "low": 65,
-      "stormChance": 1,
-      "windSpeed": 7,
+      "low": 66,
+      "stormChance": 2,
+      "windSpeed": 6,
       "windDir": "NW",
       "summary": "Overcast"
     }
@@ -153,7 +153,7 @@
       "storms": 1,
       "headline": "Sunny",
       "fishingScore": 9,
-      "aiCall": "Sunny, with a high near 88.",
+      "aiCall": "Sunny, with a high near 88. Northwest wind 0 to 5 mph.",
       "emoji": "☀️",
       "tideEvents": [
         {
@@ -165,12 +165,12 @@
     }
   ],
   "dateISO": "2026-09-26",
-  "waterTemp": 86,
+  "waterTemp": 85,
   "pressure": {
-    "hpa": 1015.9,
-    "inHg": 30,
-    "direction": "falling",
-    "changeHpa3h": -0.7
+    "hpa": 1017.7,
+    "inHg": 30.05,
+    "direction": "rising",
+    "changeHpa3h": 2.3
   },
   "speciesSignals": [
     {
