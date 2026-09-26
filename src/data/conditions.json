@@ -1,55 +1,46 @@
 {
-  "date": "Friday, September 25, 2026",
+  "date": "Saturday, September 26, 2026",
   "wind": {
-    "speed": 10,
-    "dir": "NE",
-    "description": "NE 5 to 10 mph"
+    "speed": 5,
+    "dir": "N",
+    "description": "N 0 to 5 mph"
   },
-  "weather": "Mostly Sunny · High 82°F",
-  "tide": "High tide ~8:58 PM · Low tide ~11:06 PM · Sunrise 6:33 AM",
+  "weather": "Sunny · High 85°F",
+  "tide": "High tide ~8:42 AM · Low tide ~1:22 AM · Sunrise 6:34 AM",
   "tideEvents": [
     {
+      "type": "L",
+      "time": "1:22 AM"
+    },
+    {
       "type": "H",
-      "time": "8:58 PM"
+      "time": "8:42 AM"
     },
     {
       "type": "L",
-      "time": "11:06 PM"
+      "time": "9:50 AM"
     },
     {
       "type": "H",
-      "time": "6:12 AM"
-    },
-    {
-      "type": "L",
-      "time": "1:09 PM"
-    },
-    {
-      "type": "H",
-      "time": "6:29 PM"
+      "time": "6:19 PM"
     }
   ],
-  "sunrise": "6:33 AM",
-  "sunset": "6:38 PM",
+  "sunrise": "6:34 AM",
+  "sunset": "6:37 PM",
   "stormWindow": "after 4PM",
   "stormChance": 0,
-  "moonPhase": "Full Moon (~99% illuminated) — strong tidal push (spring tide)",
+  "moonPhase": "Full Moon (~100% illuminated) — strong tidal push (spring tide)",
   "waterClarity": "Slightly stained",
   "sky": "Bright sun",
-  "lastUpdated": "9/25/2026, 8:41:19 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
-  "localBiteReport": "The Choctawhatchee Bay and Destin inshore fishery is in one of its better stretches of the year heading into late September, with the early-fall transition well underway. Capt. Adam Schroeder of Ignite The Bite Charters (Destin) reported last week that bait has become plentiful and easy to locate each morning, and described the current inshore bite as among the best he has seen all year — with redfish, flounder, and speckled trout all responding. Both slot-sized and bull redfish are active around the Destin and Fort Walton area bridges on outgoing tides, with croakers and spot minnows the preferred live-bait choice for targeting larger reds; flounder are mixed in as a reliable bonus species when targeting similar structure. Water temp at the bay is 86°F. The September 4–10 report (one week prior) similarly noted that concentrations of greenies and other bait were pushing from deeper open water onto flats, bayous, and bridge areas in Choctawhatchee Bay, which was already improving the Spanish mackerel bite and setting up better conditions for trout and reds on the flats — a pattern that the following week's report confirms has continued to mature.",
-  "localBiteSource": "Great Days Outdoors (Northwest Florida Fishing Report, weeks of Sept 18–24 and Sept 4–10, 2026) · Auto-refreshed via Claude API",
-  "localBiteUpdated": "September 25, 2026",
+  "lastUpdated": "9/26/2026, 3:12:16 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "localBiteReport": "The most recent available report (week of September 18–24, 2026) points to one of the better inshore stretches of the year around Destin and Choctawhatchee Bay. Bait is now abundant and easy to find early in the morning, which is directly fueling strong action on redfish and flounder, with trout mixed in as well. Both bull reds and slot-sized redfish are biting well, especially on outgoing tides around bridges — croakers and spot minnows are the top live-bait choices for larger fish. Flounder are being caught as part of mixed-bag efforts alongside redfish, and the overall inshore picture, with water temperature at 86°F, reflects a classic early-fall transition kicking into gear across the area.",
+  "localBiteSource": "Great Days Outdoors – Northwest Florida Fishing Report (Sept. 18–24, 2026), featuring Capt. Adam Schroeder, Ignite The Bite Charters, Destin · Auto-refreshed via Claude API",
+  "localBiteUpdated": "September 26, 2026",
   "localBiteEvidence": [
     {
-      "title": "Northwest Florida Fishing Report for September 18 – 24, 2026",
+      "title": "Northwest Florida Fishing Report for September 18 - 24, 2026",
       "url": "https://greatdaysoutdoors.com/northwest-florida-fishing-report-for-september-18-24-2026/",
       "reportDate": "2026-09-18"
-    },
-    {
-      "title": "Northwest Florida Fishing Report for September 4 – 10, 2026",
-      "url": "https://greatdaysoutdoors.com/northwest-florida-fishing-report-for-september-4-10-2026/",
-      "reportDate": "2026-09-04"
     }
   ],
   "previousDay": {
@@ -65,24 +56,24 @@
   },
   "openMeteo": [
     {
-      "high": 80,
-      "low": 68,
+      "high": 83,
+      "low": 62,
       "stormChance": 0,
-      "windSpeed": 9,
+      "windSpeed": 7,
       "windDir": "NE",
       "summary": "Overcast"
     },
     {
-      "high": 86,
-      "low": 63,
-      "stormChance": 0,
-      "windSpeed": 7,
-      "windDir": "NW",
+      "high": 88,
+      "low": 64,
+      "stormChance": 3,
+      "windSpeed": 8,
+      "windDir": "W",
       "summary": "Overcast"
     },
     {
-      "high": 89,
-      "low": 69,
+      "high": 90,
+      "low": 65,
       "stormChance": 1,
       "windSpeed": 7,
       "windDir": "NW",
@@ -91,56 +82,18 @@
   ],
   "forecast": [
     {
-      "day": "Fri, Sep 25",
-      "dateISO": "2026-09-25",
-      "label": "Today",
-      "high": 82,
-      "low": null,
-      "wind": "NE 5 to 10 mph",
-      "windSpeed": 10,
-      "windDir": "NE",
-      "storms": 0,
-      "headline": "Mostly Sunny",
-      "fishingScore": 9,
-      "aiCall": "Mostly sunny, with a high near 82. Northeast wind 5 to 10 mph.",
-      "emoji": "☀️",
-      "tideEvents": [
-        {
-          "type": "H",
-          "time": "8:58 PM"
-        },
-        {
-          "type": "L",
-          "time": "11:06 PM"
-        },
-        {
-          "type": "H",
-          "time": "6:12 AM"
-        },
-        {
-          "type": "L",
-          "time": "1:09 PM"
-        },
-        {
-          "type": "H",
-          "time": "6:29 PM"
-        }
-      ],
-      "moonPhase": "Full Moon (~99% illuminated) — strong tidal push (spring tide)"
-    },
-    {
       "day": "Sat, Sep 26",
       "dateISO": "2026-09-26",
-      "label": "Tomorrow",
-      "high": 84,
+      "label": "Today",
+      "high": 85,
       "low": null,
-      "wind": "NNE 0 to 5 mph",
+      "wind": "N 0 to 5 mph",
       "windSpeed": 5,
-      "windDir": "NNE",
+      "windDir": "N",
       "storms": 0,
       "headline": "Sunny",
       "fishingScore": 9,
-      "aiCall": "Sunny, with a high near 84. North northeast wind 0 to 5 mph.",
+      "aiCall": "Sunny. High near 85, with temperatures falling to around 82 in the afternoon. North wind 0 to 5 mph.",
       "emoji": "☀️",
       "tideEvents": [
         {
@@ -165,8 +118,8 @@
     {
       "day": "Sun, Sep 27",
       "dateISO": "2026-09-27",
-      "label": "Sunday",
-      "high": 87,
+      "label": "Tomorrow",
+      "high": 88,
       "low": null,
       "wind": "NW 0 to 5 mph",
       "windSpeed": 5,
@@ -174,7 +127,7 @@
       "storms": 1,
       "headline": "Mostly Sunny",
       "fishingScore": 9,
-      "aiCall": "Mostly sunny, with a high near 87. Northwest wind 0 to 5 mph.",
+      "aiCall": "Mostly sunny, with a high near 88. Northwest wind 0 to 5 mph.",
       "emoji": "☀️",
       "tideEvents": [
         {
@@ -187,15 +140,37 @@
         }
       ],
       "moonPhase": "Full Moon (~98% illuminated) — strong tidal push (spring tide)"
+    },
+    {
+      "day": "Mon, Sep 28",
+      "dateISO": "2026-09-28",
+      "label": "Monday",
+      "high": 88,
+      "low": null,
+      "wind": "NW 0 to 5 mph",
+      "windSpeed": 5,
+      "windDir": "NW",
+      "storms": 1,
+      "headline": "Sunny",
+      "fishingScore": 9,
+      "aiCall": "Sunny, with a high near 88.",
+      "emoji": "☀️",
+      "tideEvents": [
+        {
+          "type": "L",
+          "time": "4:25 AM"
+        }
+      ],
+      "moonPhase": "Waning Gibbous (~95% illuminated) — strong tidal push (spring tide)"
     }
   ],
-  "dateISO": "2026-09-25",
+  "dateISO": "2026-09-26",
   "waterTemp": 86,
   "pressure": {
-    "hpa": 1019.8,
-    "inHg": 30.11,
-    "direction": "rising",
-    "changeHpa3h": 2.4
+    "hpa": 1015.9,
+    "inHg": 30,
+    "direction": "falling",
+    "changeHpa3h": -0.7
   },
   "speciesSignals": [
     {
@@ -203,21 +178,21 @@
       "label": "Speckled trout",
       "current": true,
       "reportCount": 9,
-      "lastReported": "2026-09-25"
+      "lastReported": "2026-09-26"
     },
     {
       "key": "redfish",
       "label": "Redfish",
       "current": true,
       "reportCount": 10,
-      "lastReported": "2026-09-25"
+      "lastReported": "2026-09-26"
     },
     {
       "key": "gulf_flounder",
       "label": "Flounder",
       "current": true,
       "reportCount": 5,
-      "lastReported": "2026-09-25"
+      "lastReported": "2026-09-26"
     },
     {
       "key": "black_drum",
@@ -237,21 +212,26 @@
   "solunar": {
     "majors": [
       {
+        "type": "overhead",
+        "peak": "12:10 AM",
+        "window": "11:10 PM–1:10 AM"
+      },
+      {
         "type": "underfoot",
-        "peak": "11:45 AM",
-        "window": "10:45 AM–12:45 PM"
+        "peak": "12:30 PM",
+        "window": "11:30 AM–1:30 PM"
       }
     ],
     "minors": [
       {
         "type": "moonset",
-        "peak": "5:30 AM",
-        "window": "5:00 AM–6:00 AM"
+        "peak": "6:30 AM",
+        "window": "6:00 AM–7:00 AM"
       },
       {
         "type": "moonrise",
-        "peak": "6:05 PM",
-        "window": "5:35 PM–6:35 PM"
+        "peak": "6:35 PM",
+        "window": "6:05 PM–7:05 PM"
       }
     ]
   }
