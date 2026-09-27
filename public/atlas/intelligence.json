@@ -1,46 +1,38 @@
 {
   "type": "FishingIntelligence",
   "region": "choctawhatchee_bay",
-  "generatedAt": "2026-09-26",
+  "generatedAt": "2026-09-27",
   "scopeNote": "Regional reports support timing and species activity only. They do not prove a catch, depth, bottom type, or safe navigation at a mapped Jolly Bay feature.",
   "currentConditions": {
-    "wind": "N 0 to 5 mph",
-    "windDir": "N",
-    "tide": "High tide ~8:42 AM · Low tide ~1:22 AM · Sunrise 6:34 AM",
+    "wind": "NW 0 to 5 mph",
+    "windDir": "NW",
+    "tide": "High tide ~6:29 PM · Low tide ~3:04 AM · Sunrise 6:34 AM",
     "tideEvents": [
       {
         "type": "L",
-        "time": "1:22 AM"
+        "time": "3:04 AM"
       },
       {
         "type": "H",
-        "time": "8:42 AM"
-      },
-      {
-        "type": "L",
-        "time": "9:50 AM"
-      },
-      {
-        "type": "H",
-        "time": "6:19 PM"
+        "time": "6:29 PM"
       }
     ],
     "waterTemp": 85,
     "sky": "Bright sun",
-    "stormChance": 0,
+    "stormChance": 2,
     "pressure": {
-      "hpa": 1017.7,
-      "inHg": 30.05,
-      "direction": "rising",
-      "changeHpa3h": 2.3
+      "hpa": 1013.7,
+      "inHg": 29.93,
+      "direction": "steady",
+      "changeHpa3h": -0.1
     }
   },
   "currentReport": {
     "kind": "current_regional_report",
-    "date": "2026-09-26",
-    "displayDate": "September 26, 2026",
-    "summary": "The early-fall transition is delivering one of the better inshore windows of the year around Choctawhatchee Bay and Destin, with water temps at 85°F. Redfish are the standout target right now — both slot-sized fish and larger bulls are accessible, with bigger reds holding near bridges where live croakers and spot minnows are the preferred bait. Flounder and speckled trout are also producing well, showing up mixed in with the redfish bite as bait has become much easier to locate in the mornings. Structure-oriented fishing near the Destin Bridge, Brooks Bridge, jetties, and deeper docks is especially productive at the moment, with tide movement being a key factor. Note: this summary is based on the most recently available report covering the week of September 18–24, 2026.",
-    "attribution": "greatdaysoutdoors.com – Northwest Florida Fishing Report (Capt. Adam Schroeder, Ignite The Bite Charters, Destin) · Auto-refreshed via Claude API",
+    "date": "2026-09-27",
+    "displayDate": "September 27, 2026",
+    "summary": "The most recent available report covering this area is from the week of September 18–24, 2026 (about one week old). Capt. Adam Schroeder of Ignite The Bite Charters in Destin called the inshore bite one of the best he had seen all year, with bait now easy to find early in the morning and redfish, flounder, and trout all responding well around the Destin-area bridges and structure. Both slot-sized reds and bull redfish are biting, with an outgoing tide around the bridges being a favored setup; live croakers and spot minnows are the go-to baits for larger fish. The week prior (Sept 4–10), Capt. Blake Nelson with Last Cast Charters reported that bait schools were pushing from open water into bayous, flats, and bridge areas throughout Choctawhatchee Bay, setting up improving redfish and general flats action expected to build toward October. Water temperature at this location today is 85°F.",
+    "attribution": "greatdaysoutdoors.com Northwest Florida Fishing Report (Sept 18–24, 2026 and Sept 4–10, 2026 editions) · Auto-refreshed via Claude API",
     "sourceIds": [
       "report-aHR0cHM6Ly9ncmVhdG"
     ],
@@ -50,35 +42,27 @@
       "gulf_flounder"
     ],
     "conditions": {
-      "wind": "N 0 to 5 mph",
-      "windDir": "N",
-      "tide": "High tide ~8:42 AM · Low tide ~1:22 AM · Sunrise 6:34 AM",
+      "wind": "NW 0 to 5 mph",
+      "windDir": "NW",
+      "tide": "High tide ~6:29 PM · Low tide ~3:04 AM · Sunrise 6:34 AM",
       "tideEvents": [
         {
           "type": "L",
-          "time": "1:22 AM"
+          "time": "3:04 AM"
         },
         {
           "type": "H",
-          "time": "8:42 AM"
-        },
-        {
-          "type": "L",
-          "time": "9:50 AM"
-        },
-        {
-          "type": "H",
-          "time": "6:19 PM"
+          "time": "6:29 PM"
         }
       ],
       "waterTemp": 85,
       "sky": "Bright sun",
-      "stormChance": 0,
+      "stormChance": 2,
       "pressure": {
-        "hpa": 1017.7,
-        "inHg": 30.05,
-        "direction": "rising",
-        "changeHpa3h": 2.3
+        "hpa": 1013.7,
+        "inHg": 29.93,
+        "direction": "steady",
+        "changeHpa3h": -0.1
       }
     }
   },
@@ -87,8 +71,8 @@
       "kind": "archived_app_snapshot",
       "date": "2026-09-26",
       "displayDate": "September 26, 2026",
-      "summary": "The most recent available report (week of September 18–24, 2026) points to one of the better inshore stretches of the year around Destin and Choctawhatchee Bay. Bait is now abundant and easy to find early in the morning, which is directly fueling strong action on redfish and flounder, with trout mixed in as well. Both bull reds and slot-sized redfish are biting well, especially on outgoing tides around bridges — croakers and spot minnows are the top live-bait choices for larger fish. Flounder are being caught as part of mixed-bag efforts alongside redfish, and the overall inshore picture, with water temperature at 86°F, reflects a classic early-fall transition kicking into gear across the area.",
-      "attribution": "Great Days Outdoors – Northwest Florida Fishing Report (Sept. 18–24, 2026), featuring Capt. Adam Schroeder, Ignite The Bite Charters, Destin · Auto-refreshed via Claude API",
+      "summary": "The early-fall transition is delivering one of the better inshore windows of the year around Choctawhatchee Bay and Destin, with water temps at 85°F. Redfish are the standout target right now — both slot-sized fish and larger bulls are accessible, with bigger reds holding near bridges where live croakers and spot minnows are the preferred bait. Flounder and speckled trout are also producing well, showing up mixed in with the redfish bite as bait has become much easier to locate in the mornings. Structure-oriented fishing near the Destin Bridge, Brooks Bridge, jetties, and deeper docks is especially productive at the moment, with tide movement being a key factor. Note: this summary is based on the most recently available report covering the week of September 18–24, 2026.",
+      "attribution": "greatdaysoutdoors.com – Northwest Florida Fishing Report (Capt. Adam Schroeder, Ignite The Bite Charters, Destin) · Auto-refreshed via Claude API",
       "sourceIds": [
         "report-aHR0cHM6Ly9ncmVhdG"
       ],
@@ -119,14 +103,14 @@
             "time": "6:19 PM"
           }
         ],
-        "waterTemp": 86,
+        "waterTemp": 85,
         "sky": "Bright sun",
         "stormChance": 0,
         "pressure": {
-          "hpa": 1015.9,
-          "inHg": 30,
-          "direction": "falling",
-          "changeHpa3h": -0.7
+          "hpa": 1017.7,
+          "inHg": 30.05,
+          "direction": "rising",
+          "changeHpa3h": 2.3
         }
       }
     },
@@ -348,7 +332,7 @@
       "label": "Speckled trout",
       "current": true,
       "reportCount": 9,
-      "lastReported": "2026-09-26",
+      "lastReported": "2026-09-27",
       "evidenceLevel": "current_regional_report"
     },
     {
@@ -356,7 +340,7 @@
       "label": "Redfish",
       "current": true,
       "reportCount": 10,
-      "lastReported": "2026-09-26",
+      "lastReported": "2026-09-27",
       "evidenceLevel": "current_regional_report"
     },
     {
@@ -364,7 +348,7 @@
       "label": "Flounder",
       "current": true,
       "reportCount": 5,
-      "lastReported": "2026-09-26",
+      "lastReported": "2026-09-27",
       "evidenceLevel": "current_regional_report"
     },
     {
