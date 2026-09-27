@@ -2,8 +2,8 @@
   "date": "Sunday, September 27, 2026",
   "wind": {
     "speed": 5,
-    "dir": "NW",
-    "description": "NW 0 to 5 mph"
+    "dir": "WNW",
+    "description": "WNW 0 to 5 mph"
   },
   "weather": "Sunny · High 88°F",
   "tide": "High tide ~6:29 PM · Low tide ~3:04 AM · Sunrise 6:34 AM",
@@ -24,57 +24,57 @@
   "moonPhase": "Full Moon (~98% illuminated) — strong tidal push (spring tide)",
   "waterClarity": "Slightly stained",
   "sky": "Bright sun",
-  "lastUpdated": "9/27/2026, 3:12:14 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
-  "localBiteReport": "The most recent available report covering this area is from the week of September 18–24, 2026 (about one week old). Capt. Adam Schroeder of Ignite The Bite Charters in Destin called the inshore bite one of the best he had seen all year, with bait now easy to find early in the morning and redfish, flounder, and trout all responding well around the Destin-area bridges and structure. Both slot-sized reds and bull redfish are biting, with an outgoing tide around the bridges being a favored setup; live croakers and spot minnows are the go-to baits for larger fish. The week prior (Sept 4–10), Capt. Blake Nelson with Last Cast Charters reported that bait schools were pushing from open water into bayous, flats, and bridge areas throughout Choctawhatchee Bay, setting up improving redfish and general flats action expected to build toward October. Water temperature at this location today is 85°F.",
-  "localBiteSource": "greatdaysoutdoors.com Northwest Florida Fishing Report (Sept 18–24, 2026 and Sept 4–10, 2026 editions) · Auto-refreshed via Claude API",
+  "lastUpdated": "9/27/2026, 8:53:33 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "localBiteReport": "The most current inshore report with Choctawhatchee Bay / Destin-area detail is from the week of September 18–24, 2026. Capt. Adam Schroeder (Ignite The Bite Charters, Destin) described the inshore bite as one of the best he had seen all year, with redfish — both slot fish and bull reds — leading the action around bridges and structure on an outgoing tide, while flounder and speckled trout were also actively feeding as abundant bait made them easy to find early in the morning. Water temp at this location is 85°F. An earlier report from September 4–10 noted Choctawhatchee Bay was already showing early fall transition signs, with baitfish pushing from open water into bayous, flats, and bridge areas and redfish activity on the flats expected to improve as September moved toward October. Live bait — scaled sardines, shrimp, and croakers — has been the dominant approach for reds, while the bridges (Brooks Bridge, Destin Bridge) and deeper docks are holding structure-oriented fish including flounder.",
+  "localBiteSource": "greatdaysoutdoors.com (Northwest Florida Fishing Report, week of Sept 18–24, 2026; week of Sept 4–10, 2026) · Auto-refreshed via Claude API",
   "localBiteUpdated": "September 27, 2026",
   "localBiteEvidence": [
     {
-      "title": "Northwest Florida Fishing Report for September 18 – 24, 2026",
+      "title": "Northwest Florida Fishing Report for September 18 - 24, 2026",
       "url": "https://greatdaysoutdoors.com/northwest-florida-fishing-report-for-september-18-24-2026/",
       "reportDate": "2026-09-18"
     },
     {
-      "title": "Northwest Florida Fishing Report for September 4 – 10, 2026",
+      "title": "Northwest Florida Fishing Report for September 4 - 10, 2026",
       "url": "https://greatdaysoutdoors.com/northwest-florida-fishing-report-for-september-4-10-2026/",
       "reportDate": "2026-09-04"
     }
   ],
   "previousDay": {
-    "date": "Saturday, September 26, 2026",
+    "date": "Sunday, September 27, 2026",
     "wind": {
-      "dir": "N",
+      "dir": "NW",
       "speed": 5
     },
-    "high": 85,
-    "stormChance": 0,
-    "tide": "High tide ~8:42 AM · Low tide ~1:22 AM · Sunrise 6:34 AM",
+    "high": 88,
+    "stormChance": 2,
+    "tide": "High tide ~6:29 PM · Low tide ~3:04 AM · Sunrise 6:34 AM",
     "waterTemp": 85
   },
   "openMeteo": [
     {
-      "high": 86,
-      "low": 63,
-      "stormChance": 3,
+      "high": 88,
+      "low": 64,
+      "stormChance": 1,
       "windSpeed": 7,
-      "windDir": "N",
+      "windDir": "NW",
       "summary": "Overcast"
     },
     {
       "high": 89,
       "low": 63,
-      "stormChance": 3,
+      "stormChance": 4,
       "windSpeed": 6,
       "windDir": "NW",
       "summary": "Overcast"
     },
     {
-      "high": 90,
-      "low": 67,
-      "stormChance": 2,
-      "windSpeed": 10,
-      "windDir": "S",
-      "summary": "Light drizzle"
+      "high": 91,
+      "low": 68,
+      "stormChance": 1,
+      "windSpeed": 9,
+      "windDir": "SW",
+      "summary": "Clear"
     }
   ],
   "forecast": [
@@ -84,13 +84,13 @@
       "label": "Today",
       "high": 88,
       "low": null,
-      "wind": "NW 0 to 5 mph",
+      "wind": "WNW 0 to 5 mph",
       "windSpeed": 5,
-      "windDir": "NW",
+      "windDir": "WNW",
       "storms": 2,
       "headline": "Sunny",
       "fishingScore": 8.9,
-      "aiCall": "Sunny, with a high near 88. Northwest wind 0 to 5 mph.",
+      "aiCall": "Sunny, with a high near 88. West northwest wind 0 to 5 mph.",
       "emoji": "☀️",
       "tideEvents": [
         {
@@ -142,7 +142,7 @@
       "storms": 3,
       "headline": "Sunny",
       "fishingScore": 8.9,
-      "aiCall": "Sunny, with a high near 88.",
+      "aiCall": "Sunny, with a high near 88. East southeast wind 0 to 5 mph.",
       "emoji": "☀️",
       "tideEvents": [
         {
@@ -156,10 +156,10 @@
   "dateISO": "2026-09-27",
   "waterTemp": 85,
   "pressure": {
-    "hpa": 1013.7,
-    "inHg": 29.93,
-    "direction": "steady",
-    "changeHpa3h": -0.1
+    "hpa": 1014.5,
+    "inHg": 29.96,
+    "direction": "rising",
+    "changeHpa3h": 2
   },
   "speciesSignals": [
     {
