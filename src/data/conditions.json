@@ -24,9 +24,9 @@
   "moonPhase": "Waning Gibbous (~95% illuminated) — strong tidal push (spring tide)",
   "waterClarity": "Slightly stained",
   "sky": "Bright sun",
-  "lastUpdated": "9/28/2026, 3:12:18 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
-  "localBiteReport": "Reports from the week of September 18–24 out of Destin describe one of the best inshore bites of the year on Choctawhatchee Bay, with redfish (both slot fish and bulls), flounder, and speckled trout all responding to a major increase in available baitfish. Capt. Adam Schroeder (Ignite The Bite Charters, Destin) noted that croakers and spot minnows are the go-to live baits for larger redfish around bridges, while flounder and trout are also mixed into the action when bait is present. Mangrove snapper are stacking around Brooks Bridge, Destin Bridge, jetties, and deeper docks, providing a bonus keeper species. Tidal movement is key — the outgoing tide around bridges has been the most productive window for redfish. Water temperature on the bay is currently 85°F.",
-  "localBiteSource": "greatdaysoutdoors.com (Northwest Florida Fishing Report, week of Sep 18–24, 2026) · Auto-refreshed via Claude API",
+  "lastUpdated": "9/28/2026, 11:43:31 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "localBiteReport": "Reports from the week of September 18–24 out of Destin (Capt. Adam Schroeder, Ignite The Bite Charters) describe the inshore bite around Choctawhatchee Bay as one of the best of the year, driven by a sudden abundance of bait that has activated redfish, flounder, and trout. Both bull reds and slot-sized redfish are biting well around the Destin bridges on an outgoing tide, with live croakers and spot minnows the top offerings for larger fish. Flounder are mixed in with the bridge and structure bite, and trout are also responding to the improved bait conditions. Water temperature as of today (September 28) is 85°F. Early fall conditions appear to be kicking in, with bait schools easier to locate each morning and fish behavior becoming more predictable around tidal movement.",
+  "localBiteSource": "greatdaysoutdoors.com (Northwest Florida Fishing Report, week of September 18–24, 2026, featuring Capt. Adam Schroeder / Ignite The Bite Charters, Destin) · Auto-refreshed via Claude API",
   "localBiteUpdated": "September 28, 2026",
   "localBiteEvidence": [
     {
@@ -36,40 +36,40 @@
     }
   ],
   "previousDay": {
-    "date": "Sunday, September 27, 2026",
+    "date": "Monday, September 28, 2026",
     "wind": {
-      "dir": "WNW",
+      "dir": "NNW",
       "speed": 5
     },
-    "high": 88,
-    "stormChance": 2,
-    "tide": "High tide ~6:29 PM · Low tide ~3:04 AM · Sunrise 6:34 AM",
+    "high": 87,
+    "stormChance": 4,
+    "tide": "High tide ~6:59 PM · Low tide ~4:25 AM · Sunrise 6:35 AM",
     "waterTemp": 85
   },
   "openMeteo": [
     {
-      "high": 88,
+      "high": 87,
       "low": 60,
-      "stormChance": 4,
+      "stormChance": 2,
       "windSpeed": 6,
       "windDir": "N",
       "summary": "Clear"
     },
     {
-      "high": 90,
+      "high": 91,
       "low": 63,
-      "stormChance": 3,
-      "windSpeed": 8,
-      "windDir": "S",
+      "stormChance": 4,
+      "windSpeed": 7,
+      "windDir": "NE",
       "summary": "Clear"
     },
     {
-      "high": 90,
-      "low": 71,
+      "high": 91,
+      "low": 69,
       "stormChance": 18,
-      "windSpeed": 13,
+      "windSpeed": 12,
       "windDir": "SE",
-      "summary": "Light drizzle"
+      "summary": "Rain showers"
     }
   ],
   "forecast": [
@@ -133,7 +133,7 @@
       "storms": 20,
       "headline": "Sunny then Slight Chance Showers And Thunderstorms",
       "fishingScore": 7.8,
-      "aiCall": "A slight chance of showers and thunderstorms after 1pm. Sunny, with a high near 88. Chance of precipitation is 20%.",
+      "aiCall": "A slight chance of showers and thunderstorms after 1pm. Sunny, with a high near 88. East southeast wind 5 to 10 mph. Chance of precipitation is 20%.",
       "emoji": "⛈️",
       "tideEvents": [
         {
@@ -151,10 +151,10 @@
   "dateISO": "2026-09-28",
   "waterTemp": 85,
   "pressure": {
-    "hpa": 1012,
-    "inHg": 29.88,
+    "hpa": 1013.7,
+    "inHg": 29.93,
     "direction": "steady",
-    "changeHpa3h": -0.4
+    "changeHpa3h": 0
   },
   "speciesSignals": [
     {
