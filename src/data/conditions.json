@@ -2,8 +2,8 @@
   "date": "Tuesday, September 29, 2026",
   "wind": {
     "speed": 5,
-    "dir": "E",
-    "description": "E 0 to 5 mph"
+    "dir": "SE",
+    "description": "SE 0 to 5 mph"
   },
   "weather": "Sunny · High 88°F",
   "tide": "High tide ~n/a · Low tide ~5:38 AM · Sunrise 6:35 AM",
@@ -20,9 +20,9 @@
   "moonPhase": "Waning Gibbous (~89% illuminated) — strong tidal push (spring tide)",
   "waterClarity": "Slightly stained",
   "sky": "Bright sun",
-  "lastUpdated": "9/29/2026, 3:12:20 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
-  "localBiteReport": "The most recent report with Choctawhatchee Bay/Destin inshore detail is from the week of September 18–24, 2026 (about 11 days old at time of writing). Capt. Adam Schroeder of Ignite The Bite Charters in Destin described the inshore bite as one of the best he has seen all year, driven largely by an abundance of bait that has become easy to locate early in the mornings. Redfish, flounder, and trout are all responding well and are the primary inshore targets right now around the bay. Water temperature at this location is 85°F. Early-fall conditions are setting up nicely for bay fishing, with bait schools pushing into shallower areas and game fish following — a pattern that typically holds and improves as September winds down.",
-  "localBiteSource": "Great Days Outdoors – Northwest Florida Fishing Report (greatdaysoutdoors.com) · Auto-refreshed via Claude API",
+  "lastUpdated": "9/29/2026, 9:49:19 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "localBiteReport": "As of the week of September 18–24, 2026 (the most recent report available at time of writing), the inshore bite around Destin and Choctawhatchee Bay is described by Capt. Adam Schroeder of Ignite The Bite Charters as one of the best of the year. Redfish — both slot fish and bull reds — are active around bridges, jetties, and structure, with an outgoing tide being the most productive window; Capt. Schroeder favors live croakers and spot minnows for targeting larger reds at the bridges. Flounder and speckled trout are also in the mix, with bait (scaled sardines, greenies) now easy to find in the mornings and pushing onto the flats and into bayous, making the fall transition noticeably underway. Water temperature at the bay today is 85°F. Anglers should note these reports are from the week of September 18–24; no newer NW Florida inshore-specific report was published as of September 29.",
+  "localBiteSource": "greatdaysoutdoors.com (Northwest Florida Fishing Report, Sept 18–24, 2026) · Auto-refreshed via Claude API",
   "localBiteUpdated": "September 29, 2026",
   "localBiteEvidence": [
     {
@@ -32,40 +32,40 @@
     }
   ],
   "previousDay": {
-    "date": "Monday, September 28, 2026",
+    "date": "Tuesday, September 29, 2026",
     "wind": {
-      "dir": "NNW",
+      "dir": "E",
       "speed": 5
     },
-    "high": 87,
-    "stormChance": 4,
-    "tide": "High tide ~6:59 PM · Low tide ~4:25 AM · Sunrise 6:35 AM",
+    "high": 88,
+    "stormChance": 2,
+    "tide": "High tide ~n/a · Low tide ~5:38 AM · Sunrise 6:35 AM",
     "waterTemp": 85
   },
   "openMeteo": [
     {
-      "high": 89,
-      "low": 62,
+      "high": 90,
+      "low": 63,
       "stormChance": 2,
-      "windSpeed": 6,
-      "windDir": "NE",
+      "windSpeed": 7,
+      "windDir": "SE",
+      "summary": "Clear"
+    },
+    {
+      "high": 91,
+      "low": 68,
+      "stormChance": 8,
+      "windSpeed": 11,
+      "windDir": "E",
       "summary": "Clear"
     },
     {
       "high": 90,
-      "low": 68,
-      "stormChance": 30,
-      "windSpeed": 9,
-      "windDir": "E",
-      "summary": "Partly cloudy"
-    },
-    {
-      "high": 91,
       "low": 72,
-      "stormChance": 56,
-      "windSpeed": 13,
+      "stormChance": 59,
+      "windSpeed": 12,
       "windDir": "SE",
-      "summary": "Light drizzle"
+      "summary": "Overcast"
     }
   ],
   "forecast": [
@@ -75,13 +75,13 @@
       "label": "Today",
       "high": 88,
       "low": null,
-      "wind": "E 0 to 5 mph",
+      "wind": "SE 0 to 5 mph",
       "windSpeed": 5,
-      "windDir": "E",
+      "windDir": "SE",
       "storms": 2,
       "headline": "Sunny",
       "fishingScore": 8.9,
-      "aiCall": "Sunny, with a high near 88. East wind 0 to 5 mph.",
+      "aiCall": "Sunny, with a high near 88. Southeast wind 0 to 5 mph.",
       "emoji": "☀️",
       "tideEvents": [
         {
@@ -103,7 +103,7 @@
       "storms": 29,
       "headline": "Sunny then Slight Chance Showers And Thunderstorms",
       "fishingScore": 7.3,
-      "aiCall": "A slight chance of showers and thunderstorms between 1pm and 2pm, then a chance of showers and thunderstorms between 2pm and 4pm. Sunny. High near 88, with temperatures falling to around 85 in the afternoon. East southeast wind 0 to 10 mph. Chance of precipitation is 30%.",
+      "aiCall": "A slight chance of showers and thunderstorms between 1pm and 2pm, then a chance of showers and thunderstorms between 2pm and 4pm. Sunny. High near 88, with temperatures falling to around 85 in the afternoon. East southeast wind 0 to 10 mph. Chance of precipitation is 30%. New rainfall amounts between a tenth and quarter of an inch possible.",
       "emoji": "⛈️",
       "tideEvents": [
         {
@@ -129,7 +129,7 @@
       "storms": 65,
       "headline": "Showers And Thunderstorms Likely",
       "fishingScore": 5.9,
-      "aiCall": "A chance of rain showers between 7am and 10am, then showers and thunderstorms likely. Sunny, with a high near 87. Chance of precipitation is 70%.",
+      "aiCall": "A chance of rain showers between 7am and 10am, then showers and thunderstorms likely. Sunny, with a high near 87. East southeast wind 5 to 10 mph. Chance of precipitation is 70%.",
       "emoji": "⛈️",
       "tideEvents": [
         {
@@ -147,10 +147,10 @@
   "dateISO": "2026-09-29",
   "waterTemp": 85,
   "pressure": {
-    "hpa": 1014.5,
-    "inHg": 29.96,
+    "hpa": 1016.2,
+    "inHg": 30.01,
     "direction": "rising",
-    "changeHpa3h": 0.7
+    "changeHpa3h": 2.2
   },
   "speciesSignals": [
     {
