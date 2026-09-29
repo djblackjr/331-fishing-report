@@ -1,38 +1,34 @@
 {
   "type": "FishingIntelligence",
   "region": "choctawhatchee_bay",
-  "generatedAt": "2026-09-28",
+  "generatedAt": "2026-09-29",
   "scopeNote": "Regional reports support timing and species activity only. They do not prove a catch, depth, bottom type, or safe navigation at a mapped Jolly Bay feature.",
   "currentConditions": {
-    "wind": "NNW 0 to 5 mph",
-    "windDir": "NNW",
-    "tide": "High tide ~6:59 PM · Low tide ~4:25 AM · Sunrise 6:35 AM",
+    "wind": "E 0 to 5 mph",
+    "windDir": "E",
+    "tide": "High tide ~n/a · Low tide ~5:38 AM · Sunrise 6:35 AM",
     "tideEvents": [
       {
         "type": "L",
-        "time": "4:25 AM"
-      },
-      {
-        "type": "H",
-        "time": "6:59 PM"
+        "time": "5:38 AM"
       }
     ],
     "waterTemp": 85,
     "sky": "Bright sun",
-    "stormChance": 4,
+    "stormChance": 2,
     "pressure": {
-      "hpa": 1013.7,
-      "inHg": 29.93,
-      "direction": "steady",
-      "changeHpa3h": 0
+      "hpa": 1014.5,
+      "inHg": 29.96,
+      "direction": "rising",
+      "changeHpa3h": 0.7
     }
   },
   "currentReport": {
     "kind": "current_regional_report",
-    "date": "2026-09-28",
-    "displayDate": "September 28, 2026",
-    "summary": "Reports from the week of September 18–24 out of Destin (Capt. Adam Schroeder, Ignite The Bite Charters) describe the inshore bite around Choctawhatchee Bay as one of the best of the year, driven by a sudden abundance of bait that has activated redfish, flounder, and trout. Both bull reds and slot-sized redfish are biting well around the Destin bridges on an outgoing tide, with live croakers and spot minnows the top offerings for larger fish. Flounder are mixed in with the bridge and structure bite, and trout are also responding to the improved bait conditions. Water temperature as of today (September 28) is 85°F. Early fall conditions appear to be kicking in, with bait schools easier to locate each morning and fish behavior becoming more predictable around tidal movement.",
-    "attribution": "greatdaysoutdoors.com (Northwest Florida Fishing Report, week of September 18–24, 2026, featuring Capt. Adam Schroeder / Ignite The Bite Charters, Destin) · Auto-refreshed via Claude API",
+    "date": "2026-09-29",
+    "displayDate": "September 29, 2026",
+    "summary": "The most recent report with Choctawhatchee Bay/Destin inshore detail is from the week of September 18–24, 2026 (about 11 days old at time of writing). Capt. Adam Schroeder of Ignite The Bite Charters in Destin described the inshore bite as one of the best he has seen all year, driven largely by an abundance of bait that has become easy to locate early in the mornings. Redfish, flounder, and trout are all responding well and are the primary inshore targets right now around the bay. Water temperature at this location is 85°F. Early-fall conditions are setting up nicely for bay fishing, with bait schools pushing into shallower areas and game fish following — a pattern that typically holds and improves as September winds down.",
+    "attribution": "Great Days Outdoors – Northwest Florida Fishing Report (greatdaysoutdoors.com) · Auto-refreshed via Claude API",
     "sourceIds": [
       "report-aHR0cHM6Ly9ncmVhdG"
     ],
@@ -42,27 +38,23 @@
       "gulf_flounder"
     ],
     "conditions": {
-      "wind": "NNW 0 to 5 mph",
-      "windDir": "NNW",
-      "tide": "High tide ~6:59 PM · Low tide ~4:25 AM · Sunrise 6:35 AM",
+      "wind": "E 0 to 5 mph",
+      "windDir": "E",
+      "tide": "High tide ~n/a · Low tide ~5:38 AM · Sunrise 6:35 AM",
       "tideEvents": [
         {
           "type": "L",
-          "time": "4:25 AM"
-        },
-        {
-          "type": "H",
-          "time": "6:59 PM"
+          "time": "5:38 AM"
         }
       ],
       "waterTemp": 85,
       "sky": "Bright sun",
-      "stormChance": 4,
+      "stormChance": 2,
       "pressure": {
-        "hpa": 1013.7,
-        "inHg": 29.93,
-        "direction": "steady",
-        "changeHpa3h": 0
+        "hpa": 1014.5,
+        "inHg": 29.96,
+        "direction": "rising",
+        "changeHpa3h": 0.7
       }
     }
   },
@@ -71,8 +63,8 @@
       "kind": "archived_app_snapshot",
       "date": "2026-09-28",
       "displayDate": "September 28, 2026",
-      "summary": "Reports from the week of September 18–24 out of Destin describe one of the best inshore bites of the year on Choctawhatchee Bay, with redfish (both slot fish and bulls), flounder, and speckled trout all responding to a major increase in available baitfish. Capt. Adam Schroeder (Ignite The Bite Charters, Destin) noted that croakers and spot minnows are the go-to live baits for larger redfish around bridges, while flounder and trout are also mixed into the action when bait is present. Mangrove snapper are stacking around Brooks Bridge, Destin Bridge, jetties, and deeper docks, providing a bonus keeper species. Tidal movement is key — the outgoing tide around bridges has been the most productive window for redfish. Water temperature on the bay is currently 85°F.",
-      "attribution": "greatdaysoutdoors.com (Northwest Florida Fishing Report, week of Sep 18–24, 2026) · Auto-refreshed via Claude API",
+      "summary": "Reports from the week of September 18–24 out of Destin (Capt. Adam Schroeder, Ignite The Bite Charters) describe the inshore bite around Choctawhatchee Bay as one of the best of the year, driven by a sudden abundance of bait that has activated redfish, flounder, and trout. Both bull reds and slot-sized redfish are biting well around the Destin bridges on an outgoing tide, with live croakers and spot minnows the top offerings for larger fish. Flounder are mixed in with the bridge and structure bite, and trout are also responding to the improved bait conditions. Water temperature as of today (September 28) is 85°F. Early fall conditions appear to be kicking in, with bait schools easier to locate each morning and fish behavior becoming more predictable around tidal movement.",
+      "attribution": "greatdaysoutdoors.com (Northwest Florida Fishing Report, week of September 18–24, 2026, featuring Capt. Adam Schroeder / Ignite The Bite Charters, Destin) · Auto-refreshed via Claude API",
       "sourceIds": [
         "report-aHR0cHM6Ly9ncmVhdG"
       ],
@@ -99,10 +91,10 @@
         "sky": "Bright sun",
         "stormChance": 4,
         "pressure": {
-          "hpa": 1012,
-          "inHg": 29.88,
+          "hpa": 1013.7,
+          "inHg": 29.93,
           "direction": "steady",
-          "changeHpa3h": -0.4
+          "changeHpa3h": 0
         }
       }
     },
@@ -324,7 +316,7 @@
       "label": "Speckled trout",
       "current": true,
       "reportCount": 9,
-      "lastReported": "2026-09-28",
+      "lastReported": "2026-09-29",
       "evidenceLevel": "current_regional_report"
     },
     {
@@ -332,7 +324,7 @@
       "label": "Redfish",
       "current": true,
       "reportCount": 10,
-      "lastReported": "2026-09-28",
+      "lastReported": "2026-09-29",
       "evidenceLevel": "current_regional_report"
     },
     {
@@ -340,7 +332,7 @@
       "label": "Flounder",
       "current": true,
       "reportCount": 5,
-      "lastReported": "2026-09-28",
+      "lastReported": "2026-09-29",
       "evidenceLevel": "current_regional_report"
     },
     {
