@@ -24,9 +24,9 @@
   "moonPhase": "Waning Gibbous (~81% illuminated) — strong tidal push (spring tide)",
   "waterClarity": "Slightly stained",
   "sky": "Cloudy",
-  "lastUpdated": "9/30/2026, 3:12:17 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
-  "localBiteReport": "The most recent available reports covering Choctawhatchee Bay and the Destin/Freeport area are from the week of September 18–24, 2026 (about 1–1.5 weeks old as of today). The fall transition is underway, and the inshore bite around Destin and Choctawhatchee Bay is described as one of the best of the year: redfish, flounder, and speckled trout are all responding to an abundance of bait that has become much easier to find in the mornings. Redfish are the standout target, with croakers and spot minnows as preferred live baits for bigger fish around bridge structure, while flounder are also mixing in well. Water temperature at this location today is 85°F. The September 4–10 report from Capt. Blake Nelson (Last Cast Charters, specifically covering Choctawhatchee Bay) noted that bait schools — primarily greenies — had pushed from deeper open water onto flats and into bayous, which was drawing Spanish mackerel but also setting up improving redfish and general flats activity expected to build through October.",
-  "localBiteSource": "greatdaysoutdoors.com (Northwest Florida Fishing Report, weeks of Sept 18–24 and Sept 4–10, 2026); halfhitch.com (Destin Fishing Report 9-7-26, listed as most recent post but full bay detail not accessible via search) · Auto-refreshed via Claude API",
+  "lastUpdated": "9/30/2026, 9:52:55 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "localBiteReport": "The fall transition is well underway around Choctawhatchee Bay and the Destin area, and the inshore bite is reportedly among the best of the year according to local guides. Capt. Adam Schroeder of Ignite The Bite Charters (Destin) notes that bait is now easy to locate in the mornings, with redfish, flounder, trout, and mangrove snapper all actively responding. Redfish around bridges are responding well to live croakers and spot minnows, while the overall pattern is shifting from the sluggish mid-summer heat toward more consistent early-fall feeding windows. The most recent Choctawhatchee Bay-specific report (week of Sept 4–10) from Capt. Blake Nelson with Last Cast Charters confirmed sight-fishing redfish opportunities are improving as bait schools push from open water onto flats and into bayous. Water temperature is 85°F. Note: the Great Days Outdoors report covering Sept 25–Oct 1 focused primarily on offshore grouper fishing and did not include updated Destin inshore specifics; the Sept 18–24 report is the most current with detailed inshore bay content.",
+  "localBiteSource": "Great Days Outdoors (greatdaysoutdoors.com) — Northwest Florida Fishing Reports for Sept 4–10, 2026 and Sept 18–24, 2026, featuring Capt. Blake Nelson (Last Cast Charters, Choctawhatchee Bay) and Capt. Adam Schroeder (Ignite The Bite Charters, Destin). Half Hitch Tackle (halfhitch.com) Destin Fishing Report 9-7-26 confirmed posted but full body not retrievable via search. · Auto-refreshed via Claude API",
   "localBiteUpdated": "September 30, 2026",
   "localBiteEvidence": [
     {
@@ -46,40 +46,40 @@
     }
   ],
   "previousDay": {
-    "date": "Tuesday, September 29, 2026",
+    "date": "Wednesday, September 30, 2026",
     "wind": {
-      "dir": "SE",
-      "speed": 5
+      "dir": "ESE",
+      "speed": 10
     },
-    "high": 88,
-    "stormChance": 2,
-    "tide": "High tide ~n/a · Low tide ~5:38 AM · Sunrise 6:35 AM",
+    "high": 89,
+    "stormChance": 20,
+    "tide": "High tide ~7:45 PM · Low tide ~6:59 AM · Sunrise 6:36 AM",
     "waterTemp": 85
   },
   "openMeteo": [
     {
       "high": 90,
       "low": 67,
-      "stormChance": 12,
-      "windSpeed": 9,
-      "windDir": "E",
+      "stormChance": 7,
+      "windSpeed": 10,
+      "windDir": "SE",
       "summary": "Mostly clear"
     },
     {
-      "high": 90,
-      "low": 72,
-      "stormChance": 45,
-      "windSpeed": 9,
-      "windDir": "SE",
-      "summary": "Light drizzle"
+      "high": 89,
+      "low": 71,
+      "stormChance": 32,
+      "windSpeed": 14,
+      "windDir": "E",
+      "summary": "Overcast"
     },
     {
-      "high": 86,
-      "low": 73,
-      "stormChance": 70,
+      "high": 87,
+      "low": 72,
+      "stormChance": 77,
       "windSpeed": 9,
       "windDir": "SE",
-      "summary": "Thunderstorm"
+      "summary": "Rain showers"
     }
   ],
   "forecast": [
@@ -121,7 +121,7 @@
       "storms": 51,
       "headline": "Chance Showers And Thunderstorms",
       "fishingScore": 6.5,
-      "aiCall": "A chance of rain showers between 9am and 10am, then a slight chance of showers and thunderstorms between 10am and 11am, then a chance of showers and thunderstorms between 11am and noon, then a chance of showers and thunderstorms. Sunny, with a high near 88. East southeast wind 5 to 10 mph. Chance of precipitation is 50%.",
+      "aiCall": "A chance of rain showers between 9am and 10am, then a slight chance of showers and thunderstorms between 10am and 11am, then a chance of showers and thunderstorms between 11am and noon, then a chance of showers and thunderstorms. Sunny, with a high near 88. East southeast wind 5 to 10 mph. Chance of precipitation is 50%. New rainfall amounts less than a tenth of an inch possible.",
       "emoji": "⛈️",
       "tideEvents": [
         {
@@ -147,7 +147,7 @@
       "storms": 77,
       "headline": "Showers And Thunderstorms",
       "fishingScore": 5.4,
-      "aiCall": "Rain showers likely before 10am, then showers and thunderstorms. Mostly sunny, with a high near 86. Chance of precipitation is 80%.",
+      "aiCall": "Rain showers likely before 10am, then showers and thunderstorms. Mostly sunny, with a high near 86. East southeast wind 5 to 10 mph. Chance of precipitation is 80%.",
       "emoji": "⛈️",
       "tideEvents": [
         {
@@ -165,10 +165,10 @@
   "dateISO": "2026-09-30",
   "waterTemp": 85,
   "pressure": {
-    "hpa": 1013.9,
-    "inHg": 29.94,
-    "direction": "falling",
-    "changeHpa3h": -1.2
+    "hpa": 1017,
+    "inHg": 30.03,
+    "direction": "rising",
+    "changeHpa3h": 1.9
   },
   "speciesSignals": [
     {
