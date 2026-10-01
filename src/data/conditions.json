@@ -2,8 +2,8 @@
   "date": "Thursday, October 1, 2026",
   "wind": {
     "speed": 10,
-    "dir": "ESE",
-    "description": "ESE 5 to 10 mph"
+    "dir": "SE",
+    "description": "SE 5 to 10 mph"
   },
   "weather": "Slight Chance Showers And Thunderstorms then Showers And Thunderstorms Likely · High 87°F",
   "tide": "High tide ~8:40 PM · Low tide ~8:30 AM · Sunrise 6:37 AM",
@@ -24,62 +24,52 @@
   "moonPhase": "Last Quarter (~66% illuminated) — moderate tidal push",
   "waterClarity": "Slightly stained",
   "sky": "Cloudy",
-  "lastUpdated": "10/1/2026, 3:12:14 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
-  "localBiteReport": "The most recent verifiable Destin-area fishing reports are from Half Hitch's weekly series, with the latest confirmed post dated September 28, 2026 — just days ago — though the full bay-fishing section of that specific report was not retrievable. Based on the September 7, 2026 Half Hitch report (the most recent with readable content), the fall transition was underway with redfish and speckled trout active in the bay. October is historically one of the best months for inshore action on Choctawhatchee Bay: redfish are rated 'Great' all month, speckled trout are consistently strong, flounder typically begin showing up in earnest around the Destin harbor and dock structures by early October, and sheepshead start building to their fall peak around bridge pilings and jetties. Water temp for this area today is 85°F. The Destin Fishing Rodeo kicks off October 1, with inshore categories including redfish, flounder, sheepshead, and speckled trout all on the board.",
-  "localBiteSource": "Half Hitch Tackle (halfhitch.com) — Destin Fishing Report 9-28-26 (most recent, listing confirmed; full body not retrieved) and Destin Fishing Report 9-7-26 (most recent with readable content); The Destin Log (thedestinlog.com) — Destin Fishing Rodeo preview dated September 30, 2026 · Auto-refreshed via Claude API",
+  "lastUpdated": "10/1/2026, 10:24:29 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "localBiteReport": "Note: The most recent reports found are from late September 2026 (approximately one to two weeks old), not this exact week. According to a Northwest Florida Fishing Report covering September 18–24, 2026, Capt. Adam Schroeder of Ignite The Bite Charters in Destin described the inshore bite around Choctawhatchee Bay as one of the best he'd seen all year, with redfish, flounder, and trout all responding well as bait became easy to find in the mornings. Larger redfish were holding around bridge structure, best targeted with croakers or spot minnows as live bait. Water temperature for today's session is 85°F. With October now underway, the fall transition should be pushing fish shallower onto the flats and into the bayous, making this one of the better windows of the year for inshore bay species.",
+  "localBiteSource": "greatdaysoutdoors.com (Northwest Florida Fishing Report, week of Sept 18–24, 2026, featuring Capt. Adam Schroeder / Ignite The Bite Charters, Destin) · Auto-refreshed via Claude API",
   "localBiteUpdated": "October 1, 2026",
   "localBiteEvidence": [
     {
-      "title": "Destin Fishing Report 9-28-26 — Half Hitch",
-      "url": "https://halfhitch.com/blog/destin-fishing-report-9-28-26",
-      "reportDate": "2026-09-28"
-    },
-    {
-      "title": "Destin Fishing Report 9-7-26 — Half Hitch",
-      "url": "https://halfhitch.com/blog/destin-fishing-report-9-7-26",
-      "reportDate": "2026-09-07"
-    },
-    {
-      "title": "5 things to know before you go to the Destin Fishing Rodeo — The Destin Log",
-      "url": "https://thedestinlog.com/story/sports/outdoors/fishing/2026/09/30/what-to-expect-at-the-destin-fishing-rodeo/92010208007",
-      "reportDate": "2026-09-30"
+      "title": "Northwest Florida Fishing Report for September 18 – 24, 2026",
+      "url": "https://greatdaysoutdoors.com/northwest-florida-fishing-report-for-september-18-24-2026/",
+      "reportDate": "2026-09-18"
     }
   ],
   "previousDay": {
-    "date": "Wednesday, September 30, 2026",
+    "date": "Thursday, October 1, 2026",
     "wind": {
       "dir": "ESE",
       "speed": 10
     },
-    "high": 89,
-    "stormChance": 20,
-    "tide": "High tide ~7:45 PM · Low tide ~6:59 AM · Sunrise 6:36 AM",
+    "high": 87,
+    "stormChance": 57,
+    "tide": "High tide ~8:40 PM · Low tide ~8:30 AM · Sunrise 6:37 AM",
     "waterTemp": 85
   },
   "openMeteo": [
     {
-      "high": 88,
-      "low": 70,
-      "stormChance": 28,
-      "windSpeed": 9,
+      "high": 89,
+      "low": 71,
+      "stormChance": 21,
+      "windSpeed": 10,
       "windDir": "E",
       "summary": "Overcast"
     },
     {
-      "high": 83,
+      "high": 85,
       "low": 74,
-      "stormChance": 67,
-      "windSpeed": 9,
+      "stormChance": 45,
+      "windSpeed": 11,
       "windDir": "E",
-      "summary": "Light drizzle"
+      "summary": "Rain showers"
     },
     {
-      "high": 86,
-      "low": 72,
-      "stormChance": 83,
-      "windSpeed": 11,
+      "high": 87,
+      "low": 73,
+      "stormChance": 82,
+      "windSpeed": 12,
       "windDir": "SE",
-      "summary": "Rain showers"
+      "summary": "Drizzle"
     }
   ],
   "forecast": [
@@ -89,13 +79,13 @@
       "label": "Today",
       "high": 87,
       "low": null,
-      "wind": "ESE 5 to 10 mph",
+      "wind": "SE 5 to 10 mph",
       "windSpeed": 10,
-      "windDir": "ESE",
+      "windDir": "SE",
       "storms": 57,
       "headline": "Slight Chance Showers And Thunderstorms then Showers And Thunderstorms Likely",
       "fishingScore": 6.2,
-      "aiCall": "A slight chance of showers and thunderstorms between 11am and noon, then showers and thunderstorms likely between noon and 3pm, then a chance of showers and thunderstorms. Mostly sunny, with a high near 87. East southeast wind 5 to 10 mph. Chance of precipitation is 60%. New rainfall amounts less than a tenth of an inch possible.",
+      "aiCall": "A slight chance of showers and thunderstorms between 11am and noon, then showers and thunderstorms likely between noon and 3pm, then a chance of showers and thunderstorms. Mostly sunny, with a high near 87. Southeast wind 5 to 10 mph. Chance of precipitation is 60%. New rainfall amounts less than a tenth of an inch possible.",
       "emoji": "⛈️",
       "tideEvents": [
         {
@@ -121,7 +111,7 @@
       "storms": 74,
       "headline": "Chance Showers And Thunderstorms",
       "fishingScore": 5.5,
-      "aiCall": "A slight chance of showers and thunderstorms before 7am, then a chance of showers and thunderstorms between 7am and 10am, then a chance of showers and thunderstorms between 10am and 11am, then showers and thunderstorms likely between 11am and noon, then a chance of showers and thunderstorms between noon and 1pm, then showers and thunderstorms between 1pm and 3pm, then a chance of showers and thunderstorms. Mostly sunny. High near 85, with temperatures falling to around 81 in the afternoon. East southeast wind 5 to 10 mph. Chance of precipitation is 70%.",
+      "aiCall": "A slight chance of showers and thunderstorms before 7am, then a chance of showers and thunderstorms between 7am and 10am, then a chance of showers and thunderstorms between 10am and 11am, then showers and thunderstorms likely between 11am and noon, then a chance of showers and thunderstorms between noon and 1pm, then showers and thunderstorms between 1pm and 3pm, then a chance of showers and thunderstorms. Mostly sunny. High near 85, with temperatures falling to around 81 in the afternoon. East southeast wind 5 to 10 mph. Chance of precipitation is 70%. New rainfall amounts between a quarter and half of an inch possible.",
       "emoji": "⛈️",
       "tideEvents": [
         {
@@ -147,7 +137,7 @@
       "storms": 86,
       "headline": "Showers And Thunderstorms",
       "fishingScore": 5.1,
-      "aiCall": "Rain showers likely before 7am, then showers and thunderstorms. Mostly cloudy, with a high near 84. Chance of precipitation is 90%.",
+      "aiCall": "Rain showers likely before 7am, then showers and thunderstorms. Mostly cloudy, with a high near 84. Southeast wind around 5 mph. Chance of precipitation is 90%.",
       "emoji": "⛈️",
       "tideEvents": [
         {
@@ -165,10 +155,10 @@
   "dateISO": "2026-10-01",
   "waterTemp": 85,
   "pressure": {
-    "hpa": 1013.9,
-    "inHg": 29.94,
-    "direction": "falling",
-    "changeHpa3h": -1.9
+    "hpa": 1016.2,
+    "inHg": 30.01,
+    "direction": "steady",
+    "changeHpa3h": 0.2
   },
   "speciesSignals": [
     {
@@ -202,7 +192,7 @@
     {
       "key": "sheepshead",
       "label": "Sheepshead",
-      "current": true,
+      "current": false,
       "reportCount": 2,
       "lastReported": "2026-10-01"
     }
