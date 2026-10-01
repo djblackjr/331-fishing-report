@@ -1,70 +1,71 @@
 {
   "type": "FishingIntelligence",
   "region": "choctawhatchee_bay",
-  "generatedAt": "2026-09-30",
+  "generatedAt": "2026-10-01",
   "scopeNote": "Regional reports support timing and species activity only. They do not prove a catch, depth, bottom type, or safe navigation at a mapped Jolly Bay feature.",
   "currentConditions": {
     "wind": "ESE 5 to 10 mph",
     "windDir": "ESE",
-    "tide": "High tide ~7:45 PM · Low tide ~6:59 AM · Sunrise 6:36 AM",
+    "tide": "High tide ~8:40 PM · Low tide ~8:30 AM · Sunrise 6:37 AM",
     "tideEvents": [
       {
         "type": "H",
-        "time": "7:45 PM"
+        "time": "8:40 PM"
       },
       {
         "type": "L",
-        "time": "6:59 AM"
+        "time": "8:30 AM"
       }
     ],
     "waterTemp": 85,
     "sky": "Cloudy",
-    "stormChance": 20,
+    "stormChance": 57,
     "pressure": {
-      "hpa": 1017,
-      "inHg": 30.03,
-      "direction": "rising",
-      "changeHpa3h": 1.9
+      "hpa": 1013.9,
+      "inHg": 29.94,
+      "direction": "falling",
+      "changeHpa3h": -1.9
     }
   },
   "currentReport": {
     "kind": "current_regional_report",
-    "date": "2026-09-30",
-    "displayDate": "September 30, 2026",
-    "summary": "The fall transition is well underway around Choctawhatchee Bay and the Destin area, and the inshore bite is reportedly among the best of the year according to local guides. Capt. Adam Schroeder of Ignite The Bite Charters (Destin) notes that bait is now easy to locate in the mornings, with redfish, flounder, trout, and mangrove snapper all actively responding. Redfish around bridges are responding well to live croakers and spot minnows, while the overall pattern is shifting from the sluggish mid-summer heat toward more consistent early-fall feeding windows. The most recent Choctawhatchee Bay-specific report (week of Sept 4–10) from Capt. Blake Nelson with Last Cast Charters confirmed sight-fishing redfish opportunities are improving as bait schools push from open water onto flats and into bayous. Water temperature is 85°F. Note: the Great Days Outdoors report covering Sept 25–Oct 1 focused primarily on offshore grouper fishing and did not include updated Destin inshore specifics; the Sept 18–24 report is the most current with detailed inshore bay content.",
-    "attribution": "Great Days Outdoors (greatdaysoutdoors.com) — Northwest Florida Fishing Reports for Sept 4–10, 2026 and Sept 18–24, 2026, featuring Capt. Blake Nelson (Last Cast Charters, Choctawhatchee Bay) and Capt. Adam Schroeder (Ignite The Bite Charters, Destin). Half Hitch Tackle (halfhitch.com) Destin Fishing Report 9-7-26 confirmed posted but full body not retrievable via search. · Auto-refreshed via Claude API",
+    "date": "2026-10-01",
+    "displayDate": "October 1, 2026",
+    "summary": "The most recent verifiable Destin-area fishing reports are from Half Hitch's weekly series, with the latest confirmed post dated September 28, 2026 — just days ago — though the full bay-fishing section of that specific report was not retrievable. Based on the September 7, 2026 Half Hitch report (the most recent with readable content), the fall transition was underway with redfish and speckled trout active in the bay. October is historically one of the best months for inshore action on Choctawhatchee Bay: redfish are rated 'Great' all month, speckled trout are consistently strong, flounder typically begin showing up in earnest around the Destin harbor and dock structures by early October, and sheepshead start building to their fall peak around bridge pilings and jetties. Water temp for this area today is 85°F. The Destin Fishing Rodeo kicks off October 1, with inshore categories including redfish, flounder, sheepshead, and speckled trout all on the board.",
+    "attribution": "Half Hitch Tackle (halfhitch.com) — Destin Fishing Report 9-28-26 (most recent, listing confirmed; full body not retrieved) and Destin Fishing Report 9-7-26 (most recent with readable content); The Destin Log (thedestinlog.com) — Destin Fishing Rodeo preview dated September 30, 2026 · Auto-refreshed via Claude API",
     "sourceIds": [
       "halfhitch-destin",
-      "report-aHR0cHM6Ly9ncmVhdG",
-      "report-aHR0cHM6Ly9oYWxmaG"
+      "report-aHR0cHM6Ly9oYWxmaG",
+      "report-aHR0cHM6Ly90aGVkZX"
     ],
     "species": [
       "spotted_seatrout",
       "redfish",
-      "gulf_flounder"
+      "gulf_flounder",
+      "sheepshead"
     ],
     "conditions": {
       "wind": "ESE 5 to 10 mph",
       "windDir": "ESE",
-      "tide": "High tide ~7:45 PM · Low tide ~6:59 AM · Sunrise 6:36 AM",
+      "tide": "High tide ~8:40 PM · Low tide ~8:30 AM · Sunrise 6:37 AM",
       "tideEvents": [
         {
           "type": "H",
-          "time": "7:45 PM"
+          "time": "8:40 PM"
         },
         {
           "type": "L",
-          "time": "6:59 AM"
+          "time": "8:30 AM"
         }
       ],
       "waterTemp": 85,
       "sky": "Cloudy",
-      "stormChance": 20,
+      "stormChance": 57,
       "pressure": {
-        "hpa": 1017,
-        "inHg": 30.03,
-        "direction": "rising",
-        "changeHpa3h": 1.9
+        "hpa": 1013.9,
+        "inHg": 29.94,
+        "direction": "falling",
+        "changeHpa3h": -1.9
       }
     }
   },
@@ -73,8 +74,8 @@
       "kind": "archived_app_snapshot",
       "date": "2026-09-30",
       "displayDate": "September 30, 2026",
-      "summary": "The most recent available reports covering Choctawhatchee Bay and the Destin/Freeport area are from the week of September 18–24, 2026 (about 1–1.5 weeks old as of today). The fall transition is underway, and the inshore bite around Destin and Choctawhatchee Bay is described as one of the best of the year: redfish, flounder, and speckled trout are all responding to an abundance of bait that has become much easier to find in the mornings. Redfish are the standout target, with croakers and spot minnows as preferred live baits for bigger fish around bridge structure, while flounder are also mixing in well. Water temperature at this location today is 85°F. The September 4–10 report from Capt. Blake Nelson (Last Cast Charters, specifically covering Choctawhatchee Bay) noted that bait schools — primarily greenies — had pushed from deeper open water onto flats and into bayous, which was drawing Spanish mackerel but also setting up improving redfish and general flats activity expected to build through October.",
-      "attribution": "greatdaysoutdoors.com (Northwest Florida Fishing Report, weeks of Sept 18–24 and Sept 4–10, 2026); halfhitch.com (Destin Fishing Report 9-7-26, listed as most recent post but full bay detail not accessible via search) · Auto-refreshed via Claude API",
+      "summary": "The fall transition is well underway around Choctawhatchee Bay and the Destin area, and the inshore bite is reportedly among the best of the year according to local guides. Capt. Adam Schroeder of Ignite The Bite Charters (Destin) notes that bait is now easy to locate in the mornings, with redfish, flounder, trout, and mangrove snapper all actively responding. Redfish around bridges are responding well to live croakers and spot minnows, while the overall pattern is shifting from the sluggish mid-summer heat toward more consistent early-fall feeding windows. The most recent Choctawhatchee Bay-specific report (week of Sept 4–10) from Capt. Blake Nelson with Last Cast Charters confirmed sight-fishing redfish opportunities are improving as bait schools push from open water onto flats and into bayous. Water temperature is 85°F. Note: the Great Days Outdoors report covering Sept 25–Oct 1 focused primarily on offshore grouper fishing and did not include updated Destin inshore specifics; the Sept 18–24 report is the most current with detailed inshore bay content.",
+      "attribution": "Great Days Outdoors (greatdaysoutdoors.com) — Northwest Florida Fishing Reports for Sept 4–10, 2026 and Sept 18–24, 2026, featuring Capt. Blake Nelson (Last Cast Charters, Choctawhatchee Bay) and Capt. Adam Schroeder (Ignite The Bite Charters, Destin). Half Hitch Tackle (halfhitch.com) Destin Fishing Report 9-7-26 confirmed posted but full body not retrievable via search. · Auto-refreshed via Claude API",
       "sourceIds": [
         "halfhitch-destin",
         "report-aHR0cHM6Ly9ncmVhdG",
@@ -103,10 +104,10 @@
         "sky": "Cloudy",
         "stormChance": 20,
         "pressure": {
-          "hpa": 1013.9,
-          "inHg": 29.94,
-          "direction": "falling",
-          "changeHpa3h": -1.2
+          "hpa": 1017,
+          "inHg": 30.03,
+          "direction": "rising",
+          "changeHpa3h": 1.9
         }
       }
     },
@@ -328,7 +329,7 @@
       "label": "Speckled trout",
       "current": true,
       "reportCount": 9,
-      "lastReported": "2026-09-30",
+      "lastReported": "2026-10-01",
       "evidenceLevel": "current_regional_report"
     },
     {
@@ -336,7 +337,7 @@
       "label": "Redfish",
       "current": true,
       "reportCount": 10,
-      "lastReported": "2026-09-30",
+      "lastReported": "2026-10-01",
       "evidenceLevel": "current_regional_report"
     },
     {
@@ -344,7 +345,7 @@
       "label": "Flounder",
       "current": true,
       "reportCount": 5,
-      "lastReported": "2026-09-30",
+      "lastReported": "2026-10-01",
       "evidenceLevel": "current_regional_report"
     },
     {
@@ -358,10 +359,10 @@
     {
       "key": "sheepshead",
       "label": "Sheepshead",
-      "current": false,
-      "reportCount": 1,
-      "lastReported": "2026-07-01",
-      "evidenceLevel": "archived_regional_report"
+      "current": true,
+      "reportCount": 2,
+      "lastReported": "2026-10-01",
+      "evidenceLevel": "current_regional_report"
     }
   ],
   "profiles": {
@@ -469,19 +470,19 @@
   },
   "sources": [
     {
-      "id": "report-aHR0cHM6Ly9ncmVhdG",
-      "label": "Northwest Florida Fishing Report for September 4 – 10, 2026",
-      "url": "https://greatdaysoutdoors.com/northwest-florida-fishing-report-for-september-4-10-2026/",
-      "kind": "regional_report",
-      "reportDate": "2026-09-04",
-      "note": "Exact source page preserved by the daily bite-report research."
-    },
-    {
       "id": "report-aHR0cHM6Ly9oYWxmaG",
       "label": "Destin Fishing Report 9-7-26",
       "url": "https://halfhitch.com/blog/destin-fishing-report-9-7-26",
       "kind": "regional_report",
       "reportDate": "2026-09-07",
+      "note": "Exact source page preserved by the daily bite-report research."
+    },
+    {
+      "id": "report-aHR0cHM6Ly90aGVkZX",
+      "label": "5 things to know before you go to the Destin Fishing Rodeo — The Destin Log",
+      "url": "https://thedestinlog.com/story/sports/outdoors/fishing/2026/09/30/what-to-expect-at-the-destin-fishing-rodeo/92010208007",
+      "kind": "regional_report",
+      "reportDate": "2026-09-30",
       "note": "Exact source page preserved by the daily bite-report research."
     },
     {
@@ -498,6 +499,14 @@
       "url": "https://fishingbooker.com/reports/destination/us/choctawhatchee-bay",
       "kind": "regional_report",
       "note": "Dated charter and angler reports for Choctawhatchee Bay."
+    },
+    {
+      "id": "report-aHR0cHM6Ly9ncmVhdG",
+      "label": "Northwest Florida Fishing Report for September 4 – 10, 2026",
+      "url": "https://greatdaysoutdoors.com/northwest-florida-fishing-report-for-september-4-10-2026/",
+      "kind": "regional_report",
+      "reportDate": "2026-09-04",
+      "note": "Exact source page preserved by the daily bite-report research."
     },
     {
       "id": "captain-experiences-destin",
