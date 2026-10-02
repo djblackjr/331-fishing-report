@@ -1,35 +1,35 @@
 {
   "type": "FishingIntelligence",
   "region": "choctawhatchee_bay",
-  "generatedAt": "2026-10-01",
+  "generatedAt": "2026-10-02",
   "scopeNote": "Regional reports support timing and species activity only. They do not prove a catch, depth, bottom type, or safe navigation at a mapped Jolly Bay feature.",
   "currentConditions": {
-    "wind": "SE 5 to 10 mph",
-    "windDir": "SE",
-    "tide": "High tide ~8:40 PM · Low tide ~8:30 AM · Sunrise 6:37 AM",
+    "wind": "ESE 5 to 10 mph",
+    "windDir": "ESE",
+    "tide": "High tide ~9:44 PM · Low tide ~9:56 AM · Sunrise 6:37 AM",
     "tideEvents": [
       {
         "type": "H",
-        "time": "8:40 PM"
+        "time": "9:44 PM"
       },
       {
         "type": "L",
-        "time": "8:30 AM"
+        "time": "9:56 AM"
       }
     ],
     "waterTemp": 85,
     "sky": "Cloudy",
-    "stormChance": 57,
+    "stormChance": 87,
     "pressure": {
-      "hpa": 1016.2,
-      "inHg": 30.01,
+      "hpa": 1016,
+      "inHg": 30,
       "direction": "steady",
-      "changeHpa3h": 0.2
+      "changeHpa3h": -0.4
     }
   },
   "currentReport": {
     "kind": "current_regional_report",
-    "date": "2026-10-01",
+    "date": "2026-10-02",
     "displayDate": "October 1, 2026",
     "summary": "Note: The most recent reports found are from late September 2026 (approximately one to two weeks old), not this exact week. According to a Northwest Florida Fishing Report covering September 18–24, 2026, Capt. Adam Schroeder of Ignite The Bite Charters in Destin described the inshore bite around Choctawhatchee Bay as one of the best he'd seen all year, with redfish, flounder, and trout all responding well as bait became easy to find in the mornings. Larger redfish were holding around bridge structure, best targeted with croakers or spot minnows as live bait. Water temperature for today's session is 85°F. With October now underway, the fall transition should be pushing fish shallower onto the flats and into the bayous, making this one of the better windows of the year for inshore bay species.",
     "attribution": "greatdaysoutdoors.com (Northwest Florida Fishing Report, week of Sept 18–24, 2026, featuring Capt. Adam Schroeder / Ignite The Bite Charters, Destin) · Auto-refreshed via Claude API",
@@ -42,27 +42,27 @@
       "gulf_flounder"
     ],
     "conditions": {
-      "wind": "SE 5 to 10 mph",
-      "windDir": "SE",
-      "tide": "High tide ~8:40 PM · Low tide ~8:30 AM · Sunrise 6:37 AM",
+      "wind": "ESE 5 to 10 mph",
+      "windDir": "ESE",
+      "tide": "High tide ~9:44 PM · Low tide ~9:56 AM · Sunrise 6:37 AM",
       "tideEvents": [
         {
           "type": "H",
-          "time": "8:40 PM"
+          "time": "9:44 PM"
         },
         {
           "type": "L",
-          "time": "8:30 AM"
+          "time": "9:56 AM"
         }
       ],
       "waterTemp": 85,
       "sky": "Cloudy",
-      "stormChance": 57,
+      "stormChance": 87,
       "pressure": {
-        "hpa": 1016.2,
-        "inHg": 30.01,
+        "hpa": 1016,
+        "inHg": 30,
         "direction": "steady",
-        "changeHpa3h": 0.2
+        "changeHpa3h": -0.4
       }
     }
   },
@@ -71,22 +71,19 @@
       "kind": "archived_app_snapshot",
       "date": "2026-10-01",
       "displayDate": "October 1, 2026",
-      "summary": "The most recent verifiable Destin-area fishing reports are from Half Hitch's weekly series, with the latest confirmed post dated September 28, 2026 — just days ago — though the full bay-fishing section of that specific report was not retrievable. Based on the September 7, 2026 Half Hitch report (the most recent with readable content), the fall transition was underway with redfish and speckled trout active in the bay. October is historically one of the best months for inshore action on Choctawhatchee Bay: redfish are rated 'Great' all month, speckled trout are consistently strong, flounder typically begin showing up in earnest around the Destin harbor and dock structures by early October, and sheepshead start building to their fall peak around bridge pilings and jetties. Water temp for this area today is 85°F. The Destin Fishing Rodeo kicks off October 1, with inshore categories including redfish, flounder, sheepshead, and speckled trout all on the board.",
-      "attribution": "Half Hitch Tackle (halfhitch.com) — Destin Fishing Report 9-28-26 (most recent, listing confirmed; full body not retrieved) and Destin Fishing Report 9-7-26 (most recent with readable content); The Destin Log (thedestinlog.com) — Destin Fishing Rodeo preview dated September 30, 2026 · Auto-refreshed via Claude API",
+      "summary": "Note: The most recent reports found are from late September 2026 (approximately one to two weeks old), not this exact week. According to a Northwest Florida Fishing Report covering September 18–24, 2026, Capt. Adam Schroeder of Ignite The Bite Charters in Destin described the inshore bite around Choctawhatchee Bay as one of the best he'd seen all year, with redfish, flounder, and trout all responding well as bait became easy to find in the mornings. Larger redfish were holding around bridge structure, best targeted with croakers or spot minnows as live bait. Water temperature for today's session is 85°F. With October now underway, the fall transition should be pushing fish shallower onto the flats and into the bayous, making this one of the better windows of the year for inshore bay species.",
+      "attribution": "greatdaysoutdoors.com (Northwest Florida Fishing Report, week of Sept 18–24, 2026, featuring Capt. Adam Schroeder / Ignite The Bite Charters, Destin) · Auto-refreshed via Claude API",
       "sourceIds": [
-        "halfhitch-destin",
-        "report-aHR0cHM6Ly9oYWxmaG",
-        "report-aHR0cHM6Ly90aGVkZX"
+        "report-aHR0cHM6Ly9ncmVhdG"
       ],
       "species": [
         "spotted_seatrout",
         "redfish",
-        "gulf_flounder",
-        "sheepshead"
+        "gulf_flounder"
       ],
       "conditions": {
-        "wind": "ESE 5 to 10 mph",
-        "windDir": "ESE",
+        "wind": "SE 5 to 10 mph",
+        "windDir": "SE",
         "tide": "High tide ~8:40 PM · Low tide ~8:30 AM · Sunrise 6:37 AM",
         "tideEvents": [
           {
@@ -102,10 +99,10 @@
         "sky": "Cloudy",
         "stormChance": 57,
         "pressure": {
-          "hpa": 1013.9,
-          "inHg": 29.94,
-          "direction": "falling",
-          "changeHpa3h": -1.9
+          "hpa": 1016.2,
+          "inHg": 30.01,
+          "direction": "steady",
+          "changeHpa3h": 0.2
         }
       }
     },
@@ -327,7 +324,7 @@
       "label": "Speckled trout",
       "current": true,
       "reportCount": 9,
-      "lastReported": "2026-10-01",
+      "lastReported": "2026-10-02",
       "evidenceLevel": "current_regional_report"
     },
     {
@@ -335,7 +332,7 @@
       "label": "Redfish",
       "current": true,
       "reportCount": 10,
-      "lastReported": "2026-10-01",
+      "lastReported": "2026-10-02",
       "evidenceLevel": "current_regional_report"
     },
     {
@@ -343,7 +340,7 @@
       "label": "Flounder",
       "current": true,
       "reportCount": 5,
-      "lastReported": "2026-10-01",
+      "lastReported": "2026-10-02",
       "evidenceLevel": "current_regional_report"
     },
     {
@@ -358,8 +355,8 @@
       "key": "sheepshead",
       "label": "Sheepshead",
       "current": false,
-      "reportCount": 2,
-      "lastReported": "2026-10-01",
+      "reportCount": 1,
+      "lastReported": "2026-07-01",
       "evidenceLevel": "archived_regional_report"
     }
   ],
@@ -492,18 +489,10 @@
     },
     {
       "id": "report-aHR0cHM6Ly9oYWxmaG",
-      "label": "Destin Fishing Report 9-7-26 — Half Hitch",
-      "url": "https://halfhitch.com/blog/destin-fishing-report-9-7-26",
+      "label": "Destin Fishing Report 7-13-26",
+      "url": "https://halfhitch.com/blog/destin-fishing-report-7-13-26",
       "kind": "regional_report",
-      "reportDate": "2026-09-07",
-      "note": "Exact source page preserved by the daily bite-report research."
-    },
-    {
-      "id": "report-aHR0cHM6Ly90aGVkZX",
-      "label": "5 things to know before you go to the Destin Fishing Rodeo — The Destin Log",
-      "url": "https://thedestinlog.com/story/sports/outdoors/fishing/2026/09/30/what-to-expect-at-the-destin-fishing-rodeo/92010208007",
-      "kind": "regional_report",
-      "reportDate": "2026-09-30",
+      "reportDate": "2026-07-13",
       "note": "Exact source page preserved by the daily bite-report research."
     },
     {
