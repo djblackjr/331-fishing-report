@@ -17,14 +17,14 @@
         "time": "11:02 AM"
       }
     ],
-    "waterTemp": 85,
+    "waterTemp": 84,
     "sky": "Cloudy",
     "stormChance": 80,
     "pressure": {
-      "hpa": 1015.3,
-      "inHg": 29.98,
-      "direction": "falling",
-      "changeHpa3h": -1.2
+      "hpa": 1016.3,
+      "inHg": 30.01,
+      "direction": "rising",
+      "changeHpa3h": 1
     }
   },
   "currentReport": {
@@ -55,21 +55,21 @@
           "time": "11:02 AM"
         }
       ],
-      "waterTemp": 85,
+      "waterTemp": 84,
       "sky": "Cloudy",
       "stormChance": 80,
       "pressure": {
-        "hpa": 1015.3,
-        "inHg": 29.98,
-        "direction": "falling",
-        "changeHpa3h": -1.2
+        "hpa": 1016.3,
+        "inHg": 30.01,
+        "direction": "rising",
+        "changeHpa3h": 1
       }
     }
   },
   "archivedReports": [
     {
       "kind": "archived_app_snapshot",
-      "date": "2026-10-02",
+      "date": "2026-10-03",
       "displayDate": "October 1, 2026",
       "summary": "Note: The most recent reports found are from late September 2026 (approximately one to two weeks old), not this exact week. According to a Northwest Florida Fishing Report covering September 18–24, 2026, Capt. Adam Schroeder of Ignite The Bite Charters in Destin described the inshore bite around Choctawhatchee Bay as one of the best he'd seen all year, with redfish, flounder, and trout all responding well as bait became easy to find in the mornings. Larger redfish were holding around bridge structure, best targeted with croakers or spot minnows as live bait. Water temperature for today's session is 85°F. With October now underway, the fall transition should be pushing fish shallower onto the flats and into the bayous, making this one of the better windows of the year for inshore bay species.",
       "attribution": "greatdaysoutdoors.com (Northwest Florida Fishing Report, week of Sept 18–24, 2026, featuring Capt. Adam Schroeder / Ignite The Bite Charters, Destin) · Auto-refreshed via Claude API",
@@ -84,25 +84,25 @@
       "conditions": {
         "wind": "ESE 5 to 10 mph",
         "windDir": "ESE",
-        "tide": "High tide ~9:44 PM · Low tide ~9:56 AM · Sunrise 6:37 AM",
+        "tide": "High tide ~10:56 PM · Low tide ~11:02 AM · Sunrise 6:38 AM",
         "tideEvents": [
           {
             "type": "H",
-            "time": "9:44 PM"
+            "time": "10:56 PM"
           },
           {
             "type": "L",
-            "time": "9:56 AM"
+            "time": "11:02 AM"
           }
         ],
         "waterTemp": 85,
         "sky": "Cloudy",
-        "stormChance": 87,
+        "stormChance": 80,
         "pressure": {
-          "hpa": 1016.6,
-          "inHg": 30.02,
-          "direction": "rising",
-          "changeHpa3h": 0.7
+          "hpa": 1015.3,
+          "inHg": 29.98,
+          "direction": "falling",
+          "changeHpa3h": -1.2
         }
       }
     },
