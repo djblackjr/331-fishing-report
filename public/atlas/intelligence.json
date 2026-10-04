@@ -4,8 +4,8 @@
   "generatedAt": "2026-10-04",
   "scopeNote": "Regional reports support timing and species activity only. They do not prove a catch, depth, bottom type, or safe navigation at a mapped Jolly Bay feature.",
   "currentConditions": {
-    "wind": "ESE 0 to 5 mph",
-    "windDir": "ESE",
+    "wind": "SE 5 mph",
+    "windDir": "SE",
     "tide": "High tide ~12:14 AM · Low tide ~11:53 AM · Sunrise 6:38 AM",
     "tideEvents": [
       {
@@ -21,10 +21,10 @@
     "sky": "Cloudy",
     "stormChance": 100,
     "pressure": {
-      "hpa": 1015.7,
-      "inHg": 29.99,
-      "direction": "falling",
-      "changeHpa3h": -0.5
+      "hpa": 1018.5,
+      "inHg": 30.08,
+      "direction": "rising",
+      "changeHpa3h": 2
     }
   },
   "currentReport": {
@@ -42,8 +42,8 @@
       "gulf_flounder"
     ],
     "conditions": {
-      "wind": "ESE 0 to 5 mph",
-      "windDir": "ESE",
+      "wind": "SE 5 mph",
+      "windDir": "SE",
       "tide": "High tide ~12:14 AM · Low tide ~11:53 AM · Sunrise 6:38 AM",
       "tideEvents": [
         {
@@ -59,17 +59,17 @@
       "sky": "Cloudy",
       "stormChance": 100,
       "pressure": {
-        "hpa": 1015.7,
-        "inHg": 29.99,
-        "direction": "falling",
-        "changeHpa3h": -0.5
+        "hpa": 1018.5,
+        "inHg": 30.08,
+        "direction": "rising",
+        "changeHpa3h": 2
       }
     }
   },
   "archivedReports": [
     {
       "kind": "archived_app_snapshot",
-      "date": "2026-10-03",
+      "date": "2026-10-04",
       "displayDate": "October 1, 2026",
       "summary": "Note: The most recent reports found are from late September 2026 (approximately one to two weeks old), not this exact week. According to a Northwest Florida Fishing Report covering September 18–24, 2026, Capt. Adam Schroeder of Ignite The Bite Charters in Destin described the inshore bite around Choctawhatchee Bay as one of the best he'd seen all year, with redfish, flounder, and trout all responding well as bait became easy to find in the mornings. Larger redfish were holding around bridge structure, best targeted with croakers or spot minnows as live bait. Water temperature for today's session is 85°F. With October now underway, the fall transition should be pushing fish shallower onto the flats and into the bayous, making this one of the better windows of the year for inshore bay species.",
       "attribution": "greatdaysoutdoors.com (Northwest Florida Fishing Report, week of Sept 18–24, 2026, featuring Capt. Adam Schroeder / Ignite The Bite Charters, Destin) · Auto-refreshed via Claude API",
@@ -82,27 +82,27 @@
         "gulf_flounder"
       ],
       "conditions": {
-        "wind": "ESE 5 to 10 mph",
+        "wind": "ESE 0 to 5 mph",
         "windDir": "ESE",
-        "tide": "High tide ~10:56 PM · Low tide ~11:02 AM · Sunrise 6:38 AM",
+        "tide": "High tide ~12:14 AM · Low tide ~11:53 AM · Sunrise 6:38 AM",
         "tideEvents": [
           {
             "type": "H",
-            "time": "10:56 PM"
+            "time": "12:14 AM"
           },
           {
             "type": "L",
-            "time": "11:02 AM"
+            "time": "11:53 AM"
           }
         ],
         "waterTemp": 84,
         "sky": "Cloudy",
-        "stormChance": 80,
+        "stormChance": 100,
         "pressure": {
-          "hpa": 1016.3,
-          "inHg": 30.01,
-          "direction": "rising",
-          "changeHpa3h": 1
+          "hpa": 1015.7,
+          "inHg": 29.99,
+          "direction": "falling",
+          "changeHpa3h": -0.5
         }
       }
     },

@@ -2,8 +2,8 @@
   "date": "Sunday, October 4, 2026",
   "wind": {
     "speed": 5,
-    "dir": "ESE",
-    "description": "ESE 0 to 5 mph"
+    "dir": "SE",
+    "description": "SE 5 mph"
   },
   "weather": "Showers And Thunderstorms · High 79°F",
   "tide": "High tide ~12:14 AM · Low tide ~11:53 AM · Sunrise 6:38 AM",
@@ -24,7 +24,7 @@
   "moonPhase": "Last Quarter (~35% illuminated) — moderate tidal push",
   "waterClarity": "Slightly stained",
   "sky": "Cloudy",
-  "lastUpdated": "10/4/2026, 3:12:15 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "lastUpdated": "10/4/2026, 8:54:19 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
   "localBiteReport": "Note: The most recent reports found are from late September 2026 (approximately one to two weeks old), not this exact week. According to a Northwest Florida Fishing Report covering September 18–24, 2026, Capt. Adam Schroeder of Ignite The Bite Charters in Destin described the inshore bite around Choctawhatchee Bay as one of the best he'd seen all year, with redfish, flounder, and trout all responding well as bait became easy to find in the mornings. Larger redfish were holding around bridge structure, best targeted with croakers or spot minnows as live bait. Water temperature for today's session is 85°F. With October now underway, the fall transition should be pushing fish shallower onto the flats and into the bayous, making this one of the better windows of the year for inshore bay species.",
   "localBiteSource": "greatdaysoutdoors.com (Northwest Florida Fishing Report, week of Sept 18–24, 2026, featuring Capt. Adam Schroeder / Ignite The Bite Charters, Destin) · Auto-refreshed via Claude API",
   "localBiteUpdated": "October 1, 2026",
@@ -36,40 +36,40 @@
     }
   ],
   "previousDay": {
-    "date": "Saturday, October 3, 2026",
+    "date": "Sunday, October 4, 2026",
     "wind": {
       "dir": "ESE",
-      "speed": 10
+      "speed": 5
     },
-    "high": 84,
-    "stormChance": 80,
-    "tide": "High tide ~10:56 PM · Low tide ~11:02 AM · Sunrise 6:38 AM",
+    "high": 79,
+    "stormChance": 100,
+    "tide": "High tide ~12:14 AM · Low tide ~11:53 AM · Sunrise 6:38 AM",
     "waterTemp": 84
   },
   "openMeteo": [
     {
-      "high": 77,
+      "high": 79,
       "low": 74,
-      "stormChance": 89,
-      "windSpeed": 9,
+      "stormChance": 87,
+      "windSpeed": 7,
       "windDir": "E",
-      "summary": "Rain showers"
+      "summary": "Violent rain showers"
     },
     {
       "high": 79,
-      "low": 72,
-      "stormChance": 69,
-      "windSpeed": 12,
-      "windDir": "N",
-      "summary": "Rain showers"
+      "low": 73,
+      "stormChance": 67,
+      "windSpeed": 10,
+      "windDir": "NE",
+      "summary": "Drizzle"
     },
     {
-      "high": 81,
+      "high": 77,
       "low": 71,
-      "stormChance": 28,
+      "stormChance": 30,
       "windSpeed": 13,
       "windDir": "E",
-      "summary": "Overcast"
+      "summary": "Light drizzle"
     }
   ],
   "forecast": [
@@ -79,13 +79,13 @@
       "label": "Today",
       "high": 79,
       "low": null,
-      "wind": "ESE 0 to 5 mph",
+      "wind": "SE 5 mph",
       "windSpeed": 5,
-      "windDir": "ESE",
+      "windDir": "SE",
       "storms": 100,
       "headline": "Showers And Thunderstorms",
       "fishingScore": 4.5,
-      "aiCall": "Showers and thunderstorms. Some of the storms could produce heavy rain. Cloudy, with a high near 79. East southeast wind 0 to 5 mph. Chance of precipitation is 100%. New rainfall amounts between 2 and 3 inches possible.",
+      "aiCall": "Showers and thunderstorms. Some of the storms could produce heavy rain. Cloudy, with a high near 79. Southeast wind around 5 mph. Chance of precipitation is 100%. New rainfall amounts between 2 and 3 inches possible.",
       "emoji": "⛈️",
       "tideEvents": [
         {
@@ -111,7 +111,7 @@
       "storms": 71,
       "headline": "Showers And Thunderstorms Likely",
       "fishingScore": 5.7,
-      "aiCall": "Showers and thunderstorms likely before 2pm, then a chance of showers and thunderstorms. Mostly cloudy, with a high near 80. East northeast wind 0 to 5 mph. Chance of precipitation is 70%.",
+      "aiCall": "Showers and thunderstorms likely before 2pm, then a chance of showers and thunderstorms. Mostly cloudy, with a high near 80. East northeast wind 0 to 5 mph. Chance of precipitation is 70%. New rainfall amounts between 1 and 2 inches possible.",
       "emoji": "⛈️",
       "tideEvents": [
         {
@@ -137,7 +137,7 @@
       "storms": 31,
       "headline": "Chance Showers And Thunderstorms",
       "fishingScore": 6.8,
-      "aiCall": "A chance of showers and thunderstorms. Mostly cloudy, with a high near 80. Chance of precipitation is 30%.",
+      "aiCall": "A chance of showers and thunderstorms. Mostly cloudy, with a high near 80. Northeast wind 10 to 15 mph, with gusts as high as 25 mph. Chance of precipitation is 30%.",
       "emoji": "⛈️",
       "tideEvents": [
         {
@@ -155,10 +155,10 @@
   "dateISO": "2026-10-04",
   "waterTemp": 84,
   "pressure": {
-    "hpa": 1015.7,
-    "inHg": 29.99,
-    "direction": "falling",
-    "changeHpa3h": -0.5
+    "hpa": 1018.5,
+    "inHg": 30.08,
+    "direction": "rising",
+    "changeHpa3h": 2
   },
   "speciesSignals": [
     {
