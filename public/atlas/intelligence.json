@@ -17,14 +17,14 @@
         "time": "12:32 PM"
       }
     ],
-    "waterTemp": 84,
+    "waterTemp": 83,
     "sky": "Cloudy",
-    "stormChance": 85,
+    "stormChance": 63,
     "pressure": {
-      "hpa": 1015.1,
-      "inHg": 29.98,
+      "hpa": 1013.5,
+      "inHg": 29.93,
       "direction": "falling",
-      "changeHpa3h": -1
+      "changeHpa3h": -1.4
     }
   },
   "currentReport": {
@@ -55,21 +55,21 @@
           "time": "12:32 PM"
         }
       ],
-      "waterTemp": 84,
+      "waterTemp": 83,
       "sky": "Cloudy",
-      "stormChance": 85,
+      "stormChance": 63,
       "pressure": {
-        "hpa": 1015.1,
-        "inHg": 29.98,
+        "hpa": 1013.5,
+        "inHg": 29.93,
         "direction": "falling",
-        "changeHpa3h": -1
+        "changeHpa3h": -1.4
       }
     }
   },
   "archivedReports": [
     {
       "kind": "archived_app_snapshot",
-      "date": "2026-10-04",
+      "date": "2026-10-05",
       "displayDate": "October 1, 2026",
       "summary": "Note: The most recent reports found are from late September 2026 (approximately one to two weeks old), not this exact week. According to a Northwest Florida Fishing Report covering September 18–24, 2026, Capt. Adam Schroeder of Ignite The Bite Charters in Destin described the inshore bite around Choctawhatchee Bay as one of the best he'd seen all year, with redfish, flounder, and trout all responding well as bait became easy to find in the mornings. Larger redfish were holding around bridge structure, best targeted with croakers or spot minnows as live bait. Water temperature for today's session is 85°F. With October now underway, the fall transition should be pushing fish shallower onto the flats and into the bayous, making this one of the better windows of the year for inshore bay species.",
       "attribution": "greatdaysoutdoors.com (Northwest Florida Fishing Report, week of Sept 18–24, 2026, featuring Capt. Adam Schroeder / Ignite The Bite Charters, Destin) · Auto-refreshed via Claude API",
@@ -82,27 +82,27 @@
         "gulf_flounder"
       ],
       "conditions": {
-        "wind": "SE 5 mph",
-        "windDir": "SE",
-        "tide": "High tide ~12:14 AM · Low tide ~11:53 AM · Sunrise 6:38 AM",
+        "wind": "ENE 5 mph",
+        "windDir": "ENE",
+        "tide": "High tide ~1:29 AM · Low tide ~12:32 PM · Sunrise 6:39 AM",
         "tideEvents": [
           {
             "type": "H",
-            "time": "12:14 AM"
+            "time": "1:29 AM"
           },
           {
             "type": "L",
-            "time": "11:53 AM"
+            "time": "12:32 PM"
           }
         ],
         "waterTemp": 84,
         "sky": "Cloudy",
-        "stormChance": 100,
+        "stormChance": 85,
         "pressure": {
-          "hpa": 1018.5,
-          "inHg": 30.08,
-          "direction": "rising",
-          "changeHpa3h": 2
+          "hpa": 1015.1,
+          "inHg": 29.98,
+          "direction": "falling",
+          "changeHpa3h": -1
         }
       }
     },
