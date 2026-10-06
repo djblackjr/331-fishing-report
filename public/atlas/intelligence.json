@@ -1,35 +1,35 @@
 {
   "type": "FishingIntelligence",
   "region": "choctawhatchee_bay",
-  "generatedAt": "2026-10-05",
+  "generatedAt": "2026-10-06",
   "scopeNote": "Regional reports support timing and species activity only. They do not prove a catch, depth, bottom type, or safe navigation at a mapped Jolly Bay feature.",
   "currentConditions": {
-    "wind": "ENE 5 mph",
+    "wind": "ENE 10 to 15 mph",
     "windDir": "ENE",
-    "tide": "High tide ~1:29 AM · Low tide ~12:32 PM · Sunrise 6:39 AM",
+    "tide": "High tide ~2:39 AM · Low tide ~1:00 PM · Sunrise 6:40 AM",
     "tideEvents": [
       {
         "type": "H",
-        "time": "1:29 AM"
+        "time": "2:39 AM"
       },
       {
         "type": "L",
-        "time": "12:32 PM"
+        "time": "1:00 PM"
       }
     ],
     "waterTemp": 83,
     "sky": "Cloudy",
-    "stormChance": 63,
+    "stormChance": 65,
     "pressure": {
-      "hpa": 1013.5,
-      "inHg": 29.93,
-      "direction": "falling",
-      "changeHpa3h": -1.4
+      "hpa": 1013.9,
+      "inHg": 29.94,
+      "direction": "steady",
+      "changeHpa3h": -0.1
     }
   },
   "currentReport": {
     "kind": "current_regional_report",
-    "date": "2026-10-05",
+    "date": "2026-10-06",
     "displayDate": "October 1, 2026",
     "summary": "Note: The most recent reports found are from late September 2026 (approximately one to two weeks old), not this exact week. According to a Northwest Florida Fishing Report covering September 18–24, 2026, Capt. Adam Schroeder of Ignite The Bite Charters in Destin described the inshore bite around Choctawhatchee Bay as one of the best he'd seen all year, with redfish, flounder, and trout all responding well as bait became easy to find in the mornings. Larger redfish were holding around bridge structure, best targeted with croakers or spot minnows as live bait. Water temperature for today's session is 85°F. With October now underway, the fall transition should be pushing fish shallower onto the flats and into the bayous, making this one of the better windows of the year for inshore bay species.",
     "attribution": "greatdaysoutdoors.com (Northwest Florida Fishing Report, week of Sept 18–24, 2026, featuring Capt. Adam Schroeder / Ignite The Bite Charters, Destin) · Auto-refreshed via Claude API",
@@ -42,27 +42,27 @@
       "gulf_flounder"
     ],
     "conditions": {
-      "wind": "ENE 5 mph",
+      "wind": "ENE 10 to 15 mph",
       "windDir": "ENE",
-      "tide": "High tide ~1:29 AM · Low tide ~12:32 PM · Sunrise 6:39 AM",
+      "tide": "High tide ~2:39 AM · Low tide ~1:00 PM · Sunrise 6:40 AM",
       "tideEvents": [
         {
           "type": "H",
-          "time": "1:29 AM"
+          "time": "2:39 AM"
         },
         {
           "type": "L",
-          "time": "12:32 PM"
+          "time": "1:00 PM"
         }
       ],
       "waterTemp": 83,
       "sky": "Cloudy",
-      "stormChance": 63,
+      "stormChance": 65,
       "pressure": {
-        "hpa": 1013.5,
-        "inHg": 29.93,
-        "direction": "falling",
-        "changeHpa3h": -1.4
+        "hpa": 1013.9,
+        "inHg": 29.94,
+        "direction": "steady",
+        "changeHpa3h": -0.1
       }
     }
   },
@@ -95,14 +95,14 @@
             "time": "12:32 PM"
           }
         ],
-        "waterTemp": 84,
+        "waterTemp": 83,
         "sky": "Cloudy",
-        "stormChance": 85,
+        "stormChance": 63,
         "pressure": {
-          "hpa": 1015.1,
-          "inHg": 29.98,
+          "hpa": 1013.5,
+          "inHg": 29.93,
           "direction": "falling",
-          "changeHpa3h": -1
+          "changeHpa3h": -1.4
         }
       }
     },
@@ -324,7 +324,7 @@
       "label": "Speckled trout",
       "current": true,
       "reportCount": 9,
-      "lastReported": "2026-10-05",
+      "lastReported": "2026-10-06",
       "evidenceLevel": "current_regional_report"
     },
     {
@@ -332,7 +332,7 @@
       "label": "Redfish",
       "current": true,
       "reportCount": 10,
-      "lastReported": "2026-10-05",
+      "lastReported": "2026-10-06",
       "evidenceLevel": "current_regional_report"
     },
     {
@@ -340,7 +340,7 @@
       "label": "Flounder",
       "current": true,
       "reportCount": 5,
-      "lastReported": "2026-10-05",
+      "lastReported": "2026-10-06",
       "evidenceLevel": "current_regional_report"
     },
     {
