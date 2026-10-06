@@ -5,7 +5,7 @@
     "dir": "ENE",
     "description": "ENE 10 to 15 mph"
   },
-  "weather": "Showers And Thunderstorms Likely · High 77°F",
+  "weather": "Chance Showers And Thunderstorms · High 77°F",
   "tide": "High tide ~2:39 AM · Low tide ~1:00 PM · Sunrise 6:40 AM",
   "tideEvents": [
     {
@@ -19,12 +19,12 @@
   ],
   "sunrise": "6:40 AM",
   "sunset": "6:25 PM",
-  "stormWindow": "before 7AM",
-  "stormChance": 65,
+  "stormWindow": "before 1PM",
+  "stormChance": 28,
   "moonPhase": "Waning Crescent (~17% illuminated) — strong tidal push (spring tide)",
   "waterClarity": "Slightly stained",
   "sky": "Cloudy",
-  "lastUpdated": "10/6/2026, 3:12:17 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "lastUpdated": "10/6/2026, 10:04:44 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
   "localBiteReport": "Note: The most recent reports found are from late September 2026 (approximately one to two weeks old), not this exact week. According to a Northwest Florida Fishing Report covering September 18–24, 2026, Capt. Adam Schroeder of Ignite The Bite Charters in Destin described the inshore bite around Choctawhatchee Bay as one of the best he'd seen all year, with redfish, flounder, and trout all responding well as bait became easy to find in the mornings. Larger redfish were holding around bridge structure, best targeted with croakers or spot minnows as live bait. Water temperature for today's session is 85°F. With October now underway, the fall transition should be pushing fish shallower onto the flats and into the bayous, making this one of the better windows of the year for inshore bay species.",
   "localBiteSource": "greatdaysoutdoors.com (Northwest Florida Fishing Report, week of Sept 18–24, 2026, featuring Capt. Adam Schroeder / Ignite The Bite Charters, Destin) · Auto-refreshed via Claude API",
   "localBiteUpdated": "October 1, 2026",
@@ -36,38 +36,38 @@
     }
   ],
   "previousDay": {
-    "date": "Monday, October 5, 2026",
+    "date": "Tuesday, October 6, 2026",
     "wind": {
       "dir": "ENE",
-      "speed": 5
+      "speed": 15
     },
-    "high": 78,
-    "stormChance": 63,
-    "tide": "High tide ~1:29 AM · Low tide ~12:32 PM · Sunrise 6:39 AM",
+    "high": 77,
+    "stormChance": 65,
+    "tide": "High tide ~2:39 AM · Low tide ~1:00 PM · Sunrise 6:40 AM",
     "waterTemp": 83
   },
   "openMeteo": [
     {
-      "high": 77,
-      "low": 71,
+      "high": 76,
+      "low": 72,
       "stormChance": 37,
       "windSpeed": 13,
       "windDir": "NE",
-      "summary": "Overcast"
+      "summary": "Rain"
     },
     {
-      "high": 80,
-      "low": 68,
-      "stormChance": 7,
+      "high": 81,
+      "low": 69,
+      "stormChance": 6,
       "windSpeed": 11,
       "windDir": "NE",
       "summary": "Overcast"
     },
     {
-      "high": 79,
-      "low": 70,
-      "stormChance": 7,
-      "windSpeed": 10,
+      "high": 82,
+      "low": 68,
+      "stormChance": 5,
+      "windSpeed": 11,
       "windDir": "NE",
       "summary": "Overcast"
     }
@@ -82,10 +82,10 @@
       "wind": "ENE 10 to 15 mph",
       "windSpeed": 15,
       "windDir": "ENE",
-      "storms": 65,
-      "headline": "Showers And Thunderstorms Likely",
-      "fishingScore": 5.4,
-      "aiCall": "A chance of rain showers before 7am, then showers and thunderstorms likely between 7am and 2pm, then a slight chance of showers and thunderstorms between 2pm and 5pm. Mostly cloudy, with a high near 77. East northeast wind 10 to 15 mph, with gusts as high as 25 mph. Chance of precipitation is 70%. New rainfall amounts between a tenth and quarter of an inch possible.",
+      "storms": 28,
+      "headline": "Chance Showers And Thunderstorms",
+      "fishingScore": 6.9,
+      "aiCall": "A slight chance of rain showers before 1pm, then a chance of showers and thunderstorms between 1pm and 2pm, then a slight chance of showers and thunderstorms between 2pm and 5pm. Mostly cloudy, with a high near 77. East northeast wind 10 to 15 mph, with gusts as high as 25 mph. Chance of precipitation is 30%. New rainfall amounts between a tenth and quarter of an inch possible.",
       "emoji": "⛈️",
       "tideEvents": [
         {
@@ -137,7 +137,7 @@
       "storms": 8,
       "headline": "Partly Sunny",
       "fishingScore": 8.7,
-      "aiCall": "Partly sunny, with a high near 83.",
+      "aiCall": "Partly sunny, with a high near 83. Northeast wind around 10 mph, with gusts as high as 20 mph.",
       "emoji": "☀️",
       "tideEvents": [
         {
@@ -167,10 +167,10 @@
   "dateISO": "2026-10-06",
   "waterTemp": 83,
   "pressure": {
-    "hpa": 1013.9,
-    "inHg": 29.94,
+    "hpa": 1012.7,
+    "inHg": 29.91,
     "direction": "steady",
-    "changeHpa3h": -0.1
+    "changeHpa3h": 0
   },
   "speciesSignals": [
     {
