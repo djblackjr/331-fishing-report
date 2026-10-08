@@ -19,6 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      actions: write
     steps:
       - uses: actions/checkout@v4
 
@@ -58,19 +59,18 @@ jobs:
           file_pattern: src/data/conditions.json public/atlas/intelligence.json
 
       - name: Trigger Pages deploy
-        # A push made using the workflow's default built-in token does NOT
-        # trigger other workflows' `on: push` rules (GitHub blocks this
-        # specifically to prevent infinite trigger loops). That silently
-        # broke the deploy step, since daily-refresh's commit never kicked
-        # off deploy-pages.yml. Using a real Personal Access Token here
-        # (stored as the DEPLOY_TOKEN secret) doesn't have that restriction.
+        # A push made using the workflow's built-in token does NOT trigger
+        # other workflows' `on: push` rules (GitHub blocks this to prevent
+        # trigger loops), so daily-refresh's commit never kicks off
+        # deploy-pages.yml by itself. Dispatching it explicitly is allowed
+        # with the built-in token (needs `actions: write` above). This used
+        # to use a personal access token stored as DEPLOY_TOKEN, which
+        # expired, and the curl call hid the resulting 401 behind a green
+        # step, so refreshed data stopped reaching the live site.
         if: steps.commit.outputs.changes_detected == 'true'
-        run: |
-          curl -X POST \
-            -H "Authorization: Bearer ${{ secrets.DEPLOY_TOKEN }}" \
-            -H "Accept: application/vnd.github+json" \
-            https://api.github.com/repos/djblackjr/331-fishing-report/actions/workflows/deploy-pages.yml/dispatches \
-            -d '{"ref":"main"}'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy-pages.yml --repo "$GITHUB_REPOSITORY" --ref main
 
       - name: Fail run if the bite-report refresh failed
         # update-bite-report.mjs exits 0 on its own failures on purpose (a
