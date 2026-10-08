@@ -1,12 +1,12 @@
 {
   "date": "Wednesday, October 7, 2026",
   "wind": {
-    "speed": 15,
+    "speed": 10,
     "dir": "NE",
-    "description": "NE 10 to 15 mph"
+    "description": "NE 10 mph"
   },
-  "weather": "Mostly Cloudy · High 82°F",
-  "tide": "High tide ~3:47 AM · Low tide ~1:14 PM · Sunrise 6:40 AM",
+  "weather": "Mostly Cloudy · High 84°F",
+  "tide": "High tide ~3:47 AM · Low tide ~1:14 PM · Sunrise 6:41 AM",
   "tideEvents": [
     {
       "type": "H",
@@ -17,14 +17,14 @@
       "time": "1:14 PM"
     }
   ],
-  "sunrise": "6:40 AM",
-  "sunset": "6:23 PM",
+  "sunrise": "6:41 AM",
+  "sunset": "6:22 PM",
   "stormWindow": "before 1PM",
-  "stormChance": 2,
-  "moonPhase": "Waning Crescent (~10% illuminated) — strong tidal push (spring tide)",
+  "stormChance": 1,
+  "moonPhase": "Waning Crescent (~4% illuminated) — strong tidal push (spring tide)",
   "waterClarity": "Slightly stained",
   "sky": "Cloudy",
-  "lastUpdated": "10/7/2026, 10:30:51 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "lastUpdated": "10/7/2026, 8:56:54 PM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
   "localBiteReport": "Note: The most recent reports found are from late September 2026 (approximately one to two weeks old), not this exact week. According to a Northwest Florida Fishing Report covering September 18–24, 2026, Capt. Adam Schroeder of Ignite The Bite Charters in Destin described the inshore bite around Choctawhatchee Bay as one of the best he'd seen all year, with redfish, flounder, and trout all responding well as bait became easy to find in the mornings. Larger redfish were holding around bridge structure, best targeted with croakers or spot minnows as live bait. Water temperature for today's session is 85°F. With October now underway, the fall transition should be pushing fish shallower onto the flats and into the bayous, making this one of the better windows of the year for inshore bay species.",
   "localBiteSource": "greatdaysoutdoors.com (Northwest Florida Fishing Report, week of Sept 18–24, 2026, featuring Capt. Adam Schroeder / Ignite The Bite Charters, Destin) · Auto-refreshed via Claude API",
   "localBiteUpdated": "October 1, 2026",
@@ -42,15 +42,15 @@
       "speed": 15
     },
     "high": 82,
-    "stormChance": 13,
+    "stormChance": 2,
     "tide": "High tide ~3:47 AM · Low tide ~1:14 PM · Sunrise 6:40 AM",
     "waterTemp": 83
   },
   "openMeteo": [
     {
-      "high": 79,
+      "high": 84,
       "low": 70,
-      "stormChance": 3,
+      "stormChance": 4,
       "windSpeed": 12,
       "windDir": "NE",
       "summary": "Overcast"
@@ -58,60 +58,34 @@
     {
       "high": 83,
       "low": 70,
-      "stormChance": 2,
+      "stormChance": 6,
       "windSpeed": 12,
       "windDir": "NE",
       "summary": "Overcast"
     },
     {
-      "high": 73,
-      "low": 64,
-      "stormChance": 76,
-      "windSpeed": 35,
+      "high": 76,
+      "low": 67,
+      "stormChance": 84,
+      "windSpeed": 25,
       "windDir": "NE",
       "summary": "Rain showers"
     }
   ],
   "forecast": [
     {
-      "day": "Wed, Oct 7",
-      "dateISO": "2026-10-07",
-      "label": "Today",
-      "high": 82,
-      "low": null,
-      "wind": "NE 10 to 15 mph",
-      "windSpeed": 15,
-      "windDir": "NE",
-      "storms": 2,
-      "headline": "Mostly Cloudy",
-      "fishingScore": 8.4,
-      "aiCall": "Mostly cloudy, with a high near 82. Northeast wind 10 to 15 mph, with gusts as high as 25 mph.",
-      "emoji": "⛅",
-      "tideEvents": [
-        {
-          "type": "H",
-          "time": "3:47 AM"
-        },
-        {
-          "type": "L",
-          "time": "1:14 PM"
-        }
-      ],
-      "moonPhase": "Waning Crescent (~10% illuminated) — strong tidal push (spring tide)"
-    },
-    {
       "day": "Thu, Oct 8",
       "dateISO": "2026-10-08",
-      "label": "Tomorrow",
-      "high": 83,
+      "label": "Today",
+      "high": 84,
       "low": null,
       "wind": "NE 10 mph",
       "windSpeed": 10,
       "windDir": "NE",
-      "storms": 8,
+      "storms": 1,
       "headline": "Mostly Cloudy",
-      "fishingScore": 8.7,
-      "aiCall": "Mostly cloudy, with a high near 83. Northeast wind around 10 mph, with gusts as high as 20 mph. New rainfall amounts less than a tenth of an inch possible.",
+      "fishingScore": 9,
+      "aiCall": "Mostly cloudy, with a high near 84. Northeast wind around 10 mph, with gusts as high as 20 mph.",
       "emoji": "⛅",
       "tideEvents": [
         {
@@ -140,16 +114,16 @@
     {
       "day": "Fri, Oct 9",
       "dateISO": "2026-10-09",
-      "label": "Friday",
-      "high": 79,
+      "label": "Tomorrow",
+      "high": 78,
       "low": null,
       "wind": "E 10 to 30 mph",
       "windSpeed": 30,
       "windDir": "E",
-      "storms": 94,
-      "headline": "Tropical Storm Conditions Possible",
-      "fishingScore": 3.2,
-      "aiCall": "Tropical storm conditions possible. Rain showers. Mostly cloudy, with a high near 79. Chance of precipitation is 90%.",
+      "storms": 71,
+      "headline": "Tropical Storm Conditions Possible With Hurricane Conditions Also Possible",
+      "fishingScore": 4.2,
+      "aiCall": "Tropical storm conditions possible, with hurricane conditions also possible. A chance of rain showers before 1pm, then showers and thunderstorms likely. Some of the storms could produce heavy rain. Partly sunny. High near 78, with temperatures falling to around 74 in the afternoon. Chance of precipitation is 70%.",
       "emoji": "⛈️",
       "tideEvents": [
         {
@@ -162,15 +136,32 @@
         }
       ],
       "moonPhase": "New Moon (~1% illuminated) — strong tidal push (spring tide)"
+    },
+    {
+      "day": "Sat, Oct 10",
+      "dateISO": "2026-10-10",
+      "label": "Saturday",
+      "high": 81,
+      "low": null,
+      "wind": "SE 15 to 25 mph",
+      "windSpeed": 25,
+      "windDir": "SE",
+      "storms": 92,
+      "headline": "Tropical Storm Conditions Possible",
+      "fishingScore": 3.3,
+      "aiCall": "Tropical storm conditions possible. Showers and thunderstorms. Mostly cloudy, with a high near 81. Chance of precipitation is 90%.",
+      "emoji": "⛈️",
+      "tideEvents": [],
+      "moonPhase": "New Moon (~0% illuminated) — strong tidal push (spring tide)"
     }
   ],
   "dateISO": "2026-10-07",
   "waterTemp": 83,
   "pressure": {
-    "hpa": 1013.8,
-    "inHg": 29.94,
+    "hpa": 1012.7,
+    "inHg": 29.91,
     "direction": "rising",
-    "changeHpa3h": 1.3
+    "changeHpa3h": 1.5
   },
   "speciesSignals": [
     {
