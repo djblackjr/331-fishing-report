@@ -72,16 +72,18 @@
     {
       "kind": "archived_app_snapshot",
       "date": "2026-10-07",
-      "displayDate": "October 1, 2026",
-      "summary": "Note: The most recent reports found are from late September 2026 (approximately one to two weeks old), not this exact week. According to a Northwest Florida Fishing Report covering September 18–24, 2026, Capt. Adam Schroeder of Ignite The Bite Charters in Destin described the inshore bite around Choctawhatchee Bay as one of the best he'd seen all year, with redfish, flounder, and trout all responding well as bait became easy to find in the mornings. Larger redfish were holding around bridge structure, best targeted with croakers or spot minnows as live bait. Water temperature for today's session is 85°F. With October now underway, the fall transition should be pushing fish shallower onto the flats and into the bayous, making this one of the better windows of the year for inshore bay species.",
-      "attribution": "greatdaysoutdoors.com (Northwest Florida Fishing Report, week of Sept 18–24, 2026, featuring Capt. Adam Schroeder / Ignite The Bite Charters, Destin) · Auto-refreshed via Claude API",
+      "displayDate": "October 7, 2026",
+      "summary": "Note: The most current dated report found is from Half Hitch (September 28, 2026 — about 10 days old); the Captain Experiences Choctawhatchee Bay page shows reports filed 1–2 days and 1 week ago. With water at 83°F, the inshore bay bite is described as heating up as October and the Destin Fishing Rodeo kick off. Redfish and speckled trout in the bayous are the standout targets right now, with guides noting active action despite intermittent rain and small-craft advisories this past week. The mullet run is underway in the bay, which is concentrating bait and drawing in reds — look for them around bayou grass edges, bridge pilings, and the river systems on moving water. The Half Hitch 9-28-26 report exists and is the most recent from that local source, but its full bay-fishing content was not retrievable in search results.",
+      "attribution": "captainexperiences.com (Choctawhatchee Bay reports page, reports filed Oct 4–6, 2026); halfhitch.com (Destin Fishing Report 9-28-26, most recent report confirmed by title) · Auto-refreshed via Claude API",
       "sourceIds": [
-        "report-aHR0cHM6Ly9ncmVhdG"
+        "captain-experiences-destin",
+        "halfhitch-destin",
+        "report-aHR0cHM6Ly9jYXB0YW",
+        "report-aHR0cHM6Ly9oYWxmaG"
       ],
       "species": [
         "spotted_seatrout",
-        "redfish",
-        "gulf_flounder"
+        "redfish"
       ],
       "conditions": {
         "wind": "NE 10 mph",
@@ -101,10 +103,10 @@
         "sky": "Cloudy",
         "stormChance": 1,
         "pressure": {
-          "hpa": 1012.7,
+          "hpa": 1012.8,
           "inHg": 29.91,
           "direction": "rising",
-          "changeHpa3h": 1.5
+          "changeHpa3h": 1.4
         }
       }
     },
@@ -341,8 +343,8 @@
       "key": "gulf_flounder",
       "label": "Flounder",
       "current": false,
-      "reportCount": 4,
-      "lastReported": "2026-10-07",
+      "reportCount": 3,
+      "lastReported": "2026-07-28",
       "evidenceLevel": "archived_regional_report"
     },
     {
@@ -468,18 +470,18 @@
   "sources": [
     {
       "id": "report-aHR0cHM6Ly9jYXB0YW",
-      "label": "Choctawhatchee Bay Fishing Reports (August 2026)",
+      "label": "Choctawhatchee Bay Fishing Reports (October 2026)",
       "url": "https://captainexperiences.com/fishing-reports/locations/regions/choctawhatchee-bay",
       "kind": "regional_report",
-      "reportDate": "2026-08-06",
+      "reportDate": "2026-10-06",
       "note": "Exact source page preserved by the daily bite-report research."
     },
     {
       "id": "report-aHR0cHM6Ly9oYWxmaG",
-      "label": "Destin Fishing Report 7-13-26",
-      "url": "https://halfhitch.com/blog/destin-fishing-report-7-13-26",
+      "label": "Destin Fishing Report 9-28-26",
+      "url": "https://halfhitch.com/blog/destin-fishing-report-9-28-26",
       "kind": "regional_report",
-      "reportDate": "2026-07-13",
+      "reportDate": "2026-09-28",
       "note": "Exact source page preserved by the daily bite-report research."
     },
     {
@@ -488,14 +490,6 @@
       "url": "https://fishingbooker.com/reports/destination/us/choctawhatchee-bay",
       "kind": "regional_report",
       "note": "Dated charter and angler reports for Choctawhatchee Bay."
-    },
-    {
-      "id": "report-aHR0cHM6Ly9ncmVhdG",
-      "label": "Northwest Florida Fishing Report for September 18 – 24, 2026",
-      "url": "https://greatdaysoutdoors.com/northwest-florida-fishing-report-for-september-18-24-2026/",
-      "kind": "regional_report",
-      "reportDate": "2026-09-18",
-      "note": "Exact source page preserved by the daily bite-report research."
     },
     {
       "id": "captain-experiences-destin",
