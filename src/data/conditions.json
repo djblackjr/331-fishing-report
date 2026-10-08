@@ -1,42 +1,59 @@
 {
-  "date": "Wednesday, October 7, 2026",
+  "date": "Thursday, October 8, 2026",
   "wind": {
-    "speed": 10,
-    "dir": "NE",
-    "description": "NE 10 mph"
+    "speed": 15,
+    "dir": "ENE",
+    "description": "ENE 10 to 15 mph"
   },
   "weather": "Mostly Cloudy · High 84°F",
-  "tide": "High tide ~3:47 AM · Low tide ~1:14 PM · Sunrise 6:41 AM",
+  "tide": "High tide ~8:35 PM · Low tide ~9:40 PM · Sunrise 6:41 AM",
   "tideEvents": [
     {
       "type": "H",
-      "time": "3:47 AM"
+      "time": "8:35 PM"
     },
     {
       "type": "L",
-      "time": "1:14 PM"
+      "time": "9:40 PM"
+    },
+    {
+      "type": "H",
+      "time": "5:08 AM"
+    },
+    {
+      "type": "L",
+      "time": "12:26 PM"
+    },
+    {
+      "type": "H",
+      "time": "5:38 PM"
     }
   ],
   "sunrise": "6:41 AM",
   "sunset": "6:22 PM",
   "stormWindow": "before 1PM",
-  "stormChance": 1,
+  "stormChance": 2,
   "moonPhase": "Waning Crescent (~4% illuminated) — strong tidal push (spring tide)",
   "waterClarity": "Slightly stained",
   "sky": "Cloudy",
-  "lastUpdated": "10/7/2026, 9:07:30 PM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
-  "localBiteReport": "Note: The most current dated report found is from Half Hitch (September 28, 2026 — about 10 days old); the Captain Experiences Choctawhatchee Bay page shows reports filed 1–2 days and 1 week ago. With water at 83°F, the inshore bay bite is described as heating up as October and the Destin Fishing Rodeo kick off. Redfish and speckled trout in the bayous are the standout targets right now, with guides noting active action despite intermittent rain and small-craft advisories this past week. The mullet run is underway in the bay, which is concentrating bait and drawing in reds — look for them around bayou grass edges, bridge pilings, and the river systems on moving water. The Half Hitch 9-28-26 report exists and is the most recent from that local source, but its full bay-fishing content was not retrievable in search results.",
-  "localBiteSource": "captainexperiences.com (Choctawhatchee Bay reports page, reports filed Oct 4–6, 2026); halfhitch.com (Destin Fishing Report 9-28-26, most recent report confirmed by title) · Auto-refreshed via Claude API",
-  "localBiteUpdated": "October 7, 2026",
+  "lastUpdated": "10/8/2026, 10:32:09 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "localBiteReport": "Reports from early October 2026 on the Choctawhatchee Bay show the fall inshore bite picking up nicely. A Fort Walton Beach guide reported one week ago that redfish and trout were heating up in the bayous, aligning with the broader fall pattern local guides describe as one of the best of the year for bull reds and speckled trout on the flats. A Santa Rosa Beach guide also noted around the same time that all fish seem to be firing, echoing the seasonal shift. Water temperature is 83°F. The most recent Half Hitch Destin report on record is dated September 28, 2026 — roughly 10 days old — and its full bay-fishing content was not directly accessible, but the broader pattern from that outlet and captainexperiences.com guides is consistent: redfish active in bayous and along structure, speckled trout moving around, and flounder improving as fall progresses toward its peak gigging months.",
+  "localBiteSource": "captainexperiences.com (Choctawhatchee Bay and Santa Rosa Beach report pages, October 2026); halfhitch.com (Destin Fishing Reports index, most recent post 9-28-26) · Auto-refreshed via Claude API",
+  "localBiteUpdated": "October 8, 2026",
   "localBiteEvidence": [
     {
       "title": "Choctawhatchee Bay Fishing Reports (October 2026)",
       "url": "https://captainexperiences.com/fishing-reports/locations/regions/choctawhatchee-bay",
-      "reportDate": "2026-10-06"
+      "reportDate": "2026-10-01"
     },
     {
-      "title": "Destin Fishing Report 9-28-26",
-      "url": "https://halfhitch.com/blog/destin-fishing-report-9-28-26",
+      "title": "Santa Rosa Beach Fishing Reports (September 2026)",
+      "url": "https://captainexperiences.com/fishing-reports/locations/florida/santa-rosa-beach",
+      "reportDate": "2026-09-01"
+    },
+    {
+      "title": "Destin Fishing Reports — Half Hitch (most recent: Destin Fishing Report 9-28-26)",
+      "url": "https://halfhitch.com/blog/destin-fishing-reports",
       "reportDate": "2026-09-28"
     }
   ],
@@ -53,27 +70,27 @@
   },
   "openMeteo": [
     {
-      "high": 84,
+      "high": 82,
       "low": 70,
-      "stormChance": 4,
+      "stormChance": 9,
       "windSpeed": 12,
       "windDir": "NE",
       "summary": "Overcast"
     },
     {
-      "high": 83,
-      "low": 70,
-      "stormChance": 6,
-      "windSpeed": 11,
-      "windDir": "NE",
-      "summary": "Overcast"
+      "high": 75,
+      "low": 67,
+      "stormChance": 88,
+      "windSpeed": 29,
+      "windDir": "E",
+      "summary": "Heavy rain"
     },
     {
-      "high": 80,
-      "low": 68,
-      "stormChance": 84,
-      "windSpeed": 25,
-      "windDir": "E",
+      "high": 81,
+      "low": 74,
+      "stormChance": 88,
+      "windSpeed": 14,
+      "windDir": "S",
       "summary": "Rain showers"
     }
   ],
@@ -84,13 +101,13 @@
       "label": "Today",
       "high": 84,
       "low": null,
-      "wind": "NE 10 mph",
-      "windSpeed": 10,
-      "windDir": "NE",
-      "storms": 1,
+      "wind": "ENE 10 to 15 mph",
+      "windSpeed": 15,
+      "windDir": "ENE",
+      "storms": 2,
       "headline": "Mostly Cloudy",
-      "fishingScore": 9,
-      "aiCall": "Mostly cloudy, with a high near 84. Northeast wind around 10 mph, with gusts as high as 20 mph.",
+      "fishingScore": 8.4,
+      "aiCall": "Mostly cloudy, with a high near 84. East northeast wind 10 to 15 mph. New rainfall amounts less than a tenth of an inch possible.",
       "emoji": "⛅",
       "tideEvents": [
         {
@@ -120,15 +137,15 @@
       "day": "Fri, Oct 9",
       "dateISO": "2026-10-09",
       "label": "Tomorrow",
-      "high": 78,
+      "high": 77,
       "low": null,
-      "wind": "E 10 to 30 mph",
-      "windSpeed": 30,
+      "wind": "E 20 to 35 mph",
+      "windSpeed": 35,
       "windDir": "E",
-      "storms": 71,
-      "headline": "Tropical Storm Conditions Possible With Hurricane Conditions Also Possible",
-      "fishingScore": 4.2,
-      "aiCall": "Tropical storm conditions possible, with hurricane conditions also possible. A chance of rain showers before 1pm, then showers and thunderstorms likely. Some of the storms could produce heavy rain. Partly sunny. High near 78, with temperatures falling to around 74 in the afternoon. Chance of precipitation is 70%.",
+      "storms": 92,
+      "headline": "Tropical Storm Conditions Expected With Hurricane Conditions Possible",
+      "fishingScore": 3.3,
+      "aiCall": "Tropical storm conditions expected, with hurricane conditions possible. Rain showers likely between 7am and 1pm, then showers and thunderstorms. Some of the storms could produce heavy rain. Cloudy. High near 77, with temperatures falling to around 73 in the afternoon. Chance of precipitation is 90%. New rainfall amounts between 1 and 2 inches possible.",
       "emoji": "⛈️",
       "tideEvents": [
         {
@@ -148,25 +165,34 @@
       "label": "Saturday",
       "high": 81,
       "low": null,
-      "wind": "SE 15 to 25 mph",
+      "wind": "SSE 15 to 25 mph",
       "windSpeed": 25,
-      "windDir": "SE",
-      "storms": 92,
+      "windDir": "SSE",
+      "storms": 76,
       "headline": "Tropical Storm Conditions Possible",
-      "fishingScore": 3.3,
-      "aiCall": "Tropical storm conditions possible. Showers and thunderstorms. Mostly cloudy, with a high near 81. Chance of precipitation is 90%.",
+      "fishingScore": 4,
+      "aiCall": "Tropical storm conditions possible. Showers and thunderstorms. Mostly cloudy, with a high near 81. Chance of precipitation is 80%.",
       "emoji": "⛈️",
-      "tideEvents": [],
+      "tideEvents": [
+        {
+          "type": "L",
+          "time": "2:59 AM"
+        },
+        {
+          "type": "H",
+          "time": "5:46 PM"
+        }
+      ],
       "moonPhase": "New Moon (~0% illuminated) — strong tidal push (spring tide)"
     }
   ],
-  "dateISO": "2026-10-07",
+  "dateISO": "2026-10-08",
   "waterTemp": 83,
   "pressure": {
-    "hpa": 1012.8,
-    "inHg": 29.91,
+    "hpa": 1014.1,
+    "inHg": 29.95,
     "direction": "rising",
-    "changeHpa3h": 1.4
+    "changeHpa3h": 0.7
   },
   "speciesSignals": [
     {
@@ -174,21 +200,21 @@
       "label": "Speckled trout",
       "current": true,
       "reportCount": 9,
-      "lastReported": "2026-10-07"
+      "lastReported": "2026-10-08"
     },
     {
       "key": "redfish",
       "label": "Redfish",
       "current": true,
       "reportCount": 10,
-      "lastReported": "2026-10-07"
+      "lastReported": "2026-10-08"
     },
     {
       "key": "gulf_flounder",
       "label": "Flounder",
-      "current": false,
-      "reportCount": 3,
-      "lastReported": "2026-07-28"
+      "current": true,
+      "reportCount": 4,
+      "lastReported": "2026-10-08"
     },
     {
       "key": "black_drum",
@@ -209,25 +235,25 @@
     "majors": [
       {
         "type": "overhead",
-        "peak": "10:10 AM",
-        "window": "9:10 AM–11:10 AM"
+        "peak": "10:55 AM",
+        "window": "9:55 AM–11:55 AM"
       },
       {
         "type": "underfoot",
-        "peak": "10:40 PM",
-        "window": "9:40 PM–11:40 PM"
+        "peak": "11:25 PM",
+        "window": "10:25 PM–12:25 AM"
       }
     ],
     "minors": [
       {
         "type": "moonrise",
-        "peak": "3:40 AM",
-        "window": "3:10 AM–4:10 AM"
+        "peak": "4:45 AM",
+        "window": "4:15 AM–5:15 AM"
       },
       {
         "type": "moonset",
-        "peak": "4:40 PM",
-        "window": "4:10 PM–5:10 PM"
+        "peak": "5:10 PM",
+        "window": "4:40 PM–5:40 PM"
       }
     ]
   }

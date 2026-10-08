@@ -1,38 +1,50 @@
 {
   "type": "FishingIntelligence",
   "region": "choctawhatchee_bay",
-  "generatedAt": "2026-10-07",
+  "generatedAt": "2026-10-08",
   "scopeNote": "Regional reports support timing and species activity only. They do not prove a catch, depth, bottom type, or safe navigation at a mapped Jolly Bay feature.",
   "currentConditions": {
-    "wind": "NE 10 mph",
-    "windDir": "NE",
-    "tide": "High tide ~3:47 AM · Low tide ~1:14 PM · Sunrise 6:41 AM",
+    "wind": "ENE 10 to 15 mph",
+    "windDir": "ENE",
+    "tide": "High tide ~8:35 PM · Low tide ~9:40 PM · Sunrise 6:41 AM",
     "tideEvents": [
       {
         "type": "H",
-        "time": "3:47 AM"
+        "time": "8:35 PM"
       },
       {
         "type": "L",
-        "time": "1:14 PM"
+        "time": "9:40 PM"
+      },
+      {
+        "type": "H",
+        "time": "5:08 AM"
+      },
+      {
+        "type": "L",
+        "time": "12:26 PM"
+      },
+      {
+        "type": "H",
+        "time": "5:38 PM"
       }
     ],
     "waterTemp": 83,
     "sky": "Cloudy",
-    "stormChance": 1,
+    "stormChance": 2,
     "pressure": {
-      "hpa": 1012.8,
-      "inHg": 29.91,
+      "hpa": 1014.1,
+      "inHg": 29.95,
       "direction": "rising",
-      "changeHpa3h": 1.4
+      "changeHpa3h": 0.7
     }
   },
   "currentReport": {
     "kind": "current_regional_report",
-    "date": "2026-10-07",
-    "displayDate": "October 7, 2026",
-    "summary": "Note: The most current dated report found is from Half Hitch (September 28, 2026 — about 10 days old); the Captain Experiences Choctawhatchee Bay page shows reports filed 1–2 days and 1 week ago. With water at 83°F, the inshore bay bite is described as heating up as October and the Destin Fishing Rodeo kick off. Redfish and speckled trout in the bayous are the standout targets right now, with guides noting active action despite intermittent rain and small-craft advisories this past week. The mullet run is underway in the bay, which is concentrating bait and drawing in reds — look for them around bayou grass edges, bridge pilings, and the river systems on moving water. The Half Hitch 9-28-26 report exists and is the most recent from that local source, but its full bay-fishing content was not retrievable in search results.",
-    "attribution": "captainexperiences.com (Choctawhatchee Bay reports page, reports filed Oct 4–6, 2026); halfhitch.com (Destin Fishing Report 9-28-26, most recent report confirmed by title) · Auto-refreshed via Claude API",
+    "date": "2026-10-08",
+    "displayDate": "October 8, 2026",
+    "summary": "Reports from early October 2026 on the Choctawhatchee Bay show the fall inshore bite picking up nicely. A Fort Walton Beach guide reported one week ago that redfish and trout were heating up in the bayous, aligning with the broader fall pattern local guides describe as one of the best of the year for bull reds and speckled trout on the flats. A Santa Rosa Beach guide also noted around the same time that all fish seem to be firing, echoing the seasonal shift. Water temperature is 83°F. The most recent Half Hitch Destin report on record is dated September 28, 2026 — roughly 10 days old — and its full bay-fishing content was not directly accessible, but the broader pattern from that outlet and captainexperiences.com guides is consistent: redfish active in bayous and along structure, speckled trout moving around, and flounder improving as fall progresses toward its peak gigging months.",
+    "attribution": "captainexperiences.com (Choctawhatchee Bay and Santa Rosa Beach report pages, October 2026); halfhitch.com (Destin Fishing Reports index, most recent post 9-28-26) · Auto-refreshed via Claude API",
     "sourceIds": [
       "captain-experiences-destin",
       "halfhitch-destin",
@@ -41,30 +53,43 @@
     ],
     "species": [
       "spotted_seatrout",
-      "redfish"
+      "redfish",
+      "gulf_flounder"
     ],
     "conditions": {
-      "wind": "NE 10 mph",
-      "windDir": "NE",
-      "tide": "High tide ~3:47 AM · Low tide ~1:14 PM · Sunrise 6:41 AM",
+      "wind": "ENE 10 to 15 mph",
+      "windDir": "ENE",
+      "tide": "High tide ~8:35 PM · Low tide ~9:40 PM · Sunrise 6:41 AM",
       "tideEvents": [
         {
           "type": "H",
-          "time": "3:47 AM"
+          "time": "8:35 PM"
         },
         {
           "type": "L",
-          "time": "1:14 PM"
+          "time": "9:40 PM"
+        },
+        {
+          "type": "H",
+          "time": "5:08 AM"
+        },
+        {
+          "type": "L",
+          "time": "12:26 PM"
+        },
+        {
+          "type": "H",
+          "time": "5:38 PM"
         }
       ],
       "waterTemp": 83,
       "sky": "Cloudy",
-      "stormChance": 1,
+      "stormChance": 2,
       "pressure": {
-        "hpa": 1012.8,
-        "inHg": 29.91,
+        "hpa": 1014.1,
+        "inHg": 29.95,
         "direction": "rising",
-        "changeHpa3h": 1.4
+        "changeHpa3h": 0.7
       }
     }
   },
@@ -328,7 +353,7 @@
       "label": "Speckled trout",
       "current": true,
       "reportCount": 9,
-      "lastReported": "2026-10-07",
+      "lastReported": "2026-10-08",
       "evidenceLevel": "current_regional_report"
     },
     {
@@ -336,16 +361,16 @@
       "label": "Redfish",
       "current": true,
       "reportCount": 10,
-      "lastReported": "2026-10-07",
+      "lastReported": "2026-10-08",
       "evidenceLevel": "current_regional_report"
     },
     {
       "key": "gulf_flounder",
       "label": "Flounder",
-      "current": false,
-      "reportCount": 3,
-      "lastReported": "2026-07-28",
-      "evidenceLevel": "archived_regional_report"
+      "current": true,
+      "reportCount": 4,
+      "lastReported": "2026-10-08",
+      "evidenceLevel": "current_regional_report"
     },
     {
       "key": "black_drum",
