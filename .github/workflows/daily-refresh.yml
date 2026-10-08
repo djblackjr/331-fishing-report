@@ -7,7 +7,12 @@ name: Daily Conditions Refresh
     # workflow_dispatch directly (GitHub's native schedule proved unreliable
     # for this repo — see project history).
     - cron: '13 8 * * *'
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      force_bite_report:
+        description: Refresh the paid bite report even if it already ran today
+        type: boolean
+        default: false
 
 jobs:
   refresh:
@@ -31,6 +36,7 @@ jobs:
         id: bite_report
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          BITE_REPORT_FORCE: ${{ inputs.force_bite_report && '1' || '' }}
         run: node scripts/update-bite-report.mjs
 
       # Per-location "Today's advice" and the bay-wide daily summary used to

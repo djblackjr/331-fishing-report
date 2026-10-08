@@ -91,8 +91,21 @@ async function callClaude(prompt) {
   return JSON.parse(jsonMatch ? jsonMatch[0] : cleaned);
 }
 
+function todayLabel() {
+  return new Date().toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "America/Chicago" });
+}
+
 async function main() {
   const existing = JSON.parse(await readFile(OUT_PATH, "utf-8"));
+
+  // The workflow is triggered more than once a day (the cron-job.org ping plus
+  // GitHub's own late-arriving schedule). The weather/tide refresh is free, but
+  // this call is paid, so only make it once per Central-time day. Set
+  // BITE_REPORT_FORCE=1 (the workflow's "force_bite_report" input) to override.
+  if (existing.localBiteUpdated === todayLabel() && !process.env.BITE_REPORT_FORCE) {
+    console.log(`Bite report already refreshed today (${existing.localBiteUpdated}) — skipping the Claude API call.`);
+    return;
+  }
 
   let result;
   try {
@@ -109,12 +122,11 @@ async function main() {
     process.exit(0);
   }
 
-  const dateISO = new Intl.DateTimeFormat("en-CA", { timeZone: "America/Chicago" }).format(new Date());
   const updated = {
     ...existing,
     localBiteReport: result.localBiteReport,
     localBiteSource: `${result.localBiteSource} · Auto-refreshed via Claude API`,
-    localBiteUpdated: new Date().toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "America/Chicago" }),
+    localBiteUpdated: todayLabel(),
     localBiteEvidence: (result.sources || []).flatMap((source) => {
       try {
         const url = new URL(source.url);
