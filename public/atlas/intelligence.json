@@ -1,113 +1,111 @@
 {
   "type": "FishingIntelligence",
   "region": "choctawhatchee_bay",
-  "generatedAt": "2026-10-10",
+  "generatedAt": "2026-10-11",
   "scopeNote": "Regional reports support timing and species activity only. They do not prove a catch, depth, bottom type, or safe navigation at a mapped Jolly Bay feature.",
   "currentConditions": {
-    "wind": "SW 10 to 15 mph",
-    "windDir": "SW",
-    "tide": "High tide ~5:46 PM · Low tide ~2:59 AM · Sunrise 6:42 AM",
+    "wind": "W 5 to 10 mph",
+    "windDir": "W",
+    "tide": "High tide ~6:07 PM · Low tide ~4:04 AM · Sunrise 6:43 AM",
     "tideEvents": [
       {
         "type": "L",
-        "time": "2:59 AM"
+        "time": "4:04 AM"
       },
       {
         "type": "H",
-        "time": "5:46 PM"
+        "time": "6:07 PM"
       }
     ],
     "waterTemp": 81,
     "sky": "Bright sun",
-    "stormChance": 7,
+    "stormChance": 0,
     "pressure": {
-      "hpa": 1011.3,
-      "inHg": 29.86,
+      "hpa": 1020.2,
+      "inHg": 30.13,
       "direction": "rising",
-      "changeHpa3h": 2.7
+      "changeHpa3h": 2.1
     }
   },
   "currentReport": {
     "kind": "current_regional_report",
-    "date": "2026-10-10",
-    "displayDate": "October 10, 2026",
-    "summary": "The most current report with inshore content is from captainexperiences.com's Choctawhatchee Bay page, updated within the past week (early October 2026). A Fort Walton Beach guide noted that redfish and trout are active in the bayou areas of the bay right now, coinciding with the opening of the Destin Fishing Rodeo. Water temperature at this location is 81°F. October is historically one of the stronger months for inshore species on the bay — sheepshead, redfish, and speckled trout are all seasonally on offer, with flounder typically picking up through November. Note: the Half Hitch Destin report blog's most recent post is dated September 28, 2026 (about 12 days old) and its full inshore content was not retrievable in search results; the 30A Shallow Water Guide Service site has not published a report since late March 2026.",
+    "date": "2026-10-11",
+    "displayDate": "October 11, 2026",
+    "summary": "The most current available report for Choctawhatchee Bay is approximately one week old (early October 2026). A guide out of Fort Walton Beach reported that redfish and speckled trout in the bayou are heating up as the Destin Fishing Rodeo kicks off for October, with bay action picking up alongside the start of fall. Water temperature at this spot is currently 81°F. October is historically one of the stronger months for inshore species here — redfish become more active on the flats and in the river systems, and speckled trout fishing improves as water temperatures ease into fall; flounder, sheepshead, and black drum round out the bay picture though no specific October 2026 catch reports for those species were found in accessible sources this week.",
     "attribution": "captainexperiences.com (Choctawhatchee Bay Fishing Reports, October 2026) · Auto-refreshed via Claude API",
     "sourceIds": [
       "captain-experiences-destin",
-      "report-aHR0cHM6Ly9jYXB0YW",
-      "report-aHR0cHM6Ly9oYWxmaG"
+      "report-aHR0cHM6Ly9jYXB0YW"
     ],
     "species": [
       "spotted_seatrout",
-      "redfish",
-      "gulf_flounder",
-      "sheepshead"
+      "redfish"
     ],
     "conditions": {
-      "wind": "SW 10 to 15 mph",
-      "windDir": "SW",
-      "tide": "High tide ~5:46 PM · Low tide ~2:59 AM · Sunrise 6:42 AM",
+      "wind": "W 5 to 10 mph",
+      "windDir": "W",
+      "tide": "High tide ~6:07 PM · Low tide ~4:04 AM · Sunrise 6:43 AM",
       "tideEvents": [
         {
           "type": "L",
-          "time": "2:59 AM"
+          "time": "4:04 AM"
         },
         {
           "type": "H",
-          "time": "5:46 PM"
+          "time": "6:07 PM"
         }
       ],
       "waterTemp": 81,
       "sky": "Bright sun",
-      "stormChance": 7,
+      "stormChance": 0,
       "pressure": {
-        "hpa": 1011.3,
-        "inHg": 29.86,
+        "hpa": 1020.2,
+        "inHg": 30.13,
         "direction": "rising",
-        "changeHpa3h": 2.7
+        "changeHpa3h": 2.1
       }
     }
   },
   "archivedReports": [
     {
       "kind": "archived_app_snapshot",
-      "date": "2026-10-09",
-      "displayDate": "October 9, 2026",
-      "summary": "The most current dated report available from Half Hitch (Destin Fishing Report 9-28-26, roughly 11 days old as of today) confirms the site is actively posting, though its full bay-fishing content was not retrievable via search. From captainexperiences.com's Choctawhatchee Bay page — updated within the past week with guide check-ins coinciding with the start of the Destin Fishing Rodeo — local Fort Walton Beach-area guides are reporting that redfish and speckled trout are active in the bayous, with the inshore bite described as heating up heading into October. Water temperature at this location is 83°F. The mullet run, which typically fires up the fall redfish bite along grass edges and river mouths in the Choctawhatchee system, is the key seasonal driver right now, and moving-tide windows around bay structure (bridges, dock lights, grass flats) are the most reliable setups for reds and trout.",
-      "attribution": "captainexperiences.com (Choctawhatchee Bay Fishing Reports, October 2026); halfhitch.com (Destin Fishing Reports blog — most recent post title: Destin Fishing Report 9-28-26) · Auto-refreshed via Claude API",
+      "date": "2026-10-10",
+      "displayDate": "October 10, 2026",
+      "summary": "The most current report with inshore content is from captainexperiences.com's Choctawhatchee Bay page, updated within the past week (early October 2026). A Fort Walton Beach guide noted that redfish and trout are active in the bayou areas of the bay right now, coinciding with the opening of the Destin Fishing Rodeo. Water temperature at this location is 81°F. October is historically one of the stronger months for inshore species on the bay — sheepshead, redfish, and speckled trout are all seasonally on offer, with flounder typically picking up through November. Note: the Half Hitch Destin report blog's most recent post is dated September 28, 2026 (about 12 days old) and its full inshore content was not retrievable in search results; the 30A Shallow Water Guide Service site has not published a report since late March 2026.",
+      "attribution": "captainexperiences.com (Choctawhatchee Bay Fishing Reports, October 2026) · Auto-refreshed via Claude API",
       "sourceIds": [
         "captain-experiences-destin",
-        "halfhitch-destin",
         "report-aHR0cHM6Ly9jYXB0YW",
         "report-aHR0cHM6Ly9oYWxmaG"
       ],
       "species": [
         "spotted_seatrout",
-        "redfish"
+        "redfish",
+        "gulf_flounder",
+        "sheepshead"
       ],
       "conditions": {
-        "wind": "ENE 15 to 35 mph",
-        "windDir": "ENE",
-        "tide": "High tide ~5:33 PM · Low tide ~1:23 AM · Sunrise 6:41 AM",
+        "wind": "SW 10 to 15 mph",
+        "windDir": "SW",
+        "tide": "High tide ~5:46 PM · Low tide ~2:59 AM · Sunrise 6:42 AM",
         "tideEvents": [
           {
             "type": "L",
-            "time": "1:23 AM"
+            "time": "2:59 AM"
           },
           {
             "type": "H",
-            "time": "5:33 PM"
+            "time": "5:46 PM"
           }
         ],
-        "waterTemp": 83,
-        "sky": "Cloudy",
-        "stormChance": 98,
+        "waterTemp": 81,
+        "sky": "Bright sun",
+        "stormChance": 7,
         "pressure": {
-          "hpa": 1012.3,
-          "inHg": 29.89,
-          "direction": "falling",
-          "changeHpa3h": -1.7
+          "hpa": 1011.3,
+          "inHg": 29.86,
+          "direction": "rising",
+          "changeHpa3h": 2.7
         }
       }
     },
@@ -329,7 +327,7 @@
       "label": "Speckled trout",
       "current": true,
       "reportCount": 9,
-      "lastReported": "2026-10-10",
+      "lastReported": "2026-10-11",
       "evidenceLevel": "current_regional_report"
     },
     {
@@ -337,16 +335,16 @@
       "label": "Redfish",
       "current": true,
       "reportCount": 10,
-      "lastReported": "2026-10-10",
+      "lastReported": "2026-10-11",
       "evidenceLevel": "current_regional_report"
     },
     {
       "key": "gulf_flounder",
       "label": "Flounder",
-      "current": true,
+      "current": false,
       "reportCount": 4,
       "lastReported": "2026-10-10",
-      "evidenceLevel": "current_regional_report"
+      "evidenceLevel": "archived_regional_report"
     },
     {
       "key": "black_drum",
@@ -359,10 +357,10 @@
     {
       "key": "sheepshead",
       "label": "Sheepshead",
-      "current": true,
+      "current": false,
       "reportCount": 2,
       "lastReported": "2026-10-10",
-      "evidenceLevel": "current_regional_report"
+      "evidenceLevel": "archived_regional_report"
     }
   ],
   "profiles": {
@@ -474,15 +472,7 @@
       "label": "Choctawhatchee Bay Fishing Reports (October 2026)",
       "url": "https://captainexperiences.com/fishing-reports/locations/regions/choctawhatchee-bay",
       "kind": "regional_report",
-      "reportDate": "2026-10-07",
-      "note": "Exact source page preserved by the daily bite-report research."
-    },
-    {
-      "id": "report-aHR0cHM6Ly9oYWxmaG",
-      "label": "Destin Fishing Report 9-28-26 — Half Hitch",
-      "url": "https://halfhitch.com/blog/destin-fishing-reports",
-      "kind": "regional_report",
-      "reportDate": "2026-09-28",
+      "reportDate": "2026-10-09",
       "note": "Exact source page preserved by the daily bite-report research."
     },
     {
@@ -491,6 +481,14 @@
       "url": "https://fishingbooker.com/reports/destination/us/choctawhatchee-bay",
       "kind": "regional_report",
       "note": "Dated charter and angler reports for Choctawhatchee Bay."
+    },
+    {
+      "id": "report-aHR0cHM6Ly9oYWxmaG",
+      "label": "Destin Fishing Report 9-28-26 — Half Hitch",
+      "url": "https://halfhitch.com/blog/destin-fishing-report-9-28-26",
+      "kind": "regional_report",
+      "reportDate": "2026-09-28",
+      "note": "Exact source page preserved by the daily bite-report research."
     },
     {
       "id": "captain-experiences-destin",
