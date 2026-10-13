@@ -1,113 +1,93 @@
 {
-  "date": "Monday, October 12, 2026",
+  "date": "Tuesday, October 13, 2026",
   "wind": {
     "speed": 5,
-    "dir": "NW",
-    "description": "NW 5 mph"
+    "dir": "NNE",
+    "description": "NNE 0 to 5 mph"
   },
   "weather": "Sunny · High 87°F",
-  "tide": "High tide ~6:38 PM · Low tide ~4:58 AM · Sunrise 6:43 AM",
+  "tide": "High tide ~n/a · Low tide ~5:52 AM · Sunrise 6:44 AM",
   "tideEvents": [
     {
       "type": "L",
-      "time": "4:58 AM"
-    },
-    {
-      "type": "H",
-      "time": "6:38 PM"
+      "time": "5:52 AM"
     }
   ],
-  "sunrise": "6:43 AM",
-  "sunset": "6:18 PM",
+  "sunrise": "6:44 AM",
+  "sunset": "6:16 PM",
   "stormWindow": "before 1PM",
   "stormChance": 0,
-  "moonPhase": "Waxing Crescent (~5% illuminated) — strong tidal push (spring tide)",
+  "moonPhase": "Waxing Crescent (~10% illuminated) — strong tidal push (spring tide)",
   "waterClarity": "Slightly stained",
   "sky": "Bright sun",
-  "lastUpdated": "10/12/2026, 12:48:46 PM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
-  "localBiteReport": "Reports from the past one to two weeks indicate the inshore bite in Choctawhatchee Bay is picking up as the Destin Fishing Rodeo gets underway in October. Redfish are the most consistent bay target right now, with fish showing up in the bayous, around dock lights, and along grass edges with moving water. Speckled trout are also active — particularly at night near lit docks — though the Half Hitch Destin report contributing to this summary is approximately two weeks old (dated 9-28-26), so conditions may have shifted. The captainexperiences.com guide feed, updated within the past week, echoes that redfish and trout in the bayou are heating up alongside the fall seasonal transition. Water temperature is 82°F.",
-  "localBiteSource": "captainexperiences.com (Choctawhatchee Bay Fishing Reports, October 2026); halfhitch.com (Destin Fishing Report 9-28-26 — approximately 2 weeks old) · Auto-refreshed via Claude API",
-  "localBiteUpdated": "October 12, 2026",
+  "lastUpdated": "10/13/2026, 10:54:12 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "localBiteReport": "The most recent reports (from the past 1–2 weeks) from Choctawhatchee Bay guides indicate that redfish and speckled trout have been heating up in the bayou and along dock structures, with the fall pattern kicking in as the Destin Fishing Rodeo gets underway this October. Slot-sized redfish are being caught around lighted docks and drop-offs, and trout remain a consistent target; one local Santa Rosa Beach captain noted catching slots around docks and a few trout, with sheepshead expected to improve at bay structures in the coming weeks. Half Hitch's Destin report from late September noted redfish as the dominant bay species, with trout active after dark around dock lights — a pattern that typically carries into mid-October. Water temperature is 82°F. Note: the most detailed Half Hitch bay fishing content available is from their 9-28-26 and 9-7-26 reports (roughly 2 weeks and 5 weeks old, respectively), as the October report had not yet been published at time of check.",
+  "localBiteSource": "captainexperiences.com (Choctawhatchee Bay October 2026 report page, including Captain Nick T. Santa Rosa Beach report); halfhitch.com Destin Fishing Reports (9-28-26 and 9-7-26) · Auto-refreshed via Claude API",
+  "localBiteUpdated": "October 13, 2026",
   "localBiteEvidence": [
     {
       "title": "Choctawhatchee Bay Fishing Reports (October 2026)",
       "url": "https://captainexperiences.com/fishing-reports/locations/regions/choctawhatchee-bay",
-      "reportDate": "2026-10-05"
+      "reportDate": "2026-10-04"
+    },
+    {
+      "title": "Red Snapper Fishing Reports (October 2026) – Captain Nick T., Santa Rosa Beach (Choctawhatchee Bay)",
+      "url": "https://captainexperiences.com/fishing-reports/species/red-snapper?page=37",
+      "reportDate": null
     },
     {
       "title": "Destin Fishing Report 9-28-26",
       "url": "https://halfhitch.com/blog/destin-fishing-report-9-28-26",
       "reportDate": "2026-09-28"
+    },
+    {
+      "title": "Destin Fishing Report 9-7-26",
+      "url": "https://halfhitch.com/blog/destin-fishing-report-9-7-26",
+      "reportDate": "2026-09-07"
     }
   ],
   "previousDay": {
-    "date": "Sunday, October 11, 2026",
+    "date": "Monday, October 12, 2026",
     "wind": {
-      "dir": "W",
-      "speed": 10
+      "dir": "NW",
+      "speed": 5
     },
-    "high": 83,
+    "high": 87,
     "stormChance": 0,
-    "tide": "High tide ~6:07 PM · Low tide ~4:04 AM · Sunrise 6:43 AM",
-    "waterTemp": 81
+    "tide": "High tide ~6:38 PM · Low tide ~4:58 AM · Sunrise 6:43 AM",
+    "waterTemp": 82
   },
   "openMeteo": [
     {
-      "high": 85,
+      "high": 84,
+      "low": 61,
+      "stormChance": 0,
+      "windSpeed": 5,
+      "windDir": "N",
+      "summary": "Mostly clear"
+    },
+    {
+      "high": 83,
       "low": 63,
       "stormChance": 0,
-      "windSpeed": 8,
+      "windSpeed": 5,
       "windDir": "N",
       "summary": "Partly cloudy"
     },
     {
-      "high": 83,
-      "low": 64,
-      "stormChance": 0,
-      "windSpeed": 5,
-      "windDir": "N",
-      "summary": "Clear"
-    },
-    {
-      "high": 89,
-      "low": 65,
-      "stormChance": 0,
-      "windSpeed": 5,
-      "windDir": "E",
-      "summary": "Clear"
+      "high": 88,
+      "low": 66,
+      "stormChance": 1,
+      "windSpeed": 7,
+      "windDir": "S",
+      "summary": "Fog"
     }
   ],
   "forecast": [
     {
-      "day": "Mon, Oct 12",
-      "dateISO": "2026-10-12",
-      "label": "Today",
-      "high": 87,
-      "low": null,
-      "wind": "NW 5 mph",
-      "windSpeed": 5,
-      "windDir": "NW",
-      "storms": 0,
-      "headline": "Sunny",
-      "fishingScore": 9,
-      "aiCall": "Sunny, with a high near 87. Northwest wind around 5 mph.",
-      "emoji": "☀️",
-      "tideEvents": [
-        {
-          "type": "L",
-          "time": "4:58 AM"
-        },
-        {
-          "type": "H",
-          "time": "6:38 PM"
-        }
-      ],
-      "moonPhase": "Waxing Crescent (~5% illuminated) — strong tidal push (spring tide)"
-    },
-    {
       "day": "Tue, Oct 13",
       "dateISO": "2026-10-13",
-      "label": "Tomorrow",
+      "label": "Today",
       "high": 87,
       "low": null,
       "wind": "NNE 0 to 5 mph",
@@ -129,7 +109,7 @@
     {
       "day": "Wed, Oct 14",
       "dateISO": "2026-10-14",
-      "label": "Wednesday",
+      "label": "Tomorrow",
       "high": 87,
       "low": null,
       "wind": "E 0 to 5 mph",
@@ -151,15 +131,41 @@
         }
       ],
       "moonPhase": "Waxing Crescent (~17% illuminated) — strong tidal push (spring tide)"
+    },
+    {
+      "day": "Thu, Oct 15",
+      "dateISO": "2026-10-15",
+      "label": "Thursday",
+      "high": 86,
+      "low": null,
+      "wind": "ESE 0 to 5 mph",
+      "windSpeed": 5,
+      "windDir": "ESE",
+      "storms": 0,
+      "headline": "Sunny",
+      "fishingScore": 9,
+      "aiCall": "Sunny, with a high near 86. East southeast wind 0 to 5 mph.",
+      "emoji": "☀️",
+      "tideEvents": [
+        {
+          "type": "H",
+          "time": "8:03 PM"
+        },
+        {
+          "type": "L",
+          "time": "7:59 AM"
+        }
+      ],
+      "moonPhase": "Waxing Crescent (~26% illuminated) — moderate tidal push"
     }
   ],
-  "dateISO": "2026-10-12",
+  "dateISO": "2026-10-13",
   "waterTemp": 82,
   "pressure": {
-    "hpa": 1018.6,
+    "hpa": 1018.7,
     "inHg": 30.08,
-    "direction": "falling",
-    "changeHpa3h": -2.2
+    "direction": "steady",
+    "changeHpa3h": 0.1
   },
   "speciesSignals": [
     {
@@ -167,14 +173,14 @@
       "label": "Speckled trout",
       "current": true,
       "reportCount": 9,
-      "lastReported": "2026-10-12"
+      "lastReported": "2026-10-13"
     },
     {
       "key": "redfish",
       "label": "Redfish",
       "current": true,
       "reportCount": 10,
-      "lastReported": "2026-10-12"
+      "lastReported": "2026-10-13"
     },
     {
       "key": "gulf_flounder",
@@ -193,34 +199,34 @@
     {
       "key": "sheepshead",
       "label": "Sheepshead",
-      "current": false,
-      "reportCount": 1,
-      "lastReported": "2026-07-01"
+      "current": true,
+      "reportCount": 2,
+      "lastReported": "2026-10-13"
     }
   ],
   "solunar": {
     "majors": [
       {
         "type": "underfoot",
-        "peak": "1:40 AM",
-        "window": "12:40 AM–2:40 AM"
+        "peak": "2:25 AM",
+        "window": "1:25 AM–3:25 AM"
       },
       {
         "type": "overhead",
-        "peak": "2:00 PM",
-        "window": "1:00 PM–3:00 PM"
+        "peak": "2:50 PM",
+        "window": "1:50 PM–3:50 PM"
       }
     ],
     "minors": [
       {
         "type": "moonrise",
-        "peak": "8:45 AM",
-        "window": "8:15 AM–9:15 AM"
+        "peak": "9:45 AM",
+        "window": "9:15 AM–10:15 AM"
       },
       {
         "type": "moonset",
-        "peak": "7:15 PM",
-        "window": "6:45 PM–7:45 PM"
+        "peak": "7:55 PM",
+        "window": "7:25 PM–8:25 PM"
       }
     ]
   }
