@@ -1,38 +1,38 @@
 {
   "type": "FishingIntelligence",
   "region": "choctawhatchee_bay",
-  "generatedAt": "2026-10-15",
+  "generatedAt": "2026-10-16",
   "scopeNote": "Regional reports support timing and species activity only. They do not prove a catch, depth, bottom type, or safe navigation at a mapped Jolly Bay feature.",
   "currentConditions": {
-    "wind": "SE 0 to 5 mph",
-    "windDir": "SE",
-    "tide": "High tide ~8:03 PM · Low tide ~7:59 AM · Sunrise 6:45 AM",
+    "wind": "W 0 to 5 mph",
+    "windDir": "W",
+    "tide": "High tide ~8:52 PM · Low tide ~9:08 AM · Sunrise 6:46 AM",
     "tideEvents": [
       {
         "type": "H",
-        "time": "8:03 PM"
+        "time": "8:52 PM"
       },
       {
         "type": "L",
-        "time": "7:59 AM"
+        "time": "9:08 AM"
       }
     ],
     "waterTemp": 81,
     "sky": "Bright sun",
-    "stormChance": 0,
+    "stormChance": 5,
     "pressure": {
-      "hpa": 1019.5,
-      "inHg": 30.11,
+      "hpa": 1019.4,
+      "inHg": 30.1,
       "direction": "rising",
-      "changeHpa3h": 1.1
+      "changeHpa3h": 1.7
     }
   },
   "currentReport": {
     "kind": "current_regional_report",
-    "date": "2026-10-15",
-    "displayDate": "October 15, 2026",
-    "summary": "Note: The most recent available reports are from late September to early October 2026 — roughly 1 to 2.5 weeks old — so conditions may have shifted somewhat since then. That said, the fall bite on Choctawhatchee Bay is shaping up well. Redfish are the standout inshore species right now, with guides reporting active action around bayou docks, grass flats, and drop-offs; one Santa Rosa Beach guide noted slot reds biting well around dock structure. Speckled trout are still in the mix, showing up around dock lights at night and on deeper flat edges, though sheepshead are expected to improve further as fall progresses. Flounder gigging was noted as picking up in early September and typically stays productive through October as fish stage near passes. Water temperature at this location is 81°F.",
-    "attribution": "captainexperiences.com (Choctawhatchee Bay and Destin October 2026 report pages); halfhitch.com (Destin Fishing Report 9-7-26 and 9-28-26) · Auto-refreshed via Claude API",
+    "date": "2026-10-16",
+    "displayDate": "October 16, 2026",
+    "summary": "The most recent available reports (from guides active on Choctawhatchee Bay in early-to-mid October 2026) point to a solid fall inshore bite with redfish leading the action. A Santa Rosa Beach guide reported catching slot reds around docks and channel drop-offs, with trout also in the mix, and noted that sheepshead are expected to start stacking up on Choctawhatchee Bay structure in the coming weeks. Half Hitch's Destin report from late September noted redfish dominating the bay bite, trout active around dock lights after dark, and flounder gigging ramping up — all trends that typically strengthen into October. Water temperature at this location is 81°F. Note: the most current Half Hitch Destin-specific report is dated September 28, 2026 — roughly 2.5 weeks old — and no October Destin report has yet been posted as of this writing.",
+    "attribution": "captainexperiences.com (Choctawhatchee Bay October 2026 guide reports); halfhitch.com (Destin Fishing Report 9-28-26 and 9-7-26) · Auto-refreshed via Claude API",
     "sourceIds": [
       "captain-experiences-destin",
       "halfhitch-destin",
@@ -46,37 +46,37 @@
       "sheepshead"
     ],
     "conditions": {
-      "wind": "SE 0 to 5 mph",
-      "windDir": "SE",
-      "tide": "High tide ~8:03 PM · Low tide ~7:59 AM · Sunrise 6:45 AM",
+      "wind": "W 0 to 5 mph",
+      "windDir": "W",
+      "tide": "High tide ~8:52 PM · Low tide ~9:08 AM · Sunrise 6:46 AM",
       "tideEvents": [
         {
           "type": "H",
-          "time": "8:03 PM"
+          "time": "8:52 PM"
         },
         {
           "type": "L",
-          "time": "7:59 AM"
+          "time": "9:08 AM"
         }
       ],
       "waterTemp": 81,
       "sky": "Bright sun",
-      "stormChance": 0,
+      "stormChance": 5,
       "pressure": {
-        "hpa": 1019.5,
-        "inHg": 30.11,
+        "hpa": 1019.4,
+        "inHg": 30.1,
         "direction": "rising",
-        "changeHpa3h": 1.1
+        "changeHpa3h": 1.7
       }
     }
   },
   "archivedReports": [
     {
       "kind": "archived_app_snapshot",
-      "date": "2026-10-14",
-      "displayDate": "October 14, 2026",
-      "summary": "The most current available reports for Choctawhatchee Bay are from late September to early October 2026 — approximately two to three weeks old rather than this week. According to a Captain Nick report out of Santa Rosa Beach posted on captainexperiences.com, redfish are being caught on slot-sized fish around docks and drop-offs in the bay, and speckled trout are still showing up as well; the same guide noted that sheepshead are expected to pick up in the Choctawhatchee in the coming weeks. A separate guide report on the same page noted that redfish and trout activity in the bayou areas has been heating up as the Destin Fishing Rodeo gets underway in October. Water temperature at this location is currently 81°F. Half Hitch's most recent Destin report (dated 9-28-26, about 2.5 weeks ago) is confirmed posted but its full inshore bay content was not accessible in search results.",
-      "attribution": "captainexperiences.com (Choctawhatchee Bay Fishing Reports, October 2026); halfhitch.com (Destin Fishing Report 9-28-26, confirmed posted but content not fully retrieved) · Auto-refreshed via Claude API",
+      "date": "2026-10-15",
+      "displayDate": "October 15, 2026",
+      "summary": "Note: The most recent available reports are from late September to early October 2026 — roughly 1 to 2.5 weeks old — so conditions may have shifted somewhat since then. That said, the fall bite on Choctawhatchee Bay is shaping up well. Redfish are the standout inshore species right now, with guides reporting active action around bayou docks, grass flats, and drop-offs; one Santa Rosa Beach guide noted slot reds biting well around dock structure. Speckled trout are still in the mix, showing up around dock lights at night and on deeper flat edges, though sheepshead are expected to improve further as fall progresses. Flounder gigging was noted as picking up in early September and typically stays productive through October as fish stage near passes. Water temperature at this location is 81°F.",
+      "attribution": "captainexperiences.com (Choctawhatchee Bay and Destin October 2026 report pages); halfhitch.com (Destin Fishing Report 9-7-26 and 9-28-26) · Auto-refreshed via Claude API",
       "sourceIds": [
         "captain-experiences-destin",
         "halfhitch-destin",
@@ -86,30 +86,31 @@
       "species": [
         "spotted_seatrout",
         "redfish",
+        "gulf_flounder",
         "sheepshead"
       ],
       "conditions": {
-        "wind": "ENE 0 to 5 mph",
-        "windDir": "ENE",
-        "tide": "High tide ~7:18 PM · Low tide ~6:51 AM · Sunrise 6:45 AM",
+        "wind": "SE 0 to 5 mph",
+        "windDir": "SE",
+        "tide": "High tide ~8:03 PM · Low tide ~7:59 AM · Sunrise 6:45 AM",
         "tideEvents": [
           {
             "type": "H",
-            "time": "7:18 PM"
+            "time": "8:03 PM"
           },
           {
             "type": "L",
-            "time": "6:51 AM"
+            "time": "7:59 AM"
           }
         ],
         "waterTemp": 81,
         "sky": "Bright sun",
         "stormChance": 0,
         "pressure": {
-          "hpa": 1019.2,
-          "inHg": 30.1,
+          "hpa": 1019.5,
+          "inHg": 30.11,
           "direction": "rising",
-          "changeHpa3h": 1.2
+          "changeHpa3h": 1.1
         }
       }
     },
@@ -331,7 +332,7 @@
       "label": "Speckled trout",
       "current": true,
       "reportCount": 9,
-      "lastReported": "2026-10-15",
+      "lastReported": "2026-10-16",
       "evidenceLevel": "current_regional_report"
     },
     {
@@ -339,15 +340,15 @@
       "label": "Redfish",
       "current": true,
       "reportCount": 10,
-      "lastReported": "2026-10-15",
+      "lastReported": "2026-10-16",
       "evidenceLevel": "current_regional_report"
     },
     {
       "key": "gulf_flounder",
       "label": "Flounder",
       "current": true,
-      "reportCount": 4,
-      "lastReported": "2026-10-15",
+      "reportCount": 5,
+      "lastReported": "2026-10-16",
       "evidenceLevel": "current_regional_report"
     },
     {
@@ -363,7 +364,7 @@
       "label": "Sheepshead",
       "current": true,
       "reportCount": 3,
-      "lastReported": "2026-10-15",
+      "lastReported": "2026-10-16",
       "evidenceLevel": "current_regional_report"
     }
   ],
@@ -473,18 +474,25 @@
   "sources": [
     {
       "id": "report-aHR0cHM6Ly9jYXB0YW",
-      "label": "Choctawhatchee Bay Fishing Reports (October 2026)",
-      "url": "https://captainexperiences.com/fishing-reports/locations/regions/choctawhatchee-bay",
+      "label": "Red Snapper Fishing Reports (October 2026) — Nick T., Santa Rosa Beach/Choctawhatchee",
+      "url": "https://captainexperiences.com/fishing-reports/species/red-snapper?page=37",
       "kind": "regional_report",
-      "reportDate": "2026-10-04",
+      "reportDate": null,
       "note": "Exact source page preserved by the daily bite-report research."
     },
     {
-      "id": "report-aHR0cHM6Ly9oYWxmaG",
-      "label": "Destin Fishing Report 9-28-26",
-      "url": "https://halfhitch.com/blog/destin-fishing-report-9-28-26",
+      "id": "halfhitch-destin",
+      "label": "Half Hitch — Destin fishing reports",
+      "url": "https://halfhitch.com/blog/category/destin-fishing-reports",
       "kind": "regional_report",
-      "reportDate": "2026-09-28",
+      "note": "Dated reports from a local Destin tackle shop."
+    },
+    {
+      "id": "report-aHR0cHM6Ly9oYWxmaG",
+      "label": "Destin Fishing Report 9-7-26",
+      "url": "https://halfhitch.com/blog/destin-fishing-report-9-7-26",
+      "kind": "regional_report",
+      "reportDate": "2026-09-07",
       "note": "Exact source page preserved by the daily bite-report research."
     },
     {
@@ -507,13 +515,6 @@
       "url": "https://fishingbooker.com/reports/charter/7020",
       "kind": "regional_report",
       "note": "Archived Freeport reports, including live-shrimp catches around structure."
-    },
-    {
-      "id": "halfhitch-destin",
-      "label": "Half Hitch — Destin fishing reports",
-      "url": "https://halfhitch.com/blog/category/destin-fishing-reports",
-      "kind": "regional_report",
-      "note": "Dated reports from a local Destin tackle shop."
     },
     {
       "id": "30a-shallow-water",
