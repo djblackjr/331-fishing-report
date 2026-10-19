@@ -339,7 +339,14 @@ function getBestWindow() {
   const sunrise = timeToMinutes(CONDITIONS.sunrise || "6:00 AM");
   let end = sunrise + 5 * 60; // default: 5-hour morning window
   let reason = "before the afternoon heat builds";
-  const stormWindow = CONDITIONS.stormWindow || "";
+  // Only clip for storms when there's actually meaningful risk — stormWindow
+  // (a "before X" time string) can still be populated by the pipeline even
+  // on a 0%-chance day, which used to clip the window and say "before
+  // storms build" with nothing actually building. Gated at the same 20%
+  // threshold the storm-risk box, TideCurve's shaded range, and
+  // getEveningWindow() already use, so this matches the rest of the app
+  // instead of being the one place that ignored stormChance entirely.
+  const stormWindow = (CONDITIONS.stormChance >= 20) ? (CONDITIONS.stormWindow || "") : "";
   const stormMatch = stormWindow.match(/before\s+(\d+)\s*(AM|PM)/i);
   if (stormMatch) {
     const stormEnd = timeToMinutes(`${stormMatch[1]}:00 ${stormMatch[2]}`);
