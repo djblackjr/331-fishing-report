@@ -351,6 +351,39 @@ function getBestWindow() {
   return { start: sunrise, end, startText: minutesToTime(sunrise), endText: minutesToTime(end), reason };
 }
 
+// Evening/dusk counterpart to getBestWindow() — this used to not exist at
+// all, which meant every "best window" claim on this page was hardcoded to
+// morning regardless of actual conditions. Inshore species feed again as
+// light drops and temps cool, so this mirrors the morning window's shape
+// (a few hours, storm-aware) anchored to sunset instead of sunrise: starts
+// 2.5 hours before sunset, runs 30 min past it (still fishable light, not
+// full dark). Uses parseStormRange() (below) rather than duplicating its
+// before/after parsing, since an evening window can get clipped from
+// either side — storms clearing late ("after 4 PM") push the start later,
+// storms building ("before 7 PM" meaning they arrive before then) pull the
+// end earlier. Returns null if storm risk wipes the window out entirely.
+function getEveningWindow() {
+  const sunset = timeToMinutes(CONDITIONS.sunset || "7:00 PM");
+  let start = sunset - 150; // 2.5 hours before sunset
+  let end = sunset + 30; // 30 min past sunset
+  let reason = "as temps cool toward dusk";
+
+  const stormRange = (CONDITIONS.stormChance >= 20) ? parseStormRange(CONDITIONS.stormWindow) : null;
+  if (stormRange) {
+    const [riskStart, riskEnd] = stormRange;
+    if (riskStart <= start && riskEnd >= end) return null; // storms cover the whole window
+    if (riskStart > start && riskStart < end) {
+      end = Math.min(end, riskStart - 30);
+      reason = `before storms build (${CONDITIONS.stormWindow})`;
+    } else if (riskEnd > start && riskEnd < end) {
+      start = Math.max(start, riskEnd + 30);
+      reason = `after storms clear (${CONDITIONS.stormWindow})`;
+    }
+  }
+  if (start >= end) return null;
+  return { start, end, startText: minutesToTime(start), endText: minutesToTime(end), reason };
+}
+
 // ── WHAT CHANGED SINCE YESTERDAY ─────────────────────────────────────────────
 // Compares today's conditions against the previousDay snapshot the automation
 // script captures each morning before overwriting. Returns a short plain-
@@ -407,28 +440,42 @@ function pickStopForTide(loc, tideDir) {
 
 // Per-location "Today's advice" — deliberately doesn't repeat the wind-
 // specific tip already shown in that stop's own step list below it (see
-// leeSideBaitNote() and the Fishing Spots section); this just says which
-// stop to fish and why, given today's actual tide timing and top species.
+// leeSideBaitNote() and the Fishing Spots section); this says which stop to
+// fish and why, given today's actual tide timing and top species, for both
+// the morning and evening windows rather than assuming morning is always
+// the only option.
 function getTodaysCall(loc) {
-  const window = getBestWindow();
-  const tideDir = tideDirectionAt(CONDITIONS.tideEvents, window.start);
-  const stop = pickStopForTide(loc, tideDir);
-  if (!stop) return null;
+  const morning = getBestWindow();
+  const evening = getEveningWindow();
+  const morningTide = tideDirectionAt(CONDITIONS.tideEvents, morning.start);
+  const morningStop = pickStopForTide(loc, morningTide);
+  if (!morningStop) return null;
 
   const sentences = [];
   if (CONDITIONS.stormChance >= 40) {
-    sentences.push(`${CONDITIONS.stormChance}% chance of storms today${CONDITIONS.stormWindow ? ` (${CONDITIONS.stormWindow})` : ""} — fish the ${window.startText}–${window.endText} window and be ready to head in.`);
+    sentences.push(`${CONDITIONS.stormChance}% chance of storms today${CONDITIONS.stormWindow ? ` (${CONDITIONS.stormWindow})` : ""} — fish the ${morning.startText}–${morning.endText} morning window and be ready to head in.`);
   } else if (CONDITIONS.stormChance >= 20) {
-    sentences.push(`A ${CONDITIONS.stormChance}% storm chance keeps today a morning-window day — best bet is ${window.startText}–${window.endText}.`);
+    sentences.push(`A ${CONDITIONS.stormChance}% storm chance keeps the morning window (${morning.startText}–${morning.endText}) the safer bet.`);
   } else {
-    sentences.push(`Low storm risk today — fish ${window.startText}–${window.endText} without much weather pressure.`);
+    sentences.push(`Low storm risk today — morning (${morning.startText}–${morning.endText})${evening ? ` and evening (${evening.startText}–${evening.endText})` : ""} are both fair game.`);
   }
 
-  const stopLabel = resolveText(stop.name, CONDITIONS.wind);
-  if (tideDir && tideDir !== loc.bestTide) {
-    sentences.push(`The tide will be ${tideDir} during that window rather than this spot's usual ${loc.bestTide} pattern, so ${stopLabel} is the better call today.`);
+  const morningStopLabel = resolveText(morningStop.name, CONDITIONS.wind);
+  if (morningTide && morningTide !== loc.bestTide) {
+    sentences.push(`Morning tide will be ${morningTide} rather than this spot's usual ${loc.bestTide} pattern, so ${morningStopLabel} is the better morning call.`);
   } else {
-    sentences.push(`The tide will be ${tideDir || loc.bestTide} during that window — right in this spot's wheelhouse at ${stopLabel}.`);
+    sentences.push(`Morning tide will be ${morningTide || loc.bestTide} — right in this spot's wheelhouse at ${morningStopLabel}.`);
+  }
+
+  if (evening) {
+    const eveningTide = tideDirectionAt(CONDITIONS.tideEvents, evening.start);
+    const eveningStop = pickStopForTide(loc, eveningTide);
+    if (eveningStop) {
+      const eveningStopLabel = resolveText(eveningStop.name, CONDITIONS.wind);
+      sentences.push(eveningTide === loc.bestTide
+        ? `Evening tide lines up the same way at ${eveningStopLabel} — just as worth fishing as the morning window today.`
+        : `Evening runs ${eveningTide || "differently"} instead, so ${eveningStopLabel} is the better call if you're out at dusk.`);
+    }
   }
 
   const top = (loc.species || [])[0];
@@ -440,12 +487,13 @@ function getTodaysCall(loc) {
 // Bay-wide equivalent of the old Claude-written "AI Summary" card — today's
 // weather/storm picture plus the day's top-scoring location.
 function getDailySummary() {
-  const window = getBestWindow();
+  const morning = getBestWindow();
+  const evening = getEveningWindow();
   const best = getBestBet();
   const sentences = [`${CONDITIONS.weather} · ${CONDITIONS.wind.description}.`];
   sentences.push(CONDITIONS.stormChance >= 40
-    ? `${CONDITIONS.stormChance}% storm chance${CONDITIONS.stormWindow ? ` (${CONDITIONS.stormWindow})` : ""} — plan around the ${window.startText}–${window.endText} window.`
-    : `Fish ${window.startText}–${window.endText} for the best conditions today.`);
+    ? `${CONDITIONS.stormChance}% storm chance${CONDITIONS.stormWindow ? ` (${CONDITIONS.stormWindow})` : ""} — plan around the morning window (${morning.startText}–${morning.endText}).`
+    : `Morning (${morning.startText}–${morning.endText})${evening ? ` and evening (${evening.startText}–${evening.endText})` : ""} both look good today.`);
   if (best) sentences.push(`Today's top pick: ${best.loc.label} at ${best.score.toFixed(1)}/10 (${ratingLabel(best.score)}).`);
   return sentences.join(" ");
 }
@@ -1489,6 +1537,7 @@ export default function App() {
   const C = CONDITIONS;
   const bestBet = getBestBet();
   const bestWindow = getBestWindow();
+  const eveningWindow = getEveningWindow();
   const conditionsDiff = getConditionsDiff();
   const dailySummary = getDailySummary();
   const bitReportAge = C.localBiteUpdated ? daysBetween(C.localBiteUpdated, C.date) : null;
@@ -1507,7 +1556,7 @@ export default function App() {
   }
 
   async function shareReport() {
-    const text = `331 Bridge Area Fishing Report — ${C.date}\n${C.weather}\n${C.tide}\nBest bet today: ${bestBet.loc.label} (${bestBet.score}/10)\nBest window: ${bestWindow.startText}–${bestWindow.endText} (${bestWindow.reason})`;
+    const text = `331 Bridge Area Fishing Report — ${C.date}\n${C.weather}\n${C.tide}\nBest bet today: ${bestBet.loc.label} (${bestBet.score}/10)\nMorning window: ${bestWindow.startText}–${bestWindow.endText} (${bestWindow.reason})${eveningWindow ? `\nEvening window: ${eveningWindow.startText}–${eveningWindow.endText} (${eveningWindow.reason})` : ""}`;
     if (navigator.share) {
       try { await navigator.share({ title: "Fishing Report", text }); return; } catch { /* user cancelled or unsupported, fall through */ }
     }
@@ -1637,10 +1686,22 @@ export default function App() {
           <div style={{ fontSize: 15, fontWeight: 700, color: "#4ade80", letterSpacing: "0.03em", marginTop: 2 }}>{ratingLabel(bestBet.score).toUpperCase()}</div>
           <div style={{ display: "flex", gap: 8, justifyContent: "center", flexWrap: "wrap", marginTop: 16 }}>
             <div style={{ fontSize: 13, border: "1px solid #1a3828", background: "#0f2a1c", borderRadius: 8, padding: "7px 11px", textAlign: "left" }}>
-              <div style={{ fontSize: 11, color: "#7ab898", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 2 }}>⏰ Best window</div>
+              <div style={{ fontSize: 11, color: "#7ab898", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 2 }}>🌅 Morning window</div>
               <div style={{ color: "#f0faf4", fontWeight: 700 }}>{bestWindow.startText} – {bestWindow.endText}</div>
               <div style={{ fontSize: 11, color: "#86c7a0", marginTop: 1 }}>{bestWindow.reason}</div>
             </div>
+            {/* Evening counterpart — this didn't exist before; the app used
+                to only ever compute and show a morning window, which made
+                it look like mornings were always recommended regardless of
+                actual conditions. null when storm risk wipes the window out
+                entirely (see getEveningWindow()). */}
+            {eveningWindow && (
+              <div style={{ fontSize: 13, border: "1px solid #1a3828", background: "#0f2a1c", borderRadius: 8, padding: "7px 11px", textAlign: "left" }}>
+                <div style={{ fontSize: 11, color: "#7ab898", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 2 }}>🌇 Evening window</div>
+                <div style={{ color: "#f0faf4", fontWeight: 700 }}>{eveningWindow.startText} – {eveningWindow.endText}</div>
+                <div style={{ fontSize: 11, color: "#86c7a0", marginTop: 1 }}>{eveningWindow.reason}</div>
+              </div>
+            )}
             {/* Solunar majors/minors — a different signal than the tide-based
                 window above (moon position vs. water movement), shown
                 alongside it rather than merged in. */}
@@ -1714,7 +1775,7 @@ export default function App() {
             const dayName = C.date.split(",")[0];
             const emoji = C.stormChance >= 30 ? "⛈️" : C.stormChance >= 10 ? "⛅" : "🌞";
             const stormNote = C.stormChance >= 10
-              ? `${C.stormChance}% chance of showers/storms${C.stormWindow ? `, ${C.stormWindow}` : ""} — plan a morning trip and watch the radar. `
+              ? `${C.stormChance}% chance of showers/storms${C.stormWindow ? `, ${C.stormWindow}` : ""} — plan around it and watch the radar. `
               : "No storm threat today. ";
             return `${emoji} ${dayName}: ${stormNote}${C.weather}`;
           })()}
