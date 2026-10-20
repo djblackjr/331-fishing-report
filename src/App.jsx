@@ -1570,7 +1570,16 @@ export default function App() {
 
   // Keep the active location chip visible in the horizontal strip — after a
   // swipe, the newly selected spot could otherwise be scrolled off-screen.
+  // Guarded against the initial mount: a plain `useEffect` with a
+  // dependency array still fires once right after the first render, not
+  // just on later changes — so without this guard, every page load forced
+  // a scrollIntoView() on the default (or storage-restored) tab's chip,
+  // which pushed the whole page down from the top on open if that chip
+  // wasn't already fully visible under the fixed bottom tab bar. Only
+  // scroll in response to an actual tab change after mount.
+  const skipFirstChipScroll = useRef(true);
   useEffect(() => {
+    if (skipFirstChipScroll.current) { skipFirstChipScroll.current = false; return; }
     document.querySelector(`[data-loc="${locTab}"]`)
       ?.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
   }, [locTab, mainTab]);
