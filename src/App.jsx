@@ -1375,7 +1375,9 @@ function LocationMiniMap({ lat, lng, label }) {
   }, [lat, lng, label]);
 
   if (lat == null || lng == null) return null;
-  return <div ref={containerRef} style={{ height: 460, borderRadius: 10, overflow: "hidden" }} />;
+  // Capped to 55% of the viewport so on a phone the map doesn't fill the
+  // whole screen and trap every scroll gesture as a map pan.
+  return <div ref={containerRef} style={{ height: "min(460px, 55vh)", borderRadius: 10, overflow: "hidden" }} />;
 }
 
 function LocationReport({ loc }) {
@@ -1501,11 +1503,11 @@ function LocationReport({ loc }) {
   );
 }
 
-function Input({ label, value, onChange, placeholder, type = "text" }) {
+function Input({ label, value, onChange, placeholder, type = "text", inputMode }) {
   return (
     <div style={{ marginBottom: 10 }}>
       <div style={{ fontSize: 15, color: "#7ab898", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 4 }}>{label}</div>
-      <input type={type} value={value} onChange={e => onChange(e.target.value)} placeholder={placeholder}
+      <input type={type} inputMode={inputMode} value={value} onChange={e => onChange(e.target.value)} placeholder={placeholder}
         style={{ width: "100%", background: "#0f2a1c", border: "1px solid #1a3828", borderRadius: 6, padding: "8px 12px", color: "#d1f0e0", fontSize: 16, fontFamily: "'Space Grotesk',sans-serif", outline: "none", boxSizing: "border-box" }} />
     </div>
   );
@@ -1527,13 +1529,17 @@ export default function App() {
   // only being able to tap the small tab strip. A 50px threshold avoids
   // triggering on ordinary vertical scrolling.
   function handleSwipeStart(e) {
-    swipeStartX.current = e.touches[0].clientX;
+    // Dragging the Leaflet map pans it — don't also change locations.
+    if (e.target.closest?.(".leaflet-container")) { swipeStartX.current = null; return; }
+    swipeStartX.current = { x: e.touches[0].clientX, y: e.touches[0].clientY };
   }
   function handleSwipeEnd(e) {
     if (swipeStartX.current == null) return;
-    const deltaX = e.changedTouches[0].clientX - swipeStartX.current;
+    const deltaX = e.changedTouches[0].clientX - swipeStartX.current.x;
+    const deltaY = e.changedTouches[0].clientY - swipeStartX.current.y;
     swipeStartX.current = null;
     if (Math.abs(deltaX) < 50) return; // too small — probably just a scroll/tap
+    if (Math.abs(deltaX) < Math.abs(deltaY) * 1.5) return; // mostly vertical — a scroll with some drift
     const idx = LOCATIONS.findIndex(l => l.id === locTab);
     if (idx === -1) return;
     const nextIdx = deltaX < 0
@@ -1560,6 +1566,18 @@ export default function App() {
   function selectLocTab(id) {
     setLocTab(id);
     try { window.storage.set("lastLocTab", id).catch(() => {}); } catch {}
+  }
+
+  // Keep the active location chip visible in the horizontal strip — after a
+  // swipe, the newly selected spot could otherwise be scrolled off-screen.
+  useEffect(() => {
+    document.querySelector(`[data-loc="${locTab}"]`)
+      ?.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+  }, [locTab, mainTab]);
+
+  function switchMainTab(key) {
+    if (key === "log") goToLogTab(); else setMainTab(key);
+    window.scrollTo({ top: 0 });
   }
 
   async function shareReport() {
@@ -1606,7 +1624,8 @@ export default function App() {
     setArchiveStatus(null);
     if (!dateStr) return;
     try {
-      const res = await fetch(`/history/${dateStr}.json`);
+      // BASE_URL, not "/" — the Pages site lives under /331-fishing-report/.
+      const res = await fetch(`${import.meta.env.BASE_URL}history/${dateStr}.json`);
       if (!res.ok) throw new Error("no archive for this date");
       const archived = await res.json();
       const windBucket = windToBucket(archived.wind);
@@ -1656,26 +1675,25 @@ export default function App() {
   const lbl = { fontSize: 16, color: "#7ab898", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 8 };
 
   return (
-    <div style={{ minHeight: "100vh", background: "#0a1f14", fontFamily: "'Space Grotesk',sans-serif", color: "#d1f0e0", padding: "20px 16px" }}>
+    <div style={{
+      minHeight: "100vh", background: "#0a1f14", fontFamily: "'Space Grotesk',sans-serif", color: "#d1f0e0",
+      // Safe-area insets keep content clear of the notch/Dynamic Island when
+      // launched from the home screen; the bottom pad clears the tab bar.
+      padding: "calc(20px + env(safe-area-inset-top)) calc(16px + env(safe-area-inset-right)) calc(84px + env(safe-area-inset-bottom)) calc(16px + env(safe-area-inset-left))",
+    }}>
       <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
       <div style={{ maxWidth: 600, margin: "0 auto" }}>
 
         {/* Header */}
-        <div style={{ marginBottom: 4, display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 10 }}>
-          <div>
-            <div style={{ fontSize: 15, letterSpacing: "0.16em", color: "#4ade80", textTransform: "uppercase", marginBottom: 3 }}>🎣 Daily Fishing Intel</div>
-            <h1 style={{ margin: 0, fontSize: 25, fontWeight: 700, color: "#f0faf4", lineHeight: 1.2 }}>331 Bridge Area</h1>
-            <div style={{ fontSize: 16, color: "#86c7a0", marginTop: 2 }}>Fishing Report · Freeport, FL · {C.date}</div>
-          </div>
-          <div style={{ display: "flex", gap: 8, flexShrink: 0 }}>
-            <a href="atlas.html" style={{ background: "#0f2a1c", border: "1px solid #1a3828", borderRadius: 8, padding: "8px 12px", color: "#7ab898", fontSize: 15, fontWeight: 600, cursor: "pointer", fontFamily: "'Space Grotesk',sans-serif", whiteSpace: "nowrap", textDecoration: "none", display: "inline-block" }}>
-              🗺️ Atlas
-            </a>
-            <button onClick={() => setShowShareCard(true)} style={{ background: "#0f2a1c", border: "1px solid #1a3828", borderRadius: 8, padding: "8px 12px", color: "#7ab898", fontSize: 15, fontWeight: 600, cursor: "pointer", fontFamily: "'Space Grotesk',sans-serif", whiteSpace: "nowrap" }}>
-              📤 Share
-            </button>
-          </div>
+        {/* Atlas/Share used to be header buttons; they now live in the bottom
+            tab bar, within thumb reach on a phone. */}
+        <div style={{ marginBottom: 4 }}>
+          <div style={{ fontSize: 15, letterSpacing: "0.16em", color: "#4ade80", textTransform: "uppercase", marginBottom: 3 }}>🎣 Daily Fishing Intel</div>
+          <h1 style={{ margin: 0, fontSize: 25, fontWeight: 700, color: "#f0faf4", lineHeight: 1.2 }}>331 Bridge Area</h1>
+          <div style={{ fontSize: 16, color: "#86c7a0", marginTop: 2 }}>Fishing Report · Freeport, FL · {C.date}</div>
         </div>
+
+        {mainTab === "report" && <>
 
         {/* Best Bet — the single number people open the app to check, sized
             and centered so it wins the page instead of tying visually with
@@ -1808,28 +1826,14 @@ export default function App() {
           )}
         </div>
 
-        {/* Main tabs */}
-        <div style={{ display: "flex", gap: 8, marginBottom: 14, marginTop: 14 }}>
-          {[["report", "📋 Report"], ["log", "📓 Trip Log"]].map(([key, label]) => (
-            <button key={key} onClick={() => key === "log" ? goToLogTab() : setMainTab(key)} style={{
-              flex: 1, padding: "9px 0", borderRadius: 8, border: "none", cursor: "pointer",
-              fontFamily: "'Space Grotesk',sans-serif", fontWeight: 600, fontSize: 16,
-              background: mainTab === key ? "#4ade80" : "#0f2a1c",
-              color: mainTab === key ? "#0a1f14" : "#7ab898", transition: "all 0.15s",
-            }}>{label}</button>
-          ))}
-        </div>
-
-        {mainTab === "report" && <>
-
           {/* Location tabs — horizontal scroll */}
-          <div style={{ display: "flex", gap: 6, marginBottom: 14, overflowX: "auto", paddingBottom: 4, WebkitOverflowScrolling: "touch" }}>
+          <div style={{ display: "flex", gap: 6, marginBottom: 14, marginTop: 14, overflowX: "auto", paddingBottom: 4, WebkitOverflowScrolling: "touch" }}>
             {LOCATIONS.map(loc => {
               const active = locTab === loc.id;
               const sc = todaysAdjustedScore(loc);
               const dot = ratingColor(sc);
               return (
-                <button key={loc.id} onClick={() => selectLocTab(loc.id)} style={{
+                <button key={loc.id} data-loc={loc.id} onClick={() => selectLocTab(loc.id)} style={{
                   padding: "10px 10px", borderRadius: 8, border: active ? "1px solid #4ade8066" : "1px solid #1a3828",
                   cursor: "pointer", fontFamily: "'Space Grotesk',sans-serif", fontWeight: 600, fontSize: 16,
                   background: active ? "#0d2918" : "#0f2a1c", color: active ? "#f0faf4" : "#7ab898",
@@ -1922,6 +1926,7 @@ export default function App() {
 
         {/* ── TRIP LOG ── */}
         {mainTab === "log" && <>
+          <div style={{ height: 14 }} />
           {patterns && (
             <div style={{ background: "#0d2918", border: "1px solid #4ade8033", borderRadius: 10, padding: "14px 16px", marginBottom: 12 }}>
               <div style={{ fontSize: 15, color: "#4ade80", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 8, fontWeight: 600 }}>📈 Your Patterns ({patterns.totalTrips} trips · {patterns.totalKept} kept)</div>
@@ -1939,7 +1944,7 @@ export default function App() {
               {archiveStatus && <div style={{ fontSize: 14, color: archiveStatus.found ? "#4ade80" : "#7ab898", marginTop: 4 }}>{archiveStatus.message}</div>}
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
-              <Input label="Hours fished" value={form.hours} onChange={v => setForm(f => ({ ...f, hours: v }))} placeholder="4" />
+              <Input label="Hours fished" value={form.hours} onChange={v => setForm(f => ({ ...f, hours: v }))} placeholder="4" inputMode="decimal" />
               <div>
                 <div style={{ fontSize: 15, color: "#7ab898", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 4 }}>Location</div>
                 <select value={form.start} onChange={e => setForm(f => ({ ...f, start: e.target.value }))}
@@ -1969,7 +1974,7 @@ export default function App() {
             </div>
             <Input label="Species caught" value={form.species} onChange={v => setForm(f => ({ ...f, species: v }))} placeholder="Trout, reds, drum…" />
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
-              <Input label="Number kept" value={form.kept} onChange={v => setForm(f => ({ ...f, kept: v }))} placeholder="3" type="number" />
+              <Input label="Number kept" value={form.kept} onChange={v => setForm(f => ({ ...f, kept: v }))} placeholder="3" type="number" inputMode="numeric" />
               <Input label="Best lure" value={form.lures} onChange={v => setForm(f => ({ ...f, lures: v }))} placeholder="Gold spoon, shrimp…" />
             </div>
             <Input label="Notes" value={form.notes} onChange={v => setForm(f => ({ ...f, notes: v }))} placeholder="What worked, what didn't…" />
@@ -1987,7 +1992,8 @@ export default function App() {
                   <div style={{ fontSize: 16, fontWeight: 700, color: "#d1f0e0" }}>{t.date}</div>
                   <div style={{ fontSize: 16, color: "#7ab898", marginTop: 2 }}>{t.hours && `${t.hours}h`}{t.start && ` · ${t.start}`}{t.tide && ` · ${t.tide}`}{t.wind && ` · ${t.wind}`}</div>
                 </div>
-                <button onClick={() => deleteTrip(t.id)} style={{ background: "none", border: "none", color: "#7ab898", cursor: "pointer", fontSize: 20, padding: "0 0 0 10px" }}>✕</button>
+                {/* 44px tap target + confirm — a stray thumb used to wipe a trip instantly. */}
+                <button aria-label="Delete trip" onClick={() => { if (window.confirm(`Delete the ${t.date} trip?`)) deleteTrip(t.id); }} style={{ background: "none", border: "none", color: "#7ab898", cursor: "pointer", fontSize: 20, width: 44, height: 44, margin: "-10px -12px 0 0", flexShrink: 0 }}>✕</button>
               </div>
               {t.species && <div style={{ fontSize: 16, color: "#86c7a0", marginTop: 6 }}>🐟 {t.species}{t.kept && ` · ${t.kept} kept`}</div>}
               {t.lures && <div style={{ fontSize: 16, color: "#7ab898", marginTop: 3 }}>🪝 {t.lures}</div>}
@@ -2001,6 +2007,37 @@ export default function App() {
           Data sourced by Claude · Always verify conditions before heading out<br />{C.lastUpdated}
         </div>
       </div>
+
+      {/* Bottom tab bar — the Report/Trip Log switch used to sit ~8 cards down
+          the page, so on a phone you had to scroll to find it. Fixed to the
+          bottom like a native iOS tab bar, padded for the home indicator. */}
+      <nav style={{
+        position: "fixed", left: 0, right: 0, bottom: 0, zIndex: 40,
+        background: "#0a1f14f2", backdropFilter: "blur(12px)", WebkitBackdropFilter: "blur(12px)",
+        borderTop: "1px solid #1a3828",
+        paddingBottom: "env(safe-area-inset-bottom)", paddingLeft: "env(safe-area-inset-left)", paddingRight: "env(safe-area-inset-right)",
+      }}>
+        <div style={{ maxWidth: 600, margin: "0 auto", display: "flex" }}>
+          {[
+            { key: "report", icon: "📋", label: "Report", onClick: () => switchMainTab("report") },
+            { key: "log", icon: "📓", label: "Trip Log", onClick: () => switchMainTab("log") },
+            { key: "atlas", icon: "🗺️", label: "Atlas", href: "atlas.html" },
+            { key: "share", icon: "📤", label: "Share", onClick: () => setShowShareCard(true) },
+          ].map(item => {
+            const active = mainTab === item.key;
+            const style = {
+              flex: 1, minHeight: 56, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 2,
+              background: "none", border: "none", cursor: "pointer", textDecoration: "none", padding: "6px 0",
+              fontFamily: "'Space Grotesk',sans-serif", fontSize: 12, fontWeight: 600,
+              color: active ? "#4ade80" : "#7ab898",
+            };
+            const inner = <><span style={{ fontSize: 22, lineHeight: 1 }}>{item.icon}</span>{item.label}</>;
+            return item.href
+              ? <a key={item.key} href={item.href} style={style}>{inner}</a>
+              : <button key={item.key} onClick={item.onClick} aria-current={active ? "page" : undefined} style={style}>{inner}</button>;
+          })}
+        </div>
+      </nav>
 
       {/* Share card overlay — screenshot-first, with the old text share/copy
           kept as a fallback for cases (e.g. desktop) where an image is overkill. */}

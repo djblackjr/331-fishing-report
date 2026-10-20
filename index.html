@@ -4,8 +4,25 @@
     <link rel="manifest" href="./manifest.json" />
     <meta name="theme-color" content="#0a1f14" />
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- viewport-fit=cover lets the bottom tab bar sit under the iPhone home
+         indicator; the app pads itself with env(safe-area-inset-*) instead. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <!-- iOS "Add to Home Screen": full-screen launch, dark status bar, and a
+         PNG icon (iOS ignores the manifest's SVG icon). -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="331 Fishing" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
     <title>331 Bridge Fishing Report</title>
+    <style>
+      /* Match the app background so Safari's rubber-band overscroll doesn't flash white. */
+      html, body { margin: 0; background: #0a1f14; }
+      body { -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: transparent; overscroll-behavior-y: none; }
+      /* Kills the 300ms double-tap-zoom delay on buttons. */
+      button, a, select, input { touch-action: manipulation; }
+    </style>
   </head>
   <body>
     <div id="root"></div>

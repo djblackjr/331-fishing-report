@@ -15,6 +15,8 @@ Context for any Claude session working in this repo — local, cloud, or phone. 
 331 Bridge Fishing Report — daily fishing conditions for spots around Choctawhatchee Bay / Freeport, FL. Repo `djblackjr/331-fishing-report`.
 
 - `src/App.jsx` — the whole main UI (one large React component). Evergreen content lives inline; per-location advice and the daily summary are computed client-side (`getTodaysCall`, `getDailySummary`, `getBestWindow`, `getEveningWindow`).
+- Mobile-first: Danny mainly uses it on an iPhone (often as a home-screen app). Report/Trip Log/Atlas/Share live in a fixed bottom tab bar padded with `env(safe-area-inset-*)`. Keep tap targets ≥44px and check new UI at phone width.
+- `window.storage` (used by the Trip Log) is a Claude-artifact API; `src/main.jsx` shims it onto `localStorage` for the real site. On iOS, home-screen and Safari storage are separate.
 - `src/data/conditions.json` — daily data blob, overwritten by automation. Don't hand-edit except to test.
 - `atlas.html` + `src/atlas/` — the Fishing Intelligence Atlas, a separate Leaflet map page (no React). Full reference: **`docs/atlas.md`**.
 
