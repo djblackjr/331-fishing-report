@@ -2,10 +2,19 @@ name: Daily Conditions Refresh
 
 "on":
   schedule:
-    # 08:13 UTC = ~3:13 AM Central. Kept as a fallback trigger, though the
-    # real reliable schedule is now the external cron-job.org ping hitting
-    # workflow_dispatch directly (GitHub's native schedule proved unreliable
-    # for this repo — see project history).
+    # 08:13 UTC = ~3:13 AM Central. This is the sole automatic trigger now.
+    # An external cron-job.org ping used to hit workflow_dispatch directly
+    # as the "real" primary schedule, on the theory that GitHub's own cron
+    # was unreliable — but a run-history check on 2026-10-20 showed the
+    # opposite: cron-job.org fired reliably every day until ~Oct 8, then
+    # stopped entirely (last workflow_dispatch-triggered run: Oct 8 02:07
+    # UTC), while this native schedule has fired every single day since,
+    # just landing ~4-10h late (seen between 12:00-17:48 UTC) rather than
+    # at 08:13 UTC. Given that, the external ping was dropped rather than
+    # debugged (it's a third-party dashboard with no API access from here)
+    # — one dependency fewer, and the data still refreshes daily even if
+    # later than ideal. If cron-job.org's job still exists, it's safe to
+    # delete; it isn't doing anything.
     - cron: '13 8 * * *'
   workflow_dispatch:
     inputs:
