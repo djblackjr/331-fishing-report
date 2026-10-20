@@ -1,4 +1,17 @@
 {
-  "name": "331-fishing-report",
-  "compatibility_date": "2026-07-08"
+  // Cloudflare Worker Cron Trigger that kicks off daily-refresh.yml on
+  // time — see cron-worker/index.js for the full story and deploy steps.
+  // This is the ONLY thing this Worker does; it doesn't serve the app
+  // itself (that's GitHub Pages — see CLAUDE.md).
+  "name": "331-fishing-report-cron",
+  "main": "cron-worker/index.js",
+  "compatibility_date": "2026-07-08",
+  "triggers": {
+    // 07:00 UTC ≈ 2 AM Central (shifts ±1h across the DST boundary, same
+    // caveat as daily-refresh.yml's own 08:13 UTC fallback cron) — an hour
+    // of buffer ahead of that fallback, so data is ready well before an
+    // early-morning trip even if this Worker's dispatch takes a few
+    // minutes for GitHub to pick up.
+    "crons": ["0 7 * * *"]
+  }
 }

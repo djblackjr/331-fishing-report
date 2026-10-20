@@ -2,19 +2,18 @@ name: Daily Conditions Refresh
 
 "on":
   schedule:
-    # 08:13 UTC = ~3:13 AM Central. This is the sole automatic trigger now.
-    # An external cron-job.org ping used to hit workflow_dispatch directly
-    # as the "real" primary schedule, on the theory that GitHub's own cron
-    # was unreliable — but a run-history check on 2026-10-20 showed the
-    # opposite: cron-job.org fired reliably every day until ~Oct 8, then
-    # stopped entirely (last workflow_dispatch-triggered run: Oct 8 02:07
-    # UTC), while this native schedule has fired every single day since,
-    # just landing ~4-10h late (seen between 12:00-17:48 UTC) rather than
-    # at 08:13 UTC. Given that, the external ping was dropped rather than
-    # debugged (it's a third-party dashboard with no API access from here)
-    # — one dependency fewer, and the data still refreshes daily even if
-    # later than ideal. If cron-job.org's job still exists, it's safe to
-    # delete; it isn't doing anything.
+    # 08:13 UTC = ~3:13 AM Central. This is the same-day FALLBACK trigger.
+    # The primary trigger is now a Cloudflare Worker Cron Trigger (see
+    # cron-worker/index.js + wrangler.jsonc) firing at 07:00 UTC and calling
+    # this workflow's workflow_dispatch directly — chosen over the previous
+    # external cron-job.org ping specifically because Cloudflare's dashboard
+    # shows real invocation history, unlike cron-job.org, which silently
+    # stopped firing around 2026-10-08 (last workflow_dispatch from it: Oct
+    # 8 02:07 UTC) with nothing anywhere to flag that it had died. This
+    # native schedule kept firing every day throughout that whole gap —
+    # just landing ~4-10h late (12:00-17:48 UTC) rather than at 08:13 —
+    # which is exactly why it's kept as a backstop: if the Worker ever goes
+    # quiet the same way, the day's refresh still happens, just later.
     - cron: '13 8 * * *'
   workflow_dispatch:
     inputs:
