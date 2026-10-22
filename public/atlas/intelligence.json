@@ -1,87 +1,111 @@
 {
   "type": "FishingIntelligence",
   "region": "choctawhatchee_bay",
-  "generatedAt": "2026-10-21",
+  "generatedAt": "2026-10-22",
   "scopeNote": "Regional reports support timing and species activity only. They do not prove a catch, depth, bottom type, or safe navigation at a mapped Jolly Bay feature.",
   "currentConditions": {
-    "wind": "NE 5 to 10 mph",
-    "windDir": "NE",
-    "tide": "High tide ~1:55 AM · Low tide ~11:31 AM · Sunrise 6:51 AM",
+    "wind": "N 5 mph",
+    "windDir": "N",
+    "tide": "High tide ~8:33 PM · Low tide ~9:19 PM · Sunrise 6:51 AM",
     "tideEvents": [
       {
         "type": "H",
-        "time": "1:55 AM"
+        "time": "8:33 PM"
       },
       {
         "type": "L",
-        "time": "11:31 AM"
+        "time": "9:19 PM"
+      },
+      {
+        "type": "H",
+        "time": "3:26 AM"
+      },
+      {
+        "type": "L",
+        "time": "11:02 AM"
+      },
+      {
+        "type": "H",
+        "time": "5:15 PM"
       }
     ],
-    "waterTemp": 78,
+    "waterTemp": 77,
     "sky": "Bright sun",
     "stormChance": 0,
     "pressure": {
-      "hpa": 1022.2,
-      "inHg": 30.19,
+      "hpa": 1020.8,
+      "inHg": 30.14,
       "direction": "rising",
-      "changeHpa3h": 1.5
+      "changeHpa3h": 1.4
     }
   },
   "currentReport": {
     "kind": "current_regional_report",
-    "date": "2026-10-21",
-    "displayDate": "October 21, 2026",
-    "summary": "Note: The most recent Destin-area inshore blog reports are about 3 weeks old — Half Hitch's latest Destin report is dated 9-28-26, and no October Destin edition has posted yet. That said, here's what the current picture looks like: Hurricane Isaias made landfall at Destin on October 9, causing significant damage to the marina on Choctawhatchee Bay, and post-storm water conditions have been variable. Despite that, guides working the bay report that redfish and trout activity in the bayous and on the flats has been heating up as fall sets in, with slot reds being picked up around docks and deeper drop-offs, and trout remaining active — particularly in low-light hours. Flounder are considered to be in one of their best months of the year for this area during October, concentrating along grass flat edges and sandy transitions as water cools. Sheepshead are expected to begin stacking on bridge pilings and structure in the coming weeks as temperatures continue to drop. Water temp on the bay is 78°F.",
-    "attribution": "captainexperiences.com (Choctawhatchee Bay Fishing Reports, October 2026); greatdaysoutdoors.com (Northwest Florida Fishing Report Oct 16–22, 2026); halfhitch.com (Destin Fishing Report 9-28-26, most recent available) · Auto-refreshed via Claude API",
+    "date": "2026-10-22",
+    "displayDate": "October 22, 2026",
+    "summary": "Reports from the Choctawhatchee Bay / Destin area this week reflect post-Hurricane Isaias recovery conditions across the Emerald Coast, with water clarity and fishing activity varying by location. The most recent regional report (October 16–22) notes that calm, sunny weather returned quickly after the storm, but dirty or stained water is affecting some areas; surf anglers near Pensacola and Navarre were already finding black drum, redfish, and pompano biting, and a similar pattern is expected to hold for Choctawhatchee Bay as conditions settle. Earlier in the month (approximately two weeks ago), guides reported that redfish and speckled trout were heating up in the bayous of Choctawhatchee Bay — a pattern typical for the fall Destin Fishing Rodeo period. Water temperature at this location today is 77°F. Overall, fall inshore bay species — redfish, trout, sheepshead around structure, and flounder — are entering one of their stronger seasonal windows, though post-storm water clarity may require anglers to adjust presentations and location.",
+    "attribution": "greatdaysoutdoors.com (Northwest Florida Fishing Report, Oct 16–22, 2026); captainexperiences.com (Choctawhatchee Bay Fishing Reports, early October 2026) · Auto-refreshed via Claude API",
     "sourceIds": [
       "captain-experiences-destin",
-      "halfhitch-destin",
-      "report-aHR0cHM6Ly9jYXB0YW",
       "report-aHR0cHM6Ly9ncmVhdG",
-      "report-aHR0cHM6Ly9oYWxmaG"
+      "report-aHR0cHM6Ly9jYXB0YW"
     ],
     "species": [
       "spotted_seatrout",
       "redfish",
       "gulf_flounder",
+      "black_drum",
       "sheepshead"
     ],
     "conditions": {
-      "wind": "NE 5 to 10 mph",
-      "windDir": "NE",
-      "tide": "High tide ~1:55 AM · Low tide ~11:31 AM · Sunrise 6:51 AM",
+      "wind": "N 5 mph",
+      "windDir": "N",
+      "tide": "High tide ~8:33 PM · Low tide ~9:19 PM · Sunrise 6:51 AM",
       "tideEvents": [
         {
           "type": "H",
-          "time": "1:55 AM"
+          "time": "8:33 PM"
         },
         {
           "type": "L",
-          "time": "11:31 AM"
+          "time": "9:19 PM"
+        },
+        {
+          "type": "H",
+          "time": "3:26 AM"
+        },
+        {
+          "type": "L",
+          "time": "11:02 AM"
+        },
+        {
+          "type": "H",
+          "time": "5:15 PM"
         }
       ],
-      "waterTemp": 78,
+      "waterTemp": 77,
       "sky": "Bright sun",
       "stormChance": 0,
       "pressure": {
-        "hpa": 1022.2,
-        "inHg": 30.19,
+        "hpa": 1020.8,
+        "inHg": 30.14,
         "direction": "rising",
-        "changeHpa3h": 1.5
+        "changeHpa3h": 1.4
       }
     }
   },
   "archivedReports": [
     {
       "kind": "archived_app_snapshot",
-      "date": "2026-10-20",
-      "displayDate": "October 20, 2026",
-      "summary": "As of mid-October 2026, the Destin Fishing Rodeo is underway and the inshore bite on Choctawhatchee Bay is heating up. Redfish and speckled trout are active in the bayous and on the flats, with slot reds being caught around docks and channel drop-offs. A local Santa Rosa Beach guide noted trout are still coming in alongside the reds, and expects sheepshead to pick up on structure in the bay in coming weeks. Flounder gigging was reported as starting to improve in early September and typically strengthens through October. Water temperature is 78°F. Note: the most recent Half Hitch Destin report available is from September 28 (about 3 weeks ago), and the captainexperiences.com guide reports are from approximately 1–2 weeks ago.",
-      "attribution": "captainexperiences.com (Choctawhatchee Bay Fishing Reports, October 2026); halfhitch.com (Destin Fishing Reports blog) · Auto-refreshed via Claude API",
+      "date": "2026-10-21",
+      "displayDate": "October 21, 2026",
+      "summary": "Note: The most recent Destin-area inshore blog reports are about 3 weeks old — Half Hitch's latest Destin report is dated 9-28-26, and no October Destin edition has posted yet. That said, here's what the current picture looks like: Hurricane Isaias made landfall at Destin on October 9, causing significant damage to the marina on Choctawhatchee Bay, and post-storm water conditions have been variable. Despite that, guides working the bay report that redfish and trout activity in the bayous and on the flats has been heating up as fall sets in, with slot reds being picked up around docks and deeper drop-offs, and trout remaining active — particularly in low-light hours. Flounder are considered to be in one of their best months of the year for this area during October, concentrating along grass flat edges and sandy transitions as water cools. Sheepshead are expected to begin stacking on bridge pilings and structure in the coming weeks as temperatures continue to drop. Water temp on the bay is 78°F.",
+      "attribution": "captainexperiences.com (Choctawhatchee Bay Fishing Reports, October 2026); greatdaysoutdoors.com (Northwest Florida Fishing Report Oct 16–22, 2026); halfhitch.com (Destin Fishing Report 9-28-26, most recent available) · Auto-refreshed via Claude API",
       "sourceIds": [
         "captain-experiences-destin",
         "halfhitch-destin",
         "report-aHR0cHM6Ly9jYXB0YW",
+        "report-aHR0cHM6Ly9ncmVhdG",
         "report-aHR0cHM6Ly9oYWxmaG"
       ],
       "species": [
@@ -93,25 +117,25 @@
       "conditions": {
         "wind": "NE 5 to 10 mph",
         "windDir": "NE",
-        "tide": "High tide ~12:35 AM · Low tide ~11:30 AM · Sunrise 6:49 AM",
+        "tide": "High tide ~1:55 AM · Low tide ~11:31 AM · Sunrise 6:51 AM",
         "tideEvents": [
           {
             "type": "H",
-            "time": "12:35 AM"
+            "time": "1:55 AM"
           },
           {
             "type": "L",
-            "time": "11:30 AM"
+            "time": "11:31 AM"
           }
         ],
         "waterTemp": 78,
         "sky": "Bright sun",
         "stormChance": 0,
         "pressure": {
-          "hpa": 1023.6,
-          "inHg": 30.23,
+          "hpa": 1022.2,
+          "inHg": 30.19,
           "direction": "rising",
-          "changeHpa3h": 0.7
+          "changeHpa3h": 1.5
         }
       }
     },
@@ -333,7 +357,7 @@
       "label": "Speckled trout",
       "current": true,
       "reportCount": 9,
-      "lastReported": "2026-10-21",
+      "lastReported": "2026-10-22",
       "evidenceLevel": "current_regional_report"
     },
     {
@@ -341,7 +365,7 @@
       "label": "Redfish",
       "current": true,
       "reportCount": 10,
-      "lastReported": "2026-10-21",
+      "lastReported": "2026-10-22",
       "evidenceLevel": "current_regional_report"
     },
     {
@@ -349,23 +373,23 @@
       "label": "Flounder",
       "current": true,
       "reportCount": 5,
-      "lastReported": "2026-10-21",
+      "lastReported": "2026-10-22",
       "evidenceLevel": "current_regional_report"
     },
     {
       "key": "black_drum",
       "label": "Black drum",
-      "current": false,
-      "reportCount": 1,
-      "lastReported": "2026-06-22",
-      "evidenceLevel": "archived_regional_report"
+      "current": true,
+      "reportCount": 2,
+      "lastReported": "2026-10-22",
+      "evidenceLevel": "current_regional_report"
     },
     {
       "key": "sheepshead",
       "label": "Sheepshead",
       "current": true,
       "reportCount": 3,
-      "lastReported": "2026-10-21",
+      "lastReported": "2026-10-22",
       "evidenceLevel": "current_regional_report"
     }
   ],
@@ -474,14 +498,6 @@
   },
   "sources": [
     {
-      "id": "report-aHR0cHM6Ly9jYXB0YW",
-      "label": "Choctawhatchee Bay Fishing Reports (October 2026)",
-      "url": "https://captainexperiences.com/fishing-reports/locations/regions/choctawhatchee-bay",
-      "kind": "regional_report",
-      "reportDate": "2026-10-01",
-      "note": "Exact source page preserved by the daily bite-report research."
-    },
-    {
       "id": "report-aHR0cHM6Ly9ncmVhdG",
       "label": "Northwest Florida Fishing Report for October 16 – 22, 2026",
       "url": "https://greatdaysoutdoors.com/northwest-florida-fishing-report-for-october-16-22-2026/",
@@ -490,11 +506,11 @@
       "note": "Exact source page preserved by the daily bite-report research."
     },
     {
-      "id": "report-aHR0cHM6Ly9oYWxmaG",
-      "label": "Destin Fishing Report 9-7-26",
-      "url": "https://halfhitch.com/blog/destin-fishing-report-9-7-26",
+      "id": "report-aHR0cHM6Ly9jYXB0YW",
+      "label": "Choctawhatchee Bay Fishing Reports (October 2026)",
+      "url": "https://captainexperiences.com/fishing-reports/locations/regions/choctawhatchee-bay",
       "kind": "regional_report",
-      "reportDate": "2026-09-07",
+      "reportDate": "2026-10-19",
       "note": "Exact source page preserved by the daily bite-report research."
     },
     {
@@ -503,6 +519,14 @@
       "url": "https://fishingbooker.com/reports/destination/us/choctawhatchee-bay",
       "kind": "regional_report",
       "note": "Dated charter and angler reports for Choctawhatchee Bay."
+    },
+    {
+      "id": "report-aHR0cHM6Ly9oYWxmaG",
+      "label": "Destin Fishing Report 9-28-26",
+      "url": "https://halfhitch.com/blog/destin-fishing-reports",
+      "kind": "regional_report",
+      "reportDate": "2026-09-28",
+      "note": "Exact source page preserved by the daily bite-report research."
     },
     {
       "id": "captain-experiences-destin",
