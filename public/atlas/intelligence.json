@@ -1,38 +1,38 @@
 {
   "type": "FishingIntelligence",
   "region": "choctawhatchee_bay",
-  "generatedAt": "2026-10-25",
+  "generatedAt": "2026-10-26",
   "scopeNote": "Regional reports support timing and species activity only. They do not prove a catch, depth, bottom type, or safe navigation at a mapped Jolly Bay feature.",
   "currentConditions": {
-    "wind": "NE 10 to 15 mph",
+    "wind": "NE 10 mph",
     "windDir": "NE",
-    "tide": "High tide ~5:03 PM · Low tide ~2:37 AM · Sunrise 6:53 AM",
+    "tide": "High tide ~5:40 PM · Low tide ~3:45 AM · Sunrise 6:54 AM",
     "tideEvents": [
       {
         "type": "L",
-        "time": "2:37 AM"
+        "time": "3:45 AM"
       },
       {
         "type": "H",
-        "time": "5:03 PM"
+        "time": "5:40 PM"
       }
     ],
     "waterTemp": 76,
     "sky": "Bright sun",
     "stormChance": 0,
     "pressure": {
-      "hpa": 1026.2,
-      "inHg": 30.3,
+      "hpa": 1024.9,
+      "inHg": 30.27,
       "direction": "rising",
-      "changeHpa3h": 1
+      "changeHpa3h": 0.6
     }
   },
   "currentReport": {
     "kind": "current_regional_report",
-    "date": "2026-10-25",
-    "displayDate": "October 25, 2026",
-    "summary": "This week's conditions on Choctawhatchee Bay are recovering from Hurricane Isaias (which made landfall near Destin on October 9), but the bay never muddied up severely — guide Capt. Blake Nelson of Last Cast Charters reports it took on a tannin-stained tint rather than heavy silt, and the Destin flats have retained enough visibility for sight fishing. Redfish remain the top inshore target: smaller slot fish (around 23 inches and under) are holding on familiar guts, potholes, and shallow-water feeding areas across the bay flats, while larger overslot reds are transitioning to a more mobile fall pattern and showing up around bridges at night. A guide reporting from the Fort Walton Beach/Destin area on captainexperiences.com (approximately two weeks ago) noted that redfish and trout are heating up in the bayous as part of the fall transition during the Destin Fishing Rodeo. Water temperature at this location is 76°F. Blake Nelson expects each successive fall cold front to improve the artificial-lure bite on the flats, with the classic winter creek-and-river-mouth pattern for trout still weeks away — closer to January.",
-    "attribution": "greatdaysoutdoors.com (Northwest Florida Fishing Report, Oct 23–29, 2026); captainexperiences.com (Choctawhatchee Bay / Destin Fishing Reports, Oct 2026) · Auto-refreshed via Claude API",
+    "date": "2026-10-26",
+    "displayDate": "October 26, 2026",
+    "summary": "Water temperature is 76°F. The most current report this week (Oct 23–29, 2026) from Great Days Outdoors covers Choctawhatchee Bay directly: the redfish bite on the bay flats has held up well even in the aftermath of Hurricane Isaias, with fish under about 23 inches still holding in familiar guts and potholes in the shallows. Larger upper-slot and overslot reds are transitioning into a more mobile fall pattern across the bay. A local charter guide noted that after a recent cold front, cut mullet chunks on Carolina rigs outperformed live bait for reds on the flats — a useful tactical note as water cools. A guide report posted about a week ago on Captain Experiences also flagged that redfish and trout are heating up in the bayous as the Destin Fishing Rodeo gets underway for October.",
+    "attribution": "Great Days Outdoors (greatdaysoutdoors.com, Oct 23–29 2026 NW Florida Fishing Report); Captain Experiences (captainexperiences.com, Choctawhatchee Bay report, ~Oct 19 2026) · Auto-refreshed via Claude API",
     "sourceIds": [
       "captain-experiences-destin",
       "report-aHR0cHM6Ly9ncmVhdG",
@@ -43,37 +43,37 @@
       "redfish"
     ],
     "conditions": {
-      "wind": "NE 10 to 15 mph",
+      "wind": "NE 10 mph",
       "windDir": "NE",
-      "tide": "High tide ~5:03 PM · Low tide ~2:37 AM · Sunrise 6:53 AM",
+      "tide": "High tide ~5:40 PM · Low tide ~3:45 AM · Sunrise 6:54 AM",
       "tideEvents": [
         {
           "type": "L",
-          "time": "2:37 AM"
+          "time": "3:45 AM"
         },
         {
           "type": "H",
-          "time": "5:03 PM"
+          "time": "5:40 PM"
         }
       ],
       "waterTemp": 76,
       "sky": "Bright sun",
       "stormChance": 0,
       "pressure": {
-        "hpa": 1026.2,
-        "inHg": 30.3,
+        "hpa": 1024.9,
+        "inHg": 30.27,
         "direction": "rising",
-        "changeHpa3h": 1
+        "changeHpa3h": 0.6
       }
     }
   },
   "archivedReports": [
     {
       "kind": "archived_app_snapshot",
-      "date": "2026-10-24",
-      "displayDate": "October 24, 2026",
-      "summary": "This week's most current report (week of October 23–29, 2026) comes from Capt. Blake Nelson of Last Cast Charters, who covers Choctawhatchee Bay for the Great Days Outdoors Northwest Florida Fishing Report. Despite a recent hurricane, the bay stayed relatively clear with only a tannin-stained tint, and the redfish bite on the flats has held up well — smaller slot fish (roughly 23 inches and under) are still working familiar guts, potholes, and shallow feeding areas, while larger upper-slot and overslot reds are shifting into a more mobile fall pattern. Water temp at this location is 77°F, consistent with the recent cold fronts that are nudging fish toward more aggressive fall feeding. A guide report on captainexperiences.com from approximately two weeks ago noted that redfish and trout were heating up in the bayous, which aligns with the current picture. Sheepshead are expected to pick up in coming weeks according to a Santa Rosa Beach captain on the same platform, but have not been prominently featured in this week's bay reports.",
-      "attribution": "Great Days Outdoors (greatdaysoutdoors.com), captainexperiences.com Choctawhatchee Bay guide reports · Auto-refreshed via Claude API",
+      "date": "2026-10-25",
+      "displayDate": "October 25, 2026",
+      "summary": "This week's conditions on Choctawhatchee Bay are recovering from Hurricane Isaias (which made landfall near Destin on October 9), but the bay never muddied up severely — guide Capt. Blake Nelson of Last Cast Charters reports it took on a tannin-stained tint rather than heavy silt, and the Destin flats have retained enough visibility for sight fishing. Redfish remain the top inshore target: smaller slot fish (around 23 inches and under) are holding on familiar guts, potholes, and shallow-water feeding areas across the bay flats, while larger overslot reds are transitioning to a more mobile fall pattern and showing up around bridges at night. A guide reporting from the Fort Walton Beach/Destin area on captainexperiences.com (approximately two weeks ago) noted that redfish and trout are heating up in the bayous as part of the fall transition during the Destin Fishing Rodeo. Water temperature at this location is 76°F. Blake Nelson expects each successive fall cold front to improve the artificial-lure bite on the flats, with the classic winter creek-and-river-mouth pattern for trout still weeks away — closer to January.",
+      "attribution": "greatdaysoutdoors.com (Northwest Florida Fishing Report, Oct 23–29, 2026); captainexperiences.com (Choctawhatchee Bay / Destin Fishing Reports, Oct 2026) · Auto-refreshed via Claude API",
       "sourceIds": [
         "captain-experiences-destin",
         "report-aHR0cHM6Ly9ncmVhdG",
@@ -81,31 +81,30 @@
       ],
       "species": [
         "spotted_seatrout",
-        "redfish",
-        "sheepshead"
+        "redfish"
       ],
       "conditions": {
-        "wind": "NE 5 to 10 mph",
+        "wind": "NE 10 to 15 mph",
         "windDir": "NE",
-        "tide": "High tide ~4:46 PM · Low tide ~1:31 AM · Sunrise 6:53 AM",
+        "tide": "High tide ~5:03 PM · Low tide ~2:37 AM · Sunrise 6:53 AM",
         "tideEvents": [
           {
             "type": "L",
-            "time": "1:31 AM"
+            "time": "2:37 AM"
           },
           {
             "type": "H",
-            "time": "4:46 PM"
+            "time": "5:03 PM"
           }
         ],
-        "waterTemp": 77,
+        "waterTemp": 76,
         "sky": "Bright sun",
         "stormChance": 0,
         "pressure": {
-          "hpa": 1024.7,
-          "inHg": 30.26,
+          "hpa": 1026.2,
+          "inHg": 30.3,
           "direction": "rising",
-          "changeHpa3h": 1.5
+          "changeHpa3h": 1
         }
       }
     },
@@ -327,7 +326,7 @@
       "label": "Speckled trout",
       "current": true,
       "reportCount": 9,
-      "lastReported": "2026-10-25",
+      "lastReported": "2026-10-26",
       "evidenceLevel": "current_regional_report"
     },
     {
@@ -335,7 +334,7 @@
       "label": "Redfish",
       "current": true,
       "reportCount": 10,
-      "lastReported": "2026-10-25",
+      "lastReported": "2026-10-26",
       "evidenceLevel": "current_regional_report"
     },
     {
@@ -358,8 +357,8 @@
       "key": "sheepshead",
       "label": "Sheepshead",
       "current": false,
-      "reportCount": 2,
-      "lastReported": "2026-10-24",
+      "reportCount": 1,
+      "lastReported": "2026-07-01",
       "evidenceLevel": "archived_regional_report"
     }
   ],
@@ -477,8 +476,8 @@
     },
     {
       "id": "report-aHR0cHM6Ly9jYXB0YW",
-      "label": "Choctawhatchee Bay Fishing Reports (October 2026)",
-      "url": "https://captainexperiences.com/fishing-reports/locations/regions/choctawhatchee-bay",
+      "label": "Destin Fishing Reports (October 2026)",
+      "url": "https://captainexperiences.com/fishing-reports/locations/florida/destin",
       "kind": "regional_report",
       "reportDate": null,
       "note": "Exact source page preserved by the daily bite-report research."
