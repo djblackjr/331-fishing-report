@@ -1,123 +1,102 @@
 {
-  "date": "Friday, October 30, 2026",
+  "date": "Saturday, October 31, 2026",
   "wind": {
     "speed": 10,
-    "dir": "ENE",
-    "description": "ENE 5 to 10 mph"
+    "dir": "E",
+    "description": "E 5 to 10 mph"
   },
-  "weather": "Partly Sunny · High 82°F",
-  "tide": "High tide ~8:36 PM · Low tide ~8:29 AM · Sunrise 6:57 AM",
+  "weather": "Mostly Cloudy · High 82°F",
+  "tide": "High tide ~9:36 PM · Low tide ~9:31 AM · Sunrise 6:58 AM",
   "tideEvents": [
     {
       "type": "H",
-      "time": "8:36 PM"
+      "time": "9:36 PM"
     },
     {
       "type": "L",
-      "time": "8:29 AM"
+      "time": "9:31 AM"
     }
   ],
-  "sunrise": "6:57 AM",
-  "sunset": "5:58 PM",
+  "sunrise": "6:58 AM",
+  "sunset": "5:57 PM",
   "stormWindow": "before 9AM",
-  "stormChance": 3,
-  "moonPhase": "Waning Gibbous (~72% illuminated) — moderate tidal push",
+  "stormChance": 4,
+  "moonPhase": "Last Quarter (~62% illuminated) — moderate tidal push",
   "waterClarity": "Slightly stained",
-  "sky": "Bright sun",
-  "lastUpdated": "10/30/2026, 10:00:16 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
-  "localBiteReport": "As of the week of October 23–29, 2026, the redfish bite on Choctawhatchee Bay flats remains productive in the wake of Hurricane Isaias, with smaller slot fish (roughly 23 inches and under) still holding in the usual guts, potholes, and shallow feeding areas, while larger overslot reds are transitioning into a more mobile fall pattern. Water temperatures are 75°F. The Half Hitch Destin report from October 19 notes strong redfish concentrations around the Destin Bridge and jetties (live shrimp for keepers, live pinfish for bull reds), with trout and reds also working well on the grass flats. Each successive fall cold front is expected to improve the flats bite before fish make their deeper winter shift toward creek mouths and river systems closer to January. No current reports specifically called out flounder, black drum, or sheepshead this week, though those species are historically productive in the bay in October.",
-  "localBiteSource": "Great Days Outdoors (Northwest Florida Fishing Report, Oct 23–29 2026) and Half Hitch Tackle Destin (Destin Fishing Report 10-19-26) · Auto-refreshed via Claude API",
-  "localBiteUpdated": "October 29, 2026",
+  "sky": "Cloudy",
+  "lastUpdated": "10/31/2026, 9:29:07 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "localBiteReport": "Redfish are the standout inshore species on Choctawhatchee Bay right now, with the bite remaining productive on the flats despite water clarity disrupted by Hurricane Isaias's October 9 landfall near Destin. Capt. Blake Nelson (Last Cast Charters) reports that smaller slot-sized reds — roughly 23 inches and under — are still holding in familiar guts, potholes, and shallow feeding areas, with cut mullet on Carolina rigs out-fishing live bait in some sessions. Speckled trout are also showing for anglers who can locate bait concentrations, with fish in the 22–27-inch range reported around the Destin area as of late October, though trout remain somewhat scattered between their summer and winter patterns due to the mixed weather. Redfish are also congregating around the bridges, jetties, and East Pass on incoming tides, and the captainexperiences.com guide network reports the overall bay bite heating up in conjunction with the Destin Fishing Rodeo this month. Water temperature at time of report: 75°F.",
+  "localBiteSource": "greatdaysoutdoors.com (Northwest Florida Fishing Report, Oct 23–29 and Oct 30–Nov 5, 2026); captainexperiences.com (Choctawhatchee Bay Fishing Reports, reported within 2 days of Oct 31, 2026) · Auto-refreshed via Claude API",
+  "localBiteUpdated": "October 31, 2026",
   "localBiteEvidence": [
+    {
+      "title": "Northwest Florida Fishing Report for October 30 – November 5, 2026",
+      "url": "https://greatdaysoutdoors.com/northwest-florida-fishing-report-for-october-30-november-5-2026/",
+      "reportDate": "2026-10-30"
+    },
     {
       "title": "Northwest Florida Fishing Report for October 23 – 29, 2026",
       "url": "https://greatdaysoutdoors.com/northwest-florida-fishing-report-for-october-23-29-2026/",
       "reportDate": "2026-10-23"
     },
     {
-      "title": "Destin Fishing Report 10-19-26",
-      "url": "https://halfhitch.com/blog/destin-fishing-report-10-19-26",
-      "reportDate": "2026-10-19"
+      "title": "Choctawhatchee Bay Fishing Reports (October 2026)",
+      "url": "https://captainexperiences.com/fishing-reports/locations/regions/choctawhatchee-bay",
+      "reportDate": "2026-10-29"
     }
   ],
   "previousDay": {
-    "date": "Thursday, October 29, 2026",
+    "date": "Friday, October 30, 2026",
     "wind": {
-      "dir": "NE",
+      "dir": "ENE",
       "speed": 10
     },
     "high": 82,
-    "stormChance": 0,
-    "tide": "High tide ~7:34 PM · Low tide ~7:17 AM · Sunrise 6:56 AM",
+    "stormChance": 3,
+    "tide": "High tide ~8:36 PM · Low tide ~8:29 AM · Sunrise 6:57 AM",
     "waterTemp": 75
   },
   "openMeteo": [
     {
-      "high": 82,
-      "low": 63,
-      "stormChance": 2,
-      "windSpeed": 10,
-      "windDir": "NE",
+      "high": 81,
+      "low": 67,
+      "stormChance": 12,
+      "windSpeed": 11,
+      "windDir": "E",
       "summary": "Overcast"
     },
     {
-      "high": 83,
-      "low": 67,
-      "stormChance": 12,
+      "high": 76,
+      "low": 69,
+      "stormChance": 42,
       "windSpeed": 12,
       "windDir": "E",
       "summary": "Light drizzle"
     },
     {
-      "high": 70,
-      "low": 66,
-      "stormChance": 46,
+      "high": 81,
+      "low": 65,
+      "stormChance": 30,
       "windSpeed": 11,
       "windDir": "E",
-      "summary": "Rain showers"
+      "summary": "Overcast"
     }
   ],
   "forecast": [
     {
-      "day": "Fri, Oct 30",
-      "dateISO": "2026-10-30",
-      "label": "Today",
-      "high": 82,
-      "low": null,
-      "wind": "ENE 5 to 10 mph",
-      "windSpeed": 10,
-      "windDir": "ENE",
-      "storms": 3,
-      "headline": "Partly Sunny",
-      "fishingScore": 8.9,
-      "aiCall": "Partly sunny, with a high near 82. East northeast wind 5 to 10 mph.",
-      "emoji": "☀️",
-      "tideEvents": [
-        {
-          "type": "H",
-          "time": "8:36 PM"
-        },
-        {
-          "type": "L",
-          "time": "8:29 AM"
-        }
-      ],
-      "moonPhase": "Waning Gibbous (~72% illuminated) — moderate tidal push"
-    },
-    {
       "day": "Sat, Oct 31",
       "dateISO": "2026-10-31",
-      "label": "Tomorrow",
-      "high": 83,
+      "label": "Today",
+      "high": 82,
       "low": null,
       "wind": "E 5 to 10 mph",
       "windSpeed": 10,
       "windDir": "E",
-      "storms": 15,
-      "headline": "Partly Sunny then Slight Chance Rain Showers",
-      "fishingScore": 8.4,
-      "aiCall": "A slight chance of rain showers after 4pm. Partly sunny, with a high near 83. East wind 5 to 10 mph. Chance of precipitation is 20%. New rainfall amounts less than a tenth of an inch possible.",
-      "emoji": "🌧️",
+      "storms": 4,
+      "headline": "Mostly Cloudy",
+      "fishingScore": 8.8,
+      "aiCall": "Mostly cloudy, with a high near 82. East wind 5 to 10 mph, with gusts as high as 20 mph.",
+      "emoji": "⛅",
       "tideEvents": [
         {
           "type": "H",
@@ -133,17 +112,17 @@
     {
       "day": "Sun, Nov 1",
       "dateISO": "2026-11-01",
-      "label": "Sunday",
+      "label": "Tomorrow",
       "high": 77,
       "low": null,
       "wind": "ENE 10 to 15 mph",
       "windSpeed": 15,
       "windDir": "ENE",
-      "storms": 32,
-      "headline": "Chance Rain Showers",
-      "fishingScore": 7.2,
-      "aiCall": "A chance of rain showers. Mostly cloudy, with a high near 77. East northeast wind 10 to 15 mph. Chance of precipitation is 30%.",
-      "emoji": "🌧️",
+      "storms": 56,
+      "headline": "Showers And Thunderstorms Likely",
+      "fishingScore": 5.8,
+      "aiCall": "Showers and thunderstorms likely before 7am, then a chance of showers and thunderstorms between 7am and noon, then showers and thunderstorms likely. Mostly cloudy. High near 77, with temperatures falling to around 74 in the afternoon. East northeast wind 10 to 15 mph, with gusts as high as 25 mph. Chance of precipitation is 60%. New rainfall amounts between a quarter and half of an inch possible.",
+      "emoji": "⛈️",
       "tideEvents": [
         {
           "type": "H",
@@ -155,15 +134,41 @@
         }
       ],
       "moonPhase": "Last Quarter (~55% illuminated) — moderate tidal push"
+    },
+    {
+      "day": "Mon, Nov 2",
+      "dateISO": "2026-11-02",
+      "label": "Monday",
+      "high": 80,
+      "low": null,
+      "wind": "ENE 5 to 10 mph",
+      "windSpeed": 10,
+      "windDir": "ENE",
+      "storms": 3,
+      "headline": "Partly Sunny",
+      "fishingScore": 8.9,
+      "aiCall": "Partly sunny, with a high near 80. East northeast wind 5 to 10 mph, with gusts as high as 20 mph.",
+      "emoji": "☀️",
+      "tideEvents": [
+        {
+          "type": "H",
+          "time": "9:40 PM"
+        },
+        {
+          "type": "L",
+          "time": "8:54 AM"
+        }
+      ],
+      "moonPhase": "Last Quarter (~45% illuminated) — moderate tidal push"
     }
   ],
-  "dateISO": "2026-10-30",
+  "dateISO": "2026-10-31",
   "waterTemp": 75,
   "pressure": {
-    "hpa": 1020.2,
-    "inHg": 30.13,
-    "direction": "steady",
-    "changeHpa3h": -0.1
+    "hpa": 1021,
+    "inHg": 30.15,
+    "direction": "rising",
+    "changeHpa3h": 1
   },
   "speciesSignals": [
     {
@@ -171,14 +176,14 @@
       "label": "Speckled trout",
       "current": true,
       "reportCount": 9,
-      "lastReported": "2026-10-30"
+      "lastReported": "2026-10-31"
     },
     {
       "key": "redfish",
       "label": "Redfish",
       "current": true,
       "reportCount": 10,
-      "lastReported": "2026-10-30"
+      "lastReported": "2026-10-31"
     },
     {
       "key": "gulf_flounder",
@@ -206,25 +211,25 @@
     "majors": [
       {
         "type": "overhead",
-        "peak": "4:30 AM",
-        "window": "3:30 AM–5:30 AM"
+        "peak": "5:30 AM",
+        "window": "4:30 AM–6:30 AM"
       },
       {
         "type": "underfoot",
-        "peak": "5:05 PM",
-        "window": "4:05 PM–6:05 PM"
+        "peak": "6:05 PM",
+        "window": "5:05 PM–7:05 PM"
       }
     ],
     "minors": [
       {
         "type": "moonset",
-        "peak": "12:00 PM",
-        "window": "11:30 AM–12:30 PM"
+        "peak": "12:50 PM",
+        "window": "12:20 PM–1:20 PM"
       },
       {
         "type": "moonrise",
-        "peak": "10:15 PM",
-        "window": "9:45 PM–10:45 PM"
+        "peak": "11:25 PM",
+        "window": "10:55 PM–11:55 PM"
       }
     ]
   }

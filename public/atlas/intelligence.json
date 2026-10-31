@@ -1,76 +1,76 @@
 {
   "type": "FishingIntelligence",
   "region": "choctawhatchee_bay",
-  "generatedAt": "2026-10-30",
+  "generatedAt": "2026-10-31",
   "scopeNote": "Regional reports support timing and species activity only. They do not prove a catch, depth, bottom type, or safe navigation at a mapped Jolly Bay feature.",
   "currentConditions": {
-    "wind": "ENE 5 to 10 mph",
-    "windDir": "ENE",
-    "tide": "High tide ~8:36 PM · Low tide ~8:29 AM · Sunrise 6:57 AM",
+    "wind": "E 5 to 10 mph",
+    "windDir": "E",
+    "tide": "High tide ~9:36 PM · Low tide ~9:31 AM · Sunrise 6:58 AM",
     "tideEvents": [
       {
         "type": "H",
-        "time": "8:36 PM"
+        "time": "9:36 PM"
       },
       {
         "type": "L",
-        "time": "8:29 AM"
+        "time": "9:31 AM"
       }
     ],
     "waterTemp": 75,
-    "sky": "Bright sun",
-    "stormChance": 3,
+    "sky": "Cloudy",
+    "stormChance": 4,
     "pressure": {
-      "hpa": 1020.2,
-      "inHg": 30.13,
-      "direction": "steady",
-      "changeHpa3h": -0.1
+      "hpa": 1021,
+      "inHg": 30.15,
+      "direction": "rising",
+      "changeHpa3h": 1
     }
   },
   "currentReport": {
     "kind": "current_regional_report",
-    "date": "2026-10-30",
-    "displayDate": "October 29, 2026",
-    "summary": "As of the week of October 23–29, 2026, the redfish bite on Choctawhatchee Bay flats remains productive in the wake of Hurricane Isaias, with smaller slot fish (roughly 23 inches and under) still holding in the usual guts, potholes, and shallow feeding areas, while larger overslot reds are transitioning into a more mobile fall pattern. Water temperatures are 75°F. The Half Hitch Destin report from October 19 notes strong redfish concentrations around the Destin Bridge and jetties (live shrimp for keepers, live pinfish for bull reds), with trout and reds also working well on the grass flats. Each successive fall cold front is expected to improve the flats bite before fish make their deeper winter shift toward creek mouths and river systems closer to January. No current reports specifically called out flounder, black drum, or sheepshead this week, though those species are historically productive in the bay in October.",
-    "attribution": "Great Days Outdoors (Northwest Florida Fishing Report, Oct 23–29 2026) and Half Hitch Tackle Destin (Destin Fishing Report 10-19-26) · Auto-refreshed via Claude API",
+    "date": "2026-10-31",
+    "displayDate": "October 31, 2026",
+    "summary": "Redfish are the standout inshore species on Choctawhatchee Bay right now, with the bite remaining productive on the flats despite water clarity disrupted by Hurricane Isaias's October 9 landfall near Destin. Capt. Blake Nelson (Last Cast Charters) reports that smaller slot-sized reds — roughly 23 inches and under — are still holding in familiar guts, potholes, and shallow feeding areas, with cut mullet on Carolina rigs out-fishing live bait in some sessions. Speckled trout are also showing for anglers who can locate bait concentrations, with fish in the 22–27-inch range reported around the Destin area as of late October, though trout remain somewhat scattered between their summer and winter patterns due to the mixed weather. Redfish are also congregating around the bridges, jetties, and East Pass on incoming tides, and the captainexperiences.com guide network reports the overall bay bite heating up in conjunction with the Destin Fishing Rodeo this month. Water temperature at time of report: 75°F.",
+    "attribution": "greatdaysoutdoors.com (Northwest Florida Fishing Report, Oct 23–29 and Oct 30–Nov 5, 2026); captainexperiences.com (Choctawhatchee Bay Fishing Reports, reported within 2 days of Oct 31, 2026) · Auto-refreshed via Claude API",
     "sourceIds": [
-      "halfhitch-destin",
+      "captain-experiences-destin",
       "report-aHR0cHM6Ly9ncmVhdG",
-      "report-aHR0cHM6Ly9oYWxmaG"
+      "report-aHR0cHM6Ly9jYXB0YW"
     ],
     "species": [
       "spotted_seatrout",
       "redfish"
     ],
     "conditions": {
-      "wind": "ENE 5 to 10 mph",
-      "windDir": "ENE",
-      "tide": "High tide ~8:36 PM · Low tide ~8:29 AM · Sunrise 6:57 AM",
+      "wind": "E 5 to 10 mph",
+      "windDir": "E",
+      "tide": "High tide ~9:36 PM · Low tide ~9:31 AM · Sunrise 6:58 AM",
       "tideEvents": [
         {
           "type": "H",
-          "time": "8:36 PM"
+          "time": "9:36 PM"
         },
         {
           "type": "L",
-          "time": "8:29 AM"
+          "time": "9:31 AM"
         }
       ],
       "waterTemp": 75,
-      "sky": "Bright sun",
-      "stormChance": 3,
+      "sky": "Cloudy",
+      "stormChance": 4,
       "pressure": {
-        "hpa": 1020.2,
-        "inHg": 30.13,
-        "direction": "steady",
-        "changeHpa3h": -0.1
+        "hpa": 1021,
+        "inHg": 30.15,
+        "direction": "rising",
+        "changeHpa3h": 1
       }
     }
   },
   "archivedReports": [
     {
       "kind": "archived_app_snapshot",
-      "date": "2026-10-29",
+      "date": "2026-10-30",
       "displayDate": "October 29, 2026",
       "summary": "As of the week of October 23–29, 2026, the redfish bite on Choctawhatchee Bay flats remains productive in the wake of Hurricane Isaias, with smaller slot fish (roughly 23 inches and under) still holding in the usual guts, potholes, and shallow feeding areas, while larger overslot reds are transitioning into a more mobile fall pattern. Water temperatures are 75°F. The Half Hitch Destin report from October 19 notes strong redfish concentrations around the Destin Bridge and jetties (live shrimp for keepers, live pinfish for bull reds), with trout and reds also working well on the grass flats. Each successive fall cold front is expected to improve the flats bite before fish make their deeper winter shift toward creek mouths and river systems closer to January. No current reports specifically called out flounder, black drum, or sheepshead this week, though those species are historically productive in the bay in October.",
       "attribution": "Great Days Outdoors (Northwest Florida Fishing Report, Oct 23–29 2026) and Half Hitch Tackle Destin (Destin Fishing Report 10-19-26) · Auto-refreshed via Claude API",
@@ -84,27 +84,27 @@
         "redfish"
       ],
       "conditions": {
-        "wind": "NE 5 to 10 mph",
-        "windDir": "NE",
-        "tide": "High tide ~7:34 PM · Low tide ~7:17 AM · Sunrise 6:56 AM",
+        "wind": "ENE 5 to 10 mph",
+        "windDir": "ENE",
+        "tide": "High tide ~8:36 PM · Low tide ~8:29 AM · Sunrise 6:57 AM",
         "tideEvents": [
           {
             "type": "H",
-            "time": "7:34 PM"
+            "time": "8:36 PM"
           },
           {
             "type": "L",
-            "time": "7:17 AM"
+            "time": "8:29 AM"
           }
         ],
         "waterTemp": 75,
         "sky": "Bright sun",
-        "stormChance": 0,
+        "stormChance": 3,
         "pressure": {
-          "hpa": 1020.4,
+          "hpa": 1020.2,
           "inHg": 30.13,
           "direction": "steady",
-          "changeHpa3h": -0.2
+          "changeHpa3h": -0.1
         }
       }
     },
@@ -326,7 +326,7 @@
       "label": "Speckled trout",
       "current": true,
       "reportCount": 9,
-      "lastReported": "2026-10-30",
+      "lastReported": "2026-10-31",
       "evidenceLevel": "current_regional_report"
     },
     {
@@ -334,7 +334,7 @@
       "label": "Redfish",
       "current": true,
       "reportCount": 10,
-      "lastReported": "2026-10-30",
+      "lastReported": "2026-10-31",
       "evidenceLevel": "current_regional_report"
     },
     {
@@ -475,14 +475,6 @@
       "note": "Exact source page preserved by the daily bite-report research."
     },
     {
-      "id": "report-aHR0cHM6Ly9oYWxmaG",
-      "label": "Destin Fishing Report 10-19-26",
-      "url": "https://halfhitch.com/blog/destin-fishing-report-10-19-26",
-      "kind": "regional_report",
-      "reportDate": "2026-10-19",
-      "note": "Exact source page preserved by the daily bite-report research."
-    },
-    {
       "id": "report-aHR0cHM6Ly9jYXB0YW",
       "label": "Choctawhatchee Bay Fishing Reports (August 2026)",
       "url": "https://captainexperiences.com/fishing-reports/locations/regions/choctawhatchee-bay",
@@ -496,6 +488,14 @@
       "url": "https://fishingbooker.com/reports/destination/us/choctawhatchee-bay",
       "kind": "regional_report",
       "note": "Dated charter and angler reports for Choctawhatchee Bay."
+    },
+    {
+      "id": "report-aHR0cHM6Ly9oYWxmaG",
+      "label": "Destin Fishing Report 10-19-26",
+      "url": "https://halfhitch.com/blog/destin-fishing-report-10-19-26",
+      "kind": "regional_report",
+      "reportDate": "2026-10-19",
+      "note": "Exact source page preserved by the daily bite-report research."
     },
     {
       "id": "captain-experiences-destin",
