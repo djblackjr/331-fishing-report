@@ -1,38 +1,38 @@
 {
   "type": "FishingIntelligence",
   "region": "choctawhatchee_bay",
-  "generatedAt": "2026-11-01",
+  "generatedAt": "2026-11-02",
   "scopeNote": "Regional reports support timing and species activity only. They do not prove a catch, depth, bottom type, or safe navigation at a mapped Jolly Bay feature.",
   "currentConditions": {
-    "wind": "ENE 10 to 15 mph",
-    "windDir": "ENE",
-    "tide": "High tide ~9:37 PM · Low tide ~8:20 AM · Sunrise 5:59 AM",
+    "wind": "E 5 to 10 mph",
+    "windDir": "E",
+    "tide": "High tide ~9:40 PM · Low tide ~8:54 AM · Sunrise 6:00 AM",
     "tideEvents": [
       {
         "type": "H",
-        "time": "9:37 PM"
+        "time": "9:40 PM"
       },
       {
         "type": "L",
-        "time": "8:20 AM"
+        "time": "8:54 AM"
       }
     ],
-    "waterTemp": 76,
-    "sky": "Cloudy",
-    "stormChance": 54,
+    "waterTemp": 75,
+    "sky": "Bright sun",
+    "stormChance": 6,
     "pressure": {
-      "hpa": 1021.6,
-      "inHg": 30.17,
-      "direction": "steady",
-      "changeHpa3h": -0.4
+      "hpa": 1019.6,
+      "inHg": 30.11,
+      "direction": "falling",
+      "changeHpa3h": -2.1
     }
   },
   "currentReport": {
     "kind": "current_regional_report",
-    "date": "2026-11-01",
-    "displayDate": "November 1, 2026",
-    "summary": "Fall inshore fishing on Choctawhatchee Bay is in solid form heading into early November, with water temperature at 76°F. Redfish remain the top bay target: fish in the 25–26-inch range are holding around bridge structure and responding well to a variety of natural baits including pinfish, croakers, spot minnows, and herring, with heavier weights needed on stronger tidal flow. Speckled trout in the 22–27-inch class are also active and closely tied to bait concentrations — finding the right bait school is key to consistent catches, with live bait leading the way and artificials in deeper water expected to improve as conditions cool further into fall. The most recent Choctawhatchee Bay flats-specific report (week of Oct 23–29) noted that redfish up to about 23 inches are still holding in guts, potholes, and shallow feeding areas despite recent storm disruption, with visibility good enough for sight fishing; after a cold front passage, cut natural bait outperformed both artificials and live greenies on the flats.",
-    "attribution": "Great Days Outdoors (Northwest Florida Fishing Report) · Auto-refreshed via Claude API",
+    "date": "2026-11-02",
+    "displayDate": "November 2, 2026",
+    "summary": "The most current reports available (week of Oct 30–Nov 5, 2026, roughly 3 days old) describe a productive but somewhat scattered fall bite around Choctawhatchee Bay and the Destin area. Redfish are the standout inshore species right now, schooling actively around bridges, jetties, and the East Pass, with guides reporting fish in the 25–26-inch class willing to eat a variety of live baits including pinfish, croakers, and herring. Speckled trout in the 22–27-inch range are also showing up wherever anglers can locate bait concentrations, though the bite has been somewhat unpredictable due to the disruption from a recent hurricane and a warm, unsettled fall transition that has kept fish between their summer and winter locations. Sight-fishing for reds on the Choctawhatchee Bay flats (around Hogtown Bayou and the tannin-stained shallows) has remained viable, with guides using quarter-ounce jigheads and paddle-tail soft plastics for reaction strikes. As daytime temperatures consistently drop below the 80s and overnight lows settle into the 50s, expect trout and redfish to stack up more predictably in the northern estuaries; water temp at this spot is measured at 75°F.",
+    "attribution": "greatdaysoutdoors.com (Northwest Florida Fishing Report, Oct 30–Nov 5, 2026, featuring Capt. Adam Schroeder / Ignite The Bite Charters and Capt. Blake Nelson / Last Cast Charters); greatdaysoutdoors.com (Oct 23–29, 2026 report for supplemental Choctawhatchee Bay flat details) · Auto-refreshed via Claude API",
     "sourceIds": [
       "report-aHR0cHM6Ly9ncmVhdG"
     ],
@@ -41,68 +41,66 @@
       "redfish"
     ],
     "conditions": {
-      "wind": "ENE 10 to 15 mph",
-      "windDir": "ENE",
-      "tide": "High tide ~9:37 PM · Low tide ~8:20 AM · Sunrise 5:59 AM",
+      "wind": "E 5 to 10 mph",
+      "windDir": "E",
+      "tide": "High tide ~9:40 PM · Low tide ~8:54 AM · Sunrise 6:00 AM",
       "tideEvents": [
         {
           "type": "H",
-          "time": "9:37 PM"
+          "time": "9:40 PM"
         },
         {
           "type": "L",
-          "time": "8:20 AM"
+          "time": "8:54 AM"
         }
       ],
-      "waterTemp": 76,
-      "sky": "Cloudy",
-      "stormChance": 54,
+      "waterTemp": 75,
+      "sky": "Bright sun",
+      "stormChance": 6,
       "pressure": {
-        "hpa": 1021.6,
-        "inHg": 30.17,
-        "direction": "steady",
-        "changeHpa3h": -0.4
+        "hpa": 1019.6,
+        "inHg": 30.11,
+        "direction": "falling",
+        "changeHpa3h": -2.1
       }
     }
   },
   "archivedReports": [
     {
       "kind": "archived_app_snapshot",
-      "date": "2026-10-31",
-      "displayDate": "October 31, 2026",
-      "summary": "Redfish are the standout inshore species on Choctawhatchee Bay right now, with the bite remaining productive on the flats despite water clarity disrupted by Hurricane Isaias's October 9 landfall near Destin. Capt. Blake Nelson (Last Cast Charters) reports that smaller slot-sized reds — roughly 23 inches and under — are still holding in familiar guts, potholes, and shallow feeding areas, with cut mullet on Carolina rigs out-fishing live bait in some sessions. Speckled trout are also showing for anglers who can locate bait concentrations, with fish in the 22–27-inch range reported around the Destin area as of late October, though trout remain somewhat scattered between their summer and winter patterns due to the mixed weather. Redfish are also congregating around the bridges, jetties, and East Pass on incoming tides, and the captainexperiences.com guide network reports the overall bay bite heating up in conjunction with the Destin Fishing Rodeo this month. Water temperature at time of report: 75°F.",
-      "attribution": "greatdaysoutdoors.com (Northwest Florida Fishing Report, Oct 23–29 and Oct 30–Nov 5, 2026); captainexperiences.com (Choctawhatchee Bay Fishing Reports, reported within 2 days of Oct 31, 2026) · Auto-refreshed via Claude API",
+      "date": "2026-11-01",
+      "displayDate": "November 1, 2026",
+      "summary": "Fall inshore fishing on Choctawhatchee Bay is in solid form heading into early November, with water temperature at 76°F. Redfish remain the top bay target: fish in the 25–26-inch range are holding around bridge structure and responding well to a variety of natural baits including pinfish, croakers, spot minnows, and herring, with heavier weights needed on stronger tidal flow. Speckled trout in the 22–27-inch class are also active and closely tied to bait concentrations — finding the right bait school is key to consistent catches, with live bait leading the way and artificials in deeper water expected to improve as conditions cool further into fall. The most recent Choctawhatchee Bay flats-specific report (week of Oct 23–29) noted that redfish up to about 23 inches are still holding in guts, potholes, and shallow feeding areas despite recent storm disruption, with visibility good enough for sight fishing; after a cold front passage, cut natural bait outperformed both artificials and live greenies on the flats.",
+      "attribution": "Great Days Outdoors (Northwest Florida Fishing Report) · Auto-refreshed via Claude API",
       "sourceIds": [
-        "captain-experiences-destin",
-        "report-aHR0cHM6Ly9ncmVhdG",
-        "report-aHR0cHM6Ly9jYXB0YW"
+        "report-aHR0cHM6Ly9ncmVhdG"
       ],
       "species": [
         "spotted_seatrout",
         "redfish"
       ],
       "conditions": {
-        "wind": "E 5 to 10 mph",
-        "windDir": "E",
-        "tide": "High tide ~9:36 PM · Low tide ~9:31 AM · Sunrise 6:58 AM",
+        "wind": "ENE 10 to 15 mph",
+        "windDir": "ENE",
+        "tide": "High tide ~9:37 PM · Low tide ~8:20 AM · Sunrise 5:59 AM",
         "tideEvents": [
           {
             "type": "H",
-            "time": "9:36 PM"
+            "time": "9:37 PM"
           },
           {
             "type": "L",
-            "time": "9:31 AM"
+            "time": "8:20 AM"
           }
         ],
-        "waterTemp": 75,
+        "waterTemp": 76,
         "sky": "Cloudy",
-        "stormChance": 4,
+        "stormChance": 54,
         "pressure": {
-          "hpa": 1021,
-          "inHg": 30.15,
-          "direction": "rising",
-          "changeHpa3h": 1
+          "hpa": 1021.6,
+          "inHg": 30.17,
+          "direction": "steady",
+          "changeHpa3h": -0.4
         }
       }
     },
@@ -324,7 +322,7 @@
       "label": "Speckled trout",
       "current": true,
       "reportCount": 9,
-      "lastReported": "2026-11-01",
+      "lastReported": "2026-11-02",
       "evidenceLevel": "current_regional_report"
     },
     {
@@ -332,7 +330,7 @@
       "label": "Redfish",
       "current": true,
       "reportCount": 10,
-      "lastReported": "2026-11-01",
+      "lastReported": "2026-11-02",
       "evidenceLevel": "current_regional_report"
     },
     {
@@ -474,10 +472,10 @@
     },
     {
       "id": "report-aHR0cHM6Ly9jYXB0YW",
-      "label": "Choctawhatchee Bay Fishing Reports (October 2026)",
+      "label": "Choctawhatchee Bay Fishing Reports (August 2026)",
       "url": "https://captainexperiences.com/fishing-reports/locations/regions/choctawhatchee-bay",
       "kind": "regional_report",
-      "reportDate": "2026-10-29",
+      "reportDate": "2026-08-06",
       "note": "Exact source page preserved by the daily bite-report research."
     },
     {
