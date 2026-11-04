@@ -1566,23 +1566,16 @@ export default function App() {
   function selectLocTab(id) {
     setLocTab(id);
     try { window.storage.set("lastLocTab", id).catch(() => {}); } catch {}
-  }
-
-  // Keep the active location chip visible in the horizontal strip — after a
-  // swipe, the newly selected spot could otherwise be scrolled off-screen.
-  // Guarded against the initial mount: a plain `useEffect` with a
-  // dependency array still fires once right after the first render, not
-  // just on later changes — so without this guard, every page load forced
-  // a scrollIntoView() on the default (or storage-restored) tab's chip,
-  // which pushed the whole page down from the top on open if that chip
-  // wasn't already fully visible under the fixed bottom tab bar. Only
-  // scroll in response to an actual tab change after mount.
-  const skipFirstChipScroll = useRef(true);
-  useEffect(() => {
-    if (skipFirstChipScroll.current) { skipFirstChipScroll.current = false; return; }
-    document.querySelector(`[data-loc="${locTab}"]`)
+    // Keep the active chip visible in the horizontal strip — but only for
+    // this explicit user action (swipe/tap), never for the silent
+    // storage-restore on load (that calls setLocTab directly, not this
+    // function). A previous version did this in a useEffect keyed on
+    // locTab, which also fired when the restored tab arrived post-mount —
+    // scrolling the chip into view pushed the whole page down from the top
+    // on every cold load where the last-viewed spot wasn't the default.
+    document.querySelector(`[data-loc="${id}"]`)
       ?.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
-  }, [locTab, mainTab]);
+  }
 
   function switchMainTab(key) {
     if (key === "log") goToLogTab(); else setMainTab(key);
@@ -1698,7 +1691,7 @@ export default function App() {
             tab bar, within thumb reach on a phone. */}
         <div style={{ marginBottom: 4 }}>
           <div style={{ fontSize: 15, letterSpacing: "0.16em", color: "#4ade80", textTransform: "uppercase", marginBottom: 3 }}>🎣 Daily Fishing Intel</div>
-          <h1 style={{ margin: 0, fontSize: 25, fontWeight: 700, color: "#f0faf4", lineHeight: 1.2 }}>331 Bridge Area</h1>
+          <h1 style={{ margin: 0, fontSize: 25, fontWeight: 700, color: "#f0faf4", lineHeight: 1.2 }}>331 Bridge Area · {C.date.split(",")[0]}</h1>
           <div style={{ fontSize: 16, color: "#86c7a0", marginTop: 2 }}>Fishing Report · Freeport, FL · {C.date}</div>
         </div>
 
