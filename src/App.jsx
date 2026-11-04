@@ -1692,7 +1692,8 @@ export default function App() {
         <div style={{ marginBottom: 4 }}>
           <div style={{ fontSize: 15, letterSpacing: "0.16em", color: "#4ade80", textTransform: "uppercase", marginBottom: 3 }}>🎣 Daily Fishing Intel</div>
           <h1 style={{ margin: 0, fontSize: 25, fontWeight: 700, color: "#f0faf4", lineHeight: 1.2 }}>331 Bridge Area · {C.date.split(",")[0]}</h1>
-          <div style={{ fontSize: 16, color: "#86c7a0", marginTop: 2 }}>Fishing Report · Freeport, FL · {C.date}</div>
+          <div style={{ fontSize: 16, color: "#86c7a0", marginTop: 2 }}>Fishing Report · Freeport, FL</div>
+          <div style={{ fontSize: 16, color: "#86c7a0" }}>{C.date}</div>
         </div>
 
         {mainTab === "report" && <>
