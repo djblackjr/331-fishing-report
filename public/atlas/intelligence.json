@@ -23,12 +23,12 @@
     ],
     "waterTemp": 76,
     "sky": "Cloudy",
-    "stormChance": 44,
+    "stormChance": 28,
     "pressure": {
-      "hpa": 1013.3,
-      "inHg": 29.92,
+      "hpa": 1014.3,
+      "inHg": 29.95,
       "direction": "rising",
-      "changeHpa3h": 0.5
+      "changeHpa3h": 0.7
     }
   },
   "currentReport": {
@@ -67,54 +67,58 @@
       ],
       "waterTemp": 76,
       "sky": "Cloudy",
-      "stormChance": 44,
+      "stormChance": 28,
       "pressure": {
-        "hpa": 1013.3,
-        "inHg": 29.92,
+        "hpa": 1014.3,
+        "inHg": 29.95,
         "direction": "rising",
-        "changeHpa3h": 0.5
+        "changeHpa3h": 0.7
       }
     }
   },
   "archivedReports": [
     {
       "kind": "archived_app_snapshot",
-      "date": "2026-11-03",
-      "displayDate": "November 3, 2026",
-      "summary": "The most recent full report covering Choctawhatchee Bay and the Destin area (Great Days Outdoors, week of Oct 30–Nov 5, 2026) puts redfish as the top inshore target heading into November, with schools stacking around bridges, jetties, and the East Pass; fish in good numbers and quality pompano still mixed in. Speckled trout are also showing up in the 22- to 27-inch range wherever bait concentrations can be located, though an unsettled fall transition — recent hurricane impacts, warm spells, and short-lived fronts — has left both redfish and trout scattered between their late-summer and winter haunts. A separate report from the prior week (Oct 23–29) by Capt. Blake Nelson of Last Cast Charters noted that Choctawhatchee Bay avoided heavy mudding after the storm, staying clear enough for sight fishing redfish on the flats, with fish under about 23 inches still holding in guts and potholes; cut mullet on Carolina rigs was the standout bait. Water temperature for this area is 75°F as of today's reading. The Half Hitch Destin tackle shop posted its most recent report on 10-26-26, though full body content was not accessible; the flounder run window (typically mid-Oct through mid-Nov) is likely in its tail-end phase based on seasonal timing.",
-      "attribution": "Great Days Outdoors (Northwest Florida Fishing Report, Oct 30–Nov 5 2026 and Oct 23–29 2026); Half Hitch Destin Fishing Reports blog (10-26-26 post confirmed, full content not retrieved) · Auto-refreshed via Claude API",
+      "date": "2026-11-04",
+      "displayDate": "November 4, 2026",
+      "summary": "As of early November 2026, the redfish bite around Destin's bridges, passes, and bay flats remains one of the most consistent inshore opportunities in Choctawhatchee Bay, with fish responding well near structure. Speckled trout are showing up in the 22–27 inch range wherever anglers can locate bait concentrations, though an unsettled fall transition — including hurricane effects, warm spells, and short-lived fronts — has left trout and redfish somewhat scattered between their late-summer and winter holding areas. On the Choctawhatchee Bay flats specifically, sight-fishing for redfish has stayed productive, with fish holding in guts and potholes; cut mullet on Carolina rigs outperformed live bait in the period following recent cold fronts. Water temperature is 76°F. If cooler overnight temps settle into the 50s consistently, guides expect the trout bite to tighten up and redfish and trout to stack together farther north in the estuaries.",
+      "attribution": "greatdaysoutdoors.com (Northwest Florida Fishing Report, Oct 30–Nov 5, 2026 and Oct 23–29, 2026); fishingbooker.com (Choctawhatchee Bay daily reports, November 2026); halfhitch.com (Destin Fishing Report 11-2-26, listing confirmed) · Auto-refreshed via Claude API",
       "sourceIds": [
+        "fishingbooker-bay",
         "halfhitch-destin",
         "report-aHR0cHM6Ly9ncmVhdG",
         "report-aHR0cHM6Ly9oYWxmaG"
       ],
       "species": [
         "spotted_seatrout",
-        "redfish",
-        "gulf_flounder"
+        "redfish"
       ],
       "conditions": {
-        "wind": "ESE 5 to 15 mph",
-        "windDir": "ESE",
-        "tide": "High tide ~10:52 PM · Low tide ~9:12 AM · Sunrise 6:00 AM",
+        "wind": "S 5 to 10 mph",
+        "windDir": "S",
+        "tide": "High tide ~12:18 AM · Low tide ~8:46 AM · Sunrise 6:01 AM",
         "tideEvents": [
           {
             "type": "H",
-            "time": "10:52 PM"
+            "time": "12:18 AM"
           },
           {
             "type": "L",
-            "time": "9:12 AM"
+            "time": "8:46 AM"
+          },
+          {
+            "type": "H",
+            "time": "2:54 PM"
           }
         ],
-        "waterTemp": 75,
+        "waterTemp": 76,
         "sky": "Cloudy",
-        "stormChance": 33,
+        "stormChance": 44,
         "pressure": {
-          "hpa": 1016.7,
-          "inHg": 30.02,
-          "direction": "falling",
-          "changeHpa3h": -0.7
+          "hpa": 1013.3,
+          "inHg": 29.92,
+          "direction": "rising",
+          "changeHpa3h": 0.5
         }
       }
     },
@@ -351,8 +355,8 @@
       "key": "gulf_flounder",
       "label": "Flounder",
       "current": false,
-      "reportCount": 4,
-      "lastReported": "2026-11-03",
+      "reportCount": 3,
+      "lastReported": "2026-07-28",
       "evidenceLevel": "archived_regional_report"
     },
     {
@@ -493,10 +497,10 @@
     },
     {
       "id": "report-aHR0cHM6Ly9oYWxmaG",
-      "label": "Destin Fishing Report 10-26-26",
-      "url": "https://halfhitch.com/blog/destin-fishing-reports",
+      "label": "Destin Fishing Report 11-2-26",
+      "url": "https://halfhitch.com/blog/destin-fishing-report-11-2-26",
       "kind": "regional_report",
-      "reportDate": "2026-10-26",
+      "reportDate": "2026-11-02",
       "note": "Exact source page preserved by the daily bite-report research."
     },
     {
