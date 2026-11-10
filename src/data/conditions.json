@@ -1,33 +1,33 @@
 {
-  "date": "Monday, November 9, 2026",
+  "date": "Tuesday, November 10, 2026",
   "wind": {
     "speed": 0,
     "dir": "E",
     "description": " 0 mph"
   },
-  "weather": "Mostly Sunny · High 75°F",
-  "tide": "High tide ~3:33 PM · Low tide ~2:11 AM · Sunrise 6:05 AM",
+  "weather": "Sunny · High 76°F",
+  "tide": "High tide ~4:14 PM · Low tide ~3:04 AM · Sunrise 6:06 AM",
   "tideEvents": [
     {
       "type": "L",
-      "time": "2:11 AM"
+      "time": "3:04 AM"
     },
     {
       "type": "H",
-      "time": "3:33 PM"
+      "time": "4:14 PM"
     }
   ],
-  "sunrise": "6:05 AM",
-  "sunset": "4:51 PM",
+  "sunrise": "6:06 AM",
+  "sunset": "4:50 PM",
   "stormWindow": "before 10AM",
-  "stormChance": 0,
-  "moonPhase": "New Moon (~0% illuminated) — strong tidal push (spring tide)",
+  "stormChance": 2,
+  "moonPhase": "New Moon (~1% illuminated) — strong tidal push (spring tide)",
   "waterClarity": "Slightly stained",
   "sky": "Bright sun",
-  "lastUpdated": "11/9/2026, 12:42:18 PM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
-  "localBiteReport": "The most detailed on-the-water reports for Choctawhatchee Bay are roughly two weeks old as of this writing. Capt. Blake Nelson (Last Cast Charters) reported in late October that the redfish bite on the bay's flats remained productive despite recent storm effects, with fish in the 23-inch-and-under range holding in guts, potholes, and shallow feeding areas; he noted they were keying on small shrimp, crabs, and worms, making subtle bottom presentations like a Ned rig effective. A FishingBooker angler report from about a week ago mentioned landing two solid redfish while also picking up bait and fishing under the bridge. Water temperature at this location is 74°F. Sheepshead are typical this time of year around bridge pilings and jetties, and the cooler November temps historically signal an improving sheepshead bite along with speckled trout holding in deeper bayous and creek mouths — though no specific keeper-trout or flounder reports were confirmed this week. Note: Florida's inshore flounder season closes October 15 and does not reopen until December 1, so flounder should not be targeted in-bay right now.",
-  "localBiteSource": "greatdaysoutdoors.com (NW Florida report, Oct 23–29, 2026); fishingbooker.com Choctawhatchee Bay reports feed (~Nov 2, 2026) · Auto-refreshed via Claude API",
-  "localBiteUpdated": "November 9, 2026",
+  "lastUpdated": "11/10/2026, 10:22:57 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "localBiteReport": "The most recent detailed inshore report for Choctawhatchee Bay is from the week of October 23–29, 2026 — roughly two weeks ago. According to Capt. Blake Nelson of Last Cast Charters, the redfish bite on the Choctawhatchee Bay flats held up well despite a recent storm, with smaller slot reds (around 23 inches and under) still working familiar guts, potholes, and shallow feeding areas. Nelson noted that fall redfish in the bay have been keying on small shrimp, tiny crabs, and worms rather than chasing visible baitfish schools, making subtle bottom-oriented presentations — including a Ned rig — particularly effective. A charter review on FishingBooker also noted a recent keeper redfish catch on a bay and bridge trip in this area. Water temperature at this location is currently 74°F.",
+  "localBiteSource": "greatdaysoutdoors.com (Northwest Florida Fishing Report, Oct 23–29, 2026); fishingbooker.com/reports/destination/us/choctawhatchee-bay · Auto-refreshed via Claude API",
+  "localBiteUpdated": "November 10, 2026",
   "localBiteEvidence": [
     {
       "title": "Northwest Florida Fishing Report for October 23 – 29, 2026",
@@ -37,86 +37,60 @@
     {
       "title": "Daily Choctawhatchee Bay Fishing Reports (November 2026)",
       "url": "https://fishingbooker.com/reports/destination/us/choctawhatchee-bay",
-      "reportDate": "2026-11-02"
+      "reportDate": null
     }
   ],
   "previousDay": {
-    "date": "Sunday, November 8, 2026",
+    "date": "Monday, November 9, 2026",
     "wind": {
-      "dir": "N",
-      "speed": 5
+      "dir": "E",
+      "speed": 0
     },
-    "high": 73,
+    "high": 75,
     "stormChance": 0,
-    "tide": "High tide ~3:01 PM · Low tide ~1:19 AM · Sunrise 6:04 AM",
-    "waterTemp": 75
+    "tide": "High tide ~3:33 PM · Low tide ~2:11 AM · Sunrise 6:05 AM",
+    "waterTemp": 74
   },
   "openMeteo": [
     {
-      "high": 71,
-      "low": 51,
-      "stormChance": 0,
-      "windSpeed": 6,
-      "windDir": "N",
-      "summary": "Overcast"
-    },
-    {
-      "high": 73,
-      "low": 51,
-      "stormChance": 2,
+      "high": 74,
+      "low": 50,
+      "stormChance": 1,
       "windSpeed": 5,
-      "windDir": "N",
+      "windDir": "NW",
       "summary": "Overcast"
     },
     {
-      "high": 78,
-      "low": 55,
-      "stormChance": 4,
-      "windSpeed": 7,
-      "windDir": "W",
+      "high": 74,
+      "low": 58,
+      "stormChance": 17,
+      "windSpeed": 6,
+      "windDir": "NW",
+      "summary": "Overcast"
+    },
+    {
+      "high": 75,
+      "low": 56,
+      "stormChance": 0,
+      "windSpeed": 8,
+      "windDir": "NW",
       "summary": "Overcast"
     }
   ],
   "forecast": [
     {
-      "day": "Mon, Nov 9",
-      "dateISO": "2026-11-09",
+      "day": "Tue, Nov 10",
+      "dateISO": "2026-11-10",
       "label": "Today",
-      "high": 75,
+      "high": 76,
       "low": null,
       "wind": " 0 mph",
       "windSpeed": 0,
       "windDir": "E",
-      "storms": 0,
-      "headline": "Mostly Sunny",
-      "fishingScore": 9,
-      "aiCall": "Mostly sunny. High near 75, with temperatures falling to around 69 in the afternoon. North wind around 0 mph.",
-      "emoji": "☀️",
-      "tideEvents": [
-        {
-          "type": "L",
-          "time": "2:11 AM"
-        },
-        {
-          "type": "H",
-          "time": "3:33 PM"
-        }
-      ],
-      "moonPhase": "New Moon (~0% illuminated) — strong tidal push (spring tide)"
-    },
-    {
-      "day": "Tue, Nov 10",
-      "dateISO": "2026-11-10",
-      "label": "Tomorrow",
-      "high": 76,
-      "low": null,
-      "wind": "NNW 0 to 5 mph",
-      "windSpeed": 5,
-      "windDir": "NNW",
-      "storms": 1,
+      "storms": 2,
       "headline": "Sunny",
-      "fishingScore": 9,
-      "aiCall": "Sunny. High near 76, with temperatures falling to around 68 in the afternoon. North northwest wind 0 to 5 mph.",
+      "fishingScore": 8.9,
+      "aiCall": "Sunny. High near 76, with temperatures falling to around 70 in the afternoon. Southwest wind around 0 mph.",
       "emoji": "☀️",
       "tideEvents": [
         {
@@ -133,17 +107,17 @@
     {
       "day": "Wed, Nov 11",
       "dateISO": "2026-11-11",
-      "label": "Veterans Day",
-      "high": 75,
+      "label": "Tomorrow",
+      "high": 74,
       "low": null,
       "wind": "WNW 0 to 5 mph",
       "windSpeed": 5,
       "windDir": "WNW",
-      "storms": 5,
-      "headline": "Mostly Sunny",
-      "fishingScore": 8.8,
-      "aiCall": "Mostly sunny, with a high near 75. West northwest wind 0 to 5 mph.",
-      "emoji": "☀️",
+      "storms": 20,
+      "headline": "Slight Chance Rain Showers then Partly Sunny",
+      "fishingScore": 8.2,
+      "aiCall": "A slight chance of rain showers before 10am. Partly sunny. High near 74, with temperatures falling to around 69 in the afternoon. West northwest wind 0 to 5 mph. Chance of precipitation is 20%. New rainfall amounts less than a tenth of an inch possible.",
+      "emoji": "🌧️",
       "tideEvents": [
         {
           "type": "L",
@@ -155,36 +129,62 @@
         }
       ],
       "moonPhase": "Waxing Crescent (~5% illuminated) — strong tidal push (spring tide)"
+    },
+    {
+      "day": "Thu, Nov 12",
+      "dateISO": "2026-11-12",
+      "label": "Thursday",
+      "high": 75,
+      "low": null,
+      "wind": "WNW 5 to 15 mph",
+      "windSpeed": 15,
+      "windDir": "WNW",
+      "storms": 0,
+      "headline": "Mostly Sunny",
+      "fishingScore": 8.5,
+      "aiCall": "Mostly sunny, with a high near 75. West northwest wind 5 to 15 mph.",
+      "emoji": "☀️",
+      "tideEvents": [
+        {
+          "type": "L",
+          "time": "4:49 AM"
+        },
+        {
+          "type": "H",
+          "time": "5:46 PM"
+        }
+      ],
+      "moonPhase": "Waxing Crescent (~11% illuminated) — strong tidal push (spring tide)"
     }
   ],
-  "dateISO": "2026-11-09",
+  "dateISO": "2026-11-10",
   "waterTemp": 74,
   "pressure": {
-    "hpa": 1019.9,
-    "inHg": 30.12,
-    "direction": "falling",
-    "changeHpa3h": -1.1
+    "hpa": 1021.1,
+    "inHg": 30.15,
+    "direction": "steady",
+    "changeHpa3h": -0.1
   },
   "speciesSignals": [
     {
       "key": "spotted_seatrout",
       "label": "Speckled trout",
       "current": false,
-      "reportCount": 8,
-      "lastReported": "2026-11-08"
+      "reportCount": 7,
+      "lastReported": "2026-08-12"
     },
     {
       "key": "redfish",
       "label": "Redfish",
       "current": true,
       "reportCount": 10,
-      "lastReported": "2026-11-09"
+      "lastReported": "2026-11-10"
     },
     {
       "key": "gulf_flounder",
       "label": "Flounder",
-      "current": true,
-      "reportCount": 5,
+      "current": false,
+      "reportCount": 4,
       "lastReported": "2026-11-09"
     },
     {
@@ -205,21 +205,26 @@
   "solunar": {
     "majors": [
       {
+        "type": "underfoot",
+        "peak": "12:10 AM",
+        "window": "11:10 PM–1:10 AM"
+      },
+      {
         "type": "overhead",
-        "peak": "11:40 AM",
-        "window": "10:40 AM–12:40 PM"
+        "peak": "12:30 PM",
+        "window": "11:30 AM–1:30 PM"
       }
     ],
     "minors": [
       {
         "type": "moonrise",
-        "peak": "6:35 AM",
-        "window": "6:05 AM–7:05 AM"
+        "peak": "7:35 AM",
+        "window": "7:05 AM–8:05 AM"
       },
       {
         "type": "moonset",
-        "peak": "4:55 PM",
-        "window": "4:25 PM–5:25 PM"
+        "peak": "5:35 PM",
+        "window": "5:05 PM–6:05 PM"
       }
     ]
   }
