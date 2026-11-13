@@ -20,7 +20,7 @@
   "moonPhase": "Waxing Crescent (~18% illuminated) — strong tidal push (spring tide)",
   "waterClarity": "Slightly stained",
   "sky": "Bright sun",
-  "lastUpdated": "11/13/2026, 9:17:51 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "lastUpdated": "11/13/2026, 10:14:03 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
   "localBiteReport": "Reports from the past one to two weeks indicate that redfish remain the most reliable inshore target around Choctawhatchee Bay and the Destin area. Guides in Freeport and around the bay have been finding redfish on the flats and around bridge structure, with live bait — especially live shrimp — being the go-to presentation. A FishingBooker angler report from roughly one week ago noted redfish catches in the bay during a mixed-bag trip. The October 30–November 5 Great Days Outdoors regional report (the most recent week to include Destin-area inshore detail) noted redfish continuing to bite at Destin bridges and passes, with anglers fishing the 25–26 inch class fish on live bait. Water temperature at the bay today measures 73°F. Half Hitch's Destin tackle shop confirmed a report dated November 9 exists, though its full bay-fishing details were not accessible; their seasonal pattern for November typically highlights sheepshead stacking on bridges and jetties, trout holding in deeper bayous on live shrimp, and flounder as a top target — November and December being among the best flounder months of the year on the Panhandle.",
   "localBiteSource": "FishingBooker Choctawhatchee Bay reports; CaptainExperiences Choctawhatchee Bay guide reports (Freeport); Great Days Outdoors Northwest Florida Fishing Report (Oct 30–Nov 5, 2026); Half Hitch Destin Fishing Reports (Nov 9, 2026 confirmed published) · Auto-refreshed via Claude API",
   "localBiteUpdated": "November 13, 2026",
@@ -47,39 +47,39 @@
     }
   ],
   "previousDay": {
-    "date": "Thursday, November 12, 2026",
+    "date": "Friday, November 13, 2026",
     "wind": {
-      "dir": "WNW",
+      "dir": "NW",
       "speed": 10
     },
-    "high": 75,
+    "high": 64,
     "stormChance": 0,
-    "tide": "High tide ~5:46 PM · Low tide ~4:49 AM · Sunrise 6:08 AM",
-    "waterTemp": 74
+    "tide": "High tide ~n/a · Low tide ~5:37 AM · Sunrise 6:08 AM",
+    "waterTemp": 73
   },
   "openMeteo": [
     {
-      "high": 77,
-      "low": 55,
-      "stormChance": 0,
-      "windSpeed": 10,
-      "windDir": "NW",
-      "summary": "Overcast"
-    },
-    {
-      "high": 63,
-      "low": 43,
+      "high": 64,
+      "low": 44,
       "stormChance": 0,
       "windSpeed": 11,
       "windDir": "NW",
       "summary": "Clear"
     },
     {
-      "high": 59,
+      "high": 57,
+      "low": 38,
+      "stormChance": 0,
+      "windSpeed": 9,
+      "windDir": "N",
+      "summary": "Overcast"
+    },
+    {
+      "high": 65,
       "low": 40,
       "stormChance": 0,
-      "windSpeed": 11,
-      "windDir": "N",
+      "windSpeed": 8,
+      "windDir": "NE",
       "summary": "Overcast"
     }
   ],
@@ -162,10 +162,10 @@
   "dateISO": "2026-11-13",
   "waterTemp": 73,
   "pressure": {
-    "hpa": 1011.8,
-    "inHg": 29.88,
-    "direction": "steady",
-    "changeHpa3h": -0.1
+    "hpa": 1012.4,
+    "inHg": 29.9,
+    "direction": "falling",
+    "changeHpa3h": -0.5
   },
   "speciesSignals": [
     {
@@ -186,7 +186,7 @@
       "key": "gulf_flounder",
       "label": "Flounder",
       "current": true,
-      "reportCount": 4,
+      "reportCount": 5,
       "lastReported": "2026-11-13"
     },
     {
