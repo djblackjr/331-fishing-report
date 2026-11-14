@@ -24,7 +24,7 @@
   "moonPhase": "Waxing Crescent (~27% illuminated) — moderate tidal push",
   "waterClarity": "Slightly stained",
   "sky": "Bright sun",
-  "lastUpdated": "11/14/2026, 2:26:04 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "lastUpdated": "11/14/2026, 8:59:38 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
   "localBiteReport": "Reports from Choctawhatchee Bay in the week of November 7–14, 2026 are sparse but confirm redfish are actively biting — a charter angler reported two solid keeper reds caught under a bay bridge on a trip this week. Guide notes from the Destin/Freeport area over the past 1–2 weeks indicate live bait (shrimp, small menhaden) early in the morning and soft plastics mid-day have been the most effective approaches inshore. Water temperature is 72°F. Fall patterns are firmly in place: redfish are holding in guts, potholes, and around bridge structure, speckled trout are expected in deeper bayous and creek mouths as water cools, and sheepshead numbers should be building at bridges and jetties through November. Flounder have largely completed their fall run and numbers are tapering off for the season.",
   "localBiteSource": "fishingbooker.com (Choctawhatchee Bay reports feed, November 2026); captainexperiences.com (Choctawhatchee Bay guide reports, November 2026) · Auto-refreshed via Claude API",
   "localBiteUpdated": "November 14, 2026",
@@ -41,40 +41,40 @@
     }
   ],
   "previousDay": {
-    "date": "Friday, November 13, 2026",
+    "date": "Saturday, November 14, 2026",
     "wind": {
-      "dir": "NW",
+      "dir": "N",
       "speed": 10
     },
-    "high": 64,
+    "high": 60,
     "stormChance": 0,
-    "tide": "High tide ~n/a · Low tide ~5:37 AM · Sunrise 6:08 AM",
-    "waterTemp": 73
+    "tide": "High tide ~6:27 PM · Low tide ~6:19 AM · Sunrise 6:09 AM",
+    "waterTemp": 72
   },
   "openMeteo": [
     {
       "high": 58,
       "low": 39,
       "stormChance": 0,
-      "windSpeed": 10,
+      "windSpeed": 9,
       "windDir": "N",
-      "summary": "Overcast"
+      "summary": "Clear"
     },
     {
       "high": 61,
       "low": 39,
       "stormChance": 0,
-      "windSpeed": 9,
+      "windSpeed": 8,
       "windDir": "NE",
       "summary": "Overcast"
     },
     {
-      "high": 56,
-      "low": 48,
-      "stormChance": 5,
+      "high": 54,
+      "low": 46,
+      "stormChance": 3,
       "windSpeed": 10,
       "windDir": "NE",
-      "summary": "Overcast"
+      "summary": "Light drizzle"
     }
   ],
   "forecast": [
@@ -142,7 +142,7 @@
       "storms": 2,
       "headline": "Mostly Cloudy",
       "fishingScore": 8.9,
-      "aiCall": "Mostly cloudy, with a high near 58.",
+      "aiCall": "Mostly cloudy, with a high near 58. Northeast wind around 10 mph, with gusts as high as 25 mph.",
       "emoji": "⛅",
       "tideEvents": [
         {
@@ -160,10 +160,10 @@
   "dateISO": "2026-11-14",
   "waterTemp": 72,
   "pressure": {
-    "hpa": 1018.6,
-    "inHg": 30.08,
+    "hpa": 1021.1,
+    "inHg": 30.15,
     "direction": "rising",
-    "changeHpa3h": 1.7
+    "changeHpa3h": 2.5
   },
   "speciesSignals": [
     {
