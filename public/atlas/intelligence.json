@@ -17,14 +17,14 @@
         "time": "6:52 AM"
       }
     ],
-    "waterTemp": 72,
+    "waterTemp": 71,
     "sky": "Bright sun",
     "stormChance": 0,
     "pressure": {
-      "hpa": 1021.1,
-      "inHg": 30.15,
-      "direction": "rising",
-      "changeHpa3h": 2.5
+      "hpa": 1024.9,
+      "inHg": 30.27,
+      "direction": "steady",
+      "changeHpa3h": -0.1
     }
   },
   "currentReport": {
@@ -57,28 +57,27 @@
           "time": "6:52 AM"
         }
       ],
-      "waterTemp": 72,
+      "waterTemp": 71,
       "sky": "Bright sun",
       "stormChance": 0,
       "pressure": {
-        "hpa": 1021.1,
-        "inHg": 30.15,
-        "direction": "rising",
-        "changeHpa3h": 2.5
+        "hpa": 1024.9,
+        "inHg": 30.27,
+        "direction": "steady",
+        "changeHpa3h": -0.1
       }
     }
   },
   "archivedReports": [
     {
       "kind": "archived_app_snapshot",
-      "date": "2026-11-14",
-      "displayDate": "November 14, 2026",
-      "summary": "Reports from Choctawhatchee Bay in the week of November 7–14, 2026 are sparse but confirm redfish are actively biting — a charter angler reported two solid keeper reds caught under a bay bridge on a trip this week. Guide notes from the Destin/Freeport area over the past 1–2 weeks indicate live bait (shrimp, small menhaden) early in the morning and soft plastics mid-day have been the most effective approaches inshore. Water temperature is 72°F. Fall patterns are firmly in place: redfish are holding in guts, potholes, and around bridge structure, speckled trout are expected in deeper bayous and creek mouths as water cools, and sheepshead numbers should be building at bridges and jetties through November. Flounder have largely completed their fall run and numbers are tapering off for the season.",
-      "attribution": "fishingbooker.com (Choctawhatchee Bay reports feed, November 2026); captainexperiences.com (Choctawhatchee Bay guide reports, November 2026) · Auto-refreshed via Claude API",
+      "date": "2026-11-15",
+      "displayDate": "November 15, 2026",
+      "summary": "Reports from late October through mid-November point to a solid fall inshore bite on Choctawhatchee Bay. Redfish have been the most consistent target, with schools gathering around bridges, jetties, and East Pass — a charter angler reported landing two good-sized redfish under the bridge just this past week. Speckled trout in the 22–27-inch range have also been showing up wherever anglers can find bait concentrations, though fish remain somewhat scattered between late-summer and winter holding areas. Sheepshead are beginning to pick up at bridge pilings as water temps drop, and flounder are considered prime right now with November historically one of the best months of the year for them in the bay. Live shrimp, cut mullet on Carolina rigs, and soft plastics have all been producing; the most recent Destin-area reports note redfish feeding aggressively despite recent weather disruptions. Note: the most granular Choctawhatchee Bay-specific guide content in these reports is from the Oct 30–Nov 5 window, roughly 10 days ago — not same-week fresh.",
+      "attribution": "FishingBooker Choctawhatchee Bay reports (November 2026); Great Days Outdoors Northwest Florida Fishing Report (Nov 13–19, 2026 and Oct 30–Nov 5, 2026) · Auto-refreshed via Claude API",
       "sourceIds": [
-        "captain-experiences-destin",
         "fishingbooker-bay",
-        "report-aHR0cHM6Ly9jYXB0YW"
+        "report-aHR0cHM6Ly9ncmVhdG"
       ],
       "species": [
         "spotted_seatrout",
@@ -87,17 +86,17 @@
         "sheepshead"
       ],
       "conditions": {
-        "wind": "N 5 to 10 mph",
-        "windDir": "N",
-        "tide": "High tide ~6:27 PM · Low tide ~6:19 AM · Sunrise 6:09 AM",
+        "wind": "NE 5 mph",
+        "windDir": "NE",
+        "tide": "High tide ~7:04 PM · Low tide ~6:52 AM · Sunrise 6:10 AM",
         "tideEvents": [
           {
             "type": "H",
-            "time": "6:27 PM"
+            "time": "7:04 PM"
           },
           {
             "type": "L",
-            "time": "6:19 AM"
+            "time": "6:52 AM"
           }
         ],
         "waterTemp": 72,
@@ -486,10 +485,10 @@
     },
     {
       "id": "report-aHR0cHM6Ly9jYXB0YW",
-      "label": "Choctawhatchee Bay Fishing Reports (November 2026)",
+      "label": "Choctawhatchee Bay Fishing Reports (August 2026)",
       "url": "https://captainexperiences.com/fishing-reports/locations/regions/choctawhatchee-bay",
       "kind": "regional_report",
-      "reportDate": "2026-11-07",
+      "reportDate": "2026-08-06",
       "note": "Exact source page preserved by the daily bite-report research."
     },
     {
