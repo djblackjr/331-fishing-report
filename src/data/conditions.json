@@ -24,7 +24,7 @@
   "moonPhase": "First Quarter (~47% illuminated) — moderate tidal push",
   "waterClarity": "Slightly stained",
   "sky": "Cloudy",
-  "lastUpdated": "11/16/2026, 2:26:34 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "lastUpdated": "11/16/2026, 12:25:03 PM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
   "localBiteReport": "The most recent available reports for Choctawhatchee Bay are from roughly one week ago (early November 2026), not same-day. Water temperature at this location is 71°F as of today. On FishingBooker's Choctawhatchee Bay feed, an angler reported catching a couple of solid redfish under the bridge area about seven days ago, with baitfish also active in the bay. On captainexperiences.com, a Freeport-based guide (Alex S.) reported about one week ago that king mackerel have moved in, while a Santa Rosa Beach guide noted the bite has been a mix of live bait early morning and soft plastics throughout the day — consistent with the fall redfish and speckled trout pattern typical of this time of year. Half Hitch Tackle's Destin blog confirmed a new report dated November 9 exists (their most current), though its full bay-specific content was not accessible via search; their November 2 report and broader seasonal context suggest sheepshead are picking up around bridge structure as water cools, redfish remain active on the flats, and speckled trout are a secondary target in creek and bayou mouths.",
   "localBiteSource": "FishingBooker Choctawhatchee Bay reports feed; CaptainExperiences.com Choctawhatchee Bay reports page; Half Hitch Tackle Destin fishing reports blog · Auto-refreshed via Claude API",
   "localBiteUpdated": "November 16, 2026",
@@ -46,40 +46,40 @@
     }
   ],
   "previousDay": {
-    "date": "Sunday, November 15, 2026",
+    "date": "Monday, November 16, 2026",
     "wind": {
       "dir": "NE",
-      "speed": 5
+      "speed": 10
     },
-    "high": 62,
-    "stormChance": 0,
-    "tide": "High tide ~7:04 PM · Low tide ~6:52 AM · Sunrise 6:10 AM",
+    "high": 58,
+    "stormChance": 9,
+    "tide": "High tide ~7:36 PM · Low tide ~7:13 AM · Sunrise 6:11 AM",
     "waterTemp": 71
   },
   "openMeteo": [
     {
       "high": 60,
-      "low": 38,
-      "stormChance": 0,
-      "windSpeed": 8,
-      "windDir": "NE",
-      "summary": "Overcast"
-    },
-    {
-      "high": 59,
-      "low": 44,
-      "stormChance": 4,
-      "windSpeed": 10,
+      "low": 48,
+      "stormChance": 23,
+      "windSpeed": 12,
       "windDir": "NE",
       "summary": "Light drizzle"
     },
     {
-      "high": 69,
-      "low": 48,
-      "stormChance": 4,
+      "high": 58,
+      "low": 51,
+      "stormChance": 25,
+      "windSpeed": 14,
+      "windDir": "NE",
+      "summary": "Light rain"
+    },
+    {
+      "high": 67,
+      "low": 54,
+      "stormChance": 24,
       "windSpeed": 13,
       "windDir": "NE",
-      "summary": "Light drizzle"
+      "summary": "Light rain"
     }
   ],
   "forecast": [
@@ -147,7 +147,7 @@
       "storms": 1,
       "headline": "Sunny",
       "fishingScore": 8.5,
-      "aiCall": "Sunny, with a high near 72.",
+      "aiCall": "Sunny, with a high near 72. Northeast wind around 15 mph, with gusts as high as 25 mph.",
       "emoji": "☀️",
       "tideEvents": [
         {
@@ -169,10 +169,10 @@
   "dateISO": "2026-11-16",
   "waterTemp": 71,
   "pressure": {
-    "hpa": 1024.9,
-    "inHg": 30.27,
-    "direction": "steady",
-    "changeHpa3h": -0.1
+    "hpa": 1025.9,
+    "inHg": 30.29,
+    "direction": "falling",
+    "changeHpa3h": -2.8
   },
   "speciesSignals": [
     {
@@ -193,8 +193,8 @@
       "key": "gulf_flounder",
       "label": "Flounder",
       "current": false,
-      "reportCount": 4,
-      "lastReported": "2026-11-15"
+      "reportCount": 3,
+      "lastReported": "2026-07-28"
     },
     {
       "key": "black_drum",
