@@ -18,13 +18,13 @@
       }
     ],
     "waterTemp": 70,
-    "sky": "Cloudy",
-    "stormChance": 8,
+    "sky": "Bright sun",
+    "stormChance": 9,
     "pressure": {
-      "hpa": 1026.4,
-      "inHg": 30.31,
+      "hpa": 1027.8,
+      "inHg": 30.35,
       "direction": "steady",
-      "changeHpa3h": 0.1
+      "changeHpa3h": -0.1
     }
   },
   "currentReport": {
@@ -59,57 +59,56 @@
         }
       ],
       "waterTemp": 70,
-      "sky": "Cloudy",
-      "stormChance": 8,
+      "sky": "Bright sun",
+      "stormChance": 9,
       "pressure": {
-        "hpa": 1026.4,
-        "inHg": 30.31,
+        "hpa": 1027.8,
+        "inHg": 30.35,
         "direction": "steady",
-        "changeHpa3h": 0.1
+        "changeHpa3h": -0.1
       }
     }
   },
   "archivedReports": [
     {
       "kind": "archived_app_snapshot",
-      "date": "2026-11-16",
-      "displayDate": "November 16, 2026",
-      "summary": "The most recent available reports for Choctawhatchee Bay are from roughly one week ago (early November 2026), not same-day. Water temperature at this location is 71°F as of today. On FishingBooker's Choctawhatchee Bay feed, an angler reported catching a couple of solid redfish under the bridge area about seven days ago, with baitfish also active in the bay. On captainexperiences.com, a Freeport-based guide (Alex S.) reported about one week ago that king mackerel have moved in, while a Santa Rosa Beach guide noted the bite has been a mix of live bait early morning and soft plastics throughout the day — consistent with the fall redfish and speckled trout pattern typical of this time of year. Half Hitch Tackle's Destin blog confirmed a new report dated November 9 exists (their most current), though its full bay-specific content was not accessible via search; their November 2 report and broader seasonal context suggest sheepshead are picking up around bridge structure as water cools, redfish remain active on the flats, and speckled trout are a secondary target in creek and bayou mouths.",
-      "attribution": "FishingBooker Choctawhatchee Bay reports feed; CaptainExperiences.com Choctawhatchee Bay reports page; Half Hitch Tackle Destin fishing reports blog · Auto-refreshed via Claude API",
+      "date": "2026-11-17",
+      "displayDate": "November 17, 2026",
+      "summary": "Reports from the past week to two weeks on Choctawhatchee Bay point to a solid fall inshore bite. The most recent FishingBooker angler report (posted approximately 7 days ago) describes a successful charter trip that included two keeper-sized redfish caught near a bridge, consistent with the fall pattern when reds stage around structure. A guide report from CaptainExperiences (posted roughly 1–2 weeks ago out of the Freeport/Destin area) notes that fishing has been productive overall, though quality fish have been a bit harder to come by, with live bait working best in the early morning and soft plastics carrying the bite through the rest of the day. Water temperature at this location is 70°F. Historically for mid-November on Choctawhatchee Bay, sheepshead and black drum begin showing up in force around bridge pilings and jetties as water cools, while speckled trout stack up in deeper bayous and creek mouths on the north and east ends of the bay — patterns consistent with what local guides and tackle shop reports have described for this time of year in recent seasons.",
+      "attribution": "FishingBooker (Choctawhatchee Bay reports feed), CaptainExperiences (Choctawhatchee Bay/Freeport/Destin reports feed) · Auto-refreshed via Claude API",
       "sourceIds": [
         "captain-experiences-destin",
         "fishingbooker-bay",
-        "halfhitch-destin",
-        "report-aHR0cHM6Ly9jYXB0YW",
-        "report-aHR0cHM6Ly9oYWxmaG"
+        "report-aHR0cHM6Ly9jYXB0YW"
       ],
       "species": [
         "spotted_seatrout",
         "redfish",
+        "black_drum",
         "sheepshead"
       ],
       "conditions": {
-        "wind": "NE 10 mph",
-        "windDir": "NE",
-        "tide": "High tide ~7:36 PM · Low tide ~7:13 AM · Sunrise 6:11 AM",
+        "wind": "ENE 15 mph",
+        "windDir": "ENE",
+        "tide": "High tide ~8:01 PM · Low tide ~7:16 AM · Sunrise 6:12 AM",
         "tideEvents": [
           {
             "type": "H",
-            "time": "7:36 PM"
+            "time": "8:01 PM"
           },
           {
             "type": "L",
-            "time": "7:13 AM"
+            "time": "7:16 AM"
           }
         ],
-        "waterTemp": 71,
+        "waterTemp": 70,
         "sky": "Cloudy",
-        "stormChance": 9,
+        "stormChance": 8,
         "pressure": {
-          "hpa": 1025.9,
-          "inHg": 30.29,
-          "direction": "falling",
-          "changeHpa3h": -2.8
+          "hpa": 1026.4,
+          "inHg": 30.31,
+          "direction": "steady",
+          "changeHpa3h": 0.1
         }
       }
     },
@@ -354,7 +353,7 @@
       "key": "black_drum",
       "label": "Black drum",
       "current": true,
-      "reportCount": 2,
+      "reportCount": 3,
       "lastReported": "2026-11-17",
       "evidenceLevel": "current_regional_report"
     },
@@ -480,18 +479,18 @@
     },
     {
       "id": "report-aHR0cHM6Ly9jYXB0YW",
-      "label": "Choctawhatchee Bay Fishing Reports (November 2026)",
+      "label": "Choctawhatchee Bay Fishing Reports (November 2026) — CaptainExperiences",
       "url": "https://captainexperiences.com/fishing-reports/locations/regions/choctawhatchee-bay",
       "kind": "regional_report",
-      "reportDate": "2026-11-09",
+      "reportDate": "2026-11-03",
       "note": "Exact source page preserved by the daily bite-report research."
     },
     {
       "id": "report-aHR0cHM6Ly9oYWxmaG",
-      "label": "Destin Fishing Report 11-9-26",
-      "url": "https://halfhitch.com/blog/destin-fishing-reports",
+      "label": "Destin Fishing Report 7-13-26",
+      "url": "https://halfhitch.com/blog/destin-fishing-report-7-13-26",
       "kind": "regional_report",
-      "reportDate": "2026-11-09",
+      "reportDate": "2026-07-13",
       "note": "Exact source page preserved by the daily bite-report research."
     },
     {

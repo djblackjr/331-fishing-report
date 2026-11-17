@@ -5,7 +5,7 @@
     "dir": "ENE",
     "description": "ENE 15 mph"
   },
-  "weather": "Mostly Cloudy · High 63°F",
+  "weather": "Partly Sunny · High 64°F",
   "tide": "High tide ~8:01 PM · Low tide ~7:16 AM · Sunrise 6:12 AM",
   "tideEvents": [
     {
@@ -20,11 +20,11 @@
   "sunrise": "6:12 AM",
   "sunset": "4:46 PM",
   "stormWindow": "before 10AM",
-  "stormChance": 8,
+  "stormChance": 9,
   "moonPhase": "First Quarter (~58% illuminated) — moderate tidal push",
   "waterClarity": "Slightly stained",
-  "sky": "Cloudy",
-  "lastUpdated": "11/17/2026, 2:26:03 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "sky": "Bright sun",
+  "lastUpdated": "11/17/2026, 11:35:08 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
   "localBiteReport": "Reports from the past week to two weeks on Choctawhatchee Bay point to a solid fall inshore bite. The most recent FishingBooker angler report (posted approximately 7 days ago) describes a successful charter trip that included two keeper-sized redfish caught near a bridge, consistent with the fall pattern when reds stage around structure. A guide report from CaptainExperiences (posted roughly 1–2 weeks ago out of the Freeport/Destin area) notes that fishing has been productive overall, though quality fish have been a bit harder to come by, with live bait working best in the early morning and soft plastics carrying the bite through the rest of the day. Water temperature at this location is 70°F. Historically for mid-November on Choctawhatchee Bay, sheepshead and black drum begin showing up in force around bridge pilings and jetties as water cools, while speckled trout stack up in deeper bayous and creek mouths on the north and east ends of the bay — patterns consistent with what local guides and tackle shop reports have described for this time of year in recent seasons.",
   "localBiteSource": "FishingBooker (Choctawhatchee Bay reports feed), CaptainExperiences (Choctawhatchee Bay/Freeport/Destin reports feed) · Auto-refreshed via Claude API",
   "localBiteUpdated": "November 17, 2026",
@@ -41,40 +41,40 @@
     }
   ],
   "previousDay": {
-    "date": "Monday, November 16, 2026",
+    "date": "Tuesday, November 17, 2026",
     "wind": {
-      "dir": "NE",
-      "speed": 10
+      "dir": "ENE",
+      "speed": 15
     },
-    "high": 58,
-    "stormChance": 9,
-    "tide": "High tide ~7:36 PM · Low tide ~7:13 AM · Sunrise 6:11 AM",
-    "waterTemp": 71
+    "high": 63,
+    "stormChance": 8,
+    "tide": "High tide ~8:01 PM · Low tide ~7:16 AM · Sunrise 6:12 AM",
+    "waterTemp": 70
   },
   "openMeteo": [
     {
-      "high": 60,
-      "low": 50,
-      "stormChance": 23,
-      "windSpeed": 14,
-      "windDir": "NE",
-      "summary": "Heavy drizzle"
-    },
-    {
-      "high": 67,
-      "low": 52,
-      "stormChance": 20,
+      "high": 63,
+      "low": 53,
+      "stormChance": 29,
       "windSpeed": 15,
       "windDir": "NE",
       "summary": "Light drizzle"
     },
     {
-      "high": 71,
-      "low": 62,
-      "stormChance": 12,
+      "high": 69,
+      "low": 54,
+      "stormChance": 18,
       "windSpeed": 14,
       "windDir": "NE",
-      "summary": "Overcast"
+      "summary": "Heavy drizzle"
+    },
+    {
+      "high": 65,
+      "low": 60,
+      "stormChance": 15,
+      "windSpeed": 12,
+      "windDir": "NE",
+      "summary": "Light drizzle"
     }
   ],
   "forecast": [
@@ -82,16 +82,16 @@
       "day": "Tue, Nov 17",
       "dateISO": "2026-11-17",
       "label": "Today",
-      "high": 63,
+      "high": 64,
       "low": null,
       "wind": "ENE 15 mph",
       "windSpeed": 15,
       "windDir": "ENE",
-      "storms": 8,
-      "headline": "Mostly Cloudy",
-      "fishingScore": 8.2,
-      "aiCall": "Mostly cloudy. High near 63, with temperatures falling to around 60 in the afternoon. East northeast wind around 15 mph, with gusts as high as 30 mph.",
-      "emoji": "⛅",
+      "storms": 9,
+      "headline": "Partly Sunny",
+      "fishingScore": 8.1,
+      "aiCall": "Partly sunny. High near 64, with temperatures falling to around 59 in the afternoon. East northeast wind around 15 mph, with gusts as high as 30 mph.",
+      "emoji": "☀️",
       "tideEvents": [
         {
           "type": "H",
@@ -146,7 +146,7 @@
       "storms": 12,
       "headline": "Mostly Cloudy",
       "fishingScore": 8,
-      "aiCall": "Mostly cloudy, with a high near 72.",
+      "aiCall": "Mostly cloudy, with a high near 72. Northeast wind around 15 mph, with gusts as high as 30 mph.",
       "emoji": "⛅",
       "tideEvents": [
         {
@@ -164,10 +164,10 @@
   "dateISO": "2026-11-17",
   "waterTemp": 70,
   "pressure": {
-    "hpa": 1026.4,
-    "inHg": 30.31,
+    "hpa": 1027.8,
+    "inHg": 30.35,
     "direction": "steady",
-    "changeHpa3h": 0.1
+    "changeHpa3h": -0.1
   },
   "speciesSignals": [
     {
@@ -195,7 +195,7 @@
       "key": "black_drum",
       "label": "Black drum",
       "current": true,
-      "reportCount": 2,
+      "reportCount": 3,
       "lastReported": "2026-11-17"
     },
     {
