@@ -28,7 +28,7 @@
   "moonPhase": "First Quarter (~68% illuminated) — moderate tidal push",
   "waterClarity": "Slightly stained",
   "sky": "Bright sun",
-  "lastUpdated": "11/18/2026, 2:26:16 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "lastUpdated": "11/18/2026, 11:11:39 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
   "localBiteReport": "The most current readable reports for Choctawhatchee Bay are from the past 1–2 weeks. A recent angler report on FishingBooker noted two solid redfish caught by working bait under the bridge and in deep water past the bay. A guide posting on CaptainExperiences (Freeport/Destin area, approximately one week ago) noted generally good fishing with live bait early in the mornings and soft plastics throughout the day, though quality fish have been slightly slower. Half Hitch (halfhitch.com) has published a Destin report dated November 16, 2026, but its full body content was not accessible via search — however, their November seasonal forecast consistently highlights this time of year as prime for flounder, redfish, and speckled trout in the bay, with rat reds hanging around docks and bridges, trout on the flats, and sheepshead building around bridge pilings and jetties. Water temperature at the bay is 70°F as of today.",
   "localBiteSource": "FishingBooker (fishingbooker.com/reports/destination/us/choctawhatchee-bay); CaptainExperiences (captainexperiences.com/fishing-reports/locations/regions/choctawhatchee-bay); Half Hitch Destin (halfhitch.com/blog/category/destin-fishing-reports) · Auto-refreshed via Claude API",
   "localBiteUpdated": "November 18, 2026",
@@ -50,40 +50,40 @@
     }
   ],
   "previousDay": {
-    "date": "Tuesday, November 17, 2026",
+    "date": "Wednesday, November 18, 2026",
     "wind": {
       "dir": "ENE",
       "speed": 15
     },
-    "high": 64,
-    "stormChance": 9,
-    "tide": "High tide ~8:01 PM · Low tide ~7:16 AM · Sunrise 6:12 AM",
+    "high": 71,
+    "stormChance": 3,
+    "tide": "High tide ~8:08 PM · Low tide ~6:57 AM · Sunrise 6:13 AM",
     "waterTemp": 70
   },
   "openMeteo": [
     {
-      "high": 71,
-      "low": 55,
-      "stormChance": 28,
-      "windSpeed": 14,
+      "high": 72,
+      "low": 56,
+      "stormChance": 14,
+      "windSpeed": 13,
       "windDir": "NE",
-      "summary": "Drizzle"
+      "summary": "Overcast"
     },
     {
-      "high": 65,
+      "high": 70,
+      "low": 60,
+      "stormChance": 26,
+      "windSpeed": 14,
+      "windDir": "NE",
+      "summary": "Light drizzle"
+    },
+    {
+      "high": 69,
       "low": 60,
       "stormChance": 30,
-      "windSpeed": 14,
-      "windDir": "NE",
-      "summary": "Rain"
-    },
-    {
-      "high": 66,
-      "low": 63,
-      "stormChance": 17,
       "windSpeed": 12,
       "windDir": "NE",
-      "summary": "Light rain"
+      "summary": "Drizzle"
     }
   ],
   "forecast": [
@@ -129,7 +129,7 @@
       "storms": 24,
       "headline": "Slight Chance Rain Showers",
       "fishingScore": 7.5,
-      "aiCall": "A slight chance of rain showers before 4pm. Partly sunny. High near 67, with temperatures falling to around 63 in the afternoon. Northeast wind around 15 mph, with gusts as high as 30 mph. Chance of precipitation is 20%.",
+      "aiCall": "A slight chance of rain showers before 4pm. Partly sunny. High near 67, with temperatures falling to around 63 in the afternoon. Northeast wind around 15 mph, with gusts as high as 30 mph. Chance of precipitation is 20%. New rainfall amounts less than a tenth of an inch possible.",
       "emoji": "🌧️",
       "tideEvents": [
         {
@@ -155,7 +155,7 @@
       "storms": 24,
       "headline": "Slight Chance Rain Showers",
       "fishingScore": 7.5,
-      "aiCall": "A slight chance of rain showers. Mostly cloudy, with a high near 70. Chance of precipitation is 20%.",
+      "aiCall": "A slight chance of rain showers. Mostly cloudy, with a high near 70. Northeast wind 10 to 15 mph, with gusts as high as 30 mph. Chance of precipitation is 20%.",
       "emoji": "🌧️",
       "tideEvents": [
         {
@@ -173,10 +173,10 @@
   "dateISO": "2026-11-18",
   "waterTemp": 70,
   "pressure": {
-    "hpa": 1024.6,
-    "inHg": 30.26,
+    "hpa": 1022.6,
+    "inHg": 30.2,
     "direction": "falling",
-    "changeHpa3h": -1.6
+    "changeHpa3h": -3.1
   },
   "speciesSignals": [
     {
@@ -197,15 +197,15 @@
       "key": "gulf_flounder",
       "label": "Flounder",
       "current": true,
-      "reportCount": 4,
+      "reportCount": 5,
       "lastReported": "2026-11-18"
     },
     {
       "key": "black_drum",
       "label": "Black drum",
       "current": false,
-      "reportCount": 2,
-      "lastReported": "2026-11-17"
+      "reportCount": 1,
+      "lastReported": "2026-06-22"
     },
     {
       "key": "sheepshead",
