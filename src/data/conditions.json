@@ -24,7 +24,7 @@
   "moonPhase": "Waxing Gibbous (~77% illuminated) — moderate tidal push",
   "waterClarity": "Slightly stained",
   "sky": "Cloudy",
-  "lastUpdated": "11/19/2026, 2:26:07 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "lastUpdated": "11/19/2026, 11:19:07 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
   "localBiteReport": "The most recent angler reports from Choctawhatchee Bay (week of November 12–19, 2026) confirm redfish as the standout inshore species, with a charter trip this week landing a pair of solid keeper reds around bridge and dock structure. Half Hitch's current November forecast for the Destin/Choctawhatchee Bay area describes this month as prime time for flounder, redfish, and speckled trout: rat reds are holding on docks and bridges, bull reds are schooling in the pass and on the flats, and trout are working topwater lures on the grass flats. Flounder are also highlighted as a top November target, with some of the best action of the year expected in the bays. Sheepshead should be picking up around bridge pilings and jetties as water temperatures continue to cool toward the 70°F range. Note: the full text of Half Hitch's November 16, 2026 report was confirmed published but could not be fully retrieved — the November seasonal forecast on their homepage reflects current conditions and was used in its place.",
   "localBiteSource": "FishingBooker Choctawhatchee Bay reports feed (November 2026); Half Hitch Destin fishing blog / homepage November forecast · Auto-refreshed via Claude API",
   "localBiteUpdated": "November 19, 2026",
@@ -46,40 +46,40 @@
     }
   ],
   "previousDay": {
-    "date": "Wednesday, November 18, 2026",
+    "date": "Thursday, November 19, 2026",
     "wind": {
-      "dir": "ENE",
+      "dir": "NE",
       "speed": 15
     },
-    "high": 71,
-    "stormChance": 3,
-    "tide": "High tide ~8:08 PM · Low tide ~6:57 AM · Sunrise 6:13 AM",
+    "high": 69,
+    "stormChance": 24,
+    "tide": "High tide ~1:46 PM · Low tide ~6:19 AM · Sunrise 6:14 AM",
     "waterTemp": 70
   },
   "openMeteo": [
     {
-      "high": 67,
-      "low": 60,
-      "stormChance": 24,
-      "windSpeed": 14,
+      "high": 66,
+      "low": 58,
+      "stormChance": 30,
+      "windSpeed": 12,
       "windDir": "NE",
       "summary": "Light drizzle"
     },
     {
-      "high": 72,
+      "high": 70,
       "low": 60,
-      "stormChance": 8,
+      "stormChance": 13,
       "windSpeed": 13,
       "windDir": "NE",
-      "summary": "Overcast"
+      "summary": "Light drizzle"
     },
     {
-      "high": 76,
-      "low": 63,
-      "stormChance": 7,
+      "high": 75,
+      "low": 60,
+      "stormChance": 10,
       "windSpeed": 11,
       "windDir": "NE",
-      "summary": "Drizzle"
+      "summary": "Overcast"
     }
   ],
   "forecast": [
@@ -95,7 +95,7 @@
       "storms": 24,
       "headline": "Slight Chance Rain Showers",
       "fishingScore": 7.5,
-      "aiCall": "A slight chance of rain showers after 8am. Mostly cloudy. High near 69, with temperatures falling to around 64 in the afternoon. Northeast wind around 15 mph, with gusts as high as 30 mph. Chance of precipitation is 20%.",
+      "aiCall": "A slight chance of rain showers. Mostly cloudy. High near 69, with temperatures falling to around 64 in the afternoon. Northeast wind around 15 mph, with gusts as high as 30 mph. Chance of precipitation is 20%.",
       "emoji": "🌧️",
       "tideEvents": [
         {
@@ -147,7 +147,7 @@
       "storms": 7,
       "headline": "Mostly Sunny",
       "fishingScore": 8.7,
-      "aiCall": "Mostly sunny, with a high near 74.",
+      "aiCall": "Mostly sunny, with a high near 74. Northeast wind 5 to 10 mph, with gusts as high as 20 mph.",
       "emoji": "☀️",
       "tideEvents": [
         {
@@ -165,10 +165,10 @@
   "dateISO": "2026-11-19",
   "waterTemp": 70,
   "pressure": {
-    "hpa": 1022.2,
-    "inHg": 30.19,
+    "hpa": 1022.9,
+    "inHg": 30.21,
     "direction": "falling",
-    "changeHpa3h": -1.7
+    "changeHpa3h": -0.6
   },
   "speciesSignals": [
     {

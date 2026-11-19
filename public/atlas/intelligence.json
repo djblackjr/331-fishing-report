@@ -21,10 +21,10 @@
     "sky": "Cloudy",
     "stormChance": 24,
     "pressure": {
-      "hpa": 1022.2,
-      "inHg": 30.19,
+      "hpa": 1022.9,
+      "inHg": 30.21,
       "direction": "falling",
-      "changeHpa3h": -1.7
+      "changeHpa3h": -0.6
     }
   },
   "currentReport": {
@@ -62,25 +62,23 @@
       "sky": "Cloudy",
       "stormChance": 24,
       "pressure": {
-        "hpa": 1022.2,
-        "inHg": 30.19,
+        "hpa": 1022.9,
+        "inHg": 30.21,
         "direction": "falling",
-        "changeHpa3h": -1.7
+        "changeHpa3h": -0.6
       }
     }
   },
   "archivedReports": [
     {
       "kind": "archived_app_snapshot",
-      "date": "2026-11-18",
-      "displayDate": "November 18, 2026",
-      "summary": "The most current readable reports for Choctawhatchee Bay are from the past 1–2 weeks. A recent angler report on FishingBooker noted two solid redfish caught by working bait under the bridge and in deep water past the bay. A guide posting on CaptainExperiences (Freeport/Destin area, approximately one week ago) noted generally good fishing with live bait early in the mornings and soft plastics throughout the day, though quality fish have been slightly slower. Half Hitch (halfhitch.com) has published a Destin report dated November 16, 2026, but its full body content was not accessible via search — however, their November seasonal forecast consistently highlights this time of year as prime for flounder, redfish, and speckled trout in the bay, with rat reds hanging around docks and bridges, trout on the flats, and sheepshead building around bridge pilings and jetties. Water temperature at the bay is 70°F as of today.",
-      "attribution": "FishingBooker (fishingbooker.com/reports/destination/us/choctawhatchee-bay); CaptainExperiences (captainexperiences.com/fishing-reports/locations/regions/choctawhatchee-bay); Half Hitch Destin (halfhitch.com/blog/category/destin-fishing-reports) · Auto-refreshed via Claude API",
+      "date": "2026-11-19",
+      "displayDate": "November 19, 2026",
+      "summary": "The most recent angler reports from Choctawhatchee Bay (week of November 12–19, 2026) confirm redfish as the standout inshore species, with a charter trip this week landing a pair of solid keeper reds around bridge and dock structure. Half Hitch's current November forecast for the Destin/Choctawhatchee Bay area describes this month as prime time for flounder, redfish, and speckled trout: rat reds are holding on docks and bridges, bull reds are schooling in the pass and on the flats, and trout are working topwater lures on the grass flats. Flounder are also highlighted as a top November target, with some of the best action of the year expected in the bays. Sheepshead should be picking up around bridge pilings and jetties as water temperatures continue to cool toward the 70°F range. Note: the full text of Half Hitch's November 16, 2026 report was confirmed published but could not be fully retrieved — the November seasonal forecast on their homepage reflects current conditions and was used in its place.",
+      "attribution": "FishingBooker Choctawhatchee Bay reports feed (November 2026); Half Hitch Destin fishing blog / homepage November forecast · Auto-refreshed via Claude API",
       "sourceIds": [
-        "captain-experiences-destin",
         "fishingbooker-bay",
         "halfhitch-destin",
-        "report-aHR0cHM6Ly9jYXB0YW",
         "report-aHR0cHM6Ly9oYWxmaG"
       ],
       "species": [
@@ -90,31 +88,27 @@
         "sheepshead"
       ],
       "conditions": {
-        "wind": "ENE 15 mph",
-        "windDir": "ENE",
-        "tide": "High tide ~8:08 PM · Low tide ~6:57 AM · Sunrise 6:13 AM",
+        "wind": "NE 15 mph",
+        "windDir": "NE",
+        "tide": "High tide ~1:46 PM · Low tide ~6:19 AM · Sunrise 6:14 AM",
         "tideEvents": [
           {
-            "type": "H",
-            "time": "8:08 PM"
-          },
-          {
             "type": "L",
-            "time": "6:57 AM"
+            "time": "6:19 AM"
           },
           {
             "type": "H",
-            "time": "3:58 PM"
+            "time": "1:46 PM"
           }
         ],
         "waterTemp": 70,
-        "sky": "Bright sun",
-        "stormChance": 3,
+        "sky": "Cloudy",
+        "stormChance": 24,
         "pressure": {
-          "hpa": 1022.6,
-          "inHg": 30.2,
+          "hpa": 1022.2,
+          "inHg": 30.19,
           "direction": "falling",
-          "changeHpa3h": -3.1
+          "changeHpa3h": -1.7
         }
       }
     },
@@ -485,18 +479,18 @@
     },
     {
       "id": "report-aHR0cHM6Ly9oYWxmaG",
-      "label": "Destin Fishing Report 11-16-26",
-      "url": "https://halfhitch.com/blog/destin-fishing-reports",
+      "label": "November Fishing Forecast – Half Hitch (homepage)",
+      "url": "https://halfhitch.com/",
       "kind": "regional_report",
-      "reportDate": "2026-11-16",
+      "reportDate": null,
       "note": "Exact source page preserved by the daily bite-report research."
     },
     {
       "id": "report-aHR0cHM6Ly9jYXB0YW",
-      "label": "Choctawhatchee Bay Fishing Reports (November 2026)",
+      "label": "Choctawhatchee Bay Fishing Reports (August 2026)",
       "url": "https://captainexperiences.com/fishing-reports/locations/regions/choctawhatchee-bay",
       "kind": "regional_report",
-      "reportDate": "2026-11-11",
+      "reportDate": "2026-08-06",
       "note": "Exact source page preserved by the daily bite-report research."
     },
     {
