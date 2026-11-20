@@ -45,6 +45,6 @@ Context for any Claude session working in this repo — local, cloud, or phone. 
 ## Open threads
 
 - **`cron-worker/` + `wrangler.jsonc` are superseded, not active.** The Claude Code Remote Routine (see Deploy section above) is what's actually running the backstop dispatch now. These files are a working, tested-but-undeployed alternative if Danny would rather not depend on Claude's routine infrastructure — safe to deploy instead (same `wrangler login` / `wrangler secret put GITHUB_PAT` / `npm run cron:deploy` steps as before) or safe to delete if the Routine is working out. Don't treat their presence as evidence they're doing anything.
-- Dock pins at Four Mile Creek and Hogtown Bayou haven't been imagery-audited yet (the Basin and Alaqua ones were badly off).
+- All `docks` pins have now been pixel-verified against Esri imagery (Basin/Alaqua 2026-08, Four Mile Creek/Hogtown 2026-11-20). Every one of the 2026-08-13 "estimated by eye" pins had been 60–300 m off, mostly on land — see `docs/atlas.md` "Dock pin audit". Treat any future eyeballed point as wrong until checked.
 - Jolly Bay locations lack species/tide/lure/season data, so they can't become dashboard locations yet. Bunker Cove is a known-good flats spot per Danny.
 - No public boat ramp or kayak launch exists on Jolly Bay itself. This was checked by name search, GNIS, satellite imagery, and OSM tags, so don't re-research it. Only Danny's local knowledge or a field visit would change this.

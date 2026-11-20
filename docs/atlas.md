@@ -397,6 +397,26 @@ into the nearest visible channel if not. `shoreline_points` were checked
 too and are correct by design — they're meant to sit at the land/water
 edge, not in open water.
 
+## Dock pin audit (2026-11-20)
+
+The six Four Mile Creek and Hogtown Bayou `docks` pins (added 2026-08-13,
+"estimated by eye from a moderate-zoom aerial crop") were checked against
+fresh Esri World Imagery crops. None was on a dock: two were in residential
+yards/streets, one in woods, one in swamp forest, one on a marsh point and
+one on a subdivision cul-de-sac, 60–300 m from the nearest real dock. Both
+Hogtown pins had the right longitude but a latitude ~145–280 m too far
+south, and the Four Mile marina pin had the right latitude but sat ~230 m
+inland, which looks like transcription error rather than a bad read.
+
+- FM-DK-001, -003, -004 and both Hogtown pins were moved onto the actual
+  structure (pixel-verified with a crosshair crop; confidence 40 -> 55,
+  matching the Basin/Alaqua re-check) and renamed where the old name no
+  longer described the spot.
+- "Four Mile Creek dock, west bank" (id 62) was deleted: it sat ~400 m
+  from the creek in woods with no dock anywhere near it, and the west bank
+  is already covered by FM-DK-001. Per the "delete rather than re-guess"
+  rule.
+
 When adding any new Point-geometry location, verify it against a satellite
 crop before treating the coordinate as final — don't trust a chart-tile or
 GNIS point by eye alone.

@@ -146,8 +146,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -86.13802,
-          30.478005
+          -86.136823,
+          30.480564
         ]
       },
       "properties": {
@@ -155,17 +155,17 @@
         "externalId": "FM-DK-003",
         "region": "four_mile_creek",
         "name": "Four Mile Creek dock, east bank",
-        "confidence": 40,
+        "confidence": 55,
         "validationStatus": "visually_reviewed",
-        "source": "aerial_image_review: Esri World Imagery aerial review 2026-08-13",
-        "lastUpdated": "2026-08-13 17:47:17",
+        "source": "aerial_image_review: Esri World Imagery re-check 2026-11-20 (corrected from swamp forest ~60 m west of the creek and ~300 m south of this dock to the actual structure, pixel-verified against fresh tile pull)",
+        "lastUpdated": "2026-11-20 20:39:06",
         "feature_type": "dock",
         "field_verified": false,
-        "evidence": "residential dock, east bank",
-        "uncertainty": "Position estimated by eye from a moderate-zoom aerial crop, not pixel-verified or surveyed — treat as approximate, not exact.",
+        "evidence": "T-head dock on the east bank, reached by a boardwalk through the marsh",
+        "uncertainty": "Pixel-verified against a fresh Esri World Imagery crop (~0.2 m/px); within a few metres of the structure. Not surveyed or field verified.",
         "source_type": "aerial_image_review",
-        "source_reference": "Esri World Imagery aerial review 2026-08-13",
-        "review_date": "2026-08-13",
+        "source_reference": "Esri World Imagery re-check 2026-11-20",
+        "review_date": "2026-11-20",
         "navigation_use": "not_for_navigation"
       }
     },
@@ -174,8 +174,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -86.13732,
-          30.475005
+          -86.136706,
+          30.473938
         ]
       },
       "properties": {
@@ -183,17 +183,17 @@
         "externalId": "FM-DK-004",
         "region": "four_mile_creek",
         "name": "Four Mile Creek dock, lower reach",
-        "confidence": 40,
+        "confidence": 55,
         "validationStatus": "visually_reviewed",
-        "source": "aerial_image_review: Esri World Imagery aerial review 2026-08-13",
-        "lastUpdated": "2026-08-13 17:47:17",
+        "source": "aerial_image_review: Esri World Imagery re-check 2026-11-20 (corrected from a marsh point ~120 m northwest of this dock to the actual structure, pixel-verified against fresh tile pull)",
+        "lastUpdated": "2026-11-20 20:39:06",
         "feature_type": "dock",
         "field_verified": false,
-        "evidence": "residential dock near the lower creek/bay mouth",
-        "uncertainty": "Position estimated by eye from a moderate-zoom aerial crop, not pixel-verified or surveyed — treat as approximate, not exact.",
+        "evidence": "covered boathouse at the end of a pier from the east-bank house",
+        "uncertainty": "Pixel-verified against a fresh Esri World Imagery crop (~0.2 m/px); within a few metres of the structure. Not surveyed or field verified.",
         "source_type": "aerial_image_review",
-        "source_reference": "Esri World Imagery aerial review 2026-08-13",
-        "review_date": "2026-08-13",
+        "source_reference": "Esri World Imagery re-check 2026-11-20",
+        "review_date": "2026-11-20",
         "navigation_use": "not_for_navigation"
       }
     },
@@ -202,26 +202,26 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -86.14012,
-          30.484905
+          -86.137687,
+          30.485
         ]
       },
       "properties": {
         "id": 61,
         "externalId": "FM-DK-001",
         "region": "four_mile_creek",
-        "name": "Four Mile Creek dock, marina south",
-        "confidence": 40,
+        "name": "Four Mile Creek dock, west bank below marina",
+        "confidence": 55,
         "validationStatus": "visually_reviewed",
-        "source": "aerial_image_review: Esri World Imagery aerial review 2026-08-13",
-        "lastUpdated": "2026-08-13 17:47:17",
+        "source": "aerial_image_review: Esri World Imagery re-check 2026-11-20 (corrected from a residential street ~230 m inland to the actual structure, pixel-verified against fresh tile pull)",
+        "lastUpdated": "2026-11-20 20:39:06",
         "feature_type": "dock",
         "field_verified": false,
-        "evidence": "residential dock just south of Shipyard Marina",
-        "uncertainty": "Position estimated by eye from a moderate-zoom aerial crop, not pixel-verified or surveyed — treat as approximate, not exact.",
+        "evidence": "boat dock with two moored boats on the west bank, below the marina boat storage",
+        "uncertainty": "Pixel-verified against a fresh Esri World Imagery crop (~0.2 m/px); within a few metres of the structure. Not surveyed or field verified.",
         "source_type": "aerial_image_review",
-        "source_reference": "Esri World Imagery aerial review 2026-08-13",
-        "review_date": "2026-08-13",
+        "source_reference": "Esri World Imagery re-check 2026-11-20",
+        "review_date": "2026-11-20",
         "navigation_use": "not_for_navigation"
       }
     },
@@ -230,36 +230,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -86.14152,
-          30.481005
-        ]
-      },
-      "properties": {
-        "id": 62,
-        "externalId": "FM-DK-002",
-        "region": "four_mile_creek",
-        "name": "Four Mile Creek dock, west bank",
-        "confidence": 40,
-        "validationStatus": "visually_reviewed",
-        "source": "aerial_image_review: Esri World Imagery aerial review 2026-08-13",
-        "lastUpdated": "2026-08-13 17:47:17",
-        "feature_type": "dock",
-        "field_verified": false,
-        "evidence": "residential dock, west bank",
-        "uncertainty": "Position estimated by eye from a moderate-zoom aerial crop, not pixel-verified or surveyed — treat as approximate, not exact.",
-        "source_type": "aerial_image_review",
-        "source_reference": "Esri World Imagery aerial review 2026-08-13",
-        "review_date": "2026-08-13",
-        "navigation_use": "not_for_navigation"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -86.250749,
-          30.390777
+          -86.250642,
+          30.39208
         ]
       },
       "properties": {
@@ -267,17 +239,17 @@
         "externalId": "HT-DK-001",
         "region": "hogtown_bayou",
         "name": "Hogtown mouth-community dock 1",
-        "confidence": 40,
+        "confidence": 55,
         "validationStatus": "visually_reviewed",
-        "source": "aerial_image_review: Esri World Imagery aerial review 2026-08-13",
-        "lastUpdated": "2026-08-13 17:47:17",
+        "source": "aerial_image_review: Esri World Imagery re-check 2026-11-20 (corrected from a cleared lot on land ~145 m south (same longitude) to the actual structure, pixel-verified against fresh tile pull)",
+        "lastUpdated": "2026-11-20 20:39:06",
         "feature_type": "dock",
         "field_verified": false,
-        "evidence": "dock at the small community near the bayou mouth",
-        "uncertainty": "Position estimated by eye from a moderate-zoom aerial crop, not pixel-verified or surveyed — treat as approximate, not exact.",
+        "evidence": "boardwalk across the marsh ending in a small dock over the shallow grass flat",
+        "uncertainty": "Pixel-verified against a fresh Esri World Imagery crop (~0.2 m/px); within a few metres of the structure. Not surveyed or field verified.",
         "source_type": "aerial_image_review",
-        "source_reference": "Esri World Imagery aerial review 2026-08-13",
-        "review_date": "2026-08-13",
+        "source_reference": "Esri World Imagery re-check 2026-11-20",
+        "review_date": "2026-11-20",
         "navigation_use": "not_for_navigation"
       }
     },
@@ -286,8 +258,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -86.246199,
-          30.388977
+          -86.2462,
+          30.391469
         ]
       },
       "properties": {
@@ -295,17 +267,17 @@
         "externalId": "HT-DK-002",
         "region": "hogtown_bayou",
         "name": "Hogtown mouth-community dock 2",
-        "confidence": 40,
+        "confidence": 55,
         "validationStatus": "visually_reviewed",
-        "source": "aerial_image_review: Esri World Imagery aerial review 2026-08-13",
-        "lastUpdated": "2026-08-13 17:47:17",
+        "source": "aerial_image_review: Esri World Imagery re-check 2026-11-20 (corrected from a subdivision cul-de-sac ~280 m south (same longitude) to the actual structure, pixel-verified against fresh tile pull)",
+        "lastUpdated": "2026-11-20 20:39:06",
         "feature_type": "dock",
         "field_verified": false,
-        "evidence": "dock at the small community near the bayou mouth",
-        "uncertainty": "Position estimated by eye from a moderate-zoom aerial crop, not pixel-verified or surveyed — treat as approximate, not exact.",
+        "evidence": "community pier with T-head and boat slips, junction of the long access pier and the T-head",
+        "uncertainty": "Pixel-verified against a fresh Esri World Imagery crop (~0.2 m/px); within a few metres of the structure. Not surveyed or field verified.",
         "source_type": "aerial_image_review",
-        "source_reference": "Esri World Imagery aerial review 2026-08-13",
-        "review_date": "2026-08-13",
+        "source_reference": "Esri World Imagery re-check 2026-11-20",
+        "review_date": "2026-11-20",
         "navigation_use": "not_for_navigation"
       }
     }
