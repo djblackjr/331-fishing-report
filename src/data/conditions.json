@@ -5,7 +5,7 @@
     "dir": "NE",
     "description": "NE 10 to 15 mph"
   },
-  "weather": "Slight Chance Rain Showers · High 69°F",
+  "weather": "Mostly Cloudy then Slight Chance Rain Showers · High 69°F",
   "tide": "High tide ~1:29 PM · Low tide ~10:34 PM · Sunrise 6:14 AM",
   "tideEvents": [
     {
@@ -19,12 +19,12 @@
   ],
   "sunrise": "6:14 AM",
   "sunset": "4:45 PM",
-  "stormWindow": "after 8AM",
+  "stormWindow": "after 4PM",
   "stormChance": 19,
   "moonPhase": "Waxing Gibbous (~86% illuminated) — strong tidal push (spring tide)",
   "waterClarity": "Slightly stained",
   "sky": "Cloudy",
-  "lastUpdated": "11/20/2026, 2:26:08 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "lastUpdated": "11/20/2026, 10:55:21 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
   "localBiteReport": "The most recent datable catch report from the Choctawhatchee Bay area (FishingBooker, approximately mid-November 2026) confirms redfish are actively biting, with anglers landing keeper fish on guided bay trips out of the Freeport/Santa Rosa Beach area. A late-October report from Capt. Blake Nelson (Last Cast Charters) noted productive redfish sight-fishing on the Choctawhatchee Bay flats, with smaller fish (under ~23 inches) holding in guts, potholes, and shallow feeding areas; fish were feeding heavily on shrimp, tiny crabs, and worms, making bottom-oriented presentations like a Ned rig effective. Water temperature as of today (Nov 20) is 70°F. Half Hitch Destin posted their most recent weekly report on November 16, 2026, but its full bay-fishing content was not retrievable; their November seasonal forecast consistently highlights flounder, sheepshead, and redfish as top bay targets this month, with sheepshead picking up around bridges and structure as water cools.",
   "localBiteSource": "FishingBooker (Choctawhatchee Bay reports feed, Nov 2026); greatdaysoutdoors.com (Capt. Blake Nelson / Last Cast Charters, Oct 23–29 2026); Half Hitch Destin (halfhitch.com, report dated Nov 16 2026 — content not fully accessible) · Auto-refreshed via Claude API",
   "localBiteUpdated": "November 20, 2026",
@@ -46,40 +46,40 @@
     }
   ],
   "previousDay": {
-    "date": "Thursday, November 19, 2026",
+    "date": "Friday, November 20, 2026",
     "wind": {
       "dir": "NE",
       "speed": 15
     },
     "high": 69,
-    "stormChance": 24,
-    "tide": "High tide ~1:46 PM · Low tide ~6:19 AM · Sunrise 6:14 AM",
+    "stormChance": 19,
+    "tide": "High tide ~1:29 PM · Low tide ~10:34 PM · Sunrise 6:14 AM",
     "waterTemp": 70
   },
   "openMeteo": [
     {
-      "high": 69,
+      "high": 68,
       "low": 61,
-      "stormChance": 49,
-      "windSpeed": 13,
+      "stormChance": 19,
+      "windSpeed": 12,
       "windDir": "NE",
       "summary": "Overcast"
     },
     {
-      "high": 69,
-      "low": 58,
-      "stormChance": 16,
+      "high": 67,
+      "low": 60,
+      "stormChance": 18,
       "windSpeed": 10,
       "windDir": "NE",
-      "summary": "Overcast"
+      "summary": "Light drizzle"
     },
     {
-      "high": 76,
+      "high": 75,
       "low": 54,
-      "stormChance": 1,
-      "windSpeed": 4,
+      "stormChance": 2,
+      "windSpeed": 6,
       "windDir": "N",
-      "summary": "Partly cloudy"
+      "summary": "Overcast"
     }
   ],
   "forecast": [
@@ -93,9 +93,9 @@
       "windSpeed": 15,
       "windDir": "NE",
       "storms": 19,
-      "headline": "Slight Chance Rain Showers",
+      "headline": "Mostly Cloudy then Slight Chance Rain Showers",
       "fishingScore": 7.7,
-      "aiCall": "A slight chance of rain showers. Mostly cloudy. High near 69, with temperatures falling to around 65 in the afternoon. Northeast wind 10 to 15 mph, with gusts as high as 25 mph. Chance of precipitation is 20%.",
+      "aiCall": "A slight chance of rain showers after 4pm. Mostly cloudy. High near 69, with temperatures falling to around 65 in the afternoon. Northeast wind 10 to 15 mph, with gusts as high as 25 mph. Chance of precipitation is 20%.",
       "emoji": "🌧️",
       "tideEvents": [
         {
@@ -147,7 +147,7 @@
       "storms": 1,
       "headline": "Sunny",
       "fishingScore": 9,
-      "aiCall": "Sunny, with a high near 74.",
+      "aiCall": "Sunny, with a high near 74. Northwest wind 0 to 5 mph.",
       "emoji": "☀️",
       "tideEvents": [
         {
@@ -167,16 +167,16 @@
   "pressure": {
     "hpa": 1019.8,
     "inHg": 30.11,
-    "direction": "falling",
-    "changeHpa3h": -1.8
+    "direction": "steady",
+    "changeHpa3h": -0.3
   },
   "speciesSignals": [
     {
       "key": "spotted_seatrout",
       "label": "Speckled trout",
       "current": false,
-      "reportCount": 8,
-      "lastReported": "2026-11-19"
+      "reportCount": 7,
+      "lastReported": "2026-08-12"
     },
     {
       "key": "redfish",
