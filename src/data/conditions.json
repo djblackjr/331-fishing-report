@@ -5,7 +5,7 @@
     "dir": "NNE",
     "description": "NNE 10 mph"
   },
-  "weather": "Slight Chance Rain Showers then Partly Sunny · High 68°F",
+  "weather": "Chance Rain · High 68°F",
   "tide": "High tide ~1:36 PM · Low tide ~11:08 PM · Sunrise 6:15 AM",
   "tideEvents": [
     {
@@ -19,12 +19,12 @@
   ],
   "sunrise": "6:15 AM",
   "sunset": "4:45 PM",
-  "stormWindow": "after 4PM",
-  "stormChance": 15,
+  "stormWindow": "before 1PM",
+  "stormChance": 33,
   "moonPhase": "Waxing Gibbous (~92% illuminated) — strong tidal push (spring tide)",
   "waterClarity": "Slightly stained",
   "sky": "Cloudy",
-  "lastUpdated": "11/21/2026, 2:26:14 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "lastUpdated": "11/21/2026, 10:05:47 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
   "localBiteReport": "The most recent readable reports with direct Choctawhatchee Bay content are from late October through early November 2026 (roughly 2–4 weeks old), so treat this as a recent baseline rather than a same-week update. Capt. Blake Nelson of Last Cast Charters (Freeport/Destin area) reported that the redfish bite on Choctawhatchee Bay flats remained productive heading into fall, with fish in the 23-inch-and-under range holding in guts, potholes, and shallow feeding areas; cut mullet on Carolina rigs outperformed live bait on some days. The broader northwest Florida picture for the week of November 13–19 showed bull redfish continuing to hold reliably around passes and bridge structure, while trout and sheepshead were picking up as water temperatures cooled. A FishingBooker charter review from about one week ago mentioned two solid redfish caught on a Choctawhatchee Bay trip that also fished under a bridge. Water temp on the bay today is 70°F.",
   "localBiteSource": "greatdaysoutdoors.com (Northwest Florida Fishing Report, Choctawhatchee Bay / Destin coverage); fishingbooker.com Choctawhatchee Bay reports page · Auto-refreshed via Claude API",
   "localBiteUpdated": "November 21, 2026",
@@ -56,40 +56,40 @@
     }
   ],
   "previousDay": {
-    "date": "Friday, November 20, 2026",
+    "date": "Saturday, November 21, 2026",
     "wind": {
-      "dir": "NE",
-      "speed": 15
+      "dir": "NNE",
+      "speed": 10
     },
-    "high": 69,
-    "stormChance": 19,
-    "tide": "High tide ~1:29 PM · Low tide ~10:34 PM · Sunrise 6:14 AM",
+    "high": 68,
+    "stormChance": 15,
+    "tide": "High tide ~1:36 PM · Low tide ~11:08 PM · Sunrise 6:15 AM",
     "waterTemp": 70
   },
   "openMeteo": [
     {
-      "high": 68,
-      "low": 61,
-      "stormChance": 19,
-      "windSpeed": 12,
-      "windDir": "NE",
-      "summary": "Overcast"
-    },
-    {
-      "high": 67,
+      "high": 63,
       "low": 60,
-      "stormChance": 18,
+      "stormChance": 10,
       "windSpeed": 10,
       "windDir": "NE",
-      "summary": "Light drizzle"
+      "summary": "Heavy drizzle"
     },
     {
-      "high": 75,
-      "low": 54,
-      "stormChance": 2,
+      "high": 73,
+      "low": 59,
+      "stormChance": 1,
+      "windSpeed": 7,
+      "windDir": "NW",
+      "summary": "Overcast"
+    },
+    {
+      "high": 78,
+      "low": 58,
+      "stormChance": 10,
       "windSpeed": 6,
       "windDir": "N",
-      "summary": "Overcast"
+      "summary": "Light drizzle"
     }
   ],
   "forecast": [
@@ -102,10 +102,10 @@
       "wind": "NNE 10 mph",
       "windSpeed": 10,
       "windDir": "NNE",
-      "storms": 15,
-      "headline": "Slight Chance Rain Showers then Partly Sunny",
-      "fishingScore": 8.4,
-      "aiCall": "A slight chance of rain showers between 8am and 9am. Partly sunny. High near 68, with temperatures falling to around 65 in the afternoon. North northeast wind around 10 mph, with gusts as high as 20 mph. Chance of precipitation is 20%.",
+      "storms": 33,
+      "headline": "Chance Rain",
+      "fishingScore": 7.7,
+      "aiCall": "A chance of rain before 1pm. Mostly cloudy. High near 68, with temperatures falling to around 65 in the afternoon. North northeast wind around 10 mph, with gusts as high as 20 mph. Chance of precipitation is 30%. New rainfall amounts less than a tenth of an inch possible.",
       "emoji": "🌧️",
       "tideEvents": [
         {
@@ -157,7 +157,7 @@
       "storms": 3,
       "headline": "Partly Sunny",
       "fishingScore": 8.9,
-      "aiCall": "Partly sunny, with a high near 74.",
+      "aiCall": "Partly sunny, with a high near 74. West northwest wind 0 to 5 mph.",
       "emoji": "☀️",
       "tideEvents": [
         {
@@ -173,19 +173,19 @@
     }
   ],
   "dateISO": "2026-11-21",
-  "waterTemp": 70,
+  "waterTemp": 69,
   "pressure": {
-    "hpa": 1019.8,
-    "inHg": 30.11,
-    "direction": "steady",
-    "changeHpa3h": -0.3
+    "hpa": 1015.3,
+    "inHg": 29.98,
+    "direction": "rising",
+    "changeHpa3h": 0.6
   },
   "speciesSignals": [
     {
       "key": "spotted_seatrout",
       "label": "Speckled trout",
       "current": true,
-      "reportCount": 8,
+      "reportCount": 9,
       "lastReported": "2026-11-21"
     },
     {
@@ -199,8 +199,8 @@
       "key": "gulf_flounder",
       "label": "Flounder",
       "current": false,
-      "reportCount": 4,
-      "lastReported": "2026-11-20"
+      "reportCount": 3,
+      "lastReported": "2026-07-28"
     },
     {
       "key": "black_drum",
