@@ -1,25 +1,25 @@
 {
   "type": "FishingIntelligence",
   "region": "choctawhatchee_bay",
-  "generatedAt": "2026-11-20",
+  "generatedAt": "2026-11-21",
   "scopeNote": "Regional reports support timing and species activity only. They do not prove a catch, depth, bottom type, or safe navigation at a mapped Jolly Bay feature.",
   "currentConditions": {
-    "wind": "NE 10 to 15 mph",
-    "windDir": "NE",
-    "tide": "High tide ~1:29 PM · Low tide ~10:34 PM · Sunrise 6:14 AM",
+    "wind": "NNE 10 mph",
+    "windDir": "NNE",
+    "tide": "High tide ~1:36 PM · Low tide ~11:08 PM · Sunrise 6:15 AM",
     "tideEvents": [
       {
         "type": "L",
-        "time": "10:34 PM"
+        "time": "11:08 PM"
       },
       {
         "type": "H",
-        "time": "1:29 PM"
+        "time": "1:36 PM"
       }
     ],
     "waterTemp": 70,
     "sky": "Cloudy",
-    "stormChance": 19,
+    "stormChance": 15,
     "pressure": {
       "hpa": 1019.8,
       "inHg": 30.11,
@@ -29,38 +29,36 @@
   },
   "currentReport": {
     "kind": "current_regional_report",
-    "date": "2026-11-20",
-    "displayDate": "November 20, 2026",
-    "summary": "The most recent datable catch report from the Choctawhatchee Bay area (FishingBooker, approximately mid-November 2026) confirms redfish are actively biting, with anglers landing keeper fish on guided bay trips out of the Freeport/Santa Rosa Beach area. A late-October report from Capt. Blake Nelson (Last Cast Charters) noted productive redfish sight-fishing on the Choctawhatchee Bay flats, with smaller fish (under ~23 inches) holding in guts, potholes, and shallow feeding areas; fish were feeding heavily on shrimp, tiny crabs, and worms, making bottom-oriented presentations like a Ned rig effective. Water temperature as of today (Nov 20) is 70°F. Half Hitch Destin posted their most recent weekly report on November 16, 2026, but its full bay-fishing content was not retrievable; their November seasonal forecast consistently highlights flounder, sheepshead, and redfish as top bay targets this month, with sheepshead picking up around bridges and structure as water cools.",
-    "attribution": "FishingBooker (Choctawhatchee Bay reports feed, Nov 2026); greatdaysoutdoors.com (Capt. Blake Nelson / Last Cast Charters, Oct 23–29 2026); Half Hitch Destin (halfhitch.com, report dated Nov 16 2026 — content not fully accessible) · Auto-refreshed via Claude API",
+    "date": "2026-11-21",
+    "displayDate": "November 21, 2026",
+    "summary": "The most recent readable reports with direct Choctawhatchee Bay content are from late October through early November 2026 (roughly 2–4 weeks old), so treat this as a recent baseline rather than a same-week update. Capt. Blake Nelson of Last Cast Charters (Freeport/Destin area) reported that the redfish bite on Choctawhatchee Bay flats remained productive heading into fall, with fish in the 23-inch-and-under range holding in guts, potholes, and shallow feeding areas; cut mullet on Carolina rigs outperformed live bait on some days. The broader northwest Florida picture for the week of November 13–19 showed bull redfish continuing to hold reliably around passes and bridge structure, while trout and sheepshead were picking up as water temperatures cooled. A FishingBooker charter review from about one week ago mentioned two solid redfish caught on a Choctawhatchee Bay trip that also fished under a bridge. Water temp on the bay today is 70°F.",
+    "attribution": "greatdaysoutdoors.com (Northwest Florida Fishing Report, Choctawhatchee Bay / Destin coverage); fishingbooker.com Choctawhatchee Bay reports page · Auto-refreshed via Claude API",
     "sourceIds": [
       "fishingbooker-bay",
-      "halfhitch-destin",
-      "report-aHR0cHM6Ly9ncmVhdG",
-      "report-aHR0cHM6Ly9oYWxmaG"
+      "report-aHR0cHM6Ly9ncmVhdG"
     ],
     "species": [
+      "spotted_seatrout",
       "redfish",
-      "gulf_flounder",
       "sheepshead"
     ],
     "conditions": {
-      "wind": "NE 10 to 15 mph",
-      "windDir": "NE",
-      "tide": "High tide ~1:29 PM · Low tide ~10:34 PM · Sunrise 6:14 AM",
+      "wind": "NNE 10 mph",
+      "windDir": "NNE",
+      "tide": "High tide ~1:36 PM · Low tide ~11:08 PM · Sunrise 6:15 AM",
       "tideEvents": [
         {
           "type": "L",
-          "time": "10:34 PM"
+          "time": "11:08 PM"
         },
         {
           "type": "H",
-          "time": "1:29 PM"
+          "time": "1:36 PM"
         }
       ],
       "waterTemp": 70,
       "sky": "Cloudy",
-      "stormChance": 19,
+      "stormChance": 15,
       "pressure": {
         "hpa": 1019.8,
         "inHg": 30.11,
@@ -107,8 +105,8 @@
         "pressure": {
           "hpa": 1019.8,
           "inHg": 30.11,
-          "direction": "falling",
-          "changeHpa3h": -1.8
+          "direction": "steady",
+          "changeHpa3h": -0.3
         }
       }
     },
@@ -328,26 +326,26 @@
     {
       "key": "spotted_seatrout",
       "label": "Speckled trout",
-      "current": false,
-      "reportCount": 7,
-      "lastReported": "2026-08-12",
-      "evidenceLevel": "archived_regional_report"
+      "current": true,
+      "reportCount": 8,
+      "lastReported": "2026-11-21",
+      "evidenceLevel": "current_regional_report"
     },
     {
       "key": "redfish",
       "label": "Redfish",
       "current": true,
       "reportCount": 10,
-      "lastReported": "2026-11-20",
+      "lastReported": "2026-11-21",
       "evidenceLevel": "current_regional_report"
     },
     {
       "key": "gulf_flounder",
       "label": "Flounder",
-      "current": true,
-      "reportCount": 5,
+      "current": false,
+      "reportCount": 4,
       "lastReported": "2026-11-20",
-      "evidenceLevel": "current_regional_report"
+      "evidenceLevel": "archived_regional_report"
     },
     {
       "key": "black_drum",
@@ -362,7 +360,7 @@
       "label": "Sheepshead",
       "current": true,
       "reportCount": 3,
-      "lastReported": "2026-11-20",
+      "lastReported": "2026-11-21",
       "evidenceLevel": "current_regional_report"
     }
   ],
@@ -471,13 +469,6 @@
   },
   "sources": [
     {
-      "id": "fishingbooker-bay",
-      "label": "FishingBooker — Choctawhatchee Bay reports",
-      "url": "https://fishingbooker.com/reports/destination/us/choctawhatchee-bay",
-      "kind": "regional_report",
-      "note": "Dated charter and angler reports for Choctawhatchee Bay."
-    },
-    {
       "id": "report-aHR0cHM6Ly9ncmVhdG",
       "label": "Northwest Florida Fishing Report for October 23 - 29, 2026",
       "url": "https://greatdaysoutdoors.com/northwest-florida-fishing-report-for-october-23-29-2026/",
@@ -486,12 +477,11 @@
       "note": "Exact source page preserved by the daily bite-report research."
     },
     {
-      "id": "report-aHR0cHM6Ly9oYWxmaG",
-      "label": "Destin Fishing Report 11-16-26",
-      "url": "https://halfhitch.com/blog/destin-fishing-report-11-16-26",
+      "id": "fishingbooker-bay",
+      "label": "FishingBooker — Choctawhatchee Bay reports",
+      "url": "https://fishingbooker.com/reports/destination/us/choctawhatchee-bay",
       "kind": "regional_report",
-      "reportDate": "2026-11-16",
-      "note": "Exact source page preserved by the daily bite-report research."
+      "note": "Dated charter and angler reports for Choctawhatchee Bay."
     },
     {
       "id": "report-aHR0cHM6Ly9jYXB0YW",
@@ -499,6 +489,14 @@
       "url": "https://captainexperiences.com/fishing-reports/locations/regions/choctawhatchee-bay",
       "kind": "regional_report",
       "reportDate": "2026-08-06",
+      "note": "Exact source page preserved by the daily bite-report research."
+    },
+    {
+      "id": "report-aHR0cHM6Ly9oYWxmaG",
+      "label": "Destin Fishing Report 11-16-26",
+      "url": "https://halfhitch.com/blog/destin-fishing-report-11-16-26",
+      "kind": "regional_report",
+      "reportDate": "2026-11-16",
       "note": "Exact source page preserved by the daily bite-report research."
     },
     {
