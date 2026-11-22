@@ -24,7 +24,7 @@
   "moonPhase": "Full Moon (~97% illuminated) — strong tidal push (spring tide)",
   "waterClarity": "Slightly stained",
   "sky": "Bright sun",
-  "lastUpdated": "11/22/2026, 2:25:50 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "lastUpdated": "11/22/2026, 10:12:53 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
   "localBiteReport": "Reports from the past week around Choctawhatchee Bay suggest inshore action has been decent but somewhat inconsistent on quality fish. A charter review on FishingBooker dated approximately November 15 noted two keeper redfish caught by working bait under a bridge near the bay. The CaptainExperiences Choctawhatchee Bay guide feed (reported about one week ago) noted the bite has been good for numbers but slightly slower on larger fish, with live bait producing best in the early morning and soft plastics effective throughout the day — consistent with mid-November cooling patterns. Water temperature at this location is currently 69°F. As a general November pattern for the bay, sheepshead are known to pick up around bridge structure as water cools, while redfish remain available on the flats and in deeper holes, and speckled trout fishing typically stays solid. Note: the most detailed local inshore specifics from the Half Hitch Destin Fishing Report dated November 16, 2026 could not be retrieved in full — that post exists and is current, but its body content was not accessible; check halfhitch.com directly for the latest bay breakdown.",
   "localBiteSource": "FishingBooker (Choctawhatchee Bay reports feed, ~Nov 15 2026); CaptainExperiences Choctawhatchee Bay guide reports (~1 week ago); Half Hitch Destin Fishing Reports blog (11-16-26 post confirmed but body unreadable) · Auto-refreshed via Claude API",
   "localBiteUpdated": "November 22, 2026",
@@ -46,40 +46,40 @@
     }
   ],
   "previousDay": {
-    "date": "Saturday, November 21, 2026",
+    "date": "Sunday, November 22, 2026",
     "wind": {
-      "dir": "NNE",
-      "speed": 10
+      "dir": "NW",
+      "speed": 5
     },
-    "high": 68,
-    "stormChance": 33,
-    "tide": "High tide ~1:36 PM · Low tide ~11:08 PM · Sunrise 6:15 AM",
+    "high": 74,
+    "stormChance": 1,
+    "tide": "High tide ~2:00 PM · Low tide ~11:57 PM · Sunrise 6:16 AM",
     "waterTemp": 69
   },
   "openMeteo": [
     {
-      "high": 63,
-      "low": 60,
-      "stormChance": 10,
-      "windSpeed": 10,
-      "windDir": "NE",
-      "summary": "Heavy drizzle"
+      "high": 66,
+      "low": 57,
+      "stormChance": 1,
+      "windSpeed": 5,
+      "windDir": "N",
+      "summary": "Overcast"
     },
     {
-      "high": 73,
-      "low": 59,
-      "stormChance": 1,
-      "windSpeed": 7,
+      "high": 74,
+      "low": 55,
+      "stormChance": 25,
+      "windSpeed": 8,
       "windDir": "NW",
       "summary": "Overcast"
     },
     {
-      "high": 78,
-      "low": 58,
-      "stormChance": 10,
-      "windSpeed": 6,
-      "windDir": "N",
-      "summary": "Light drizzle"
+      "high": 66,
+      "low": 60,
+      "stormChance": 25,
+      "windSpeed": 10,
+      "windDir": "NE",
+      "summary": "Rain showers"
     }
   ],
   "forecast": [
@@ -147,7 +147,7 @@
       "storms": 11,
       "headline": "Partly Sunny",
       "fishingScore": 8.6,
-      "aiCall": "Partly sunny, with a high near 72.",
+      "aiCall": "Partly sunny, with a high near 72. Northeast wind 0 to 5 mph.",
       "emoji": "☀️",
       "tideEvents": [
         {
@@ -163,12 +163,12 @@
     }
   ],
   "dateISO": "2026-11-22",
-  "waterTemp": 69,
+  "waterTemp": 70,
   "pressure": {
     "hpa": 1015.3,
     "inHg": 29.98,
-    "direction": "rising",
-    "changeHpa3h": 0.6
+    "direction": "steady",
+    "changeHpa3h": 0
   },
   "speciesSignals": [
     {
