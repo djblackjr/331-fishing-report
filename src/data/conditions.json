@@ -1,11 +1,11 @@
 {
   "date": "Monday, November 23, 2026",
   "wind": {
-    "speed": 5,
-    "dir": "NNW",
-    "description": "NNW 0 to 5 mph"
+    "speed": 0,
+    "dir": "E",
+    "description": " 0 mph"
   },
-  "weather": "Patchy Fog then Mostly Cloudy · High 74°F",
+  "weather": "Mostly Cloudy · High 74°F",
   "tide": "High tide ~2:41 PM · Low tide ~12:59 AM · Sunrise 6:17 AM",
   "tideEvents": [
     {
@@ -20,11 +20,11 @@
   "sunrise": "6:17 AM",
   "sunset": "4:44 PM",
   "stormWindow": "before 8AM",
-  "stormChance": 2,
+  "stormChance": 1,
   "moonPhase": "Full Moon (~100% illuminated) — strong tidal push (spring tide)",
   "waterClarity": "Slightly stained",
   "sky": "Cloudy",
-  "lastUpdated": "11/23/2026, 2:26:24 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "lastUpdated": "11/23/2026, 2:05:52 PM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
   "localBiteReport": "Inshore fishing on Choctawhatchee Bay remains solidly in fall mode as of late November 2026, with water temperature at 69°F. Redfish continue to be the most reliable bay target, with fish holding around bridges, jetties, and East Pass on outgoing tides — a pattern that has stayed consistent since early November according to recent Destin-area charter reports. Speckled trout are an active secondary target, with quality fish in the 22–27 inch range showing up around bait concentrations on the grass flats and in deeper bayous. Sheepshead are building on dock pilings and bridge structure as cooler water moves in, making late November a classic time for that species around the Destin Harbor area. Note that flounder are currently in their fall offshore spawning migration out of the bay, and Florida's inshore flounder harvest season is closed October 15 – November 30, so flounder should be treated as catch-and-release only right now; the most recent regional report (Nov 20–26) confirms fish are actively moving offshore near Santa Rosa Beach and Navarre.",
   "localBiteSource": "FishingBooker Choctawhatchee Bay reports (Nov 2026); Great Days Outdoors Northwest Florida Fishing Report (Nov 20–26, 2026 and Nov 6–12, 2026) · Auto-refreshed via Claude API",
   "localBiteUpdated": "November 23, 2026",
@@ -46,40 +46,40 @@
     }
   ],
   "previousDay": {
-    "date": "Sunday, November 22, 2026",
+    "date": "Monday, November 23, 2026",
     "wind": {
-      "dir": "NW",
+      "dir": "NNW",
       "speed": 5
     },
     "high": 74,
-    "stormChance": 1,
-    "tide": "High tide ~2:00 PM · Low tide ~11:57 PM · Sunrise 6:16 AM",
-    "waterTemp": 70
+    "stormChance": 2,
+    "tide": "High tide ~2:41 PM · Low tide ~12:59 AM · Sunrise 6:17 AM",
+    "waterTemp": 69
   },
   "openMeteo": [
     {
-      "high": 72,
-      "low": 57,
-      "stormChance": 8,
-      "windSpeed": 6,
+      "high": 71,
+      "low": 58,
+      "stormChance": 4,
+      "windSpeed": 5,
       "windDir": "N",
       "summary": "Fog"
     },
     {
       "high": 65,
-      "low": 59,
+      "low": 58,
       "stormChance": 7,
       "windSpeed": 9,
       "windDir": "NE",
-      "summary": "Light drizzle"
+      "summary": "Overcast"
     },
     {
-      "high": 65,
-      "low": 51,
-      "stormChance": 53,
-      "windSpeed": 16,
+      "high": 67,
+      "low": 53,
+      "stormChance": 67,
+      "windSpeed": 14,
       "windDir": "NE",
-      "summary": "Rain showers"
+      "summary": "Violent rain showers"
     }
   ],
   "forecast": [
@@ -89,13 +89,13 @@
       "label": "Today",
       "high": 74,
       "low": null,
-      "wind": "NNW 0 to 5 mph",
-      "windSpeed": 5,
-      "windDir": "NNW",
-      "storms": 2,
-      "headline": "Patchy Fog then Mostly Cloudy",
-      "fishingScore": 8.9,
-      "aiCall": "Patchy fog before 8am. Mostly cloudy. High near 74, with temperatures falling to around 68 in the afternoon. North northwest wind 0 to 5 mph.",
+      "wind": " 0 mph",
+      "windSpeed": 0,
+      "windDir": "E",
+      "storms": 1,
+      "headline": "Mostly Cloudy",
+      "fishingScore": 9,
+      "aiCall": "Mostly cloudy. High near 74, with temperatures falling to around 68 in the afternoon. Northwest wind around 0 mph.",
       "emoji": "⛅",
       "tideEvents": [
         {
@@ -118,10 +118,10 @@
       "wind": "NE 5 to 10 mph",
       "windSpeed": 10,
       "windDir": "NE",
-      "storms": 13,
+      "storms": 4,
       "headline": "Mostly Sunny",
-      "fishingScore": 8.5,
-      "aiCall": "Mostly sunny. High near 72, with temperatures falling to around 68 in the afternoon. Northeast wind 5 to 10 mph.",
+      "fishingScore": 8.8,
+      "aiCall": "Mostly sunny. High near 72, with temperatures falling to around 67 in the afternoon. Northeast wind 5 to 10 mph.",
       "emoji": "☀️",
       "tideEvents": [
         {
@@ -141,14 +141,14 @@
       "label": "Wednesday",
       "high": 62,
       "low": null,
-      "wind": "ENE 15 mph",
+      "wind": "ENE 10 to 15 mph",
       "windSpeed": 15,
       "windDir": "ENE",
-      "storms": 55,
-      "headline": "Rain Showers Likely",
-      "fishingScore": 6.3,
-      "aiCall": "Rain showers likely before 3pm, then showers and thunderstorms likely. Mostly cloudy, with a high near 62. Chance of precipitation is 60%.",
-      "emoji": "🌧️",
+      "storms": 67,
+      "headline": "Mostly Cloudy then Showers And Thunderstorms Likely",
+      "fishingScore": 5.3,
+      "aiCall": "Rain showers likely between noon and 3pm, then showers and thunderstorms likely. Mostly cloudy, with a high near 62. East northeast wind 10 to 15 mph, with gusts as high as 25 mph. Chance of precipitation is 70%.",
+      "emoji": "⛈️",
       "tideEvents": [
         {
           "type": "L",
@@ -163,12 +163,12 @@
     }
   ],
   "dateISO": "2026-11-23",
-  "waterTemp": 69,
+  "waterTemp": 70,
   "pressure": {
-    "hpa": 1016.4,
-    "inHg": 30.01,
-    "direction": "steady",
-    "changeHpa3h": -0.2
+    "hpa": 1017.2,
+    "inHg": 30.04,
+    "direction": "falling",
+    "changeHpa3h": -1.6
   },
   "speciesSignals": [
     {
@@ -189,7 +189,7 @@
       "key": "gulf_flounder",
       "label": "Flounder",
       "current": true,
-      "reportCount": 4,
+      "reportCount": 5,
       "lastReported": "2026-11-23"
     },
     {
