@@ -1,9 +1,9 @@
 {
   "date": "Tuesday, November 24, 2026",
   "wind": {
-    "speed": 10,
+    "speed": 5,
     "dir": "NE",
-    "description": "NE 5 to 10 mph"
+    "description": "NE 5 mph"
   },
   "weather": "Mostly Cloudy · High 72°F",
   "tide": "High tide ~3:35 PM · Low tide ~2:07 AM · Sunrise 6:18 AM",
@@ -20,11 +20,11 @@
   "sunrise": "6:18 AM",
   "sunset": "4:44 PM",
   "stormWindow": "before 8AM",
-  "stormChance": 4,
+  "stormChance": 2,
   "moonPhase": "Full Moon (~100% illuminated) — strong tidal push (spring tide)",
   "waterClarity": "Slightly stained",
   "sky": "Cloudy",
-  "lastUpdated": "11/24/2026, 2:26:16 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "lastUpdated": "11/24/2026, 1:28:24 PM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
   "localBiteReport": "Reports from the week of November 17–18, 2026 show redfish continuing to be the most reliable inshore target in Choctawhatchee Bay, with at least two good-sized fish caught under the bridge on a recent charter out of Destin. A Freeport-based guide reported an active bite around the same period, noting overall catch rates have been decent but quality fish a bit harder to come by. Guides also note that Florida's flounder season closed at the end of October, so that target is off the table for now; sheepshead, however, are beginning to show up around bridge pilings and structure and numbers should build as November deepens into cooler water. Water temperature at this location is 70°F. Note: Half Hitch (halfhitch.com) has published Destin fishing reports dated November 9 and November 16, 2026, but the content of those posts could not be loaded — check those directly for the most granular local bay breakdown.",
   "localBiteSource": "FishingBooker Choctawhatchee Bay reports (November 2026); CaptainExperiences Choctawhatchee Bay reports (November 2026); CaptainExperiences Fort Walton Beach reports (November 2026) · Auto-refreshed via Claude API",
   "localBiteUpdated": "November 24, 2026",
@@ -56,38 +56,38 @@
     }
   ],
   "previousDay": {
-    "date": "Monday, November 23, 2026",
+    "date": "Tuesday, November 24, 2026",
     "wind": {
-      "dir": "E",
-      "speed": 0
+      "dir": "NE",
+      "speed": 10
     },
-    "high": 74,
-    "stormChance": 1,
-    "tide": "High tide ~2:41 PM · Low tide ~12:59 AM · Sunrise 6:17 AM",
+    "high": 72,
+    "stormChance": 4,
+    "tide": "High tide ~3:35 PM · Low tide ~2:07 AM · Sunrise 6:18 AM",
     "waterTemp": 70
   },
   "openMeteo": [
     {
-      "high": 69,
-      "low": 60,
-      "stormChance": 5,
-      "windSpeed": 11,
+      "high": 72,
+      "low": 61,
+      "stormChance": 2,
+      "windSpeed": 9,
       "windDir": "NE",
-      "summary": "Fog"
+      "summary": "Overcast"
     },
     {
-      "high": 62,
+      "high": 63,
       "low": 51,
-      "stormChance": 64,
-      "windSpeed": 14,
+      "stormChance": 95,
+      "windSpeed": 15,
       "windDir": "NE",
-      "summary": "Rain"
+      "summary": "Heavy rain"
     },
     {
-      "high": 67,
-      "low": 48,
-      "stormChance": 51,
-      "windSpeed": 10,
+      "high": 56,
+      "low": 44,
+      "stormChance": 5,
+      "windSpeed": 13,
       "windDir": "NW",
       "summary": "Overcast"
     }
@@ -99,13 +99,13 @@
       "label": "Today",
       "high": 72,
       "low": null,
-      "wind": "NE 5 to 10 mph",
-      "windSpeed": 10,
+      "wind": "NE 5 mph",
+      "windSpeed": 5,
       "windDir": "NE",
-      "storms": 4,
+      "storms": 2,
       "headline": "Mostly Cloudy",
-      "fishingScore": 8.8,
-      "aiCall": "Mostly cloudy. High near 72, with temperatures falling to around 67 in the afternoon. Northeast wind 5 to 10 mph.",
+      "fishingScore": 8.9,
+      "aiCall": "Mostly cloudy. High near 72, with temperatures falling to around 67 in the afternoon. Northeast wind around 5 mph.",
       "emoji": "⛅",
       "tideEvents": [
         {
@@ -123,15 +123,15 @@
       "day": "Wed, Nov 25",
       "dateISO": "2026-11-25",
       "label": "Tomorrow",
-      "high": 61,
+      "high": 57,
       "low": null,
-      "wind": "NE 15 mph",
+      "wind": "NE 10 to 15 mph",
       "windSpeed": 15,
       "windDir": "NE",
-      "storms": 64,
-      "headline": "Mostly Cloudy then Showers And Thunderstorms Likely",
-      "fishingScore": 5.4,
-      "aiCall": "A chance of rain showers between noon and 3pm, then showers and thunderstorms likely. Mostly cloudy. High near 61, with temperatures falling to around 55 in the afternoon. Northeast wind around 15 mph, with gusts as high as 25 mph. Chance of precipitation is 60%.",
+      "storms": 79,
+      "headline": "Showers And Thunderstorms",
+      "fishingScore": 4.8,
+      "aiCall": "A chance of rain showers between 10am and noon, then showers and thunderstorms. Cloudy. High near 57, with temperatures falling to around 53 in the afternoon. Northeast wind 10 to 15 mph. Chance of precipitation is 80%. New rainfall amounts between a quarter and half of an inch possible.",
       "emoji": "⛈️",
       "tideEvents": [
         {
@@ -149,15 +149,15 @@
       "day": "Thu, Nov 26",
       "dateISO": "2026-11-26",
       "label": "Thanksgiving Day",
-      "high": 58,
+      "high": 56,
       "low": null,
       "wind": "NW 10 to 15 mph",
       "windSpeed": 15,
       "windDir": "NW",
       "storms": 0,
-      "headline": "Partly Sunny",
+      "headline": "Mostly Sunny",
       "fishingScore": 8.5,
-      "aiCall": "Partly sunny, with a high near 58.",
+      "aiCall": "Mostly sunny, with a high near 56. Northwest wind 10 to 15 mph.",
       "emoji": "☀️",
       "tideEvents": [
         {
@@ -175,18 +175,18 @@
   "dateISO": "2026-11-24",
   "waterTemp": 70,
   "pressure": {
-    "hpa": 1018.1,
-    "inHg": 30.06,
-    "direction": "steady",
-    "changeHpa3h": -0.4
+    "hpa": 1017.1,
+    "inHg": 30.03,
+    "direction": "falling",
+    "changeHpa3h": -2.7
   },
   "speciesSignals": [
     {
       "key": "spotted_seatrout",
       "label": "Speckled trout",
       "current": false,
-      "reportCount": 8,
-      "lastReported": "2026-11-23"
+      "reportCount": 7,
+      "lastReported": "2026-08-12"
     },
     {
       "key": "redfish",
