@@ -21,10 +21,10 @@
     "sky": "Cloudy",
     "stormChance": 97,
     "pressure": {
-      "hpa": 1017.4,
-      "inHg": 30.04,
-      "direction": "falling",
-      "changeHpa3h": -1.4
+      "hpa": 1015.6,
+      "inHg": 29.99,
+      "direction": "steady",
+      "changeHpa3h": -0.2
     }
   },
   "currentReport": {
@@ -59,53 +59,50 @@
       "sky": "Cloudy",
       "stormChance": 97,
       "pressure": {
-        "hpa": 1017.4,
-        "inHg": 30.04,
-        "direction": "falling",
-        "changeHpa3h": -1.4
+        "hpa": 1015.6,
+        "inHg": 29.99,
+        "direction": "steady",
+        "changeHpa3h": -0.2
       }
     }
   },
   "archivedReports": [
     {
       "kind": "archived_app_snapshot",
-      "date": "2026-11-24",
-      "displayDate": "November 24, 2026",
-      "summary": "Reports from the week of November 17–18, 2026 show redfish continuing to be the most reliable inshore target in Choctawhatchee Bay, with at least two good-sized fish caught under the bridge on a recent charter out of Destin. A Freeport-based guide reported an active bite around the same period, noting overall catch rates have been decent but quality fish a bit harder to come by. Guides also note that Florida's flounder season closed at the end of October, so that target is off the table for now; sheepshead, however, are beginning to show up around bridge pilings and structure and numbers should build as November deepens into cooler water. Water temperature at this location is 70°F. Note: Half Hitch (halfhitch.com) has published Destin fishing reports dated November 9 and November 16, 2026, but the content of those posts could not be loaded — check those directly for the most granular local bay breakdown.",
-      "attribution": "FishingBooker Choctawhatchee Bay reports (November 2026); CaptainExperiences Choctawhatchee Bay reports (November 2026); CaptainExperiences Fort Walton Beach reports (November 2026) · Auto-refreshed via Claude API",
+      "date": "2026-11-25",
+      "displayDate": "November 25, 2026",
+      "summary": "Reports from the past week or two on Choctawhatchee Bay show a solid but somewhat inconsistent bite — fishing has been productive when anglers get out, though quality fish have been a bit harder to come by. Redfish remain the standout inshore target, with keeper-sized reds being caught around bridge structures and in the bay's deeper cuts; live bait has been the go-to early morning, with soft plastics working well throughout the day. Water temperature is 70°F. The most recent captainexperiences.com guide report (approximately one week ago) notes that the bay bite has been weather-dependent but good when conditions cooperate. The FishingBooker Choctawhatchee Bay feed, updated within the past week, shows anglers landing redfish around bridges and deeper bay areas on guided trips out of Destin/Freeport.",
+      "attribution": "FishingBooker.com Choctawhatchee Bay reports feed; captainexperiences.com Choctawhatchee Bay guide reports · Auto-refreshed via Claude API",
       "sourceIds": [
         "captain-experiences-destin",
         "fishingbooker-bay",
-        "report-aHR0cHM6Ly9jYXB0YW",
-        "report-aHR0cHM6Ly9oYWxmaG"
+        "report-aHR0cHM6Ly9jYXB0YW"
       ],
       "species": [
-        "redfish",
-        "gulf_flounder",
-        "sheepshead"
+        "redfish"
       ],
       "conditions": {
-        "wind": "NE 5 mph",
+        "wind": "NE 10 to 15 mph",
         "windDir": "NE",
-        "tide": "High tide ~3:35 PM · Low tide ~2:07 AM · Sunrise 6:18 AM",
+        "tide": "High tide ~4:36 PM · Low tide ~3:15 AM · Sunrise 6:19 AM",
         "tideEvents": [
           {
             "type": "L",
-            "time": "2:07 AM"
+            "time": "3:15 AM"
           },
           {
             "type": "H",
-            "time": "3:35 PM"
+            "time": "4:36 PM"
           }
         ],
         "waterTemp": 70,
         "sky": "Cloudy",
-        "stormChance": 2,
+        "stormChance": 97,
         "pressure": {
-          "hpa": 1017.1,
-          "inHg": 30.03,
+          "hpa": 1017.4,
+          "inHg": 30.04,
           "direction": "falling",
-          "changeHpa3h": -2.7
+          "changeHpa3h": -1.4
         }
       }
     },
@@ -342,8 +339,8 @@
       "key": "gulf_flounder",
       "label": "Flounder",
       "current": false,
-      "reportCount": 4,
-      "lastReported": "2026-11-24",
+      "reportCount": 3,
+      "lastReported": "2026-07-28",
       "evidenceLevel": "archived_regional_report"
     },
     {
@@ -358,8 +355,8 @@
       "key": "sheepshead",
       "label": "Sheepshead",
       "current": false,
-      "reportCount": 2,
-      "lastReported": "2026-11-24",
+      "reportCount": 1,
+      "lastReported": "2026-07-01",
       "evidenceLevel": "archived_regional_report"
     }
   ],
@@ -476,18 +473,18 @@
     },
     {
       "id": "report-aHR0cHM6Ly9jYXB0YW",
-      "label": "Fort Walton Beach Fishing Reports (November 2026)",
-      "url": "https://captainexperiences.com/fishing-reports/locations/florida/fort-walton-beach",
+      "label": "Choctawhatchee Bay Fishing Reports (November 2026)",
+      "url": "https://captainexperiences.com/fishing-reports/locations/regions/choctawhatchee-bay",
       "kind": "regional_report",
-      "reportDate": null,
+      "reportDate": "2026-11-18",
       "note": "Exact source page preserved by the daily bite-report research."
     },
     {
       "id": "report-aHR0cHM6Ly9oYWxmaG",
-      "label": "Destin Fishing Report 11-9-26 (content not loaded — visit directly)",
-      "url": "https://halfhitch.com/blog/destin-fishing-report-11-9-26",
+      "label": "Destin Fishing Report 7-13-26",
+      "url": "https://halfhitch.com/blog/destin-fishing-report-7-13-26",
       "kind": "regional_report",
-      "reportDate": "2026-11-09",
+      "reportDate": "2026-07-13",
       "note": "Exact source page preserved by the daily bite-report research."
     },
     {

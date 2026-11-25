@@ -24,7 +24,7 @@
   "moonPhase": "Full Moon (~98% illuminated) — strong tidal push (spring tide)",
   "waterClarity": "Slightly stained",
   "sky": "Cloudy",
-  "lastUpdated": "11/25/2026, 2:25:50 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "lastUpdated": "11/25/2026, 12:36:59 PM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
   "localBiteReport": "Reports from the past week or two on Choctawhatchee Bay show a solid but somewhat inconsistent bite — fishing has been productive when anglers get out, though quality fish have been a bit harder to come by. Redfish remain the standout inshore target, with keeper-sized reds being caught around bridge structures and in the bay's deeper cuts; live bait has been the go-to early morning, with soft plastics working well throughout the day. Water temperature is 70°F. The most recent captainexperiences.com guide report (approximately one week ago) notes that the bay bite has been weather-dependent but good when conditions cooperate. The FishingBooker Choctawhatchee Bay feed, updated within the past week, shows anglers landing redfish around bridges and deeper bay areas on guided trips out of Destin/Freeport.",
   "localBiteSource": "FishingBooker.com Choctawhatchee Bay reports feed; captainexperiences.com Choctawhatchee Bay guide reports · Auto-refreshed via Claude API",
   "localBiteUpdated": "November 25, 2026",
@@ -41,38 +41,38 @@
     }
   ],
   "previousDay": {
-    "date": "Tuesday, November 24, 2026",
+    "date": "Wednesday, November 25, 2026",
     "wind": {
       "dir": "NE",
-      "speed": 5
+      "speed": 15
     },
-    "high": 72,
-    "stormChance": 2,
-    "tide": "High tide ~3:35 PM · Low tide ~2:07 AM · Sunrise 6:18 AM",
+    "high": 59,
+    "stormChance": 97,
+    "tide": "High tide ~4:36 PM · Low tide ~3:15 AM · Sunrise 6:19 AM",
     "waterTemp": 70
   },
   "openMeteo": [
     {
-      "high": 62,
-      "low": 52,
-      "stormChance": 86,
-      "windSpeed": 14,
+      "high": 63,
+      "low": 51,
+      "stormChance": 96,
+      "windSpeed": 16,
       "windDir": "NE",
       "summary": "Rain"
     },
     {
-      "high": 53,
-      "low": 44,
-      "stormChance": 7,
-      "windSpeed": 15,
+      "high": 52,
+      "low": 43,
+      "stormChance": 1,
+      "windSpeed": 14,
       "windDir": "W",
       "summary": "Overcast"
     },
     {
-      "high": 58,
+      "high": 59,
       "low": 40,
       "stormChance": 0,
-      "windSpeed": 8,
+      "windSpeed": 12,
       "windDir": "W",
       "summary": "Overcast"
     }
@@ -90,7 +90,7 @@
       "storms": 97,
       "headline": "Rain Showers",
       "fishingScore": 4.6,
-      "aiCall": "Rain showers before 3pm, then showers and thunderstorms. Mostly cloudy. High near 59, with temperatures falling to around 54 in the afternoon. Northeast wind 10 to 15 mph. Chance of precipitation is 100%. New rainfall amounts between a quarter and half of an inch possible.",
+      "aiCall": "Rain showers. Cloudy. High near 59, with temperatures falling to around 53 in the afternoon. Northeast wind 10 to 15 mph, with gusts as high as 25 mph. Chance of precipitation is 100%. New rainfall amounts between a tenth and quarter of an inch possible.",
       "emoji": "🌧️",
       "tideEvents": [
         {
@@ -113,10 +113,10 @@
       "wind": "WNW 10 to 15 mph",
       "windSpeed": 15,
       "windDir": "WNW",
-      "storms": 4,
+      "storms": 0,
       "headline": "Partly Sunny",
-      "fishingScore": 8.3,
-      "aiCall": "Partly sunny. High near 55, with temperatures falling to around 49 in the afternoon. West northwest wind 10 to 15 mph.",
+      "fishingScore": 8.5,
+      "aiCall": "Partly sunny. High near 55, with temperatures falling to around 51 in the afternoon. West northwest wind 10 to 15 mph, with gusts as high as 25 mph.",
       "emoji": "☀️",
       "tideEvents": [
         {
@@ -142,7 +142,7 @@
       "storms": 0,
       "headline": "Partly Sunny",
       "fishingScore": 9,
-      "aiCall": "Partly sunny, with a high near 54.",
+      "aiCall": "Partly sunny, with a high near 54. West northwest wind 5 to 10 mph.",
       "emoji": "☀️",
       "tideEvents": [
         {
@@ -156,10 +156,10 @@
   "dateISO": "2026-11-25",
   "waterTemp": 70,
   "pressure": {
-    "hpa": 1017.4,
-    "inHg": 30.04,
-    "direction": "falling",
-    "changeHpa3h": -1.4
+    "hpa": 1015.6,
+    "inHg": 29.99,
+    "direction": "steady",
+    "changeHpa3h": -0.2
   },
   "speciesSignals": [
     {
@@ -180,8 +180,8 @@
       "key": "gulf_flounder",
       "label": "Flounder",
       "current": false,
-      "reportCount": 4,
-      "lastReported": "2026-11-24"
+      "reportCount": 3,
+      "lastReported": "2026-07-28"
     },
     {
       "key": "black_drum",
@@ -194,8 +194,8 @@
       "key": "sheepshead",
       "label": "Sheepshead",
       "current": false,
-      "reportCount": 2,
-      "lastReported": "2026-11-24"
+      "reportCount": 1,
+      "lastReported": "2026-07-01"
     }
   ],
   "solunar": {
