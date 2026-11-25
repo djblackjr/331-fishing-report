@@ -1,33 +1,33 @@
 {
-  "date": "Tuesday, November 24, 2026",
+  "date": "Wednesday, November 25, 2026",
   "wind": {
-    "speed": 5,
+    "speed": 15,
     "dir": "NE",
-    "description": "NE 5 mph"
+    "description": "NE 10 to 15 mph"
   },
-  "weather": "Mostly Cloudy · High 72°F",
-  "tide": "High tide ~3:35 PM · Low tide ~2:07 AM · Sunrise 6:18 AM",
+  "weather": "Rain Showers · High 59°F",
+  "tide": "High tide ~4:36 PM · Low tide ~3:15 AM · Sunrise 6:19 AM",
   "tideEvents": [
     {
       "type": "L",
-      "time": "2:07 AM"
+      "time": "3:15 AM"
     },
     {
       "type": "H",
-      "time": "3:35 PM"
+      "time": "4:36 PM"
     }
   ],
-  "sunrise": "6:18 AM",
+  "sunrise": "6:19 AM",
   "sunset": "4:44 PM",
-  "stormWindow": "before 8AM",
-  "stormChance": 2,
-  "moonPhase": "Full Moon (~100% illuminated) — strong tidal push (spring tide)",
+  "stormWindow": "before 3PM",
+  "stormChance": 97,
+  "moonPhase": "Full Moon (~98% illuminated) — strong tidal push (spring tide)",
   "waterClarity": "Slightly stained",
   "sky": "Cloudy",
-  "lastUpdated": "11/24/2026, 1:28:24 PM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
-  "localBiteReport": "Reports from the week of November 17–18, 2026 show redfish continuing to be the most reliable inshore target in Choctawhatchee Bay, with at least two good-sized fish caught under the bridge on a recent charter out of Destin. A Freeport-based guide reported an active bite around the same period, noting overall catch rates have been decent but quality fish a bit harder to come by. Guides also note that Florida's flounder season closed at the end of October, so that target is off the table for now; sheepshead, however, are beginning to show up around bridge pilings and structure and numbers should build as November deepens into cooler water. Water temperature at this location is 70°F. Note: Half Hitch (halfhitch.com) has published Destin fishing reports dated November 9 and November 16, 2026, but the content of those posts could not be loaded — check those directly for the most granular local bay breakdown.",
-  "localBiteSource": "FishingBooker Choctawhatchee Bay reports (November 2026); CaptainExperiences Choctawhatchee Bay reports (November 2026); CaptainExperiences Fort Walton Beach reports (November 2026) · Auto-refreshed via Claude API",
-  "localBiteUpdated": "November 24, 2026",
+  "lastUpdated": "11/25/2026, 2:25:50 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "localBiteReport": "Reports from the past week or two on Choctawhatchee Bay show a solid but somewhat inconsistent bite — fishing has been productive when anglers get out, though quality fish have been a bit harder to come by. Redfish remain the standout inshore target, with keeper-sized reds being caught around bridge structures and in the bay's deeper cuts; live bait has been the go-to early morning, with soft plastics working well throughout the day. Water temperature is 70°F. The most recent captainexperiences.com guide report (approximately one week ago) notes that the bay bite has been weather-dependent but good when conditions cooperate. The FishingBooker Choctawhatchee Bay feed, updated within the past week, shows anglers landing redfish around bridges and deeper bay areas on guided trips out of Destin/Freeport.",
+  "localBiteSource": "FishingBooker.com Choctawhatchee Bay reports feed; captainexperiences.com Choctawhatchee Bay guide reports · Auto-refreshed via Claude API",
+  "localBiteUpdated": "November 25, 2026",
   "localBiteEvidence": [
     {
       "title": "Daily Choctawhatchee Bay Fishing Reports (November 2026)",
@@ -37,102 +37,61 @@
     {
       "title": "Choctawhatchee Bay Fishing Reports (November 2026)",
       "url": "https://captainexperiences.com/fishing-reports/locations/regions/choctawhatchee-bay",
-      "reportDate": "2026-11-17"
-    },
-    {
-      "title": "Fort Walton Beach Fishing Reports (November 2026)",
-      "url": "https://captainexperiences.com/fishing-reports/locations/florida/fort-walton-beach",
-      "reportDate": null
-    },
-    {
-      "title": "Destin Fishing Report 11-16-26 (content not loaded — visit directly)",
-      "url": "https://halfhitch.com/blog/destin-fishing-report-11-16-26",
-      "reportDate": "2026-11-16"
-    },
-    {
-      "title": "Destin Fishing Report 11-9-26 (content not loaded — visit directly)",
-      "url": "https://halfhitch.com/blog/destin-fishing-report-11-9-26",
-      "reportDate": "2026-11-09"
+      "reportDate": "2026-11-18"
     }
   ],
   "previousDay": {
     "date": "Tuesday, November 24, 2026",
     "wind": {
       "dir": "NE",
-      "speed": 10
+      "speed": 5
     },
     "high": 72,
-    "stormChance": 4,
+    "stormChance": 2,
     "tide": "High tide ~3:35 PM · Low tide ~2:07 AM · Sunrise 6:18 AM",
     "waterTemp": 70
   },
   "openMeteo": [
     {
-      "high": 72,
-      "low": 61,
-      "stormChance": 2,
-      "windSpeed": 9,
+      "high": 62,
+      "low": 52,
+      "stormChance": 86,
+      "windSpeed": 14,
       "windDir": "NE",
+      "summary": "Rain"
+    },
+    {
+      "high": 53,
+      "low": 44,
+      "stormChance": 7,
+      "windSpeed": 15,
+      "windDir": "W",
       "summary": "Overcast"
     },
     {
-      "high": 63,
-      "low": 51,
-      "stormChance": 95,
-      "windSpeed": 15,
-      "windDir": "NE",
-      "summary": "Heavy rain"
-    },
-    {
-      "high": 56,
-      "low": 44,
-      "stormChance": 5,
-      "windSpeed": 13,
-      "windDir": "NW",
+      "high": 58,
+      "low": 40,
+      "stormChance": 0,
+      "windSpeed": 8,
+      "windDir": "W",
       "summary": "Overcast"
     }
   ],
   "forecast": [
     {
-      "day": "Tue, Nov 24",
-      "dateISO": "2026-11-24",
-      "label": "Today",
-      "high": 72,
-      "low": null,
-      "wind": "NE 5 mph",
-      "windSpeed": 5,
-      "windDir": "NE",
-      "storms": 2,
-      "headline": "Mostly Cloudy",
-      "fishingScore": 8.9,
-      "aiCall": "Mostly cloudy. High near 72, with temperatures falling to around 67 in the afternoon. Northeast wind around 5 mph.",
-      "emoji": "⛅",
-      "tideEvents": [
-        {
-          "type": "L",
-          "time": "2:07 AM"
-        },
-        {
-          "type": "H",
-          "time": "3:35 PM"
-        }
-      ],
-      "moonPhase": "Full Moon (~100% illuminated) — strong tidal push (spring tide)"
-    },
-    {
       "day": "Wed, Nov 25",
       "dateISO": "2026-11-25",
-      "label": "Tomorrow",
-      "high": 57,
+      "label": "Today",
+      "high": 59,
       "low": null,
       "wind": "NE 10 to 15 mph",
       "windSpeed": 15,
       "windDir": "NE",
-      "storms": 79,
-      "headline": "Showers And Thunderstorms",
-      "fishingScore": 4.8,
-      "aiCall": "A chance of rain showers between 10am and noon, then showers and thunderstorms. Cloudy. High near 57, with temperatures falling to around 53 in the afternoon. Northeast wind 10 to 15 mph. Chance of precipitation is 80%. New rainfall amounts between a quarter and half of an inch possible.",
-      "emoji": "⛈️",
+      "storms": 97,
+      "headline": "Rain Showers",
+      "fishingScore": 4.6,
+      "aiCall": "Rain showers before 3pm, then showers and thunderstorms. Mostly cloudy. High near 59, with temperatures falling to around 54 in the afternoon. Northeast wind 10 to 15 mph. Chance of precipitation is 100%. New rainfall amounts between a quarter and half of an inch possible.",
+      "emoji": "🌧️",
       "tideEvents": [
         {
           "type": "L",
@@ -148,16 +107,16 @@
     {
       "day": "Thu, Nov 26",
       "dateISO": "2026-11-26",
-      "label": "Thanksgiving Day",
-      "high": 56,
+      "label": "Tomorrow",
+      "high": 55,
       "low": null,
-      "wind": "NW 10 to 15 mph",
+      "wind": "WNW 10 to 15 mph",
       "windSpeed": 15,
-      "windDir": "NW",
-      "storms": 0,
-      "headline": "Mostly Sunny",
-      "fishingScore": 8.5,
-      "aiCall": "Mostly sunny, with a high near 56. Northwest wind 10 to 15 mph.",
+      "windDir": "WNW",
+      "storms": 4,
+      "headline": "Partly Sunny",
+      "fishingScore": 8.3,
+      "aiCall": "Partly sunny. High near 55, with temperatures falling to around 49 in the afternoon. West northwest wind 10 to 15 mph.",
       "emoji": "☀️",
       "tideEvents": [
         {
@@ -170,15 +129,37 @@
         }
       ],
       "moonPhase": "Waning Gibbous (~94% illuminated) — strong tidal push (spring tide)"
+    },
+    {
+      "day": "Fri, Nov 27",
+      "dateISO": "2026-11-27",
+      "label": "Friday",
+      "high": 54,
+      "low": null,
+      "wind": "WNW 5 to 10 mph",
+      "windSpeed": 10,
+      "windDir": "WNW",
+      "storms": 0,
+      "headline": "Partly Sunny",
+      "fishingScore": 9,
+      "aiCall": "Partly sunny, with a high near 54.",
+      "emoji": "☀️",
+      "tideEvents": [
+        {
+          "type": "L",
+          "time": "5:16 AM"
+        }
+      ],
+      "moonPhase": "Waning Gibbous (~88% illuminated) — strong tidal push (spring tide)"
     }
   ],
-  "dateISO": "2026-11-24",
+  "dateISO": "2026-11-25",
   "waterTemp": 70,
   "pressure": {
-    "hpa": 1017.1,
-    "inHg": 30.03,
+    "hpa": 1017.4,
+    "inHg": 30.04,
     "direction": "falling",
-    "changeHpa3h": -2.7
+    "changeHpa3h": -1.4
   },
   "speciesSignals": [
     {
@@ -193,13 +174,13 @@
       "label": "Redfish",
       "current": true,
       "reportCount": 10,
-      "lastReported": "2026-11-24"
+      "lastReported": "2026-11-25"
     },
     {
       "key": "gulf_flounder",
       "label": "Flounder",
-      "current": true,
-      "reportCount": 5,
+      "current": false,
+      "reportCount": 4,
       "lastReported": "2026-11-24"
     },
     {
@@ -212,29 +193,34 @@
     {
       "key": "sheepshead",
       "label": "Sheepshead",
-      "current": true,
-      "reportCount": 3,
+      "current": false,
+      "reportCount": 2,
       "lastReported": "2026-11-24"
     }
   ],
   "solunar": {
     "majors": [
       {
+        "type": "overhead",
+        "peak": "12:05 AM",
+        "window": "11:05 PM–1:05 AM"
+      },
+      {
         "type": "underfoot",
-        "peak": "11:30 AM",
-        "window": "10:30 AM–12:30 PM"
+        "peak": "12:40 PM",
+        "window": "11:40 AM–1:40 PM"
       }
     ],
     "minors": [
       {
         "type": "moonset",
-        "peak": "6:25 AM",
-        "window": "5:55 AM–6:55 AM"
+        "peak": "7:35 AM",
+        "window": "7:05 AM–8:05 AM"
       },
       {
         "type": "moonrise",
-        "peak": "4:45 PM",
-        "window": "4:15 PM–5:15 PM"
+        "peak": "5:45 PM",
+        "window": "5:15 PM–6:15 PM"
       }
     ]
   }
