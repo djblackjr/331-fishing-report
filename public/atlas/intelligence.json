@@ -1,23 +1,19 @@
 {
   "type": "FishingIntelligence",
   "region": "choctawhatchee_bay",
-  "generatedAt": "2026-11-26",
+  "generatedAt": "2026-11-27",
   "scopeNote": "Regional reports support timing and species activity only. They do not prove a catch, depth, bottom type, or safe navigation at a mapped Jolly Bay feature.",
   "currentConditions": {
-    "wind": "WNW 10 to 15 mph",
-    "windDir": "WNW",
-    "tide": "High tide ~5:37 PM · Low tide ~4:18 AM · Sunrise 6:19 AM",
+    "wind": "W 5 to 10 mph",
+    "windDir": "W",
+    "tide": "High tide ~n/a · Low tide ~5:16 AM · Sunrise 6:20 AM",
     "tideEvents": [
       {
         "type": "L",
-        "time": "4:18 AM"
-      },
-      {
-        "type": "H",
-        "time": "5:37 PM"
+        "time": "5:16 AM"
       }
     ],
-    "waterTemp": 69,
+    "waterTemp": 68,
     "sky": "Bright sun",
     "stormChance": 0,
     "pressure": {
@@ -29,35 +25,29 @@
   },
   "currentReport": {
     "kind": "current_regional_report",
-    "date": "2026-11-26",
-    "displayDate": "November 26, 2026",
-    "summary": "The most recent angler-reported catch from Choctawhatchee Bay (approximately one week ago, around November 19) logged two solid redfish during a half-day bay trip running from the harbor out through East Pass and under the bridge — a productive late-fall pattern consistent with this time of year. With water temps at 69°F, November historically delivers some of the bay's best inshore action: redfish are schooled up on docks, bridges, and grass flat edges, speckled trout are active on the flats and in the bayous on the north and east end of the bay, flounder are in the tail end of their fall run near the pass and Mid-Bay Bridge, and sheepshead are starting to show in numbers around bridge pilings and jetties as water cools. Live shrimp under a popping cork and soft plastics on light jigheads remain the go-to bay presentations.",
-    "attribution": "FishingBooker Choctawhatchee Bay daily reports (most recent ~Nov 19, 2026); Half Hitch Destin Fishing Reports category page (most recent post dated 11-16-26, body content not accessible via search) · Auto-refreshed via Claude API",
+    "date": "2026-11-27",
+    "displayDate": "November 27, 2026",
+    "summary": "As of late November 2026, Choctawhatchee Bay inshore fishing has been productive, with redfish and speckled trout leading the action. Redfish are showing well around bait schools, along shorelines, and near creek and river mouths as bait migrates inward; finding bait concentrations has been the key to locating feeding fish. Speckled trout are becoming an increasingly strong target as water temperatures cool (68°F as of today), with fish moving toward deeper bayou holes, creek mouths, and transitions between shallow flats and deeper water. At least one recent charter also landed a pair of solid redfish while working bridge structure in the bay. Northeast winds and tidal movement have been playing a role in bite timing and location selection — adjusting to both has been important this week.",
+    "attribution": "FishingBooker Choctawhatchee Bay reports; FishingBooker Florida statewide feed (Choctawhatchee Bay entry) · Auto-refreshed via Claude API",
     "sourceIds": [
       "fishingbooker-bay",
-      "halfhitch-destin"
+      "report-aHR0cHM6Ly9maXNoaW"
     ],
     "species": [
       "spotted_seatrout",
-      "redfish",
-      "gulf_flounder",
-      "sheepshead"
+      "redfish"
     ],
     "conditions": {
-      "wind": "WNW 10 to 15 mph",
-      "windDir": "WNW",
-      "tide": "High tide ~5:37 PM · Low tide ~4:18 AM · Sunrise 6:19 AM",
+      "wind": "W 5 to 10 mph",
+      "windDir": "W",
+      "tide": "High tide ~n/a · Low tide ~5:16 AM · Sunrise 6:20 AM",
       "tideEvents": [
         {
           "type": "L",
-          "time": "4:18 AM"
-        },
-        {
-          "type": "H",
-          "time": "5:37 PM"
+          "time": "5:16 AM"
         }
       ],
-      "waterTemp": 69,
+      "waterTemp": 68,
       "sky": "Bright sun",
       "stormChance": 0,
       "pressure": {
@@ -103,10 +93,10 @@
         "sky": "Bright sun",
         "stormChance": 0,
         "pressure": {
-          "hpa": 1015.6,
-          "inHg": 29.99,
-          "direction": "steady",
-          "changeHpa3h": -0.2
+          "hpa": 1014.8,
+          "inHg": 29.97,
+          "direction": "rising",
+          "changeHpa3h": 0.6
         }
       }
     },
@@ -328,7 +318,7 @@
       "label": "Speckled trout",
       "current": true,
       "reportCount": 9,
-      "lastReported": "2026-11-26",
+      "lastReported": "2026-11-27",
       "evidenceLevel": "current_regional_report"
     },
     {
@@ -336,16 +326,16 @@
       "label": "Redfish",
       "current": true,
       "reportCount": 10,
-      "lastReported": "2026-11-26",
+      "lastReported": "2026-11-27",
       "evidenceLevel": "current_regional_report"
     },
     {
       "key": "gulf_flounder",
       "label": "Flounder",
-      "current": true,
-      "reportCount": 5,
+      "current": false,
+      "reportCount": 4,
       "lastReported": "2026-11-26",
-      "evidenceLevel": "current_regional_report"
+      "evidenceLevel": "archived_regional_report"
     },
     {
       "key": "black_drum",
@@ -358,10 +348,10 @@
     {
       "key": "sheepshead",
       "label": "Sheepshead",
-      "current": true,
-      "reportCount": 3,
+      "current": false,
+      "reportCount": 2,
       "lastReported": "2026-11-26",
-      "evidenceLevel": "current_regional_report"
+      "evidenceLevel": "archived_regional_report"
     }
   ],
   "profiles": {
@@ -476,11 +466,12 @@
       "note": "Dated charter and angler reports for Choctawhatchee Bay."
     },
     {
-      "id": "halfhitch-destin",
-      "label": "Half Hitch — Destin fishing reports",
-      "url": "https://halfhitch.com/blog/category/destin-fishing-reports",
+      "id": "report-aHR0cHM6Ly9maXNoaW",
+      "label": "Daily Florida Fishing Reports — Redfish & Speckled Trout in Bay (Choctawhatchee Bay)",
+      "url": "https://fishingbooker.com/reports/destination/us/FL",
       "kind": "regional_report",
-      "note": "Dated reports from a local Destin tackle shop."
+      "reportDate": "2026-11-26",
+      "note": "Exact source page preserved by the daily bite-report research."
     },
     {
       "id": "report-aHR0cHM6Ly9jYXB0YW",
@@ -497,6 +488,13 @@
       "kind": "regional_report",
       "reportDate": "2026-07-13",
       "note": "Exact source page preserved by the daily bite-report research."
+    },
+    {
+      "id": "halfhitch-destin",
+      "label": "Half Hitch — Destin fishing reports",
+      "url": "https://halfhitch.com/blog/category/destin-fishing-reports",
+      "kind": "regional_report",
+      "note": "Dated reports from a local Destin tackle shop."
     },
     {
       "id": "captain-experiences-destin",
