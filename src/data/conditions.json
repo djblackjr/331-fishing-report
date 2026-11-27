@@ -20,7 +20,7 @@
   "moonPhase": "Waning Gibbous (~88% illuminated) — strong tidal push (spring tide)",
   "waterClarity": "Slightly stained",
   "sky": "Bright sun",
-  "lastUpdated": "11/27/2026, 2:27:18 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "lastUpdated": "11/27/2026, 12:07:42 PM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
   "localBiteReport": "As of late November 2026, Choctawhatchee Bay inshore fishing has been productive, with redfish and speckled trout leading the action. Redfish are showing well around bait schools, along shorelines, and near creek and river mouths as bait migrates inward; finding bait concentrations has been the key to locating feeding fish. Speckled trout are becoming an increasingly strong target as water temperatures cool (68°F as of today), with fish moving toward deeper bayou holes, creek mouths, and transitions between shallow flats and deeper water. At least one recent charter also landed a pair of solid redfish while working bridge structure in the bay. Northeast winds and tidal movement have been playing a role in bite timing and location selection — adjusting to both has been important this week.",
   "localBiteSource": "FishingBooker Choctawhatchee Bay reports; FishingBooker Florida statewide feed (Choctawhatchee Bay entry) · Auto-refreshed via Claude API",
   "localBiteUpdated": "November 27, 2026",
@@ -37,40 +37,40 @@
     }
   ],
   "previousDay": {
-    "date": "Thursday, November 26, 2026",
+    "date": "Friday, November 27, 2026",
     "wind": {
-      "dir": "WNW",
-      "speed": 15
+      "dir": "W",
+      "speed": 10
     },
-    "high": 54,
+    "high": 57,
     "stormChance": 0,
-    "tide": "High tide ~5:37 PM · Low tide ~4:18 AM · Sunrise 6:19 AM",
-    "waterTemp": 69
+    "tide": "High tide ~n/a · Low tide ~5:16 AM · Sunrise 6:20 AM",
+    "waterTemp": 68
   },
   "openMeteo": [
     {
-      "high": 51,
-      "low": 42,
-      "stormChance": 1,
-      "windSpeed": 12,
-      "windDir": "NW",
-      "summary": "Overcast"
-    },
-    {
-      "high": 56,
-      "low": 41,
+      "high": 57,
+      "low": 40,
       "stormChance": 0,
       "windSpeed": 10,
       "windDir": "W",
       "summary": "Overcast"
     },
     {
-      "high": 64,
+      "high": 65,
       "low": 44,
-      "stormChance": 0,
-      "windSpeed": 6,
+      "stormChance": 1,
+      "windSpeed": 8,
       "windDir": "SW",
       "summary": "Overcast"
+    },
+    {
+      "high": 75,
+      "low": 52,
+      "stormChance": 77,
+      "windSpeed": 17,
+      "windDir": "S",
+      "summary": "Violent rain showers"
     }
   ],
   "forecast": [
@@ -134,7 +134,7 @@
       "storms": 65,
       "headline": "Rain Showers Likely",
       "fishingScore": 4.9,
-      "aiCall": "Rain showers likely. Mostly cloudy, with a high near 71. Chance of precipitation is 70%.",
+      "aiCall": "Rain showers likely. Mostly cloudy, with a high near 71. South southwest wind 5 to 20 mph, with gusts as high as 35 mph. Chance of precipitation is 70%.",
       "emoji": "🌧️",
       "tideEvents": [
         {
@@ -150,12 +150,12 @@
     }
   ],
   "dateISO": "2026-11-27",
-  "waterTemp": 68,
+  "waterTemp": 67,
   "pressure": {
-    "hpa": 1014.8,
-    "inHg": 29.97,
-    "direction": "rising",
-    "changeHpa3h": 0.6
+    "hpa": 1018.5,
+    "inHg": 30.08,
+    "direction": "falling",
+    "changeHpa3h": -2.6
   },
   "speciesSignals": [
     {
@@ -176,8 +176,8 @@
       "key": "gulf_flounder",
       "label": "Flounder",
       "current": false,
-      "reportCount": 4,
-      "lastReported": "2026-11-26"
+      "reportCount": 3,
+      "lastReported": "2026-07-28"
     },
     {
       "key": "black_drum",
@@ -190,8 +190,8 @@
       "key": "sheepshead",
       "label": "Sheepshead",
       "current": false,
-      "reportCount": 2,
-      "lastReported": "2026-11-26"
+      "reportCount": 1,
+      "lastReported": "2026-07-01"
     }
   ],
   "solunar": {
