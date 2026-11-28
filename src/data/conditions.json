@@ -1,39 +1,48 @@
 {
-  "date": "Friday, November 27, 2026",
+  "date": "Saturday, November 28, 2026",
   "wind": {
-    "speed": 10,
-    "dir": "W",
-    "description": "W 5 to 10 mph"
+    "speed": 5,
+    "dir": "WSW",
+    "description": "WSW 0 to 5 mph"
   },
-  "weather": "Partly Sunny · High 57°F",
-  "tide": "High tide ~n/a · Low tide ~5:16 AM · Sunrise 6:20 AM",
+  "weather": "Mostly Cloudy · High 63°F",
+  "tide": "High tide ~6:33 PM · Low tide ~6:06 AM · Sunrise 6:21 AM",
   "tideEvents": [
     {
+      "type": "H",
+      "time": "6:33 PM"
+    },
+    {
       "type": "L",
-      "time": "5:16 AM"
+      "time": "6:06 AM"
     }
   ],
-  "sunrise": "6:20 AM",
+  "sunrise": "6:21 AM",
   "sunset": "4:43 PM",
   "stormWindow": "before 3PM",
   "stormChance": 0,
-  "moonPhase": "Waning Gibbous (~88% illuminated) — strong tidal push (spring tide)",
+  "moonPhase": "Waning Gibbous (~80% illuminated) — moderate tidal push",
   "waterClarity": "Slightly stained",
-  "sky": "Bright sun",
-  "lastUpdated": "11/27/2026, 12:07:42 PM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
-  "localBiteReport": "As of late November 2026, Choctawhatchee Bay inshore fishing has been productive, with redfish and speckled trout leading the action. Redfish are showing well around bait schools, along shorelines, and near creek and river mouths as bait migrates inward; finding bait concentrations has been the key to locating feeding fish. Speckled trout are becoming an increasingly strong target as water temperatures cool (68°F as of today), with fish moving toward deeper bayou holes, creek mouths, and transitions between shallow flats and deeper water. At least one recent charter also landed a pair of solid redfish while working bridge structure in the bay. Northeast winds and tidal movement have been playing a role in bite timing and location selection — adjusting to both has been important this week.",
-  "localBiteSource": "FishingBooker Choctawhatchee Bay reports; FishingBooker Florida statewide feed (Choctawhatchee Bay entry) · Auto-refreshed via Claude API",
-  "localBiteUpdated": "November 27, 2026",
+  "sky": "Cloudy",
+  "lastUpdated": "11/28/2026, 2:26:46 AM CT · Source: National Weather Service + NOAA Tides (station 8729511) · Auto-refreshed",
+  "localBiteReport": "Redfish and speckled trout are the top inshore targets on Choctawhatchee Bay right now, with water temperature at 67°F. Reds have been active around bait schools, shorelines, and where baitfish are funneling into creeks and rivers — finding concentrations of bait has been the key to locating feeding fish. Speckled trout are becoming an increasingly reliable target as cooler temperatures settle in; look for them around deeper bayou holes, creek mouths, and transitions between shallow flats and deeper water, with northeast winds and tides playing a bigger role in bite timing. November is also a transitional month for flounder, as mature fish begin staging near the passes and moving offshore to spawn — inshore flounder opportunity is winding down but still worth targeting near East Pass and the Mid-Bay Bridge early in the week. The most recent reports with specific Choctawhatchee Bay inshore content are approximately one week old.",
+  "localBiteSource": "FishingBooker (Choctawhatchee Bay and Florida reports, November 2026); Great Days Outdoors Northwest Florida Fishing Report (November 20–26, 2026) · Auto-refreshed via Claude API",
+  "localBiteUpdated": "November 28, 2026",
   "localBiteEvidence": [
     {
       "title": "Daily Choctawhatchee Bay Fishing Reports (November 2026)",
       "url": "https://fishingbooker.com/reports/destination/us/choctawhatchee-bay",
-      "reportDate": "2026-11-20"
+      "reportDate": "2026-11-21"
     },
     {
-      "title": "Daily Florida Fishing Reports — Redfish & Speckled Trout in Bay (Choctawhatchee Bay)",
+      "title": "Daily Florida Fishing Reports – Redfish & Speckled Trout in Bay (November 2026)",
       "url": "https://fishingbooker.com/reports/destination/us/FL",
-      "reportDate": "2026-11-26"
+      "reportDate": "2026-11-27"
+    },
+    {
+      "title": "Northwest Florida Fishing Report for November 20 – 26, 2026",
+      "url": "https://greatdaysoutdoors.com/northwest-florida-fishing-report-for-november-20-26-2026/",
+      "reportDate": "2026-11-20"
     }
   ],
   "previousDay": {
@@ -45,7 +54,7 @@
     "high": 57,
     "stormChance": 0,
     "tide": "High tide ~n/a · Low tide ~5:16 AM · Sunrise 6:20 AM",
-    "waterTemp": 68
+    "waterTemp": 67
   },
   "openMeteo": [
     {
@@ -75,32 +84,10 @@
   ],
   "forecast": [
     {
-      "day": "Fri, Nov 27",
-      "dateISO": "2026-11-27",
-      "label": "Today",
-      "high": 57,
-      "low": null,
-      "wind": "W 5 to 10 mph",
-      "windSpeed": 10,
-      "windDir": "W",
-      "storms": 0,
-      "headline": "Partly Sunny",
-      "fishingScore": 9,
-      "aiCall": "Partly sunny. High near 57, with temperatures falling to around 53 in the afternoon. West wind 5 to 10 mph.",
-      "emoji": "☀️",
-      "tideEvents": [
-        {
-          "type": "L",
-          "time": "5:16 AM"
-        }
-      ],
-      "moonPhase": "Waning Gibbous (~88% illuminated) — strong tidal push (spring tide)"
-    },
-    {
       "day": "Sat, Nov 28",
       "dateISO": "2026-11-28",
-      "label": "Tomorrow",
-      "high": 60,
+      "label": "Today",
+      "high": 63,
       "low": null,
       "wind": "WSW 0 to 5 mph",
       "windSpeed": 5,
@@ -108,7 +95,7 @@
       "storms": 0,
       "headline": "Mostly Cloudy",
       "fishingScore": 9,
-      "aiCall": "Mostly cloudy. High near 60, with temperatures falling to around 55 in the afternoon. West southwest wind 0 to 5 mph.",
+      "aiCall": "Mostly cloudy. High near 63, with temperatures falling to around 58 in the afternoon. West southwest wind 0 to 5 mph.",
       "emoji": "⛅",
       "tideEvents": [
         {
@@ -125,17 +112,17 @@
     {
       "day": "Sun, Nov 29",
       "dateISO": "2026-11-29",
-      "label": "Sunday",
+      "label": "Tomorrow",
       "high": 71,
       "low": null,
-      "wind": "SSW 5 to 20 mph",
+      "wind": "S 5 to 20 mph",
       "windSpeed": 20,
-      "windDir": "SSW",
-      "storms": 65,
-      "headline": "Rain Showers Likely",
-      "fishingScore": 4.9,
-      "aiCall": "Rain showers likely. Mostly cloudy, with a high near 71. South southwest wind 5 to 20 mph, with gusts as high as 35 mph. Chance of precipitation is 70%.",
-      "emoji": "🌧️",
+      "windDir": "S",
+      "storms": 79,
+      "headline": "Showers And Thunderstorms",
+      "fishingScore": 3.8,
+      "aiCall": "A chance of rain showers between 10am and 3pm, then showers and thunderstorms. Cloudy. High near 71, with temperatures falling to around 68 in the afternoon. South wind 5 to 20 mph, with gusts as high as 35 mph. Chance of precipitation is 80%.",
+      "emoji": "⛈️",
       "tideEvents": [
         {
           "type": "H",
@@ -147,9 +134,35 @@
         }
       ],
       "moonPhase": "Waning Gibbous (~71% illuminated) — moderate tidal push"
+    },
+    {
+      "day": "Mon, Nov 30",
+      "dateISO": "2026-11-30",
+      "label": "Monday",
+      "high": 58,
+      "low": null,
+      "wind": "N 5 to 10 mph",
+      "windSpeed": 10,
+      "windDir": "N",
+      "storms": 0,
+      "headline": "Partly Sunny",
+      "fishingScore": 9,
+      "aiCall": "Partly sunny, with a high near 58.",
+      "emoji": "☀️",
+      "tideEvents": [
+        {
+          "type": "H",
+          "time": "8:09 PM"
+        },
+        {
+          "type": "L",
+          "time": "7:14 AM"
+        }
+      ],
+      "moonPhase": "Last Quarter (~61% illuminated) — moderate tidal push"
     }
   ],
-  "dateISO": "2026-11-27",
+  "dateISO": "2026-11-28",
   "waterTemp": 67,
   "pressure": {
     "hpa": 1018.5,
@@ -163,21 +176,21 @@
       "label": "Speckled trout",
       "current": true,
       "reportCount": 9,
-      "lastReported": "2026-11-27"
+      "lastReported": "2026-11-28"
     },
     {
       "key": "redfish",
       "label": "Redfish",
       "current": true,
       "reportCount": 10,
-      "lastReported": "2026-11-27"
+      "lastReported": "2026-11-28"
     },
     {
       "key": "gulf_flounder",
       "label": "Flounder",
-      "current": false,
-      "reportCount": 3,
-      "lastReported": "2026-07-28"
+      "current": true,
+      "reportCount": 4,
+      "lastReported": "2026-11-28"
     },
     {
       "key": "black_drum",
@@ -198,25 +211,25 @@
     "majors": [
       {
         "type": "overhead",
-        "peak": "2:20 AM",
-        "window": "1:20 AM–3:20 AM"
+        "peak": "3:20 AM",
+        "window": "2:20 AM–4:20 AM"
       },
       {
         "type": "underfoot",
-        "peak": "2:55 PM",
-        "window": "1:55 PM–3:55 PM"
+        "peak": "3:55 PM",
+        "window": "2:55 PM–4:55 PM"
       }
     ],
     "minors": [
       {
         "type": "moonset",
-        "peak": "9:40 AM",
-        "window": "9:10 AM–10:10 AM"
+        "peak": "10:30 AM",
+        "window": "10:00 AM–11:00 AM"
       },
       {
         "type": "moonrise",
-        "peak": "8:10 PM",
-        "window": "7:40 PM–8:40 PM"
+        "peak": "9:20 PM",
+        "window": "8:50 PM–9:50 PM"
       }
     ]
   }

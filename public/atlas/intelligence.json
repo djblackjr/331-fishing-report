@@ -1,20 +1,24 @@
 {
   "type": "FishingIntelligence",
   "region": "choctawhatchee_bay",
-  "generatedAt": "2026-11-27",
+  "generatedAt": "2026-11-28",
   "scopeNote": "Regional reports support timing and species activity only. They do not prove a catch, depth, bottom type, or safe navigation at a mapped Jolly Bay feature.",
   "currentConditions": {
-    "wind": "W 5 to 10 mph",
-    "windDir": "W",
-    "tide": "High tide ~n/a · Low tide ~5:16 AM · Sunrise 6:20 AM",
+    "wind": "WSW 0 to 5 mph",
+    "windDir": "WSW",
+    "tide": "High tide ~6:33 PM · Low tide ~6:06 AM · Sunrise 6:21 AM",
     "tideEvents": [
       {
+        "type": "H",
+        "time": "6:33 PM"
+      },
+      {
         "type": "L",
-        "time": "5:16 AM"
+        "time": "6:06 AM"
       }
     ],
     "waterTemp": 67,
-    "sky": "Bright sun",
+    "sky": "Cloudy",
     "stormChance": 0,
     "pressure": {
       "hpa": 1018.5,
@@ -25,30 +29,36 @@
   },
   "currentReport": {
     "kind": "current_regional_report",
-    "date": "2026-11-27",
-    "displayDate": "November 27, 2026",
-    "summary": "As of late November 2026, Choctawhatchee Bay inshore fishing has been productive, with redfish and speckled trout leading the action. Redfish are showing well around bait schools, along shorelines, and near creek and river mouths as bait migrates inward; finding bait concentrations has been the key to locating feeding fish. Speckled trout are becoming an increasingly strong target as water temperatures cool (68°F as of today), with fish moving toward deeper bayou holes, creek mouths, and transitions between shallow flats and deeper water. At least one recent charter also landed a pair of solid redfish while working bridge structure in the bay. Northeast winds and tidal movement have been playing a role in bite timing and location selection — adjusting to both has been important this week.",
-    "attribution": "FishingBooker Choctawhatchee Bay reports; FishingBooker Florida statewide feed (Choctawhatchee Bay entry) · Auto-refreshed via Claude API",
+    "date": "2026-11-28",
+    "displayDate": "November 28, 2026",
+    "summary": "Redfish and speckled trout are the top inshore targets on Choctawhatchee Bay right now, with water temperature at 67°F. Reds have been active around bait schools, shorelines, and where baitfish are funneling into creeks and rivers — finding concentrations of bait has been the key to locating feeding fish. Speckled trout are becoming an increasingly reliable target as cooler temperatures settle in; look for them around deeper bayou holes, creek mouths, and transitions between shallow flats and deeper water, with northeast winds and tides playing a bigger role in bite timing. November is also a transitional month for flounder, as mature fish begin staging near the passes and moving offshore to spawn — inshore flounder opportunity is winding down but still worth targeting near East Pass and the Mid-Bay Bridge early in the week. The most recent reports with specific Choctawhatchee Bay inshore content are approximately one week old.",
+    "attribution": "FishingBooker (Choctawhatchee Bay and Florida reports, November 2026); Great Days Outdoors Northwest Florida Fishing Report (November 20–26, 2026) · Auto-refreshed via Claude API",
     "sourceIds": [
       "fishingbooker-bay",
-      "report-aHR0cHM6Ly9maXNoaW"
+      "report-aHR0cHM6Ly9maXNoaW",
+      "report-aHR0cHM6Ly9ncmVhdG"
     ],
     "species": [
       "spotted_seatrout",
-      "redfish"
+      "redfish",
+      "gulf_flounder"
     ],
     "conditions": {
-      "wind": "W 5 to 10 mph",
-      "windDir": "W",
-      "tide": "High tide ~n/a · Low tide ~5:16 AM · Sunrise 6:20 AM",
+      "wind": "WSW 0 to 5 mph",
+      "windDir": "WSW",
+      "tide": "High tide ~6:33 PM · Low tide ~6:06 AM · Sunrise 6:21 AM",
       "tideEvents": [
         {
+          "type": "H",
+          "time": "6:33 PM"
+        },
+        {
           "type": "L",
-          "time": "5:16 AM"
+          "time": "6:06 AM"
         }
       ],
       "waterTemp": 67,
-      "sky": "Bright sun",
+      "sky": "Cloudy",
       "stormChance": 0,
       "pressure": {
         "hpa": 1018.5,
@@ -83,14 +93,14 @@
             "time": "5:16 AM"
           }
         ],
-        "waterTemp": 68,
+        "waterTemp": 67,
         "sky": "Bright sun",
         "stormChance": 0,
         "pressure": {
-          "hpa": 1014.8,
-          "inHg": 29.97,
-          "direction": "rising",
-          "changeHpa3h": 0.6
+          "hpa": 1018.5,
+          "inHg": 30.08,
+          "direction": "falling",
+          "changeHpa3h": -2.6
         }
       }
     },
@@ -312,7 +322,7 @@
       "label": "Speckled trout",
       "current": true,
       "reportCount": 9,
-      "lastReported": "2026-11-27",
+      "lastReported": "2026-11-28",
       "evidenceLevel": "current_regional_report"
     },
     {
@@ -320,16 +330,16 @@
       "label": "Redfish",
       "current": true,
       "reportCount": 10,
-      "lastReported": "2026-11-27",
+      "lastReported": "2026-11-28",
       "evidenceLevel": "current_regional_report"
     },
     {
       "key": "gulf_flounder",
       "label": "Flounder",
-      "current": false,
-      "reportCount": 3,
-      "lastReported": "2026-07-28",
-      "evidenceLevel": "archived_regional_report"
+      "current": true,
+      "reportCount": 4,
+      "lastReported": "2026-11-28",
+      "evidenceLevel": "current_regional_report"
     },
     {
       "key": "black_drum",
@@ -465,6 +475,14 @@
       "url": "https://fishingbooker.com/reports/destination/us/FL",
       "kind": "regional_report",
       "reportDate": "2026-11-26",
+      "note": "Exact source page preserved by the daily bite-report research."
+    },
+    {
+      "id": "report-aHR0cHM6Ly9ncmVhdG",
+      "label": "Northwest Florida Fishing Report for November 20 – 26, 2026",
+      "url": "https://greatdaysoutdoors.com/northwest-florida-fishing-report-for-november-20-26-2026/",
+      "kind": "regional_report",
+      "reportDate": "2026-11-20",
       "note": "Exact source page preserved by the daily bite-report research."
     },
     {
